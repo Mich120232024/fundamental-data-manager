@@ -1,0 +1,643 @@
+{
+  "schema_variations": {
+    "total_messages_analyzed": 500,
+    "unique_schemas": 6,
+    "schema_patterns": {
+      "pattern_1": {
+        "fields": [
+          "_attachments",
+          "_etag",
+          "_rid",
+          "_self",
+          "_ts",
+          "attachments",
+          "cc",
+          "content",
+          "createdDate",
+          "from",
+          "id",
+          "modifiedDate",
+          "originalId",
+          "partitionKey",
+          "priority",
+          "requiresResponse",
+          "responseDeadline",
+          "sourceFile",
+          "status",
+          "subject",
+          "tags",
+          "threadId",
+          "timestamp",
+          "to",
+          "type"
+        ],
+        "count": 452,
+        "example_ids": [
+          "2025-06-20T22:45:00Z_0579",
+          "2025-06-20T16:48:00Z_0500",
+          "2025-06-20T15:45:00Z_0579"
+        ]
+      },
+      "pattern_2": {
+        "fields": [
+          "_attachments",
+          "_etag",
+          "_rid",
+          "_self",
+          "_ts",
+          "cc",
+          "content",
+          "from",
+          "id",
+          "partitionKey",
+          "priority",
+          "requiresResponse",
+          "status",
+          "subject",
+          "tags",
+          "timestamp",
+          "to",
+          "type"
+        ],
+        "count": 1,
+        "example_ids": [
+          "msg_2025-06-18T00:07:57.378529Z_6546"
+        ]
+      },
+      "pattern_3": {
+        "fields": [
+          "_attachments",
+          "_etag",
+          "_rid",
+          "_self",
+          "_ts",
+          "content",
+          "createdDate",
+          "from",
+          "id",
+          "modifiedDate",
+          "partitionKey",
+          "priority",
+          "requiresResponse",
+          "subject",
+          "timestamp",
+          "to",
+          "type"
+        ],
+        "count": 37,
+        "example_ids": [
+          "msg_2025-06-18T00:01:56.201744_4832",
+          "msg_2025-06-17T23:56:27.871479_8165",
+          "msg_2025-06-17T23:51:53.997265_1335"
+        ]
+      },
+      "pattern_4": {
+        "fields": [
+          "_attachments",
+          "_etag",
+          "_rid",
+          "_self",
+          "_ts",
+          "content",
+          "from",
+          "id",
+          "partitionKey",
+          "priority",
+          "requiresResponse",
+          "status",
+          "subject",
+          "tags",
+          "timestamp",
+          "to",
+          "type"
+        ],
+        "count": 8,
+        "example_ids": [
+          "msg_2025-06-17T16:40:47.352633Z_6360",
+          "msg_2025-06-17T16:16:20.126120Z_4219",
+          "msg_2025-06-17T16:16:20.126120Z_0591"
+        ]
+      },
+      "pattern_5": {
+        "fields": [
+          "_attachments",
+          "_etag",
+          "_rid",
+          "_self",
+          "_ts",
+          "content",
+          "context",
+          "createdDate",
+          "from",
+          "id",
+          "modifiedDate",
+          "partitionKey",
+          "priority",
+          "requiresResponse",
+          "subject",
+          "tags",
+          "timestamp",
+          "to",
+          "type"
+        ],
+        "count": 1,
+        "example_ids": [
+          "msg_2025-06-17T12:10:37.995260_6714"
+        ]
+      },
+      "pattern_6": {
+        "fields": [
+          "_attachments",
+          "_etag",
+          "_rid",
+          "_self",
+          "_ts",
+          "attachments",
+          "body",
+          "cc",
+          "from",
+          "id",
+          "priority",
+          "requires_response",
+          "response_deadline",
+          "status",
+          "subject",
+          "timestamp",
+          "to",
+          "type"
+        ],
+        "count": 1,
+        "example_ids": [
+          "msg_20250617_082842_context_proposal"
+        ]
+      }
+    },
+    "field_frequency": {
+      "id": 500,
+      "partitionKey": 499,
+      "originalId": 452,
+      "timestamp": 500,
+      "type": 500,
+      "from": 500,
+      "to": 500,
+      "cc": 454,
+      "subject": 500,
+      "content": 499,
+      "priority": 500,
+      "status": 462,
+      "requiresResponse": 499,
+      "responseDeadline": 452,
+      "attachments": 453,
+      "tags": 462,
+      "threadId": 452,
+      "sourceFile": 452,
+      "createdDate": 490,
+      "modifiedDate": 490,
+      "_rid": 500,
+      "_self": 500,
+      "_etag": 500,
+      "_attachments": 500,
+      "_ts": 500,
+      "context": 1,
+      "body": 1,
+      "requires_response": 1,
+      "response_deadline": 1
+    },
+    "field_type_variations": {
+      "id": {
+        "str": 500
+      },
+      "partitionKey": {
+        "str": 499
+      },
+      "originalId": {
+        "str": 452
+      },
+      "timestamp": {
+        "str": 500
+      },
+      "type": {
+        "str": 500
+      },
+      "from": {
+        "str": 500
+      },
+      "to": {
+        "str": 496,
+        "list": 4
+      },
+      "cc": {
+        "list": 454
+      },
+      "subject": {
+        "str": 500
+      },
+      "content": {
+        "str": 246,
+        "dict": 253
+      },
+      "priority": {
+        "str": 500
+      },
+      "status": {
+        "str": 461,
+        "dict": 1
+      },
+      "requiresResponse": {
+        "bool": 499
+      },
+      "responseDeadline": {
+        "str": 4,
+        "NoneType": 448
+      },
+      "attachments": {
+        "list": 453
+      },
+      "tags": {
+        "list": 462
+      },
+      "threadId": {
+        "str": 452
+      },
+      "sourceFile": {
+        "str": 452
+      },
+      "createdDate": {
+        "str": 490
+      },
+      "modifiedDate": {
+        "str": 490
+      },
+      "_rid": {
+        "str": 500
+      },
+      "_self": {
+        "str": 500
+      },
+      "_etag": {
+        "str": 500
+      },
+      "_attachments": {
+        "str": 500
+      },
+      "_ts": {
+        "int": 500
+      },
+      "context": {
+        "dict": 1
+      },
+      "body": {
+        "str": 1
+      },
+      "requires_response": {
+        "bool": 1
+      },
+      "response_deadline": {
+        "str": 1
+      }
+    },
+    "missing_critical_fields": [
+      {
+        "field": "content",
+        "missing_count": 1,
+        "missing_percentage": 0.2
+      },
+      {
+        "field": "body",
+        "missing_count": 499,
+        "missing_percentage": 99.8
+      }
+    ]
+  },
+  "field_inconsistencies": {
+    "recipient_fields": {},
+    "sender_fields": {}
+  },
+  "query_failures": [
+    {
+      "pattern": "Standard string match",
+      "query": "SELECT * FROM messages WHERE messages['to'] = @agent",
+      "status": "success",
+      "results_count": 53,
+      "duration_seconds": 0.141165,
+      "example_ids": [
+        "2025-06-11T09:30:00Z_0278",
+        "2025-06-11T09:35:00Z_0279",
+        "2025-06-11T17:15:00Z_0285"
+      ]
+    },
+    {
+      "pattern": "Array contains",
+      "query": "SELECT * FROM messages WHERE ARRAY_CONTAINS(messages['to'], @agent)",
+      "status": "success",
+      "results_count": 3,
+      "duration_seconds": 0.123422,
+      "example_ids": [
+        "2025-01-20T19:00:00Z_0543",
+        "msg_20250617_082842_context_proposal",
+        "msg_2025-06-17T20:37:12.547485_1839"
+      ]
+    },
+    {
+      "pattern": "Unified (string OR array)",
+      "query": "SELECT * FROM messages WHERE (messages['to'] = @agent OR ARRAY_CONTAINS(messages['to'], @agent))",
+      "status": "success",
+      "results_count": 56,
+      "duration_seconds": 0.126402,
+      "example_ids": [
+        "2025-06-11T09:30:00Z_0278",
+        "2025-06-11T09:35:00Z_0279",
+        "2025-06-11T17:15:00Z_0285"
+      ]
+    },
+    {
+      "pattern": "Alternative field: to_agent",
+      "query": "SELECT * FROM messages WHERE messages.to_agent = @agent",
+      "status": "success",
+      "results_count": 0,
+      "duration_seconds": 0.119797,
+      "example_ids": []
+    },
+    {
+      "pattern": "Alternative field: recipient",
+      "query": "SELECT * FROM messages WHERE messages.recipient = @agent",
+      "status": "success",
+      "results_count": 0,
+      "duration_seconds": 0.121934,
+      "example_ids": []
+    },
+    {
+      "pattern": "Case-insensitive string",
+      "query": "SELECT * FROM messages WHERE LOWER(messages['to']) = LOWER(@agent)",
+      "status": "success",
+      "results_count": 53,
+      "duration_seconds": 0.126728,
+      "example_ids": [
+        "2025-06-11T09:30:00Z_0278",
+        "2025-06-11T09:35:00Z_0279",
+        "2025-06-11T17:15:00Z_0285"
+      ]
+    },
+    {
+      "pattern": "Partial string match",
+      "query": "SELECT * FROM messages WHERE CONTAINS(messages['to'], @agent)",
+      "status": "success",
+      "results_count": 74,
+      "duration_seconds": 0.12987,
+      "example_ids": [
+        "2025-06-11T09:30:00Z_0278",
+        "2025-06-11T09:35:00Z_0279",
+        "2025-06-11T17:15:00Z_0285"
+      ]
+    }
+  ],
+  "missed_messages": [
+    {
+      "agent": "AzureEngineeringService",
+      "standard_count": 0,
+      "comprehensive_count": 1,
+      "missed_count": 1,
+      "missed_ids": [
+        "2025-06-18T15:10:00Z_0138"
+      ]
+    },
+    {
+      "agent": "AzureOps",
+      "standard_count": 3,
+      "comprehensive_count": 4,
+      "missed_count": 1,
+      "missed_ids": [
+        "2025-06-18T15:00:00Z_0137"
+      ]
+    },
+    {
+      "agent": "Azure_Infrastructure_Agent",
+      "standard_count": 19,
+      "comprehensive_count": 26,
+      "missed_count": 7,
+      "missed_ids": [
+        "2025-06-18T21:55:00Z_0349",
+        "2025-06-11T19:00:00Z_0354",
+        "2025-06-18T22:30:00Z_0353",
+        "2025-06-11T19:30:00Z_0358",
+        "2025-06-18T22:10:00Z_0351"
+      ]
+    },
+    {
+      "agent": "BETA_DATA_ANALYST",
+      "standard_count": 6,
+      "comprehensive_count": 16,
+      "missed_count": 10,
+      "missed_ids": [
+        "2025-06-18T21:55:00Z_0349",
+        "2025-06-11T14:00:00Z_0292",
+        "2025-06-11T16:00:00Z_0294",
+        "2025-06-18T22:15:00Z_0352",
+        "2025-06-18T22:30:00Z_0353"
+      ]
+    },
+    {
+      "agent": "CLAUDE_CODE",
+      "standard_count": 0,
+      "comprehensive_count": 2,
+      "missed_count": 2,
+      "missed_ids": [
+        "2025-06-15T15:45:00Z_0577",
+        "2025-06-15T01:35:00Z_0568"
+      ]
+    },
+    {
+      "agent": "COMPLIANCE_MANAGER",
+      "standard_count": 91,
+      "comprehensive_count": 119,
+      "missed_count": 28,
+      "missed_ids": [
+        "2025-06-20T01:30:00Z_0498",
+        "2025-06-13T22:21:31.103847Z_0474",
+        "2025-06-18T16:00:00Z_0330",
+        "2025-06-20T00:40:00Z_0472",
+        "2025-06-20T01:05:00Z_0488"
+      ]
+    },
+    {
+      "agent": "Data_Analyst",
+      "standard_count": 0,
+      "comprehensive_count": 16,
+      "missed_count": 16,
+      "missed_ids": [
+        "2025-06-11T17:05:00Z_0285",
+        "2025-06-18T21:55:00Z_0349",
+        "2025-06-18T22:40:00Z_0357",
+        "2025-06-11T16:00:00Z_0294",
+        "2025-06-18T22:15:00Z_0352"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "category": "Schema Standardization",
+      "issue": "Multiple schema variations detected",
+      "recommendation": "Implement strict schema validation in message creation",
+      "action_items": [
+        "Define canonical message schema with required fields",
+        "Add validation in CosmosDBManager.store_message()",
+        "Create migration script to standardize existing messages"
+      ]
+    },
+    {
+      "priority": "HIGH",
+      "category": "Type Consistency",
+      "issue": "\"to\" field has multiple types (string vs array)",
+      "recommendation": "Standardize recipient field types",
+      "action_items": [
+        "Use string for single recipients",
+        "Use dedicated \"cc\" or \"recipients\" array field for multiple",
+        "Convert single-element arrays to strings",
+        "Update unified query to handle both during transition"
+      ]
+    },
+    {
+      "priority": "CRITICAL",
+      "category": "Query Reliability",
+      "issue": "65 messages potentially missed by standard queries",
+      "recommendation": "Implement unified query system immediately",
+      "action_items": [
+        "Deploy unified_message_query.py to all agents",
+        "Replace all direct queries with unified query functions",
+        "Add query result validation to detect missed messages"
+      ]
+    },
+    {
+      "priority": "MEDIUM",
+      "category": "Agent Behavior",
+      "issue": "1 agents use inconsistent message formats",
+      "recommendation": "Standardize agent message creation",
+      "action_items": [
+        "Review and update agent code for: SAM",
+        "Create unit tests for message format validation",
+        "Add logging to track format violations"
+      ]
+    }
+  ],
+  "agent_patterns": {
+    "Claude_Code": {
+      "messages_sent": 3,
+      "recipient_types": {
+        "string": 3
+      },
+      "uses_arrays": false,
+      "uses_strings": true,
+      "inconsistent": false
+    },
+    "HEAD_OF_RESEARCH": {
+      "messages_sent": 12,
+      "recipient_types": {
+        "string": 12
+      },
+      "uses_arrays": false,
+      "uses_strings": true,
+      "inconsistent": false
+    },
+    "SAM": {
+      "messages_sent": 6,
+      "recipient_types": {
+        "string": 5,
+        "array": 1
+      },
+      "uses_arrays": true,
+      "uses_strings": true,
+      "inconsistent": true
+    },
+    "HEAD_OF_DIGITAL_STAFF": {
+      "messages_sent": 46,
+      "recipient_types": {
+        "string": 46
+      },
+      "uses_arrays": false,
+      "uses_strings": true,
+      "inconsistent": false
+    },
+    "COMPLIANCE_MANAGER": {
+      "messages_sent": 50,
+      "recipient_types": {
+        "string": 50
+      },
+      "uses_arrays": false,
+      "uses_strings": true,
+      "inconsistent": false
+    },
+    "The_Smart_and_Fun_Guy": {
+      "messages_sent": 28,
+      "recipient_types": {
+        "string": 28
+      },
+      "uses_arrays": false,
+      "uses_strings": true,
+      "inconsistent": false
+    },
+    "SAM_BUSINESS_MANAGEMENT": {
+      "messages_sent": 1,
+      "recipient_types": {
+        "string": 1
+      },
+      "uses_arrays": false,
+      "uses_strings": true,
+      "inconsistent": false
+    },
+    "HEAD_OF_ENGINEERING": {
+      "messages_sent": 34,
+      "recipient_types": {
+        "string": 34
+      },
+      "uses_arrays": false,
+      "uses_strings": true,
+      "inconsistent": false
+    },
+    "Research_Analytics_Specialist": {
+      "messages_sent": 2,
+      "recipient_types": {
+        "string": 2
+      },
+      "uses_arrays": false,
+      "uses_strings": true,
+      "inconsistent": false
+    },
+    "Azure_Infrastructure_Agent": {
+      "messages_sent": 8,
+      "recipient_types": {
+        "string": 8
+      },
+      "uses_arrays": false,
+      "uses_strings": true,
+      "inconsistent": false
+    },
+    "Head-of-Research": {
+      "messages_sent": 4,
+      "recipient_types": {
+        "string": 4
+      },
+      "uses_arrays": false,
+      "uses_strings": true,
+      "inconsistent": false
+    },
+    "WorkspaceDesign Analyst": {
+      "messages_sent": 1,
+      "recipient_types": {
+        "string": 1
+      },
+      "uses_arrays": false,
+      "uses_strings": true,
+      "inconsistent": false
+    },
+    "ToolingResearch": {
+      "messages_sent": 1,
+      "recipient_types": {
+        "string": 1
+      },
+      "uses_arrays": false,
+      "uses_strings": true,
+      "inconsistent": false
+    }
+  }
+}

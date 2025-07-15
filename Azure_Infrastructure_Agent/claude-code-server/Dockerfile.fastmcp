@@ -1,0 +1,43 @@
+# Professional Claude Code MCP Server Container
+# Based on Audit #2 findings for production deployment
+# FINMA-compliant with Swiss Key Vault integration
+
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Create non-root user for security
+RUN groupadd -r mcp && useradd -r -g mcp -u 1001 mcp
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies
+COPY requirements_fastmcp.txt .
+RUN pip install --no-cache-dir -r requirements_fastmcp.txt
+
+# Copy application code
+COPY mcp_server_fastmcp.py .
+
+# Create directories for logs and health checks
+RUN mkdir -p /var/log && \
+    chown -R mcp:mcp /var/log /app
+
+# Switch to non-root user
+USER mcp
+
+# Expose ports for health checks and MCP HTTP
+EXPOSE 8080 8081
+
+# Health check for Kubernetes
+HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
+    CMD curl -f http://localhost:8080/health || exit 1
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONPATH=/app
+
+# Run the MCP server
+CMD ["python", "mcp_server_fastmcp.py"]

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Syntax Test</title>
+</head>
+<body>
+    <div id="containerList"></div>
+    <div id="content"></div>
+    <div id="totalStats">Loading...</div>
+    <input id="searchInput" />
+    
+    <div id="formattedModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">Document View</h3>
+                <button class="modal-close" onclick="closeModal()">Close</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = '';
+        let currentContainer = null;
+        let allContainers = [];
+        let allDocuments = [];
+        
+        async function init() {
+            console.log('Init function called');
+            try {
+                await loadContainers();
+                await loadStats();
+            } catch (error) {
+                showError('Failed to initialize: ' + error.message);
+            }
+        }
+        
+        async function loadStats() {
+            console.log('Loading stats...');
+            try {
+                const response = await fetch(API_BASE + '/api/stats');
+                const data = await response.json();
+                if (data.success) {
+                    document.getElementById('totalStats').textContent = 
+                        `Total: ${data.stats.totalDocuments} documents across ${Object.keys(data.stats.containers).length} containers`;
+                }
+            } catch (error) {
+                console.error('Failed to load stats:', error);
+            }
+        }
+        
+        async function loadContainers() {
+            console.log('Loading containers...');
+            const containerList = document.getElementById('containerList');
+            containerList.innerHTML = '<div class="loading">Loading containers...</div>';
+            
+            try {
+                const response = await fetch(API_BASE + '/api/containers');
+                console.log('Containers response:', response);
+                const data = await response.json();
+                console.log('Containers data:', data);
+                
+                if (data.success) {
+                    allContainers = data.containers;
+                    displayContainers(data.containers);
+                } else {
+                    throw new Error(data.error);
+                }
+            } catch (error) {
+                console.error('Error loading containers:', error);
+                containerList.innerHTML = `<div class="error">Failed to load containers: ${error.message}</div>`;
+            }
+        }
+        
+        function displayContainers(containers) {
+            console.log('Displaying containers:', containers);
+            const containerList = document.getElementById('containerList');
+            containerList.innerHTML = '';
+            
+            containers.forEach(container => {
+                const item = document.createElement('div');
+                item.className = 'container-item';
+                item.innerHTML = `
+                    <div class="container-name">${container.id}</div>
+                    <div class="container-count">${container.count} documents</div>
+                `;
+                item.onclick = () => selectContainer(container.id);
+                containerList.appendChild(item);
+            });
+        }
+        
+        function showError(message) {
+            document.getElementById('content').innerHTML = `
+                <div class="error">${message}</div>
+            `;
+        }
+
+        console.log('Script loaded, calling init...');
+        window.onload = init;
+    </script>
+</body>
+</html>

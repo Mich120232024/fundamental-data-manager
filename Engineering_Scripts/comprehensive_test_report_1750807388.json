@@ -1,0 +1,19 @@
+{
+  "timestamp": 1750807297.164578,
+  "tests": {
+    "cosmos_esc": "\u274c ERROR - Page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"text=Cosmos Explorer\")\n",
+    "graph_loading": "\u274c ERROR - Page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"text=Graph DB\")\n",
+    "architecture_esc": "\u274c ERROR - Page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"text=Architecture\")\n",
+    "styling_quality": "\u274c BROKEN - CSS variables not loading",
+    "console_errors": "Errors: 0, Warnings: 0"
+  },
+  "screenshots": [
+    "/Users/mikaeleage/Research & Analytics Services/Engineering Workspace/Scripts/mcp_test_styling_1750807388.png"
+  ],
+  "console_logs": [],
+  "summary": {
+    "total_tests": 4,
+    "passed_tests": 0,
+    "success_rate": 0.0
+  }
+}

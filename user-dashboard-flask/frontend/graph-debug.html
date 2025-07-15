@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Debug Test</title>
+    <script src="https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js"></script>
+    <script src="https://unpkg.com/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.js"></script>
+    <style>
+        #graph-container {
+            width: 100%;
+            height: 500px;
+            border: 2px solid #ccc;
+            background: #f9f9f9;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .debug-info {
+            background: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Graph Visualization Debug Test</h1>
+    <div class="debug-info">
+        <h3>Debug Information:</h3>
+        <div id="debug-output"></div>
+    </div>
+    
+    <button onclick="testGraphAPI()">Test Graph API</button>
+    <button onclick="initializeGraph()">Initialize Graph</button>
+    <button onclick="loadTestData()">Load Test Data</button>
+    
+    <div id="graph-container"></div>
+
+    <script>
+        let cy = null;
+        
+        function debugLog(message) {
+            const output = document.getElementById('debug-output');
+            const timestamp = new Date().toLocaleTimeString();
+            output.innerHTML += `<div>[${timestamp}] ${message}</div>`;
+            console.log(message);
+        }
+        
+        async function testGraphAPI() {
+            try {
+                debugLog('🌐 Testing graph API...');
+                const response = await fetch('/api/graph/full?node_limit=5');
+                const data = await response.json();
+                
+                debugLog(`✅ API Response: ${data.success ? 'Success' : 'Failed'}`);
+                debugLog(`📊 Elements: ${data.elements?.length || 0}`);
+                debugLog(`🔍 Sample data: ${JSON.stringify(data.elements?.[0] || 'None').substring(0, 100)}...`);
+                
+                return data;
+            } catch (error) {
+                debugLog(`❌ API Error: ${error.message}`);
+                return null;
+            }
+        }
+        
+        function initializeGraph() {
+            try {
+                debugLog('🔧 Initializing Cytoscape...');
+                
+                const container = document.getElementById('graph-container');
+                if (!container) {
+                    debugLog('❌ Container not found!');
+                    return;
+                }
+                
+                cy = cytoscape({
+                    container: container,
+                    style: [
+                        {
+                            selector: 'node',
+                            style: {
+                                'background-color': '#3b82f6',
+                                'label': 'data(name)',
+                                'text-valign': 'center',
+                                'color': '#000',
+                                'font-size': '12px',
+                                'width': 30,
+                                'height': 30
+                            }
+                        },
+                        {
+                            selector: 'edge',
+                            style: {
+                                'curve-style': 'bezier',
+                                'target-arrow-shape': 'triangle',
+                                'line-color': '#666',
+                                'target-arrow-color': '#666',
+                                'width': 2
+                            }
+                        }
+                    ],
+                    elements: [],
+                    layout: { name: 'grid' }
+                });
+                
+                debugLog('✅ Graph initialized successfully');
+                
+                // Test with simple data
+                const testElements = [
+                    { data: { id: 'node1', name: 'Node 1' } },
+                    { data: { id: 'node2', name: 'Node 2' } },
+                    { data: { id: 'edge1', source: 'node1', target: 'node2' } }
+                ];
+                
+                cy.add(testElements);
+                cy.layout({ name: 'grid' }).run();
+                debugLog('✅ Test elements added');
+                
+            } catch (error) {
+                debugLog(`❌ Graph initialization error: ${error.message}`);
+            }
+        }
+        
+        async function loadTestData() {
+            try {
+                if (!cy) {
+                    debugLog('❌ Graph not initialized. Click "Initialize Graph" first.');
+                    return;
+                }
+                
+                debugLog('🔄 Loading real data from API...');
+                const data = await testGraphAPI();
+                
+                if (data && data.success && data.elements) {
+                    debugLog('🧹 Clearing existing elements...');
+                    cy.elements().remove();
+                    
+                    debugLog(`➕ Adding ${data.elements.length} elements...`);
+                    cy.add(data.elements);
+                    
+                    debugLog('🎯 Applying layout...');
+                    cy.layout({ name: 'cose-bilkent', animate: true }).run();
+                    
+                    debugLog('🔍 Fitting to view...');
+                    setTimeout(() => {
+                        cy.fit(null, 50);
+                        debugLog('✅ Graph data loaded and visualized!');
+                    }, 1000);
+                } else {
+                    debugLog('❌ No valid data received from API');
+                }
+            } catch (error) {
+                debugLog(`❌ Load data error: ${error.message}`);
+            }
+        }
+        
+        // Auto-initialize when page loads
+        window.addEventListener('load', () => {
+            debugLog('📱 Page loaded, ready for testing');
+        });
+    </script>
+</body>
+</html>

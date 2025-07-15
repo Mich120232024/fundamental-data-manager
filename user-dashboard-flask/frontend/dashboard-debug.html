@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Debug</title>
+    <style>
+        body {
+            font-family: monospace;
+            background: #000;
+            color: #0f0;
+            padding: 20px;
+        }
+        .log {
+            margin: 5px 0;
+            padding: 5px;
+            border-left: 3px solid #0f0;
+        }
+        .error {
+            color: #f00;
+            border-color: #f00;
+        }
+        .success {
+            color: #0f0;
+            border-color: #0f0;
+        }
+        .warning {
+            color: #fa0;
+            border-color: #fa0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dashboard Debug Console</h1>
+    <div id="console"></div>
+    
+    <script>
+        const log = (msg, type = 'log') => {
+            const div = document.createElement('div');
+            div.className = `log ${type}`;
+            div.textContent = `[${new Date().toISOString()}] ${msg}`;
+            document.getElementById('console').appendChild(div);
+            console.log(msg);
+        };
+
+        log('Starting dashboard debug...');
+        
+        // Test 1: Check if DOM is ready
+        log(`DOM State: ${document.readyState}`);
+        
+        // Test 2: Check static resources
+        Promise.all([
+            fetch('/static/dashboard-enhanced.css').then(r => ({ url: '/static/dashboard-enhanced.css', status: r.status })),
+            fetch('/static/graph-advanced.js').then(r => ({ url: '/static/graph-advanced.js', status: r.status })),
+            fetch('/js/cytoscape.min.js').then(r => ({ url: '/js/cytoscape.min.js', status: r.status }))
+        ]).then(results => {
+            results.forEach(r => {
+                log(`Resource ${r.url}: ${r.status}`, r.status === 200 ? 'success' : 'error');
+            });
+        });
+        
+        // Test 3: Check API endpoints
+        const apis = [
+            '/api/stats',
+            '/api/live/system-health',
+            '/api/containers'
+        ];
+        
+        apis.forEach(async (api) => {
+            try {
+                const start = performance.now();
+                const response = await fetch(api);
+                const time = performance.now() - start;
+                const data = await response.json();
+                log(`API ${api}: ${response.status} in ${time.toFixed(0)}ms`, response.ok ? 'success' : 'error');
+            } catch (e) {
+                log(`API ${api}: FAILED - ${e.message}`, 'error');
+            }
+        });
+        
+        // Test 4: Load Cytoscape
+        const script = document.createElement('script');
+        script.src = '/js/cytoscape.min.js';
+        script.onload = () => {
+            log('Cytoscape loaded successfully', 'success');
+            log(`Cytoscape version: ${cytoscape.version || 'unknown'}`);
+        };
+        script.onerror = () => {
+            log('Failed to load Cytoscape', 'error');
+        };
+        document.body.appendChild(script);
+        
+        // Test 5: Check for blocking scripts
+        window.addEventListener('load', () => {
+            log(`Window loaded in ${performance.now()}ms`, 'success');
+            log(`Total scripts on page: ${document.scripts.length}`);
+            
+            // List all scripts
+            Array.from(document.scripts).forEach((script, i) => {
+                log(`Script ${i}: ${script.src || 'inline'}`);
+            });
+        });
+        
+        // Test 6: Check for errors
+        window.addEventListener('error', (e) => {
+            log(`Error: ${e.message} at ${e.filename}:${e.lineno}`, 'error');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+{
+  "collection_metadata": {
+    "timestamp": "2025-06-02T01:43:50.455697",
+    "purpose": "Complete endpoint test suite",
+    "series_sampled": 5,
+    "note": "This is just for testing completeness - not for production use"
+  },
+  "observation_samples": {
+    "GDP": {
+      "series_id": "GDP",
+      "description": "Gross Domestic Product - Quarterly",
+      "observation_count": 10,
+      "total_available": 317,
+      "sample_observations": [
+        {
+          "realtime_start": "2025-05-29",
+          "realtime_end": "2025-05-29",
+          "date": "2025-01-01",
+          "value": "29976.638"
+        },
+        {
+          "realtime_start": "2025-05-29",
+          "realtime_end": "2025-05-29",
+          "date": "2024-10-01",
+          "value": "29723.864"
+        },
+        {
+          "realtime_start": "2025-05-29",
+          "realtime_end": "2025-05-29",
+          "date": "2024-07-01",
+          "value": "29374.914"
+        },
+        {
+          "realtime_start": "2025-05-29",
+          "realtime_end": "2025-05-29",
+          "date": "2024-04-01",
+          "value": "29016.714"
+        },
+        {
+          "realtime_start": "2025-05-29",
+          "realtime_end": "2025-05-29",
+          "date": "2024-01-01",
+          "value": "28624.069"
+        },
+        {
+          "realtime_start": "2025-05-29",
+          "realtime_end": "2025-05-29",
+          "date": "2023-10-01",
+          "value": "28296.967"
+        },
+        {
+          "realtime_start": "2025-05-29",
+          "realtime_end": "2025-05-29",
+          "date": "2023-07-01",
+          "value": "27967.697"
+        },
+        {
+          "realtime_start": "2025-05-29",
+          "realtime_end": "2025-05-29",
+          "date": "2023-04-01",
+          "value": "27453.815"
+        },
+        {
+          "realtime_start": "2025-05-29",
+          "realtime_end": "2025-05-29",
+          "date": "2023-01-01",
+          "value": "27164.359"
+        },
+        {
+          "realtime_start": "2025-05-29",
+          "realtime_end": "2025-05-29",
+          "date": "2022-10-01",
+          "value": "26734.277"
+        }
+      ],
+      "units": "lin",
+      "frequency": "Unknown"
+    },
+    "UNRATE": {
+      "series_id": "UNRATE",
+      "description": "Unemployment Rate - Monthly",
+      "observation_count": 10,
+      "total_available": 928,
+      "sample_observations": [
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2025-04-01",
+          "value": "4.2"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2025-03-01",
+          "value": "4.2"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2025-02-01",
+          "value": "4.1"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2025-01-01",
+          "value": "4.0"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2024-12-01",
+          "value": "4.1"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2024-11-01",
+          "value": "4.2"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2024-10-01",
+          "value": "4.1"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2024-09-01",
+          "value": "4.1"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2024-08-01",
+          "value": "4.2"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2024-07-01",
+          "value": "4.2"
+        }
+      ],
+      "units": "lin",
+      "frequency": "Unknown"
+    },
+    "DGS10": {
+      "series_id": "DGS10",
+      "description": "10-Year Treasury Rate - Daily",
+      "observation_count": 10,
+      "total_available": 16543,
+      "sample_observations": [
+        {
+          "realtime_start": "2025-05-30",
+          "realtime_end": "2025-05-30",
+          "date": "2025-05-29",
+          "value": "4.43"
+        },
+        {
+          "realtime_start": "2025-05-30",
+          "realtime_end": "2025-05-30",
+          "date": "2025-05-28",
+          "value": "4.47"
+        },
+        {
+          "realtime_start": "2025-05-30",
+          "realtime_end": "2025-05-30",
+          "date": "2025-05-27",
+          "value": "4.43"
+        },
+        {
+          "realtime_start": "2025-05-30",
+          "realtime_end": "2025-05-30",
+          "date": "2025-05-26",
+          "value": "."
+        },
+        {
+          "realtime_start": "2025-05-30",
+          "realtime_end": "2025-05-30",
+          "date": "2025-05-23",
+          "value": "4.51"
+        },
+        {
+          "realtime_start": "2025-05-30",
+          "realtime_end": "2025-05-30",
+          "date": "2025-05-22",
+          "value": "4.54"
+        },
+        {
+          "realtime_start": "2025-05-30",
+          "realtime_end": "2025-05-30",
+          "date": "2025-05-21",
+          "value": "4.58"
+        },
+        {
+          "realtime_start": "2025-05-30",
+          "realtime_end": "2025-05-30",
+          "date": "2025-05-20",
+          "value": "4.48"
+        },
+        {
+          "realtime_start": "2025-05-30",
+          "realtime_end": "2025-05-30",
+          "date": "2025-05-19",
+          "value": "4.46"
+        },
+        {
+          "realtime_start": "2025-05-30",
+          "realtime_end": "2025-05-30",
+          "date": "2025-05-16",
+          "value": "4.43"
+        }
+      ],
+      "units": "lin",
+      "frequency": "Unknown"
+    },
+    "CPIAUCSL": {
+      "series_id": "CPIAUCSL",
+      "description": "Consumer Price Index - Monthly",
+      "observation_count": 10,
+      "total_available": 940,
+      "sample_observations": [
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2025-04-01",
+          "value": "320.321"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2025-03-01",
+          "value": "319.615"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2025-02-01",
+          "value": "319.775"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2025-01-01",
+          "value": "319.086"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2024-12-01",
+          "value": "317.603"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2024-11-01",
+          "value": "316.449"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2024-10-01",
+          "value": "315.564"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2024-09-01",
+          "value": "314.851"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2024-08-01",
+          "value": "314.131"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2024-07-01",
+          "value": "313.566"
+        }
+      ],
+      "units": "lin",
+      "frequency": "Unknown"
+    },
+    "HOUST": {
+      "series_id": "HOUST",
+      "description": "Housing Starts - Monthly",
+      "observation_count": 10,
+      "total_available": 796,
+      "sample_observations": [
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2025-04-01",
+          "value": "1361.0"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2025-03-01",
+          "value": "1339.0"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2025-02-01",
+          "value": "1490.0"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2025-01-01",
+          "value": "1358.0"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2024-12-01",
+          "value": "1514.0"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2024-11-01",
+          "value": "1295.0"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2024-10-01",
+          "value": "1352.0"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2024-09-01",
+          "value": "1357.0"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2024-08-01",
+          "value": "1391.0"
+        },
+        {
+          "realtime_start": "2025-05-16",
+          "realtime_end": "2025-05-16",
+          "date": "2024-07-01",
+          "value": "1265.0"
+        }
+      ],
+      "units": "lin",
+      "frequency": "Unknown"
+    }
+  }
+}

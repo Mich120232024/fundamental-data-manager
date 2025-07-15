@@ -1,0 +1,46 @@
+{
+  "investigation_timestamp": "20250618_002012",
+  "summary": {
+    "schema_variations": 6,
+    "field_inconsistencies": 0,
+    "potentially_missed_messages": 65,
+    "critical_recommendations": 1,
+    "total_recommendations": 4
+  },
+  "immediate_actions": [
+    {
+      "priority": "HIGH",
+      "category": "Schema Standardization",
+      "issue": "Multiple schema variations detected",
+      "recommendation": "Implement strict schema validation in message creation",
+      "action_items": [
+        "Define canonical message schema with required fields",
+        "Add validation in CosmosDBManager.store_message()",
+        "Create migration script to standardize existing messages"
+      ]
+    },
+    {
+      "priority": "HIGH",
+      "category": "Type Consistency",
+      "issue": "\"to\" field has multiple types (string vs array)",
+      "recommendation": "Standardize recipient field types",
+      "action_items": [
+        "Use string for single recipients",
+        "Use dedicated \"cc\" or \"recipients\" array field for multiple",
+        "Convert single-element arrays to strings",
+        "Update unified query to handle both during transition"
+      ]
+    },
+    {
+      "priority": "CRITICAL",
+      "category": "Query Reliability",
+      "issue": "65 messages potentially missed by standard queries",
+      "recommendation": "Implement unified query system immediately",
+      "action_items": [
+        "Deploy unified_message_query.py to all agents",
+        "Replace all direct queries with unified query functions",
+        "Add query result validation to detect missed messages"
+      ]
+    }
+  ]
+}

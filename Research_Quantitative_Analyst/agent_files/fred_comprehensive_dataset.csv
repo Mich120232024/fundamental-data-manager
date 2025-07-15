@@ -1,0 +1,117 @@
+category,series_id,series_title,latest_value,latest_date,units,frequency,seasonal_adjustment,last_updated,popularity,observation_start,observation_end,days_since_update
+BUSINESS,CP,Corporate Profits After Tax (without IVA and CCAdj),3594.947,2025-01-01,Billions of Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-05-29 07:57:02-05,70.0,1947-01-01,2025-01-01,175
+BUSINESS,CPROFIT,Corporate Profits with Inventory Valuation Adjustment (IVA) and Capital Consumption Adjustment (CCAdj),3888.864,2025-01-01,Billions of Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-05-29 07:57:23-05,40.0,1947-01-01,2025-01-01,175
+BUSINESS,BCNSDODNS,"Nonfinancial Corporate Business; Debt Securities and Loans; Liability, Level",13950.221,2025-01-01,Billions of Dollars,"Quarterly, End of Period",Seasonally Adjusted,2025-06-12 11:57:28-05,59.0,1945-10-01,2025-01-01,175
+BUSINESS,NCBDBIQ027S,"Nonfinancial Corporate Business; Debt Securities; Liability, Level",8659669.0,2025-01-01,Millions of Dollars,Quarterly,Not Seasonally Adjusted,2025-06-12 14:16:08-05,35.0,1945-10-01,2025-01-01,175
+BUSINESS,TODNS,"Domestic Nonfinancial Sectors; Debt Securities and Loans; Liability, Level",77202.879,2025-01-01,Billions of Dollars,"Quarterly, End of Period",Seasonally Adjusted,2025-06-12 14:11:07-05,17.0,1945-10-01,2025-01-01,175
+BUSINESS,DODFS,"Domestic Financial Sectors; Debt Securities and Loans; Liability, Level",20534.088,2025-01-01,Billions of Dollars,"Quarterly, End of Period",Seasonally Adjusted,2025-06-12 14:19:15-05,18.0,1945-10-01,2025-01-01,175
+BUSINESS,FBCELLQ027S,"Domestic Financial Sectors; Corporate Equities; Liability, Level",18843753.0,2025-01-01,Millions of Dollars,Quarterly,Not Seasonally Adjusted,2025-06-12 14:06:01-05,10.0,1945-10-01,2025-01-01,175
+EMPLOYMENT,ICSA,Initial Claims,245000.0,2025-06-14,Number,"Weekly, Ending Saturday",Seasonally Adjusted,2025-06-18 07:34:08-05,81.0,1967-01-07,2025-06-14,11
+EMPLOYMENT,CCSA,Continued Claims (Insured Unemployment),1945000.0,2025-06-07,Number,"Weekly, Ending Saturday",Seasonally Adjusted,2025-06-18 07:34:03-05,74.0,1967-01-07,2025-06-07,18
+EMPLOYMENT,PAYEMS,"All Employees, Total Nonfarm",159561.0,2025-05-01,Thousands of Persons,Monthly,Seasonally Adjusted,2025-06-06 07:49:06-05,83.0,1939-01-01,2025-05-01,55
+EMPLOYMENT,UNRATE,Unemployment Rate,4.2,2025-05-01,Percent,Monthly,Seasonally Adjusted,2025-06-06 07:46:05-05,95.0,1948-01-01,2025-05-01,55
+EMPLOYMENT,CIVPART,Labor Force Participation Rate,62.4,2025-05-01,Percent,Monthly,Seasonally Adjusted,2025-06-06 07:48:35-05,84.0,1948-01-01,2025-05-01,55
+EMPLOYMENT,EMRATIO,Employment-Population Ratio,59.7,2025-05-01,Percent,Monthly,Seasonally Adjusted,2025-06-06 07:48:35-05,66.0,1948-01-01,2025-05-01,55
+EMPLOYMENT,UEMPMEAN,Average Weeks Unemployed,21.8,2025-05-01,Weeks,Monthly,Seasonally Adjusted,2025-06-06 07:48:43-05,45.0,1948-01-01,2025-05-01,55
+EMPLOYMENT,UEMPMED,Median Weeks Unemployed,9.5,2025-05-01,Weeks,Monthly,Seasonally Adjusted,2025-06-06 07:48:43-05,32.0,1967-07-01,2025-05-01,55
+EMPLOYMENT,U6RATE,"Total Unemployed, Plus All Persons Marginally Attached to the Labor Force, Plus Total Employed Part Time for Economic Reasons, as a Percent of the Civilian Labor Force Plus All Persons Marginally Attached to the Labor Force (U-6)",7.8,2025-05-01,Percent,Monthly,Seasonally Adjusted,2025-06-06 07:46:19-05,67.0,1994-01-01,2025-05-01,55
+EMPLOYMENT,CES0500000003,"Average Hourly Earnings of All Employees, Total Private",36.24,2025-05-01,Dollars per Hour,Monthly,Seasonally Adjusted,2025-06-06 07:49:32-05,78.0,2006-03-01,2025-05-01,55
+EMPLOYMENT,AWHAETP,"Average Weekly Hours of All Employees, Total Private",34.3,2025-05-01,Hours,Monthly,Seasonally Adjusted,2025-06-06 07:49:31-05,69.0,2006-03-01,2025-05-01,55
+EMPLOYMENT,AHETPI,"Average Hourly Earnings of Production and Nonsupervisory Employees, Total Private",31.18,2025-05-01,Dollars per Hour,Monthly,Seasonally Adjusted,2025-06-06 07:49:30-05,66.0,1964-01-01,2025-05-01,55
+EMPLOYMENT,MANEMP,"All Employees, Manufacturing",12761.0,2025-05-01,Thousands of Persons,Monthly,Seasonally Adjusted,2025-06-06 07:49:06-05,71.0,1939-01-01,2025-05-01,55
+EMPLOYMENT,USCONS,"All Employees, Construction",8314.0,2025-05-01,Thousands of Persons,Monthly,Seasonally Adjusted,2025-06-06 07:49:05-05,66.0,1939-01-01,2025-05-01,55
+EMPLOYMENT,USTRADE,"All Employees, Retail Trade",15576.6,2025-05-01,Thousands of Persons,Monthly,Seasonally Adjusted,2025-06-06 07:49:04-05,60.0,1939-01-01,2025-05-01,55
+EMPLOYMENT,USFIRE,"All Employees, Financial Activities",9254.0,2025-05-01,Thousands of Persons,Monthly,Seasonally Adjusted,2025-06-06 07:49:05-05,58.0,1939-01-01,2025-05-01,55
+EMPLOYMENT,USGOVT,"All Employees, Government",23593.0,2025-05-01,Thousands of Persons,Monthly,Seasonally Adjusted,2025-06-06 07:49:05-05,65.0,1939-01-01,2025-05-01,55
+EMPLOYMENT,NROU,Noncyclical Rate of Unemployment,4.318227512,2025-04-01,Percent,Quarterly,Not Seasonally Adjusted,2025-03-17 15:44:05-05,69.0,1949-01-01,2035-10-01,85
+EMPLOYMENT,JTSQUL,Quits: Total Nonfarm,3194.0,2025-04-01,Level in Thousands,Monthly,Seasonally Adjusted,2025-06-03 09:06:32-05,51.0,2000-12-01,2025-04-01,85
+EMPLOYMENT,JTSJOL,Job Openings: Total Nonfarm,7391.0,2025-04-01,Level in Thousands,Monthly,Seasonally Adjusted,2025-06-03 09:06:33-05,77.0,2000-12-01,2025-04-01,85
+FINANCIAL,DJCA,Dow Jones Composite Average,13515.56,2025-06-24,Index,"Daily, Close",Not Seasonally Adjusted,2025-06-24 19:16:40-05,31.0,2015-06-25,2025-06-24,1
+FINANCIAL,BAMLH0A0HYM2,ICE BofA US High Yield Index Option-Adjusted Spread,3.12,2025-06-23,Percent,"Daily, Close",Not Seasonally Adjusted,2025-06-24 08:36:15-05,92.0,1996-12-31,2025-06-23,2
+FINANCIAL,BAMLC0A0CM,ICE BofA US Corporate Index Option-Adjusted Spread,0.89,2025-06-23,Percent,"Daily, Close",Not Seasonally Adjusted,2025-06-24 08:43:02-05,78.0,1996-12-31,2025-06-23,2
+FINANCIAL,GASREGW,US Regular All Formulations Gas Price,3.213,2025-06-23,Dollars per Gallon,"Weekly, Ending Monday",Not Seasonally Adjusted,2025-06-24 09:05:18-05,69.0,1990-08-20,2025-06-23,2
+FINANCIAL,DCOILWTICO,"Crude Oil Prices: West Texas Intermediate (WTI) - Cushing, Oklahoma",72.53,2025-06-16,Dollars per Barrel,Daily,Not Seasonally Adjusted,2025-06-18 12:09:01-05,77.0,1986-01-02,2025-06-16,9
+FINANCIAL,DHHNGSP,Henry Hub Natural Gas Spot Price,2.9,2025-06-16,Dollars per Million BTU,Daily,Not Seasonally Adjusted,2025-06-18 12:31:02-05,64.0,1997-01-07,2025-06-16,9
+FINANCIAL,DCOILBRENTEU,Crude Oil Prices: Brent - Europe,75.05,2025-06-16,Dollars per Barrel,Daily,Not Seasonally Adjusted,2025-06-18 12:08:07-05,70.0,1987-05-20,2025-06-16,9
+GDP,GDPPOT,Real Potential Gross Domestic Product,23376.07,2025-04-01,Billions of Chained 2017 Dollars,Quarterly,Not Seasonally Adjusted,2025-03-17 15:44:02-05,75.0,1949-01-01,2035-10-01,85
+GDP,DGDSRC1,Personal Consumption Expenditures: Goods,6436.7,2025-04-01,Billions of Dollars,Monthly,Seasonally Adjusted Annual Rate,2025-05-30 07:43:07-05,43.0,1959-01-01,2025-04-01,85
+GDP,NGDPPOT,Nominal Potential Gross Domestic Product,29836.74,2025-04-01,Billions of Dollars,Quarterly,Not Seasonally Adjusted,2025-03-17 15:44:04-05,52.0,1949-01-01,2035-10-01,85
+GDP,GDPC1,Real Gross Domestic Product,23528.047,2025-01-01,Billions of Chained 2017 Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-05-29 07:56:37-05,92.0,1947-01-01,2025-01-01,175
+GDP,GDP,Gross Domestic Product,29976.638,2025-01-01,Billions of Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-05-29 07:56:37-05,93.0,1947-01-01,2025-01-01,175
+GDP,GDPDEF,Gross Domestic Product: Implicit Price Deflator,127.408,2025-01-01,Index 2017=100,Quarterly,Seasonally Adjusted,2025-05-29 07:56:36-05,74.0,1947-01-01,2025-01-01,175
+GDP,PCECC96,Real Personal Consumption Expenditures,16321.051,2025-01-01,Billions of Chained 2017 Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-05-29 07:55:49-05,64.0,1947-01-01,2025-01-01,175
+GDP,GPDIC1,Real Gross Private Domestic Investment,4556.802,2025-01-01,Billions of Chained 2017 Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-05-29 07:56:35-05,64.0,1947-01-01,2025-01-01,175
+GDP,GCEC1,Real Government Consumption Expenditures and Gross Investment,3989.228,2025-01-01,Billions of Chained 2017 Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-05-29 07:56:38-05,54.0,1947-01-01,2025-01-01,175
+GDP,NETEXC,Real Net Exports of Goods and Services,-1379.028,2025-01-01,Billions of Chained 2017 Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-05-29 07:56:34-05,43.0,1970-01-01,2025-01-01,175
+GDP,A191RL1Q225SBEA,Real Gross Domestic Product,-0.2,2025-01-01,Percent Change from Preceding Period,Quarterly,Seasonally Adjusted Annual Rate,2025-05-29 07:58:02-05,74.0,1947-04-01,2025-01-01,175
+GDP,GDPC1CTM,"FOMC Summary of Economic Projections for the Growth Rate of Real Gross Domestic Product, Central Tendency, Midpoint",1.35,2025-01-01,Fourth Quarter to Fourth Quarter Percent Change,Annual,Not Seasonally Adjusted,2025-06-18 14:08:09-05,59.0,2025-01-01,2027-01-01,175
+GOVERNMENT,GFDEBTN,Federal Debt: Total Public Debt,36214310.0,2025-01-01,Millions of Dollars,"Quarterly, End of Period",Not Seasonally Adjusted,2025-06-03 14:59:04-05,83.0,1966-01-01,2025-01-01,175
+GOVERNMENT,GFDEGDQ188S,Federal Debt: Total Public Debt as Percent of Gross Domestic Product,120.80844,2025-01-01,Percent of GDP,Quarterly,Seasonally Adjusted,2025-06-03 15:10:37-05,84.0,1966-01-01,2025-01-01,175
+GOVERNMENT,W006RC1Q027SBEA,Federal government current tax receipts,3251.182,2025-01-01,Billions of Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-05-29 07:55:46-05,69.0,1947-01-01,2025-01-01,175
+GOVERNMENT,GEXPND,Government Current Expenditures,10240.944,2025-01-01,Billions of Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-05-29 07:56:01-05,6.0,1947-01-01,2025-01-01,175
+GOVERNMENT,GRECPT,Government Current Receipts,8322.297,2025-01-01,Billions of Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-05-29 07:56:01-05,5.0,1947-01-01,2025-01-01,175
+GOVERNMENT,FGEXPND,Federal Government: Current Expenditures,7168.383,2025-01-01,Billions of Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-05-29 07:56:02-05,69.0,1947-01-01,2025-01-01,175
+GOVERNMENT,FGRECPT,Federal Government Current Receipts,5342.35,2025-01-01,Billions of Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-05-29 07:56:02-05,47.0,1947-01-01,2025-01-01,175
+GOVERNMENT,SLEXPND,State and Local Government Current Expenditures,4025.7,2025-01-01,Billions of Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-05-29 07:55:48-05,37.0,1947-01-01,2025-01-01,175
+INFLATION,DFEDTARU,Federal Funds Target Range - Upper Limit,4.5,2025-06-24,Percent,"Daily, 7-Day",Not Seasonally Adjusted,2025-06-24 07:01:02-05,80.0,2008-12-16,2025-06-24,1
+INFLATION,DFEDTARL,Federal Funds Target Range - Lower Limit,4.25,2025-06-24,Percent,"Daily, 7-Day",Not Seasonally Adjusted,2025-06-24 07:02:02-05,63.0,2008-12-16,2025-06-24,1
+INFLATION,CPIAUCSL,Consumer Price Index for All Urban Consumers: All Items in U.S. City Average,320.58,2025-05-01,Index 1982-1984=100,Monthly,Seasonally Adjusted,2025-06-11 07:41:40-05,95.0,1947-01-01,2025-05-01,55
+INFLATION,CPILFESL,Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average,326.854,2025-05-01,Index 1982-1984=100,Monthly,Seasonally Adjusted,2025-06-11 07:41:06-05,82.0,1957-01-01,2025-05-01,55
+INFLATION,CORESTICKM159SFRBATL,Sticky Price Consumer Price Index less Food and Energy,3.15913105,2025-05-01,Percent Change from Year Ago,Monthly,Seasonally Adjusted,2025-06-11 12:01:03-05,84.0,1968-01-01,2025-05-01,55
+INFLATION,MEDCPIM158SFRBCLE,Median Consumer Price Index,2.6951232318175093,2025-05-01,Percent Change at Annual Rate,Monthly,Seasonally Adjusted,2025-06-11 10:04:02-05,73.0,1983-01-01,2025-05-01,55
+INFLATION,CPIFABSL,Consumer Price Index for All Urban Consumers: Food and Beverages in U.S. City Average,335.489,2025-05-01,Index 1982-1984=100,Monthly,Seasonally Adjusted,2025-06-11 07:41:07-05,53.0,1967-01-01,2025-05-01,55
+INFLATION,CPIMEDSL,Consumer Price Index for All Urban Consumers: Medical Care in U.S. City Average,578.236,2025-05-01,Index 1982-1984=100,Monthly,Seasonally Adjusted,2025-06-11 07:41:39-05,62.0,1947-01-01,2025-05-01,55
+INFLATION,PPIACO,Producer Price Index by Commodity: All Commodities,259.033,2025-05-01,Index 1982=100,Monthly,Not Seasonally Adjusted,2025-06-12 07:56:50-05,78.0,1913-01-01,2025-05-01,55
+INFLATION,PCEPI,Personal Consumption Expenditures: Chain-type Price Index,125.88,2025-04-01,Index 2017=100,Monthly,Seasonally Adjusted,2025-05-30 07:43:25-05,79.0,1959-01-01,2025-04-01,85
+INFLATION,PCEPILFE,Personal Consumption Expenditures Excluding Food and Energy (Chain-Type Price Index),125.221,2025-04-01,Index 2017=100,Monthly,Seasonally Adjusted,2025-05-30 07:43:26-05,77.0,1959-01-01,2025-04-01,85
+INFLATION,BPCCRO1Q156NBEA,Personal Consumption Expenditures Excluding Food and Energy (Chain-Type Price Index),2.8,2025-01-01,Percent Change from Quarter One Year Ago,Quarterly,Seasonally Adjusted,2025-04-30 09:38:39-05,45.0,1960-01-01,2025-01-01,175
+MONEY_CREDIT,CCLACBW027SBOG,"Consumer Loans: Credit Cards and Other Revolving Plans, All Commercial Banks",1096.0751,2025-06-11,Billions of U.S. Dollars,"Weekly, Ending Wednesday",Seasonally Adjusted,2025-06-20 16:36:17-05,79.0,2000-06-28,2025-06-11,14
+MONEY_CREDIT,DPSACBW027SBOG,"Deposits, All Commercial Banks",18252.782,2025-06-11,Billions of U.S. Dollars,"Weekly, Ending Wednesday",Seasonally Adjusted,2025-06-20 16:21:43-05,78.0,1973-01-03,2025-06-11,14
+MONEY_CREDIT,TOTBKCR,"Bank Credit, All Commercial Banks",18436.8599,2025-06-11,Billions of U.S. Dollars,"Weekly, Ending Wednesday",Seasonally Adjusted,2025-06-20 15:25:42-05,71.0,1973-01-03,2025-06-11,14
+MONEY_CREDIT,M1SL,M1,18712.6,2025-05-01,Billions of Dollars,Monthly,Seasonally Adjusted,2025-06-24 12:01:49-05,84.0,1959-01-01,2025-05-01,55
+MONEY_CREDIT,M2SL,M2,21942.0,2025-05-01,Billions of Dollars,Monthly,Seasonally Adjusted,2025-06-24 12:01:52-05,93.0,1959-01-01,2025-05-01,55
+MONEY_CREDIT,BOGMBASE,Monetary Base: Total,5648.6,2025-05-01,Billions of Dollars,Monthly,Not Seasonally Adjusted,2025-06-24 12:01:40-05,78.0,1959-01-01,2025-05-01,55
+MONEY_CREDIT,TOTRESNS,Reserves of Depository Institutions: Total,3262.9,2025-05-01,Billions of Dollars,Monthly,Not Seasonally Adjusted,2025-06-24 12:01:55-05,74.0,1959-01-01,2025-05-01,55
+MONEY_CREDIT,BUSLOANS,"Commercial and Industrial Loans, All Commercial Banks",2814.6927,2025-05-01,Billions of U.S. Dollars,Monthly,Seasonally Adjusted,2025-06-20 17:00:30-05,70.0,1947-01-01,2025-05-01,55
+MONEY_CREDIT,REALLN,"Real Estate Loans, All Commercial Banks",5669.0804,2025-05-01,Billions of U.S. Dollars,Monthly,Seasonally Adjusted,2025-06-20 15:17:42-05,48.0,1947-01-01,2025-05-01,55
+MONEY_CREDIT,H8B1001NCBCMG,"Bank Credit, All Commercial Banks",5.7,2025-05-01,Percent Change at Annual Rate,Monthly,Seasonally Adjusted,2025-06-20 17:33:08-05,32.0,1947-02-01,2025-05-01,55
+MONEY_CREDIT,USGSEC,"Treasury and Agency Securities, All Commercial Banks",4533.214,2025-05-01,Billions of U.S. Dollars,Monthly,Seasonally Adjusted,2025-06-20 15:32:32-05,41.0,1947-01-01,2025-05-01,55
+MONEY_CREDIT,OTHSEC,"Other Securities, All Commercial Banks",982.0513,2025-05-01,Billions of U.S. Dollars,Monthly,Seasonally Adjusted,2025-06-20 16:34:43-05,5.0,1947-01-01,2025-05-01,55
+MONEY_CREDIT,INVEST,"Securities in Bank Credit, All Commercial Banks",5515.2653,2025-05-01,Billions of U.S. Dollars,Monthly,Seasonally Adjusted,2025-06-20 15:22:20-05,9.0,1947-01-01,2025-05-01,55
+MONEY_CREDIT,NONREVSL,Nonrevolving Consumer Credit Owned and Securitized,3689118.77,2025-04-01,Millions of Dollars,Monthly,Seasonally Adjusted,2025-06-06 14:01:07-05,23.0,1943-01-01,2025-04-01,85
+MONEY_CREDIT,DRISCFLM,Net Percentage of Domestic Banks Increasing Spreads of Loan Rates Over Banks' Cost of Funds to Large and Middle-Market Firms,-4.8,2025-04-01,Percent,Quarterly,Not Seasonally Adjusted,2025-05-12 13:00:40-05,31.0,1990-04-01,2025-04-01,85
+RATES,T10Y2Y,10-Year Treasury Constant Maturity Minus 2-Year Treasury Constant Maturity,0.55,2025-06-24,Percent,Daily,Not Seasonally Adjusted,2025-06-24 16:03:07-05,100.0,1976-06-01,2025-06-24,1
+RATES,T10Y3M,10-Year Treasury Constant Maturity Minus 3-Month Treasury Constant Maturity,-0.08,2025-06-24,Percent,Daily,Not Seasonally Adjusted,2025-06-24 16:03:12-05,94.0,1982-01-04,2025-06-24,1
+RATES,DGS1,"Market Yield on U.S. Treasury Securities at 1-Year Constant Maturity, Quoted on an Investment Basis",4.0,2025-06-23,Percent,Daily,Not Seasonally Adjusted,2025-06-24 15:18:50-05,79.0,1962-01-02,2025-06-23,2
+RATES,DGS2,"Market Yield on U.S. Treasury Securities at 2-Year Constant Maturity, Quoted on an Investment Basis",3.84,2025-06-23,Percent,Daily,Not Seasonally Adjusted,2025-06-24 15:18:53-05,80.0,1976-06-01,2025-06-23,2
+RATES,DGS5,"Market Yield on U.S. Treasury Securities at 5-Year Constant Maturity, Quoted on an Investment Basis",3.91,2025-06-23,Percent,Daily,Not Seasonally Adjusted,2025-06-24 15:18:55-05,78.0,1962-01-02,2025-06-23,2
+RATES,DGS10,"Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis",4.34,2025-06-23,Percent,Daily,Not Seasonally Adjusted,2025-06-24 15:18:50-05,92.0,1962-01-02,2025-06-23,2
+RATES,DGS30,"Market Yield on U.S. Treasury Securities at 30-Year Constant Maturity, Quoted on an Investment Basis",4.87,2025-06-23,Percent,Daily,Not Seasonally Adjusted,2025-06-24 15:18:55-05,76.0,1977-02-15,2025-06-23,2
+RATES,DFII10,"Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis, Inflation-Indexed",2.04,2025-06-23,Percent,Daily,Not Seasonally Adjusted,2025-06-24 15:18:46-05,85.0,2003-01-02,2025-06-23,2
+RATES,FEDFUNDS,Federal Funds Effective Rate,4.33,2025-05-01,Percent,Monthly,Not Seasonally Adjusted,2025-06-02 15:17:24-05,98.0,1954-07-01,2025-05-01,55
+RATES,TB3MS,"3-Month Treasury Bill Secondary Market Rate, Discount Basis",4.25,2025-05-01,Percent,Monthly,Not Seasonally Adjusted,2025-06-02 15:16:53-05,79.0,1934-01-01,2025-05-01,55
+RATES,TB6MS,"6-Month Treasury Bill Secondary Market Rate, Discount Basis",4.13,2025-05-01,Percent,Monthly,Not Seasonally Adjusted,2025-06-02 15:16:57-05,31.0,1958-12-01,2025-05-01,55
+RATES,GS1M,"Market Yield on U.S. Treasury Securities at 1-Month Constant Maturity, Quoted on an Investment Basis",4.37,2025-05-01,Percent,Monthly,Not Seasonally Adjusted,2025-06-02 15:16:47-05,39.0,2001-07-01,2025-05-01,55
+TRADE,EXUSEU,U.S. Dollars to Euro Spot Exchange Rate,1.1274,2025-05-01,U.S. Dollars to One Euro,Monthly,Not Seasonally Adjusted,2025-06-02 15:19:59-05,56.0,1999-01-01,2025-05-01,55
+TRADE,EXJPUS,Japanese Yen to U.S. Dollar Spot Exchange Rate,144.8762,2025-05-01,Japanese Yen to One U.S. Dollar,Monthly,Not Seasonally Adjusted,2025-06-02 15:19:55-05,58.0,1971-01-01,2025-05-01,55
+TRADE,EXCAUS,Canadian Dollars to U.S. Dollar Spot Exchange Rate,1.3867,2025-05-01,Canadian Dollars to One U.S. Dollar,Monthly,Not Seasonally Adjusted,2025-06-02 15:19:53-05,46.0,1971-01-01,2025-05-01,55
+TRADE,EXMXUS,Mexican Pesos to U.S. Dollar Spot Exchange Rate,19.4573,2025-05-01,Mexican Pesos to One U.S. Dollar,Monthly,Not Seasonally Adjusted,2025-06-02 15:19:56-05,35.0,1993-11-01,2025-05-01,55
+TRADE,EXCHUS,Chinese Yuan Renminbi to U.S. Dollar Spot Exchange Rate,7.2166,2025-05-01,Chinese Yuan Renminbi to One U.S. Dollar,Monthly,Not Seasonally Adjusted,2025-06-02 15:19:54-05,49.0,1981-01-01,2025-05-01,55
+TRADE,EXUSUK,U.S. Dollars to U.K. Pound Sterling Spot Exchange Rate,1.3358,2025-05-01,U.S. Dollars to One U.K. Pound Sterling,Monthly,Not Seasonally Adjusted,2025-06-02 15:20:00-05,43.0,1971-01-01,2025-05-01,55
+TRADE,BOPGSTB,"Trade Balance: Goods and Services, Balance of Payments Basis",-61617.0,2025-04-01,Millions of Dollars,Monthly,Seasonally Adjusted,2025-06-05 07:51:04-05,62.0,1992-01-01,2025-04-01,85
+TRADE,XTEXVA01USM664S,International Merchandise Trade Statistics: Exports: Commodities for United States,188974000000.00003,2025-04-01,US Dollar,Monthly,Seasonally Adjusted,2025-06-16 14:10:28-05,3.0,1955-01-01,2025-04-01,85
+TRADE,XTIMVA01USM664S,International Merchandise Trade Statistics: Imports: Commodities for United States,275939000000.0,2025-04-01,US Dollar,Monthly,Seasonally Adjusted,2025-06-16 14:11:02-05,2.0,1955-01-01,2025-04-01,85
+TRADE,NETEXP,Net Exports of Goods and Services,-1267.561,2025-01-01,Billions of Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-05-29 07:56:34-05,60.0,1947-01-01,2025-01-01,175
+TRADE,EXPGS,Exports of Goods and Services,3281.248,2025-01-01,Billions of Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-05-29 07:57:22-05,51.0,1947-01-01,2025-01-01,175
+TRADE,IMPGS,Imports of Goods and Services,4548.809,2025-01-01,Billions of Dollars,Quarterly,Seasonally Adjusted Annual Rate,2025-05-29 07:56:35-05,53.0,1947-01-01,2025-01-01,175
+TRADE,IEABC,Balance on current account,-450170.0,2025-01-01,Millions of Dollars,Quarterly,Seasonally Adjusted,2025-06-24 08:51:08-05,53.0,1999-01-01,2025-01-01,175
+,DJIA,Dow Jones Industrial Average,43089.02,2025-06-24,Index,"Daily, Close",,2025-06-24 19:20:28-05,,,,1
+,SP500,S&P 500,6092.18,2025-06-24,Index,"Daily, Close",,2025-06-24 19:02:01-05,,,,1
+,NASDAQCOM,NASDAQ Composite Index,19630.97,2025-06-23,"Index Feb 5, 1971=100","Daily, Close",,2025-06-24 08:35:16-05,,,,2
+,VIXCLS,CBOE Volatility Index: VIX,19.83,2025-06-23,Index,"Daily, Close",,2025-06-24 08:37:03-05,,,,2
+,DEXUSEU,U.S. Dollars to Euro Spot Exchange Rate,1.152,2025-06-20,U.S. Dollars to One Euro,Daily,,2025-06-23 15:20:03-05,,,,5
+,MORTGAGE30US,30-Year Fixed Rate Mortgage Average in the United States,6.81,2025-06-18,Percent,"Weekly, Ending Thursday",,2025-06-18 11:06:03-05,,,,7
+,RSXFS,Advance Retail Sales: Retail Trade,618055.0,2025-05-01,Millions of Dollars,Monthly,,2025-06-17 07:34:23-05,,,,55
+,HOUST,New Privately-Owned Housing Units Started: Total Units,1256.0,2025-05-01,Thousands of Units,Monthly,,2025-06-18 07:31:21-05,,,,55
+,INDPRO,Industrial Production: Total Index,103.5948,2025-05-01,Index 2017=100,Monthly,,2025-06-17 08:27:56-05,,,,55
+,UMCSENT,University of Michigan: Consumer Sentiment,52.2,2025-04-01,Index 1966:Q1=100,Monthly,,2025-05-30 10:01:05-05,,,,85

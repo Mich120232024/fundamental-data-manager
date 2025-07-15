@@ -1,0 +1,322 @@
+{
+  "timestamp": 1750805839.606647,
+  "working_tabs": 3,
+  "total_tabs": 10,
+  "success_rate": 30.0,
+  "tab_results": {
+    "Overview": {
+      "status": "\u274c BROKEN",
+      "details": "Only 2/3 elements working",
+      "timestamp": 1750805797.160328
+    },
+    "Mailbox": {
+      "status": "\u274c BROKEN",
+      "details": "Only 1/3 elements working",
+      "timestamp": 1750805801.3299358
+    },
+    "Cosmos Explorer": {
+      "status": "\u274c BROKEN",
+      "details": "Only 0/3 elements working",
+      "timestamp": 1750805805.462395
+    },
+    "Graph DB": {
+      "status": "\u274c BROKEN",
+      "details": "Only 1/3 elements working",
+      "timestamp": 1750805809.595575
+    },
+    "Agent Shell": {
+      "status": "\u274c BROKEN",
+      "details": "Only 1/3 elements working",
+      "timestamp": 1750805813.725526
+    },
+    "Manager": {
+      "status": "\u274c BROKEN",
+      "details": "Only 0/2 elements working",
+      "timestamp": 1750805817.848323
+    },
+    "Workspace": {
+      "status": "\u274c BROKEN",
+      "details": "Only 1/2 elements working",
+      "timestamp": 1750805822.025857
+    },
+    "Architecture": {
+      "status": "\u2705 WORKING",
+      "details": "All 3 elements functional",
+      "timestamp": 1750805828.270572
+    },
+    "Documentation": {
+      "status": "\u2705 WORKING",
+      "details": "All 3 elements functional",
+      "timestamp": 1750805834.475443
+    },
+    "Deep Context": {
+      "status": "\u2705 WORKING",
+      "details": "All 2 elements functional",
+      "timestamp": 1750805838.605344
+    }
+  },
+  "console_logs": [
+    {
+      "type": "log",
+      "text": "Nav item clicked: Agent Shell agents",
+      "timestamp": 1750805810.6412401
+    },
+    {
+      "type": "log",
+      "text": "switchTab called with: agents",
+      "timestamp": 1750805810.6416519
+    },
+    {
+      "type": "log",
+      "text": "currentTab set to: agents",
+      "timestamp": 1750805810.6421828
+    },
+    {
+      "type": "log",
+      "text": "Nav item clicked: Manager manager",
+      "timestamp": 1750805814.7637289
+    },
+    {
+      "type": "log",
+      "text": "switchTab called with: manager",
+      "timestamp": 1750805814.763925
+    },
+    {
+      "type": "log",
+      "text": "currentTab set to: manager",
+      "timestamp": 1750805814.7641642
+    },
+    {
+      "type": "log",
+      "text": "Nav item clicked: Workspace workspace",
+      "timestamp": 1750805818.90027
+    },
+    {
+      "type": "log",
+      "text": "switchTab called with: workspace",
+      "timestamp": 1750805818.900602
+    },
+    {
+      "type": "log",
+      "text": "currentTab set to: workspace",
+      "timestamp": 1750805818.900809
+    },
+    {
+      "type": "log",
+      "text": "Nav item clicked: Architecture research",
+      "timestamp": 1750805823.074195
+    },
+    {
+      "type": "log",
+      "text": "switchTab called with: research",
+      "timestamp": 1750805823.074571
+    },
+    {
+      "type": "log",
+      "text": "currentTab set to: research",
+      "timestamp": 1750805823.074843
+    },
+    {
+      "type": "log",
+      "text": "loadResearch function called",
+      "timestamp": 1750805823.075059
+    },
+    {
+      "type": "log",
+      "text": "loadArchitecture called",
+      "timestamp": 1750805823.075238
+    },
+    {
+      "type": "log",
+      "text": "Fetching: http://localhost:8420/api/v1/architecture/list",
+      "timestamp": 1750805823.0754418
+    },
+    {
+      "type": "log",
+      "text": "Architecture data received: {files: Array(102), count: 102, base_paths: Array(4)}",
+      "timestamp": 1750805823.105422
+    },
+    {
+      "type": "log",
+      "text": "Files count: 102",
+      "timestamp": 1750805823.105675
+    },
+    {
+      "type": "log",
+      "text": "Categories: [General, Process Workflows, Project Architecture, Communication Protocols, System Architecture, Database Design, Frontend Components, Agent & Team Systems, Operations & Maintenance]",
+      "timestamp": 1750805823.105995
+    },
+    {
+      "type": "log",
+      "text": "About to call displayArchitectureFiles with categories: [General, Process Workflows, Project Architecture, Communication Protocols, System Architecture, Database Design, Frontend Components, Agent & Team Systems, Operations & Maintenance]",
+      "timestamp": 1750805823.106246
+    },
+    {
+      "type": "log",
+      "text": "displayArchitectureFiles called with: [General, Process Workflows, Project Architecture, Communication Protocols, System Architecture, Database Design, Frontend Components, Agent & Team Systems, Operations & Maintenance]",
+      "timestamp": 1750805823.1064708
+    },
+    {
+      "type": "log",
+      "text": "Found fileList element, selectedCategory: ",
+      "timestamp": 1750805823.106613
+    },
+    {
+      "type": "log",
+      "text": "Processing category: General with 10 files",
+      "timestamp": 1750805823.106868
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: General",
+      "timestamp": 1750805823.107064
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Process Workflows with 13 files",
+      "timestamp": 1750805823.107326
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Process Workflows",
+      "timestamp": 1750805823.107459
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Project Architecture with 2 files",
+      "timestamp": 1750805823.107706
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Project Architecture",
+      "timestamp": 1750805823.1078348
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Communication Protocols with 2 files",
+      "timestamp": 1750805823.108138
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Communication Protocols",
+      "timestamp": 1750805823.108302
+    },
+    {
+      "type": "log",
+      "text": "Processing category: System Architecture with 56 files",
+      "timestamp": 1750805823.108696
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: System Architecture",
+      "timestamp": 1750805823.108971
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Database Design with 2 files",
+      "timestamp": 1750805823.109397
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Database Design",
+      "timestamp": 1750805823.109538
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Frontend Components with 5 files",
+      "timestamp": 1750805823.109782
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Frontend Components",
+      "timestamp": 1750805823.109998
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Agent & Team Systems with 7 files",
+      "timestamp": 1750805823.110275
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Agent & Team Systems",
+      "timestamp": 1750805823.1104152
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Operations & Maintenance with 5 files",
+      "timestamp": 1750805823.110702
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Operations & Maintenance",
+      "timestamp": 1750805823.1108348
+    },
+    {
+      "type": "log",
+      "text": "selectArchFile called with: Macro Analysis Journey",
+      "timestamp": 1750805826.255488
+    },
+    {
+      "type": "log",
+      "text": "viewer-title element: JSHandle@node",
+      "timestamp": 1750805826.255672
+    },
+    {
+      "type": "log",
+      "text": "architecture-iframe element: JSHandle@node",
+      "timestamp": 1750805826.2558389
+    },
+    {
+      "type": "log",
+      "text": "Loading iframe URL: http://localhost:8420/api/v1/architecture/raw?path=%2FUsers%2Fmikaeleage%2FResearch%20%26%20Analytics%20Services%2FSystem%20Enforcement%20Workspace%2FDOCS%2Fdocumentation%2FIntel_Slides%2F03_Data_Processing%2F04_Macro_Analysis_Journey.html",
+      "timestamp": 1750805826.2559612
+    },
+    {
+      "type": "log",
+      "text": "Nav item clicked: Documentation documentation",
+      "timestamp": 1750805829.3232582
+    },
+    {
+      "type": "log",
+      "text": "switchTab called with: documentation",
+      "timestamp": 1750805829.3235729
+    },
+    {
+      "type": "log",
+      "text": "currentTab set to: documentation",
+      "timestamp": 1750805829.3237498
+    },
+    {
+      "type": "log",
+      "text": "loadDocumentation called",
+      "timestamp": 1750805829.323871
+    },
+    {
+      "type": "log",
+      "text": "Nav item clicked: Deep Context deepcontext",
+      "timestamp": 1750805835.515007
+    },
+    {
+      "type": "log",
+      "text": "switchTab called with: deepcontext",
+      "timestamp": 1750805835.515363
+    },
+    {
+      "type": "log",
+      "text": "currentTab set to: deepcontext",
+      "timestamp": 1750805835.515568
+    }
+  ],
+  "screenshots": [
+    "mcp_debug_Overview_1750805797.png",
+    "mcp_debug_Mailbox_1750805801.png",
+    "mcp_debug_Cosmos Explorer_1750805805.png",
+    "mcp_debug_Graph DB_1750805809.png",
+    "mcp_debug_Agent Shell_1750805813.png",
+    "mcp_debug_Manager_1750805817.png",
+    "mcp_debug_Workspace_1750805821.png",
+    "mcp_debug_Architecture_1750805826.png",
+    "mcp_debug_Documentation_1750805832.png",
+    "mcp_debug_Deep Context_1750805838.png"
+  ]
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fetch Debug Test</title>
+</head>
+<body>
+    <h1>Fetch Debug Test</h1>
+    <div id="results"></div>
+    
+    <script>
+        // Test different fetch approaches
+        async function testFetch() {
+            const results = document.getElementById('results');
+            
+            // Test 1: Basic fetch
+            try {
+                console.log('Test 1: Basic fetch to /api/stats');
+                const response = await fetch('/api/stats');
+                const data = await response.json();
+                results.innerHTML += '<p style="color:green">✓ Test 1 Success: ' + JSON.stringify(data.success) + '</p>';
+            } catch (e) {
+                console.error('Test 1 failed:', e);
+                results.innerHTML += '<p style="color:red">✗ Test 1 Failed: ' + e.message + '</p>';
+            }
+            
+            // Test 2: Full URL
+            try {
+                console.log('Test 2: Full URL fetch');
+                const response = await fetch('http://localhost:5001/api/stats');
+                const data = await response.json();
+                results.innerHTML += '<p style="color:green">✓ Test 2 Success: ' + JSON.stringify(data.success) + '</p>';
+            } catch (e) {
+                console.error('Test 2 failed:', e);
+                results.innerHTML += '<p style="color:red">✗ Test 2 Failed: ' + e.message + '</p>';
+            }
+            
+            // Test 3: With headers
+            try {
+                console.log('Test 3: Fetch with headers');
+                const response = await fetch('/api/stats', {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                });
+                const data = await response.json();
+                results.innerHTML += '<p style="color:green">✓ Test 3 Success: ' + JSON.stringify(data.success) + '</p>';
+            } catch (e) {
+                console.error('Test 3 failed:', e);
+                results.innerHTML += '<p style="color:red">✗ Test 3 Failed: ' + e.message + '</p>';
+            }
+            
+            // Test 4: XMLHttpRequest as fallback
+            try {
+                console.log('Test 4: XMLHttpRequest');
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', '/api/stats', true);
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        const data = JSON.parse(xhr.responseText);
+                        results.innerHTML += '<p style="color:green">✓ Test 4 Success: ' + JSON.stringify(data.success) + '</p>';
+                    } else {
+                        results.innerHTML += '<p style="color:red">✗ Test 4 Failed: Status ' + xhr.status + '</p>';
+                    }
+                };
+                xhr.onerror = function() {
+                    results.innerHTML += '<p style="color:red">✗ Test 4 Failed: Network error</p>';
+                };
+                xhr.send();
+            } catch (e) {
+                console.error('Test 4 failed:', e);
+                results.innerHTML += '<p style="color:red">✗ Test 4 Failed: ' + e.message + '</p>';
+            }
+        }
+        
+        // Run tests
+        testFetch();
+    </script>
+</body>
+</html>

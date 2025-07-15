@@ -1,0 +1,202 @@
+{
+  "database_name": "fred_economic_data",
+  "consistency_level": "Session",
+  "containers": {
+    "sources": {
+      "partition_key": "/id",
+      "entity_type": "sources",
+      "estimated_size": 117,
+      "throughput_strategy": "shared",
+      "indexing_policy": {
+        "automatic": true,
+        "included_paths": [
+          {
+            "path": "/name/?"
+          },
+          {
+            "path": "/link/?"
+          }
+        ],
+        "excluded_paths": [
+          {
+            "path": "/notes/?"
+          }
+        ]
+      },
+      "ttl": null,
+      "unique_key_policy": {
+        "unique_keys": [
+          {
+            "paths": [
+              "/id"
+            ]
+          }
+        ]
+      }
+    },
+    "releases": {
+      "partition_key": "/id",
+      "entity_type": "releases",
+      "estimated_size": 318,
+      "throughput_strategy": "shared",
+      "indexing_policy": {
+        "automatic": true,
+        "included_paths": [
+          {
+            "path": "/name/?"
+          },
+          {
+            "path": "/realtime_start/?"
+          },
+          {
+            "path": "/realtime_end/?"
+          }
+        ],
+        "excluded_paths": [
+          {
+            "path": "/notes/?"
+          }
+        ]
+      },
+      "ttl": null,
+      "unique_key_policy": {
+        "unique_keys": [
+          {
+            "paths": [
+              "/id"
+            ]
+          }
+        ]
+      }
+    },
+    "categories": {
+      "partition_key": "/parent_id",
+      "entity_type": "categories",
+      "estimated_size": 708,
+      "throughput_strategy": "shared",
+      "indexing_policy": {
+        "automatic": true,
+        "included_paths": [
+          {
+            "path": "/name/?"
+          },
+          {
+            "path": "/parent_id/?"
+          },
+          {
+            "path": "/depth/?"
+          }
+        ],
+        "excluded_paths": [
+          {
+            "path": "/notes/?"
+          }
+        ]
+      },
+      "ttl": null,
+      "unique_key_policy": {
+        "unique_keys": [
+          {
+            "paths": [
+              "/id"
+            ]
+          }
+        ]
+      }
+    },
+    "tags": {
+      "partition_key": "/group_id",
+      "entity_type": "tags",
+      "estimated_size": 1000,
+      "throughput_strategy": "shared",
+      "indexing_policy": {
+        "automatic": true,
+        "included_paths": [
+          {
+            "path": "/name/?"
+          },
+          {
+            "path": "/group_id/?"
+          },
+          {
+            "path": "/popularity/?"
+          },
+          {
+            "path": "/series_count/?"
+          }
+        ],
+        "excluded_paths": [
+          {
+            "path": "/notes/?"
+          }
+        ]
+      },
+      "ttl": null,
+      "unique_key_policy": {}
+    },
+    "series": {
+      "partition_key": "/source_category_id",
+      "entity_type": "series_sample",
+      "estimated_size": 57,
+      "throughput_strategy": "shared",
+      "indexing_policy": {
+        "automatic": true,
+        "included_paths": [
+          {
+            "path": "/title/?"
+          },
+          {
+            "path": "/units/?"
+          },
+          {
+            "path": "/frequency/?"
+          },
+          {
+            "path": "/source_category_id/?"
+          }
+        ],
+        "excluded_paths": [
+          {
+            "path": "/notes/?"
+          }
+        ]
+      },
+      "ttl": null,
+      "unique_key_policy": {
+        "unique_keys": [
+          {
+            "paths": [
+              "/id"
+            ]
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "partition_key": "/relationship_type",
+      "entity_type": "relationships",
+      "estimated_size": 765,
+      "throughput_strategy": "shared",
+      "indexing_policy": {
+        "automatic": true,
+        "included_paths": [
+          {
+            "path": "/from_entity/?"
+          },
+          {
+            "path": "/to_entity/?"
+          },
+          {
+            "path": "/relationship_type/?"
+          }
+        ]
+      }
+    }
+  },
+  "shared_throughput": 1000,
+  "backup_policy": {
+    "type": "Periodic",
+    "backup_interval_in_minutes": 240,
+    "backup_retention_period_in_hours": 720
+  }
+}

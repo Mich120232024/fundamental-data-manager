@@ -1,0 +1,63 @@
+{
+  "policy_notification": {
+    "policy_name": "Enhanced Semantic Policy",
+    "version": "2.0",
+    "sent_at": "2025-06-16T21:31:50.462803",
+    "notifications": [
+      {
+        "to": "alex.chen@company.com",
+        "to_name": "Alex Chen",
+        "team": "Engineering",
+        "subject": "New Enhanced Semantic Policy - Action Required",
+        "body": "Dear Alex Chen,\n\nWe are pleased to announce the implementation of our Enhanced Semantic Policy v2.0, building on SAM's proven core naming convention.\n\nKEY INFORMATION FOR ENGINEERING TEAM:\n\n1. CORE NAMING CONVENTION (Required for all assets):\n   Pattern: {type}-{category}-{identifier}_{name}\n   Example: report-financial-q4-2024_earnings_summary\n\n2. REQUIRED TAGS (Must be applied to all assets):\n   - type: Asset type\n   - category: Business category  \n   - status: Current status\n   - owner: Primary owner/team\n   - audience: Intended audience\n\n3. ENGINEERING TEAM OPTIONAL TAGS:\n   complexity, dependencies, test_coverage\n   Purpose: Technical metadata for engineering assets\n\nACTION REQUIRED:\n1. Review the policy with your team\n2. Update existing assets to comply as convenient\n3. Apply policy to all new assets\n4. Report any implementation challenges\n\nBENEFITS:\n- Improved asset discovery and searchability\n- Better cross-team collaboration\n- Enhanced governance and compliance tracking\n- Streamlined reporting and analytics\n\nFor full policy details, access: /metadata_container/enhanced_semantic_policy.json\n\nThank you for your cooperation in maintaining our metadata standards.\n\nBest regards,\nMetadata Governance Team\n",
+        "sent_at": "2025-06-16T21:31:50.462743",
+        "status": "sent"
+      },
+      {
+        "to": "sarah.johnson@company.com",
+        "to_name": "Sarah Johnson",
+        "team": "Governance",
+        "subject": "New Enhanced Semantic Policy - Action Required",
+        "body": "Dear Sarah Johnson,\n\nWe are pleased to announce the implementation of our Enhanced Semantic Policy v2.0, building on SAM's proven core naming convention.\n\nKEY INFORMATION FOR GOVERNANCE TEAM:\n\n1. CORE NAMING CONVENTION (Required for all assets):\n   Pattern: {type}-{category}-{identifier}_{name}\n   Example: report-financial-q4-2024_earnings_summary\n\n2. REQUIRED TAGS (Must be applied to all assets):\n   - type: Asset type\n   - category: Business category  \n   - status: Current status\n   - owner: Primary owner/team\n   - audience: Intended audience\n\n3. GOVERNANCE TEAM OPTIONAL TAGS:\n   compliance_level, evidence_required, audit_frequency\n   Purpose: Compliance and audit tracking\n\nACTION REQUIRED:\n1. Review the policy with your team\n2. Update existing assets to comply as convenient\n3. Apply policy to all new assets\n4. Report any implementation challenges\n\nBENEFITS:\n- Improved asset discovery and searchability\n- Better cross-team collaboration\n- Enhanced governance and compliance tracking\n- Streamlined reporting and analytics\n\nFor full policy details, access: /metadata_container/enhanced_semantic_policy.json\n\nThank you for your cooperation in maintaining our metadata standards.\n\nBest regards,\nMetadata Governance Team\n",
+        "sent_at": "2025-06-16T21:31:50.462748",
+        "status": "sent"
+      },
+      {
+        "to": "michael.park@company.com",
+        "to_name": "Dr. Michael Park",
+        "team": "Research",
+        "subject": "New Enhanced Semantic Policy - Action Required",
+        "body": "Dear Dr. Michael Park,\n\nWe are pleased to announce the implementation of our Enhanced Semantic Policy v2.0, building on SAM's proven core naming convention.\n\nKEY INFORMATION FOR RESEARCH TEAM:\n\n1. CORE NAMING CONVENTION (Required for all assets):\n   Pattern: {type}-{category}-{identifier}_{name}\n   Example: report-financial-q4-2024_earnings_summary\n\n2. REQUIRED TAGS (Must be applied to all assets):\n   - type: Asset type\n   - category: Business category  \n   - status: Current status\n   - owner: Primary owner/team\n   - audience: Intended audience\n\n3. RESEARCH TEAM OPTIONAL TAGS:\n   methodology, confidence_level, peer_reviewed\n   Purpose: Research quality and validation metadata\n\nACTION REQUIRED:\n1. Review the policy with your team\n2. Update existing assets to comply as convenient\n3. Apply policy to all new assets\n4. Report any implementation challenges\n\nBENEFITS:\n- Improved asset discovery and searchability\n- Better cross-team collaboration\n- Enhanced governance and compliance tracking\n- Streamlined reporting and analytics\n\nFor full policy details, access: /metadata_container/enhanced_semantic_policy.json\n\nThank you for your cooperation in maintaining our metadata standards.\n\nBest regards,\nMetadata Governance Team\n",
+        "sent_at": "2025-06-16T21:31:50.462751",
+        "status": "sent"
+      },
+      {
+        "to": "lisa.martinez@company.com",
+        "to_name": "Lisa Martinez",
+        "team": "Business",
+        "subject": "New Enhanced Semantic Policy - Action Required",
+        "body": "Dear Lisa Martinez,\n\nWe are pleased to announce the implementation of our Enhanced Semantic Policy v2.0, building on SAM's proven core naming convention.\n\nKEY INFORMATION FOR BUSINESS TEAM:\n\n1. CORE NAMING CONVENTION (Required for all assets):\n   Pattern: {type}-{category}-{identifier}_{name}\n   Example: report-financial-q4-2024_earnings_summary\n\n2. REQUIRED TAGS (Must be applied to all assets):\n   - type: Asset type\n   - category: Business category  \n   - status: Current status\n   - owner: Primary owner/team\n   - audience: Intended audience\n\n3. BUSINESS TEAM OPTIONAL TAGS:\n   roi_impact, stakeholders, market_segment\n   Purpose: Business value and stakeholder tracking\n\nACTION REQUIRED:\n1. Review the policy with your team\n2. Update existing assets to comply as convenient\n3. Apply policy to all new assets\n4. Report any implementation challenges\n\nBENEFITS:\n- Improved asset discovery and searchability\n- Better cross-team collaboration\n- Enhanced governance and compliance tracking\n- Streamlined reporting and analytics\n\nFor full policy details, access: /metadata_container/enhanced_semantic_policy.json\n\nThank you for your cooperation in maintaining our metadata standards.\n\nBest regards,\nMetadata Governance Team\n",
+        "sent_at": "2025-06-16T21:31:50.462753",
+        "status": "sent"
+      },
+      {
+        "to": "james.wilson@company.com",
+        "to_name": "James Wilson",
+        "team": "Executive",
+        "subject": "New Enhanced Semantic Policy - Action Required",
+        "body": "Dear James Wilson,\n\nWe are pleased to announce the implementation of our Enhanced Semantic Policy v2.0, building on SAM's proven core naming convention.\n\nKEY INFORMATION FOR EXECUTIVE TEAM:\n\n1. CORE NAMING CONVENTION (Required for all assets):\n   Pattern: {type}-{category}-{identifier}_{name}\n   Example: report-financial-q4-2024_earnings_summary\n\n2. REQUIRED TAGS (Must be applied to all assets):\n   - type: Asset type\n   - category: Business category  \n   - status: Current status\n   - owner: Primary owner/team\n   - audience: Intended audience\n\n3. EXECUTIVE TEAM OPTIONAL TAGS:\n   strategic_priority, decision_impact, board_visibility\n   Purpose: Executive-level strategic metadata\n\nACTION REQUIRED:\n1. Review the policy with your team\n2. Update existing assets to comply as convenient\n3. Apply policy to all new assets\n4. Report any implementation challenges\n\nBENEFITS:\n- Improved asset discovery and searchability\n- Better cross-team collaboration\n- Enhanced governance and compliance tracking\n- Streamlined reporting and analytics\n\nFor full policy details, access: /metadata_container/enhanced_semantic_policy.json\n\nThank you for your cooperation in maintaining our metadata standards.\n\nBest regards,\nMetadata Governance Team\n",
+        "sent_at": "2025-06-16T21:31:50.462755",
+        "status": "sent"
+      },
+      {
+        "to": "emily.davis@company.com",
+        "to_name": "Emily Davis",
+        "team": "Digital Labor",
+        "subject": "New Enhanced Semantic Policy - Action Required",
+        "body": "Dear Emily Davis,\n\nWe are pleased to announce the implementation of our Enhanced Semantic Policy v2.0, building on SAM's proven core naming convention.\n\nKEY INFORMATION FOR DIGITAL LABOR TEAM:\n\n1. CORE NAMING CONVENTION (Required for all assets):\n   Pattern: {type}-{category}-{identifier}_{name}\n   Example: report-financial-q4-2024_earnings_summary\n\n2. REQUIRED TAGS (Must be applied to all assets):\n   - type: Asset type\n   - category: Business category  \n   - status: Current status\n   - owner: Primary owner/team\n   - audience: Intended audience\n\n3. DIGITAL LABOR TEAM OPTIONAL TAGS:\n   skill_level, utilization_rate, performance_tier\n   Purpose: Digital workforce performance tracking\n\nACTION REQUIRED:\n1. Review the policy with your team\n2. Update existing assets to comply as convenient\n3. Apply policy to all new assets\n4. Report any implementation challenges\n\nBENEFITS:\n- Improved asset discovery and searchability\n- Better cross-team collaboration\n- Enhanced governance and compliance tracking\n- Streamlined reporting and analytics\n\nFor full policy details, access: /metadata_container/enhanced_semantic_policy.json\n\nThank you for your cooperation in maintaining our metadata standards.\n\nBest regards,\nMetadata Governance Team\n",
+        "sent_at": "2025-06-16T21:31:50.462757",
+        "status": "sent"
+      }
+    ]
+  }
+}

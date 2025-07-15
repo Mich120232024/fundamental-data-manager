@@ -1,0 +1,8011 @@
+{
+  "realtime_start": "2025-05-31",
+  "realtime_end": "2025-05-31",
+  "order_by": "series_count",
+  "sort_order": "desc",
+  "count": 4159,
+  "offset": 0,
+  "limit": 1000,
+  "tags": [
+    {
+      "name": "usa",
+      "group_id": "geo",
+      "notes": "United States of America",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 100,
+      "series_count": 14706
+    },
+    {
+      "name": "nsa",
+      "group_id": "seas",
+      "notes": "Not Seasonally Adjusted",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 100,
+      "series_count": 14676
+    },
+    {
+      "name": "public domain: citation requested",
+      "group_id": "cc",
+      "notes": null,
+      "created": "2018-12-17 23:33:13-06",
+      "popularity": 99,
+      "series_count": 14350
+    },
+    {
+      "name": "annual",
+      "group_id": "freq",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 92,
+      "series_count": 11794
+    },
+    {
+      "name": "county",
+      "group_id": "geot",
+      "notes": "County or County Equivalent",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 87,
+      "series_count": 8612
+    },
+    {
+      "name": "census",
+      "group_id": "src",
+      "notes": "Census",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 86,
+      "series_count": 8068
+    },
+    {
+      "name": "price",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-07-11 11:24:55-05",
+      "popularity": 85,
+      "series_count": 4654
+    },
+    {
+      "name": "nation",
+      "group_id": "geot",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 96,
+      "series_count": 4614
+    },
+    {
+      "name": "indexes",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 85,
+      "series_count": 4306
+    },
+    {
+      "name": "price index",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 83,
+      "series_count": 4238
+    },
+    {
+      "name": "buildings",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 56,
+      "series_count": 4188
+    },
+    {
+      "name": "permits",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 52,
+      "series_count": 4104
+    },
+    {
+      "name": "homeownership",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2017-01-05 10:57:58-06",
+      "popularity": 45,
+      "series_count": 3708
+    },
+    {
+      "name": "private",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 69,
+      "series_count": 3564
+    },
+    {
+      "name": "rate",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 82,
+      "series_count": 3354
+    },
+    {
+      "name": "5-year",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 78,
+      "series_count": 3206
+    },
+    {
+      "name": "acs",
+      "group_id": "rls",
+      "notes": "American Community Survey",
+      "created": "2014-05-22 12:32:43-05",
+      "popularity": 77,
+      "series_count": 3206
+    },
+    {
+      "name": "hpi",
+      "group_id": "gen",
+      "notes": "House Price Index",
+      "created": "2012-08-16 15:21:17-05",
+      "popularity": 65,
+      "series_count": 3176
+    },
+    {
+      "name": "fhfa",
+      "group_id": "src",
+      "notes": "Federal Housing Finance Agency",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 60,
+      "series_count": 2894
+    },
+    {
+      "name": "monthly",
+      "group_id": "freq",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 92,
+      "series_count": 2362
+    },
+    {
+      "name": "bls",
+      "group_id": "src",
+      "notes": "Bureau of Labor Statistics",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 87,
+      "series_count": 2226
+    },
+    {
+      "name": "quarterly",
+      "group_id": "freq",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 83,
+      "series_count": 1908
+    },
+    {
+      "name": "copyrighted: citation required",
+      "group_id": "cc",
+      "notes": null,
+      "created": "2018-12-17 23:33:13-06",
+      "popularity": 85,
+      "series_count": 1646
+    },
+    {
+      "name": "sa",
+      "group_id": "seas",
+      "notes": "Seasonally Adjusted",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 86,
+      "series_count": 1504
+    },
+    {
+      "name": "ces",
+      "group_id": "rls",
+      "notes": "Consumer Expenditure Surveys",
+      "created": "2021-07-21 12:45:07-05",
+      "popularity": 51,
+      "series_count": 1332
+    },
+    {
+      "name": "msa",
+      "group_id": "geot",
+      "notes": "Metropolitan Statistical Area",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 75,
+      "series_count": 1180
+    },
+    {
+      "name": "new",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 62,
+      "series_count": 1068
+    },
+    {
+      "name": "expenditures",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 57,
+      "series_count": 1012
+    },
+    {
+      "name": "mortgage",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 51,
+      "series_count": 998
+    },
+    {
+      "name": "services",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 68,
+      "series_count": 936
+    },
+    {
+      "name": "cpi",
+      "group_id": "gen",
+      "notes": "Consumer Price Index",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 68,
+      "series_count": 916
+    },
+    {
+      "name": "residential",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 56,
+      "series_count": 812
+    },
+    {
+      "name": "sales",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 63,
+      "series_count": 810
+    },
+    {
+      "name": "frb",
+      "group_id": "src",
+      "notes": "Board of Governors",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 78,
+      "series_count": 782
+    },
+    {
+      "name": "z1",
+      "group_id": "rls",
+      "notes": "Z.1 US Financial Accounts",
+      "created": "2012-08-16 15:21:17-05",
+      "popularity": 62,
+      "series_count": 758
+    },
+    {
+      "name": "tx",
+      "group_id": "geo",
+      "notes": "Texas",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 68,
+      "series_count": 752
+    },
+    {
+      "name": "family",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2015-05-06 14:46:00-05",
+      "popularity": 55,
+      "series_count": 722
+    },
+    {
+      "name": "state",
+      "group_id": "geot",
+      "notes": "State",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 74,
+      "series_count": 702
+    },
+    {
+      "name": "hud",
+      "group_id": "src",
+      "notes": "Housing and Urban Development",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 48,
+      "series_count": 700
+    },
+    {
+      "name": "oecd",
+      "group_id": "src",
+      "notes": "Org. for Economic Co-operation and Development",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 72,
+      "series_count": 662
+    },
+    {
+      "name": "mei",
+      "group_id": "rls",
+      "notes": "Main Economic Indicators",
+      "created": "2012-08-16 15:21:17-05",
+      "popularity": 71,
+      "series_count": 652
+    },
+    {
+      "name": "1-unit structures",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 47,
+      "series_count": 644
+    },
+    {
+      "name": "construction",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 59,
+      "series_count": 638
+    },
+    {
+      "name": "assets",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 63,
+      "series_count": 634
+    },
+    {
+      "name": "census region",
+      "group_id": "geot",
+      "notes": "Census Region",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 40,
+      "series_count": 630
+    },
+    {
+      "name": "privately owned",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 39,
+      "series_count": 578
+    },
+    {
+      "name": "eurostat",
+      "group_id": "src",
+      "notes": "Statistical Office of the European Communities",
+      "created": "2012-08-02 10:13:50-05",
+      "popularity": 51,
+      "series_count": 534
+    },
+    {
+      "name": "hicp",
+      "group_id": "rls",
+      "notes": "Harmonized Index of Consumer Prices",
+      "created": "2012-10-15 09:41:39-05",
+      "popularity": 44,
+      "series_count": 534
+    },
+    {
+      "name": "owned",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-06-25 15:04:36-05",
+      "popularity": 33,
+      "series_count": 518
+    },
+    {
+      "name": "harmonized",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 49,
+      "series_count": 500
+    },
+    {
+      "name": "rent",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 500
+    },
+    {
+      "name": "ga",
+      "group_id": "geo",
+      "notes": "Georgia (U.S. state)",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 56,
+      "series_count": 488
+    },
+    {
+      "name": "va",
+      "group_id": "geo",
+      "notes": "Virginia",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 56,
+      "series_count": 464
+    },
+    {
+      "name": "appraisers",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2015-02-03 09:07:18-06",
+      "popularity": 56,
+      "series_count": 462
+    },
+    {
+      "name": "inflation",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-06-08 15:10:11-05",
+      "popularity": 78,
+      "series_count": 396
+    },
+    {
+      "name": "discontinued",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 65,
+      "series_count": 384
+    },
+    {
+      "name": "employment",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 73,
+      "series_count": 366
+    },
+    {
+      "name": "nrs",
+      "group_id": "rls",
+      "notes": "New Residential Sales",
+      "created": "2012-08-16 15:21:17-05",
+      "popularity": 40,
+      "series_count": 364
+    },
+    {
+      "name": "il",
+      "group_id": "geo",
+      "notes": "Illinois",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 51,
+      "series_count": 348
+    },
+    {
+      "name": "ky",
+      "group_id": "geo",
+      "notes": "Kentucky",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 57,
+      "series_count": 348
+    },
+    {
+      "name": "tax",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 344
+    },
+    {
+      "name": "in",
+      "group_id": "geo",
+      "notes": "Indiana",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 340
+    },
+    {
+      "name": "income",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 70,
+      "series_count": 332
+    },
+    {
+      "name": "tn",
+      "group_id": "geo",
+      "notes": "Tennessee",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 53,
+      "series_count": 332
+    },
+    {
+      "name": "transactions",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2019-08-19 12:50:29-05",
+      "popularity": 48,
+      "series_count": 332
+    },
+    {
+      "name": "issues",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2014-02-12 11:03:19-06",
+      "popularity": 35,
+      "series_count": 330
+    },
+    {
+      "name": "maintenance",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-24 17:17:15-05",
+      "popularity": 33,
+      "series_count": 330
+    },
+    {
+      "name": "bea",
+      "group_id": "src",
+      "notes": "Bureau of Economic Analysis",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 78,
+      "series_count": 328
+    },
+    {
+      "name": "nc",
+      "group_id": "geo",
+      "notes": "North Carolina",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 58,
+      "series_count": 324
+    },
+    {
+      "name": "mo",
+      "group_id": "geo",
+      "notes": "Missouri",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 53,
+      "series_count": 318
+    },
+    {
+      "name": "consumer",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 66,
+      "series_count": 316
+    },
+    {
+      "name": "ia",
+      "group_id": "geo",
+      "notes": "Iowa",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 51,
+      "series_count": 316
+    },
+    {
+      "name": "oh",
+      "group_id": "geo",
+      "notes": "Ohio",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 316
+    },
+    {
+      "name": "ca",
+      "group_id": "geo",
+      "notes": "California",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 62,
+      "series_count": 310
+    },
+    {
+      "name": "retail",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 63,
+      "series_count": 302
+    },
+    {
+      "name": "furniture",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 300
+    },
+    {
+      "name": "insurance",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 48,
+      "series_count": 300
+    },
+    {
+      "name": "repair",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 09:44:02-05",
+      "popularity": 32,
+      "series_count": 298
+    },
+    {
+      "name": "mi",
+      "group_id": "geo",
+      "notes": "Michigan",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 294
+    },
+    {
+      "name": "wi",
+      "group_id": "geo",
+      "notes": "Wisconsin",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 56,
+      "series_count": 294
+    },
+    {
+      "name": "fl",
+      "group_id": "geo",
+      "notes": "Florida",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 60,
+      "series_count": 292
+    },
+    {
+      "name": "ks",
+      "group_id": "geo",
+      "notes": "Kansas",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 286
+    },
+    {
+      "name": "personal",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 65,
+      "series_count": 286
+    },
+    {
+      "name": "financial",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 55,
+      "series_count": 284
+    },
+    {
+      "name": "retail trade",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 57,
+      "series_count": 282
+    },
+    {
+      "name": "industry productivity",
+      "group_id": "rls",
+      "notes": "",
+      "created": "2021-06-08 22:08:30-05",
+      "popularity": 49,
+      "series_count": 278
+    },
+    {
+      "name": "urban",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 60,
+      "series_count": 278
+    },
+    {
+      "name": "housing starts",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 276
+    },
+    {
+      "name": "naics",
+      "group_id": "gen",
+      "notes": "North American Industry Classification System",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 276
+    },
+    {
+      "name": "mn",
+      "group_id": "geo",
+      "notes": "Minnesota",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 274
+    },
+    {
+      "name": "pa",
+      "group_id": "geo",
+      "notes": "Pennsylvania",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 53,
+      "series_count": 270
+    },
+    {
+      "name": "ne",
+      "group_id": "geo",
+      "notes": "Nebraska",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 47,
+      "series_count": 264
+    },
+    {
+      "name": "ny",
+      "group_id": "geo",
+      "notes": "New York",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 58,
+      "series_count": 250
+    },
+    {
+      "name": "bis",
+      "group_id": "src",
+      "notes": "Bank for International Settlements",
+      "created": "2013-06-03 14:31:44-05",
+      "popularity": 56,
+      "series_count": 248
+    },
+    {
+      "name": "consumption",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 60,
+      "series_count": 244
+    },
+    {
+      "name": "information",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 42,
+      "series_count": 244
+    },
+    {
+      "name": "frb stl",
+      "group_id": "src",
+      "notes": "St. Louis Fed",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 70,
+      "series_count": 240
+    },
+    {
+      "name": "estimate",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2017-05-19 08:57:49-05",
+      "popularity": 73,
+      "series_count": 238
+    },
+    {
+      "name": "co",
+      "group_id": "geo",
+      "notes": "Colorado",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 51,
+      "series_count": 234
+    },
+    {
+      "name": "consumption expenditures",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 59,
+      "series_count": 232
+    },
+    {
+      "name": "food",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 60,
+      "series_count": 232
+    },
+    {
+      "name": "ok",
+      "group_id": "geo",
+      "notes": "Oklahoma",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 230
+    },
+    {
+      "name": "ms",
+      "group_id": "geo",
+      "notes": "Mississippi",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 228
+    },
+    {
+      "name": "real",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 73,
+      "series_count": 226
+    },
+    {
+      "name": "households",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 65,
+      "series_count": 222
+    },
+    {
+      "name": "la",
+      "group_id": "geo",
+      "notes": "Louisiana",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 48,
+      "series_count": 220
+    },
+    {
+      "name": "sae",
+      "group_id": "rls",
+      "notes": "State and Metro Area Employment, Hours, and Earnings",
+      "created": "2014-02-02 06:12:27-06",
+      "popularity": 62,
+      "series_count": 220
+    },
+    {
+      "name": "al",
+      "group_id": "geo",
+      "notes": "Alabama",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 49,
+      "series_count": 216
+    },
+    {
+      "name": "ar",
+      "group_id": "geo",
+      "notes": "Arkansas",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 48,
+      "series_count": 210
+    },
+    {
+      "name": "pce",
+      "group_id": "gen",
+      "notes": "Personal Consumption Expenditures",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 56,
+      "series_count": 210
+    },
+    {
+      "name": "consumer unit",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2021-01-13 15:51:21-06",
+      "popularity": 36,
+      "series_count": 208
+    },
+    {
+      "name": "gdp",
+      "group_id": "gen",
+      "notes": "Gross Domestic Product",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 79,
+      "series_count": 196
+    },
+    {
+      "name": "nipa",
+      "group_id": "rls",
+      "notes": "National Income and Product Accounts",
+      "created": "2012-08-16 15:21:17-05",
+      "popularity": 68,
+      "series_count": 196
+    },
+    {
+      "name": "wv",
+      "group_id": "geo",
+      "notes": "West Virginia",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 190
+    },
+    {
+      "name": "revaluation",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2019-05-24 09:03:23-05",
+      "popularity": 30,
+      "series_count": 184
+    },
+    {
+      "name": "equipment",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 56,
+      "series_count": 180
+    },
+    {
+      "name": "copyrighted: pre-approval required",
+      "group_id": "cc",
+      "notes": "",
+      "created": "2018-12-17 23:33:13-06",
+      "popularity": 61,
+      "series_count": 176
+    },
+    {
+      "name": "sd",
+      "group_id": "geo",
+      "notes": "South Dakota",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 51,
+      "series_count": 176
+    },
+    {
+      "name": "northeast census region",
+      "group_id": "geo",
+      "notes": "Census - Northeast Region",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 24,
+      "series_count": 168
+    },
+    {
+      "name": "sc",
+      "group_id": "geo",
+      "notes": "South Carolina",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 52,
+      "series_count": 168
+    },
+    {
+      "name": "mt",
+      "group_id": "geo",
+      "notes": "Montana",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 166
+    },
+    {
+      "name": "s&p/case-shiller home price indices",
+      "group_id": "rls",
+      "notes": null,
+      "created": "2018-12-12 10:39:35-06",
+      "popularity": 47,
+      "series_count": 162
+    },
+    {
+      "name": "s&p dow jones indices llc",
+      "group_id": "src",
+      "notes": "",
+      "created": "2013-08-01 15:44:12-05",
+      "popularity": 49,
+      "series_count": 162
+    },
+    {
+      "name": "utilities",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 160
+    },
+    {
+      "name": "south census region",
+      "group_id": "geo",
+      "notes": "Census - South region",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 158
+    },
+    {
+      "name": "water",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-24 16:39:30-05",
+      "popularity": 34,
+      "series_count": 158
+    },
+    {
+      "name": "federal",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 59,
+      "series_count": 156
+    },
+    {
+      "name": "midwest census region",
+      "group_id": "geo",
+      "notes": "Census - Midwest Region",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 152
+    },
+    {
+      "name": "west census region",
+      "group_id": "geo",
+      "notes": "Census - West region",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 25,
+      "series_count": 152
+    },
+    {
+      "name": "fuels",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 146
+    },
+    {
+      "name": "wa",
+      "group_id": "geo",
+      "notes": "Washington (state)",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 53,
+      "series_count": 146
+    },
+    {
+      "name": "or",
+      "group_id": "geo",
+      "notes": "Oregon",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 142
+    },
+    {
+      "name": "id",
+      "group_id": "geo",
+      "notes": "Idaho",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 140
+    },
+    {
+      "name": "md",
+      "group_id": "geo",
+      "notes": "Maryland",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 49,
+      "series_count": 140
+    },
+    {
+      "name": "vacancy",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-17 14:12:59-05",
+      "popularity": 46,
+      "series_count": 136
+    },
+    {
+      "name": "business",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 60,
+      "series_count": 134
+    },
+    {
+      "name": "nrc",
+      "group_id": "rls",
+      "notes": "New Residential Construction",
+      "created": "2012-08-16 15:21:17-05",
+      "popularity": 41,
+      "series_count": 134
+    },
+    {
+      "name": "gas",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 52,
+      "series_count": 132
+    },
+    {
+      "name": "nj",
+      "group_id": "geo",
+      "notes": "New Jersey",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 47,
+      "series_count": 132
+    },
+    {
+      "name": "nm",
+      "group_id": "geo",
+      "notes": "New Mexico",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 41,
+      "series_count": 132
+    },
+    {
+      "name": "transnational",
+      "group_id": "geot",
+      "notes": "Transnational",
+      "created": "2012-08-10 11:26:49-05",
+      "popularity": 63,
+      "series_count": 132
+    },
+    {
+      "name": "market value",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-05-13 11:38:58-05",
+      "popularity": 35,
+      "series_count": 128
+    },
+    {
+      "name": "establishments",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-11-13 15:52:19-06",
+      "popularity": 51,
+      "series_count": 126
+    },
+    {
+      "name": "health",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 48,
+      "series_count": 124
+    },
+    {
+      "name": "nd",
+      "group_id": "geo",
+      "notes": "North Dakota",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 124
+    },
+    {
+      "name": "electricity",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 47,
+      "series_count": 122
+    },
+    {
+      "name": "nonfinancial",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 51,
+      "series_count": 120
+    },
+    {
+      "name": "education",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 58,
+      "series_count": 118
+    },
+    {
+      "name": "europe",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 118
+    },
+    {
+      "name": "liabilities",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 51,
+      "series_count": 116
+    },
+    {
+      "name": "ut",
+      "group_id": "geo",
+      "notes": "Utah",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 112
+    },
+    {
+      "name": "employer firms",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-11-13 16:12:41-06",
+      "popularity": 42,
+      "series_count": 110
+    },
+    {
+      "name": "gross",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 55,
+      "series_count": 108
+    },
+    {
+      "name": "atlanta",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 42,
+      "series_count": 104
+    },
+    {
+      "name": "government",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 65,
+      "series_count": 104
+    },
+    {
+      "name": "ppi",
+      "group_id": "gen",
+      "notes": "Producer Price Index",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 75,
+      "series_count": 102
+    },
+    {
+      "name": "manufacturing",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 72,
+      "series_count": 100
+    },
+    {
+      "name": "nonprofit organizations",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 42,
+      "series_count": 100
+    },
+    {
+      "name": "percentile",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2019-06-27 13:17:44-05",
+      "popularity": 48,
+      "series_count": 100
+    },
+    {
+      "name": "semiannual",
+      "group_id": "freq",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 100
+    },
+    {
+      "name": "agriculture",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 49,
+      "series_count": 98
+    },
+    {
+      "name": "new york",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 48,
+      "series_count": 98
+    },
+    {
+      "name": "washington",
+      "group_id": "geo",
+      "notes": "Washington (Metropolitan Area)",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 96
+    },
+    {
+      "name": "inventories",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 48,
+      "series_count": 94
+    },
+    {
+      "name": "ma",
+      "group_id": "geo",
+      "notes": "Massachusetts",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 48,
+      "series_count": 92
+    },
+    {
+      "name": "wages",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 61,
+      "series_count": 90
+    },
+    {
+      "name": "az",
+      "group_id": "geo",
+      "notes": "Arizona",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 47,
+      "series_count": 88
+    },
+    {
+      "name": "occupation",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 42,
+      "series_count": 86
+    },
+    {
+      "name": "wy",
+      "group_id": "geo",
+      "notes": "Wyoming",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 82
+    },
+    {
+      "name": "ak",
+      "group_id": "geo",
+      "notes": "Alaska",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 80
+    },
+    {
+      "name": "hours",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 57,
+      "series_count": 80
+    },
+    {
+      "name": "output",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 42,
+      "series_count": 80
+    },
+    {
+      "name": "nv",
+      "group_id": "geo",
+      "notes": "Nevada",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 78
+    },
+    {
+      "name": "salaries",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 52,
+      "series_count": 78
+    },
+    {
+      "name": "me",
+      "group_id": "geo",
+      "notes": "Maine",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 41,
+      "series_count": 76
+    },
+    {
+      "name": "euro area",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 74
+    },
+    {
+      "name": "production",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 62,
+      "series_count": 74
+    },
+    {
+      "name": "fixed",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 72
+    },
+    {
+      "name": "miscellaneous",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 09:21:43-05",
+      "popularity": 38,
+      "series_count": 72
+    },
+    {
+      "name": "persons",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 77,
+      "series_count": 72
+    },
+    {
+      "name": "sector",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 53,
+      "series_count": 72
+    },
+    {
+      "name": "percent",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 63,
+      "series_count": 70
+    },
+    {
+      "name": "census division",
+      "group_id": "geot",
+      "notes": "Census Division",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 68
+    },
+    {
+      "name": "chicago",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 68
+    },
+    {
+      "name": "cincinnati",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 68
+    },
+    {
+      "name": "minneapolis",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 68
+    },
+    {
+      "name": "per capita",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 60,
+      "series_count": 68
+    },
+    {
+      "name": "accounting",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 66
+    },
+    {
+      "name": "pension",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 66
+    },
+    {
+      "name": "chained",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 64
+    },
+    {
+      "name": "garden",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 09:35:36-05",
+      "popularity": 22,
+      "series_count": 64
+    },
+    {
+      "name": "ip",
+      "group_id": "gen",
+      "notes": "Industrial Production",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 55,
+      "series_count": 64
+    },
+    {
+      "name": "community",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-21 10:12:04-05",
+      "popularity": 15,
+      "series_count": 62
+    },
+    {
+      "name": "industry",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 78,
+      "series_count": 62
+    },
+    {
+      "name": "cbsa",
+      "group_id": "geot",
+      "notes": "Core-Based Statistical Area",
+      "created": "2019-10-24 07:44:18-05",
+      "popularity": 38,
+      "series_count": 60
+    },
+    {
+      "name": "gse",
+      "group_id": "gen",
+      "notes": "Government-Sponsored Enterprise",
+      "created": "2013-07-15 10:57:45-05",
+      "popularity": 28,
+      "series_count": 60
+    },
+    {
+      "name": "nh",
+      "group_id": "geo",
+      "notes": "New Hampshire",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 42,
+      "series_count": 60
+    },
+    {
+      "name": "no college",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 23,
+      "series_count": 60
+    },
+    {
+      "name": "secondary",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 60
+    },
+    {
+      "name": "secondary schooling",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2014-05-22 12:36:41-05",
+      "popularity": 44,
+      "series_count": 60
+    },
+    {
+      "name": "depository institutions",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 70,
+      "series_count": 58
+    },
+    {
+      "name": "median",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 69,
+      "series_count": 58
+    },
+    {
+      "name": "2 units +",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-06-26 15:58:47-05",
+      "popularity": 8,
+      "series_count": 56
+    },
+    {
+      "name": "compensation",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 47,
+      "series_count": 56
+    },
+    {
+      "name": "richmond",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 33,
+      "series_count": 56
+    },
+    {
+      "name": "united kingdom",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 53,
+      "series_count": 56
+    },
+    {
+      "name": "vehicles",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 56,
+      "series_count": 56
+    },
+    {
+      "name": "virginia beach",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 56
+    },
+    {
+      "name": "bea region",
+      "group_id": "geot",
+      "notes": "Bureau of Economic Analysis Region",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 54
+    },
+    {
+      "name": "boston",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 39,
+      "series_count": 54
+    },
+    {
+      "name": "capital",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 53,
+      "series_count": 54
+    },
+    {
+      "name": "healthcare",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2015-02-03 15:09:14-06",
+      "popularity": 36,
+      "series_count": 54
+    },
+    {
+      "name": "nonfarm",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 54
+    },
+    {
+      "name": "st. louis",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 54
+    },
+    {
+      "name": "tool",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 09:36:36-05",
+      "popularity": 18,
+      "series_count": 54
+    },
+    {
+      "name": "workers",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 54
+    },
+    {
+      "name": "finance",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 48,
+      "series_count": 52
+    },
+    {
+      "name": "nber",
+      "group_id": "src",
+      "notes": "National Bureau of Economic Research",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 52
+    },
+    {
+      "name": "state & local",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 38,
+      "series_count": 52
+    },
+    {
+      "name": "age",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2017-05-19 09:47:02-05",
+      "popularity": 41,
+      "series_count": 50
+    },
+    {
+      "name": "birth",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2015-09-15 10:10:35-05",
+      "popularity": 38,
+      "series_count": 50
+    },
+    {
+      "name": "commodities",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 69,
+      "series_count": 50
+    },
+    {
+      "name": "labor",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 62,
+      "series_count": 50
+    },
+    {
+      "name": "life",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-07-17 15:52:32-05",
+      "popularity": 34,
+      "series_count": 50
+    },
+    {
+      "name": "married",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2016-11-30 11:27:27-06",
+      "popularity": 17,
+      "series_count": 50
+    },
+    {
+      "name": "materials",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 46,
+      "series_count": 50
+    },
+    {
+      "name": "nar",
+      "group_id": "src",
+      "notes": "National Assoc. of Realtors",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 50
+    },
+    {
+      "name": "portland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 50
+    },
+    {
+      "name": "social assistance",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 38,
+      "series_count": 50
+    },
+    {
+      "name": "spain",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 39,
+      "series_count": 50
+    },
+    {
+      "name": "vt",
+      "group_id": "geo",
+      "notes": "Vermont",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 50
+    },
+    {
+      "name": "banks",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 69,
+      "series_count": 48
+    },
+    {
+      "name": "ct",
+      "group_id": "geo",
+      "notes": "Connecticut",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 48
+    },
+    {
+      "name": "czech republic",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 48
+    },
+    {
+      "name": "ehs",
+      "group_id": "rls",
+      "notes": "Existing Home Sales",
+      "created": "2013-10-10 14:51:06-05",
+      "popularity": 34,
+      "series_count": 48
+    },
+    {
+      "name": "funeral",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-08 15:39:28-06",
+      "popularity": 2,
+      "series_count": 48
+    },
+    {
+      "name": "houston",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 41,
+      "series_count": 48
+    },
+    {
+      "name": "investment",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 48
+    },
+    {
+      "name": "zillow",
+      "group_id": "src",
+      "notes": "",
+      "created": "2022-01-05 16:32:58-06",
+      "popularity": 26,
+      "series_count": 48
+    },
+    {
+      "name": "administrative",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 24,
+      "series_count": 46
+    },
+    {
+      "name": "fixed capital formation",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 46
+    },
+    {
+      "name": "ifs",
+      "group_id": "rls",
+      "notes": "International Financial Statistics",
+      "created": "2012-08-16 15:21:17-05",
+      "popularity": 54,
+      "series_count": 46
+    },
+    {
+      "name": "imf",
+      "group_id": "src",
+      "notes": "International Monetary Fund",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 66,
+      "series_count": 46
+    },
+    {
+      "name": "poland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 46
+    },
+    {
+      "name": "denver",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 44
+    },
+    {
+      "name": "e-commerce",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-17 10:04:20-05",
+      "popularity": 23,
+      "series_count": 44
+    },
+    {
+      "name": "eu",
+      "group_id": "geo",
+      "notes": "European Union",
+      "created": "2013-07-12 11:28:01-05",
+      "popularity": 37,
+      "series_count": 44
+    },
+    {
+      "name": "high tier",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 23,
+      "series_count": 44
+    },
+    {
+      "name": "nashville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 44
+    },
+    {
+      "name": "norway",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 44
+    },
+    {
+      "name": "portugal",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 31,
+      "series_count": 44
+    },
+    {
+      "name": "public",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 38,
+      "series_count": 44
+    },
+    {
+      "name": "retirement",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 44
+    },
+    {
+      "name": "springfield",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 31,
+      "series_count": 44
+    },
+    {
+      "name": "australia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 42
+    },
+    {
+      "name": "cleveland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 42
+    },
+    {
+      "name": "columbus",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 42
+    },
+    {
+      "name": "flow",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-06-25 15:08:38-05",
+      "popularity": 45,
+      "series_count": 42
+    },
+    {
+      "name": "ireland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 42
+    },
+    {
+      "name": "kansas city",
+      "group_id": "geo",
+      "notes": "Kansas City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 42
+    },
+    {
+      "name": "net",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 60,
+      "series_count": 42
+    },
+    {
+      "name": "san antonio",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 33,
+      "series_count": 42
+    },
+    {
+      "name": "switzerland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 38,
+      "series_count": 42
+    },
+    {
+      "name": "appliances",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 40
+    },
+    {
+      "name": "belgium",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 40
+    },
+    {
+      "name": "companies",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 40
+    },
+    {
+      "name": "dallas",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 41,
+      "series_count": 40
+    },
+    {
+      "name": "finance companies",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-06-25 15:10:25-05",
+      "popularity": 40,
+      "series_count": 40
+    },
+    {
+      "name": "floor area",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 40
+    },
+    {
+      "name": "louisville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 40
+    },
+    {
+      "name": "philadelphia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 37,
+      "series_count": 40
+    },
+    {
+      "name": "residents",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-08 15:37:43-06",
+      "popularity": 58,
+      "series_count": 40
+    },
+    {
+      "name": "revenue",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-11-13 16:14:29-06",
+      "popularity": 46,
+      "series_count": 40
+    },
+    {
+      "name": "ri",
+      "group_id": "geo",
+      "notes": "Rhode Island",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 40
+    },
+    {
+      "name": "san francisco",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 41,
+      "series_count": 40
+    },
+    {
+      "name": "value added",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 38,
+      "series_count": 40
+    },
+    {
+      "name": "dc",
+      "group_id": "geo",
+      "notes": "District of Columbia",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 38
+    },
+    {
+      "name": "france",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 38
+    },
+    {
+      "name": "general accounts",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2019-08-19 14:59:57-05",
+      "popularity": 27,
+      "series_count": 38
+    },
+    {
+      "name": "goods",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 67,
+      "series_count": 38
+    },
+    {
+      "name": "hungary",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 38
+    },
+    {
+      "name": "metropolitan division",
+      "group_id": "geot",
+      "notes": "",
+      "created": "2012-09-04 15:04:55-05",
+      "popularity": 42,
+      "series_count": 38
+    },
+    {
+      "name": "securities",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 59,
+      "series_count": 38
+    },
+    {
+      "name": "apparel",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 49,
+      "series_count": 36
+    },
+    {
+      "name": "child",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-08 15:28:31-06",
+      "popularity": 63,
+      "series_count": 36
+    },
+    {
+      "name": "de",
+      "group_id": "geo",
+      "notes": "Delaware",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 33,
+      "series_count": 36
+    },
+    {
+      "name": "detroit",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 36
+    },
+    {
+      "name": "merchant",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-21 14:19:01-05",
+      "popularity": 33,
+      "series_count": 36
+    },
+    {
+      "name": "new orleans",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 28,
+      "series_count": 36
+    },
+    {
+      "name": "supercore",
+      "group_id": "gen",
+      "notes": "Supercore Inflation",
+      "created": "2024-04-11 10:29:43-05",
+      "popularity": 0,
+      "series_count": 36
+    },
+    {
+      "name": "sweden",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 37,
+      "series_count": 36
+    },
+    {
+      "name": "tertiary schooling",
+      "group_id": "gen",
+      "notes": "Post-secondary Schooling",
+      "created": "2014-05-21 07:24:40-05",
+      "popularity": 51,
+      "series_count": 36
+    },
+    {
+      "name": "u.s.-chartered",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2019-08-19 12:52:02-05",
+      "popularity": 20,
+      "series_count": 36
+    },
+    {
+      "name": "wholesale",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 36
+    },
+    {
+      "name": "noncorporate",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 23,
+      "series_count": 34
+    },
+    {
+      "name": "professional",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 34
+    },
+    {
+      "name": "securitized",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-06-25 15:05:20-05",
+      "popularity": 31,
+      "series_count": 34
+    },
+    {
+      "name": "average",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2015-05-06 14:42:19-05",
+      "popularity": 56,
+      "series_count": 32
+    },
+    {
+      "name": "baltimore",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 32
+    },
+    {
+      "name": "denmark",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 32
+    },
+    {
+      "name": "greece",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 32
+    },
+    {
+      "name": "los angeles",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 32
+    },
+    {
+      "name": "luxembourg",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 32
+    },
+    {
+      "name": "memphis",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 32
+    },
+    {
+      "name": "middle tier",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 4,
+      "series_count": 32
+    },
+    {
+      "name": "netherlands",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 32
+    },
+    {
+      "name": "omaha",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 32
+    },
+    {
+      "name": "providence",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 32
+    },
+    {
+      "name": "reit",
+      "group_id": "gen",
+      "notes": "Real Estate Investment Trust",
+      "created": "2013-07-15 11:00:27-05",
+      "popularity": 23,
+      "series_count": 32
+    },
+    {
+      "name": "slovenia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 32
+    },
+    {
+      "name": "tampa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 32
+    },
+    {
+      "name": "baton rouge",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 30
+    },
+    {
+      "name": "birmingham",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 25,
+      "series_count": 30
+    },
+    {
+      "name": "charlotte",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 30
+    },
+    {
+      "name": "columbia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 30
+    },
+    {
+      "name": "durable goods",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-18 10:23:26-05",
+      "popularity": 56,
+      "series_count": 30
+    },
+    {
+      "name": "females",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 46,
+      "series_count": 30
+    },
+    {
+      "name": "finland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 30
+    },
+    {
+      "name": "israel",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 28,
+      "series_count": 30
+    },
+    {
+      "name": "japan",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 53,
+      "series_count": 30
+    },
+    {
+      "name": "pittsburgh",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 30
+    },
+    {
+      "name": "charleston",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 28
+    },
+    {
+      "name": "contributions",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 38,
+      "series_count": 28
+    },
+    {
+      "name": "germany",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 28
+    },
+    {
+      "name": "iceland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 24,
+      "series_count": 28
+    },
+    {
+      "name": "lexington",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 28
+    },
+    {
+      "name": "not started",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 28
+    },
+    {
+      "name": "quantity index",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 41,
+      "series_count": 28
+    },
+    {
+      "name": "south africa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 40,
+      "series_count": 28
+    },
+    {
+      "name": "16 years +",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 57,
+      "series_count": 26
+    },
+    {
+      "name": "accommodation",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 26
+    },
+    {
+      "name": "albany",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 26
+    },
+    {
+      "name": "austria",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 26
+    },
+    {
+      "name": "boise city",
+      "group_id": "geo",
+      "notes": "Boise City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 28,
+      "series_count": 26
+    },
+    {
+      "name": "consumer credit",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 26
+    },
+    {
+      "name": "entertainment",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 26
+    },
+    {
+      "name": "financing",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-17 10:09:34-05",
+      "popularity": 40,
+      "series_count": 26
+    },
+    {
+      "name": "full-time",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 46,
+      "series_count": 26
+    },
+    {
+      "name": "jackson",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 31,
+      "series_count": 26
+    },
+    {
+      "name": "jacksonville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 33,
+      "series_count": 26
+    },
+    {
+      "name": "loans",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 64,
+      "series_count": 26
+    },
+    {
+      "name": "midwest",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 26
+    },
+    {
+      "name": "oklahoma city",
+      "group_id": "geo",
+      "notes": "Oklahoma City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 26
+    },
+    {
+      "name": "purchase",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-24 16:24:48-05",
+      "popularity": 42,
+      "series_count": 26
+    },
+    {
+      "name": "trade",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 26
+    },
+    {
+      "name": "austin",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 24
+    },
+    {
+      "name": "benefits",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 24
+    },
+    {
+      "name": "canada",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 49,
+      "series_count": 24
+    },
+    {
+      "name": "change",
+      "group_id": "gen",
+      "notes": null,
+      "created": "2020-05-11 13:13:02-05",
+      "popularity": 26,
+      "series_count": 24
+    },
+    {
+      "name": "chile",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 31,
+      "series_count": 24
+    },
+    {
+      "name": "equity",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 24
+    },
+    {
+      "name": "estonia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 23,
+      "series_count": 24
+    },
+    {
+      "name": "fannie mae",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-07-18 09:26:19-05",
+      "popularity": 7,
+      "series_count": 24
+    },
+    {
+      "name": "hispanic",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 61,
+      "series_count": 24
+    },
+    {
+      "name": "korea",
+      "group_id": "geo",
+      "notes": "Korea",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 24
+    },
+    {
+      "name": "latino",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 61,
+      "series_count": 24
+    },
+    {
+      "name": "meat",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 39,
+      "series_count": 24
+    },
+    {
+      "name": "milwaukee",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 24
+    },
+    {
+      "name": "san diego",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 24
+    },
+    {
+      "name": "tulsa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 31,
+      "series_count": 24
+    },
+    {
+      "name": "chattanooga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 22
+    },
+    {
+      "name": "clerical workers",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 25,
+      "series_count": 22
+    },
+    {
+      "name": "cyprus",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 22
+    },
+    {
+      "name": "hi",
+      "group_id": "geo",
+      "notes": "Hawaii",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 22
+    },
+    {
+      "name": "home equity",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-17 09:47:21-05",
+      "popularity": 24,
+      "series_count": 22
+    },
+    {
+      "name": "interest",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 70,
+      "series_count": 22
+    },
+    {
+      "name": "italy",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 22
+    },
+    {
+      "name": "mexico",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 22
+    },
+    {
+      "name": "miami",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 41,
+      "series_count": 22
+    },
+    {
+      "name": "operating",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-12-31 13:49:01-06",
+      "popularity": 36,
+      "series_count": 22
+    },
+    {
+      "name": "personal income",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 57,
+      "series_count": 22
+    },
+    {
+      "name": "phoenix",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 37,
+      "series_count": 22
+    },
+    {
+      "name": "sacramento",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 22
+    },
+    {
+      "name": "supplies",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 46,
+      "series_count": 22
+    },
+    {
+      "name": "albuquerque",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 20
+    },
+    {
+      "name": "bulgaria",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 20
+    },
+    {
+      "name": "domestic",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 59,
+      "series_count": 20
+    },
+    {
+      "name": "freddie mac",
+      "group_id": "src",
+      "notes": "Freddie Mac",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 20
+    },
+    {
+      "name": "greenville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 20
+    },
+    {
+      "name": "indianapolis",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 20
+    },
+    {
+      "name": "junior",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-21 10:47:17-05",
+      "popularity": 1,
+      "series_count": 20
+    },
+    {
+      "name": "low tier",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 5,
+      "series_count": 20
+    },
+    {
+      "name": "males",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 46,
+      "series_count": 20
+    },
+    {
+      "name": "multifamily",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-06 14:47:29-05",
+      "popularity": 30,
+      "series_count": 20
+    },
+    {
+      "name": "new zealand",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 20
+    },
+    {
+      "name": "oil",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 20
+    },
+    {
+      "name": "roanoke",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 20
+    },
+    {
+      "name": "rtc",
+      "group_id": "gen",
+      "notes": "Resolution Trust Fund",
+      "created": "2012-10-10 11:03:09-05",
+      "popularity": -22,
+      "series_count": 20
+    },
+    {
+      "name": "white",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 57,
+      "series_count": 20
+    },
+    {
+      "name": "2-4 unit structures",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 18
+    },
+    {
+      "name": "bloomington",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 18
+    },
+    {
+      "name": "captive reinsurers",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2019-05-24 09:24:40-05",
+      "popularity": -10,
+      "series_count": 18
+    },
+    {
+      "name": "charlottesville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 28,
+      "series_count": 18
+    },
+    {
+      "name": "croatia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 18
+    },
+    {
+      "name": "dayton",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 18
+    },
+    {
+      "name": "debt",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 56,
+      "series_count": 18
+    },
+    {
+      "name": "des moines",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 18
+    },
+    {
+      "name": "energy",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 18
+    },
+    {
+      "name": "imputed",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 18
+    },
+    {
+      "name": "knoxville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 18
+    },
+    {
+      "name": "lafayette",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 18
+    },
+    {
+      "name": "land",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-07 09:23:09-05",
+      "popularity": 26,
+      "series_count": 18
+    },
+    {
+      "name": "lynchburg",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 18
+    },
+    {
+      "name": "phone",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 10:19:25-05",
+      "popularity": 17,
+      "series_count": 18
+    },
+    {
+      "name": "productivity",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 41,
+      "series_count": 18
+    },
+    {
+      "name": "rochester",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 28,
+      "series_count": 18
+    },
+    {
+      "name": "slovakia",
+      "group_id": "geo",
+      "notes": "Slovak Republic",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 18
+    },
+    {
+      "name": "telecom",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-11 11:08:41-05",
+      "popularity": 25,
+      "series_count": 18
+    },
+    {
+      "name": "turkey",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 42,
+      "series_count": 18
+    },
+    {
+      "name": "valdosta",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 18
+    },
+    {
+      "name": "west",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 18
+    },
+    {
+      "name": "allentown",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 16
+    },
+    {
+      "name": "asian",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 49,
+      "series_count": 16
+    },
+    {
+      "name": "augusta",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 24,
+      "series_count": 16
+    },
+    {
+      "name": "ccadj",
+      "group_id": "gen",
+      "notes": "Capital Consumption Adjustment",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 16
+    },
+    {
+      "name": "clarksville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 16
+    },
+    {
+      "name": "florence",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 16
+    },
+    {
+      "name": "fmha",
+      "group_id": "gen",
+      "notes": "Farmers Home Administration",
+      "created": "2014-02-07 09:56:41-06",
+      "popularity": 8,
+      "series_count": 16
+    },
+    {
+      "name": "grand rapids",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 16
+    },
+    {
+      "name": "huntington",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 16
+    },
+    {
+      "name": "johnson city",
+      "group_id": "geo",
+      "notes": "Johnson City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 16
+    },
+    {
+      "name": "lewiston",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 16
+    },
+    {
+      "name": "lithuania",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 16
+    },
+    {
+      "name": "longview",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 16
+    },
+    {
+      "name": "madison",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 16
+    },
+    {
+      "name": "management",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 16
+    },
+    {
+      "name": "mobile",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 16
+    },
+    {
+      "name": "salt lake city",
+      "group_id": "geo",
+      "notes": "Salt Lake City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 16
+    },
+    {
+      "name": "seattle",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 39,
+      "series_count": 16
+    },
+    {
+      "name": "sioux falls",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 16
+    },
+    {
+      "name": "south",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 16
+    },
+    {
+      "name": "st. joseph",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 16
+    },
+    {
+      "name": "tallahassee",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 16
+    },
+    {
+      "name": "toledo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 16
+    },
+    {
+      "name": "unit labor cost",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 37,
+      "series_count": 16
+    },
+    {
+      "name": "waterloo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 16
+    },
+    {
+      "name": "65-years +",
+      "group_id": "gen",
+      "notes": "65 years old or older",
+      "created": "2014-05-16 11:30:23-05",
+      "popularity": 25,
+      "series_count": 14
+    },
+    {
+      "name": "cedar rapids",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 14
+    },
+    {
+      "name": "cmsa",
+      "group_id": "geot",
+      "notes": "Consolidated Metropolitan Area",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 14
+    },
+    {
+      "name": "contractors",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-21 10:13:56-05",
+      "popularity": 27,
+      "series_count": 14
+    },
+    {
+      "name": "eea",
+      "group_id": "geo",
+      "notes": "European Economic Area",
+      "created": "2013-07-12 11:33:08-05",
+      "popularity": 1,
+      "series_count": 14
+    },
+    {
+      "name": "foreign",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 14
+    },
+    {
+      "name": "foreign offices",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-17 09:30:25-05",
+      "popularity": 13,
+      "series_count": 14
+    },
+    {
+      "name": "fort smith",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 14
+    },
+    {
+      "name": "g17",
+      "group_id": "rls",
+      "notes": "G.17 Industr. Production & Capacity Utilization",
+      "created": "2012-08-16 15:21:17-05",
+      "popularity": 52,
+      "series_count": 14
+    },
+    {
+      "name": "hygiene",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 11:50:39-05",
+      "popularity": 19,
+      "series_count": 14
+    },
+    {
+      "name": "kingsport",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 14
+    },
+    {
+      "name": "leases",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 14
+    },
+    {
+      "name": "ogden",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 14
+    },
+    {
+      "name": "pha",
+      "group_id": "gen",
+      "notes": null,
+      "created": "2020-05-11 13:13:02-05",
+      "popularity": -48,
+      "series_count": 14
+    },
+    {
+      "name": "pine bluff",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 14
+    },
+    {
+      "name": "processed",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 13:50:52-05",
+      "popularity": 45,
+      "series_count": 14
+    },
+    {
+      "name": "romania",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 23,
+      "series_count": 14
+    },
+    {
+      "name": "terre haute",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 14
+    },
+    {
+      "name": "texarkana",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 14
+    },
+    {
+      "name": "topeka",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 14
+    },
+    {
+      "name": "transportation",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 55,
+      "series_count": 14
+    },
+    {
+      "name": "albania",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 12
+    },
+    {
+      "name": "anchorage",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 12
+    },
+    {
+      "name": "asheville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 25,
+      "series_count": 12
+    },
+    {
+      "name": "associate degree",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 39,
+      "series_count": 12
+    },
+    {
+      "name": "billings",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 12
+    },
+    {
+      "name": "call reports",
+      "group_id": "rls",
+      "notes": "Reports of Condition and Income for All Insured U.S. Commercial Banks",
+      "created": "2012-08-16 15:21:17-05",
+      "popularity": 37,
+      "series_count": 12
+    },
+    {
+      "name": "champaign",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 12
+    },
+    {
+      "name": "colorado springs",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 24,
+      "series_count": 12
+    },
+    {
+      "name": "cost",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-07-11 11:22:32-05",
+      "popularity": 36,
+      "series_count": 12
+    },
+    {
+      "name": "daily",
+      "group_id": "freq",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 68,
+      "series_count": 12
+    },
+    {
+      "name": "danville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 12
+    },
+    {
+      "name": "durham",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 12
+    },
+    {
+      "name": "electronics",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 46,
+      "series_count": 12
+    },
+    {
+      "name": "emergency",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-21 10:30:35-05",
+      "popularity": 2,
+      "series_count": 12
+    },
+    {
+      "name": "ereit",
+      "group_id": "gen",
+      "notes": "Equity Real Estate Investment Trust",
+      "created": "2023-12-08 12:15:23-06",
+      "popularity": 19,
+      "series_count": 12
+    },
+    {
+      "name": "evansville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 12
+    },
+    {
+      "name": "fort wayne",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 12
+    },
+    {
+      "name": "frb dal",
+      "group_id": "src",
+      "notes": "Dallas Fed",
+      "created": "2013-12-27 15:18:38-06",
+      "popularity": 34,
+      "series_count": 12
+    },
+    {
+      "name": "green bay",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 12
+    },
+    {
+      "name": "harrisonburg",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 12
+    },
+    {
+      "name": "hickory",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 12
+    },
+    {
+      "name": "indeed",
+      "group_id": "src",
+      "notes": "",
+      "created": "2020-10-27 12:41:29-05",
+      "popularity": 42,
+      "series_count": 12
+    },
+    {
+      "name": "intermediaries",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2019-08-19 12:17:09-05",
+      "popularity": 12,
+      "series_count": 12
+    },
+    {
+      "name": "iowa city",
+      "group_id": "geo",
+      "notes": "Iowa City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 12
+    },
+    {
+      "name": "jobs",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 12
+    },
+    {
+      "name": "las cruces",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 12
+    },
+    {
+      "name": "las vegas",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 33,
+      "series_count": 12
+    },
+    {
+      "name": "latvia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 12
+    },
+    {
+      "name": "little rock",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 12
+    },
+    {
+      "name": "macon",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 12
+    },
+    {
+      "name": "malta",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 12
+    },
+    {
+      "name": "montenegro",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 9,
+      "series_count": 12
+    },
+    {
+      "name": "north port",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 12
+    },
+    {
+      "name": "odessa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 12
+    },
+    {
+      "name": "orlando",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 33,
+      "series_count": 12
+    },
+    {
+      "name": "paid",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2019-08-19 12:54:55-05",
+      "popularity": 35,
+      "series_count": 12
+    },
+    {
+      "name": "payrolls",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 48,
+      "series_count": 12
+    },
+    {
+      "name": "pensacola",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 12
+    },
+    {
+      "name": "port st. lucie",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 12
+    },
+    {
+      "name": "raleigh",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 31,
+      "series_count": 12
+    },
+    {
+      "name": "rome",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 12
+    },
+    {
+      "name": "salem",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 12
+    },
+    {
+      "name": "san jose",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 12
+    },
+    {
+      "name": "scranton",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 12
+    },
+    {
+      "name": "self-employed",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 12
+    },
+    {
+      "name": "shreveport",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 12
+    },
+    {
+      "name": "syracuse",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 23,
+      "series_count": 12
+    },
+    {
+      "name": "textiles",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 37,
+      "series_count": 12
+    },
+    {
+      "name": "toy",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 10:44:59-05",
+      "popularity": 24,
+      "series_count": 12
+    },
+    {
+      "name": "wichita",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 12
+    },
+    {
+      "name": "winston",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 12
+    },
+    {
+      "name": "world",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2013-07-13 16:53:00-05",
+      "popularity": 54,
+      "series_count": 12
+    },
+    {
+      "name": "10-19 unit structures",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-05-16 15:08:14-05",
+      "popularity": -39,
+      "series_count": 10
+    },
+    {
+      "name": "20 or more unit structures",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-05-16 15:07:39-05",
+      "popularity": -29,
+      "series_count": 10
+    },
+    {
+      "name": "5-unit structures +",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 23,
+      "series_count": 10
+    },
+    {
+      "name": "abilene",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 10
+    },
+    {
+      "name": "agency",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 10
+    },
+    {
+      "name": "anderson",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 10
+    },
+    {
+      "name": "appleton",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 10
+    },
+    {
+      "name": "asset-backed",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 10
+    },
+    {
+      "name": "athens",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 10
+    },
+    {
+      "name": "auburn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 10
+    },
+    {
+      "name": "brunswick",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 10
+    },
+    {
+      "name": "burlington",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 10
+    },
+    {
+      "name": "canton",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 10
+    },
+    {
+      "name": "cash",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-16 12:05:28-05",
+      "popularity": 35,
+      "series_count": 10
+    },
+    {
+      "name": "credit unions",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-06-25 14:39:51-05",
+      "popularity": 20,
+      "series_count": 10
+    },
+    {
+      "name": "dalton",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 5,
+      "series_count": 10
+    },
+    {
+      "name": "decatur",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 10
+    },
+    {
+      "name": "doctoral degree",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-30 15:45:54-05",
+      "popularity": 11,
+      "series_count": 10
+    },
+    {
+      "name": "dothan",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 10
+    },
+    {
+      "name": "duluth",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 10
+    },
+    {
+      "name": "earnings",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 10
+    },
+    {
+      "name": "east south central census division",
+      "group_id": "geo",
+      "notes": "Census - East South Division",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 10
+    },
+    {
+      "name": "fabrication",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 10
+    },
+    {
+      "name": "fayetteville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 10
+    },
+    {
+      "name": "fha",
+      "group_id": "gen",
+      "notes": "Federal Housing Administration",
+      "created": "2013-03-15 14:51:00-05",
+      "popularity": 13,
+      "series_count": 10
+    },
+    {
+      "name": "fort collins",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 10
+    },
+    {
+      "name": "fresh",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2019-08-06 15:46:13-05",
+      "popularity": 29,
+      "series_count": 10
+    },
+    {
+      "name": "fruits",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 10
+    },
+    {
+      "name": "gainesville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 23,
+      "series_count": 10
+    },
+    {
+      "name": "greensboro",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 10
+    },
+    {
+      "name": "hagerstown",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 10
+    },
+    {
+      "name": "harrisburg",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 10
+    },
+    {
+      "name": "hattiesburg",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 10
+    },
+    {
+      "name": "honolulu",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 10
+    },
+    {
+      "name": "interest rate",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-05-29 10:14:19-05",
+      "popularity": 69,
+      "series_count": 10
+    },
+    {
+      "name": "jefferson city",
+      "group_id": "geo",
+      "notes": "Jefferson City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 10
+    },
+    {
+      "name": "jonesboro",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 10
+    },
+    {
+      "name": "joplin",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 10
+    },
+    {
+      "name": "lessors",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-21 14:16:59-05",
+      "popularity": 14,
+      "series_count": 10
+    },
+    {
+      "name": "medical",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 39,
+      "series_count": 10
+    },
+    {
+      "name": "missoula",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 10
+    },
+    {
+      "name": "morgantown",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 10
+    },
+    {
+      "name": "mountain census division",
+      "group_id": "geo",
+      "notes": "Census - Mountain division",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -5,
+      "series_count": 10
+    },
+    {
+      "name": "ocala",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 10
+    },
+    {
+      "name": "owensboro",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 10
+    },
+    {
+      "name": "palm coast",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 10
+    },
+    {
+      "name": "plains bea region",
+      "group_id": "geo",
+      "notes": "Bureau of Economic Analysis - Plains region",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 10
+    },
+    {
+      "name": "poultry",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-07 10:34:11-05",
+      "popularity": 30,
+      "series_count": 10
+    },
+    {
+      "name": "property-casualty",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2019-08-19 14:59:32-05",
+      "popularity": 22,
+      "series_count": 10
+    },
+    {
+      "name": "real estate",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 51,
+      "series_count": 10
+    },
+    {
+      "name": "riverside",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 10
+    },
+    {
+      "name": "san angelo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 10
+    },
+    {
+      "name": "savannah",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 10
+    },
+    {
+      "name": "second quartile",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2015-02-03 09:03:44-06",
+      "popularity": 33,
+      "series_count": 10
+    },
+    {
+      "name": "shipments",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 31,
+      "series_count": 10
+    },
+    {
+      "name": "sioux city",
+      "group_id": "geo",
+      "notes": "Sioux City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 10
+    },
+    {
+      "name": "south bend",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 10
+    },
+    {
+      "name": "southwest bea region",
+      "group_id": "geo",
+      "notes": "Bureau of Economic Analysis - Southwest region",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 10
+    },
+    {
+      "name": "trenton",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 10
+    },
+    {
+      "name": "unemployment",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 70,
+      "series_count": 10
+    },
+    {
+      "name": "vegetables",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 38,
+      "series_count": 10
+    },
+    {
+      "name": "veterans",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 10
+    },
+    {
+      "name": "waste",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 10
+    },
+    {
+      "name": "wealth",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-07-17 10:29:19-05",
+      "popularity": 42,
+      "series_count": 10
+    },
+    {
+      "name": "wichita falls",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 10
+    },
+    {
+      "name": "winchester",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 10
+    },
+    {
+      "name": "yuba city",
+      "group_id": "geo",
+      "notes": "Yuba City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 10
+    },
+    {
+      "name": "african-american",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2017-05-19 09:12:12-05",
+      "popularity": 52,
+      "series_count": 8
+    },
+    {
+      "name": "alexandria",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 8
+    },
+    {
+      "name": "all items",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 58,
+      "series_count": 8
+    },
+    {
+      "name": "amarillo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 8
+    },
+    {
+      "name": "anaheim",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2013-05-21 11:28:56-05",
+      "popularity": 14,
+      "series_count": 8
+    },
+    {
+      "name": "atlantic city",
+      "group_id": "geo",
+      "notes": "Atlantic City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 8
+    },
+    {
+      "name": "bay city",
+      "group_id": "geo",
+      "notes": "Bay City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 8
+    },
+    {
+      "name": "beaumont",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 8
+    },
+    {
+      "name": "binghamton",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 8
+    },
+    {
+      "name": "cereal",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-24 16:43:17-05",
+      "popularity": 29,
+      "series_count": 8
+    },
+    {
+      "name": "chico",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 8
+    },
+    {
+      "name": "college station",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 8
+    },
+    {
+      "name": "credits",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 8
+    },
+    {
+      "name": "cumberland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 8
+    },
+    {
+      "name": "dairy products",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2019-07-29 12:35:53-05",
+      "popularity": 24,
+      "series_count": 8
+    },
+    {
+      "name": "davenport",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 8
+    },
+    {
+      "name": "deltona",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 8
+    },
+    {
+      "name": "disposable",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 39,
+      "series_count": 8
+    },
+    {
+      "name": "east north central census division",
+      "group_id": "geo",
+      "notes": "Census - East North Division",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 8
+    },
+    {
+      "name": "eau claire",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 8
+    },
+    {
+      "name": "elderly",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-21 10:27:18-05",
+      "popularity": -1,
+      "series_count": 8
+    },
+    {
+      "name": "fargo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 8
+    },
+    {
+      "name": "fees",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-08 15:22:15-06",
+      "popularity": 34,
+      "series_count": 8
+    },
+    {
+      "name": "flagstaff",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 8
+    },
+    {
+      "name": "glens falls",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 8
+    },
+    {
+      "name": "grand junction",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 8
+    },
+    {
+      "name": "greeley",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 8
+    },
+    {
+      "name": "gulfport",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 8
+    },
+    {
+      "name": "hinesville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 4,
+      "series_count": 8
+    },
+    {
+      "name": "hot springs",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 4,
+      "series_count": 8
+    },
+    {
+      "name": "idaho falls",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 8
+    },
+    {
+      "name": "imports",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 8
+    },
+    {
+      "name": "indonesia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 37,
+      "series_count": 8
+    },
+    {
+      "name": "ithaca",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 8
+    },
+    {
+      "name": "killeen",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 8
+    },
+    {
+      "name": "kokomo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 8
+    },
+    {
+      "name": "lake charles",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 8
+    },
+    {
+      "name": "lake havasu city",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 8
+    },
+    {
+      "name": "lawrence",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 8
+    },
+    {
+      "name": "madera",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 8
+    },
+    {
+      "name": "makati",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2014-09-22 13:10:41-05",
+      "popularity": 3,
+      "series_count": 8
+    },
+    {
+      "name": "mcallen",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 8
+    },
+    {
+      "name": "mdo",
+      "group_id": "rls",
+      "notes": "Mortgage Debt Obligations",
+      "created": "2020-05-12 13:17:44-05",
+      "popularity": 15,
+      "series_count": 8
+    },
+    {
+      "name": "midland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 8
+    },
+    {
+      "name": "monroe",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 8
+    },
+    {
+      "name": "mxp",
+      "group_id": "rls",
+      "notes": "U.S. Import & Export Price Indexes",
+      "created": "2012-08-16 15:21:17-05",
+      "popularity": 43,
+      "series_count": 8
+    },
+    {
+      "name": "myrtle beach",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 8
+    },
+    {
+      "name": "napa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 8
+    },
+    {
+      "name": "naples",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 8
+    },
+    {
+      "name": "new england bea region",
+      "group_id": "geo",
+      "notes": "Bureau of Economic Analysis - New England region",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 8
+    },
+    {
+      "name": "new england census division",
+      "group_id": "geo",
+      "notes": "Census - New England region",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 4,
+      "series_count": 8
+    },
+    {
+      "name": "nonresidential",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 8
+    },
+    {
+      "name": "parkersburg",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 8
+    },
+    {
+      "name": "pascagoula",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 8
+    },
+    {
+      "name": "peoria",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 8
+    },
+    {
+      "name": "pets",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 10:43:28-05",
+      "popularity": 23,
+      "series_count": 8
+    },
+    {
+      "name": "philippines",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 8
+    },
+    {
+      "name": "primary",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 47,
+      "series_count": 8
+    },
+    {
+      "name": "pueblo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 8
+    },
+    {
+      "name": "racine",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 8
+    },
+    {
+      "name": "reno",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 8
+    },
+    {
+      "name": "rockford",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 8
+    },
+    {
+      "name": "santa fe",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 8
+    },
+    {
+      "name": "sebastian",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 8
+    },
+    {
+      "name": "social",
+      "group_id": "gen",
+      "notes": null,
+      "created": "2020-05-11 13:13:02-05",
+      "popularity": 5,
+      "series_count": 8
+    },
+    {
+      "name": "south atlantic census division",
+      "group_id": "geo",
+      "notes": "Census - South Atlantic division",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -7,
+      "series_count": 8
+    },
+    {
+      "name": "st. cloud",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 3,
+      "series_count": 8
+    },
+    {
+      "name": "subsidies",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 8
+    },
+    {
+      "name": "trucks",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 8
+    },
+    {
+      "name": "tucson",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 8
+    },
+    {
+      "name": "victoria",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 8
+    },
+    {
+      "name": "wenatchee",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 8
+    },
+    {
+      "name": "west north central census division",
+      "group_id": "geo",
+      "notes": "Census - West North Central Division",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -7,
+      "series_count": 8
+    },
+    {
+      "name": "west south central census division",
+      "group_id": "geo",
+      "notes": "Census - West South Central division",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 8
+    },
+    {
+      "name": "wheeling",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 8
+    },
+    {
+      "name": "wilmington",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 23,
+      "series_count": 8
+    },
+    {
+      "name": "yakima",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 8
+    },
+    {
+      "name": "adair county, ok",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 6
+    },
+    {
+      "name": "aiken county, sc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 0,
+      "series_count": 6
+    },
+    {
+      "name": "alcoholic beverages",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2019-07-29 12:45:12-05",
+      "popularity": 17,
+      "series_count": 6
+    },
+    {
+      "name": "allegany county, md",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 6
+    },
+    {
+      "name": "angelina county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 6
+    },
+    {
+      "name": "annuities",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2016-11-30 11:25:09-06",
+      "popularity": 9,
+      "series_count": 6
+    },
+    {
+      "name": "apartments",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-06 14:52:46-05",
+      "popularity": -9,
+      "series_count": 6
+    },
+    {
+      "name": "avery county, nc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 6
+    },
+    {
+      "name": "avoyelles parish, la",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 6
+    },
+    {
+      "name": "bakeries",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-21 10:07:23-05",
+      "popularity": 17,
+      "series_count": 6
+    },
+    {
+      "name": "bakersfield",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 6
+    },
+    {
+      "name": "barron county, wi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 6
+    },
+    {
+      "name": "barton county, mo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 6
+    },
+    {
+      "name": "bay county, mi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 6
+    },
+    {
+      "name": "beltrami county, mn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 6
+    },
+    {
+      "name": "bennington county, vt",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 6
+    },
+    {
+      "name": "benton county, mn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 6
+    },
+    {
+      "name": "berrien county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 6
+    },
+    {
+      "name": "bertie county, nc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 6
+    },
+    {
+      "name": "beverages",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 41,
+      "series_count": 6
+    },
+    {
+      "name": "bexar county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 6
+    },
+    {
+      "name": "bismarck",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 6
+    },
+    {
+      "name": "blacksburg",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 6
+    },
+    {
+      "name": "bonneville county, id",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 5,
+      "series_count": 6
+    },
+    {
+      "name": "boone county, mo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 3,
+      "series_count": 6
+    },
+    {
+      "name": "bourbon county, ks",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -12,
+      "series_count": 6
+    },
+    {
+      "name": "bradley county, tn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 3,
+      "series_count": 6
+    },
+    {
+      "name": "bremer county, ia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 6
+    },
+    {
+      "name": "bridgeport",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 6
+    },
+    {
+      "name": "bristol county, ma",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 0,
+      "series_count": 6
+    },
+    {
+      "name": "brown county, oh",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 6
+    },
+    {
+      "name": "buchanan county, mo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -7,
+      "series_count": 6
+    },
+    {
+      "name": "budget",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 38,
+      "series_count": 6
+    },
+    {
+      "name": "buffalo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 23,
+      "series_count": 6
+    },
+    {
+      "name": "butler county, ne",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -12,
+      "series_count": 6
+    },
+    {
+      "name": "butler county, pa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 4,
+      "series_count": 6
+    },
+    {
+      "name": "butte county, ca",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 5,
+      "series_count": 6
+    },
+    {
+      "name": "caledonia county, vt",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 6
+    },
+    {
+      "name": "cape coral",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 25,
+      "series_count": 6
+    },
+    {
+      "name": "carbon county, mt",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 0,
+      "series_count": 6
+    },
+    {
+      "name": "carroll county, ia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 6
+    },
+    {
+      "name": "carroll county, il",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -14,
+      "series_count": 6
+    },
+    {
+      "name": "carroll county, md",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 4,
+      "series_count": 6
+    },
+    {
+      "name": "carroll county, nh",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 6
+    },
+    {
+      "name": "carson city",
+      "group_id": "geo",
+      "notes": "Carson City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 6
+    },
+    {
+      "name": "carver county, mn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 0,
+      "series_count": 6
+    },
+    {
+      "name": "cascade county, mt",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 6
+    },
+    {
+      "name": "cass county, ia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 6
+    },
+    {
+      "name": "cass county, mi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 6
+    },
+    {
+      "name": "champaign county, il",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 6
+    },
+    {
+      "name": "chautauqua county, ny",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 6
+    },
+    {
+      "name": "cherokee county, ia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 6
+    },
+    {
+      "name": "chester county, tn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -9,
+      "series_count": 6
+    },
+    {
+      "name": "clark county, ky",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 5,
+      "series_count": 6
+    },
+    {
+      "name": "clarke county, va",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 6
+    },
+    {
+      "name": "clinton county, ny",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 6
+    },
+    {
+      "name": "coconino county, az",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 3,
+      "series_count": 6
+    },
+    {
+      "name": "coffey county, ks",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -30,
+      "series_count": 6
+    },
+    {
+      "name": "conway county, ar",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 6
+    },
+    {
+      "name": "cooper county, mo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 6
+    },
+    {
+      "name": "corpus christi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 6
+    },
+    {
+      "name": "cottonwood county, mn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -8,
+      "series_count": 6
+    },
+    {
+      "name": "cowlitz county, wa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 3,
+      "series_count": 6
+    },
+    {
+      "name": "cullman county, al",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 6
+    },
+    {
+      "name": "cumberland county, me",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 3,
+      "series_count": 6
+    },
+    {
+      "name": "cumberland county, tn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 3,
+      "series_count": 6
+    },
+    {
+      "name": "darke county, oh",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 6
+    },
+    {
+      "name": "dealers",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 38,
+      "series_count": 6
+    },
+    {
+      "name": "decatur county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 6
+    },
+    {
+      "name": "decatur county, in",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 6
+    },
+    {
+      "name": "delaware county, ia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 6
+    },
+    {
+      "name": "delaware county, ok",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 6
+    },
+    {
+      "name": "delta county, co",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -7,
+      "series_count": 6
+    },
+    {
+      "name": "dodge county, wi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 6
+    },
+    {
+      "name": "dooly county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 6
+    },
+    {
+      "name": "douglas county, ks",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 0,
+      "series_count": 6
+    },
+    {
+      "name": "douglas county, mn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 6
+    },
+    {
+      "name": "douglas county, ne",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 6
+    },
+    {
+      "name": "douglas county, nv",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 3,
+      "series_count": 6
+    },
+    {
+      "name": "dover",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 6
+    },
+    {
+      "name": "dubuque",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 6
+    },
+    {
+      "name": "dubuque county, ia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 6
+    },
+    {
+      "name": "duchesne county, ut",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -11,
+      "series_count": 6
+    },
+    {
+      "name": "dunn county, wi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 6
+    },
+    {
+      "name": "east baton rouge parish, la",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 5,
+      "series_count": 6
+    },
+    {
+      "name": "edgecombe county, nc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 6
+    },
+    {
+      "name": "effingham county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 6
+    },
+    {
+      "name": "effingham county, il",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 6
+    },
+    {
+      "name": "eggs",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-24 16:50:51-05",
+      "popularity": 25,
+      "series_count": 6
+    },
+    {
+      "name": "elementary",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-21 10:29:16-05",
+      "popularity": 8,
+      "series_count": 6
+    },
+    {
+      "name": "elizabethtown",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 6
+    },
+    {
+      "name": "elko county, nv",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 5,
+      "series_count": 6
+    },
+    {
+      "name": "elmira",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 6
+    },
+    {
+      "name": "el paso county, co",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 6
+    },
+    {
+      "name": "emerging markets",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 38,
+      "series_count": 6
+    },
+    {
+      "name": "emmet county, mi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 6
+    },
+    {
+      "name": "end use",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 6
+    },
+    {
+      "name": "essex county, nj",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 6
+    },
+    {
+      "name": "fairfax county, va",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 6
+    },
+    {
+      "name": "fayette county, oh",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 0,
+      "series_count": 6
+    },
+    {
+      "name": "fayette county, pa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 6
+    },
+    {
+      "name": "fayette county, tn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 6
+    },
+    {
+      "name": "fhlb",
+      "group_id": "gen",
+      "notes": "Federal Home Loan Banks",
+      "created": "2013-07-15 10:59:27-05",
+      "popularity": 22,
+      "series_count": 6
+    },
+    {
+      "name": "floor coverings",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 09:29:44-05",
+      "popularity": 23,
+      "series_count": 6
+    },
+    {
+      "name": "floyd county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 6
+    },
+    {
+      "name": "floyd county, ky",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 6
+    },
+    {
+      "name": "fond du lac",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 6
+    },
+    {
+      "name": "forsyth county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 6
+    },
+    {
+      "name": "franklin county, il",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -23,
+      "series_count": 6
+    },
+    {
+      "name": "franklin county, ma",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 6
+    },
+    {
+      "name": "fremont county, co",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 6
+    },
+    {
+      "name": "fulton county, in",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 6
+    },
+    {
+      "name": "garfield county, co",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 6
+    },
+    {
+      "name": "genesee county, ny",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 6
+    },
+    {
+      "name": "geneva county, al",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -11,
+      "series_count": 6
+    },
+    {
+      "name": "gibson county, tn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -7,
+      "series_count": 6
+    },
+    {
+      "name": "gloucester county, nj",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 6
+    },
+    {
+      "name": "goldsboro",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 6
+    },
+    {
+      "name": "gonzales county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 6
+    },
+    {
+      "name": "gordon county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 6
+    },
+    {
+      "name": "grady county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 6
+    },
+    {
+      "name": "graham county, nc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 0,
+      "series_count": 6
+    },
+    {
+      "name": "grand forks",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 6
+    },
+    {
+      "name": "grant parish, la",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -5,
+      "series_count": 6
+    },
+    {
+      "name": "gray county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 6
+    },
+    {
+      "name": "great falls",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 3,
+      "series_count": 6
+    },
+    {
+      "name": "great lakes bea region",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 6
+    },
+    {
+      "name": "greene county, ia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -5,
+      "series_count": 6
+    },
+    {
+      "name": "greensville county, va",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -9,
+      "series_count": 6
+    },
+    {
+      "name": "grundy county, ia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -5,
+      "series_count": 6
+    },
+    {
+      "name": "gunnison county, co",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 0,
+      "series_count": 6
+    },
+    {
+      "name": "gwinnett county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 6
+    },
+    {
+      "name": "hamilton county, ne",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -10,
+      "series_count": 6
+    },
+    {
+      "name": "hancock county, wv",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 6
+    },
+    {
+      "name": "hardee county, fl",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 6
+    },
+    {
+      "name": "hardin county, ia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -7,
+      "series_count": 6
+    },
+    {
+      "name": "harrison county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 4,
+      "series_count": 6
+    },
+    {
+      "name": "hartford",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 23,
+      "series_count": 6
+    },
+    {
+      "name": "heating",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 6
+    },
+    {
+      "name": "henry county, mo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 6
+    },
+    {
+      "name": "hertford county, nc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 6
+    },
+    {
+      "name": "hughes county, sd",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 6
+    },
+    {
+      "name": "humphreys county, tn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 6
+    },
+    {
+      "name": "huntsville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 6
+    },
+    {
+      "name": "huron county, mi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -11,
+      "series_count": 6
+    },
+    {
+      "name": "hutchinson county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 6
+    },
+    {
+      "name": "intermediate",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-26 16:26:06-05",
+      "popularity": 41,
+      "series_count": 6
+    },
+    {
+      "name": "jackson county, in",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 6
+    },
+    {
+      "name": "jasper county, in",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 6
+    },
+    {
+      "name": "jasper county, mo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 6
+    },
+    {
+      "name": "jay county, in",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 6
+    },
+    {
+      "name": "jefferson county, al",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 3,
+      "series_count": 6
+    },
+    {
+      "name": "jefferson county, or",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -27,
+      "series_count": 6
+    },
+    {
+      "name": "jefferson county, pa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 6
+    },
+    {
+      "name": "johnson county, ia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 6
+    },
+    {
+      "name": "johnstown",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 6
+    },
+    {
+      "name": "jones county, ia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 6
+    },
+    {
+      "name": "kalamazoo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 6
+    },
+    {
+      "name": "kent county, ri",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -5,
+      "series_count": 6
+    },
+    {
+      "name": "kimball county, ne",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -8,
+      "series_count": 6
+    },
+    {
+      "name": "knox county, il",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -12,
+      "series_count": 6
+    },
+    {
+      "name": "knox county, tn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 6
+    },
+    {
+      "name": "laclede county, mo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 6
+    },
+    {
+      "name": "lafayette county, ms",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 6
+    },
+    {
+      "name": "lafayette county, wi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 6
+    },
+    {
+      "name": "lakeland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 6
+    },
+    {
+      "name": "lander county, nv",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 6
+    },
+    {
+      "name": "langlade county, wi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 6
+    },
+    {
+      "name": "lansing",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 6
+    },
+    {
+      "name": "lawrence county, in",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 6
+    },
+    {
+      "name": "lawton",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 0,
+      "series_count": 6
+    },
+    {
+      "name": "lea county, nm",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 6
+    },
+    {
+      "name": "lee county, sc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 6
+    },
+    {
+      "name": "lehigh county, pa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 3,
+      "series_count": 6
+    },
+    {
+      "name": "lewis county, tn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 6
+    },
+    {
+      "name": "lincoln",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 6
+    },
+    {
+      "name": "lincoln county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -8,
+      "series_count": 6
+    },
+    {
+      "name": "linn county, ia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 6
+    },
+    {
+      "name": "livingston parish, la",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 6
+    },
+    {
+      "name": "lodging",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 6
+    },
+    {
+      "name": "logan",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 6
+    },
+    {
+      "name": "lowndes county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 6
+    },
+    {
+      "name": "lubbock",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 6
+    },
+    {
+      "name": "lyon county, nv",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 6
+    },
+    {
+      "name": "macon county, al",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 6
+    },
+    {
+      "name": "macoupin county, il",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -17,
+      "series_count": 6
+    },
+    {
+      "name": "madera county, ca",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 3,
+      "series_count": 6
+    },
+    {
+      "name": "madison county, il",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -7,
+      "series_count": 6
+    },
+    {
+      "name": "madison county, mt",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -12,
+      "series_count": 6
+    },
+    {
+      "name": "major",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-05-29 09:30:14-05",
+      "popularity": 20,
+      "series_count": 6
+    },
+    {
+      "name": "manassas city, va",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 6
+    },
+    {
+      "name": "marion county, ia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 0,
+      "series_count": 6
+    },
+    {
+      "name": "marion county, ms",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 6
+    },
+    {
+      "name": "marion county, or",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -5,
+      "series_count": 6
+    },
+    {
+      "name": "mariposa county, ca",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 6
+    },
+    {
+      "name": "marlboro county, sc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 6
+    },
+    {
+      "name": "marshall county, ky",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 6
+    },
+    {
+      "name": "martin county, mn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -10,
+      "series_count": 6
+    },
+    {
+      "name": "martinsville city, va",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -11,
+      "series_count": 6
+    },
+    {
+      "name": "mccurtain county, ok",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 6
+    },
+    {
+      "name": "mcdonough county, il",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -12,
+      "series_count": 6
+    },
+    {
+      "name": "mechanics",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2015-02-03 16:04:24-06",
+      "popularity": 13,
+      "series_count": 6
+    },
+    {
+      "name": "medford",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 6
+    },
+    {
+      "name": "mendocino county, ca",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 6
+    },
+    {
+      "name": "merced",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 6
+    },
+    {
+      "name": "mercer county, nj",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 6
+    },
+    {
+      "name": "meriwether county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 6
+    },
+    {
+      "name": "mideast bea region",
+      "group_id": "geo",
+      "notes": "Bureau of Economic Analysis - Mideast Region",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 6
+    },
+    {
+      "name": "mille lacs county, mn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -9,
+      "series_count": 6
+    },
+    {
+      "name": "minnehaha county, sd",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 5,
+      "series_count": 6
+    },
+    {
+      "name": "modoc county, ca",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 0,
+      "series_count": 6
+    },
+    {
+      "name": "moffat county, co",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -7,
+      "series_count": 6
+    },
+    {
+      "name": "mohave county, az",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 6
+    },
+    {
+      "name": "monroe county, al",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 6
+    },
+    {
+      "name": "monroe county, mo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -11,
+      "series_count": 6
+    },
+    {
+      "name": "monroe county, pa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 6
+    },
+    {
+      "name": "monroe county, tn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 6
+    },
+    {
+      "name": "montgomery county, ia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 5,
+      "series_count": 6
+    },
+    {
+      "name": "montgomery county, ks",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -20,
+      "series_count": 6
+    },
+    {
+      "name": "montgomery county, tn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 6
+    },
+    {
+      "name": "montgomery county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 6
+    },
+    {
+      "name": "morgan county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -5,
+      "series_count": 6
+    },
+    {
+      "name": "morocco",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 6
+    },
+    {
+      "name": "morrison county, mn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 6
+    },
+    {
+      "name": "morristown",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 6
+    },
+    {
+      "name": "morrow county, oh",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 6
+    },
+    {
+      "name": "muncie",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 6
+    },
+    {
+      "name": "napa county, ca",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 5,
+      "series_count": 6
+    },
+    {
+      "name": "necta division",
+      "group_id": "geot",
+      "notes": "New England City and Town Areas Division",
+      "created": "2014-02-02 12:45:22-06",
+      "popularity": 25,
+      "series_count": 6
+    },
+    {
+      "name": "nelson county, va",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 6
+    },
+    {
+      "name": "nevada county, ca",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 6
+    },
+    {
+      "name": "newport county, ri",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 6
+    },
+    {
+      "name": "newton county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 6
+    },
+    {
+      "name": "nez perce county, id",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 6
+    },
+    {
+      "name": "niles",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 6
+    },
+    {
+      "name": "northampton county, nc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 6
+    },
+    {
+      "name": "northumberland county, pa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 6
+    },
+    {
+      "name": "orders",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-02-04 10:30:01-06",
+      "popularity": 49,
+      "series_count": 6
+    },
+    {
+      "name": "orleans county, ny",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 6
+    },
+    {
+      "name": "oshkosh",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 6
+    },
+    {
+      "name": "otero county, nm",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 6
+    },
+    {
+      "name": "owen county, ky",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 6
+    },
+    {
+      "name": "pacific census division",
+      "group_id": "geo",
+      "notes": "Census - Pacific division",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 6
+    },
+    {
+      "name": "palm bay",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 6
+    },
+    {
+      "name": "panama city",
+      "group_id": "geo",
+      "notes": "Panama City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 6
+    },
+    {
+      "name": "parent",
+      "group_id": "gen",
+      "notes": null,
+      "created": "2020-05-11 13:13:02-05",
+      "popularity": -10,
+      "series_count": 6
+    },
+    {
+      "name": "patrick county, va",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -8,
+      "series_count": 6
+    },
+    {
+      "name": "pawnee county, ks",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -13,
+      "series_count": 6
+    },
+    {
+      "name": "payments",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 39,
+      "series_count": 6
+    },
+    {
+      "name": "pinellas county, fl",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 6
+    },
+    {
+      "name": "pipestone county, mn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -8,
+      "series_count": 6
+    },
+    {
+      "name": "pittsylvania county, va",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 6
+    },
+    {
+      "name": "plaquemines parish, la",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 6
+    },
+    {
+      "name": "pocatello",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 6
+    },
+    {
+      "name": "polk county, mn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 6
+    },
+    {
+      "name": "polk county, or",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 6
+    },
+    {
+      "name": "pope county, mn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -8,
+      "series_count": 6
+    },
+    {
+      "name": "postal",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 10:18:46-05",
+      "popularity": 16,
+      "series_count": 6
+    },
+    {
+      "name": "poughkeepsie",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 6
+    },
+    {
+      "name": "preble county, oh",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 6
+    },
+    {
+      "name": "providence county, ri",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 6
+    },
+    {
+      "name": "pulaski county, in",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 6
+    },
+    {
+      "name": "pulaski county, mo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -5,
+      "series_count": 6
+    },
+    {
+      "name": "punta gorda",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 6
+    },
+    {
+      "name": "putnam county, in",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -16,
+      "series_count": 6
+    },
+    {
+      "name": "putnam county, tn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 6
+    },
+    {
+      "name": "racine county, wi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 0,
+      "series_count": 6
+    },
+    {
+      "name": "randolph county, al",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -9,
+      "series_count": 6
+    },
+    {
+      "name": "rapid city",
+      "group_id": "geo",
+      "notes": "Rapid City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 6
+    },
+    {
+      "name": "ray county, mo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -8,
+      "series_count": 6
+    },
+    {
+      "name": "reading",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 6
+    },
+    {
+      "name": "robeson county, nc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 6
+    },
+    {
+      "name": "rocky mount",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 6
+    },
+    {
+      "name": "russia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 40,
+      "series_count": 6
+    },
+    {
+      "name": "sac county, ia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 6
+    },
+    {
+      "name": "salem city, va",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -10,
+      "series_count": 6
+    },
+    {
+      "name": "saline county, il",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -20,
+      "series_count": 6
+    },
+    {
+      "name": "salisbury",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 6
+    },
+    {
+      "name": "sampson county, nc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 6
+    },
+    {
+      "name": "san benito county, ca",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 6
+    },
+    {
+      "name": "sandoval county, nm",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -12,
+      "series_count": 6
+    },
+    {
+      "name": "sanilac county, mi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 6
+    },
+    {
+      "name": "san juan county, ut",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -12,
+      "series_count": 6
+    },
+    {
+      "name": "santa cruz county, az",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 6
+    },
+    {
+      "name": "santa rosa county, fl",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 0,
+      "series_count": 6
+    },
+    {
+      "name": "schuylkill county, pa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 6
+    },
+    {
+      "name": "scott county, ky",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 4,
+      "series_count": 6
+    },
+    {
+      "name": "sebastian county, ar",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 6
+    },
+    {
+      "name": "sheboygan",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 6
+    },
+    {
+      "name": "shelby county, tn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 6
+    },
+    {
+      "name": "sherman",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 6
+    },
+    {
+      "name": "silver bow county, mt",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 6
+    },
+    {
+      "name": "sitka borough/city, ak",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 6
+    },
+    {
+      "name": "small",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-27 08:31:55-05",
+      "popularity": 35,
+      "series_count": 6
+    },
+    {
+      "name": "smyth county, va",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -10,
+      "series_count": 6
+    },
+    {
+      "name": "socorro county, nm",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -8,
+      "series_count": 6
+    },
+    {
+      "name": "somervell county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 6
+    },
+    {
+      "name": "southeast bea region",
+      "group_id": "geo",
+      "notes": "Bureau of Economic Analysis - Southeast region",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 6
+    },
+    {
+      "name": "spencer county, in",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -5,
+      "series_count": 6
+    },
+    {
+      "name": "spokane",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 6
+    },
+    {
+      "name": "st. charles parish, la",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 6
+    },
+    {
+      "name": "stephens county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 6
+    },
+    {
+      "name": "st. johns county, fl",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 6
+    },
+    {
+      "name": "st. louis city, mo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 6
+    },
+    {
+      "name": "stone county, mo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 6
+    },
+    {
+      "name": "sublette county, wy",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 6
+    },
+    {
+      "name": "sugar",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-03 10:29:08-05",
+      "popularity": 25,
+      "series_count": 6
+    },
+    {
+      "name": "sweet grass county, mt",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -7,
+      "series_count": 6
+    },
+    {
+      "name": "taos county, nm",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 6
+    },
+    {
+      "name": "tax exempt",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-11-13 15:54:03-06",
+      "popularity": 10,
+      "series_count": 6
+    },
+    {
+      "name": "taylor county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 4,
+      "series_count": 6
+    },
+    {
+      "name": "tipton county, in",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -5,
+      "series_count": 6
+    },
+    {
+      "name": "tompkins county, ny",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 6
+    },
+    {
+      "name": "tooele county, ut",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 6
+    },
+    {
+      "name": "traill county, nd",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -12,
+      "series_count": 6
+    },
+    {
+      "name": "travis county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 6
+    },
+    {
+      "name": "trousdale county, tn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 6
+    },
+    {
+      "name": "tuolumne county, ca",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 6
+    },
+    {
+      "name": "uintah county, ut",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -5,
+      "series_count": 6
+    },
+    {
+      "name": "union county, il",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -7,
+      "series_count": 6
+    },
+    {
+      "name": "union county, sc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 5,
+      "series_count": 6
+    },
+    {
+      "name": "utica",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 6
+    },
+    {
+      "name": "vallejo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 6
+    },
+    {
+      "name": "van zandt county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 6
+    },
+    {
+      "name": "vernon county, mo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 4,
+      "series_count": 6
+    },
+    {
+      "name": "vineland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 6
+    },
+    {
+      "name": "walker county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -5,
+      "series_count": 6
+    },
+    {
+      "name": "walthall county, ms",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 6
+    },
+    {
+      "name": "walton county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 6
+    },
+    {
+      "name": "walworth county, sd",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 5,
+      "series_count": 6
+    },
+    {
+      "name": "warren county, in",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 6
+    },
+    {
+      "name": "warren county, nc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 6
+    },
+    {
+      "name": "washington county, mn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 6
+    },
+    {
+      "name": "washington county, nc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 6
+    },
+    {
+      "name": "wausau",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 5,
+      "series_count": 6
+    },
+    {
+      "name": "wayne county, pa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -12,
+      "series_count": 6
+    },
+    {
+      "name": "wayne county, tn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 3,
+      "series_count": 6
+    },
+    {
+      "name": "wayne county, wv",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -9,
+      "series_count": 6
+    },
+    {
+      "name": "wexford county, mi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 6
+    },
+    {
+      "name": "wichita county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 6
+    },
+    {
+      "name": "williamson county, il",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -13,
+      "series_count": 6
+    },
+    {
+      "name": "williamson county, tn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 6
+    },
+    {
+      "name": "winneshiek county, ia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 6
+    },
+    {
+      "name": "winona county, mn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 4,
+      "series_count": 6
+    },
+    {
+      "name": "winston county, ms",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 6
+    },
+    {
+      "name": "worcester",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 6
+    },
+    {
+      "name": "wyandotte county, ks",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 6
+    }
+  ]
+}

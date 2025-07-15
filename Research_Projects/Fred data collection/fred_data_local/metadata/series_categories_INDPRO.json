@@ -1,0 +1,9 @@
+{
+  "categories": [
+    {
+      "id": 3,
+      "name": "Industrial Production & Capacity Utilization",
+      "parent_id": 1
+    }
+  ]
+}

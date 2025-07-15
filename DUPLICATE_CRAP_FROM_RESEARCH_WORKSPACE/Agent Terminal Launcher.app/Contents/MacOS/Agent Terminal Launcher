@@ -1,0 +1,42 @@
+#!/bin/bash
+# Agent Terminal Launcher App
+# Created by HEAD_OF_RESEARCH
+# Purpose: Launch 9 agent terminal tabs from dock/desktop
+
+# Path to the terminal configuration
+TERMINAL_CONFIG="/Users/mikaeleage/Research & Analytics Services/Projects/Agent_System.terminal"
+
+# Launch Terminal with the agent configuration
+if [ -f "$TERMINAL_CONFIG" ]; then
+    open "$TERMINAL_CONFIG"
+else
+    # Fallback: Create terminals manually
+    osascript << 'EOF'
+    tell application "Terminal"
+        activate
+        
+        -- Create window with first tab
+        do script "cd '/Users/mikaeleage/Research & Analytics Services'"
+        set custom title of front window to "Audit (node)"
+        
+        -- Create remaining 8 tabs
+        repeat 8 times
+            tell application "System Events" to keystroke "t" using command down
+            delay 0.2
+        end repeat
+        
+        -- Set titles for all tabs
+        set tab_titles to {"Audit (node)", "Head of Research (node)", "Head of engineering (node)", "Data Engineer", "Azure Engineer", "Software Engineer", "Advanced Research", "Strategy Analyst", "Quant Analyst (node)"}
+        
+        repeat with i from 1 to 9
+            set current tab of front window to tab i of front window
+            set custom title of front window to item i of tab_titles
+            do script "cd '/Users/mikaeleage/Research & Analytics Services'" in tab i of front window
+        end repeat
+        
+        -- Go back to first tab
+        set current tab of front window to tab 1 of front window
+        
+    end tell
+EOF
+fi

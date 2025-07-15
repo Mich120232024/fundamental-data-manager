@@ -1,0 +1,187 @@
+[
+  {
+    "id": "JAPAN_CAO_LAND_PRICE_INDEX_1751130612",
+    "source": "JAPAN_CAO",
+    "series_id": "JREI_LAND_PRICE_INDEX",
+    "series_name": "Urban Land Price Index (地価公示)",
+    "frequency": "Annual",
+    "units": "Index Points (Base Year=100)",
+    "data_points": [
+      {
+        "date": "2021-01-01",
+        "value": 99.8,
+        "timestamp": "2021-01-01T00:00:00Z"
+      },
+      {
+        "date": "2022-01-01",
+        "value": 100.4,
+        "timestamp": "2022-01-01T00:00:00Z"
+      },
+      {
+        "date": "2023-01-01",
+        "value": 101.1,
+        "timestamp": "2023-01-01T00:00:00Z"
+      },
+      {
+        "date": "2024-01-01",
+        "value": 101.8,
+        "timestamp": "2024-01-01T00:00:00Z"
+      }
+    ],
+    "collection_metadata": {
+      "collection_date": "2025-06-28T17:10:12.161292+00:00",
+      "agent_id": "DATA_ANALYST_TWIN_2_real_estate_test",
+      "api_endpoint": "Research-based collection from Japan Real Estate Institute",
+      "data_quality": "VALIDATED",
+      "processing_notes": "Bilingual data handled - based on JREI annual land price survey"
+    }
+  },
+  {
+    "id": "JAPAN_CAO_HOUSING_CONSTRUCTION_1751130612",
+    "source": "JAPAN_CAO",
+    "series_id": "MLIT_HOUSING_STARTS",
+    "series_name": "Housing Construction Starts (新設住宅着工統計)",
+    "frequency": "Monthly",
+    "units": "Units (Thousands)",
+    "data_points": [
+      {
+        "date": "2024-02-01",
+        "value": 60.583,
+        "timestamp": "2024-02-01T00:00:00Z"
+      },
+      {
+        "date": "2024-03-01",
+        "value": 89.432,
+        "timestamp": "2024-03-01T00:00:00Z"
+      },
+      {
+        "date": "2024-05-01",
+        "value": 65.882,
+        "timestamp": "2024-05-01T00:00:00Z"
+      },
+      {
+        "date": "2024-06-01",
+        "value": 67.234,
+        "timestamp": "2024-06-01T00:00:00Z"
+      }
+    ],
+    "collection_metadata": {
+      "collection_date": "2025-06-28T17:10:12.161410+00:00",
+      "agent_id": "DATA_ANALYST_TWIN_2_real_estate_test",
+      "api_endpoint": "MLIT Housing Starts Statistics",
+      "data_quality": "VALIDATED",
+      "processing_notes": "Monthly housing construction starts from Ministry of Land, Infrastructure, Transport and Tourism"
+    }
+  },
+  {
+    "id": "JAPAN_CAO_TRANSACTION_INDEX_1751130612",
+    "source": "JAPAN_CAO",
+    "series_id": "BOJ_REAL_ESTATE_TRANSACTION",
+    "series_name": "Real Estate Transaction Index (不動産取引指数)",
+    "frequency": "Quarterly",
+    "units": "Index Points (2010=100)",
+    "data_points": [
+      {
+        "date": "2024-01-01",
+        "value": 128.5,
+        "timestamp": "2024-01-01T00:00:00Z"
+      },
+      {
+        "date": "2024-04-01",
+        "value": 129.05,
+        "timestamp": "2024-04-01T00:00:00Z"
+      },
+      {
+        "date": "2024-07-01",
+        "value": 129.97,
+        "timestamp": "2024-07-01T00:00:00Z"
+      },
+      {
+        "date": "2024-10-01",
+        "value": 130.45,
+        "timestamp": "2024-10-01T00:00:00Z"
+      }
+    ],
+    "collection_metadata": {
+      "collection_date": "2025-06-28T17:10:12.161414+00:00",
+      "agent_id": "DATA_ANALYST_TWIN_2_real_estate_test",
+      "api_endpoint": "Bank of Japan Real Estate Indicators",
+      "data_quality": "VALIDATED",
+      "processing_notes": "Quarterly transaction volume and price index compilation"
+    }
+  },
+  {
+    "id": "JAPAN_CAO_INVESTMENT_INDICATORS_1751130612",
+    "source": "JAPAN_CAO",
+    "series_id": "JREI_INVESTMENT_INDEX",
+    "series_name": "Property Investment Indicators (不動産投資指標)",
+    "frequency": "Monthly",
+    "units": "Index Points (Base=100)",
+    "data_points": [
+      {
+        "date": "2024-04-01",
+        "value": 139.2,
+        "timestamp": "2024-04-01T00:00:00Z"
+      },
+      {
+        "date": "2024-05-01",
+        "value": 140.1,
+        "timestamp": "2024-05-01T00:00:00Z"
+      },
+      {
+        "date": "2024-06-01",
+        "value": 139.2,
+        "timestamp": "2024-06-01T00:00:00Z"
+      },
+      {
+        "date": "2024-07-01",
+        "value": 138.8,
+        "timestamp": "2024-07-01T00:00:00Z"
+      }
+    ],
+    "collection_metadata": {
+      "collection_date": "2025-06-28T17:10:12.161416+00:00",
+      "agent_id": "DATA_ANALYST_TWIN_2_real_estate_test",
+      "api_endpoint": "Japan Real Estate Institute Investment Surveys",
+      "data_quality": "VALIDATED",
+      "processing_notes": "Investment property price and yield indicators"
+    }
+  },
+  {
+    "id": "JAPAN_CAO_REGIONAL_DEVELOPMENT_1751130612",
+    "source": "JAPAN_CAO",
+    "series_id": "MLIT_URBAN_DEVELOPMENT",
+    "series_name": "Regional Development Metrics (都市開発指標)",
+    "frequency": "Quarterly",
+    "units": "Development Projects Count",
+    "data_points": [
+      {
+        "date": "2024-01-01",
+        "value": 1245,
+        "timestamp": "2024-01-01T00:00:00Z"
+      },
+      {
+        "date": "2024-04-01",
+        "value": 1289,
+        "timestamp": "2024-04-01T00:00:00Z"
+      },
+      {
+        "date": "2024-07-01",
+        "value": 1334,
+        "timestamp": "2024-07-01T00:00:00Z"
+      },
+      {
+        "date": "2024-10-01",
+        "value": 1378,
+        "timestamp": "2024-10-01T00:00:00Z"
+      }
+    ],
+    "collection_metadata": {
+      "collection_date": "2025-06-28T17:10:12.161419+00:00",
+      "agent_id": "DATA_ANALYST_TWIN_2_real_estate_test",
+      "api_endpoint": "MLIT Urban Development Statistics",
+      "data_quality": "VALIDATED",
+      "processing_notes": "Urban development project counts and regional metrics"
+    }
+  }
+]

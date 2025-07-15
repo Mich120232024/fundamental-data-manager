@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global typography settings */
+html {
+  font-size: 14px; /* Base font size */
+}
+
+body {
+  font-size: 11px; /* Default body text */
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Import exact styles from localhost:3000 */
+/* TODO: Replace with actual stylesheet from localhost:3000 */
+/* @import url('http://localhost:3000/static/css/main.css'); */
+/* @import url('http://localhost:3000/assets/styles.css'); */
+
+/* Custom scrollbar */
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* React Grid Layout fixes */
+.react-grid-layout {
+  position: relative;
+  transition: height 200ms ease;
+}
+
+.react-grid-item {
+  transition: all 200ms ease;
+  transition-property: left, top, width, height;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.react-grid-item.cssTransforms {
+  transition-property: transform, width, height;
+}
+
+.react-grid-item.resizing {
+  transition: none;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.react-grid-item.react-draggable-dragging {
+  transition: none;
+  z-index: 100;
+  opacity: 0.8;
+}
+
+/* Ensure grid items don't overlap dropdowns */
+.react-grid-item {
+  z-index: 1;
+}
+
+.react-grid-item > .react-resizable-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+}
+
+.react-grid-item > .react-resizable-handle::after {
+  content: "";
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid rgba(149, 189, 120, 0.4);
+  border-bottom: 2px solid rgba(149, 189, 120, 0.4);
+}
+
+/* Dark mode support */
+.dark .react-grid-item {
+  background: #1f2937;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dark .react-grid-item.react-draggable-dragging {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* GZC Brand Colors */
+:root {
+  --gzc-mid-green: #95BD78;
+  --gzc-light-green: #ABD38F;
+  --gzc-red-alert: #DD8B8B;
+  --gzc-off-white: #EDEDED;
+  --gzc-light-grey: #E5E7E5;
+  --gzc-dark-grey: #999999;
+  --gzc-black: #0E0D0D;
+  --gzc-light-black: #595959;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a4a4a;
+}
+
+/* Select element styling */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(149, 189, 120, 0.3);
+}
+

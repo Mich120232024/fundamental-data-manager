@@ -1,0 +1,362 @@
+{
+  "timestamp": 1750807522.833584,
+  "tests": {
+    "cosmos_esc": "\u2705 WORKING - ESC key closes modal",
+    "graph_loading": "\u274c BROKEN - No cytoscape element found",
+    "architecture_esc": "\u274c ERROR - ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    58 \u00d7 waiting for element to be visible, enabled and stable\n       - element is not visible\n     - retrying click action\n       - waiting 500ms\n",
+    "styling_quality": "\u2705 WORKING - CSS variables loaded properly",
+    "console_errors": "Errors: 2, Warnings: 24"
+  },
+  "screenshots": [
+    "/Users/mikaeleage/Research & Analytics Services/Engineering Workspace/Scripts/mcp_test_cosmos_modal_1750807528.png",
+    "/Users/mikaeleage/Research & Analytics Services/Engineering Workspace/Scripts/mcp_test_graph_1750807535.png",
+    "/Users/mikaeleage/Research & Analytics Services/Engineering Workspace/Scripts/mcp_test_styling_1750807568.png"
+  ],
+  "console_logs": [
+    {
+      "type": "log",
+      "text": "Nav item clicked: Cosmos Explorer cosmos",
+      "timestamp": 1750807522.872417
+    },
+    {
+      "type": "log",
+      "text": "switchTab called with: cosmos",
+      "timestamp": 1750807522.872641
+    },
+    {
+      "type": "log",
+      "text": "currentTab set to: cosmos",
+      "timestamp": 1750807522.8728719
+    },
+    {
+      "type": "log",
+      "text": "Nav item clicked: Graph DB graph",
+      "timestamp": 1750807530.1022909
+    },
+    {
+      "type": "log",
+      "text": "switchTab called with: graph",
+      "timestamp": 1750807530.102675
+    },
+    {
+      "type": "log",
+      "text": "currentTab set to: graph",
+      "timestamp": 1750807530.1029198
+    },
+    {
+      "type": "log",
+      "text": "Loading graph data from agent context memory...",
+      "timestamp": 1750807530.103193
+    },
+    {
+      "type": "log",
+      "text": "Found 10 documents for graph",
+      "timestamp": 1750807530.570116
+    },
+    {
+      "type": "log",
+      "text": "Built graph data: 10 nodes, 10 edges",
+      "timestamp": 1750807530.570248
+    },
+    {
+      "type": "warning",
+      "text": "You have set a custom wheel sensitivity.  This will make your app zoom unnaturally when using mainstream mice.  You should change this value from the default only if you can guarantee that all your users will use the same hardware and OS configuration as your current machine.",
+      "timestamp": 1750807530.574856
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807530.5779898
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807530.578762
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807530.578936
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807530.57915
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807530.579349
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807530.579475
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807530.579573
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807530.579701
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807530.579854
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807530.579956
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807530.580089
+    },
+    {
+      "type": "error",
+      "text": "Graph loading error: TypeError: Cannot read properties of undefined (reading '_private')\n    at Qe.<anonymous> (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:29:71294)\n    at Qe.parallelEdges (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:29:30694)\n    at https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:19822\n    at bs.checkTrigger (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:19350)\n    at bs.checkBoundsTrigger (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:19566)\n    at bs.checkTriggers (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:20006)\n    at p (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:15454)\n    at bs.applyParsedProperty (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:17820)\n    at e.applyBypass (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:20629)\n    at Qe.style (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:29:65147)",
+      "timestamp": 1750807530.580746
+    },
+    {
+      "type": "log",
+      "text": "Loading graph data from agent context memory...",
+      "timestamp": 1750807531.627892
+    },
+    {
+      "type": "log",
+      "text": "Found 10 documents for graph",
+      "timestamp": 1750807531.993021
+    },
+    {
+      "type": "log",
+      "text": "Built graph data: 10 nodes, 10 edges",
+      "timestamp": 1750807531.993164
+    },
+    {
+      "type": "warning",
+      "text": "You have set a custom wheel sensitivity.  This will make your app zoom unnaturally when using mainstream mice.  You should change this value from the default only if you can guarantee that all your users will use the same hardware and OS configuration as your current machine.",
+      "timestamp": 1750807531.994334
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807531.995119
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807531.995262
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807531.995417
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807531.995542
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807531.99565
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807531.995816
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807531.995965
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807531.996091
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807531.9961941
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807531.9963038
+    },
+    {
+      "type": "warning",
+      "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead.",
+      "timestamp": 1750807531.996408
+    },
+    {
+      "type": "error",
+      "text": "Graph loading error: TypeError: Cannot read properties of undefined (reading '_private')\n    at Qe.<anonymous> (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:29:71294)\n    at Qe.parallelEdges (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:29:30694)\n    at https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:19822\n    at bs.checkTrigger (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:19350)\n    at bs.checkBoundsTrigger (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:19566)\n    at bs.checkTriggers (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:20006)\n    at p (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:15454)\n    at bs.applyParsedProperty (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:17820)\n    at e.applyBypass (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:20629)\n    at Qe.style (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:29:65147)",
+      "timestamp": 1750807531.996557
+    },
+    {
+      "type": "log",
+      "text": "Nav item clicked: Architecture research",
+      "timestamp": 1750807535.2264042
+    },
+    {
+      "type": "log",
+      "text": "switchTab called with: research",
+      "timestamp": 1750807535.226588
+    },
+    {
+      "type": "log",
+      "text": "currentTab set to: research",
+      "timestamp": 1750807535.226717
+    },
+    {
+      "type": "log",
+      "text": "loadResearch function called",
+      "timestamp": 1750807535.226836
+    },
+    {
+      "type": "log",
+      "text": "loadArchitecture called",
+      "timestamp": 1750807535.2269492
+    },
+    {
+      "type": "log",
+      "text": "Fetching: http://localhost:8420/api/v1/architecture/list",
+      "timestamp": 1750807535.227093
+    },
+    {
+      "type": "log",
+      "text": "Architecture data received: {files: Array(102), count: 102, base_paths: Array(4)}",
+      "timestamp": 1750807535.237236
+    },
+    {
+      "type": "log",
+      "text": "Files count: 102",
+      "timestamp": 1750807535.237463
+    },
+    {
+      "type": "log",
+      "text": "Categories: [General, Process Workflows, Project Architecture, Communication Protocols, System Architecture, Database Design, Frontend Components, Agent & Team Systems, Operations & Maintenance]",
+      "timestamp": 1750807535.237707
+    },
+    {
+      "type": "log",
+      "text": "About to call displayArchitectureFiles with categories: [General, Process Workflows, Project Architecture, Communication Protocols, System Architecture, Database Design, Frontend Components, Agent & Team Systems, Operations & Maintenance]",
+      "timestamp": 1750807535.2379808
+    },
+    {
+      "type": "log",
+      "text": "displayArchitectureFiles called with: [General, Process Workflows, Project Architecture, Communication Protocols, System Architecture, Database Design, Frontend Components, Agent & Team Systems, Operations & Maintenance]",
+      "timestamp": 1750807535.23815
+    },
+    {
+      "type": "log",
+      "text": "Found fileList element, selectedCategory: ",
+      "timestamp": 1750807535.238254
+    },
+    {
+      "type": "log",
+      "text": "Processing category: General with 10 files",
+      "timestamp": 1750807535.238445
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: General",
+      "timestamp": 1750807535.238539
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Process Workflows with 13 files",
+      "timestamp": 1750807535.2387269
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Process Workflows",
+      "timestamp": 1750807535.2388248
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Project Architecture with 2 files",
+      "timestamp": 1750807535.239014
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Project Architecture",
+      "timestamp": 1750807535.239116
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Communication Protocols with 2 files",
+      "timestamp": 1750807535.2393768
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Communication Protocols",
+      "timestamp": 1750807535.2395148
+    },
+    {
+      "type": "log",
+      "text": "Processing category: System Architecture with 56 files",
+      "timestamp": 1750807535.239906
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: System Architecture",
+      "timestamp": 1750807535.240059
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Database Design with 2 files",
+      "timestamp": 1750807535.240295
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Database Design",
+      "timestamp": 1750807535.2404149
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Frontend Components with 5 files",
+      "timestamp": 1750807535.2406342
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Frontend Components",
+      "timestamp": 1750807535.240742
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Agent & Team Systems with 7 files",
+      "timestamp": 1750807535.240968
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Agent & Team Systems",
+      "timestamp": 1750807535.24108
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Operations & Maintenance with 5 files",
+      "timestamp": 1750807535.241289
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Operations & Maintenance",
+      "timestamp": 1750807535.2414
+    }
+  ],
+  "summary": {
+    "total_tests": 4,
+    "passed_tests": 2,
+    "success_rate": 50.0
+  }
+}

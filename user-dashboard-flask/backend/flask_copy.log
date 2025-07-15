@@ -1,0 +1,40 @@
+2025-06-24 20:42:05,500 - CosmosDBManager - INFO - CosmosDBManager initialized - Database: research-analytics-db, Container: messages
+Memory layer API not available
+Live data API not available
+Message status API not available
+Log collection API not available
+Gremlin API not available
+System API not available
+Graph diagnostic API not available
+Graph test API not available
+Static Cytoscape API not available
+🚀 Starting User Management Dashboard...
+Container already exists: agent_session_logs
+Container already exists: agent_logs
+Container already exists: system_inbox
+Container already exists: identity_cards
+Container already exists: working_contexts
+Container already exists: journal_entries
+Container already exists: memory_contexts
+✅ Database connection established
+\n📋 Available endpoints:
+   http://localhost:5001/ - Main dashboard
+   http://localhost:5001/debug - Debug mode
+   http://localhost:5001/api/containers - API endpoints
+\n🌐 User Management Dashboard running on http://localhost:5001
+   Press Ctrl+C to stop
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [24/Jun/2025 20:42:07] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2025 20:42:11] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:42:12] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2025 20:42:13] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:42:31] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2025 20:42:31] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:42:31] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:42:31] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2025 20:42:31] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2025 20:42:31] "GET /api/stats HTTP/1.1" 200 -

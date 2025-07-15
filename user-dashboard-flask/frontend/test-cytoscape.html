@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cytoscape Test</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px;
+            background: #1a1a1a;
+            color: white;
+        }
+        #cy {
+            width: 800px;
+            height: 600px;
+            background: #2a2a2a;
+            border: 2px solid #444;
+            margin: 20px 0;
+        }
+        .status {
+            padding: 10px;
+            background: #333;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .error { color: #ff6b6b; }
+        .success { color: #51cf66; }
+    </style>
+</head>
+<body>
+    <h1>Cytoscape Library Test</h1>
+    <div id="status" class="status">Loading libraries...</div>
+    <div id="cy"></div>
+    
+    <!-- Load libraries in correct order -->
+    <script src="/js/cytoscape.min.js"></script>
+    <script src="/js/layout-base.js"></script>
+    <script src="/js/cose-base.js"></script>
+    <script src="/js/cytoscape-cose-bilkent.js"></script>
+    
+    <script>
+        const status = document.getElementById('status');
+        
+        function log(msg, isError = false) {
+            const div = document.createElement('div');
+            div.className = isError ? 'error' : 'success';
+            div.textContent = msg;
+            status.appendChild(div);
+            console.log(msg);
+        }
+        
+        // Check what's loaded
+        log(`Cytoscape loaded: ${typeof cytoscape !== 'undefined'}`);
+        log(`Layout Base loaded: ${typeof layoutBase !== 'undefined'}`);
+        log(`CoSE Base loaded: ${typeof coseBase !== 'undefined'}`);
+        
+        // Try to create a simple graph
+        try {
+            const cy = cytoscape({
+                container: document.getElementById('cy'),
+                elements: [
+                    { data: { id: 'a' } },
+                    { data: { id: 'b' } },
+                    { data: { id: 'c' } },
+                    { data: { id: 'ab', source: 'a', target: 'b' } },
+                    { data: { id: 'bc', source: 'b', target: 'c' } }
+                ],
+                style: [
+                    {
+                        selector: 'node',
+                        style: {
+                            'background-color': '#666',
+                            'label': 'data(id)'
+                        }
+                    },
+                    {
+                        selector: 'edge',
+                        style: {
+                            'width': 3,
+                            'line-color': '#ccc',
+                            'target-arrow-color': '#ccc',
+                            'target-arrow-shape': 'triangle'
+                        }
+                    }
+                ],
+                layout: {
+                    name: 'grid',
+                    rows: 1
+                }
+            });
+            
+            log('✅ Basic Cytoscape instance created successfully!');
+            
+            // Try cose-bilkent layout
+            setTimeout(() => {
+                try {
+                    cy.layout({ name: 'cose-bilkent' }).run();
+                    log('✅ CoSE-Bilkent layout works!');
+                } catch (e) {
+                    log(`❌ CoSE-Bilkent error: ${e.message}`, true);
+                }
+            }, 1000);
+            
+        } catch (e) {
+            log(`❌ Error creating Cytoscape: ${e.message}`, true);
+        }
+    </script>
+</body>
+</html>

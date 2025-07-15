@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>WindowSettings</key>
+	<dict>
+		<key>Agent System</key>
+		<dict>
+			<key>WindowGroupName</key>
+			<string>Agent System</string>
+			<key>WindowGroupTabs</key>
+			<array>
+				<dict>
+					<key>TabTitle</key>
+					<string>Audit (node)</string>
+					<key>WorkingDirectory</key>
+					<string>/Users/mikaeleage/Research &amp; Analytics Services</string>
+					<key>CommandString</key>
+					<string>cd "/Users/mikaeleage/Research &amp; Analytics Services"</string>
+				</dict>
+				<dict>
+					<key>TabTitle</key>
+					<string>Head of Research (node)</string>
+					<key>WorkingDirectory</key>
+					<string>/Users/mikaeleage/Research &amp; Analytics Services</string>
+					<key>CommandString</key>
+					<string>cd "/Users/mikaeleage/Research &amp; Analytics Services"</string>
+				</dict>
+				<dict>
+					<key>TabTitle</key>
+					<string>Head of engineering (node)</string>
+					<key>WorkingDirectory</key>
+					<string>/Users/mikaeleage/Research &amp; Analytics Services</string>
+					<key>CommandString</key>
+					<string>cd "/Users/mikaeleage/Research &amp; Analytics Services"</string>
+				</dict>
+				<dict>
+					<key>TabTitle</key>
+					<string>Data Engineer</string>
+					<key>WorkingDirectory</key>
+					<string>/Users/mikaeleage/Research &amp; Analytics Services</string>
+					<key>CommandString</key>
+					<string>cd "/Users/mikaeleage/Research &amp; Analytics Services"</string>
+				</dict>
+				<dict>
+					<key>TabTitle</key>
+					<string>Azure Engineer</string>
+					<key>WorkingDirectory</key>
+					<string>/Users/mikaeleage/Research &amp; Analytics Services</string>
+					<key>CommandString</key>
+					<string>cd "/Users/mikaeleage/Research &amp; Analytics Services"</string>
+				</dict>
+				<dict>
+					<key>TabTitle</key>
+					<string>Software Engineer</string>
+					<key>WorkingDirectory</key>
+					<string>/Users/mikaeleage/Research &amp; Analytics Services</string>
+					<key>CommandString</key>
+					<string>cd "/Users/mikaeleage/Research &amp; Analytics Services"</string>
+				</dict>
+				<dict>
+					<key>TabTitle</key>
+					<string>Advanced Research</string>
+					<key>WorkingDirectory</key>
+					<string>/Users/mikaeleage/Research &amp; Analytics Services</string>
+					<key>CommandString</key>
+					<string>cd "/Users/mikaeleage/Research &amp; Analytics Services"</string>
+				</dict>
+				<dict>
+					<key>TabTitle</key>
+					<string>Strategy Analyst</string>
+					<key>WorkingDirectory</key>
+					<string>/Users/mikaeleage/Research &amp; Analytics Services</string>
+					<key>CommandString</key>
+					<string>cd "/Users/mikaeleage/Research &amp; Analytics Services"</string>
+				</dict>
+				<dict>
+					<key>TabTitle</key>
+					<string>Quant Analyst (node)</string>
+					<key>WorkingDirectory</key>
+					<string>/Users/mikaeleage/Research &amp; Analytics Services</string>
+					<key>CommandString</key>
+					<string>cd "/Users/mikaeleage/Research &amp; Analytics Services"</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+</dict>
+</plist>

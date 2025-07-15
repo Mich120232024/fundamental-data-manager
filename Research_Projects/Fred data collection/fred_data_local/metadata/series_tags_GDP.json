@@ -1,0 +1,75 @@
+{
+  "realtime_start": "2025-05-31",
+  "realtime_end": "2025-05-31",
+  "order_by": "series_count",
+  "sort_order": "asc",
+  "count": 8,
+  "offset": 0,
+  "limit": 1000,
+  "tags": [
+    {
+      "name": "nipa",
+      "group_id": "rls",
+      "notes": "National Income and Product Accounts",
+      "created": "2012-08-16 15:21:17-05",
+      "popularity": 68,
+      "series_count": 13008
+    },
+    {
+      "name": "gdp",
+      "group_id": "gen",
+      "notes": "Gross Domestic Product",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 79,
+      "series_count": 74570
+    },
+    {
+      "name": "bea",
+      "group_id": "src",
+      "notes": "Bureau of Economic Analysis",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 78,
+      "series_count": 78314
+    },
+    {
+      "name": "sa",
+      "group_id": "seas",
+      "notes": "Seasonally Adjusted",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 86,
+      "series_count": 95034
+    },
+    {
+      "name": "quarterly",
+      "group_id": "freq",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 83,
+      "series_count": 110848
+    },
+    {
+      "name": "nation",
+      "group_id": "geot",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 96,
+      "series_count": 268250
+    },
+    {
+      "name": "public domain: citation requested",
+      "group_id": "cc",
+      "notes": null,
+      "created": "2018-12-17 23:33:13-06",
+      "popularity": 99,
+      "series_count": 613764
+    },
+    {
+      "name": "usa",
+      "group_id": "geo",
+      "notes": "United States of America",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 100,
+      "series_count": 661726
+    }
+  ]
+}

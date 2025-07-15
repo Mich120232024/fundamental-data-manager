@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cosmos DB Viewer - Minimal</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container-item { padding: 10px; border: 1px solid #ddd; margin: 5px 0; cursor: pointer; }
+        .container-item:hover { background: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <h1>Cosmos DB Viewer - Minimal Working Version</h1>
+    <div id="containers">Loading...</div>
+    <hr>
+    <div id="documents"></div>
+
+    <script>
+        // Simple direct implementation
+        fetch('http://localhost:5001/api/containers')
+            .then(r => r.json())
+            .then(data => {
+                if (data.success) {
+                    const html = data.containers.map(c => 
+                        `<div class="container-item" onclick="loadDocs('${c.id}')">${c.id} (${c.count} docs)</div>`
+                    ).join('');
+                    document.getElementById('containers').innerHTML = html;
+                }
+            })
+            .catch(err => {
+                document.getElementById('containers').innerHTML = 'Error: ' + err;
+            });
+
+        function loadDocs(containerId) {
+            document.getElementById('documents').innerHTML = 'Loading ' + containerId + '...';
+            fetch(`http://localhost:5001/api/containers/${containerId}/documents?limit=10`)
+                .then(r => r.json())
+                .then(data => {
+                    if (data.success) {
+                        const html = '<h2>' + containerId + '</h2>' + 
+                            data.documents.map(d => 
+                                `<pre>${JSON.stringify(d, null, 2)}</pre>`
+                            ).join('<hr>');
+                        document.getElementById('documents').innerHTML = html;
+                    }
+                })
+                .catch(err => {
+                    document.getElementById('documents').innerHTML = 'Error: ' + err;
+                });
+        }
+    </script>
+</body>
+</html>

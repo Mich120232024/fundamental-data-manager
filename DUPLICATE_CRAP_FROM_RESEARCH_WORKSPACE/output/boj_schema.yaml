@@ -1,0 +1,51 @@
+api_name: BankOfJapan
+base_url: https://api.boj.or.jp/api/v1
+discovered_at: '2025-06-26T13:54:09.873603'
+endpoints:
+  data_categories:
+    collection_strategy: complete
+    data_key: categories
+    description: Get data categories
+    method: GET
+    optional_params: []
+    pagination: {}
+    parameters: {}
+    path: /categories
+    required_params: []
+  statistics_list:
+    collection_strategy: complete
+    data_key: statistics
+    description: Get list of all statistics
+    method: GET
+    optional_params: []
+    pagination: {}
+    parameters: {}
+    path: /statistics/list
+    required_params: []
+  statistics_metadata:
+    collection_strategy: complete
+    data_key: null
+    description: Get metadata for specific statistics
+    method: GET
+    optional_params: []
+    pagination: {}
+    parameters: {}
+    path: /statistics/{stats_code}/metadata
+    required_params:
+    - stats_code
+  timeseries_data:
+    collection_strategy: paginated
+    data_key: null
+    description: Get time series data
+    method: GET
+    optional_params:
+    - from
+    - to
+    - frequency
+    pagination:
+      type: date_range
+    parameters: {}
+    path: /timeseries/{series_code}
+    required_params:
+    - series_code
+version: ''

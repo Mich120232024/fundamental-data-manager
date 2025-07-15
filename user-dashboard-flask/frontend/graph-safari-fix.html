@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Graph Explorer - Safari Compatible</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #1a1a1a;
+            color: #fff;
+        }
+        #cy {
+            width: 100%;
+            height: 600px;
+            background: #2a2a2a;
+            border: 2px solid #3a3a3a;
+            display: block;
+            position: relative;
+        }
+        .status {
+            padding: 10px;
+            background: #2a2a2a;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            background: #007aff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            -webkit-appearance: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Graph Explorer - Safari Version</h1>
+    <div id="status" class="status">Initializing...</div>
+    
+    <button onclick="initGraph()">Initialize Graph</button>
+    <button onclick="loadData()">Load Data</button>
+    <button onclick="debugInfo()">Debug Info</button>
+    
+    <div id="cy"></div>
+
+    <!-- Load Cytoscape with explicit defer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.26.0/cytoscape.min.js" defer></script>
+    
+    <script>
+        let cy = null;
+        
+        function updateStatus(msg) {
+            document.getElementById('status').innerText = msg;
+            console.log(msg);
+        }
+        
+        function debugInfo() {
+            const info = {
+                browser: navigator.userAgent,
+                cytoscapeLoaded: typeof cytoscape !== 'undefined',
+                containerExists: !!document.getElementById('cy'),
+                cyInstance: !!cy
+            };
+            updateStatus('Debug: ' + JSON.stringify(info, null, 2));
+            console.log('Debug info:', info);
+        }
+        
+        function initGraph() {
+            updateStatus('Initializing graph...');
+            
+            // Safari-specific checks
+            if (typeof cytoscape === 'undefined') {
+                updateStatus('ERROR: Cytoscape not loaded. Trying local fallback...');
+                loadCytoscapeLocal();
+                return;
+            }
+            
+            const container = document.getElementById('cy');
+            if (!container) {
+                updateStatus('ERROR: Container not found');
+                return;
+            }
+            
+            try {
+                // Clear any existing instance
+                if (cy) {
+                    cy.destroy();
+                    cy = null;
+                }
+                
+                // Create with minimal config for Safari
+                cy = cytoscape({
+                    container: container,
+                    
+                    style: [
+                        {
+                            selector: 'node',
+                            style: {
+                                'background-color': '#007aff',
+                                'label': 'data(id)',
+                                'color': '#fff',
+                                'text-valign': 'center',
+                                'text-halign': 'center'
+                            }
+                        },
+                        {
+                            selector: 'edge',
+                            style: {
+                                'line-color': '#666',
+                                'target-arrow-color': '#666',
+                                'target-arrow-shape': 'triangle',
+                                'width': 2
+                            }
+                        }
+                    ],
+                    
+                    elements: [
+                        { data: { id: 'test1' } },
+                        { data: { id: 'test2' } },
+                        { data: { id: 'edge1', source: 'test1', target: 'test2' } }
+                    ],
+                    
+                    layout: {
+                        name: 'grid'
+                    },
+                    
+                    // Safari-specific settings
+                    textureOnViewport: false,
+                    motionBlur: false,
+                    wheelSensitivity: 0.5
+                });
+                
+                updateStatus('SUCCESS: Graph initialized with test data');
+                
+            } catch (error) {
+                updateStatus('ERROR: ' + error.message);
+                console.error('Full error:', error);
+            }
+        }
+        
+        async function loadData() {
+            if (!cy) {
+                updateStatus('ERROR: Initialize graph first');
+                return;
+            }
+            
+            try {
+                updateStatus('Loading data...');
+                const response = await fetch('/api/graph/full?node_limit=10');
+                const data = await response.json();
+                
+                if (data.success && data.elements) {
+                    cy.elements().remove();
+                    cy.add(data.elements);
+                    cy.layout({ name: 'circle' }).run();
+                    cy.fit();
+                    updateStatus('SUCCESS: Loaded ' + data.elements.length + ' elements');
+                } else {
+                    updateStatus('ERROR: No data received');
+                }
+            } catch (error) {
+                updateStatus('ERROR: ' + error.message);
+            }
+        }
+        
+        function loadCytoscapeLocal() {
+            const script = document.createElement('script');
+            script.src = '/static/cytoscape.min.js';
+            script.onload = function() {
+                updateStatus('Cytoscape loaded from local server');
+                initGraph();
+            };
+            script.onerror = function() {
+                updateStatus('ERROR: Failed to load Cytoscape from all sources');
+            };
+            document.head.appendChild(script);
+        }
+        
+        // Safari-specific initialization
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                updateStatus('Page loaded, click Initialize Graph to start');
+            });
+        } else {
+            updateStatus('Page ready, click Initialize Graph to start');
+        }
+    </script>
+</body>
+</html>

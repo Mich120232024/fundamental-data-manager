@@ -1,0 +1,97 @@
+{
+  "test_metadata": {
+    "timestamp": "2025-06-02T00:22:19.163298",
+    "test_tags": [
+      "gdp",
+      "usa",
+      "annual"
+    ],
+    "batch_sizes_tested": [
+      100,
+      1000,
+      5000,
+      10000
+    ]
+  },
+  "results": {
+    "gdp": {
+      "100": {
+        "requested_limit": 100,
+        "api_limit": 100,
+        "total_available": 4277,
+        "actual_returned": 100,
+        "elapsed_seconds": 2.879753828048706,
+        "fully_returned": false
+      },
+      "1000": {
+        "requested_limit": 1000,
+        "api_limit": 1000,
+        "total_available": 4277,
+        "actual_returned": 1000,
+        "elapsed_seconds": 2.488234043121338,
+        "fully_returned": false
+      },
+      "5000": {
+        "error": "No response"
+      },
+      "10000": {
+        "error": "No response"
+      }
+    },
+    "usa": {
+      "100": {
+        "requested_limit": 100,
+        "api_limit": 100,
+        "total_available": 5918,
+        "actual_returned": 100,
+        "elapsed_seconds": 6.858144044876099,
+        "fully_returned": false
+      },
+      "1000": {
+        "requested_limit": 1000,
+        "api_limit": 1000,
+        "total_available": 5918,
+        "actual_returned": 1000,
+        "elapsed_seconds": 13.22847294807434,
+        "fully_returned": false
+      },
+      "5000": {
+        "error": "No response"
+      },
+      "10000": {
+        "error": "No response"
+      }
+    },
+    "annual": {
+      "100": {
+        "requested_limit": 100,
+        "api_limit": 100,
+        "total_available": 5134,
+        "actual_returned": 100,
+        "elapsed_seconds": 19.390045881271362,
+        "fully_returned": false
+      },
+      "1000": {
+        "requested_limit": 1000,
+        "api_limit": 1000,
+        "total_available": 5134,
+        "actual_returned": 1000,
+        "elapsed_seconds": 5.294466018676758,
+        "fully_returned": false
+      },
+      "5000": {
+        "error": "No response"
+      },
+      "10000": {
+        "error": "No response"
+      }
+    }
+  },
+  "analysis": {
+    "api_limits_observed": [
+      100,
+      1000
+    ],
+    "recommendation": "Use limit=1000 for optimal performance"
+  }
+}

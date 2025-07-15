@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manual Bloomberg Vol Surface Test</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h2>Manual Bloomberg Vol Surface Test</h2>
+    <div id="surface" style="width:800px;height:600px;"></div>
+    
+    <script>
+        // Use actual Bloomberg data from our Python test
+        const tenorDays = [7, 14, 30, 60, 90, 180, 365]; // 1W, 2W, 1M, 2M, 3M, 6M, 1Y
+        const deltas = [5, 15, 25, 35, 50, 65, 75, 85, 95];
+        
+        // Bloomberg data (simplified - use 1M values as example)
+        const atmVol = 7.6375;
+        const rr25 = -0.045;
+        const bf25 = 0.1575;
+        
+        // Calculate smile
+        const put25Vol = atmVol - 0.5 * rr25 + bf25; // 7.817
+        const call25Vol = atmVol + 0.5 * rr25 + bf25; // 7.772
+        
+        console.log('Bloomberg smile:', {
+            put25: put25Vol.toFixed(3),
+            atm: atmVol.toFixed(3),
+            call25: call25Vol.toFixed(3)
+        });
+        
+        // Build z-matrix with Bloomberg-like smile
+        const z = [];
+        for (let j = 0; j < deltas.length; j++) {
+            z[j] = [];
+            const delta = deltas[j];
+            
+            for (let i = 0; i < tenorDays.length; i++) {
+                let vol;
+                
+                if (delta === 25) {
+                    vol = put25Vol;
+                } else if (delta === 50) {
+                    vol = atmVol;
+                } else if (delta === 75) {
+                    vol = call25Vol;
+                } else if (delta < 25) {
+                    // Wing extrapolation
+                    vol = put25Vol + (25 - delta) * 0.01;
+                } else if (delta > 75) {
+                    // Wing extrapolation  
+                    vol = call25Vol + (delta - 75) * 0.008;
+                } else if (delta < 50) {
+                    // Linear between put and ATM
+                    const weight = (delta - 25) / 25;
+                    vol = put25Vol + (atmVol - put25Vol) * weight;
+                } else {
+                    // Linear between ATM and call
+                    const weight = (delta - 50) / 25;
+                    vol = atmVol + (call25Vol - atmVol) * weight;
+                }
+                
+                z[j][i] = vol;
+            }
+        }
+        
+        console.log('Z-matrix sample:');
+        console.log('Delta 25:', z[2].map(v => v.toFixed(3)));
+        console.log('Delta 50:', z[4].map(v => v.toFixed(3))); 
+        console.log('Delta 75:', z[6].map(v => v.toFixed(3)));
+        
+        const allVols = z.flat();
+        const minVol = Math.min(...allVols);
+        const maxVol = Math.max(...allVols);
+        console.log('Vol range:', minVol.toFixed(3), 'to', maxVol.toFixed(3));
+        
+        // Plot with same settings as our React app
+        const data = [{
+            x: tenorDays,
+            y: deltas,
+            z: z,
+            type: 'surface',
+            colorscale: [
+                [0, 'rgb(0, 100, 0)'],
+                [0.3, 'rgb(0, 255, 0)'],
+                [0.5, 'rgb(255, 255, 0)'],
+                [0.7, 'rgb(255, 165, 0)'],
+                [1, 'rgb(255, 0, 0)']
+            ]
+        }];
+        
+        const layout = {
+            title: 'Bloomberg EURUSD Volatility Surface (Manual Test)',
+            scene: {
+                xaxis: { title: 'Days to Expiry' },
+                yaxis: { 
+                    title: 'Delta',
+                    ticktext: ['5P', '15P', '25P', '35P', 'ATM', '35C', '25C', '15C', '5C'],
+                    tickvals: [5, 15, 25, 35, 50, 65, 75, 85, 95]
+                },
+                zaxis: { 
+                    title: 'Implied Volatility (%)',
+                    autorange: true  // Key fix!
+                },
+                camera: {
+                    eye: { x: -1.5, y: -1.5, z: 1.5 }
+                },
+                aspectratio: { x: 1.2, y: 1, z: 1.0 }
+            }
+        };
+        
+        Plotly.newPlot('surface', data, layout);
+    </script>
+</body>
+</html>

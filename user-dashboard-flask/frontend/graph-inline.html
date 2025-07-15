@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Visualization - Inline Version</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #1a1a1a;
+            color: #fff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #cy {
+            width: 100%;
+            height: 600px;
+            background: #2a2a2a;
+            border: 2px solid #3a3a3a;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        button {
+            padding: 10px 20px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover {
+            background: #2563eb;
+        }
+        .status {
+            padding: 15px;
+            background: #2a2a2a;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+        .error { color: #ef4444; }
+        .success { color: #10b981; }
+        .info { color: #3b82f6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🕸️ Graph Visualization - Direct Test</h1>
+        
+        <div id="status" class="status info">Initializing...</div>
+        
+        <div class="controls">
+            <button onclick="testAPI()">Test API Connection</button>
+            <button onclick="loadWithFetch()">Load Graph Data</button>
+            <button onclick="createTestGraph()">Create Test Graph</button>
+            <button onclick="clearGraph()">Clear Graph</button>
+        </div>
+        
+        <div id="cy"></div>
+        
+        <div class="controls">
+            <label>Layout: </label>
+            <select id="layout" onchange="applyLayout()">
+                <option value="grid">Grid</option>
+                <option value="circle">Circle</option>
+                <option value="concentric">Concentric</option>
+                <option value="breadthfirst">Breadthfirst</option>
+                <option value="random">Random</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Load Cytoscape directly from CDN with specific version -->
+    <script src="https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js"></script>
+    
+    <script>
+        // Global variables
+        let cy = null;
+        let currentData = null;
+        
+        // Status update function
+        function updateStatus(message, type = 'info') {
+            const status = document.getElementById('status');
+            status.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            status.className = 'status ' + type;
+            console.log(`[${type.toUpperCase()}] ${message}`);
+        }
+        
+        // Initialize Cytoscape when page loads
+        window.addEventListener('DOMContentLoaded', function() {
+            initializeCytoscape();
+        });
+        
+        function initializeCytoscape() {
+            try {
+                // Check if Cytoscape is available
+                if (typeof cytoscape === 'undefined') {
+                    updateStatus('Cytoscape not loaded, trying alternative method...', 'error');
+                    loadCytoscapeManually();
+                    return;
+                }
+                
+                // Initialize Cytoscape
+                cy = cytoscape({
+                    container: document.getElementById('cy'),
+                    style: [
+                        {
+                            selector: 'node',
+                            style: {
+                                'background-color': '#3b82f6',
+                                'label': 'data(label)',
+                                'text-valign': 'center',
+                                'text-halign': 'center',
+                                'color': '#ffffff',
+                                'text-outline-width': 2,
+                                'text-outline-color': '#1a1a1a',
+                                'font-size': '12px',
+                                'width': 50,
+                                'height': 50,
+                                'text-wrap': 'wrap',
+                                'text-max-width': 80
+                            }
+                        },
+                        {
+                            selector: 'edge',
+                            style: {
+                                'width': 2,
+                                'line-color': '#666',
+                                'target-arrow-color': '#666',
+                                'target-arrow-shape': 'triangle',
+                                'curve-style': 'bezier'
+                            }
+                        },
+                        {
+                            selector: '.highlighted',
+                            style: {
+                                'background-color': '#ef4444',
+                                'line-color': '#ef4444',
+                                'target-arrow-color': '#ef4444',
+                                'transition-property': 'background-color, line-color, target-arrow-color',
+                                'transition-duration': 0.5
+                            }
+                        }
+                    ],
+                    layout: {
+                        name: 'grid',
+                        rows: 3
+                    }
+                });
+                
+                updateStatus('Cytoscape initialized successfully!', 'success');
+                
+                // Add event handlers
+                cy.on('tap', 'node', function(evt){
+                    const node = evt.target;
+                    updateStatus(`Selected: ${node.data('label')} (ID: ${node.id()})`, 'info');
+                });
+                
+            } catch (error) {
+                updateStatus(`Initialization error: ${error.message}`, 'error');
+                console.error('Full error:', error);
+            }
+        }
+        
+        function loadCytoscapeManually() {
+            // Try loading from local server
+            const script = document.createElement('script');
+            script.src = '/static/cytoscape.min.js';
+            script.onload = function() {
+                updateStatus('Cytoscape loaded from local server', 'success');
+                initializeCytoscape();
+            };
+            script.onerror = function() {
+                updateStatus('Failed to load Cytoscape. Please check network connection.', 'error');
+            };
+            document.head.appendChild(script);
+        }
+        
+        async function testAPI() {
+            try {
+                updateStatus('Testing API connection...', 'info');
+                const response = await fetch('/api/graph/status');
+                const data = await response.json();
+                
+                if (data.success) {
+                    updateStatus(`API connected! ${data.node_count} nodes in database`, 'success');
+                } else {
+                    updateStatus('API connection failed', 'error');
+                }
+            } catch (error) {
+                updateStatus(`API test error: ${error.message}`, 'error');
+            }
+        }
+        
+        async function loadWithFetch() {
+            try {
+                updateStatus('Fetching graph data...', 'info');
+                
+                const response = await fetch('/api/graph/full?node_limit=15&edge_limit=30');
+                const data = await response.json();
+                
+                if (!data.success) {
+                    throw new Error(data.error || 'API returned error');
+                }
+                
+                currentData = data;
+                updateStatus(`Received ${data.elements?.length || 0} elements`, 'info');
+                
+                if (data.elements && data.elements.length > 0) {
+                    // Clear existing elements
+                    cy.elements().remove();
+                    
+                    // Process elements to ensure they have the right format
+                    const processedElements = data.elements.map(elem => {
+                        if (elem.data && elem.data.name) {
+                            elem.data.label = elem.data.name; // Ensure label exists
+                        }
+                        return elem;
+                    });
+                    
+                    // Add elements
+                    cy.add(processedElements);
+                    
+                    // Apply layout
+                    cy.layout({ name: 'circle' }).run();
+                    
+                    // Fit to viewport
+                    cy.fit();
+                    
+                    updateStatus(`Loaded ${cy.nodes().length} nodes and ${cy.edges().length} edges`, 'success');
+                } else {
+                    updateStatus('No data received from API', 'error');
+                }
+                
+            } catch (error) {
+                updateStatus(`Load error: ${error.message}`, 'error');
+                console.error('Full error:', error);
+            }
+        }
+        
+        function createTestGraph() {
+            try {
+                if (!cy) {
+                    updateStatus('Cytoscape not initialized', 'error');
+                    return;
+                }
+                
+                // Clear existing
+                cy.elements().remove();
+                
+                // Add test nodes and edges
+                const testElements = [
+                    { data: { id: 'n1', label: 'Node 1' } },
+                    { data: { id: 'n2', label: 'Node 2' } },
+                    { data: { id: 'n3', label: 'Node 3' } },
+                    { data: { id: 'n4', label: 'Node 4' } },
+                    { data: { id: 'n5', label: 'Node 5' } },
+                    { data: { id: 'e1', source: 'n1', target: 'n2' } },
+                    { data: { id: 'e2', source: 'n2', target: 'n3' } },
+                    { data: { id: 'e3', source: 'n3', target: 'n4' } },
+                    { data: { id: 'e4', source: 'n4', target: 'n5' } },
+                    { data: { id: 'e5', source: 'n5', target: 'n1' } }
+                ];
+                
+                cy.add(testElements);
+                cy.layout({ name: 'circle' }).run();
+                cy.fit();
+                
+                updateStatus('Test graph created with 5 nodes and 5 edges', 'success');
+                
+            } catch (error) {
+                updateStatus(`Test graph error: ${error.message}`, 'error');
+            }
+        }
+        
+        function clearGraph() {
+            if (cy) {
+                cy.elements().remove();
+                updateStatus('Graph cleared', 'info');
+            }
+        }
+        
+        function applyLayout() {
+            if (!cy || cy.elements().length === 0) {
+                updateStatus('No elements to layout', 'error');
+                return;
+            }
+            
+            const layoutName = document.getElementById('layout').value;
+            cy.layout({ name: layoutName }).run();
+            updateStatus(`Applied ${layoutName} layout`, 'info');
+        }
+    </script>
+</body>
+</html>

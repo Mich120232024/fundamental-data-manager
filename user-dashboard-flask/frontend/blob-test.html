@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blob Storage Upload Test</title>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0f1b;
+            color: #e5e5e7;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            background: #1a1f2e;
+            border: 1px solid #2a3142;
+            border-radius: 8px;
+            padding: 2rem;
+        }
+        
+        h1 {
+            color: #00d4ff;
+            margin-bottom: 2rem;
+        }
+        
+        .test-section {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: #0f1419;
+            border-radius: 4px;
+        }
+        
+        button {
+            background: #00d4ff;
+            color: #0a0f1b;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        button:hover {
+            background: #00a8cc;
+        }
+        
+        .result {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #1a1f2e;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.875rem;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        
+        .success {
+            border-left: 4px solid #10b981;
+        }
+        
+        .error {
+            border-left: 4px solid #ef4444;
+        }
+        
+        .info {
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .size-display {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fbbf24;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Blob Storage Upload Test</h1>
+        
+        <div class="test-section">
+            <h2>Test 1: Small File (50 KB)</h2>
+            <p>This should be stored directly in Cosmos DB</p>
+            <button onclick="testUpload(50)">Test 50KB Upload</button>
+            <div id="result-50" class="result" style="display: none;"></div>
+        </div>
+        
+        <div class="test-section">
+            <h2>Test 2: Medium File (150 KB)</h2>
+            <p>This should be uploaded to Azure Blob Storage</p>
+            <button onclick="testUpload(150)">Test 150KB Upload</button>
+            <div id="result-150" class="result" style="display: none;"></div>
+        </div>
+        
+        <div class="test-section">
+            <h2>Test 3: Large File (500 KB)</h2>
+            <p>This should definitely use Azure Blob Storage</p>
+            <button onclick="testUpload(500)">Test 500KB Upload</button>
+            <div id="result-500" class="result" style="display: none;"></div>
+        </div>
+        
+        <div class="test-section">
+            <h2>Test 4: Very Large File (2.5 MB)</h2>
+            <p>Testing with the size you mentioned (2517 KB)</p>
+            <button onclick="testUpload(2517)">Test 2.5MB Upload</button>
+            <div id="result-2517" class="result" style="display: none;"></div>
+        </div>
+    </div>
+    
+    <script>
+        async function testUpload(sizeKB) {
+            const resultDiv = document.getElementById(`result-${sizeKB}`);
+            resultDiv.style.display = 'block';
+            resultDiv.className = 'result info';
+            resultDiv.textContent = '⏳ Uploading...';
+            
+            try {
+                // Generate test content of specified size
+                const chars = sizeKB * 1024;
+                let content = `# Test Upload ${sizeKB}KB\n\n`;
+                content += 'Test data: ';
+                content += 'X'.repeat(chars - content.length);
+                
+                const actualSizeKB = (content.length / 1024).toFixed(1);
+                
+                // Send request
+                const response = await fetch('/api/logs/save-session', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        agent_name: 'HEAD_OF_ENGINEERING',
+                        log_content: content,
+                        store_in_cosmos: true
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    resultDiv.className = 'result success';
+                    let output = `✅ SUCCESS!\n\n`;
+                    output += `📊 File Size: ${actualSizeKB} KB\n`;
+                    output += `💾 Storage Type: ${data.storage_type}\n`;
+                    output += `📁 Filename: ${data.filename}\n\n`;
+                    
+                    if (data.storage_type === 'blob') {
+                        output += `☁️ BLOB STORAGE DETAILS:\n`;
+                        output += `   Blob URL: ${data.blob_url}\n`;
+                        output += `   Blob Stored: ${data.blob_stored}\n`;
+                        output += `   Note: ${data.cosmos_note || 'N/A'}\n`;
+                    } else if (data.storage_type === 'cosmos') {
+                        output += `💫 COSMOS DB STORAGE:\n`;
+                        output += `   Full content stored in Cosmos DB\n`;
+                    } else {
+                        output += `📁 LOCAL STORAGE ONLY\n`;
+                    }
+                    
+                    output += `\n📍 Local Path: ${data.local_path}`;
+                    
+                    resultDiv.textContent = output;
+                } else {
+                    resultDiv.className = 'result error';
+                    resultDiv.textContent = `❌ ERROR: ${data.error}`;
+                }
+            } catch (error) {
+                resultDiv.className = 'result error';
+                resultDiv.textContent = `❌ ERROR: ${error.message}`;
+            }
+        }
+        
+        // Show current backend URL
+        document.addEventListener('DOMContentLoaded', () => {
+            const info = document.createElement('div');
+            info.className = 'test-section info';
+            info.innerHTML = `<strong>Backend URL:</strong> ${window.location.origin}<br>
+                             <strong>API Endpoint:</strong> /api/logs/save-session<br>
+                             <strong>Blob Threshold:</strong> Files > 100KB use Azure Blob Storage`;
+            document.querySelector('.container').insertBefore(info, document.querySelector('.test-section'));
+        });
+    </script>
+</body>
+</html>

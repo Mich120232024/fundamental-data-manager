@@ -1,0 +1,8011 @@
+{
+  "realtime_start": "2025-05-31",
+  "realtime_end": "2025-05-31",
+  "order_by": "series_count",
+  "sort_order": "desc",
+  "count": 4277,
+  "offset": 0,
+  "limit": 1000,
+  "tags": [
+    {
+      "name": "public domain: citation requested",
+      "group_id": "cc",
+      "notes": null,
+      "created": "2018-12-17 23:33:13-06",
+      "popularity": 99,
+      "series_count": 70812
+    },
+    {
+      "name": "annual",
+      "group_id": "freq",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 92,
+      "series_count": 64726
+    },
+    {
+      "name": "nsa",
+      "group_id": "seas",
+      "notes": "Not Seasonally Adjusted",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 100,
+      "series_count": 64292
+    },
+    {
+      "name": "usa",
+      "group_id": "geo",
+      "notes": "United States of America",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 100,
+      "series_count": 60230
+    },
+    {
+      "name": "bea",
+      "group_id": "src",
+      "notes": "Bureau of Economic Analysis",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 78,
+      "series_count": 60186
+    },
+    {
+      "name": "industry",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 78,
+      "series_count": 44142
+    },
+    {
+      "name": "private",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 69,
+      "series_count": 36050
+    },
+    {
+      "name": "real",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 73,
+      "series_count": 29244
+    },
+    {
+      "name": "nation",
+      "group_id": "geot",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 96,
+      "series_count": 26856
+    },
+    {
+      "name": "county",
+      "group_id": "geot",
+      "notes": "County or County Equivalent",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 87,
+      "series_count": 25000
+    },
+    {
+      "name": "private industries",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 57,
+      "series_count": 20754
+    },
+    {
+      "name": "gsp",
+      "group_id": "gen",
+      "notes": "Gross State Product",
+      "created": "2014-06-12 09:41:44-05",
+      "popularity": 56,
+      "series_count": 20464
+    },
+    {
+      "name": "state",
+      "group_id": "geot",
+      "notes": "State",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 74,
+      "series_count": 17478
+    },
+    {
+      "name": "nipa",
+      "group_id": "rls",
+      "notes": "National Income and Product Accounts",
+      "created": "2012-08-16 15:21:17-05",
+      "popularity": 68,
+      "series_count": 12600
+    },
+    {
+      "name": "government",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 65,
+      "series_count": 12166
+    },
+    {
+      "name": "sa",
+      "group_id": "seas",
+      "notes": "Seasonally Adjusted",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 86,
+      "series_count": 10274
+    },
+    {
+      "name": "quarterly",
+      "group_id": "freq",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 83,
+      "series_count": 9672
+    },
+    {
+      "name": "services",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 68,
+      "series_count": 9404
+    },
+    {
+      "name": "quantity index",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 41,
+      "series_count": 8374
+    },
+    {
+      "name": "goods",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 67,
+      "series_count": 7874
+    },
+    {
+      "name": "enterprises",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 39,
+      "series_count": 6986
+    },
+    {
+      "name": "goods-producing",
+      "group_id": "gen",
+      "notes": "Goods-Producing Industries",
+      "created": "2019-10-30 08:37:29-05",
+      "popularity": 36,
+      "series_count": 6268
+    },
+    {
+      "name": "services-providing",
+      "group_id": "gen",
+      "notes": "Services-Providing Industries",
+      "created": "2019-10-30 08:38:12-05",
+      "popularity": 35,
+      "series_count": 6178
+    },
+    {
+      "name": "manufacturing",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 72,
+      "series_count": 5648
+    },
+    {
+      "name": "pwt",
+      "group_id": "rls",
+      "notes": "Penn World Table",
+      "created": "2012-08-24 09:00:17-05",
+      "popularity": 58,
+      "series_count": 5598
+    },
+    {
+      "name": "world bank",
+      "group_id": "src",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 70,
+      "series_count": 4856
+    },
+    {
+      "name": "ppp",
+      "group_id": "gen",
+      "notes": "Purchasing Power Parity",
+      "created": "2012-08-27 11:34:54-05",
+      "popularity": 46,
+      "series_count": 4744
+    },
+    {
+      "name": "consumption",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 60,
+      "series_count": 4574
+    },
+    {
+      "name": "upenn",
+      "group_id": "src",
+      "notes": "Univ. of Pennsylvania",
+      "created": "2012-08-24 08:56:09-05",
+      "popularity": 48,
+      "series_count": 4104
+    },
+    {
+      "name": "domestic",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 59,
+      "series_count": 4014
+    },
+    {
+      "name": "gfd",
+      "group_id": "rls",
+      "notes": "Global Financial Development",
+      "created": "2013-06-05 11:42:03-05",
+      "popularity": 59,
+      "series_count": 3828
+    },
+    {
+      "name": "copyrighted: citation required",
+      "group_id": "cc",
+      "notes": null,
+      "created": "2018-12-17 23:33:13-06",
+      "popularity": 85,
+      "series_count": 3754
+    },
+    {
+      "name": "investment",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 3720
+    },
+    {
+      "name": "consumption expenditures",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 59,
+      "series_count": 3442
+    },
+    {
+      "name": "gross",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 55,
+      "series_count": 3332
+    },
+    {
+      "name": "per capita",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 60,
+      "series_count": 3324
+    },
+    {
+      "name": "durable goods",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-18 10:23:26-05",
+      "popularity": 56,
+      "series_count": 3316
+    },
+    {
+      "name": "production",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 62,
+      "series_count": 3314
+    },
+    {
+      "name": "chained",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 3064
+    },
+    {
+      "name": "insurance",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 48,
+      "series_count": 2938
+    },
+    {
+      "name": "transportation",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 55,
+      "series_count": 2904
+    },
+    {
+      "name": "nondurable goods",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-18 11:17:22-05",
+      "popularity": 49,
+      "series_count": 2796
+    },
+    {
+      "name": "bea region",
+      "group_id": "geot",
+      "notes": "Bureau of Economic Analysis Region",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 2672
+    },
+    {
+      "name": "business",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 60,
+      "series_count": 2618
+    },
+    {
+      "name": "oecd",
+      "group_id": "src",
+      "notes": "Org. for Economic Co-operation and Development",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 72,
+      "series_count": 2582
+    },
+    {
+      "name": "tx",
+      "group_id": "geo",
+      "notes": "Texas",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 68,
+      "series_count": 2558
+    },
+    {
+      "name": "mei",
+      "group_id": "rls",
+      "notes": "Main Economic Indicators",
+      "created": "2012-08-16 15:21:17-05",
+      "popularity": 71,
+      "series_count": 2404
+    },
+    {
+      "name": "finance",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 48,
+      "series_count": 2352
+    },
+    {
+      "name": "fixed",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 2200
+    },
+    {
+      "name": "professional",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 2164
+    },
+    {
+      "name": "rent",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 2122
+    },
+    {
+      "name": "real estate",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 51,
+      "series_count": 2110
+    },
+    {
+      "name": "leases",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 2048
+    },
+    {
+      "name": "federal",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 59,
+      "series_count": 2020
+    },
+    {
+      "name": "food",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 60,
+      "series_count": 1974
+    },
+    {
+      "name": "discontinued",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 65,
+      "series_count": 1950
+    },
+    {
+      "name": "warehousing",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 1920
+    },
+    {
+      "name": "price",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-07-11 11:24:55-05",
+      "popularity": 85,
+      "series_count": 1804
+    },
+    {
+      "name": "rate",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 82,
+      "series_count": 1804
+    },
+    {
+      "name": "employment",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 73,
+      "series_count": 1778
+    },
+    {
+      "name": "recreation",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 39,
+      "series_count": 1776
+    },
+    {
+      "name": "health",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 48,
+      "series_count": 1772
+    },
+    {
+      "name": "social assistance",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 38,
+      "series_count": 1758
+    },
+    {
+      "name": "ga",
+      "group_id": "geo",
+      "notes": "Georgia (U.S. state)",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 56,
+      "series_count": 1722
+    },
+    {
+      "name": "education",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 58,
+      "series_count": 1708
+    },
+    {
+      "name": "arts",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 1696
+    },
+    {
+      "name": "entertainment",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 1690
+    },
+    {
+      "name": "accommodation",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 1654
+    },
+    {
+      "name": "depository institutions",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 70,
+      "series_count": 1646
+    },
+    {
+      "name": "banks",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 69,
+      "series_count": 1602
+    },
+    {
+      "name": "msa",
+      "group_id": "geot",
+      "notes": "Metropolitan Statistical Area",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 75,
+      "series_count": 1532
+    },
+    {
+      "name": "personal",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 65,
+      "series_count": 1498
+    },
+    {
+      "name": "university of california, davis",
+      "group_id": "src",
+      "notes": "",
+      "created": "2014-03-24 15:02:59-05",
+      "popularity": 53,
+      "series_count": 1494
+    },
+    {
+      "name": "university of groningen",
+      "group_id": "src",
+      "notes": "",
+      "created": "2013-07-22 11:48:28-05",
+      "popularity": 53,
+      "series_count": 1494
+    },
+    {
+      "name": "healthcare",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2015-02-03 15:09:14-06",
+      "popularity": 36,
+      "series_count": 1478
+    },
+    {
+      "name": "corporate",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 59,
+      "series_count": 1404
+    },
+    {
+      "name": "mining",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 51,
+      "series_count": 1372
+    },
+    {
+      "name": "ky",
+      "group_id": "geo",
+      "notes": "Kentucky",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 57,
+      "series_count": 1344
+    },
+    {
+      "name": "mo",
+      "group_id": "geo",
+      "notes": "Missouri",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 53,
+      "series_count": 1320
+    },
+    {
+      "name": "assets",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 63,
+      "series_count": 1282
+    },
+    {
+      "name": "indexes",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 85,
+      "series_count": 1280
+    },
+    {
+      "name": "pce",
+      "group_id": "gen",
+      "notes": "Personal Consumption Expenditures",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 56,
+      "series_count": 1266
+    },
+    {
+      "name": "contributions",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 38,
+      "series_count": 1264
+    },
+    {
+      "name": "price index",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 83,
+      "series_count": 1264
+    },
+    {
+      "name": "nc",
+      "group_id": "geo",
+      "notes": "North Carolina",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 58,
+      "series_count": 1222
+    },
+    {
+      "name": "il",
+      "group_id": "geo",
+      "notes": "Illinois",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 51,
+      "series_count": 1216
+    },
+    {
+      "name": "tn",
+      "group_id": "geo",
+      "notes": "Tennessee",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 53,
+      "series_count": 1184
+    },
+    {
+      "name": "va",
+      "group_id": "geo",
+      "notes": "Virginia",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 56,
+      "series_count": 1182
+    },
+    {
+      "name": "ks",
+      "group_id": "geo",
+      "notes": "Kansas",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 1176
+    },
+    {
+      "name": "ia",
+      "group_id": "geo",
+      "notes": "Iowa",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 51,
+      "series_count": 1166
+    },
+    {
+      "name": "equipment",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 56,
+      "series_count": 1142
+    },
+    {
+      "name": "in",
+      "group_id": "geo",
+      "notes": "Indiana",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 1142
+    },
+    {
+      "name": "state & local",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 38,
+      "series_count": 1138
+    },
+    {
+      "name": "information",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 42,
+      "series_count": 1136
+    },
+    {
+      "name": "management",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 1114
+    },
+    {
+      "name": "mi",
+      "group_id": "geo",
+      "notes": "Michigan",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 1084
+    },
+    {
+      "name": "ne",
+      "group_id": "geo",
+      "notes": "Nebraska",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 47,
+      "series_count": 1082
+    },
+    {
+      "name": "output",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 42,
+      "series_count": 1078
+    },
+    {
+      "name": "capital",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 53,
+      "series_count": 1074
+    },
+    {
+      "name": "mn",
+      "group_id": "geo",
+      "notes": "Minnesota",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 1072
+    },
+    {
+      "name": "oh",
+      "group_id": "geo",
+      "notes": "Ohio",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 1072
+    },
+    {
+      "name": "net",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 60,
+      "series_count": 1062
+    },
+    {
+      "name": "agriculture",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 49,
+      "series_count": 1046
+    },
+    {
+      "name": "trade",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 1044
+    },
+    {
+      "name": "ar",
+      "group_id": "geo",
+      "notes": "Arkansas",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 48,
+      "series_count": 1040
+    },
+    {
+      "name": "wdi",
+      "group_id": "rls",
+      "notes": "World Development Indicators",
+      "created": "2012-08-16 15:21:17-05",
+      "popularity": 65,
+      "series_count": 1034
+    },
+    {
+      "name": "ms",
+      "group_id": "geo",
+      "notes": "Mississippi",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 1032
+    },
+    {
+      "name": "imports",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 1016
+    },
+    {
+      "name": "fl",
+      "group_id": "geo",
+      "notes": "Florida",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 60,
+      "series_count": 1012
+    },
+    {
+      "name": "income",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 70,
+      "series_count": 1008
+    },
+    {
+      "name": "percent",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 63,
+      "series_count": 1004
+    },
+    {
+      "name": "wi",
+      "group_id": "geo",
+      "notes": "Wisconsin",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 56,
+      "series_count": 1000
+    },
+    {
+      "name": "vehicles",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 56,
+      "series_count": 978
+    },
+    {
+      "name": "expenditures",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 57,
+      "series_count": 972
+    },
+    {
+      "name": "pa",
+      "group_id": "geo",
+      "notes": "Pennsylvania",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 53,
+      "series_count": 970
+    },
+    {
+      "name": "ok",
+      "group_id": "geo",
+      "notes": "Oklahoma",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 954
+    },
+    {
+      "name": "al",
+      "group_id": "geo",
+      "notes": "Alabama",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 49,
+      "series_count": 948
+    },
+    {
+      "name": "la",
+      "group_id": "geo",
+      "notes": "Louisiana",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 48,
+      "series_count": 928
+    },
+    {
+      "name": "sales",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 63,
+      "series_count": 926
+    },
+    {
+      "name": "sd",
+      "group_id": "geo",
+      "notes": "South Dakota",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 51,
+      "series_count": 894
+    },
+    {
+      "name": "exports",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 53,
+      "series_count": 878
+    },
+    {
+      "name": "forestry",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 872
+    },
+    {
+      "name": "ca",
+      "group_id": "geo",
+      "notes": "California",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 62,
+      "series_count": 870
+    },
+    {
+      "name": "ny",
+      "group_id": "geo",
+      "notes": "New York",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 58,
+      "series_count": 866
+    },
+    {
+      "name": "fishing",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 860
+    },
+    {
+      "name": "co",
+      "group_id": "geo",
+      "notes": "Colorado",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 51,
+      "series_count": 852
+    },
+    {
+      "name": "wv",
+      "group_id": "geo",
+      "notes": "West Virginia",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 852
+    },
+    {
+      "name": "full-time",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 46,
+      "series_count": 840
+    },
+    {
+      "name": "science",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-17 10:15:29-05",
+      "popularity": 30,
+      "series_count": 826
+    },
+    {
+      "name": "nonresidential",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 814
+    },
+    {
+      "name": "waste",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 806
+    },
+    {
+      "name": "transnational",
+      "group_id": "geot",
+      "notes": "Transnational",
+      "created": "2012-08-10 11:26:49-05",
+      "popularity": 63,
+      "series_count": 804
+    },
+    {
+      "name": "mt",
+      "group_id": "geo",
+      "notes": "Montana",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 798
+    },
+    {
+      "name": "sc",
+      "group_id": "geo",
+      "notes": "South Carolina",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 52,
+      "series_count": 788
+    },
+    {
+      "name": "companies",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 782
+    },
+    {
+      "name": "hunting",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 25,
+      "series_count": 778
+    },
+    {
+      "name": "administrative",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 24,
+      "series_count": 774
+    },
+    {
+      "name": "tax",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 774
+    },
+    {
+      "name": "nd",
+      "group_id": "geo",
+      "notes": "North Dakota",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 770
+    },
+    {
+      "name": "financial",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 55,
+      "series_count": 768
+    },
+    {
+      "name": "support activities",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-17 10:05:24-05",
+      "popularity": 32,
+      "series_count": 762
+    },
+    {
+      "name": "credits",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 740
+    },
+    {
+      "name": "purchase",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-24 16:24:48-05",
+      "popularity": 42,
+      "series_count": 738
+    },
+    {
+      "name": "utilities",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 736
+    },
+    {
+      "name": "deposits",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 732
+    },
+    {
+      "name": "corporate profits",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 37,
+      "series_count": 726
+    },
+    {
+      "name": "wa",
+      "group_id": "geo",
+      "notes": "Washington (state)",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 53,
+      "series_count": 720
+    },
+    {
+      "name": "debt",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 56,
+      "series_count": 714
+    },
+    {
+      "name": "or",
+      "group_id": "geo",
+      "notes": "Oregon",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 672
+    },
+    {
+      "name": "id",
+      "group_id": "geo",
+      "notes": "Idaho",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 670
+    },
+    {
+      "name": "nm",
+      "group_id": "geo",
+      "notes": "New Mexico",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 41,
+      "series_count": 670
+    },
+    {
+      "name": "software",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 33,
+      "series_count": 656
+    },
+    {
+      "name": "wages",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 61,
+      "series_count": 642
+    },
+    {
+      "name": "compensation",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 47,
+      "series_count": 628
+    },
+    {
+      "name": "salaries",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 52,
+      "series_count": 628
+    },
+    {
+      "name": "accruals",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 25,
+      "series_count": 618
+    },
+    {
+      "name": "receipts",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 41,
+      "series_count": 608
+    },
+    {
+      "name": "defense",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 33,
+      "series_count": 598
+    },
+    {
+      "name": "intermediate",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-26 16:26:06-05",
+      "popularity": 41,
+      "series_count": 590
+    },
+    {
+      "name": "imf",
+      "group_id": "src",
+      "notes": "International Monetary Fund",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 66,
+      "series_count": 588
+    },
+    {
+      "name": "computers",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 40,
+      "series_count": 582
+    },
+    {
+      "name": "wholesale",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 580
+    },
+    {
+      "name": "ak",
+      "group_id": "geo",
+      "notes": "Alaska",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 578
+    },
+    {
+      "name": "ut",
+      "group_id": "geo",
+      "notes": "Utah",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 574
+    },
+    {
+      "name": "retail",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 63,
+      "series_count": 566
+    },
+    {
+      "name": "retail trade",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 57,
+      "series_count": 556
+    },
+    {
+      "name": "printing",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 554
+    },
+    {
+      "name": "nj",
+      "group_id": "geo",
+      "notes": "New Jersey",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 47,
+      "series_count": 544
+    },
+    {
+      "name": "securities",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 59,
+      "series_count": 542
+    },
+    {
+      "name": "md",
+      "group_id": "geo",
+      "notes": "Maryland",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 49,
+      "series_count": 532
+    },
+    {
+      "name": "residual",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-17 09:42:13-05",
+      "popularity": 25,
+      "series_count": 518
+    },
+    {
+      "name": "wy",
+      "group_id": "geo",
+      "notes": "Wyoming",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 514
+    },
+    {
+      "name": "ma",
+      "group_id": "geo",
+      "notes": "Massachusetts",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 48,
+      "series_count": 502
+    },
+    {
+      "name": "az",
+      "group_id": "geo",
+      "notes": "Arizona",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 47,
+      "series_count": 496
+    },
+    {
+      "name": "electronics",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 46,
+      "series_count": 496
+    },
+    {
+      "name": "workers",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 476
+    },
+    {
+      "name": "nv",
+      "group_id": "geo",
+      "notes": "Nevada",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 474
+    },
+    {
+      "name": "metals",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 55,
+      "series_count": 470
+    },
+    {
+      "name": "me",
+      "group_id": "geo",
+      "notes": "Maine",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 41,
+      "series_count": 464
+    },
+    {
+      "name": "beverages",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 41,
+      "series_count": 462
+    },
+    {
+      "name": "vt",
+      "group_id": "geo",
+      "notes": "Vermont",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 460
+    },
+    {
+      "name": "inventories",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 48,
+      "series_count": 450
+    },
+    {
+      "name": "liabilities",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 51,
+      "series_count": 446
+    },
+    {
+      "name": "construction",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 59,
+      "series_count": 432
+    },
+    {
+      "name": "intellectual property",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-11-13 15:59:52-06",
+      "popularity": 36,
+      "series_count": 422
+    },
+    {
+      "name": "public",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 38,
+      "series_count": 422
+    },
+    {
+      "name": "value added",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 38,
+      "series_count": 416
+    },
+    {
+      "name": "miscellaneous",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 09:21:43-05",
+      "popularity": 38,
+      "series_count": 414
+    },
+    {
+      "name": "new",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 62,
+      "series_count": 410
+    },
+    {
+      "name": "nh",
+      "group_id": "geo",
+      "notes": "New Hampshire",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 42,
+      "series_count": 406
+    },
+    {
+      "name": "residential",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 56,
+      "series_count": 404
+    },
+    {
+      "name": "de",
+      "group_id": "geo",
+      "notes": "Delaware",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 33,
+      "series_count": 394
+    },
+    {
+      "name": "households",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 65,
+      "series_count": 386
+    },
+    {
+      "name": "trucks",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 384
+    },
+    {
+      "name": "ct",
+      "group_id": "geo",
+      "notes": "Connecticut",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 382
+    },
+    {
+      "name": "nonfarm",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 378
+    },
+    {
+      "name": "persons",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 77,
+      "series_count": 374
+    },
+    {
+      "name": "payments",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 39,
+      "series_count": 366
+    },
+    {
+      "name": "cash",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-16 12:05:28-05",
+      "popularity": 35,
+      "series_count": 362
+    },
+    {
+      "name": "fixed capital formation",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 360
+    },
+    {
+      "name": "nondefense",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 360
+    },
+    {
+      "name": "great lakes bea region",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 358
+    },
+    {
+      "name": "southwest bea region",
+      "group_id": "geo",
+      "notes": "Bureau of Economic Analysis - Southwest region",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 358
+    },
+    {
+      "name": "hi",
+      "group_id": "geo",
+      "notes": "Hawaii",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 354
+    },
+    {
+      "name": "life",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-07-17 15:52:32-05",
+      "popularity": 34,
+      "series_count": 354
+    },
+    {
+      "name": "ri",
+      "group_id": "geo",
+      "notes": "Rhode Island",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 354
+    },
+    {
+      "name": "rocky mountain bea region",
+      "group_id": "geo",
+      "notes": "Bureau of Economic Analysis - Rocky Mountain Region",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 348
+    },
+    {
+      "name": "gas",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 52,
+      "series_count": 346
+    },
+    {
+      "name": "new england bea region",
+      "group_id": "geo",
+      "notes": "Bureau of Economic Analysis - New England region",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 346
+    },
+    {
+      "name": "loans",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 64,
+      "series_count": 344
+    },
+    {
+      "name": "eurostat",
+      "group_id": "src",
+      "notes": "Statistical Office of the European Communities",
+      "created": "2012-08-02 10:13:50-05",
+      "popularity": 51,
+      "series_count": 342
+    },
+    {
+      "name": "premium",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-04-19 13:04:22-05",
+      "popularity": 29,
+      "series_count": 338
+    },
+    {
+      "name": "far west bea region",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 334
+    },
+    {
+      "name": "southeast bea region",
+      "group_id": "geo",
+      "notes": "Bureau of Economic Analysis - Southeast region",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 332
+    },
+    {
+      "name": "dc",
+      "group_id": "geo",
+      "notes": "District of Columbia",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 330
+    },
+    {
+      "name": "petroleum",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 330
+    },
+    {
+      "name": "europe",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 326
+    },
+    {
+      "name": "pension",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 320
+    },
+    {
+      "name": "part-time",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 33,
+      "series_count": 314
+    },
+    {
+      "name": "budget",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 38,
+      "series_count": 310
+    },
+    {
+      "name": "nonresidents",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-08 15:33:47-06",
+      "popularity": 7,
+      "series_count": 310
+    },
+    {
+      "name": "mideast bea region",
+      "group_id": "geo",
+      "notes": "Bureau of Economic Analysis - Mideast Region",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 308
+    },
+    {
+      "name": "final sales",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-26 16:25:06-05",
+      "popularity": 20,
+      "series_count": 298
+    },
+    {
+      "name": "interest",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 70,
+      "series_count": 290
+    },
+    {
+      "name": "plains bea region",
+      "group_id": "geo",
+      "notes": "Bureau of Economic Analysis - Plains region",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 288
+    },
+    {
+      "name": "finance companies",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-06-25 15:10:25-05",
+      "popularity": 40,
+      "series_count": 280
+    },
+    {
+      "name": "travel",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 41,
+      "series_count": 280
+    },
+    {
+      "name": "apparel",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 49,
+      "series_count": 278
+    },
+    {
+      "name": "oil",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 276
+    },
+    {
+      "name": "iva",
+      "group_id": "gen",
+      "notes": "Inventory Valuation Adjustment",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 272
+    },
+    {
+      "name": "coal",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 270
+    },
+    {
+      "name": "furniture",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 270
+    },
+    {
+      "name": "metropolitan portion",
+      "group_id": "gen",
+      "notes": "Metropolitan Portion of a State",
+      "created": "2017-01-04 11:15:18-06",
+      "popularity": 17,
+      "series_count": 268
+    },
+    {
+      "name": "parts",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 49,
+      "series_count": 266
+    },
+    {
+      "name": "ccadj",
+      "group_id": "gen",
+      "notes": "Capital Consumption Adjustment",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 262
+    },
+    {
+      "name": "passenger",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 10:02:38-05",
+      "popularity": 34,
+      "series_count": 260
+    },
+    {
+      "name": "frb",
+      "group_id": "src",
+      "notes": "Board of Governors",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 78,
+      "series_count": 258
+    },
+    {
+      "name": "textiles",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 37,
+      "series_count": 258
+    },
+    {
+      "name": "audio-visual",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 10:23:51-05",
+      "popularity": 19,
+      "series_count": 254
+    },
+    {
+      "name": "legal",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-02-25 10:02:25-06",
+      "popularity": 27,
+      "series_count": 254
+    },
+    {
+      "name": "machinery",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 254
+    },
+    {
+      "name": "benefits",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 250
+    },
+    {
+      "name": "participation",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-02-22 10:50:42-06",
+      "popularity": 49,
+      "series_count": 250
+    },
+    {
+      "name": "plastics",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 248
+    },
+    {
+      "name": "hospitals",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 38,
+      "series_count": 244
+    },
+    {
+      "name": "rubber",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 39,
+      "series_count": 244
+    },
+    {
+      "name": "telecom",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-11 11:08:41-05",
+      "popularity": 25,
+      "series_count": 242
+    },
+    {
+      "name": "paper",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-01 13:54:48-05",
+      "popularity": 44,
+      "series_count": 240
+    },
+    {
+      "name": "civilian",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 55,
+      "series_count": 238
+    },
+    {
+      "name": "leading indicator",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2014-12-10 15:55:01-06",
+      "popularity": 39,
+      "series_count": 238
+    },
+    {
+      "name": "reo",
+      "group_id": "gen",
+      "notes": "Regional Economic Outlook",
+      "created": "2015-12-07 09:06:41-06",
+      "popularity": 48,
+      "series_count": 238
+    },
+    {
+      "name": "tobacco",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 238
+    },
+    {
+      "name": "amusements",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 24,
+      "series_count": 236
+    },
+    {
+      "name": "extraction",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-21 10:31:35-05",
+      "popularity": 32,
+      "series_count": 236
+    },
+    {
+      "name": "railroad",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 09:51:25-05",
+      "popularity": 36,
+      "series_count": 232
+    },
+    {
+      "name": "transfers",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 232
+    },
+    {
+      "name": "leather",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 25,
+      "series_count": 230
+    },
+    {
+      "name": "sport",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 10:45:56-05",
+      "popularity": 30,
+      "series_count": 228
+    },
+    {
+      "name": "wood",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 228
+    },
+    {
+      "name": "dividends",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 28,
+      "series_count": 226
+    },
+    {
+      "name": "foreign",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 226
+    },
+    {
+      "name": "fabrication",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 224
+    },
+    {
+      "name": "primary",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 47,
+      "series_count": 224
+    },
+    {
+      "name": "primary metals",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 224
+    },
+    {
+      "name": "military",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 222
+    },
+    {
+      "name": "mills",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-07 09:49:18-05",
+      "popularity": 43,
+      "series_count": 222
+    },
+    {
+      "name": "air travel",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 37,
+      "series_count": 220
+    },
+    {
+      "name": "chemicals",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 47,
+      "series_count": 220
+    },
+    {
+      "name": "commodities",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 69,
+      "series_count": 220
+    },
+    {
+      "name": "pipeline",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-26 16:30:22-05",
+      "popularity": 23,
+      "series_count": 220
+    },
+    {
+      "name": "equity",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 218
+    },
+    {
+      "name": "nursing",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2015-02-03 16:13:08-06",
+      "popularity": 22,
+      "series_count": 216
+    },
+    {
+      "name": "water",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-24 16:39:30-05",
+      "popularity": 34,
+      "series_count": 216
+    },
+    {
+      "name": "broadcasting",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-21 10:09:00-05",
+      "popularity": 13,
+      "series_count": 214
+    },
+    {
+      "name": "museums",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-11 10:21:30-05",
+      "popularity": 11,
+      "series_count": 212
+    },
+    {
+      "name": "contracts",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-06 15:41:37-05",
+      "popularity": 17,
+      "series_count": 210
+    },
+    {
+      "name": "imputed",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 210
+    },
+    {
+      "name": "paid",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2019-08-19 12:54:55-05",
+      "popularity": 35,
+      "series_count": 210
+    },
+    {
+      "name": "appliances",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 208
+    },
+    {
+      "name": "atlanta",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 42,
+      "series_count": 208
+    },
+    {
+      "name": "capital consumption allowances",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 3,
+      "series_count": 208
+    },
+    {
+      "name": "liquidity",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 40,
+      "series_count": 208
+    },
+    {
+      "name": "implicit price deflator",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 37,
+      "series_count": 206
+    },
+    {
+      "name": "ratio",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 47,
+      "series_count": 204
+    },
+    {
+      "name": "trusts",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-11-04 16:01:11-06",
+      "popularity": 17,
+      "series_count": 204
+    },
+    {
+      "name": "ambulatory",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-21 09:52:15-05",
+      "popularity": 16,
+      "series_count": 202
+    },
+    {
+      "name": "lessors",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-21 14:16:59-05",
+      "popularity": 14,
+      "series_count": 202
+    },
+    {
+      "name": "natural resources",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 202
+    },
+    {
+      "name": "market cap",
+      "group_id": "gen",
+      "notes": "Market Capitalization",
+      "created": "2013-06-03 13:54:00-05",
+      "popularity": 38,
+      "series_count": 200
+    },
+    {
+      "name": "performance",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-11-04 15:55:21-06",
+      "popularity": 15,
+      "series_count": 200
+    },
+    {
+      "name": "stock market",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-03-19 13:17:26-05",
+      "popularity": 51,
+      "series_count": 200
+    },
+    {
+      "name": "assistance",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-10-10 11:49:04-05",
+      "popularity": 27,
+      "series_count": 196
+    },
+    {
+      "name": "minerals",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-07 09:51:34-05",
+      "popularity": 37,
+      "series_count": 196
+    },
+    {
+      "name": "nonmetallic",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-21 14:22:53-05",
+      "popularity": 35,
+      "series_count": 194
+    },
+    {
+      "name": "nonprofit organizations",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 42,
+      "series_count": 194
+    },
+    {
+      "name": "bis",
+      "group_id": "src",
+      "notes": "Bank for International Settlements",
+      "created": "2013-06-03 14:31:44-05",
+      "popularity": 56,
+      "series_count": 188
+    },
+    {
+      "name": "gambling",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-08 15:50:59-06",
+      "popularity": 17,
+      "series_count": 186
+    },
+    {
+      "name": "new york",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 48,
+      "series_count": 186
+    },
+    {
+      "name": "gnp",
+      "group_id": "gen",
+      "notes": "Gross National Product",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 33,
+      "series_count": 184
+    },
+    {
+      "name": "housing",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 72,
+      "series_count": 180
+    },
+    {
+      "name": "internet",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-12-31 14:33:13-06",
+      "popularity": 27,
+      "series_count": 180
+    },
+    {
+      "name": "remittances",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 180
+    },
+    {
+      "name": "electronic components",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 178
+    },
+    {
+      "name": "economic affairs",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-11 13:32:02-05",
+      "popularity": 3,
+      "series_count": 176
+    },
+    {
+      "name": "national income",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-26 16:29:02-05",
+      "popularity": 26,
+      "series_count": 176
+    },
+    {
+      "name": "adult",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-06-03 13:49:14-05",
+      "popularity": 30,
+      "series_count": 174
+    },
+    {
+      "name": "estonia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 23,
+      "series_count": 174
+    },
+    {
+      "name": "labor",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 62,
+      "series_count": 172
+    },
+    {
+      "name": "undistributive",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-26 16:23:23-05",
+      "popularity": 10,
+      "series_count": 172
+    },
+    {
+      "name": "recording",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 10:38:46-05",
+      "popularity": 9,
+      "series_count": 170
+    },
+    {
+      "name": "nonfinancial",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 51,
+      "series_count": 166
+    },
+    {
+      "name": "monthly",
+      "group_id": "freq",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 92,
+      "series_count": 164
+    },
+    {
+      "name": "australia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 162
+    },
+    {
+      "name": "spain",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 39,
+      "series_count": 162
+    },
+    {
+      "name": "united kingdom",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 53,
+      "series_count": 162
+    },
+    {
+      "name": "euro area",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 158
+    },
+    {
+      "name": "germany",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 158
+    },
+    {
+      "name": "proprietors",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 158
+    },
+    {
+      "name": "ifs",
+      "group_id": "rls",
+      "notes": "International Financial Statistics",
+      "created": "2012-08-16 15:21:17-05",
+      "popularity": 54,
+      "series_count": 156
+    },
+    {
+      "name": "ireland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 152
+    },
+    {
+      "name": "iceland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 24,
+      "series_count": 148
+    },
+    {
+      "name": "south africa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 40,
+      "series_count": 148
+    },
+    {
+      "name": "france",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 144
+    },
+    {
+      "name": "materials",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 46,
+      "series_count": 144
+    },
+    {
+      "name": "st. louis",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 144
+    },
+    {
+      "name": "canada",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 49,
+      "series_count": 142
+    },
+    {
+      "name": "slovenia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 140
+    },
+    {
+      "name": "belgium",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 138
+    },
+    {
+      "name": "japan",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 53,
+      "series_count": 138
+    },
+    {
+      "name": "switzerland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 38,
+      "series_count": 138
+    },
+    {
+      "name": "china",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 52,
+      "series_count": 136
+    },
+    {
+      "name": "electricity",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 47,
+      "series_count": 136
+    },
+    {
+      "name": "greece",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 136
+    },
+    {
+      "name": "new zealand",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 136
+    },
+    {
+      "name": "denmark",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 134
+    },
+    {
+      "name": "finland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 134
+    },
+    {
+      "name": "italy",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 134
+    },
+    {
+      "name": "russia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 40,
+      "series_count": 134
+    },
+    {
+      "name": "korea",
+      "group_id": "geo",
+      "notes": "Korea",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 132
+    },
+    {
+      "name": "mexico",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 132
+    },
+    {
+      "name": "sweden",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 37,
+      "series_count": 132
+    },
+    {
+      "name": "turkey",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 42,
+      "series_count": 132
+    },
+    {
+      "name": "brazil",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 42,
+      "series_count": 130
+    },
+    {
+      "name": "czech republic",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 130
+    },
+    {
+      "name": "india",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 47,
+      "series_count": 130
+    },
+    {
+      "name": "netherlands",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 128
+    },
+    {
+      "name": "r&d",
+      "group_id": "gen",
+      "notes": "Research and Development",
+      "created": "2013-03-26 16:30:39-05",
+      "popularity": 21,
+      "series_count": 126
+    },
+    {
+      "name": "savings",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 126
+    },
+    {
+      "name": "hungary",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 124
+    },
+    {
+      "name": "personal income",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 57,
+      "series_count": 124
+    },
+    {
+      "name": "supplies",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 46,
+      "series_count": 124
+    },
+    {
+      "name": "kansas city",
+      "group_id": "geo",
+      "notes": "Kansas City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 122
+    },
+    {
+      "name": "portugal",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 31,
+      "series_count": 122
+    },
+    {
+      "name": "austria",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 120
+    },
+    {
+      "name": "capital transfers",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 120
+    },
+    {
+      "name": "chile",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 31,
+      "series_count": 120
+    },
+    {
+      "name": "indonesia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 37,
+      "series_count": 120
+    },
+    {
+      "name": "poland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 120
+    },
+    {
+      "name": "slovakia",
+      "group_id": "geo",
+      "notes": "Slovak Republic",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 120
+    },
+    {
+      "name": "israel",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 28,
+      "series_count": 118
+    },
+    {
+      "name": "luxembourg",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 118
+    },
+    {
+      "name": "norway",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 118
+    },
+    {
+      "name": "nashville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 116
+    },
+    {
+      "name": "cincinnati",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 114
+    },
+    {
+      "name": "richmond",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 33,
+      "series_count": 114
+    },
+    {
+      "name": "chicago",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 112
+    },
+    {
+      "name": "communication",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 31,
+      "series_count": 112
+    },
+    {
+      "name": "columbus",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 110
+    },
+    {
+      "name": "issues",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2014-02-12 11:03:19-06",
+      "popularity": 35,
+      "series_count": 110
+    },
+    {
+      "name": "noncorporate",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 23,
+      "series_count": 110
+    },
+    {
+      "name": "independent city",
+      "group_id": "geo",
+      "notes": null,
+      "created": "2019-10-30 11:18:26-05",
+      "popularity": 4,
+      "series_count": 108
+    },
+    {
+      "name": "minneapolis",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 106
+    },
+    {
+      "name": "philadelphia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 37,
+      "series_count": 106
+    },
+    {
+      "name": "dallas",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 41,
+      "series_count": 104
+    },
+    {
+      "name": "springfield",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 31,
+      "series_count": 104
+    },
+    {
+      "name": "louisville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 102
+    },
+    {
+      "name": "lithuania",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 100
+    },
+    {
+      "name": "sector",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 53,
+      "series_count": 96
+    },
+    {
+      "name": "used",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 33,
+      "series_count": 96
+    },
+    {
+      "name": "columbia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 94
+    },
+    {
+      "name": "stocks",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 41,
+      "series_count": 94
+    },
+    {
+      "name": "colombia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 92
+    },
+    {
+      "name": "latvia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 90
+    },
+    {
+      "name": "washington",
+      "group_id": "geo",
+      "notes": "Washington (Metropolitan Area)",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 90
+    },
+    {
+      "name": "albany",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 88
+    },
+    {
+      "name": "bls",
+      "group_id": "src",
+      "notes": "Bureau of Labor Statistics",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 87,
+      "series_count": 88
+    },
+    {
+      "name": "commercial",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 58,
+      "series_count": 88
+    },
+    {
+      "name": "portland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 88
+    },
+    {
+      "name": "bop",
+      "group_id": "gen",
+      "notes": "Balance of Payments",
+      "created": "2013-01-28 14:10:13-06",
+      "popularity": 45,
+      "series_count": 86
+    },
+    {
+      "name": "costa rica",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 86
+    },
+    {
+      "name": "eu",
+      "group_id": "geo",
+      "notes": "European Union",
+      "created": "2013-07-12 11:28:01-05",
+      "popularity": 37,
+      "series_count": 86
+    },
+    {
+      "name": "nonbank",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-17 10:03:43-05",
+      "popularity": 17,
+      "series_count": 86
+    },
+    {
+      "name": "egypt",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 84
+    },
+    {
+      "name": "lebanon",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 84
+    },
+    {
+      "name": "buildings",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 56,
+      "series_count": 82
+    },
+    {
+      "name": "argentina",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 38,
+      "series_count": 80
+    },
+    {
+      "name": "cyprus",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 80
+    },
+    {
+      "name": "hong kong",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 80
+    },
+    {
+      "name": "houston",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 41,
+      "series_count": 80
+    },
+    {
+      "name": "memphis",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 80
+    },
+    {
+      "name": "omaha",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 80
+    },
+    {
+      "name": "per hour",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 80
+    },
+    {
+      "name": "romania",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 23,
+      "series_count": 80
+    },
+    {
+      "name": "bulgaria",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 78
+    },
+    {
+      "name": "burkina",
+      "group_id": "geo",
+      "notes": "Burkina Faso",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 78
+    },
+    {
+      "name": "mutual funds",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-06-03 14:07:35-05",
+      "popularity": 31,
+      "series_count": 78
+    },
+    {
+      "name": "philippines",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 78
+    },
+    {
+      "name": "indianapolis",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 76
+    },
+    {
+      "name": "retirement",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 76
+    },
+    {
+      "name": "rochester",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 28,
+      "series_count": 76
+    },
+    {
+      "name": "saudi arabia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 76
+    },
+    {
+      "name": "baton rouge",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 74
+    },
+    {
+      "name": "census",
+      "group_id": "src",
+      "notes": "Census",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 86,
+      "series_count": 74
+    },
+    {
+      "name": "charleston",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 74
+    },
+    {
+      "name": "qatar",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 33,
+      "series_count": 74
+    },
+    {
+      "name": "thailand",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 33,
+      "series_count": 74
+    },
+    {
+      "name": "armenia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 72
+    },
+    {
+      "name": "birmingham",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 25,
+      "series_count": 72
+    },
+    {
+      "name": "denver",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 72
+    },
+    {
+      "name": "energy",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 72
+    },
+    {
+      "name": "nigeria",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 72
+    },
+    {
+      "name": "pittsburgh",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 72
+    },
+    {
+      "name": "singapore",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 72
+    },
+    {
+      "name": "augusta",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 24,
+      "series_count": 70
+    },
+    {
+      "name": "gdi",
+      "group_id": "gen",
+      "notes": "Gross Domestic Income",
+      "created": "2012-12-31 13:49:22-06",
+      "popularity": 35,
+      "series_count": 70
+    },
+    {
+      "name": "jordan",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 70
+    },
+    {
+      "name": "madagascar",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 70
+    },
+    {
+      "name": "namibia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 70
+    },
+    {
+      "name": "peru",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 23,
+      "series_count": 70
+    },
+    {
+      "name": "venezuela",
+      "group_id": "geo",
+      "notes": "Bolivarian Republic of Venezuela",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 70
+    },
+    {
+      "name": "aircraft",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 68
+    },
+    {
+      "name": "brokers",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-02-26 15:23:45-06",
+      "popularity": 28,
+      "series_count": 68
+    },
+    {
+      "name": "dominican republic",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 68
+    },
+    {
+      "name": "g7",
+      "group_id": "geo",
+      "notes": "Group of 7",
+      "created": "2013-07-12 16:11:34-05",
+      "popularity": 12,
+      "series_count": 68
+    },
+    {
+      "name": "lexington",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 68
+    },
+    {
+      "name": "light weight",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-02-05 10:44:01-06",
+      "popularity": 21,
+      "series_count": 68
+    },
+    {
+      "name": "malaysia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 31,
+      "series_count": 68
+    },
+    {
+      "name": "malta",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 68
+    },
+    {
+      "name": "oecd europe",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2013-07-17 17:39:29-05",
+      "popularity": 25,
+      "series_count": 68
+    },
+    {
+      "name": "el salvador",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 66
+    },
+    {
+      "name": "guatemala",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 66
+    },
+    {
+      "name": "inflation",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-06-08 15:10:11-05",
+      "popularity": 78,
+      "series_count": 66
+    },
+    {
+      "name": "jacksonville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 33,
+      "series_count": 66
+    },
+    {
+      "name": "state govt",
+      "group_id": "gen",
+      "notes": "State Government",
+      "created": "2013-03-22 14:25:13-05",
+      "popularity": 27,
+      "series_count": 66
+    },
+    {
+      "name": "sudan",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 66
+    },
+    {
+      "name": "uganda",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 66
+    },
+    {
+      "name": "belarus",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 64
+    },
+    {
+      "name": "borrowings",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 64
+    },
+    {
+      "name": "boston",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 39,
+      "series_count": 64
+    },
+    {
+      "name": "jackson",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 31,
+      "series_count": 64
+    },
+    {
+      "name": "medical",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 39,
+      "series_count": 64
+    },
+    {
+      "name": "origination",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-12-17 15:22:06-06",
+      "popularity": 39,
+      "series_count": 64
+    },
+    {
+      "name": "self-employed",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 64
+    },
+    {
+      "name": "tajikistan",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 64
+    },
+    {
+      "name": "uruguay",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 64
+    },
+    {
+      "name": "z1",
+      "group_id": "rls",
+      "notes": "Z.1 US Financial Accounts",
+      "created": "2012-08-16 15:21:17-05",
+      "popularity": 62,
+      "series_count": 64
+    },
+    {
+      "name": "current account",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 62
+    },
+    {
+      "name": "gambia",
+      "group_id": "geo",
+      "notes": "Gambia",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 62
+    },
+    {
+      "name": "moldova",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 62
+    },
+    {
+      "name": "non-oil",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2015-12-07 09:10:17-06",
+      "popularity": 20,
+      "series_count": 62
+    },
+    {
+      "name": "providence",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 62
+    },
+    {
+      "name": "sierra leone",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 62
+    },
+    {
+      "name": "st. lucia",
+      "group_id": "geo",
+      "notes": "Saint Lucia",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 7,
+      "series_count": 62
+    },
+    {
+      "name": "tunisia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 62
+    },
+    {
+      "name": "adjusted",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 60
+    },
+    {
+      "name": "barbados",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 60
+    },
+    {
+      "name": "ecuador",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 60
+    },
+    {
+      "name": "fayetteville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 60
+    },
+    {
+      "name": "iran",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 60
+    },
+    {
+      "name": "mali",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 60
+    },
+    {
+      "name": "nepal",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 60
+    },
+    {
+      "name": "oklahoma city",
+      "group_id": "geo",
+      "notes": "Oklahoma City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 60
+    },
+    {
+      "name": "panama",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 60
+    },
+    {
+      "name": "san antonio",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 33,
+      "series_count": 60
+    },
+    {
+      "name": "ukraine",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 60
+    },
+    {
+      "name": "united arab emirates",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 60
+    },
+    {
+      "name": "viet nam",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 28,
+      "series_count": 60
+    },
+    {
+      "name": "belize",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 4,
+      "series_count": 58
+    },
+    {
+      "name": "croatia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 58
+    },
+    {
+      "name": "guinea-bissau",
+      "group_id": "geo",
+      "notes": "Guinea-Bissau",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 3,
+      "series_count": 58
+    },
+    {
+      "name": "kenya",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 25,
+      "series_count": 58
+    },
+    {
+      "name": "mongolia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 58
+    },
+    {
+      "name": "morocco",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 58
+    },
+    {
+      "name": "bahamas",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 56
+    },
+    {
+      "name": "baltimore",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 56
+    },
+    {
+      "name": "bangladesh",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 25,
+      "series_count": 56
+    },
+    {
+      "name": "chattanooga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 56
+    },
+    {
+      "name": "cote d'ivoire",
+      "group_id": "geo",
+      "notes": "Cote D'Ivoire",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 56
+    },
+    {
+      "name": "dominica",
+      "group_id": "geo",
+      "notes": "Dominica",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 2,
+      "series_count": 56
+    },
+    {
+      "name": "fiji",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 56
+    },
+    {
+      "name": "kazakhstan",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 56
+    },
+    {
+      "name": "kuwait",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 56
+    },
+    {
+      "name": "new orleans",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 28,
+      "series_count": 56
+    },
+    {
+      "name": "paraguay",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 56
+    },
+    {
+      "name": "st. vincent",
+      "group_id": "geo",
+      "notes": "Saint Vincent and the Grenadines",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 4,
+      "series_count": 56
+    },
+    {
+      "name": "subsidies",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 56
+    },
+    {
+      "name": "trinidad and tobago",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 56
+    },
+    {
+      "name": "tulsa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 31,
+      "series_count": 56
+    },
+    {
+      "name": "albania",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 54
+    },
+    {
+      "name": "angola",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 13,
+      "series_count": 54
+    },
+    {
+      "name": "consumer",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 66,
+      "series_count": 54
+    },
+    {
+      "name": "equatorial guinea",
+      "group_id": "geo",
+      "notes": "Equatorial Guinea",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 7,
+      "series_count": 54
+    },
+    {
+      "name": "jamaica",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 54
+    },
+    {
+      "name": "laos",
+      "group_id": "geo",
+      "notes": "Laos",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 54
+    },
+    {
+      "name": "liberia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 54
+    },
+    {
+      "name": "local govt",
+      "group_id": "gen",
+      "notes": "Local Government",
+      "created": "2013-03-22 14:27:47-05",
+      "popularity": 26,
+      "series_count": 54
+    },
+    {
+      "name": "oecd economies",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2013-07-13 16:14:08-05",
+      "popularity": 13,
+      "series_count": 54
+    },
+    {
+      "name": "sao tome and principe",
+      "group_id": "geo",
+      "notes": "Sao Tome and Principe",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 4,
+      "series_count": 54
+    },
+    {
+      "name": "senegal",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 54
+    },
+    {
+      "name": "serbia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 54
+    },
+    {
+      "name": "algeria",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 52
+    },
+    {
+      "name": "benin",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 52
+    },
+    {
+      "name": "boise city",
+      "group_id": "geo",
+      "notes": "Boise City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 28,
+      "series_count": 52
+    },
+    {
+      "name": "brunei",
+      "group_id": "geo",
+      "notes": "Brunei",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 9,
+      "series_count": 52
+    },
+    {
+      "name": "cambodia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 52
+    },
+    {
+      "name": "djibouti",
+      "group_id": "geo",
+      "notes": "Djibouti",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 8,
+      "series_count": 52
+    },
+    {
+      "name": "dr congo",
+      "group_id": "geo",
+      "notes": "Democratic Republic of the Congo",
+      "created": "2012-08-28 14:07:39-05",
+      "popularity": 15,
+      "series_count": 52
+    },
+    {
+      "name": "ethiopia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 52
+    },
+    {
+      "name": "evansville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 52
+    },
+    {
+      "name": "georgia",
+      "group_id": "geo",
+      "notes": "Georgia (country)",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 52
+    },
+    {
+      "name": "ghana",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 52
+    },
+    {
+      "name": "macedonia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 52
+    },
+    {
+      "name": "mauritius",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 52
+    },
+    {
+      "name": "mozambique",
+      "group_id": "geo",
+      "notes": "Mozambique",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 12,
+      "series_count": 52
+    },
+    {
+      "name": "oman",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 52
+    },
+    {
+      "name": "pakistan",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 52
+    },
+    {
+      "name": "safety",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-11 13:24:44-05",
+      "popularity": 13,
+      "series_count": 52
+    },
+    {
+      "name": "shares of gdp",
+      "group_id": "gen",
+      "notes": "Shares of Gross Domestic Product",
+      "created": "2013-03-26 16:17:58-05",
+      "popularity": 30,
+      "series_count": 52
+    },
+    {
+      "name": "sri lanka",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 24,
+      "series_count": 52
+    },
+    {
+      "name": "supplements",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-02-26 14:32:45-06",
+      "popularity": 15,
+      "series_count": 52
+    },
+    {
+      "name": "swaziland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 52
+    },
+    {
+      "name": "syria",
+      "group_id": "geo",
+      "notes": "Syrian Arab Republic",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 14,
+      "series_count": 52
+    },
+    {
+      "name": "togo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 3,
+      "series_count": 52
+    },
+    {
+      "name": "bosnia and herzegovina",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 50
+    },
+    {
+      "name": "cameroon",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 50
+    },
+    {
+      "name": "huntington",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 50
+    },
+    {
+      "name": "kyrgyzstan",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 50
+    },
+    {
+      "name": "little rock",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 50
+    },
+    {
+      "name": "mauritania",
+      "group_id": "geo",
+      "notes": "Mauritania",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 5,
+      "series_count": 50
+    },
+    {
+      "name": "nicaragua",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 50
+    },
+    {
+      "name": "niger",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 50
+    },
+    {
+      "name": "police",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-11 13:18:02-05",
+      "popularity": 5,
+      "series_count": 50
+    },
+    {
+      "name": "transactions",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2019-08-19 12:50:29-05",
+      "popularity": 48,
+      "series_count": 50
+    },
+    {
+      "name": "zimbabwe",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 50
+    },
+    {
+      "name": "amarillo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 48
+    },
+    {
+      "name": "azerbaijan",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 48
+    },
+    {
+      "name": "bolivia",
+      "group_id": "geo",
+      "notes": "Bolivia",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 48
+    },
+    {
+      "name": "cape verde",
+      "group_id": "geo",
+      "notes": "Cape Verde",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 48
+    },
+    {
+      "name": "charlotte",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 48
+    },
+    {
+      "name": "congo",
+      "group_id": "geo",
+      "notes": "Congo",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 4,
+      "series_count": 48
+    },
+    {
+      "name": "grenada",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 3,
+      "series_count": 48
+    },
+    {
+      "name": "inland waterway",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 10:04:14-05",
+      "popularity": 14,
+      "series_count": 48
+    },
+    {
+      "name": "instruments",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 28,
+      "series_count": 48
+    },
+    {
+      "name": "malawi",
+      "group_id": "geo",
+      "notes": "Malawi",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 14,
+      "series_count": 48
+    },
+    {
+      "name": "montgomery",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 48
+    },
+    {
+      "name": "peoria",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 48
+    },
+    {
+      "name": "repair",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 09:44:02-05",
+      "popularity": 32,
+      "series_count": 48
+    },
+    {
+      "name": "zambia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 48
+    },
+    {
+      "name": "agency",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 46
+    },
+    {
+      "name": "bhutan",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 46
+    },
+    {
+      "name": "botswana",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 46
+    },
+    {
+      "name": "central african republic",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 46
+    },
+    {
+      "name": "gabon",
+      "group_id": "geo",
+      "notes": "Gabonese Republic",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 9,
+      "series_count": 46
+    },
+    {
+      "name": "greenville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 46
+    },
+    {
+      "name": "guinea",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 4,
+      "series_count": 46
+    },
+    {
+      "name": "honduras",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 46
+    },
+    {
+      "name": "iraq",
+      "group_id": "geo",
+      "notes": "Iraq",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 22,
+      "series_count": 46
+    },
+    {
+      "name": "lesotho",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 46
+    },
+    {
+      "name": "longview",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 46
+    },
+    {
+      "name": "montenegro",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 9,
+      "series_count": 46
+    },
+    {
+      "name": "prisons",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-11 13:17:34-05",
+      "popularity": -4,
+      "series_count": 46
+    },
+    {
+      "name": "virginia beach",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 46
+    },
+    {
+      "name": "antigua and barbuda",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": -1,
+      "series_count": 44
+    },
+    {
+      "name": "bahrain",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 44
+    },
+    {
+      "name": "bloomington",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 44
+    },
+    {
+      "name": "cleveland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 44
+    },
+    {
+      "name": "comoros",
+      "group_id": "geo",
+      "notes": "Union of the Comoros",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 7,
+      "series_count": 44
+    },
+    {
+      "name": "gains/losses",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-11 14:15:03-05",
+      "popularity": 23,
+      "series_count": 44
+    },
+    {
+      "name": "guyana",
+      "group_id": "geo",
+      "notes": "Guyana",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 12,
+      "series_count": 44
+    },
+    {
+      "name": "operating",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-12-31 13:49:01-06",
+      "popularity": 36,
+      "series_count": 44
+    },
+    {
+      "name": "rwanda",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 44
+    },
+    {
+      "name": "sea",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 10:08:09-05",
+      "popularity": 21,
+      "series_count": 44
+    },
+    {
+      "name": "seychelles",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 44
+    },
+    {
+      "name": "toledo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 44
+    },
+    {
+      "name": "uzbekistan",
+      "group_id": "geo",
+      "notes": "Uzbekistan",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 14,
+      "series_count": 44
+    },
+    {
+      "name": "valdosta",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 44
+    },
+    {
+      "name": "austin",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 35,
+      "series_count": 42
+    },
+    {
+      "name": "burlington",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 42
+    },
+    {
+      "name": "detroit",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 42
+    },
+    {
+      "name": "disbursements",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 42
+    },
+    {
+      "name": "duluth",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 42
+    },
+    {
+      "name": "ita",
+      "group_id": "gen",
+      "notes": "International Transactions Accounts",
+      "created": "2013-03-26 16:21:34-05",
+      "popularity": -2,
+      "series_count": 42
+    },
+    {
+      "name": "lafayette",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 42
+    },
+    {
+      "name": "lewiston",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 42
+    },
+    {
+      "name": "macon",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 42
+    },
+    {
+      "name": "monroe",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 42
+    },
+    {
+      "name": "puerto rico",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 27,
+      "series_count": 42
+    },
+    {
+      "name": "st. joseph",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 42
+    },
+    {
+      "name": "tanzania",
+      "group_id": "geo",
+      "notes": "United Republic of Tanzania",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 18,
+      "series_count": 42
+    },
+    {
+      "name": "turkmenistan",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 7,
+      "series_count": 42
+    },
+    {
+      "name": "athens",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 40
+    },
+    {
+      "name": "durham",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 40
+    },
+    {
+      "name": "east timor",
+      "group_id": "geo",
+      "notes": "East Timor",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 4,
+      "series_count": 40
+    },
+    {
+      "name": "engines",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 40
+    },
+    {
+      "name": "fort smith",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 40
+    },
+    {
+      "name": "haiti",
+      "group_id": "geo",
+      "notes": "Haiti",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 15,
+      "series_count": 40
+    },
+    {
+      "name": "killeen",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 40
+    },
+    {
+      "name": "libya",
+      "group_id": "geo",
+      "notes": "Libya",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 12,
+      "series_count": 40
+    },
+    {
+      "name": "maldives",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 40
+    },
+    {
+      "name": "merchant",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-21 14:19:01-05",
+      "popularity": 33,
+      "series_count": 40
+    },
+    {
+      "name": "orlando",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 33,
+      "series_count": 40
+    },
+    {
+      "name": "papua new guinea",
+      "group_id": "geo",
+      "notes": "Papua New Guinea",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 40
+    },
+    {
+      "name": "suriname",
+      "group_id": "geo",
+      "notes": "Suriname",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 6,
+      "series_count": 40
+    },
+    {
+      "name": "waterloo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 40
+    },
+    {
+      "name": "albuquerque",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 38
+    },
+    {
+      "name": "chad",
+      "group_id": "geo",
+      "notes": "Chad",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 10,
+      "series_count": 38
+    },
+    {
+      "name": "clarksville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 38
+    },
+    {
+      "name": "command basis",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -20,
+      "series_count": 38
+    },
+    {
+      "name": "cuba",
+      "group_id": "geo",
+      "notes": "Cuba",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 13,
+      "series_count": 38
+    },
+    {
+      "name": "des moines",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 38
+    },
+    {
+      "name": "flow",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-06-25 15:08:38-05",
+      "popularity": 45,
+      "series_count": 38
+    },
+    {
+      "name": "hickory",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 38
+    },
+    {
+      "name": "jefferson city",
+      "group_id": "geo",
+      "notes": "Jefferson City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 38
+    },
+    {
+      "name": "lynchburg",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 38
+    },
+    {
+      "name": "macao",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 38
+    },
+    {
+      "name": "seattle",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 39,
+      "series_count": 38
+    },
+    {
+      "name": "sioux city",
+      "group_id": "geo",
+      "notes": "Sioux City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 38
+    },
+    {
+      "name": "st. kitts and nevis",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 5,
+      "series_count": 38
+    },
+    {
+      "name": "abilene",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 36
+    },
+    {
+      "name": "allentown",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 36
+    },
+    {
+      "name": "asheville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 25,
+      "series_count": 36
+    },
+    {
+      "name": "brunswick",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 36
+    },
+    {
+      "name": "burundi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 36
+    },
+    {
+      "name": "charlottesville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 28,
+      "series_count": 36
+    },
+    {
+      "name": "core",
+      "group_id": "gen",
+      "notes": "Core Inflation",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 47,
+      "series_count": 36
+    },
+    {
+      "name": "florence",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 36
+    },
+    {
+      "name": "knoxville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 36
+    },
+    {
+      "name": "morristown",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 36
+    },
+    {
+      "name": "parkersburg",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 36
+    },
+    {
+      "name": "roanoke",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 36
+    },
+    {
+      "name": "ships",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 36
+    },
+    {
+      "name": "syracuse",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 23,
+      "series_count": 36
+    },
+    {
+      "name": "tonga",
+      "group_id": "geo",
+      "notes": "Tonga",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 1,
+      "series_count": 36
+    },
+    {
+      "name": "tuscaloosa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 36
+    },
+    {
+      "name": "alexandria",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 34
+    },
+    {
+      "name": "community",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-21 10:12:04-05",
+      "popularity": 15,
+      "series_count": 34
+    },
+    {
+      "name": "dayton",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 34
+    },
+    {
+      "name": "eritrea",
+      "group_id": "geo",
+      "notes": "State of Eritrea",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 6,
+      "series_count": 34
+    },
+    {
+      "name": "gainesville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 23,
+      "series_count": 34
+    },
+    {
+      "name": "green bay",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 34
+    },
+    {
+      "name": "hours",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 57,
+      "series_count": 34
+    },
+    {
+      "name": "lodging",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 34
+    },
+    {
+      "name": "ogden",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 34
+    },
+    {
+      "name": "pine bluff",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 34
+    },
+    {
+      "name": "taiwan",
+      "group_id": "geo",
+      "notes": "Taiwan",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 26,
+      "series_count": 34
+    },
+    {
+      "name": "tallahassee",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 34
+    },
+    {
+      "name": "wealth",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-07-17 10:29:19-05",
+      "popularity": 42,
+      "series_count": 34
+    },
+    {
+      "name": "wichita",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 34
+    },
+    {
+      "name": "yemen",
+      "group_id": "geo",
+      "notes": "Yemen",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 34
+    },
+    {
+      "name": "bermuda",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 3,
+      "series_count": 32
+    },
+    {
+      "name": "decatur",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 32
+    },
+    {
+      "name": "dothan",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 32
+    },
+    {
+      "name": "fort wayne",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 32
+    },
+    {
+      "name": "fuels",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 32
+    },
+    {
+      "name": "greensboro",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 32
+    },
+    {
+      "name": "hattiesburg",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 32
+    },
+    {
+      "name": "labor force",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 59,
+      "series_count": 32
+    },
+    {
+      "name": "market-based",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 32
+    },
+    {
+      "name": "miami",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 41,
+      "series_count": 32
+    },
+    {
+      "name": "micronesia",
+      "group_id": "geo",
+      "notes": "Federated States of Micronesia",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 6,
+      "series_count": 32
+    },
+    {
+      "name": "sacramento",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 32
+    },
+    {
+      "name": "salem",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 32
+    },
+    {
+      "name": "san angelo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 32
+    },
+    {
+      "name": "san francisco",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 41,
+      "series_count": 32
+    },
+    {
+      "name": "sioux falls",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 32
+    },
+    {
+      "name": "solomon islands",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 2,
+      "series_count": 32
+    },
+    {
+      "name": "tampa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 36,
+      "series_count": 32
+    },
+    {
+      "name": "terre haute",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 32
+    },
+    {
+      "name": "wells",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2015-03-04 11:12:26-06",
+      "popularity": 19,
+      "series_count": 32
+    },
+    {
+      "name": "wichita falls",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 32
+    },
+    {
+      "name": "accounting",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 44,
+      "series_count": 30
+    },
+    {
+      "name": "cedar rapids",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 30
+    },
+    {
+      "name": "corpus christi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 30
+    },
+    {
+      "name": "davenport",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 30
+    },
+    {
+      "name": "grants",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-08 15:45:28-06",
+      "popularity": 7,
+      "series_count": 30
+    },
+    {
+      "name": "hartford",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 23,
+      "series_count": 30
+    },
+    {
+      "name": "kingsport",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 30
+    },
+    {
+      "name": "manhattan",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-08-07 11:34:30-05",
+      "popularity": 9,
+      "series_count": 30
+    },
+    {
+      "name": "palau",
+      "group_id": "geo",
+      "notes": "Palau",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": -12,
+      "series_count": 30
+    },
+    {
+      "name": "raleigh",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 31,
+      "series_count": 30
+    },
+    {
+      "name": "topeka",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 30
+    },
+    {
+      "name": "youngstown",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 30
+    },
+    {
+      "name": "beaumont",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 28
+    },
+    {
+      "name": "cape girardeau",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2013-05-23 11:21:03-05",
+      "popularity": 12,
+      "series_count": 28
+    },
+    {
+      "name": "hagerstown",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 28
+    },
+    {
+      "name": "milwaukee",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 28
+    },
+    {
+      "name": "morgantown",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 28
+    },
+    {
+      "name": "owensboro",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 28
+    },
+    {
+      "name": "salt lake city",
+      "group_id": "geo",
+      "notes": "Salt Lake City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 28
+    },
+    {
+      "name": "savannah",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 28
+    },
+    {
+      "name": "scranton",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 28
+    },
+    {
+      "name": "texarkana",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 28
+    },
+    {
+      "name": "vanuatu",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 0,
+      "series_count": 28
+    },
+    {
+      "name": "wenatchee",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 28
+    },
+    {
+      "name": "college station",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 20,
+      "series_count": 26
+    },
+    {
+      "name": "culture",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 10:22:39-05",
+      "popularity": 2,
+      "series_count": 26
+    },
+    {
+      "name": "family",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2015-05-06 14:46:00-05",
+      "popularity": 55,
+      "series_count": 26
+    },
+    {
+      "name": "gulfport",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 26
+    },
+    {
+      "name": "hotel",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 11:21:49-05",
+      "popularity": 25,
+      "series_count": 26
+    },
+    {
+      "name": "johnson city",
+      "group_id": "geo",
+      "notes": "Johnson City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 26
+    },
+    {
+      "name": "joplin",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 26
+    },
+    {
+      "name": "libraries",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-11 10:22:41-05",
+      "popularity": -15,
+      "series_count": 26
+    },
+    {
+      "name": "licenses",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 26
+    },
+    {
+      "name": "madison",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 26
+    },
+    {
+      "name": "marshall islands",
+      "group_id": "geo",
+      "notes": "Marshall Islands",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 4,
+      "series_count": 26
+    },
+    {
+      "name": "missiles",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-08 14:51:50-06",
+      "popularity": -16,
+      "series_count": 26
+    },
+    {
+      "name": "rapid city",
+      "group_id": "geo",
+      "notes": "Rapid City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 26
+    },
+    {
+      "name": "road",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 10:00:28-05",
+      "popularity": 13,
+      "series_count": 26
+    },
+    {
+      "name": "royalties",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 26
+    },
+    {
+      "name": "samoa",
+      "group_id": "geo",
+      "notes": "Samoa",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 0,
+      "series_count": 26
+    },
+    {
+      "name": "somalia",
+      "group_id": "geo",
+      "notes": "Somalia",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 9,
+      "series_count": 26
+    },
+    {
+      "name": "supercore",
+      "group_id": "gen",
+      "notes": "Supercore Inflation",
+      "created": "2024-04-11 10:29:43-05",
+      "popularity": 0,
+      "series_count": 26
+    },
+    {
+      "name": "victoria",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 26
+    },
+    {
+      "name": "wheeling",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 26
+    },
+    {
+      "name": "wilmington",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 23,
+      "series_count": 26
+    },
+    {
+      "name": "york",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 26
+    },
+    {
+      "name": "agents",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-21 09:50:59-05",
+      "popularity": 17,
+      "series_count": 24
+    },
+    {
+      "name": "billings",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 24
+    },
+    {
+      "name": "binghamton",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 24
+    },
+    {
+      "name": "capital account",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 24,
+      "series_count": 24
+    },
+    {
+      "name": "champaign",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 24
+    },
+    {
+      "name": "dealers",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 38,
+      "series_count": 24
+    },
+    {
+      "name": "depreciation",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-06 15:47:04-05",
+      "popularity": 11,
+      "series_count": 24
+    },
+    {
+      "name": "footwear",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 24
+    },
+    {
+      "name": "huntsville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 24
+    },
+    {
+      "name": "lansing",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 24
+    },
+    {
+      "name": "off-premises",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-08 15:41:33-06",
+      "popularity": 14,
+      "series_count": 24
+    },
+    {
+      "name": "phone",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 10:19:25-05",
+      "popularity": 17,
+      "series_count": 24
+    },
+    {
+      "name": "radio",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-02-25 07:52:25-06",
+      "popularity": 14,
+      "series_count": 24
+    },
+    {
+      "name": "reno",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 24
+    },
+    {
+      "name": "rocky mount",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 24
+    },
+    {
+      "name": "shreveport",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 24
+    },
+    {
+      "name": "ceramic",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-06 15:22:13-05",
+      "popularity": 21,
+      "series_count": 22
+    },
+    {
+      "name": "cumberland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 22
+    },
+    {
+      "name": "dalton",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 5,
+      "series_count": 22
+    },
+    {
+      "name": "fairbanks",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 22
+    },
+    {
+      "name": "glass",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-06 16:00:38-05",
+      "popularity": 28,
+      "series_count": 22
+    },
+    {
+      "name": "grand rapids",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 22
+    },
+    {
+      "name": "harrisburg",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 22
+    },
+    {
+      "name": "hinesville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 4,
+      "series_count": 22
+    },
+    {
+      "name": "jonesboro",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 22
+    },
+    {
+      "name": "lake charles",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 22
+    },
+    {
+      "name": "myanmar",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 22
+    },
+    {
+      "name": "north port",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 22
+    },
+    {
+      "name": "nursing homes",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-11 10:17:15-05",
+      "popularity": 16,
+      "series_count": 22
+    },
+    {
+      "name": "passenger fares",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 22
+    },
+    {
+      "name": "port st. lucie",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 22
+    },
+    {
+      "name": "yuba city",
+      "group_id": "geo",
+      "notes": "Yuba City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 22
+    },
+    {
+      "name": "afghanistan",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 20
+    },
+    {
+      "name": "appleton",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 20
+    },
+    {
+      "name": "balance",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 49,
+      "series_count": 20
+    },
+    {
+      "name": "book",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 10:49:30-05",
+      "popularity": 23,
+      "series_count": 20
+    },
+    {
+      "name": "buses",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-06 15:14:38-05",
+      "popularity": 19,
+      "series_count": 20
+    },
+    {
+      "name": "danville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 20
+    },
+    {
+      "name": "eau claire",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 20
+    },
+    {
+      "name": "glens falls",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 20
+    },
+    {
+      "name": "johnstown",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 20
+    },
+    {
+      "name": "kalamazoo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 20
+    },
+    {
+      "name": "kennewick",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 20
+    },
+    {
+      "name": "la crosse",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 20
+    },
+    {
+      "name": "logan",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 20
+    },
+    {
+      "name": "maintenance",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-24 17:17:15-05",
+      "popularity": 33,
+      "series_count": 20
+    },
+    {
+      "name": "nonmanufactured",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 5,
+      "series_count": 20
+    },
+    {
+      "name": "pharmaceuticals",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 28,
+      "series_count": 20
+    },
+    {
+      "name": "pocatello",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 20
+    },
+    {
+      "name": "postal",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 10:18:46-05",
+      "popularity": 16,
+      "series_count": 20
+    },
+    {
+      "name": "provo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 20
+    },
+    {
+      "name": "rockford",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 20
+    },
+    {
+      "name": "sales taxes",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 20
+    },
+    {
+      "name": "san jose",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 29,
+      "series_count": 20
+    },
+    {
+      "name": "telegraph",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-07 10:54:22-05",
+      "popularity": -5,
+      "series_count": 20
+    },
+    {
+      "name": "unemployment",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 70,
+      "series_count": 20
+    },
+    {
+      "name": "utica",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 20
+    },
+    {
+      "name": "video",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 20
+    },
+    {
+      "name": "admissions",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2014-03-07 09:11:50-06",
+      "popularity": 32,
+      "series_count": 18
+    },
+    {
+      "name": "aruba",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 0,
+      "series_count": 18
+    },
+    {
+      "name": "buffalo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 23,
+      "series_count": 18
+    },
+    {
+      "name": "colorado springs",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 24,
+      "series_count": 18
+    },
+    {
+      "name": "disaster losses",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-22 13:54:11-05",
+      "popularity": -4,
+      "series_count": 18
+    },
+    {
+      "name": "disposable",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 39,
+      "series_count": 18
+    },
+    {
+      "name": "elkhart",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 18
+    },
+    {
+      "name": "fargo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 18
+    },
+    {
+      "name": "finished",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 33,
+      "series_count": 18
+    },
+    {
+      "name": "franklin county, va",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 18
+    },
+    {
+      "name": "frb atl",
+      "group_id": "src",
+      "notes": "Atlanta Fed",
+      "created": "2014-02-21 13:42:55-06",
+      "popularity": 41,
+      "series_count": 18
+    },
+    {
+      "name": "frb stl",
+      "group_id": "src",
+      "notes": "St. Louis Fed",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 70,
+      "series_count": 18
+    },
+    {
+      "name": "grand forks",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 18
+    },
+    {
+      "name": "grand junction",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 18
+    },
+    {
+      "name": "hawaii county, hi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 4,
+      "series_count": 18
+    },
+    {
+      "name": "iowa city",
+      "group_id": "geo",
+      "notes": "Iowa City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 18
+    },
+    {
+      "name": "kiribati",
+      "group_id": "geo",
+      "notes": "Kiribati",
+      "created": "2012-08-29 14:33:53-05",
+      "popularity": 1,
+      "series_count": 18
+    },
+    {
+      "name": "lincoln",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 18
+    },
+    {
+      "name": "los angeles",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 43,
+      "series_count": 18
+    },
+    {
+      "name": "madera",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 18
+    },
+    {
+      "name": "municipal",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-07 10:29:24-05",
+      "popularity": 21,
+      "series_count": 18
+    },
+    {
+      "name": "naples",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 18
+    },
+    {
+      "name": "parking",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-11-18 13:16:02-06",
+      "popularity": 6,
+      "series_count": 18
+    },
+    {
+      "name": "pascagoula",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 18
+    },
+    {
+      "name": "pensacola",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 18
+    },
+    {
+      "name": "personnel support",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-08 14:55:14-06",
+      "popularity": -30,
+      "series_count": 18
+    },
+    {
+      "name": "phoenix",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 37,
+      "series_count": 18
+    },
+    {
+      "name": "residents",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-08 15:37:43-06",
+      "popularity": 58,
+      "series_count": 18
+    },
+    {
+      "name": "riverside",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 27,
+      "series_count": 18
+    },
+    {
+      "name": "south bend",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 18
+    },
+    {
+      "name": "st. cloud",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 3,
+      "series_count": 18
+    },
+    {
+      "name": "visalia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 18
+    },
+    {
+      "name": "wausau",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 5,
+      "series_count": 18
+    },
+    {
+      "name": "winchester",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 18
+    },
+    {
+      "name": "winston",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 18
+    },
+    {
+      "name": "yakima",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 18
+    },
+    {
+      "name": "akron",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 16
+    },
+    {
+      "name": "aleutians",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2019-10-30 11:05:04-05",
+      "popularity": -26,
+      "series_count": 16
+    },
+    {
+      "name": "ann arbor",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 16
+    },
+    {
+      "name": "bismarck",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 16
+    },
+    {
+      "name": "canton",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 16
+    },
+    {
+      "name": "caribbean economies",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2016-06-15 11:10:32-05",
+      "popularity": 9,
+      "series_count": 16
+    },
+    {
+      "name": "checkable",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 32,
+      "series_count": 16
+    },
+    {
+      "name": "coeur d'alene",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 16
+    },
+    {
+      "name": "excise taxes",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 16
+    },
+    {
+      "name": "green lake county, wi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 16
+    },
+    {
+      "name": "houma",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 16
+    },
+    {
+      "name": "hygiene",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-07-25 11:50:39-05",
+      "popularity": 19,
+      "series_count": 16
+    },
+    {
+      "name": "idaho county, id",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -19,
+      "series_count": 16
+    },
+    {
+      "name": "lake county, co",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 16
+    },
+    {
+      "name": "lake havasu city",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 16
+    },
+    {
+      "name": "lubbock",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 16
+    },
+    {
+      "name": "manistee county, mi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 16
+    },
+    {
+      "name": "mankato",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2013-05-23 11:26:13-05",
+      "popularity": 8,
+      "series_count": 16
+    },
+    {
+      "name": "midland",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 16
+    },
+    {
+      "name": "modesto",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 16
+    },
+    {
+      "name": "monroe county, mo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -11,
+      "series_count": 16
+    },
+    {
+      "name": "multifamily",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-06 14:47:29-05",
+      "popularity": 30,
+      "series_count": 16
+    },
+    {
+      "name": "muskegon",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 16
+    },
+    {
+      "name": "naics",
+      "group_id": "gen",
+      "notes": "North American Industry Classification System",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 50,
+      "series_count": 16
+    },
+    {
+      "name": "norwich",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 16
+    },
+    {
+      "name": "osceola county, ia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 16
+    },
+    {
+      "name": "palm bay",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 16
+    },
+    {
+      "name": "panama city",
+      "group_id": "geo",
+      "notes": "Panama City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 16
+    },
+    {
+      "name": "poughkeepsie",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 16
+    },
+    {
+      "name": "return",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 34,
+      "series_count": 16
+    },
+    {
+      "name": "rome",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 16
+    },
+    {
+      "name": "santa fe",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 16
+    },
+    {
+      "name": "secondary",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 45,
+      "series_count": 16
+    },
+    {
+      "name": "shares of gdi",
+      "group_id": "gen",
+      "notes": "Shares of Gross Domestic Income",
+      "created": "2013-03-26 16:19:35-05",
+      "popularity": 19,
+      "series_count": 16
+    },
+    {
+      "name": "social organizations",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-11-04 16:00:46-06",
+      "popularity": -34,
+      "series_count": 16
+    },
+    {
+      "name": "spokane",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 16
+    },
+    {
+      "name": "staunton",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2013-09-09 12:56:24-05",
+      "popularity": 9,
+      "series_count": 16
+    },
+    {
+      "name": "white pine county, nv",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -8,
+      "series_count": 16
+    },
+    {
+      "name": "yuma",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 16
+    },
+    {
+      "name": "academic data",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-08-29 10:22:19-05",
+      "popularity": 44,
+      "series_count": 14
+    },
+    {
+      "name": "ada county, id",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 14
+    },
+    {
+      "name": "addison county, vt",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 0,
+      "series_count": 14
+    },
+    {
+      "name": "allendale county, sc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 14
+    },
+    {
+      "name": "alpine county, ca",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 14
+    },
+    {
+      "name": "altoona",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 4,
+      "series_count": 14
+    },
+    {
+      "name": "ammunition",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-08 14:51:18-06",
+      "popularity": 9,
+      "series_count": 14
+    },
+    {
+      "name": "anderson",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 14
+    },
+    {
+      "name": "anniston",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 14
+    },
+    {
+      "name": "atlantic city",
+      "group_id": "geo",
+      "notes": "Atlantic City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 14
+    },
+    {
+      "name": "bakersfield",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 17,
+      "series_count": 14
+    },
+    {
+      "name": "barnstable town",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 14
+    },
+    {
+      "name": "battle creek",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 14
+    },
+    {
+      "name": "bennington county, vt",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 14
+    },
+    {
+      "name": "benson county, nd",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -7,
+      "series_count": 14
+    },
+    {
+      "name": "boe",
+      "group_id": "src",
+      "notes": "Bank of England",
+      "created": "2013-02-25 16:21:19-06",
+      "popularity": 41,
+      "series_count": 14
+    },
+    {
+      "name": "bowling green",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 14
+    },
+    {
+      "name": "brownsville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 14
+    },
+    {
+      "name": "burnet county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 14
+    },
+    {
+      "name": "caldwell county, mo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -10,
+      "series_count": 14
+    },
+    {
+      "name": "calhoun county, sc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 14
+    },
+    {
+      "name": "cambria county, pa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 14
+    },
+    {
+      "name": "carbon county, mt",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 0,
+      "series_count": 14
+    },
+    {
+      "name": "cedar county, mo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 14
+    },
+    {
+      "name": "chico",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 16,
+      "series_count": 14
+    },
+    {
+      "name": "clarke county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 14
+    },
+    {
+      "name": "clay county, sd",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 14
+    },
+    {
+      "name": "coal county, ok",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -14,
+      "series_count": 14
+    },
+    {
+      "name": "codington county, sd",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 14
+    },
+    {
+      "name": "colleton county, sc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 14
+    },
+    {
+      "name": "conservation",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-08 14:52:42-06",
+      "popularity": -7,
+      "series_count": 14
+    },
+    {
+      "name": "craighead county, ar",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 14
+    },
+    {
+      "name": "custer county, ok",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -19,
+      "series_count": 14
+    },
+    {
+      "name": "delta county, mi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 14
+    },
+    {
+      "name": "deltona",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 14
+    },
+    {
+      "name": "disability",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 30,
+      "series_count": 14
+    },
+    {
+      "name": "district of columbia (county)",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -7,
+      "series_count": 14
+    },
+    {
+      "name": "dormitories",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-26 16:24:59-05",
+      "popularity": -10,
+      "series_count": 14
+    },
+    {
+      "name": "douglas county, wi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 14
+    },
+    {
+      "name": "dubuque",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 14
+    },
+    {
+      "name": "east carroll parish, la",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 14
+    },
+    {
+      "name": "edgar county, il",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -18,
+      "series_count": 14
+    },
+    {
+      "name": "elementary",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-10-21 10:29:16-05",
+      "popularity": 8,
+      "series_count": 14
+    },
+    {
+      "name": "erie",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 14
+    },
+    {
+      "name": "fairfield county, oh",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 0,
+      "series_count": 14
+    },
+    {
+      "name": "fairfield county, sc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 0,
+      "series_count": 14
+    },
+    {
+      "name": "flagstaff",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 13,
+      "series_count": 14
+    },
+    {
+      "name": "franklin county, in",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 14
+    },
+    {
+      "name": "g20",
+      "group_id": "geo",
+      "notes": "Group of 20",
+      "created": "2013-07-12 16:10:48-05",
+      "popularity": -2,
+      "series_count": 14
+    },
+    {
+      "name": "gadsden",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 14
+    },
+    {
+      "name": "gaines county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 14
+    },
+    {
+      "name": "hamilton county, il",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -29,
+      "series_count": 14
+    },
+    {
+      "name": "harris county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 14
+    },
+    {
+      "name": "hickory county, mo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -5,
+      "series_count": 14
+    },
+    {
+      "name": "holmes county, ms",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 14
+    },
+    {
+      "name": "hunt county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 14
+    },
+    {
+      "name": "huron county, mi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -11,
+      "series_count": 14
+    },
+    {
+      "name": "idaho falls",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 19,
+      "series_count": 14
+    },
+    {
+      "name": "independence county, ar",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -5,
+      "series_count": 14
+    },
+    {
+      "name": "irwin county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 5,
+      "series_count": 14
+    },
+    {
+      "name": "izard county, ar",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 14
+    },
+    {
+      "name": "jackson county, ar",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 14
+    },
+    {
+      "name": "jackson county, ia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 14
+    },
+    {
+      "name": "janesville",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 14
+    },
+    {
+      "name": "johnson county, ks",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 14
+    },
+    {
+      "name": "king county, wa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 22,
+      "series_count": 14
+    },
+    {
+      "name": "lake county, tn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 14
+    },
+    {
+      "name": "lawton",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 0,
+      "series_count": 14
+    },
+    {
+      "name": "lewis county, ny",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 14
+    },
+    {
+      "name": "lincoln county, ok",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 14
+    },
+    {
+      "name": "lincoln parish, la",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 14
+    },
+    {
+      "name": "livingston parish, la",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 14
+    },
+    {
+      "name": "madison county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -8,
+      "series_count": 14
+    },
+    {
+      "name": "mahaska county, ia",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 0,
+      "series_count": 14
+    },
+    {
+      "name": "mason county, mi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 14
+    },
+    {
+      "name": "matagorda county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 14
+    },
+    {
+      "name": "mclean county, nd",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 14
+    },
+    {
+      "name": "meade county, ks",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -11,
+      "series_count": 14
+    },
+    {
+      "name": "medford",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 14
+    },
+    {
+      "name": "menominee county, mi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -16,
+      "series_count": 14
+    },
+    {
+      "name": "merchandise",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-11-13 16:08:31-06",
+      "popularity": 22,
+      "series_count": 14
+    },
+    {
+      "name": "michigan city",
+      "group_id": "geo",
+      "notes": "Michigan City",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 5,
+      "series_count": 14
+    },
+    {
+      "name": "mingo county, wv",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 14
+    },
+    {
+      "name": "monongalia county, wv",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 14
+    },
+    {
+      "name": "monroe county, ar",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 14
+    },
+    {
+      "name": "morris county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 14
+    },
+    {
+      "name": "myrtle beach",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 14
+    },
+    {
+      "name": "nez perce county, id",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 14
+    },
+    {
+      "name": "niles",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 8,
+      "series_count": 14
+    },
+    {
+      "name": "nonagriculture",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 15,
+      "series_count": 14
+    },
+    {
+      "name": "nonpetroleum",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-02-26 15:17:04-06",
+      "popularity": -19,
+      "series_count": 14
+    },
+    {
+      "name": "nowata county, ok",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -5,
+      "series_count": 14
+    },
+    {
+      "name": "oconto county, wi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 14
+    },
+    {
+      "name": "outer space",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2013-03-11 13:52:29-05",
+      "popularity": -25,
+      "series_count": 14
+    },
+    {
+      "name": "ozark county, mo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 14
+    },
+    {
+      "name": "palm beach county, fl",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 14
+    },
+    {
+      "name": "pike county, oh",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -7,
+      "series_count": 14
+    },
+    {
+      "name": "pike county, pa",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 14
+    },
+    {
+      "name": "putnam county, il",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -13,
+      "series_count": 14
+    },
+    {
+      "name": "rawlins county, ks",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -5,
+      "series_count": 14
+    },
+    {
+      "name": "religion",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-05-30 09:40:34-05",
+      "popularity": 3,
+      "series_count": 14
+    },
+    {
+      "name": "rich county, ut",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -6,
+      "series_count": 14
+    },
+    {
+      "name": "richland parish, la",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -4,
+      "series_count": 14
+    },
+    {
+      "name": "russell county, ky",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 14
+    },
+    {
+      "name": "salisbury",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 14
+    },
+    {
+      "name": "sanborn county, sd",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 14
+    },
+    {
+      "name": "scott county, mn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 14
+    },
+    {
+      "name": "shelby county, mo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 14
+    },
+    {
+      "name": "stanton county, ne",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -8,
+      "series_count": 14
+    },
+    {
+      "name": "stewart county, tn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -2,
+      "series_count": 14
+    },
+    {
+      "name": "st. george",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 14
+    },
+    {
+      "name": "st. landry parish, la",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 1,
+      "series_count": 14
+    },
+    {
+      "name": "st. louis county, mn",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 14
+    },
+    {
+      "name": "sweet grass county, mt",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -7,
+      "series_count": 14
+    },
+    {
+      "name": "talladega county, al",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -3,
+      "series_count": 14
+    },
+    {
+      "name": "tucson",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 21,
+      "series_count": 14
+    },
+    {
+      "name": "tyler",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 10,
+      "series_count": 14
+    },
+    {
+      "name": "upshur county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 14
+    },
+    {
+      "name": "upson county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -11,
+      "series_count": 14
+    },
+    {
+      "name": "vallejo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 14,
+      "series_count": 14
+    },
+    {
+      "name": "van buren county, mi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 14
+    },
+    {
+      "name": "vance county, nc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 14
+    },
+    {
+      "name": "walker county, al",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -8,
+      "series_count": 14
+    },
+    {
+      "name": "warner robins",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 14
+    },
+    {
+      "name": "washington county, ky",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 9,
+      "series_count": 14
+    },
+    {
+      "name": "wayne county, mo",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 14
+    },
+    {
+      "name": "whitley county, in",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -8,
+      "series_count": 14
+    },
+    {
+      "name": "wilson county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 4,
+      "series_count": 14
+    },
+    {
+      "name": "woodruff county, ar",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -12,
+      "series_count": 14
+    },
+    {
+      "name": "worth county, ga",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -7,
+      "series_count": 14
+    },
+    {
+      "name": "yoakum county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 3,
+      "series_count": 14
+    },
+    {
+      "name": "adair county, ok",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 11,
+      "series_count": 12
+    },
+    {
+      "name": "alachua county, fl",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 12
+    },
+    {
+      "name": "alamance county, nc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 6,
+      "series_count": 12
+    },
+    {
+      "name": "allegan county, mi",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 3,
+      "series_count": 12
+    },
+    {
+      "name": "allegany county, md",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 7,
+      "series_count": 12
+    },
+    {
+      "name": "alleghany county, nc",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -1,
+      "series_count": 12
+    },
+    {
+      "name": "amelia county, va",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": -8,
+      "series_count": 12
+    },
+    {
+      "name": "ames",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 12,
+      "series_count": 12
+    },
+    {
+      "name": "anchorage",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 18,
+      "series_count": 12
+    },
+    {
+      "name": "angelina county, tx",
+      "group_id": "geo",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 2,
+      "series_count": 12
+    }
+  ]
+}

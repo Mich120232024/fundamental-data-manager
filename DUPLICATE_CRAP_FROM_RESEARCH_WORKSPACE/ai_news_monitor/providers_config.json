@@ -1,0 +1,62 @@
+{
+  "providers": [
+    {
+      "name": "Anthropic (Claude)",
+      "urls": [
+        "https://www.anthropic.com/news",
+        "https://docs.anthropic.com/en/docs/changelog"
+      ],
+      "keywords": ["Claude", "API", "update", "feature", "model"]
+    },
+    {
+      "name": "OpenAI", 
+      "urls": [
+        "https://openai.com/blog",
+        "https://platform.openai.com/docs/changelog"
+      ],
+      "keywords": ["GPT", "API", "ChatGPT", "update", "model"]
+    },
+    {
+      "name": "Google AI",
+      "urls": [
+        "https://ai.google/discover/",
+        "https://blog.google/technology/ai/"
+      ],
+      "keywords": ["Gemini", "Bard", "AI", "update", "model"]
+    },
+    {
+      "name": "Microsoft AI",
+      "urls": [
+        "https://blogs.microsoft.com/ai/",
+        "https://azure.microsoft.com/en-us/updates/?category=ai-machine-learning"
+      ],
+      "keywords": ["Azure AI", "Copilot", "OpenAI", "update"]
+    },
+    {
+      "name": "Hugging Face",
+      "urls": ["https://huggingface.co/blog"],
+      "keywords": ["model", "dataset", "spaces", "transformers"]
+    },
+    {
+      "name": "Stability AI",
+      "urls": ["https://stability.ai/news"],
+      "keywords": ["Stable Diffusion", "model", "update"]
+    },
+    {
+      "name": "Cohere",
+      "urls": ["https://cohere.com/blog"],
+      "keywords": ["Command", "Embed", "API", "update"]
+    },
+    {
+      "name": "Claudia GUI",
+      "urls": ["https://github.com/getAsterisk/claudia"],
+      "keywords": ["release", "fix", "PATH", "macOS", "Homebrew", "update"],
+      "special_check": "Check for PATH detection fixes for Homebrew installations"
+    }
+  ],
+  "monitoring_config": {
+    "check_frequency": "daily",
+    "relevance_threshold": 0.7,
+    "recency_days": 2
+  }
+}

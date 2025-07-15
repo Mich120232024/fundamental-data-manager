@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research & Analytics Command Center</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.ico">
+    
+    <!-- Resource hints for faster loading -->
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- Defer font loading -->
+    <link href="./css/inter-font.css" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Only CSS in head for proper styling -->
+    <link href="./css/tippy.css" rel="stylesheet">
+    <link href="/static/dashboard-enhanced.css" rel="stylesheet">
+    <link href="/static/graph-advanced.css" rel="stylesheet">
+    
+    <!-- CRITICAL: Load JavaScript libraries in head with defer to ensure they're available when needed -->
+    <script src="./js/cytoscape.min.js" defer></script>
+    <script src="./js/cytoscape-cose-bilkent.js" defer></script>
+    <script src="./js/popper.min.js" defer></script>
+    <script src="./js/tippy.min.js" defer></script>
+    <script src="/static/graph-advanced.js" defer></script>
+    
+    <style>
+        :root {
+            --primary-dark: #0a0e27;
+            --primary-blue: #1e3a8a;
+            --accent-blue: #3b82f6;
+            --accent-cyan: #06b6d4;
+            --success-green: #10b981;
+            --warning-amber: #f59e0b;
+            --danger-red: #ef4444;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --bg-hover: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border-color: #334155;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.3);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.4);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.5);
+            --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            --gradient-dark: linear-gradient(180deg, #0a0e27 0%, #1e293b 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Professional Header */
+        .header {
+            background: var(--gradient-dark);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 2rem;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+        }
+
+        .header-content {
+            max-width: 1800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .loading-indicator {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 9999;
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .loading-indicator.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading indicator -->
+    <div id="loading-indicator" class="loading-indicator">
+        <h2>Loading Dashboard...</h2>
+        <p>Initializing libraries and components</p>
+    </div>
+
+    <!-- Dashboard content will be inserted here -->
+    <div id="dashboard-content" style="display: none;">
+        <!-- Copy the rest of the dashboard HTML here -->
+        <p>Dashboard content placeholder - copy from original dashboard.html</p>
+    </div>
+
+    <script>
+        // Initialize after all deferred scripts have loaded
+        window.addEventListener('DOMContentLoaded', function() {
+            // Wait a bit more to ensure deferred scripts are loaded
+            setTimeout(function() {
+                // Check if libraries are loaded
+                if (typeof cytoscape === 'undefined') {
+                    console.error('Cytoscape library not loaded!');
+                    document.getElementById('loading-indicator').innerHTML = 
+                        '<h2>Error Loading Libraries</h2><p>Please refresh the page</p>';
+                    return;
+                }
+                
+                console.log('✅ All libraries loaded successfully');
+                
+                // Hide loading indicator and show dashboard
+                document.getElementById('loading-indicator').classList.add('hidden');
+                document.getElementById('dashboard-content').style.display = 'block';
+                
+                // Initialize dashboard components
+                initializeDashboard();
+                
+            }, 100); // Small delay to ensure deferred scripts are executed
+        });
+        
+        function initializeDashboard() {
+            console.log('🚀 Initializing dashboard with all libraries loaded');
+            // Add your initialization code here
+            window.cytoscapeReady = true;
+        }
+    </script>
+</body>
+</html>

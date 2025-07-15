@@ -1,0 +1,4300 @@
+[
+  {
+    "id": 32991,
+    "name": "Money, Banking, & Finance",
+    "parent_id": 0,
+    "depth": 1
+  },
+  {
+    "id": 22,
+    "name": "Interest Rates",
+    "parent_id": 32991,
+    "depth": 2
+  },
+  {
+    "id": 34009,
+    "name": "AMERIBOR Benchmark Rates",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 33058,
+    "name": "Automobile Loan Rates",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 51,
+    "name": "Bankers Acceptance Rate",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 121,
+    "name": "Certificates of Deposit",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 120,
+    "name": "Commercial Paper",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 32348,
+    "name": "Corporate Bonds",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 33059,
+    "name": "Credit Card Loan Rates",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 34005,
+    "name": "EONIA Rates",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 34007,
+    "name": "Euro Short-Term Rate",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 32298,
+    "name": "Eurodollar Deposits",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 118,
+    "name": "FRB Rates - discount, fed funds, primary credit",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 33056,
+    "name": "Interest Checking Accounts",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 33446,
+    "name": "Interest Rate Spreads",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 32299,
+    "name": "Interest Rate Swaps",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 32995,
+    "name": "Long-Term Securities",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 34242,
+    "name": "Monetary Policy",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 33055,
+    "name": "Money Market Accounts",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 114,
+    "name": "Mortgage Rates",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 33057,
+    "name": "Personal Loan Rates",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 117,
+    "name": "Prime Bank Loan Rate",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 33491,
+    "name": "Saving Accounts",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 34003,
+    "name": "SONIA Rates",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 116,
+    "name": "Treasury Bills",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 115,
+    "name": "Treasury Constant Maturity",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 82,
+    "name": "Treasury Inflation-Indexed Securities",
+    "parent_id": 22,
+    "depth": 3
+  },
+  {
+    "id": 15,
+    "name": "Exchange Rates",
+    "parent_id": 32991,
+    "depth": 2
+  },
+  {
+    "id": 94,
+    "name": "Daily Rates",
+    "parent_id": 15,
+    "notes": "Effective January 1, 2009, the Federal Reserve Board discontinued publication of the H.10 Daily Update, which provided U.S. dollar exchange rates against other currencies certified for customs purposes by the Federal Reserve Bank of New York and summary measures of the foreign exchange value of the dollar.   \r\n The Federal Reserve Board still makes the certified exchange rates available.  Effective January 5, 2009, the Board publishes the daily exchange rate data in a weekly version of the H.10 release.\r\n As a result, the daily exchange rates in the FRED database will be updated once each week to capture the daily data from the previous week.",
+    "depth": 3
+  },
+  {
+    "id": 95,
+    "name": "Monthly Rates",
+    "parent_id": 15,
+    "depth": 3
+  },
+  {
+    "id": 32219,
+    "name": "Annual Rates",
+    "parent_id": 15,
+    "depth": 3
+  },
+  {
+    "id": 105,
+    "name": "Trade-Weighted Indexes",
+    "parent_id": 15,
+    "depth": 3
+  },
+  {
+    "id": 158,
+    "name": "By Country",
+    "parent_id": 15,
+    "depth": 3
+  },
+  {
+    "id": 24,
+    "name": "Monetary Data",
+    "parent_id": 32991,
+    "depth": 2
+  },
+  {
+    "id": 124,
+    "name": "Monetary Base",
+    "parent_id": 24,
+    "depth": 3
+  },
+  {
+    "id": 123,
+    "name": "Reserves",
+    "parent_id": 24,
+    "depth": 3
+  },
+  {
+    "id": 25,
+    "name": "M1 and Components",
+    "parent_id": 24,
+    "depth": 3
+  },
+  {
+    "id": 29,
+    "name": "M2 and Components",
+    "parent_id": 24,
+    "depth": 3
+  },
+  {
+    "id": 96,
+    "name": "M2 Minus Small Time Deposits",
+    "parent_id": 24,
+    "depth": 3
+  },
+  {
+    "id": 28,
+    "name": "M3 and Components",
+    "parent_id": 24,
+    "depth": 3
+  },
+  {
+    "id": 30,
+    "name": "MZM",
+    "parent_id": 24,
+    "depth": 3
+  },
+  {
+    "id": 26,
+    "name": "Memorandum Items",
+    "parent_id": 24,
+    "depth": 3
+  },
+  {
+    "id": 32242,
+    "name": "Money Velocity",
+    "parent_id": 24,
+    "notes": "Velocity is a ratio of nominal GDP to a measure of the money supply (M1 or M2).  It can be thought of as the rate of turnover in the money supply--that is, the number of times one dollar is used to purchase final goods and services included in GDP.",
+    "depth": 3
+  },
+  {
+    "id": 122,
+    "name": "Borrowings",
+    "parent_id": 24,
+    "depth": 3
+  },
+  {
+    "id": 32215,
+    "name": "Factors Affecting Reserve Balances",
+    "parent_id": 24,
+    "depth": 3
+  },
+  {
+    "id": 32218,
+    "name": "Securities, Loans, & Other Assets & Liabilities Held by Fed",
+    "parent_id": 24,
+    "depth": 3
+  },
+  {
+    "id": 46,
+    "name": "Financial Indicators",
+    "parent_id": 32991,
+    "depth": 2
+  },
+  {
+    "id": 32414,
+    "name": "Bond Market Indexes",
+    "parent_id": 46,
+    "depth": 3
+  },
+  {
+    "id": 33119,
+    "name": "Consumer Financial Condition Indexes",
+    "parent_id": 46,
+    "depth": 3
+  },
+  {
+    "id": 32457,
+    "name": "Financial Activity Measures",
+    "parent_id": 46,
+    "depth": 3
+  },
+  {
+    "id": 32255,
+    "name": "Stock Market Indexes",
+    "parent_id": 46,
+    "depth": 3
+  },
+  {
+    "id": 32425,
+    "name": "Volatility Indexes",
+    "parent_id": 46,
+    "depth": 3
+  },
+  {
+    "id": 23,
+    "name": "Banking",
+    "parent_id": 32991,
+    "depth": 2
+  },
+  {
+    "id": 34078,
+    "name": "Banking Indexes",
+    "parent_id": 23,
+    "depth": 3
+  },
+  {
+    "id": 100,
+    "name": "Commercial Banking",
+    "parent_id": 23,
+    "depth": 3
+  },
+  {
+    "id": 83,
+    "name": "Condition of Banks",
+    "parent_id": 23,
+    "notes": "For census division definitions, see http://research.stlouisfed.org/fred2/censusdivisions.",
+    "depth": 3
+  },
+  {
+    "id": 101,
+    "name": "Consumer Credit",
+    "parent_id": 23,
+    "depth": 3
+  },
+  {
+    "id": 32440,
+    "name": "Delinquencies and Delinquency Rates",
+    "parent_id": 23,
+    "depth": 3
+  },
+  {
+    "id": 33121,
+    "name": "Failures and Assistance Transactions",
+    "parent_id": 23,
+    "depth": 3
+  },
+  {
+    "id": 64,
+    "name": "8th District Banking Performance",
+    "parent_id": 23,
+    "depth": 3
+  },
+  {
+    "id": 33445,
+    "name": "Mortgage Debt Outstanding",
+    "parent_id": 23,
+    "depth": 3
+  },
+  {
+    "id": 32439,
+    "name": "Net Charge-Offs and Charge-Off Rates",
+    "parent_id": 23,
+    "depth": 3
+  },
+  {
+    "id": 99,
+    "name": "Securities & Investments",
+    "parent_id": 23,
+    "depth": 3
+  },
+  {
+    "id": 34111,
+    "name": "Senior Credit Officer Opinion Survey",
+    "parent_id": 23,
+    "depth": 3
+  },
+  {
+    "id": 32239,
+    "name": "Senior Loan Officer Survey",
+    "parent_id": 23,
+    "depth": 3
+  },
+  {
+    "id": 32360,
+    "name": "Business Lending",
+    "parent_id": 32991,
+    "depth": 2
+  },
+  {
+    "id": 32996,
+    "name": "Commercial Paper",
+    "parent_id": 32360,
+    "depth": 3
+  },
+  {
+    "id": 32406,
+    "name": "Commercial and Industrial Loans by Time that Pricing Terms Were Set and by Commitment",
+    "parent_id": 32360,
+    "depth": 3
+  },
+  {
+    "id": 33439,
+    "name": "Commercial and Industrial Loans Backed by Small Business Association",
+    "parent_id": 32360,
+    "depth": 3
+  },
+  {
+    "id": 32361,
+    "name": "Commercial and Industrial Loans Made by All Commercial Banks",
+    "parent_id": 32360,
+    "depth": 3
+  },
+  {
+    "id": 32370,
+    "name": "Commercial and Industrial Loans Made by Domestic Banks",
+    "parent_id": 32360,
+    "depth": 3
+  },
+  {
+    "id": 32379,
+    "name": "Commercial and Industrial Loans Made by Large Domestic Banks",
+    "parent_id": 32360,
+    "depth": 3
+  },
+  {
+    "id": 32388,
+    "name": "Commercial and Industrial Loans Made by Small Domestic Banks",
+    "parent_id": 32360,
+    "depth": 3
+  },
+  {
+    "id": 32397,
+    "name": "Commercial and Industrial Loans Made by U.S. Branches and Agencies of Foreign Banks",
+    "parent_id": 32360,
+    "depth": 3
+  },
+  {
+    "id": 33440,
+    "name": "Commercial and Industrial Loans Made Under Participation or Syndication",
+    "parent_id": 32360,
+    "depth": 3
+  },
+  {
+    "id": 32145,
+    "name": "Foreign Exchange Intervention",
+    "parent_id": 32991,
+    "notes": "In addition to the listed daily intervention series, intra-day series from the Swiss National Bank are available at: \r\nhttp://research.stlouisfed.org/fei/\r\n\r\nUnited Kingdom foreign exchange intervention data can be downloaded from Her Majesty's Treasury at the following:\r\nhttp://www.hm-treasury.gov.uk",
+    "depth": 2
+  },
+  {
+    "id": 10,
+    "name": "Population, Employment, & Labor Markets",
+    "parent_id": 0,
+    "depth": 1
+  },
+  {
+    "id": 12,
+    "name": "Current Population Survey (Household Survey)",
+    "parent_id": 10,
+    "notes": "The Current Population Survey (Household Survey) is a monthly survey of households conducted by the Bureau of Labor Statistics. It provides a comprehensive body of data on the labor force, employment, unemployment, persons not in the labor force, hours of work, earnings, and other demographic and labor force characteristics. \r\nNumerous conceptual and methodological differences between the current population (household) and establishment surveys result in important distinctions in the employment estimates derived from the surveys. Among these are: \r\nThe household survey includes agricultural workers, the self- employed, unpaid family workers, and private household workers among the employed. These groups are excluded from the establishment survey. \r\nThe household survey includes people on unpaid leave among the employed. The establishment survey does not. \r\nThe household survey is limited to workers 16 years of age and older. The establishment survey is not limited by age. \r\nThe household survey has no duplication of individuals, because individuals are counted only once, even if they hold more than one job. In the establishment survey, employees working at more than one job and thus appearing on more than one payroll are counted separately for each appearance. \r\n\r\nFor more information, visit http://www.bls.gov/news.release/empsit.tn.htm.",
+    "depth": 2
+  },
+  {
+    "id": 32442,
+    "name": "Civilian Labor Force",
+    "parent_id": 12,
+    "notes": "All persons in the civilian noninstitutional population classified as either employed or unemployed.",
+    "depth": 3
+  },
+  {
+    "id": 32443,
+    "name": "Civilian Labor Force Participation Rate",
+    "parent_id": 12,
+    "depth": 3
+  },
+  {
+    "id": 32444,
+    "name": "Employment",
+    "parent_id": 12,
+    "notes": "Employed persons consist of: persons who did any work for pay or profit during the survey reference week; persons who did at least 15 hours of unpaid work in a family-operated enterprise; and persons who were temporarily absent from their regular jobs because of illness, vacation, bad weather, industrial dispute, or various personal reasons. Each employed person is counted only once, even if he or she holds more than one job.",
+    "depth": 3
+  },
+  {
+    "id": 32445,
+    "name": "Employment Population Ratio",
+    "parent_id": 12,
+    "notes": "The employment-population ratio represents the proportion of the civilian noninstitutional population that is employed.",
+    "depth": 3
+  },
+  {
+    "id": 32446,
+    "name": "Unemployment Level",
+    "parent_id": 12,
+    "notes": "All persons who had no employment during the reference week, were available for work, except for temporary illness, and had made specific efforts to find employment some time during the 4 week-period ending with the reference week. Persons who were waiting to be recalled to a job from which they had been laid off need not have been looking for work to be classified as unemployed.",
+    "depth": 3
+  },
+  {
+    "id": 32447,
+    "name": "Unemployment Rate",
+    "parent_id": 12,
+    "notes": "The ratio of unemployed to the civilian labor force expressed as a percent.",
+    "depth": 3
+  },
+  {
+    "id": 32448,
+    "name": "Not in Labor Force",
+    "parent_id": 12,
+    "notes": "Persons who are neither employed nor unemployed are not in the labor force. This category includes retired persons, students, those taking care of children or other family members, and others who are neither working nor seeking work.",
+    "depth": 3
+  },
+  {
+    "id": 32449,
+    "name": "Labor Force Participation Rate",
+    "parent_id": 12,
+    "notes": "The labor force is the sum of employed and unemployed persons. The labor force participation rate is the labor force as a percent of the civilian noninstitutional population.",
+    "depth": 3
+  },
+  {
+    "id": 32450,
+    "name": "Multiple Jobholders",
+    "parent_id": 12,
+    "notes": "Employed persons with more than one job.",
+    "depth": 3
+  },
+  {
+    "id": 32451,
+    "name": "Duration of Unemployment",
+    "parent_id": 12,
+    "depth": 3
+  },
+  {
+    "id": 32452,
+    "name": "Losers and Leavers",
+    "parent_id": 12,
+    "depth": 3
+  },
+  {
+    "id": 33501,
+    "name": "Earnings",
+    "parent_id": 12,
+    "depth": 3
+  },
+  {
+    "id": 32453,
+    "name": "Entrants and Reentrants",
+    "parent_id": 12,
+    "depth": 3
+  },
+  {
+    "id": 33502,
+    "name": "Labor Force Status Flows",
+    "parent_id": 12,
+    "depth": 3
+  },
+  {
+    "id": 11,
+    "name": "Current Employment Statistics (Establishment Survey)",
+    "parent_id": 10,
+    "notes": "The establishment survey provides data on employment, hours, and earnings by industry.\r\nNumerous conceptual and methodological differences between the current population (household) and establishment surveys result in important distinctions in the employment estimates derived from the surveys. Among these are: \r\nThe household survey includes agricultural workers, the self- employed, unpaid family workers, and private household workers among the employed. These groups are excluded from the establishment survey. \r\nThe household survey includes people on unpaid leave among the employed. The establishment survey does not. \r\nThe household survey is limited to workers 16 years of age and older. The establishment survey is not limited by age. \r\nThe household survey has no duplication of individuals, because individuals are counted only once, even if they hold more than one job. In the establishment survey, employees working at more than one job and thus appearing on more than one payroll are counted separately for each appearance. \r\nFor more information, visit http://www.bls.gov/news.release/empsit.tn.htm.",
+    "depth": 2
+  },
+  {
+    "id": 32305,
+    "name": "Total Nonfarm",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32306,
+    "name": "Total Private",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32307,
+    "name": "Goods-Producing",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32326,
+    "name": "Service-Providing",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32308,
+    "name": "Private Service-Providing",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32309,
+    "name": "Mining and Logging",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32310,
+    "name": "Construction",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32311,
+    "name": "Manufacturing",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32312,
+    "name": "Durable Goods",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32313,
+    "name": "Nondurable Goods",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32314,
+    "name": "Trade, Transportation, and Utilities",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32315,
+    "name": "Wholesale Trade",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32316,
+    "name": "Retail Trade",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32317,
+    "name": "Transportation and Warehousing",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32318,
+    "name": "Utilities",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32319,
+    "name": "Information",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32320,
+    "name": "Financial Activities",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32321,
+    "name": "Professional and Business Services",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32322,
+    "name": "Education and Health Services",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32323,
+    "name": "Leisure and Hospitality",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32324,
+    "name": "Other Services",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32325,
+    "name": "Government",
+    "parent_id": 11,
+    "depth": 3
+  },
+  {
+    "id": 32250,
+    "name": "ADP Employment",
+    "parent_id": 10,
+    "depth": 2
+  },
+  {
+    "id": 33500,
+    "name": "Education",
+    "parent_id": 10,
+    "depth": 2
+  },
+  {
+    "id": 33001,
+    "name": "Income Distribution",
+    "parent_id": 10,
+    "depth": 2
+  },
+  {
+    "id": 32241,
+    "name": "Job Openings and Labor Turnover (JOLTS)",
+    "parent_id": 10,
+    "depth": 2
+  },
+  {
+    "id": 32243,
+    "name": "Job Openings (Levels and Rates)",
+    "parent_id": 32241,
+    "depth": 3
+  },
+  {
+    "id": 32245,
+    "name": "Hires (Levels and Rates)",
+    "parent_id": 32241,
+    "depth": 3
+  },
+  {
+    "id": 32246,
+    "name": "Total Separations (Levels and Rates)",
+    "parent_id": 32241,
+    "depth": 3
+  },
+  {
+    "id": 32247,
+    "name": "Quits (Levels and Rates)",
+    "parent_id": 32241,
+    "depth": 3
+  },
+  {
+    "id": 32248,
+    "name": "Layoffs and Discharges (Levels and Rates)",
+    "parent_id": 32241,
+    "depth": 3
+  },
+  {
+    "id": 32249,
+    "name": "Other Separations (Levels and Rates)",
+    "parent_id": 32241,
+    "depth": 3
+  },
+  {
+    "id": 33509,
+    "name": "Labor Market Conditions",
+    "parent_id": 10,
+    "depth": 2
+  },
+  {
+    "id": 104,
+    "name": "Population",
+    "parent_id": 10,
+    "depth": 2
+  },
+  {
+    "id": 33735,
+    "name": "Poverty Measures",
+    "parent_id": 104,
+    "depth": 3
+  },
+  {
+    "id": 33514,
+    "name": "Supplemental Nutrition Assistance Program",
+    "parent_id": 104,
+    "depth": 3
+  },
+  {
+    "id": 2,
+    "name": "Productivity & Costs",
+    "parent_id": 10,
+    "depth": 2
+  },
+  {
+    "id": 33961,
+    "name": "Agriculture, Forestry, Fishing and Hunting",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 33963,
+    "name": "Mining",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 33965,
+    "name": "Utilities",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 33967,
+    "name": "Construction",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 32349,
+    "name": "Manufacturing",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 33969,
+    "name": "Wholesale Trade",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 33972,
+    "name": "Retail Trade",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 33974,
+    "name": "Transportation and Warehousing",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 33976,
+    "name": "Information",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 33978,
+    "name": "Finance and Insurance",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 33980,
+    "name": "Real Estate and Rental and Leasing",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 33982,
+    "name": "Professional, Scientific, and Technical Services",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 33984,
+    "name": "Management of Companies and Enterprises",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 33986,
+    "name": "Administrative and Support and Waste Management and Remediation Services",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 33988,
+    "name": "Educational Services",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 33990,
+    "name": "Health Care and Social Assistance",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 33992,
+    "name": "Arts, Entertainment, and Recreation",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 33994,
+    "name": "Accommodation and Food Services",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 33996,
+    "name": "Other Services (except Public Administration)",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 33998,
+    "name": "Government",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 32350,
+    "name": "Business",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 32351,
+    "name": "Nonfarm Business",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 32354,
+    "name": "Nonfinancial Corporations",
+    "parent_id": 2,
+    "depth": 3
+  },
+  {
+    "id": 33831,
+    "name": "Minimum Wage",
+    "parent_id": 10,
+    "depth": 2
+  },
+  {
+    "id": 32240,
+    "name": "Weekly Initial Claims",
+    "parent_id": 10,
+    "depth": 2
+  },
+  {
+    "id": 33731,
+    "name": "Tax Data",
+    "parent_id": 10,
+    "depth": 2
+  },
+  {
+    "id": 32992,
+    "name": "National Accounts",
+    "parent_id": 0,
+    "depth": 1
+  },
+  {
+    "id": 18,
+    "name": "National Income & Product Accounts",
+    "parent_id": 32992,
+    "depth": 2
+  },
+  {
+    "id": 112,
+    "name": "Domestic Capital Account (Saving & Investment)",
+    "parent_id": 18,
+    "depth": 3
+  },
+  {
+    "id": 108,
+    "name": "Foreign Transactions",
+    "parent_id": 18,
+    "depth": 3
+  },
+  {
+    "id": 33697,
+    "name": "Fixed Assets",
+    "parent_id": 18,
+    "depth": 3
+  },
+  {
+    "id": 33122,
+    "name": "Gross Domestic Income",
+    "parent_id": 18,
+    "depth": 3
+  },
+  {
+    "id": 106,
+    "name": "GDP/GNP",
+    "parent_id": 18,
+    "depth": 3
+  },
+  {
+    "id": 107,
+    "name": "Gov't Receipts, Expenditures & Investment",
+    "parent_id": 18,
+    "depth": 3
+  },
+  {
+    "id": 33719,
+    "name": "Health Care Spending",
+    "parent_id": 18,
+    "depth": 3
+  },
+  {
+    "id": 33054,
+    "name": "Imputations",
+    "parent_id": 18,
+    "depth": 3
+  },
+  {
+    "id": 33045,
+    "name": "Industry",
+    "parent_id": 18,
+    "depth": 3
+  },
+  {
+    "id": 110,
+    "name": "Personal Income & Outlays",
+    "parent_id": 18,
+    "depth": 3
+  },
+  {
+    "id": 21,
+    "name": "Price Indexes & Deflators",
+    "parent_id": 18,
+    "depth": 3
+  },
+  {
+    "id": 109,
+    "name": "Private Enterprise Income",
+    "parent_id": 18,
+    "depth": 3
+  },
+  {
+    "id": 33021,
+    "name": "Quantity Indexes",
+    "parent_id": 18,
+    "depth": 3
+  },
+  {
+    "id": 33401,
+    "name": "Effect of ARRA on Selected NIPA Estimates",
+    "parent_id": 18,
+    "depth": 3
+  },
+  {
+    "id": 5,
+    "name": "Federal Government Debt",
+    "parent_id": 32992,
+    "depth": 2
+  },
+  {
+    "id": 32251,
+    "name": "Flow of Funds",
+    "parent_id": 32992,
+    "depth": 2
+  },
+  {
+    "id": 32258,
+    "name": "B.101 Balance Sheet of Households and Nonprofit Organizations",
+    "parent_id": 32251,
+    "depth": 3
+  },
+  {
+    "id": 32259,
+    "name": "B.103 Balance Sheet of Nonfinancial Corporate Business",
+    "parent_id": 32251,
+    "depth": 3
+  },
+  {
+    "id": 32260,
+    "name": "B.104 Balance Sheet of Nonfinancial Noncorporate Business",
+    "parent_id": 32251,
+    "depth": 3
+  },
+  {
+    "id": 32256,
+    "name": "D.3 Credit Market Debt Outstanding by Sector",
+    "parent_id": 32251,
+    "depth": 3
+  },
+  {
+    "id": 32257,
+    "name": "L.1 Credit Market Debt Outstanding",
+    "parent_id": 32251,
+    "depth": 3
+  },
+  {
+    "id": 33722,
+    "name": "L.203 Net Interbank Transactions",
+    "parent_id": 32251,
+    "depth": 3
+  },
+  {
+    "id": 33726,
+    "name": "L.208 Debt Securities",
+    "parent_id": 32251,
+    "depth": 3
+  },
+  {
+    "id": 33729,
+    "name": "L.214 Loans",
+    "parent_id": 32251,
+    "depth": 3
+  },
+  {
+    "id": 33204,
+    "name": "S.1 Total Economy - Current Account",
+    "parent_id": 32251,
+    "depth": 3
+  },
+  {
+    "id": 33205,
+    "name": "S.2 Selected Aggregates for Total Economy and Sectors",
+    "parent_id": 32251,
+    "depth": 3
+  },
+  {
+    "id": 33240,
+    "name": "S.3 Households and Nonprofit Institutions Serving Households",
+    "parent_id": 32251,
+    "depth": 3
+  },
+  {
+    "id": 33241,
+    "name": "S.4 Nonfinancial Noncorporate Business",
+    "parent_id": 32251,
+    "depth": 3
+  },
+  {
+    "id": 33242,
+    "name": "S.5 Nonfinancial Corporate Business",
+    "parent_id": 32251,
+    "depth": 3
+  },
+  {
+    "id": 33243,
+    "name": "S.6 Financial Business",
+    "parent_id": 32251,
+    "depth": 3
+  },
+  {
+    "id": 33244,
+    "name": "S.7 Federal Government",
+    "parent_id": 32251,
+    "depth": 3
+  },
+  {
+    "id": 33245,
+    "name": "S.8 State and Local Governments",
+    "parent_id": 32251,
+    "depth": 3
+  },
+  {
+    "id": 33246,
+    "name": "S.9 Rest of the World",
+    "parent_id": 32251,
+    "depth": 3
+  },
+  {
+    "id": 13,
+    "name": "U.S. Trade & International Transactions",
+    "parent_id": 32992,
+    "depth": 2
+  },
+  {
+    "id": 16,
+    "name": "Exports",
+    "parent_id": 13,
+    "depth": 3
+  },
+  {
+    "id": 17,
+    "name": "Imports",
+    "parent_id": 13,
+    "depth": 3
+  },
+  {
+    "id": 3000,
+    "name": "Income Payments & Receipts",
+    "parent_id": 13,
+    "depth": 3
+  },
+  {
+    "id": 33705,
+    "name": "International Investment Position",
+    "parent_id": 13,
+    "depth": 3
+  },
+  {
+    "id": 125,
+    "name": "Trade Balance",
+    "parent_id": 13,
+    "depth": 3
+  },
+  {
+    "id": 127,
+    "name": "U.S. International Finance",
+    "parent_id": 13,
+    "depth": 3
+  },
+  {
+    "id": 1,
+    "name": "Production & Business Activity",
+    "parent_id": 0,
+    "depth": 1
+  },
+  {
+    "id": 32262,
+    "name": "Business Cycle Expansions & Contractions",
+    "parent_id": 1,
+    "depth": 2
+  },
+  {
+    "id": 33936,
+    "name": "Business Surveys",
+    "parent_id": 1,
+    "depth": 2
+  },
+  {
+    "id": 32436,
+    "name": "Construction",
+    "parent_id": 1,
+    "depth": 2
+  },
+  {
+    "id": 33940,
+    "name": "Emissions",
+    "parent_id": 1,
+    "depth": 2
+  },
+  {
+    "id": 33955,
+    "name": "Expenditures",
+    "parent_id": 1,
+    "depth": 2
+  },
+  {
+    "id": 33957,
+    "name": "Consumer Expenditures",
+    "parent_id": 33955,
+    "depth": 3
+  },
+  {
+    "id": 33490,
+    "name": "Finance Companies",
+    "parent_id": 1,
+    "depth": 2
+  },
+  {
+    "id": 32216,
+    "name": "Health Insurance",
+    "parent_id": 1,
+    "depth": 2
+  },
+  {
+    "id": 97,
+    "name": "Housing",
+    "parent_id": 1,
+    "depth": 2
+  },
+  {
+    "id": 32300,
+    "name": "Housing Units Authorized by Building Permits",
+    "parent_id": 97,
+    "depth": 3
+  },
+  {
+    "id": 32301,
+    "name": "Housing Units Authorized, But Not Yet Started",
+    "parent_id": 97,
+    "depth": 3
+  },
+  {
+    "id": 32302,
+    "name": "Housing Starts",
+    "parent_id": 97,
+    "depth": 3
+  },
+  {
+    "id": 32303,
+    "name": "Housing Units Under Construction",
+    "parent_id": 97,
+    "depth": 3
+  },
+  {
+    "id": 32304,
+    "name": "Housing Units Completed",
+    "parent_id": 97,
+    "depth": 3
+  },
+  {
+    "id": 32426,
+    "name": "New Residential Sales",
+    "parent_id": 97,
+    "depth": 3
+  },
+  {
+    "id": 33949,
+    "name": "Manufactured Housing",
+    "parent_id": 97,
+    "depth": 3
+  },
+  {
+    "id": 3,
+    "name": "Industrial Production & Capacity Utilization",
+    "parent_id": 1,
+    "depth": 2
+  },
+  {
+    "id": 33938,
+    "name": "Automotive Production Seasonal Factor",
+    "parent_id": 3,
+    "depth": 3
+  },
+  {
+    "id": 32429,
+    "name": "Manufacturing",
+    "parent_id": 1,
+    "depth": 2
+  },
+  {
+    "id": 32432,
+    "name": "Inventories",
+    "parent_id": 32429,
+    "depth": 3
+  },
+  {
+    "id": 32431,
+    "name": "New Orders",
+    "parent_id": 32429,
+    "depth": 3
+  },
+  {
+    "id": 32433,
+    "name": "Inventory to Shipments",
+    "parent_id": 32429,
+    "depth": 3
+  },
+  {
+    "id": 32435,
+    "name": "Unfilled Orders",
+    "parent_id": 32429,
+    "depth": 3
+  },
+  {
+    "id": 32434,
+    "name": "Unfilled Orders to Shipments",
+    "parent_id": 32429,
+    "depth": 3
+  },
+  {
+    "id": 32430,
+    "name": "Shipments",
+    "parent_id": 32429,
+    "depth": 3
+  },
+  {
+    "id": 33959,
+    "name": "Patents",
+    "parent_id": 1,
+    "depth": 2
+  },
+  {
+    "id": 6,
+    "name": "Retail Trade",
+    "parent_id": 1,
+    "depth": 2
+  },
+  {
+    "id": 33441,
+    "name": "Services",
+    "parent_id": 1,
+    "depth": 2
+  },
+  {
+    "id": 33492,
+    "name": "Technology",
+    "parent_id": 1,
+    "depth": 2
+  },
+  {
+    "id": 33202,
+    "name": "Transportation",
+    "parent_id": 1,
+    "depth": 2
+  },
+  {
+    "id": 32993,
+    "name": "Motor Vehicles",
+    "parent_id": 33202,
+    "depth": 3
+  },
+  {
+    "id": 33203,
+    "name": "Wholesale Trade",
+    "parent_id": 1,
+    "depth": 2
+  },
+  {
+    "id": 32455,
+    "name": "Prices",
+    "parent_id": 0,
+    "depth": 1
+  },
+  {
+    "id": 32217,
+    "name": "Commodities",
+    "parent_id": 32455,
+    "depth": 2
+  },
+  {
+    "id": 9,
+    "name": "Consumer Price Indexes (CPI and PCE)",
+    "parent_id": 32455,
+    "depth": 2
+  },
+  {
+    "id": 32415,
+    "name": "Food and Beverages",
+    "parent_id": 9,
+    "depth": 3
+  },
+  {
+    "id": 32416,
+    "name": "Housing",
+    "parent_id": 9,
+    "depth": 3
+  },
+  {
+    "id": 32417,
+    "name": "Apparel",
+    "parent_id": 9,
+    "depth": 3
+  },
+  {
+    "id": 32418,
+    "name": "Transportation",
+    "parent_id": 9,
+    "depth": 3
+  },
+  {
+    "id": 32419,
+    "name": "Medical Care",
+    "parent_id": 9,
+    "depth": 3
+  },
+  {
+    "id": 32420,
+    "name": "Recreation",
+    "parent_id": 9,
+    "depth": 3
+  },
+  {
+    "id": 32421,
+    "name": "Education and Communication",
+    "parent_id": 9,
+    "depth": 3
+  },
+  {
+    "id": 32422,
+    "name": "Other Goods and Services",
+    "parent_id": 9,
+    "depth": 3
+  },
+  {
+    "id": 32423,
+    "name": "Commodity and Services Groups",
+    "parent_id": 9,
+    "depth": 3
+  },
+  {
+    "id": 32424,
+    "name": "Special Indexes",
+    "parent_id": 9,
+    "depth": 3
+  },
+  {
+    "id": 33913,
+    "name": "Cryptocurrencies",
+    "parent_id": 32455,
+    "depth": 2
+  },
+  {
+    "id": 4,
+    "name": "Employment Cost Index",
+    "parent_id": 32455,
+    "depth": 2
+  },
+  {
+    "id": 33717,
+    "name": "Health Care Indexes",
+    "parent_id": 32455,
+    "depth": 2
+  },
+  {
+    "id": 32261,
+    "name": "House Price Indexes",
+    "parent_id": 32455,
+    "depth": 2
+  },
+  {
+    "id": 31,
+    "name": "Producer Price Indexes (PPI)",
+    "parent_id": 32455,
+    "depth": 2
+  },
+  {
+    "id": 33583,
+    "name": "Commodity Based",
+    "parent_id": 31,
+    "depth": 3
+  },
+  {
+    "id": 33584,
+    "name": "Industry Based",
+    "parent_id": 31,
+    "depth": 3
+  },
+  {
+    "id": 32220,
+    "name": "Trade Indexes",
+    "parent_id": 32455,
+    "depth": 2
+  },
+  {
+    "id": 32221,
+    "name": "Import Price Indexes",
+    "parent_id": 32220,
+    "depth": 3
+  },
+  {
+    "id": 32224,
+    "name": "Export Price Indexes",
+    "parent_id": 32220,
+    "depth": 3
+  },
+  {
+    "id": 32231,
+    "name": "Services Price Indexes",
+    "parent_id": 32220,
+    "notes": "Starting in September 2008 the Import Air Passenger Fares Indexes represent changes in the average revenue per passenger received by foreign carriers from U.S. residents and are calculated from data obtained from an airline consulting service. These data include tickets sold by travel agencies and travel websites. Tickets sold directly by the airlines are excluded, as are frequent flyer tickets generally. Starting in January 2008 the Export Air Passenger Fares Indexes represent changes in the average revenue per passenger received by U.S. carriers from foreign residents and are calculated from data collected directly from airlines. These data include frequent flyer tickets and those sold by consolidators. Taxes and fees are included in the Import Air Passenger Fares Index and excluded from the Export Air Passenger Fares Index. The Air Freight Indexes are calculated from data collected directly from airlines. These data exclude mail and passenger baggage. The scope of the service being priced is the movement of freight from airport to airport only, and does not include any ground transportation or port service. The Air Freight Indexes are presented using two definitions: Balance of Payments (which represent transactions between U.S. and foreign residents) and International (which represent transactions inbound to and outbound from the U.S.). Fact sheets specifying detailed information for each services industry are available at http://www.bls.gov/mxp under \"MXP  Publications.\"",
+    "depth": 3
+  },
+  {
+    "id": 32263,
+    "name": "International Data",
+    "parent_id": 0,
+    "depth": 1
+  },
+  {
+    "id": 32264,
+    "name": "Countries",
+    "parent_id": 32263,
+    "depth": 2
+  },
+  {
+    "id": 32641,
+    "name": "Afghanistan",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32643,
+    "name": "Albania",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32644,
+    "name": "Algeria",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32645,
+    "name": "American Samoa",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32646,
+    "name": "Andorra",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32647,
+    "name": "Angola",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32648,
+    "name": "Anguilla",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32650,
+    "name": "Antigua and Barbuda",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32651,
+    "name": "Argentina",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32652,
+    "name": "Armenia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32653,
+    "name": "Aruba",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32269,
+    "name": "Australia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32282,
+    "name": "Austria",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32654,
+    "name": "Azerbaijan",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32655,
+    "name": "Bahamas",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32656,
+    "name": "Bahrain",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32657,
+    "name": "Bangladesh",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32658,
+    "name": "Barbados",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32659,
+    "name": "Belarus",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32270,
+    "name": "Belgium",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32660,
+    "name": "Belize",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32661,
+    "name": "Benin",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32662,
+    "name": "Bermuda",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32663,
+    "name": "Bhutan",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32664,
+    "name": "Bolivia, Plurinational State of",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32665,
+    "name": "Caribbean Netherlands",
+    "parent_id": 32264,
+    "notes": "Islands of Bonaire, Sint Eustatius and Saba.",
+    "depth": 3
+  },
+  {
+    "id": 32666,
+    "name": "Bosnia and Herzegovina",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32667,
+    "name": "Botswana",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32327,
+    "name": "Brazil",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32669,
+    "name": "British Indian Ocean Territory",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32670,
+    "name": "Brunei Darussalam",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32671,
+    "name": "Bulgaria",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32672,
+    "name": "Burkina Faso",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32673,
+    "name": "Burundi",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32674,
+    "name": "Cambodia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32675,
+    "name": "Cameroon",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32268,
+    "name": "Canada",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32676,
+    "name": "Cape Verde",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32677,
+    "name": "Cayman Islands",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32678,
+    "name": "Central African Republic",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32679,
+    "name": "Chad",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32328,
+    "name": "Chile",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32329,
+    "name": "China",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32680,
+    "name": "Christmas Island",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32681,
+    "name": "Cocos (Keeling) Islands",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32682,
+    "name": "Colombia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32683,
+    "name": "Comoros",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32684,
+    "name": "Congo, Republic of the",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32685,
+    "name": "Congo, Democratic Republic of the",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32686,
+    "name": "Cook Islands",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32687,
+    "name": "Costa Rica",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32688,
+    "name": "C\u00f4te d\u2019Ivoire",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32689,
+    "name": "Croatia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32690,
+    "name": "Cuba",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32691,
+    "name": "Cura\u00e7ao",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32692,
+    "name": "Cyprus",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32288,
+    "name": "Czech Republic",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32271,
+    "name": "Denmark",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32693,
+    "name": "Djibouti",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32694,
+    "name": "Dominica",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32695,
+    "name": "Dominican Republic",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32696,
+    "name": "Ecuador",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32697,
+    "name": "Egypt",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32698,
+    "name": "El Salvador",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32699,
+    "name": "Equatorial Guinea",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32700,
+    "name": "Eritrea",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32701,
+    "name": "Estonia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32702,
+    "name": "Ethiopia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32703,
+    "name": "Falkland Islands",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32704,
+    "name": "Faroe Islands",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32705,
+    "name": "Fiji",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32289,
+    "name": "Finland",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32272,
+    "name": "France",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32706,
+    "name": "French Guiana",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32707,
+    "name": "French Polynesia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32708,
+    "name": "French Southern Territories",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32709,
+    "name": "Gabon",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32710,
+    "name": "Republic of the Gambia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32711,
+    "name": "Georgia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32273,
+    "name": "Germany",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32712,
+    "name": "Ghana",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32713,
+    "name": "Gibraltar",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32293,
+    "name": "Great Britain",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32330,
+    "name": "Greece",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32714,
+    "name": "Greenland",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32715,
+    "name": "Grenada",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32716,
+    "name": "Guadeloupe",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32717,
+    "name": "Guam",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32718,
+    "name": "Guatemala",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32720,
+    "name": "Guinea",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32721,
+    "name": "Guinea-Bissau",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32722,
+    "name": "Guyana",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32723,
+    "name": "Haiti",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32724,
+    "name": "Heard Island and McDonald Islands",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32725,
+    "name": "Holy See (Vatican City State)",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32726,
+    "name": "Honduras",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32727,
+    "name": "Hong Kong",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32331,
+    "name": "Hungary",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32334,
+    "name": "Iceland",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32333,
+    "name": "India",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32332,
+    "name": "Indonesia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32728,
+    "name": "Iran, Islamic Republic of",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32729,
+    "name": "Iraq",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32290,
+    "name": "Ireland",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32730,
+    "name": "Isle of Man",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32335,
+    "name": "Israel",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32274,
+    "name": "Italy",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32731,
+    "name": "Jamaica",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32281,
+    "name": "Japan",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32733,
+    "name": "Jordan",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32734,
+    "name": "Kazakhstan",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32735,
+    "name": "Kenya",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32736,
+    "name": "Kiribati",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32737,
+    "name": "Korea, Democratic People's Republic of (North Korea)",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32286,
+    "name": "Korea, Republic of (South Korea)",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32738,
+    "name": "Kuwait",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32739,
+    "name": "Kyrgyz Republic",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32740,
+    "name": "Lao People's Democratic Republic",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32741,
+    "name": "Latvia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32742,
+    "name": "Lebanon",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32743,
+    "name": "Lesotho",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32744,
+    "name": "Liberia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32745,
+    "name": "Libyan Arab Jamahiriya",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32746,
+    "name": "Liechtenstein",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32747,
+    "name": "Lithuania",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32336,
+    "name": "Luxembourg",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32748,
+    "name": "Macao",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32749,
+    "name": "Macedonia, Former Yugoslav Republic of",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32750,
+    "name": "Madagascar",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32751,
+    "name": "Malawi",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32752,
+    "name": "Malaysia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32753,
+    "name": "Maldives",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32754,
+    "name": "Mali",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32755,
+    "name": "Malta",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32756,
+    "name": "Marshall Islands",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32757,
+    "name": "Martinique",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32758,
+    "name": "Mauritania",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32759,
+    "name": "Mauritius",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32760,
+    "name": "Mayotte",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32337,
+    "name": "Mexico",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32761,
+    "name": "Micronesia, Federated States of",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32762,
+    "name": "Moldova, Republic of",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32763,
+    "name": "Monaco",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32764,
+    "name": "Mongolia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32765,
+    "name": "Montenegro",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32766,
+    "name": "Montserrat",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32767,
+    "name": "Morocco",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32768,
+    "name": "Mozambique",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32769,
+    "name": "Myanmar",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32770,
+    "name": "Namibia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32771,
+    "name": "Nauru",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32772,
+    "name": "Nepal",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32275,
+    "name": "Netherlands",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32773,
+    "name": "New Caledonia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32338,
+    "name": "New Zealand",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32774,
+    "name": "Nicaragua",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32775,
+    "name": "Niger",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32776,
+    "name": "Nigeria",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32777,
+    "name": "Niue",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32778,
+    "name": "Norfolk Island",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32779,
+    "name": "Northern Mariana Islands",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32276,
+    "name": "Norway",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32780,
+    "name": "Oman",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32781,
+    "name": "Pakistan",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32782,
+    "name": "Palau",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32783,
+    "name": "Palestinian Territories",
+    "parent_id": 32264,
+    "notes": "The title for this category is taken from the U.S. Department of State. The link from the U.S. Department of State is https://www.state.gov/p/nea/ci/pt/. The titles for the individual series in this category are reported as the source reports them",
+    "depth": 3
+  },
+  {
+    "id": 32784,
+    "name": "Panama",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32785,
+    "name": "Papua New Guinea",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32786,
+    "name": "Paraguay",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32787,
+    "name": "Peru",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32788,
+    "name": "Philippines",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32789,
+    "name": "Pitcairn",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32339,
+    "name": "Poland",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32340,
+    "name": "Portugal",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32790,
+    "name": "Puerto Rico",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32791,
+    "name": "Qatar",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32792,
+    "name": "Reunion",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32793,
+    "name": "Romania",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32341,
+    "name": "Russian Federation",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32794,
+    "name": "Rwanda",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32796,
+    "name": "Saint Helena, Ascension and Tristan da Cunha",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32797,
+    "name": "Saint Kitts and Nevis",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32798,
+    "name": "Saint Lucia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32799,
+    "name": "Saint Martin, Collectivity of",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32800,
+    "name": "Saint Pierre and Miquelon",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32801,
+    "name": "Saint Vincent and the Grenadines",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32802,
+    "name": "Samoa",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32803,
+    "name": "San Marino",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32804,
+    "name": "Sao Tome and Principe",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32805,
+    "name": "Saudi Arabia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32806,
+    "name": "Senegal",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32807,
+    "name": "Serbia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32808,
+    "name": "Seychelles",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32809,
+    "name": "Sierra Leone",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32287,
+    "name": "Singapore",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32810,
+    "name": "Sint Maarten (Dutch part)",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32342,
+    "name": "Slovak Republic",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32343,
+    "name": "Slovenia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32811,
+    "name": "Solomon Islands",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32812,
+    "name": "Somalia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32345,
+    "name": "South Africa",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32814,
+    "name": "South Sudan",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32277,
+    "name": "Spain",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32815,
+    "name": "Sri Lanka",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32816,
+    "name": "Sudan",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32817,
+    "name": "Suriname",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32818,
+    "name": "Svalbard and Jan Mayen",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32819,
+    "name": "Swaziland",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32278,
+    "name": "Sweden",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32279,
+    "name": "Switzerland",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32820,
+    "name": "Syrian Arab Republic",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32438,
+    "name": "Taiwan",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32821,
+    "name": "Tajikistan",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32822,
+    "name": "Tanzania, United Republic of",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32823,
+    "name": "Thailand",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32824,
+    "name": "Timor-Leste",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32825,
+    "name": "Togo",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32826,
+    "name": "Tokelau",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32827,
+    "name": "Tonga",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32828,
+    "name": "Trinidad and Tobago",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32829,
+    "name": "Tunisia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32344,
+    "name": "Turkey",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32830,
+    "name": "Turkmenistan",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32831,
+    "name": "Turks and Caicos Islands",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32832,
+    "name": "Tuvalu",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32833,
+    "name": "Uganda",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32834,
+    "name": "Ukraine",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32835,
+    "name": "United Arab Emirates",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32280,
+    "name": "United Kingdom",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32267,
+    "name": "United States",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32837,
+    "name": "Uruguay",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32838,
+    "name": "Uzbekistan",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32839,
+    "name": "Vanuatu",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32840,
+    "name": "Venezuela, Bolivarian Republic of",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32841,
+    "name": "Viet Nam",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32842,
+    "name": "Virgin Islands, British",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32843,
+    "name": "Virgin Islands, U.S.",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32844,
+    "name": "Wallis and Futuna",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32845,
+    "name": "Western Sahara",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32846,
+    "name": "Yemen, Republic of",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32946,
+    "name": "Kosovo",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32847,
+    "name": "Zambia",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32848,
+    "name": "Zimbabwe",
+    "parent_id": 32264,
+    "depth": 3
+  },
+  {
+    "id": 32955,
+    "name": "Geography",
+    "parent_id": 32263,
+    "notes": "This category contains both data aggregated for a specific geographic region and a way to find country categories based upon geographic region.",
+    "depth": 2
+  },
+  {
+    "id": 32963,
+    "name": "Africa",
+    "parent_id": 32955,
+    "notes": "This category contains series aggregated over all countries in Africa, the individual countries located in Africa, and the regions of Africa as defined by the United Nations (http://unstats.un.org/unsd/methods/m49/m49regin.htm#africa).",
+    "depth": 3
+  },
+  {
+    "id": 32964,
+    "name": "Americas",
+    "parent_id": 32955,
+    "notes": "This category contains series aggregated over all countries in the Americas, the individual countries located in the Americas, and the regions of the Americas as defined by the United Nations (http://unstats.un.org/unsd/methods/m49/m49regin.htm#americas).",
+    "depth": 3
+  },
+  {
+    "id": 32965,
+    "name": "Asia",
+    "parent_id": 32955,
+    "notes": "This category contains series aggregated over all countries in Asia, the individual countries located in Asia, and the regions of Asia as defined by the United Nations (http://unstats.un.org/unsd/methods/m49/m49regin.htm#asia).",
+    "depth": 3
+  },
+  {
+    "id": 32966,
+    "name": "Europe",
+    "parent_id": 32955,
+    "notes": "This category contains series aggregated over all countries in Europe, the individual countries located in Europe, and the regions of Europe as defined by the United Nations (http://unstats.un.org/unsd/methods/m49/m49regin.htm#europe).",
+    "depth": 3
+  },
+  {
+    "id": 32967,
+    "name": "Oceania",
+    "parent_id": 32955,
+    "notes": "This category contains series aggregated over all countries in Oceania, the individual countries located in Oceania, and the regions of Oceania as defined by the United Nations (http://unstats.un.org/unsd/methods/m49/m49regin.htm#oceania).",
+    "depth": 3
+  },
+  {
+    "id": 32459,
+    "name": "World",
+    "parent_id": 32955,
+    "notes": "Series aggregated over the world.",
+    "depth": 3
+  },
+  {
+    "id": 32265,
+    "name": "Indicators",
+    "parent_id": 32263,
+    "depth": 2
+  },
+  {
+    "id": 33000,
+    "name": "Money, Banking, & Finance",
+    "parent_id": 32265,
+    "depth": 3
+  },
+  {
+    "id": 32997,
+    "name": "National Accounts",
+    "parent_id": 32265,
+    "depth": 3
+  },
+  {
+    "id": 32999,
+    "name": "Population, Employment, & Labor Markets",
+    "parent_id": 32265,
+    "depth": 3
+  },
+  {
+    "id": 32294,
+    "name": "Production & Business Activity",
+    "parent_id": 32265,
+    "depth": 3
+  },
+  {
+    "id": 32998,
+    "name": "Prices",
+    "parent_id": 32265,
+    "depth": 3
+  },
+  {
+    "id": 33247,
+    "name": "Consumer Price Index",
+    "parent_id": 32265,
+    "depth": 3
+  },
+  {
+    "id": 33254,
+    "name": "Work Started",
+    "parent_id": 32265,
+    "depth": 3
+  },
+  {
+    "id": 33261,
+    "name": "Consumer opinion surveys",
+    "parent_id": 32265,
+    "depth": 3
+  },
+  {
+    "id": 33274,
+    "name": "Business tendency surveys (construction)",
+    "parent_id": 32265,
+    "depth": 3
+  },
+  {
+    "id": 33281,
+    "name": "Business tendency surveys (services)",
+    "parent_id": 32265,
+    "depth": 3
+  },
+  {
+    "id": 33288,
+    "name": "Business tendency surveys (manufacturing)",
+    "parent_id": 32265,
+    "depth": 3
+  },
+  {
+    "id": 33344,
+    "name": "Business tendency surveys (retail trade)",
+    "parent_id": 32265,
+    "depth": 3
+  },
+  {
+    "id": 33368,
+    "name": "Business tendency surveys (non-manufacturing)",
+    "parent_id": 32265,
+    "depth": 3
+  },
+  {
+    "id": 32956,
+    "name": "Institutions",
+    "parent_id": 32263,
+    "notes": "This category contains data aggregated for multinational institutions and a way to find country series by membership to institutions.",
+    "depth": 2
+  },
+  {
+    "id": 33903,
+    "name": "Advanced Economies",
+    "parent_id": 32956,
+    "depth": 3
+  },
+  {
+    "id": 33127,
+    "name": "Association of Southeast Asian Nations (ASEAN)",
+    "parent_id": 32956,
+    "notes": "The Association of Southeast Asian Nations (ASEAN) includes Brunei Darussalam, Cambodia, Indonesia, Lao PDR, Malaysia, Myanmar, Philippines, Singapore, Thailand, and Viet Nam. (www.asean.org/asean/asean-member-states)",
+    "depth": 3
+  },
+  {
+    "id": 33126,
+    "name": "Bureau of Labor Statistics Asian Newly Industrialized Countries",
+    "parent_id": 32956,
+    "notes": "This is the list of Asian Newly Industrialized Countries as defined by the Bureau of Labor Statistics (BLS) of the U.S. Department of Labor. It includes Hong Kong, Singapore, South Korea, and Taiwan.",
+    "depth": 3
+  },
+  {
+    "id": 33124,
+    "name": "Bureau of Labor Statistics Industrialized Countries",
+    "parent_id": 32956,
+    "notes": "This is the list of industrialized countries as defined by the Bureau of Labor Statistics of the U.S. Department of Labor.  It includes Western Europe, Canada, Japan, Australia, New Zealand, and South Africa.",
+    "depth": 3
+  },
+  {
+    "id": 33128,
+    "name": "Bureau of Labor Statistics Latin America",
+    "parent_id": 32956,
+    "notes": "This is the list of Latin American countries as defined by the Bureau of Labor Statistics (BLS) of the U.S. Department of Labor. It includes Mexico, Central America, South America, and the Caribbean.",
+    "depth": 3
+  },
+  {
+    "id": 33125,
+    "name": "Bureau of Labor Statistics Pacific Rim",
+    "parent_id": 32956,
+    "notes": "This is the list of Pacific rim countries as defined by the Bureau of Labor Statistics (BLS) of the U.S. Department of Labor.  It includes China, Japan, Australia, Brunei, Indonesia, Macao, Malaysia, New Zealand, Papua New Guinea, Philippines, and the Asian Newly Industrialized Countries.  The Asian Newly Industrialized Countries is defined by the BLS as Hong Kong, Singapore, South Korea, and Taiwan.",
+    "depth": 3
+  },
+  {
+    "id": 33901,
+    "name": "Emerging Markets",
+    "parent_id": 32956,
+    "depth": 3
+  },
+  {
+    "id": 32947,
+    "name": "Euro Area",
+    "parent_id": 32956,
+    "notes": "The euro area (also known as the eurozone) consists of 19 countries that use the Euro:  Belgium, Germany, Ireland, Spain, France, Italy, Luxembourg, the Netherlands, Austria, Portugal, Finland, Greece, Slovenia, Cyprus, Malta, Slovakia, Estonia, Latvia and Lithuania.  This category includes series aggregated over these countries and series specific to member countries.",
+    "depth": 3
+  },
+  {
+    "id": 33002,
+    "name": "European Economic Area",
+    "parent_id": 32956,
+    "notes": "The European Economic Area (EEA) is comprised of the 27 European Union (EU) Member States \u2014 Austria, Belgium, Bulgaria, Cyprus, the Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, the Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden, and the United Kingdom \u2014 and the three European Free Trade Association (EFTA) States \u2014 Iceland, Liechtenstein and Norway.  (http://www.efta.int/eea/eea-agreement.aspx)",
+    "depth": 3
+  },
+  {
+    "id": 32948,
+    "name": "European Union",
+    "parent_id": 32956,
+    "notes": "The European Union (EU) is comprised of 27 countries:  Austria, Belgium, Bulgaria, Cyprus, the Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, the Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden, and the United Kingdom (http://europa.eu/about-eu/countries/index_en.htm).",
+    "depth": 3
+  },
+  {
+    "id": 32958,
+    "name": "Four Big European Countries",
+    "parent_id": 32956,
+    "notes": "The Four Big European Countries are: France, Germany, Italy, and United Kingdom as defined by the OECD (http://www.oecd.org/document/29/0,3746,en_2649_34349_35725597_1_1_1_1,00.html).",
+    "depth": 3
+  },
+  {
+    "id": 32959,
+    "name": "Group of Seven (G7)",
+    "parent_id": 32956,
+    "notes": "The Group of Seven (G7) consists of Canada, France, Germany, Italy, Japan, the United Kingdom, and the United States.  The OECD refers to G7 as the Major Seven.",
+    "depth": 3
+  },
+  {
+    "id": 33083,
+    "name": "Group of Twenty Finance Ministers and Central Bank Governors (G20)",
+    "parent_id": 32956,
+    "notes": "The Group of Twenty Finance Ministers and Central Bank Governors (also known as the G-20, G20, and Group of Twenty) is a group of finance ministers and central bank governors from 20 major economies: 19 countries plus the European Union, which is represented by the President of the European Council and by the European Central Bank.  It is composed of five groups of countries, divided as follows:\r\n\r\nGroup 1\r\nAustralia\r\nCanada\r\nSaudi Arabia\r\nUnited States\r\n\r\nGroup 2\r\nIndia\r\nRussian Federation\r\nSouth Africa\r\nTurkey\r\n\r\nGroup 3\r\nArgentina\r\nBrazil\r\nMexico\r\n\r\nGroup 4\r\nFrance\r\nGermany\r\nItaly\r\nUnited Kingdom\r\n\r\nGroup 5\r\nChina\r\nIndonesia\r\nJapan\r\nSouth Korea",
+    "depth": 3
+  },
+  {
+    "id": 33239,
+    "name": "International Monetary Fund",
+    "parent_id": 32956,
+    "depth": 3
+  },
+  {
+    "id": 33711,
+    "name": "International Organizations",
+    "parent_id": 32956,
+    "depth": 3
+  },
+  {
+    "id": 32957,
+    "name": "Major 5 Asia",
+    "parent_id": 32956,
+    "notes": "The Major 5 Asia countries are: China, India, Indonesia, Japan and Korea as defined by the OECD (http://www.oecd.org/document/29/0,3746,en_2649_34349_35725597_1_1_1_1,00.html).",
+    "depth": 3
+  },
+  {
+    "id": 32960,
+    "name": "NAFTA",
+    "parent_id": 32956,
+    "notes": "The NAFTA area covers the following 3 countries: Canada, Mexico, and the United States.",
+    "depth": 3
+  },
+  {
+    "id": 33086,
+    "name": "Non-OECD",
+    "parent_id": 32956,
+    "notes": "The Non-OECD covers the following countries: Afghanistan, Albania, Algeria, Andorra, Angola, Antigua and Barbuda, Argentina, Armenia, Azerbaijan, Bahamas, Bahrain, Bangladesh, Barbados, Belarus, Belize, Benin, Bhutan, Plurinational State of Bolivia, Bosnia and Herzegovina, Botswana, Brazil, Brunei Darussalam, Bulgaria, Burkina Faso, Burundi, Cambodia, Cameroon, Cape Verde, Central African Republic, Chad, China, Colombia, Comoros, Congo, Costa Rica, C\u00f4te D'Ivoire, Croatia, Cuba, Cyprus, Democratic People's Republic of Korea, Democratic Republic of the Congo , Djibouti, Dominica, Dominican Republic, Ecuador, Egypt, El Salvador, Equatorial Guinea, Eritrea, Ethiopia, Fiji, Gabon, Gambia, Georgia, Ghana, Grenada, Guatemala, Guinea, Guinea Bissau, Guyana, Haiti, Honduras, India, Indonesia, Islamic Republic of Iran, Iraq, Jamaica, Jordan, Kazakhstan, Kenya, Kiribati, Kuwait, Kyrgyzstan, Lao People\u2019s Democratic Republic, Latvia, Lebanon, Lesotho, Liberia, Libya, Liechtenstein, Lithuania, Madagascar, Malawi, Malaysia, Maldives, Mali, Malta, Marshall Islands, Mauritania, Mauritius, Federated States of Micronesia, Monaco, Mongolia, Montenegro, Morocco, Mozambique, Myanmar, Namibia, Nauru, Nepal, Nicaragua, Niger, Nigeria, Oman, Pakistan, Palau, Panama, Papua New Guinea, Paraguay, Peru, Philippines, Qatar, Republic of Moldova, Romania, Russian Federation, Rwanda, Saint Kitts and Nevis, Saint Lucia, Saint Vincent and the Grenadines, Samoa, San Marino, Sao Tome and Principe, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore, Solomon Islands, Somalia, South Africa, South ?Sudan, Sri Lanka, Sudan, Suriname, Swaziland, Syrian Arab Republic, Tajikistan, Thailand, The former Yugoslav Republic of Macedonia, Timor-Leste, Togo, Tonga, Trinidad and Tobago, Tunisia, Turkmenistan, Tuvalu, Uganda, Ukraine, United Arab Emirates, United Republic of Tanzania, Uruguay, Uzbekistan, Vanuatu, Bolivarian Republic of Venezuela, Viet Nam, Yemen, Zambia, and Zimbabwe",
+    "depth": 3
+  },
+  {
+    "id": 33085,
+    "name": "OECD Non-member Economies",
+    "parent_id": 32956,
+    "notes": "The OECD Non-member Economies consist of Brazil, China, India, Indonesia, the Russian Federation, and South Africa (http://www.oecd.org/std/leadingindicatorsandtendencysurveys/oecdcompositeleadingindicatorsreferenceturningpointsandcomponentseries.htm).",
+    "depth": 3
+  },
+  {
+    "id": 32962,
+    "name": "OECD Total",
+    "parent_id": 32956,
+    "notes": "The OECD-Total covers the following 34 countries:  Australia, Austria, Belgium, Canada, Chile, the Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Israel, Italy, Japan, Korea, Luxembourg, Mexico, Netherlands, New Zealand, Norway, Poland, Portugal, the Slovak Republic, Slovenia, Spain, Sweden, Switzerland, Turkey, the United Kingdom, and the United States as defined by the OECD (http://www.oecd.org/about/membersandpartners/).",
+    "depth": 3
+  },
+  {
+    "id": 32961,
+    "name": "OECD + Non-member Economies",
+    "parent_id": 32956,
+    "notes": "The OECD + Non-member economies covers the following 39 countries:  Australia, Austria, Belgium, Brazil, Canada, Chile, China, the Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, India, Indonesia, Ireland, Israel, Italy, Japan, Korea, Luxembourg, Mexico, the Netherlands, New Zealand, Norway, Poland, Portugal, the Russian Federation, the Slovak Republic, Slovenia, Spain, South Africa, Sweden, Switzerland, Turkey, the United Kingdom and the United States as defined by the OECD (http://www.oecd.org/std/leadingindicatorsandtendencysurveys/oecdcompositeleadingindicatorsreferenceturningpointsandcomponentseries.htm).",
+    "depth": 3
+  },
+  {
+    "id": 33087,
+    "name": "OECD - Europe",
+    "parent_id": 32956,
+    "depth": 3
+  },
+  {
+    "id": 33713,
+    "name": "Unidentified Countries",
+    "parent_id": 32956,
+    "depth": 3
+  },
+  {
+    "id": 33909,
+    "name": "Advance Technology Products",
+    "parent_id": 32956,
+    "notes": "Advance Technology Products",
+    "depth": 3
+  },
+  {
+    "id": 33911,
+    "name": "NICS",
+    "parent_id": 32956,
+    "notes": "Newly Industrialized Countries",
+    "depth": 3
+  },
+  {
+    "id": 33953,
+    "name": "USMCA",
+    "parent_id": 32956,
+    "notes": "United States\u2013Mexico\u2013Canada Agreement",
+    "depth": 3
+  },
+  {
+    "id": 3008,
+    "name": "U.S. Regional Data",
+    "parent_id": 0,
+    "depth": 1
+  },
+  {
+    "id": 27281,
+    "name": "States",
+    "parent_id": 3008,
+    "depth": 2
+  },
+  {
+    "id": 27282,
+    "name": "Alabama",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27283,
+    "name": "Alaska",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27284,
+    "name": "Arizona",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 149,
+    "name": "Arkansas",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27286,
+    "name": "California",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27287,
+    "name": "Colorado",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27288,
+    "name": "Connecticut",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27289,
+    "name": "Delaware",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27290,
+    "name": "District of Columbia",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27291,
+    "name": "Florida",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27292,
+    "name": "Georgia",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27293,
+    "name": "Hawaii",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27294,
+    "name": "Idaho",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 150,
+    "name": "Illinois",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 151,
+    "name": "Indiana",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27297,
+    "name": "Iowa",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27298,
+    "name": "Kansas",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 152,
+    "name": "Kentucky",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27300,
+    "name": "Louisiana",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27301,
+    "name": "Maine",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27302,
+    "name": "Maryland",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27303,
+    "name": "Massachusetts",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27304,
+    "name": "Michigan",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27305,
+    "name": "Minnesota",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 153,
+    "name": "Mississippi",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 154,
+    "name": "Missouri",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27308,
+    "name": "Montana",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27309,
+    "name": "Nebraska",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27310,
+    "name": "Nevada",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27311,
+    "name": "New Hampshire",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27312,
+    "name": "New Jersey",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27313,
+    "name": "New Mexico",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27314,
+    "name": "New York",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27315,
+    "name": "North Carolina",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27316,
+    "name": "North Dakota",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27317,
+    "name": "Ohio",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27318,
+    "name": "Oklahoma",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27319,
+    "name": "Oregon",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27320,
+    "name": "Pennsylvania",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 33504,
+    "name": "Puerto Rico",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27322,
+    "name": "Rhode Island",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27323,
+    "name": "South Carolina",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27324,
+    "name": "South Dakota",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 193,
+    "name": "Tennessee",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27326,
+    "name": "Texas",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27328,
+    "name": "Utah",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27329,
+    "name": "Vermont",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 33605,
+    "name": "Virgin Islands",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27330,
+    "name": "Virginia",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27332,
+    "name": "West Virginia",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27331,
+    "name": "Washington",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27333,
+    "name": "Wisconsin",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 27334,
+    "name": "Wyoming",
+    "parent_id": 27281,
+    "depth": 3
+  },
+  {
+    "id": 32043,
+    "name": "Census Regions",
+    "parent_id": 3008,
+    "depth": 2
+  },
+  {
+    "id": 32044,
+    "name": "Midwest",
+    "parent_id": 32043,
+    "depth": 3
+  },
+  {
+    "id": 32045,
+    "name": "Northeast",
+    "parent_id": 32043,
+    "depth": 3
+  },
+  {
+    "id": 32046,
+    "name": "South",
+    "parent_id": 32043,
+    "depth": 3
+  },
+  {
+    "id": 32047,
+    "name": "West",
+    "parent_id": 32043,
+    "depth": 3
+  },
+  {
+    "id": 32061,
+    "name": "BEA Regions",
+    "parent_id": 3008,
+    "depth": 2
+  },
+  {
+    "id": 32062,
+    "name": "Far West",
+    "parent_id": 32061,
+    "depth": 3
+  },
+  {
+    "id": 32063,
+    "name": "Great Lakes",
+    "parent_id": 32061,
+    "depth": 3
+  },
+  {
+    "id": 32064,
+    "name": "Mideast",
+    "parent_id": 32061,
+    "depth": 3
+  },
+  {
+    "id": 32065,
+    "name": "New England",
+    "parent_id": 32061,
+    "depth": 3
+  },
+  {
+    "id": 32066,
+    "name": "Plains",
+    "parent_id": 32061,
+    "depth": 3
+  },
+  {
+    "id": 32067,
+    "name": "Rocky Mountain",
+    "parent_id": 32061,
+    "depth": 3
+  },
+  {
+    "id": 32068,
+    "name": "Southeast",
+    "parent_id": 32061,
+    "depth": 3
+  },
+  {
+    "id": 32069,
+    "name": "Southwest",
+    "parent_id": 32061,
+    "depth": 3
+  },
+  {
+    "id": 32849,
+    "name": "BLS Regions",
+    "parent_id": 3008,
+    "depth": 2
+  },
+  {
+    "id": 32851,
+    "name": "Midwest Urban",
+    "parent_id": 32849,
+    "depth": 3
+  },
+  {
+    "id": 32850,
+    "name": "Northeast Urban",
+    "parent_id": 32849,
+    "depth": 3
+  },
+  {
+    "id": 32852,
+    "name": "South Urban",
+    "parent_id": 32849,
+    "depth": 3
+  },
+  {
+    "id": 32853,
+    "name": "West Urban",
+    "parent_id": 32849,
+    "depth": 3
+  },
+  {
+    "id": 32860,
+    "name": "Population Size Class A (over 1,500,000)",
+    "parent_id": 32849,
+    "depth": 3
+  },
+  {
+    "id": 32861,
+    "name": "Population Size Class B/C (between 50,000 and 1,500,000)",
+    "parent_id": 32849,
+    "depth": 3
+  },
+  {
+    "id": 32862,
+    "name": "Population Size Class D (under 50,000)",
+    "parent_id": 32849,
+    "depth": 3
+  },
+  {
+    "id": 32071,
+    "name": "Federal Reserve Districts",
+    "parent_id": 3008,
+    "depth": 2
+  },
+  {
+    "id": 32146,
+    "name": "Atlanta",
+    "parent_id": 32071,
+    "depth": 3
+  },
+  {
+    "id": 32147,
+    "name": "Boston",
+    "parent_id": 32071,
+    "depth": 3
+  },
+  {
+    "id": 32148,
+    "name": "Chicago",
+    "parent_id": 32071,
+    "depth": 3
+  },
+  {
+    "id": 32149,
+    "name": "Cleveland",
+    "parent_id": 32071,
+    "depth": 3
+  },
+  {
+    "id": 32150,
+    "name": "Dallas",
+    "parent_id": 32071,
+    "depth": 3
+  },
+  {
+    "id": 32151,
+    "name": "Kansas City",
+    "parent_id": 32071,
+    "depth": 3
+  },
+  {
+    "id": 32152,
+    "name": "Minneapolis",
+    "parent_id": 32071,
+    "depth": 3
+  },
+  {
+    "id": 32153,
+    "name": "New York",
+    "parent_id": 32071,
+    "depth": 3
+  },
+  {
+    "id": 32154,
+    "name": "Philadelphia",
+    "parent_id": 32071,
+    "depth": 3
+  },
+  {
+    "id": 32155,
+    "name": "Richmond",
+    "parent_id": 32071,
+    "depth": 3
+  },
+  {
+    "id": 32156,
+    "name": "San Francisco",
+    "parent_id": 32071,
+    "depth": 3
+  },
+  {
+    "id": 133,
+    "name": "St. Louis",
+    "parent_id": 32071,
+    "notes": "* The FRB-St. Louis District States include Arkansas, Illinois, Indiana, Kentucky, Mississippi, Missouri and Tennessee.\r\n\r\n** The FRB-St. Louis District Counties and MSAs are located in Arkansas, southern Illinois, southern Indiana, western Kentucky, northern Mississippi, eastern Missouri and western Tennessee.",
+    "depth": 3
+  },
+  {
+    "id": 32233,
+    "name": "Freddie Mac Regions",
+    "parent_id": 3008,
+    "depth": 2
+  },
+  {
+    "id": 32236,
+    "name": "North Central",
+    "parent_id": 32233,
+    "depth": 3
+  },
+  {
+    "id": 32234,
+    "name": "Northeast",
+    "parent_id": 32233,
+    "depth": 3
+  },
+  {
+    "id": 32235,
+    "name": "Southeast",
+    "parent_id": 32233,
+    "depth": 3
+  },
+  {
+    "id": 32237,
+    "name": "Southwest",
+    "parent_id": 32233,
+    "depth": 3
+  },
+  {
+    "id": 32238,
+    "name": "West",
+    "parent_id": 32233,
+    "depth": 3
+  },
+  {
+    "id": 33060,
+    "name": "Academic Data",
+    "parent_id": 0,
+    "depth": 1
+  },
+  {
+    "id": 33833,
+    "name": "Banking and Monetary Statistics, 1914-1941",
+    "parent_id": 33060,
+    "notes": "This data is from the Board of Governors' Banking and Monetary Statistics 1914-1941 publication.",
+    "depth": 2
+  },
+  {
+    "id": 33835,
+    "name": "Section 1. General Statistics of All Banks in the United States",
+    "parent_id": 33833,
+    "notes": "This is the first section of tables in the Banking and Monetary Statistics 1914-1941 from the Board of Governors.",
+    "depth": 3
+  },
+  {
+    "id": 33837,
+    "name": "Section 2. Assets and Liabilities of All Member Banks",
+    "parent_id": 33833,
+    "notes": "This is the second section of tables in the Banking and Monetary Statistics 1914-1941 from the Board of Governors.",
+    "depth": 3
+  },
+  {
+    "id": 33951,
+    "name": "Daily Federal Funds Rate, 1928-54",
+    "parent_id": 33060,
+    "depth": 2
+  },
+  {
+    "id": 33825,
+    "name": "Data on the nominal term structure model from Kim and Wright",
+    "parent_id": 33060,
+    "depth": 2
+  },
+  {
+    "id": 33891,
+    "name": "Historical Federal Reserve Data",
+    "parent_id": 33060,
+    "depth": 2
+  },
+  {
+    "id": 33061,
+    "name": "NBER Macrohistory Database",
+    "parent_id": 33060,
+    "depth": 2
+  },
+  {
+    "id": 33062,
+    "name": "Production of Commodities",
+    "parent_id": 33061,
+    "depth": 3
+  },
+  {
+    "id": 33063,
+    "name": "Construction",
+    "parent_id": 33061,
+    "depth": 3
+  },
+  {
+    "id": 33064,
+    "name": "Transportation and Public Utilities",
+    "parent_id": 33061,
+    "depth": 3
+  },
+  {
+    "id": 33065,
+    "name": "Prices",
+    "parent_id": 33061,
+    "depth": 3
+  },
+  {
+    "id": 33066,
+    "name": "Stocks of Commodities",
+    "parent_id": 33061,
+    "depth": 3
+  },
+  {
+    "id": 33067,
+    "name": "Distribution of Commodities",
+    "parent_id": 33061,
+    "depth": 3
+  },
+  {
+    "id": 33068,
+    "name": "Foreign Trade",
+    "parent_id": 33061,
+    "depth": 3
+  },
+  {
+    "id": 33069,
+    "name": "Income and Employment",
+    "parent_id": 33061,
+    "depth": 3
+  },
+  {
+    "id": 33070,
+    "name": "Financial Status of Business",
+    "parent_id": 33061,
+    "depth": 3
+  },
+  {
+    "id": 33071,
+    "name": "Savings and Investment",
+    "parent_id": 33061,
+    "depth": 3
+  },
+  {
+    "id": 33072,
+    "name": "Security Markets",
+    "parent_id": 33061,
+    "depth": 3
+  },
+  {
+    "id": 33073,
+    "name": "Volume of Transactions",
+    "parent_id": 33061,
+    "depth": 3
+  },
+  {
+    "id": 33074,
+    "name": "Interest Rates",
+    "parent_id": 33061,
+    "depth": 3
+  },
+  {
+    "id": 33075,
+    "name": "Money and Banking",
+    "parent_id": 33061,
+    "depth": 3
+  },
+  {
+    "id": 33076,
+    "name": "Government and Finance",
+    "parent_id": 33061,
+    "depth": 3
+  },
+  {
+    "id": 33077,
+    "name": "Leading Indicators",
+    "parent_id": 33061,
+    "depth": 3
+  },
+  {
+    "id": 33100,
+    "name": "Penn World Table 7.1",
+    "parent_id": 33060,
+    "depth": 2
+  },
+  {
+    "id": 33107,
+    "name": "Component Shares of GDP per Capita (Constant Prices)",
+    "parent_id": 33100,
+    "depth": 3
+  },
+  {
+    "id": 33106,
+    "name": "Component Shares of GDP per Capita (Current Prices)",
+    "parent_id": 33100,
+    "depth": 3
+  },
+  {
+    "id": 33102,
+    "name": "Exchange Rates",
+    "parent_id": 33100,
+    "depth": 3
+  },
+  {
+    "id": 33110,
+    "name": "GDP per Capita (Current Prices)",
+    "parent_id": 33100,
+    "depth": 3
+  },
+  {
+    "id": 33112,
+    "name": "Gross Domestic Income, Adjustments for Changes in Terms of Trade",
+    "parent_id": 33100,
+    "depth": 3
+  },
+  {
+    "id": 33105,
+    "name": "Openness",
+    "parent_id": 33100,
+    "notes": "Exports plus Imports divided by GDP is the total trade as a percentage of GDP.",
+    "depth": 3
+  },
+  {
+    "id": 33101,
+    "name": "Population",
+    "parent_id": 33100,
+    "depth": 3
+  },
+  {
+    "id": 33104,
+    "name": "Price Levels of GDP, Consumption, Government, and Investment",
+    "parent_id": 33100,
+    "depth": 3
+  },
+  {
+    "id": 33103,
+    "name": "Purchasing Power Parity",
+    "parent_id": 33100,
+    "depth": 3
+  },
+  {
+    "id": 33118,
+    "name": "Purchasing Power Parity Converted GDP",
+    "parent_id": 33100,
+    "depth": 3
+  },
+  {
+    "id": 33108,
+    "name": "Ratio of GNP to GDP",
+    "parent_id": 33100,
+    "depth": 3
+  },
+  {
+    "id": 33111,
+    "name": "Real GDP per Capita (Constant Prices)",
+    "parent_id": 33100,
+    "depth": 3
+  },
+  {
+    "id": 33109,
+    "name": "Real GDP per Capita Relative to U.S.",
+    "parent_id": 33100,
+    "depth": 3
+  },
+  {
+    "id": 33113,
+    "name": "Real GDP per Equivalent Adult",
+    "parent_id": 33100,
+    "depth": 3
+  },
+  {
+    "id": 33117,
+    "name": "Real GDP per Hour Worked by Employees",
+    "parent_id": 33100,
+    "depth": 3
+  },
+  {
+    "id": 33115,
+    "name": "Real GDP per Person Engaged",
+    "parent_id": 33100,
+    "depth": 3
+  },
+  {
+    "id": 33116,
+    "name": "Real GDP per Person Counted in Total Employment",
+    "parent_id": 33100,
+    "depth": 3
+  },
+  {
+    "id": 33114,
+    "name": "Real GDP per Worker",
+    "parent_id": 33100,
+    "depth": 3
+  },
+  {
+    "id": 33402,
+    "name": "Penn World Table 9.0",
+    "parent_id": 33060,
+    "depth": 2
+  },
+  {
+    "id": 33403,
+    "name": "Real GDP, Employment and Population Levels",
+    "parent_id": 33402,
+    "depth": 3
+  },
+  {
+    "id": 33404,
+    "name": "Current Price GDP, Capital and Total Factor Productivity",
+    "parent_id": 33402,
+    "depth": 3
+  },
+  {
+    "id": 33405,
+    "name": "National Accounts-Based Variables",
+    "parent_id": 33402,
+    "depth": 3
+  },
+  {
+    "id": 33406,
+    "name": "Exchange Rates and GDP Price Levels",
+    "parent_id": 33402,
+    "depth": 3
+  },
+  {
+    "id": 33407,
+    "name": "Shares in Output-side Real GDP at Current Purchasing Power Parities",
+    "parent_id": 33402,
+    "depth": 3
+  },
+  {
+    "id": 33408,
+    "name": "Price Levels, Expenditure Categories and Capital",
+    "parent_id": 33402,
+    "depth": 3
+  },
+  {
+    "id": 33120,
+    "name": "Recession Probabilities",
+    "parent_id": 33060,
+    "depth": 2
+  },
+  {
+    "id": 33123,
+    "name": "Weekly U.S. and State Bond Prices, 1855-1865",
+    "parent_id": 33060,
+    "depth": 2
+  },
+  {
+    "id": 33201,
+    "name": "Economic Policy Uncertainty",
+    "parent_id": 33060,
+    "depth": 2
+  },
+  {
+    "id": 33442,
+    "name": "Sticky Wages and Comovement",
+    "parent_id": 33060,
+    "depth": 2
+  },
+  {
+    "id": 33839,
+    "name": "A Millennium of Macroeconomic Data for the UK",
+    "parent_id": 33060,
+    "depth": 2
+  },
+  {
+    "id": 33845,
+    "name": "National Accounts",
+    "parent_id": 33839,
+    "depth": 3
+  },
+  {
+    "id": 33843,
+    "name": "Labour, Capital and Productivity",
+    "parent_id": 33839,
+    "depth": 3
+  },
+  {
+    "id": 33847,
+    "name": "Wages and Prices",
+    "parent_id": 33839,
+    "depth": 3
+  },
+  {
+    "id": 33849,
+    "name": "Financial Markets",
+    "parent_id": 33839,
+    "depth": 3
+  },
+  {
+    "id": 33851,
+    "name": "Money and Credit",
+    "parent_id": 33839,
+    "depth": 3
+  },
+  {
+    "id": 33853,
+    "name": "Fiscal",
+    "parent_id": 33839,
+    "depth": 3
+  },
+  {
+    "id": 33855,
+    "name": "Trade",
+    "parent_id": 33839,
+    "depth": 3
+  },
+  {
+    "id": 33934,
+    "name": "New England Textile Industry, 1815-1860",
+    "parent_id": 33060,
+    "depth": 2
+  },
+  {
+    "id": 34000,
+    "name": "The Effects of the 1930s HOLC \"Redlining\" Maps",
+    "parent_id": 33060,
+    "depth": 2
+  }
+]

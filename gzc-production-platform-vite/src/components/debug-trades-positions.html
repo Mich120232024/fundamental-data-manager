@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Trades/Positions Toggle</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .buttons { margin: 20px 0; }
+        button { padding: 10px 20px; margin: 0 5px; cursor: pointer; }
+        button.active { background: #4CAF50; color: white; }
+        .content { border: 1px solid #ccc; padding: 20px; min-height: 200px; }
+        .loading { opacity: 0.5; }
+        .error { color: red; }
+        .log { background: #f5f5f5; padding: 10px; margin: 10px 0; font-family: monospace; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Debug: Trades/Positions Toggle</h1>
+        
+        <div class="buttons">
+            <button id="tradesBtn" class="active" onclick="switchView('trades')">Trades</button>
+            <button id="positionsBtn" onclick="switchView('positions')">Positions</button>
+        </div>
+        
+        <div id="content" class="content">
+            <div id="loading" style="display:none;">Loading...</div>
+            <div id="error" class="error" style="display:none;"></div>
+            <div id="data"></div>
+        </div>
+        
+        <h3>Debug Log:</h3>
+        <div id="log" class="log"></div>
+    </div>
+
+    <script>
+        let currentView = 'trades';
+        let isLoading = false;
+        
+        function log(message) {
+            const logDiv = document.getElementById('log');
+            const timestamp = new Date().toLocaleTimeString();
+            logDiv.innerHTML += `[${timestamp}] ${message}<br>`;
+            console.log(message);
+        }
+        
+        function switchView(view) {
+            log(`switchView called with: ${view}`);
+            
+            if (view === currentView) {
+                log(`Already on ${view} view, skipping`);
+                return;
+            }
+            
+            if (isLoading) {
+                log(`Currently loading, ignoring click`);
+                return;
+            }
+            
+            // Update UI
+            document.getElementById('tradesBtn').classList.toggle('active', view === 'trades');
+            document.getElementById('positionsBtn').classList.toggle('active', view === 'positions');
+            
+            currentView = view;
+            log(`View changed to: ${currentView}`);
+            
+            // Fetch data
+            fetchData(view);
+        }
+        
+        async function fetchData(view) {
+            log(`fetchData called for: ${view}`);
+            isLoading = true;
+            
+            // Show loading
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('error').style.display = 'none';
+            document.getElementById('data').innerHTML = '';
+            
+            try {
+                const endpoint = view === 'trades' 
+                    ? '/api/fx-forward-trades?active_status=active&fund_id=6'
+                    : '/api/fx-positions?fund_id=6&active_status=active';
+                
+                log(`Fetching from: ${endpoint}`);
+                
+                const response = await fetch(endpoint);
+                log(`Response status: ${response.status}`);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                log(`Data received: ${JSON.stringify(data).substring(0, 100)}...`);
+                
+                // Display data
+                displayData(view, data);
+                
+            } catch (error) {
+                log(`Error: ${error.message}`);
+                document.getElementById('error').style.display = 'block';
+                document.getElementById('error').textContent = `Error: ${error.message}`;
+            } finally {
+                isLoading = false;
+                document.getElementById('loading').style.display = 'none';
+                log(`Loading complete for ${view}`);
+            }
+        }
+        
+        function displayData(view, data) {
+            const dataDiv = document.getElementById('data');
+            
+            if (view === 'trades') {
+                const trades = data.trades || [];
+                dataDiv.innerHTML = `
+                    <h2>Trades View</h2>
+                    <p>Found ${trades.length} trades</p>
+                    <ul>
+                        ${trades.slice(0, 5).map(t => `<li>${t.id} - ${t.currency_pair} - ${t.notional}</li>`).join('')}
+                    </ul>
+                `;
+            } else {
+                const positions = data.positions || [];
+                dataDiv.innerHTML = `
+                    <h2>Positions View</h2>
+                    <p>Found ${positions.length} positions</p>
+                    <ul>
+                        ${positions.slice(0, 5).map(p => `<li>${p.currency_pair} - ${p.net_position}</li>`).join('')}
+                    </ul>
+                `;
+            }
+        }
+        
+        // Load initial data
+        log('Page loaded, fetching initial trades data');
+        fetchData('trades');
+    </script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# FRED Enterprise Data Platform - Comprehensive Development Rules
+
+## 🎯 **Project Overview - ENTERPRISE SCOPE**
+
+This is the **FRED (Federal Reserve Economic Data) Enterprise Data Platform** - a complete operational data platform for systematic collection, real-time monitoring, and automated management of ALL FRED metadata. **NOT just data collection** - this is a full Azure enterprise platform with event-driven architecture.
+
+### **Expanded Enterprise Scope**
+- ✅ **Systematic Data Collection**: 730k+ series across 31 FRED API endpoints
+- 🆕 **Real-Time Monitoring**: FRED release detection and automated alerts
+- 🆕 **Event-Driven Architecture**: Event Hub + Stream Analytics integration  
+- 🆕 **Automated Operations**: Incremental updates and refresh workflows
+- 🆕 **Production Monitoring**: Full observability, alerting, and operational excellence
+- 🆕 **API Management**: Controlled data access and consumption layer
+
+### **Key Constraints & Reality Checks**
+- **API Rate Limit**: 120 calls/minute (CRITICAL constraint affecting ALL implementations)
+- **Data Volume**: ~730,000 series requiring systematic collection approach
+- **Unknown Factor**: Whether rate limiting is per-key or per-IP (affects Azure scaling strategy)
+- **Quality Standard**: A+ enterprise-grade deliverables required throughout
+
+---
+
+## 👥 **Team Structure & Clear Role Boundaries**
+
+### **Claude Code** = **"The Monkey"** 🐒
+- **Role**: Primary implementation coder with terminal integration
+- **Current Quality Grade**: A (8.5-9/10) - **DRAMATIC IMPROVEMENT FROM F (2/10)**
+- **Strengths**: Systematic execution, proven large-scale data collection, Azure-ready deliverables
+- **Scope**: Implementation code, data collection scripts, Azure deployment code
+- **Workspace**: [fred_metadata_extraction/](mdc:fred_metadata_extraction/) and [Workspace-01/Safe/](mdc:fred_metadata_extraction/Workspace-01/Safe/)
+- **Quality Evolution**: From dishonest reporting to exceptional delivery (5,183 categories, professional docs)
+
+### **Development Flow Guardian** 👁️
+- **Role**: Quality oversight, governance, process control, reality verification
+- **Scope**: ONLY governance, quality control, process documentation, strategic oversight
+- **Workspace**: [oversight/](mdc:oversight/) directory exclusively
+- **FORBIDDEN**: Writing implementation code, direct coding in Safe workspace
+- **Focus**: Quality assessments, memory management, strategic analysis, Azure reality checks
+
+### **User** = **Project Manager** 👑
+- **Role**: Strategic decisions, scope management, resource allocation
+- **Authority**: Final approval on all major decisions and scope changes
+- **Coordination**: Azure Copilot integration, higher-level oversight management
+
+### **Azure Copilot** = **Enterprise Architecture Analyst** 🏗️
+- **Role**: Azure solution design, resource planning, architecture recommendations
+- **Input**: Comprehensive packages from Safe workspace
+- **Output**: Enterprise Azure deployment strategies and resource specifications
+
+---
+
+## 🔒 **Safe Workspace Governance Model**
+
+### **Workspace-01/Safe/ Protection**
+- **Purpose**: Curated enterprise-ready deliverables for Azure Copilot analysis
+- **Quality Standard**: A+ grade required for all contents
+- **Access Control**: Only Claude Code writes implementation content
+- **Oversight**: Development Flow Guardian reviews and validates quality
+- **Contents Include**:
+  - [README.md](mdc:fred_metadata_extraction/Workspace-01/Safe/README.md) - Enterprise architecture documentation
+  - [fred_metadata_schema_analysis.md](mdc:fred_metadata_extraction/Workspace-01/Safe/fred_metadata_schema_analysis.md) - Complete schema mapping
+  - [sample_150_series_complete.json](mdc:fred_metadata_extraction/Workspace-01/Safe/sample_150_series_complete.json) - Validated sample data
+  - [collect_150_series_total.py](mdc:fred_metadata_extraction/Workspace-01/Safe/collect_150_series_total.py) - Proven collection methodology
+
+### **Quality Gates**
+- **Pre-Azure Analysis**: All Safe contents must pass Development Flow Guardian review
+- **Version Control**: Complete audit trail required for all changes
+- **Documentation Standards**: Enterprise-grade documentation with deployment readiness
+- **Testing Protocols**: Comprehensive validation before Azure deployment
+
+---
+
+## 🏗️ **Enterprise Architecture Requirements**
+
+### **Core Platform Components**
+```
+FRED API → Event Hub → Stream Analytics → Delta Lake
+    ↓           ↓            ↓            ↓
+Monitoring   Alerting   Processing   API Layer
+```
+
+### **Azure Services Integration**
+- **Event Hub**: Release detection and event triggering
+- **Stream Analytics**: Real-time processing and incremental updates
+- **Synapse Spark**: Batch processing and systematic collection
+- **Delta Lake**: Primary data storage with versioning
+- **Application Insights**: Monitoring and observability
+- **Logic Apps**: Workflow automation and orchestration
+
+### **Operational Requirements**
+- **Release Monitoring**: Automatic detection of FRED updates
+- **Error Recovery**: Robust failure handling and retry mechanisms
+- **Data Quality**: Validation rules and monitoring alerts
+- **Performance**: Sub-second query response for common operations
+- **Security**: Enterprise-grade RBAC and data encryption
+
+---
+
+## 📋 **Memory Management & Project Context**
+
+### **Active Memory System**
+- **Location**: [oversight/claude_memory_management/](mdc:oversight/claude_memory_management/)
+- **Core Index**: [memory_index.md](mdc:oversight/claude_memory_management/memory_index.md)
+- **Integration Strategy**: [deep_integration_strategy.md](mdc:oversight/claude_memory_management/deep_integration_strategy.md)
+- **Quality Tracking**: Continuous Claude Code performance monitoring
+- **Behavioral Principles**: [memory_principles_index.md](mdc:oversight/claude_memory_management/memory_principles_index.md)
+
+### **Project Management Documentation**
+- **Strategic Analysis**: [next_phase_strategic_analysis.md](mdc:oversight/project_management/next_phase_strategic_analysis.md)
+- **Rate Limit Investigation**: [fred_api_rate_limit_analysis.md](mdc:oversight/project_management/fred_api_rate_limit_analysis.md)
+- **Synapse Methodology**: [synapse_spark_methodology.md](mdc:oversight/project_management/synapse_spark_methodology.md)
+
+### **Quality Control Framework**
+- **Assessment Reports**: [oversight/quality_control/](mdc:oversight/quality_control/)
+- **Category Collection Review**: [category_collection_assessment_2025-06-01.md](mdc:oversight/quality_control/category_collection_assessment_2025-06-01.md)
+- **Safe Workspace Review**: [workspace01_safe_assessment_2025-06-01.md](mdc:oversight/quality_control/workspace01_safe_assessment_2025-06-01.md)
+
+---
+
+## 🎯 **Development Workflow & Phase Management**
+
+### **Phase 1: Foundation** ✅ **COMPLETE**
+- **Foundation Data**: 91 sources, 326 releases, 8k+ tags, 5,183 categories
+- **Methodology Validation**: 150 series sample with proven collection approach
+- **Quality Achievement**: Dramatic improvement from F to A+ grades
+- **Safe Deliverables**: Enterprise-ready documentation and samples
+
+### **Phase 2A: Comprehensive Review** 🔄 **ACTIVE**
+- **Scope**: Claude Code completing comprehensive Safe package
+- **Validation**: Development Flow Guardian quality assessment
+- **Gate**: All API constraints and technical findings verified
+- **Output**: Complete package ready for Azure Copilot analysis
+
+### **Phase 2B: Management Sign-Off** 📋 **NEXT**
+- **Executive Summary**: Complete project brief for Azure Copilot
+- **Requirements Analysis**: Full operational platform specifications
+- **Architecture Blueprint**: Enterprise data platform design
+- **Risk Assessment**: Deployment considerations and mitigation strategies
+
+### **Phase 3: Azure Implementation** 🚀 **FUTURE**
+- **Infrastructure Setup**: Enterprise-grade Azure resource deployment
+- **Platform Development**: Event-driven architecture implementation
+- **Operational Deployment**: Production monitoring and automation
+- **Multi-Layer Oversight**: Higher-level eyes for Azure reality validation
+
+---
+
+## 🚨 **Critical Success Factors**
+
+### **API Rate Limiting Reality**
+- **Known Constraint**: 120 calls/minute maximum
+- **Unknown Factor**: Per-key vs per-IP implementation affects scaling strategy
+- **Impact**: Determines 1 hour vs 101 hours for full collection in Azure
+- **Status**: Requires testing to resolve - critical path blocker
+
+### **Quality Standards Enforcement**
+- **A+ Standard**: All deliverables must meet enterprise deployment criteria
+- **Truth Verification**: All claims must be validated against actual data
+- **Documentation Excellence**: Professional-grade docs required throughout
+- **Azure Reality Checks**: Verify Azure capabilities and realistic cost estimates
+
+### **Governance & Risk Management**
+- **Role Boundary Enforcement**: Strict separation between implementation and oversight
+- **Safe Workspace Protection**: Quality gates and version control
+- **Hallucination Prevention**: Challenge overly optimistic technical claims
+- **Multi-Layer Review**: Additional oversight for Azure deployment validation
+
+---
+
+## 📊 **Data Assets & Current Status**
+
+### **Completed Foundation Data**
+- **Sources**: [fred_complete_data/sources_all.json](mdc:fred_metadata_extraction/fred_complete_data/sources_all.json) - 91 sources
+- **Releases**: [fred_complete_data/releases_all.json](mdc:fred_metadata_extraction/fred_complete_data/releases_all.json) - 326 releases  
+- **Tags**: [fred_complete_data/tags_complete.json](mdc:fred_metadata_extraction/fred_complete_data/tags_complete.json) - 8k+ tags
+- **Categories**: [fred_complete_data/categories_complete_hierarchy.json](mdc:fred_metadata_extraction/fred_complete_data/categories_complete_hierarchy.json) - 5,183 categories
+
+### **Sample & Methodology Validation**
+- **API Testing**: [fred_complete_data/metadata_test_results.json](mdc:fred_metadata_extraction/fred_complete_data/metadata_test_results.json)
+- **Endpoint Analysis**: [fred_31_endpoints_detailed_review.md](mdc:fred_metadata_extraction/fred_31_endpoints_detailed_review.md)
+- **Relationship Data**: [fred_complete_data/tag_relationships/](mdc:fred_metadata_extraction/fred_complete_data/tag_relationships/)
+
+---
+
+## 🎯 **Immediate Priorities & Action Items**
+
+### **For Claude Code (Implementation Focus)**
+1. **Complete Safe Package**: Finalize all enterprise-ready deliverables
+2. **API Constraint Documentation**: Complete findings on batch limits and edge cases
+3. **Methodology Validation**: Ensure all collection approaches are thoroughly tested
+4. **Azure Preparation**: Organize all scripts and documentation for deployment analysis
+
+### **For Development Flow Guardian (Oversight Focus)**
+1. **Quality Gate Review**: Comprehensive assessment of completed Safe package
+2. **Management Brief Creation**: Executive summary for Azure Copilot analysis
+3. **Risk Assessment**: Deployment considerations and mitigation strategies
+4. **Azure Reality Validation**: Verify technical claims and resource estimates
+
+### **For Azure Copilot (Future Analysis)**
+1. **Architecture Design**: Event-driven platform recommendations
+2. **Resource Planning**: Compute, storage, and networking specifications
+3. **Cost Optimization**: Budget estimates and optimization strategies
+4. **Operational Framework**: Monitoring, alerting, and maintenance procedures
+
+---
+
+## 🔄 **Continuous Improvement & Learning**
+
+### **Quality Evolution Tracking**
+- **Historical Context**: Remember Claude Code's journey from F (2/10) to A (8.5-9/10)
+- **Success Patterns**: Systematic execution, adaptive rate limiting, professional documentation
+- **Risk Awareness**: Scope creep prevention, truth verification, reality checking
+- **Memory Retention**: Complete project context preserved across sessions
+
+### **Technical Debt Management**
+- **Documentation Standards**: Maintain enterprise-grade documentation throughout
+- **Code Quality**: Ensure all scripts meet production deployment standards
+- **Testing Coverage**: Comprehensive validation for all major components
+- **Performance Optimization**: Continuous monitoring and improvement cycles
+
+---
+
+**Project Status**: **ENTERPRISE PLATFORM SCOPE** - Transitioning to Azure deployment readiness  
+**Current Phase**: Comprehensive Safe package completion and quality review  
+**Risk Level**: **MANAGED** - Multi-layer oversight with Azure reality validation  
+**Success Probability**: **HIGH** - Based on proven systematic execution and quality improvement

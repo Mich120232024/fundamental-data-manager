@@ -1,0 +1,1788 @@
+{
+  "collection_metadata": {
+    "timestamp": "2025-06-02T00:08:02.109831",
+    "tags_analyzed": 29,
+    "successful": 24,
+    "api_calls": 29,
+    "total_relationships": 66448
+  },
+  "summary_stats": {
+    "average_relationships_per_tag": 2768.6666666666665,
+    "most_connected_tags": [
+      [
+        "usa",
+        5918
+      ],
+      [
+        "monthly",
+        5414
+      ],
+      [
+        "annual",
+        5134
+      ],
+      [
+        "quarterly",
+        4713
+      ],
+      [
+        "rate",
+        4615
+      ],
+      [
+        "employment",
+        4553
+      ],
+      [
+        "bls",
+        4486
+      ],
+      [
+        "census",
+        4429
+      ],
+      [
+        "bea",
+        4341
+      ],
+      [
+        "gdp",
+        4277
+      ]
+    ],
+    "category_averages": {
+      "economic": 2349.25,
+      "geographic": 1745.25,
+      "frequency": 3923.75,
+      "source": 3512.5,
+      "sector": 1685.0,
+      "type": 4470.333333333333,
+      "special": 174.0
+    },
+    "most_common_connections": [
+      [
+        "nsa",
+        24
+      ],
+      [
+        "public domain: citation requested",
+        21
+      ],
+      [
+        "usa",
+        20
+      ],
+      [
+        "nation",
+        19
+      ],
+      [
+        "annual",
+        15
+      ],
+      [
+        "monthly",
+        11
+      ],
+      [
+        "copyrighted: citation required",
+        10
+      ],
+      [
+        "county",
+        9
+      ],
+      [
+        "bls",
+        8
+      ],
+      [
+        "mei",
+        6
+      ]
+    ]
+  },
+  "relationships": {
+    "gdp": {
+      "source_tag": "gdp",
+      "category": "economic",
+      "related_count": 4277,
+      "total_available": 4277,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 70742,
+          "popularity": 99
+        },
+        {
+          "name": "annual",
+          "group_id": "freq",
+          "series_count": 64542,
+          "popularity": 92
+        },
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 64082,
+          "popularity": 100
+        },
+        {
+          "name": "usa",
+          "group_id": "geo",
+          "series_count": 59886,
+          "popularity": 100
+        },
+        {
+          "name": "bea",
+          "group_id": "src",
+          "series_count": 59828,
+          "popularity": 78
+        },
+        {
+          "name": "industry",
+          "group_id": "gen",
+          "series_count": 44102,
+          "popularity": 78
+        },
+        {
+          "name": "private",
+          "group_id": "gen",
+          "series_count": 36010,
+          "popularity": 69
+        },
+        {
+          "name": "real",
+          "group_id": "gen",
+          "series_count": 29370,
+          "popularity": 73
+        },
+        {
+          "name": "nation",
+          "group_id": "geot",
+          "series_count": 27142,
+          "popularity": 96
+        },
+        {
+          "name": "county",
+          "group_id": "geot",
+          "series_count": 24696,
+          "popularity": 87
+        }
+      ]
+    },
+    "inflation": {
+      "source_tag": "inflation",
+      "category": "economic",
+      "related_count": 758,
+      "total_available": 758,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "price",
+          "group_id": "gen",
+          "series_count": 15362,
+          "popularity": 85
+        },
+        {
+          "name": "indexes",
+          "group_id": "gen",
+          "series_count": 15358,
+          "popularity": 85
+        },
+        {
+          "name": "price index",
+          "group_id": "gen",
+          "series_count": 15358,
+          "popularity": 83
+        },
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 15248,
+          "popularity": 99
+        },
+        {
+          "name": "usa",
+          "group_id": "geo",
+          "series_count": 15102,
+          "popularity": 100
+        },
+        {
+          "name": "bls",
+          "group_id": "src",
+          "series_count": 14842,
+          "popularity": 87
+        },
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 14176,
+          "popularity": 100
+        },
+        {
+          "name": "monthly",
+          "group_id": "freq",
+          "series_count": 12878,
+          "popularity": 92
+        },
+        {
+          "name": "nation",
+          "group_id": "geot",
+          "series_count": 11572,
+          "popularity": 96
+        },
+        {
+          "name": "ppi",
+          "group_id": "gen",
+          "series_count": 10512,
+          "popularity": 75
+        }
+      ]
+    },
+    "unemployment": {
+      "source_tag": "unemployment",
+      "category": "economic",
+      "related_count": 4078,
+      "total_available": 4078,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 26168,
+          "popularity": 100
+        },
+        {
+          "name": "usa",
+          "group_id": "geo",
+          "series_count": 21188,
+          "popularity": 100
+        },
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 21178,
+          "popularity": 99
+        },
+        {
+          "name": "bls",
+          "group_id": "src",
+          "series_count": 17358,
+          "popularity": 87
+        },
+        {
+          "name": "county",
+          "group_id": "geot",
+          "series_count": 15734,
+          "popularity": 87
+        },
+        {
+          "name": "annual",
+          "group_id": "freq",
+          "series_count": 15408,
+          "popularity": 92
+        },
+        {
+          "name": "rate",
+          "group_id": "gen",
+          "series_count": 14674,
+          "popularity": 82
+        },
+        {
+          "name": "nation",
+          "group_id": "geot",
+          "series_count": 12154,
+          "popularity": 96
+        },
+        {
+          "name": "monthly",
+          "group_id": "freq",
+          "series_count": 11386,
+          "popularity": 92
+        },
+        {
+          "name": "copyrighted: citation required",
+          "group_id": "cc",
+          "series_count": 11318,
+          "popularity": 85
+        }
+      ]
+    },
+    "recession": {
+      "source_tag": "recession",
+      "category": "economic",
+      "error": "Failed to retrieve"
+    },
+    "interest rate": {
+      "source_tag": "interest rate",
+      "category": "economic",
+      "related_count": 284,
+      "total_available": 284,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "interest",
+          "group_id": "gen",
+          "series_count": 1558,
+          "popularity": 70
+        },
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 1558,
+          "popularity": 100
+        },
+        {
+          "name": "rate",
+          "group_id": "gen",
+          "series_count": 1558,
+          "popularity": 82
+        },
+        {
+          "name": "nation",
+          "group_id": "geot",
+          "series_count": 1492,
+          "popularity": 96
+        },
+        {
+          "name": "usa",
+          "group_id": "geo",
+          "series_count": 974,
+          "popularity": 100
+        },
+        {
+          "name": "copyrighted: citation required",
+          "group_id": "cc",
+          "series_count": 808,
+          "popularity": 85
+        },
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 678,
+          "popularity": 99
+        },
+        {
+          "name": "monthly",
+          "group_id": "freq",
+          "series_count": 658,
+          "popularity": 92
+        },
+        {
+          "name": "yield",
+          "group_id": "gen",
+          "series_count": 562,
+          "popularity": 59
+        },
+        {
+          "name": "mei",
+          "group_id": "rls",
+          "series_count": 494,
+          "popularity": 71
+        }
+      ]
+    },
+    "usa": {
+      "source_tag": "usa",
+      "category": "geographic",
+      "related_count": 5918,
+      "total_available": 5918,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 600118,
+          "popularity": 100
+        },
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 557430,
+          "popularity": 99
+        },
+        {
+          "name": "annual",
+          "group_id": "freq",
+          "series_count": 400552,
+          "popularity": 92
+        },
+        {
+          "name": "county",
+          "group_id": "geot",
+          "series_count": 327664,
+          "popularity": 87
+        },
+        {
+          "name": "census",
+          "group_id": "src",
+          "series_count": 213174,
+          "popularity": 86
+        },
+        {
+          "name": "monthly",
+          "group_id": "freq",
+          "series_count": 188536,
+          "popularity": 92
+        },
+        {
+          "name": "bls",
+          "group_id": "src",
+          "series_count": 173776,
+          "popularity": 87
+        },
+        {
+          "name": "nation",
+          "group_id": "geot",
+          "series_count": 157280,
+          "popularity": 96
+        },
+        {
+          "name": "persons",
+          "group_id": "gen",
+          "series_count": 124914,
+          "popularity": 77
+        },
+        {
+          "name": "5-year",
+          "group_id": "gen",
+          "series_count": 103606,
+          "popularity": 78
+        }
+      ]
+    },
+    "china": {
+      "source_tag": "china",
+      "category": "geographic",
+      "related_count": 307,
+      "total_available": 307,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 860,
+          "popularity": 100
+        },
+        {
+          "name": "nation",
+          "group_id": "geot",
+          "series_count": 778,
+          "popularity": 96
+        },
+        {
+          "name": "copyrighted: citation required",
+          "group_id": "cc",
+          "series_count": 626,
+          "popularity": 85
+        },
+        {
+          "name": "annual",
+          "group_id": "freq",
+          "series_count": 618,
+          "popularity": 92
+        },
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 342,
+          "popularity": 99
+        },
+        {
+          "name": "oecd",
+          "group_id": "src",
+          "series_count": 278,
+          "popularity": 72
+        },
+        {
+          "name": "mei",
+          "group_id": "rls",
+          "series_count": 264,
+          "popularity": 71
+        },
+        {
+          "name": "quarterly",
+          "group_id": "freq",
+          "series_count": 224,
+          "popularity": 83
+        },
+        {
+          "name": "imf",
+          "group_id": "src",
+          "series_count": 208,
+          "popularity": 66
+        },
+        {
+          "name": "exports",
+          "group_id": "gen",
+          "series_count": 174,
+          "popularity": 53
+        }
+      ]
+    },
+    "europe": {
+      "source_tag": "europe",
+      "category": "geographic",
+      "related_count": 417,
+      "total_available": 417,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "transnational",
+          "group_id": "geot",
+          "series_count": 6060,
+          "popularity": 63
+        },
+        {
+          "name": "copyrighted: citation required",
+          "group_id": "cc",
+          "series_count": 5534,
+          "popularity": 85
+        },
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 4468,
+          "popularity": 100
+        },
+        {
+          "name": "oecd",
+          "group_id": "src",
+          "series_count": 3440,
+          "popularity": 72
+        },
+        {
+          "name": "euro area",
+          "group_id": "geo",
+          "series_count": 2884,
+          "popularity": 50
+        },
+        {
+          "name": "mei",
+          "group_id": "rls",
+          "series_count": 2822,
+          "popularity": 71
+        },
+        {
+          "name": "monthly",
+          "group_id": "freq",
+          "series_count": 2300,
+          "popularity": 92
+        },
+        {
+          "name": "quarterly",
+          "group_id": "freq",
+          "series_count": 2194,
+          "popularity": 83
+        },
+        {
+          "name": "eu",
+          "group_id": "geo",
+          "series_count": 2102,
+          "popularity": 37
+        },
+        {
+          "name": "indexes",
+          "group_id": "gen",
+          "series_count": 1930,
+          "popularity": 85
+        }
+      ]
+    },
+    "japan": {
+      "source_tag": "japan",
+      "category": "geographic",
+      "related_count": 339,
+      "total_available": 339,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "copyrighted: citation required",
+          "group_id": "cc",
+          "series_count": 2574,
+          "popularity": 85
+        },
+        {
+          "name": "nation",
+          "group_id": "geot",
+          "series_count": 2490,
+          "popularity": 96
+        },
+        {
+          "name": "oecd",
+          "group_id": "src",
+          "series_count": 1986,
+          "popularity": 72
+        },
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 1936,
+          "popularity": 100
+        },
+        {
+          "name": "mei",
+          "group_id": "rls",
+          "series_count": 1928,
+          "popularity": 71
+        },
+        {
+          "name": "quarterly",
+          "group_id": "freq",
+          "series_count": 1102,
+          "popularity": 83
+        },
+        {
+          "name": "annual",
+          "group_id": "freq",
+          "series_count": 1098,
+          "popularity": 92
+        },
+        {
+          "name": "sa",
+          "group_id": "seas",
+          "series_count": 1008,
+          "popularity": 86
+        },
+        {
+          "name": "monthly",
+          "group_id": "freq",
+          "series_count": 736,
+          "popularity": 92
+        },
+        {
+          "name": "rate",
+          "group_id": "gen",
+          "series_count": 604,
+          "popularity": 82
+        }
+      ]
+    },
+    "annual": {
+      "source_tag": "annual",
+      "category": "frequency",
+      "related_count": 5134,
+      "total_available": 5134,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 475408,
+          "popularity": 100
+        },
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 451080,
+          "popularity": 99
+        },
+        {
+          "name": "usa",
+          "group_id": "geo",
+          "series_count": 400714,
+          "popularity": 100
+        },
+        {
+          "name": "county",
+          "group_id": "geot",
+          "series_count": 253760,
+          "popularity": 87
+        },
+        {
+          "name": "census",
+          "group_id": "src",
+          "series_count": 225038,
+          "popularity": 86
+        },
+        {
+          "name": "nation",
+          "group_id": "geot",
+          "series_count": 148824,
+          "popularity": 96
+        },
+        {
+          "name": "persons",
+          "group_id": "gen",
+          "series_count": 118456,
+          "popularity": 77
+        },
+        {
+          "name": "5-year",
+          "group_id": "gen",
+          "series_count": 106628,
+          "popularity": 78
+        },
+        {
+          "name": "acs",
+          "group_id": "rls",
+          "series_count": 101408,
+          "popularity": 77
+        },
+        {
+          "name": "bls",
+          "group_id": "src",
+          "series_count": 83024,
+          "popularity": 87
+        }
+      ]
+    },
+    "quarterly": {
+      "source_tag": "quarterly",
+      "category": "frequency",
+      "related_count": 4713,
+      "total_available": 4713,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "nation",
+          "group_id": "geot",
+          "series_count": 74126,
+          "popularity": 96
+        },
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 72708,
+          "popularity": 100
+        },
+        {
+          "name": "usa",
+          "group_id": "geo",
+          "series_count": 65468,
+          "popularity": 100
+        },
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 62254,
+          "popularity": 99
+        },
+        {
+          "name": "copyrighted: citation required",
+          "group_id": "cc",
+          "series_count": 45288,
+          "popularity": 85
+        },
+        {
+          "name": "sa",
+          "group_id": "seas",
+          "series_count": 38140,
+          "popularity": 86
+        },
+        {
+          "name": "frb",
+          "group_id": "src",
+          "series_count": 30482,
+          "popularity": 78
+        },
+        {
+          "name": "oecd",
+          "group_id": "src",
+          "series_count": 28266,
+          "popularity": 72
+        },
+        {
+          "name": "mei",
+          "group_id": "rls",
+          "series_count": 27270,
+          "popularity": 71
+        },
+        {
+          "name": "z1",
+          "group_id": "rls",
+          "series_count": 22914,
+          "popularity": 62
+        }
+      ]
+    },
+    "monthly": {
+      "source_tag": "monthly",
+      "category": "frequency",
+      "related_count": 5414,
+      "total_available": 5414,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "usa",
+          "group_id": "geo",
+          "series_count": 188002,
+          "popularity": 100
+        },
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 176262,
+          "popularity": 100
+        },
+        {
+          "name": "copyrighted: citation required",
+          "group_id": "cc",
+          "series_count": 120972,
+          "popularity": 85
+        },
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 93356,
+          "popularity": 99
+        },
+        {
+          "name": "realtor.com",
+          "group_id": "src",
+          "series_count": 90600,
+          "popularity": 68
+        },
+        {
+          "name": "bls",
+          "group_id": "src",
+          "series_count": 80662,
+          "popularity": 87
+        },
+        {
+          "name": "county",
+          "group_id": "geot",
+          "series_count": 70682,
+          "popularity": 87
+        },
+        {
+          "name": "price",
+          "group_id": "gen",
+          "series_count": 63634,
+          "popularity": 85
+        },
+        {
+          "name": "msa",
+          "group_id": "geot",
+          "series_count": 60998,
+          "popularity": 75
+        },
+        {
+          "name": "employment",
+          "group_id": "gen",
+          "series_count": 52228,
+          "popularity": 73
+        }
+      ]
+    },
+    "daily": {
+      "source_tag": "daily",
+      "category": "frequency",
+      "related_count": 434,
+      "total_available": 434,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "usa",
+          "group_id": "geo",
+          "series_count": 1478,
+          "popularity": 100
+        },
+        {
+          "name": "nation",
+          "group_id": "geot",
+          "series_count": 1458,
+          "popularity": 96
+        },
+        {
+          "name": "copyrighted: pre-approval required",
+          "group_id": "cc",
+          "series_count": 1028,
+          "popularity": 61
+        },
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 862,
+          "popularity": 100
+        },
+        {
+          "name": "indeed",
+          "group_id": "src",
+          "series_count": 838,
+          "popularity": 42
+        },
+        {
+          "name": "jobs",
+          "group_id": "gen",
+          "series_count": 838,
+          "popularity": 44
+        },
+        {
+          "name": "sa",
+          "group_id": "seas",
+          "series_count": 818,
+          "popularity": 86
+        },
+        {
+          "name": "discontinued",
+          "group_id": "gen",
+          "series_count": 708,
+          "popularity": 65
+        },
+        {
+          "name": "rate",
+          "group_id": "gen",
+          "series_count": 398,
+          "popularity": 82
+        },
+        {
+          "name": "copyrighted: citation required",
+          "group_id": "cc",
+          "series_count": 390,
+          "popularity": 85
+        }
+      ]
+    },
+    "bls": {
+      "source_tag": "bls",
+      "category": "source",
+      "related_count": 4486,
+      "total_available": 4486,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 175018,
+          "popularity": 99
+        },
+        {
+          "name": "usa",
+          "group_id": "geo",
+          "series_count": 173174,
+          "popularity": 100
+        },
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 145868,
+          "popularity": 100
+        },
+        {
+          "name": "employment",
+          "group_id": "gen",
+          "series_count": 89458,
+          "popularity": 73
+        },
+        {
+          "name": "annual",
+          "group_id": "freq",
+          "series_count": 82864,
+          "popularity": 92
+        },
+        {
+          "name": "monthly",
+          "group_id": "freq",
+          "series_count": 80556,
+          "popularity": 92
+        },
+        {
+          "name": "frb stl",
+          "group_id": "src",
+          "series_count": 70768,
+          "popularity": 70
+        },
+        {
+          "name": "nation",
+          "group_id": "geot",
+          "series_count": 62886,
+          "popularity": 96
+        },
+        {
+          "name": "sae",
+          "group_id": "rls",
+          "series_count": 59528,
+          "popularity": 62
+        },
+        {
+          "name": "msa",
+          "group_id": "geot",
+          "series_count": 45906,
+          "popularity": 75
+        }
+      ]
+    },
+    "bea": {
+      "source_tag": "bea",
+      "category": "source",
+      "related_count": 4341,
+      "total_available": 4341,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 78340,
+          "popularity": 99
+        },
+        {
+          "name": "usa",
+          "group_id": "geo",
+          "series_count": 78060,
+          "popularity": 100
+        },
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 67100,
+          "popularity": 100
+        },
+        {
+          "name": "annual",
+          "group_id": "freq",
+          "series_count": 65968,
+          "popularity": 92
+        },
+        {
+          "name": "gdp",
+          "group_id": "gen",
+          "series_count": 59862,
+          "popularity": 79
+        },
+        {
+          "name": "industry",
+          "group_id": "gen",
+          "series_count": 44582,
+          "popularity": 78
+        },
+        {
+          "name": "private",
+          "group_id": "gen",
+          "series_count": 35856,
+          "popularity": 69
+        },
+        {
+          "name": "county",
+          "group_id": "geot",
+          "series_count": 31050,
+          "popularity": 87
+        },
+        {
+          "name": "real",
+          "group_id": "gen",
+          "series_count": 25824,
+          "popularity": 73
+        },
+        {
+          "name": "state",
+          "group_id": "geot",
+          "series_count": 23976,
+          "popularity": 74
+        }
+      ]
+    },
+    "census": {
+      "source_tag": "census",
+      "category": "source",
+      "related_count": 4429,
+      "total_available": 4429,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 238142,
+          "popularity": 99
+        },
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 235004,
+          "popularity": 100
+        },
+        {
+          "name": "annual",
+          "group_id": "freq",
+          "series_count": 225418,
+          "popularity": 92
+        },
+        {
+          "name": "usa",
+          "group_id": "geo",
+          "series_count": 213764,
+          "popularity": 100
+        },
+        {
+          "name": "county",
+          "group_id": "geot",
+          "series_count": 193014,
+          "popularity": 87
+        },
+        {
+          "name": "persons",
+          "group_id": "gen",
+          "series_count": 108180,
+          "popularity": 77
+        },
+        {
+          "name": "5-year",
+          "group_id": "gen",
+          "series_count": 103534,
+          "popularity": 78
+        },
+        {
+          "name": "acs",
+          "group_id": "rls",
+          "series_count": 98204,
+          "popularity": 77
+        },
+        {
+          "name": "saipe",
+          "group_id": "rls",
+          "series_count": 81554,
+          "popularity": 69
+        },
+        {
+          "name": "population",
+          "group_id": "gen",
+          "series_count": 75320,
+          "popularity": 78
+        }
+      ]
+    },
+    "frb": {
+      "source_tag": "frb",
+      "category": "source",
+      "related_count": 794,
+      "total_available": 794,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 62012,
+          "popularity": 99
+        },
+        {
+          "name": "usa",
+          "group_id": "geo",
+          "series_count": 60916,
+          "popularity": 100
+        },
+        {
+          "name": "nation",
+          "group_id": "geot",
+          "series_count": 58246,
+          "popularity": 96
+        },
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 47274,
+          "popularity": 100
+        },
+        {
+          "name": "z1",
+          "group_id": "rls",
+          "series_count": 46496,
+          "popularity": 62
+        },
+        {
+          "name": "quarterly",
+          "group_id": "freq",
+          "series_count": 30588,
+          "popularity": 83
+        },
+        {
+          "name": "assets",
+          "group_id": "gen",
+          "series_count": 26402,
+          "popularity": 63
+        },
+        {
+          "name": "annual",
+          "group_id": "freq",
+          "series_count": 25734,
+          "popularity": 92
+        },
+        {
+          "name": "transactions",
+          "group_id": "gen",
+          "series_count": 23244,
+          "popularity": 48
+        },
+        {
+          "name": "sa",
+          "group_id": "seas",
+          "series_count": 15302,
+          "popularity": 86
+        }
+      ]
+    },
+    "manufacturing": {
+      "source_tag": "manufacturing",
+      "category": "sector",
+      "related_count": 989,
+      "total_available": 989,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "usa",
+          "group_id": "geo",
+          "series_count": 31582,
+          "popularity": 100
+        },
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 31500,
+          "popularity": 99
+        },
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 29872,
+          "popularity": 100
+        },
+        {
+          "name": "nation",
+          "group_id": "geot",
+          "series_count": 22542,
+          "popularity": 96
+        },
+        {
+          "name": "bls",
+          "group_id": "src",
+          "series_count": 22104,
+          "popularity": 87
+        },
+        {
+          "name": "annual",
+          "group_id": "freq",
+          "series_count": 20102,
+          "popularity": 92
+        },
+        {
+          "name": "goods",
+          "group_id": "gen",
+          "series_count": 15396,
+          "popularity": 67
+        },
+        {
+          "name": "monthly",
+          "group_id": "freq",
+          "series_count": 11904,
+          "popularity": 92
+        },
+        {
+          "name": "industry",
+          "group_id": "gen",
+          "series_count": 11296,
+          "popularity": 78
+        },
+        {
+          "name": "naics",
+          "group_id": "gen",
+          "series_count": 10174,
+          "popularity": 50
+        }
+      ]
+    },
+    "housing": {
+      "source_tag": "housing",
+      "category": "sector",
+      "related_count": 4159,
+      "total_available": 4159,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "usa",
+          "group_id": "geo",
+          "series_count": 14850,
+          "popularity": 100
+        },
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 14746,
+          "popularity": 100
+        },
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 14494,
+          "popularity": 99
+        },
+        {
+          "name": "annual",
+          "group_id": "freq",
+          "series_count": 11874,
+          "popularity": 92
+        },
+        {
+          "name": "county",
+          "group_id": "geot",
+          "series_count": 8626,
+          "popularity": 87
+        },
+        {
+          "name": "census",
+          "group_id": "src",
+          "series_count": 8132,
+          "popularity": 86
+        },
+        {
+          "name": "nation",
+          "group_id": "geot",
+          "series_count": 4670,
+          "popularity": 96
+        },
+        {
+          "name": "price",
+          "group_id": "gen",
+          "series_count": 4588,
+          "popularity": 85
+        },
+        {
+          "name": "indexes",
+          "group_id": "gen",
+          "series_count": 4242,
+          "popularity": 85
+        },
+        {
+          "name": "buildings",
+          "group_id": "gen",
+          "series_count": 4182,
+          "popularity": 56
+        }
+      ]
+    },
+    "retail": {
+      "source_tag": "retail",
+      "category": "sector",
+      "related_count": 781,
+      "total_available": 781,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "usa",
+          "group_id": "geo",
+          "series_count": 10838,
+          "popularity": 100
+        },
+        {
+          "name": "sales",
+          "group_id": "gen",
+          "series_count": 10764,
+          "popularity": 63
+        },
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 10738,
+          "popularity": 99
+        },
+        {
+          "name": "retail trade",
+          "group_id": "gen",
+          "series_count": 10724,
+          "popularity": 57
+        },
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 9176,
+          "popularity": 100
+        },
+        {
+          "name": "bls",
+          "group_id": "src",
+          "series_count": 8860,
+          "popularity": 87
+        },
+        {
+          "name": "monthly",
+          "group_id": "freq",
+          "series_count": 6478,
+          "popularity": 92
+        },
+        {
+          "name": "nation",
+          "group_id": "geot",
+          "series_count": 5762,
+          "popularity": 96
+        },
+        {
+          "name": "employment",
+          "group_id": "gen",
+          "series_count": 5334,
+          "popularity": 73
+        },
+        {
+          "name": "annual",
+          "group_id": "freq",
+          "series_count": 4812,
+          "popularity": 92
+        }
+      ]
+    },
+    "finance": {
+      "source_tag": "finance",
+      "category": "sector",
+      "related_count": 811,
+      "total_available": 811,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 10948,
+          "popularity": 100
+        },
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 10716,
+          "popularity": 99
+        },
+        {
+          "name": "usa",
+          "group_id": "geo",
+          "series_count": 9992,
+          "popularity": 100
+        },
+        {
+          "name": "nation",
+          "group_id": "geot",
+          "series_count": 9502,
+          "popularity": 96
+        },
+        {
+          "name": "financial",
+          "group_id": "gen",
+          "series_count": 7222,
+          "popularity": 55
+        },
+        {
+          "name": "companies",
+          "group_id": "gen",
+          "series_count": 6962,
+          "popularity": 45
+        },
+        {
+          "name": "finance companies",
+          "group_id": "gen",
+          "series_count": 6962,
+          "popularity": 40
+        },
+        {
+          "name": "quarterly",
+          "group_id": "freq",
+          "series_count": 6086,
+          "popularity": 83
+        },
+        {
+          "name": "annual",
+          "group_id": "freq",
+          "series_count": 5806,
+          "popularity": 92
+        },
+        {
+          "name": "industry",
+          "group_id": "gen",
+          "series_count": 4656,
+          "popularity": 78
+        }
+      ]
+    },
+    "index": {
+      "source_tag": "index",
+      "category": "type",
+      "error": "Failed to retrieve"
+    },
+    "rate": {
+      "source_tag": "rate",
+      "category": "type",
+      "related_count": 4615,
+      "total_available": 4615,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 37896,
+          "popularity": 100
+        },
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 28552,
+          "popularity": 99
+        },
+        {
+          "name": "annual",
+          "group_id": "freq",
+          "series_count": 28392,
+          "popularity": 92
+        },
+        {
+          "name": "usa",
+          "group_id": "geo",
+          "series_count": 28248,
+          "popularity": 100
+        },
+        {
+          "name": "nation",
+          "group_id": "geot",
+          "series_count": 23882,
+          "popularity": 96
+        },
+        {
+          "name": "county",
+          "group_id": "geot",
+          "series_count": 18816,
+          "popularity": 87
+        },
+        {
+          "name": "copyrighted: citation required",
+          "group_id": "cc",
+          "series_count": 18500,
+          "popularity": 85
+        },
+        {
+          "name": "mei",
+          "group_id": "rls",
+          "series_count": 15870,
+          "popularity": 71
+        },
+        {
+          "name": "oecd",
+          "group_id": "src",
+          "series_count": 15870,
+          "popularity": 72
+        },
+        {
+          "name": "unemployment",
+          "group_id": "gen",
+          "series_count": 14640,
+          "popularity": 70
+        }
+      ]
+    },
+    "price": {
+      "source_tag": "price",
+      "category": "type",
+      "related_count": 4243,
+      "total_available": 4243,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 82150,
+          "popularity": 100
+        },
+        {
+          "name": "monthly",
+          "group_id": "freq",
+          "series_count": 63588,
+          "popularity": 92
+        },
+        {
+          "name": "usa",
+          "group_id": "geo",
+          "series_count": 61586,
+          "popularity": 100
+        },
+        {
+          "name": "copyrighted: citation required",
+          "group_id": "cc",
+          "series_count": 55114,
+          "popularity": 85
+        },
+        {
+          "name": "indexes",
+          "group_id": "gen",
+          "series_count": 42366,
+          "popularity": 85
+        },
+        {
+          "name": "price index",
+          "group_id": "gen",
+          "series_count": 42274,
+          "popularity": 83
+        },
+        {
+          "name": "realtor.com",
+          "group_id": "src",
+          "series_count": 34254,
+          "popularity": 68
+        },
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 29796,
+          "popularity": 99
+        },
+        {
+          "name": "nation",
+          "group_id": "geot",
+          "series_count": 28410,
+          "popularity": 96
+        },
+        {
+          "name": "listing",
+          "group_id": "gen",
+          "series_count": 22748,
+          "popularity": 64
+        }
+      ]
+    },
+    "employment": {
+      "source_tag": "employment",
+      "category": "type",
+      "related_count": 4553,
+      "total_available": 4553,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "usa",
+          "group_id": "geo",
+          "series_count": 94108,
+          "popularity": 100
+        },
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 93298,
+          "popularity": 99
+        },
+        {
+          "name": "bls",
+          "group_id": "src",
+          "series_count": 89392,
+          "popularity": 87
+        },
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 73690,
+          "popularity": 100
+        },
+        {
+          "name": "frb stl",
+          "group_id": "src",
+          "series_count": 66772,
+          "popularity": 70
+        },
+        {
+          "name": "sae",
+          "group_id": "rls",
+          "series_count": 59600,
+          "popularity": 62
+        },
+        {
+          "name": "monthly",
+          "group_id": "freq",
+          "series_count": 52380,
+          "popularity": 92
+        },
+        {
+          "name": "annual",
+          "group_id": "freq",
+          "series_count": 43184,
+          "popularity": 92
+        },
+        {
+          "name": "msa",
+          "group_id": "geot",
+          "series_count": 40342,
+          "popularity": 75
+        },
+        {
+          "name": "sa",
+          "group_id": "seas",
+          "series_count": 32206,
+          "popularity": 86
+        }
+      ]
+    },
+    "covid": {
+      "source_tag": "covid",
+      "category": "special",
+      "error": "Failed to retrieve"
+    },
+    "pandemic": {
+      "source_tag": "pandemic",
+      "category": "special",
+      "related_count": 174,
+      "total_available": 174,
+      "limit": 1000,
+      "top_related": [
+        {
+          "name": "nsa",
+          "group_id": "seas",
+          "series_count": 404,
+          "popularity": 100
+        },
+        {
+          "name": "public domain: citation requested",
+          "group_id": "cc",
+          "series_count": 404,
+          "popularity": 99
+        },
+        {
+          "name": "nation",
+          "group_id": "geot",
+          "series_count": 254,
+          "popularity": 96
+        },
+        {
+          "name": "bloom, nick",
+          "group_id": "src",
+          "series_count": 252,
+          "popularity": 42
+        },
+        {
+          "name": "ahir, hites",
+          "group_id": "src",
+          "series_count": 250,
+          "popularity": 31
+        },
+        {
+          "name": "furceri, davide",
+          "group_id": "src",
+          "series_count": 250,
+          "popularity": 31
+        },
+        {
+          "name": "indexes",
+          "group_id": "gen",
+          "series_count": 250,
+          "popularity": 85
+        },
+        {
+          "name": "quarterly",
+          "group_id": "freq",
+          "series_count": 250,
+          "popularity": 83
+        },
+        {
+          "name": "wui",
+          "group_id": "rls",
+          "series_count": 250,
+          "popularity": 31
+        },
+        {
+          "name": "usa",
+          "group_id": "geo",
+          "series_count": 156,
+          "popularity": 100
+        }
+      ]
+    },
+    "crisis": {
+      "source_tag": "crisis",
+      "category": "special",
+      "error": "Failed to retrieve"
+    },
+    "forecast": {
+      "source_tag": "forecast",
+      "category": "special",
+      "error": "Failed to retrieve"
+    }
+  }
+}

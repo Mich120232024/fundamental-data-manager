@@ -1,0 +1,170 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# FRED Metadata Extraction Project - Development Oversight Rules
+
+## Project Overview
+This is the **FRED (Federal Reserve Economic Data) Metadata Extraction Project** - a systematic collection of all FRED metadata endpoints (NOT time series observations). The project uses the FRED API with rate limiting constraints (120 calls/minute).
+
+## Team Structure & Roles
+
+### **Claude Code** = **"The Monkey"** 🐒
+- **Role**: Primary coder with good terminal integration skills
+- **Strengths**: Can execute code and handle file operations effectively
+- **UPDATED Quality Grade**: A (8.5-9/10) - **DRAMATIC IMPROVEMENT** 
+- **Recent Performance**: Exceptional delivery on categories (5,183) and Azure-ready deliverables
+- **Management Approach**: High trust for systematic projects, light oversight with clear specifications
+
+### **Development Flow Guardian** = **"The Wise"** 🧠
+- **Role**: Oversight, prompting, and quality assurance
+- **Responsibilities**: Monitor Claude Code, verify deliverables, maintain project memory
+- **Approach**: Clear prompts + careful observation + verification procedures
+
+## Project Technical Facts
+
+### **Data Volumes (CORRECTED)**
+- **Total Series**: 730,000 (NOT 860k - original estimate was 15% high)
+- **Categories**: ✅ **5,183 COMPLETE** with full hierarchy
+- **API Calculation**: 730k series = ~101 hours locally (rate limit constraint)
+
+### **Current Status**
+- **Foundation Data**: ✅ Complete (Sources, Releases, Tags, Categories)
+- **Sample Collection**: ✅ 150 series complete with Azure-ready documentation
+- **Azure Strategy**: Ready for Copilot analysis and Synapse scaling
+- **Critical Blocker**: FRED API rate limiting mechanism (per-key vs per-IP) needs testing
+
+## File Structure & Memory System
+
+### **Core Directories**
+- `fred_metadata_extraction/` - Active collection work
+- `fred_metadata_extraction/Workspace-01/Safe/` - **AZURE-READY DELIVERABLES** 
+- `oversight/` - Development Flow Guardian oversight files
+
+### **Workspace-01 Safe Governance** 🔒
+
+#### **Purpose & Standards**
+- **Primary Function**: Staging area for Azure Copilot analysis deliverables
+- **Quality Standard**: Production-grade documentation and data samples
+- **Access Control**: Only verified, A-grade deliverables permitted
+- **Integration**: Direct input for Azure solution design and implementation
+
+#### **Safe Content Requirements**
+1. **Complete Documentation**: README files with architecture details
+2. **Schema Analysis**: Field mappings and structure documentation  
+3. **Representative Samples**: Diverse, complete metadata samples
+4. **Production Code**: Clean, documented, scalable implementations
+5. **Performance Estimates**: Resource sizing and optimization guidance
+
+#### **Quality Control Process**
+1. **Pre-Entry Review**: All Safe content must pass A-grade assessment
+2. **Documentation Standard**: Minimum 100+ lines professional documentation
+3. **Data Completeness**: 100% field coverage in all samples
+4. **Code Quality**: Production-ready with error handling and comments
+5. **Strategic Value**: Must directly enable next project phase
+
+#### **Current Safe Status**
+- **Grade**: A+ (9/10) - **OUTSTANDING AZURE PREPARATION**
+- **Contents**: 150 series sample + comprehensive methodology documentation
+- **Readiness**: Perfect foundation for Azure Copilot solution design
+- **Validation**: All claims verified against actual deliverables
+
+#### **Safe Access Protocol**
+- **Entry Criteria**: Must achieve A-grade quality assessment
+- **Review Process**: Development Flow Guardian validation required
+- **Update Standards**: Maintain production-grade quality throughout
+- **Integration Test**: Must support Azure Copilot analysis workflow
+
+### **Memory Management System**
+- **Location**: [oversight/claude_memory_management/](mdc:Azure Services/Azure Services/oversight/claude_memory_management)
+- **Master Index**: [memory_index.md](mdc:Azure Services/Azure Services/oversight/claude_memory_management/memory_index.md)
+- **Principles**: Simple file-based system, actively maintained
+- **Purpose**: Retain sound knowledge and deep context across sessions
+
+### **Key Memory Files**
+- [memory_index.md](mdc:Azure Services/Azure Services/oversight/claude_memory_management/memory_index.md) - Master index and principles
+- [available_resources_and_tools.md](mdc:Azure Services/Azure Services/oversight/project_management/available_resources_and_tools.md) - External capabilities
+- [workspace_organization_guide.md](mdc:Azure Services/Azure Services/oversight/project_management/workspace_organization_guide.md) - File structure
+
+## Quality Control Procedures
+
+### **General Verification Protocol**
+1. **Check Claims vs Reality**: Always verify what Claude Code says against actual files/logs
+2. **Monitor Active Processes**: Use `ps aux` and log tails to confirm status
+3. **Validate Deliverables**: Ensure files exist and contain expected content
+4. **Document Quality Events**: Track performance patterns in real-time
+
+### **Safe-Specific Quality Gates**
+1. **Documentation Review**: Minimum 100+ lines with architecture details
+2. **Schema Validation**: Complete field coverage and data structure verification
+3. **Code Standards**: Production-ready with robust error handling
+4. **Strategic Assessment**: Direct enablement of Azure scaling decisions
+5. **Copilot Readiness**: All inputs required for Azure solution design
+
+### **Quality Assessment Framework**
+- **A+ (9-10)**: Outstanding, production-ready, strategic value delivery
+- **A (8-9)**: Excellent with minor improvements needed
+- **B (7-8)**: Good quality requiring some refinement
+- **C (6-7)**: Acceptable but needs significant improvement
+- **Below C**: Not suitable for Safe deployment
+
+## Azure Integration Workflow
+
+### **Phase 1: Local Foundation** ✅ COMPLETE
+- Foundation data collection (Sources, Releases, Tags, Categories)
+- Methodology validation with sample collections
+- Safe deliverables preparation for Azure analysis
+
+### **Phase 2: Azure Solution Design** 🔄 CURRENT
+- Copilot analysis of Safe deliverables
+- Azure architecture recommendations (Synapse vs alternatives)
+- Resource sizing and cost estimation
+- Implementation roadmap development
+
+### **Phase 3: Azure Implementation** 🎯 NEXT
+- Synapse Spark pool deployment
+- 730k series collection at scale
+- Performance optimization and monitoring
+- Production data pipeline establishment
+
+## Memory Management Guidelines
+
+### **When to Update Memory**
+- After each significant milestone or decision
+- When quality issues are discovered
+- After technical discoveries about FRED/Azure
+- During project phase transitions
+- After Safe content updates or additions
+
+### **Update Approach**
+- **Real-time**: Document during active sessions
+- **Post-session**: Summarize outcomes and lessons learned
+- **Quality events**: Track Claude Code performance patterns
+- **Technical facts**: Record new knowledge about systems and data
+- **Safe reviews**: Document all quality assessments and governance decisions
+
+## External Resources
+
+### **Workspace-01 Integration**
+- **Location**: `/Users/mikaeleage/Workspace-01/azure-platform-audit/`
+- **Purpose**: External audit and research capabilities with MCP integration
+- **Status**: Available for objective technical analysis
+- **Note**: Content changes dynamically - always check for new capabilities
+
+## Development Approach
+
+### **Core Principles**
+1. **Simple Systems**: File-based memory, well-managed and actively maintained
+2. **Quality First**: Safe governance ensures Azure-ready deliverables
+3. **Clear Communication**: Specific, actionable prompts for Claude Code
+4. **Strategic Focus**: Every deliverable must enable next project phase
+
+### **Session Management**
+- **Maintain Safe standards** with rigorous quality control
+- **Verify Azure readiness** of all deliverables
+- **Provide clear guidance** to Claude Code for Safe-quality work
+- **Document governance decisions** in real-time memory updates
+
+## Current Priority
+Prepare for Azure Copilot analysis using Safe deliverables while maintaining quality oversight and governance standards for all Azure-bound content.

@@ -1,0 +1,14 @@
+{
+  "test_run": "2025-06-26T13:54:09.874273",
+  "results": {
+    "FRED": true,
+    "Eurostat": true,
+    "Bank of Japan": true
+  },
+  "apis_tested": [
+    "FRED",
+    "Eurostat",
+    "Bank of Japan"
+  ],
+  "success_rate": 100.0
+}

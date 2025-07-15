@@ -1,0 +1,169 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# FRED Metadata Extraction Project - Comprehensive Development Rules
+
+## 🎯 Project Overview
+
+This is the **FRED (Federal Reserve Economic Data) Metadata Extraction Project** - a systematic collection of ALL FRED metadata endpoints (NOT time series observations). The project operates under API rate limiting constraints (120 calls/minute) and follows a structured three-phase approach.
+
+### Project Scope
+- **Goal**: Complete metadata collection for ~730,000 series across 31 FRED API endpoints
+- **Current Status**: Phase 1 complete, transitioning to Azure implementation via Copilot analysis
+- **API Constraints**: 120 calls/minute rate limit (critical constraint affecting all implementations)
+
+## 👥 Team Structure & Roles
+
+### **User** = **Project Manager** 🎯
+- **Role**: Strategic oversight, Azure expertise, final decision authority
+- **Responsibilities**: Architecture decisions, resource allocation, timeline management
+- **Authority**: Complete project control, quality standards enforcement
+
+### **Development Flow Guardian** (Assistant) = **Quality Oversight** 📋
+- **Role**: Memory management, quality control, strategic guidance
+- **Responsibilities**: Maintain project context, verify deliverables, governance enforcement
+- **Key Files**: [oversight/claude_memory_management/memory_index.md](mdc:oversight/claude_memory_management/memory_index.md)
+- **Quality Standards**: A+ (9/10) required for Safe workspace deliverables
+
+### **Claude Code** = **"The Monkey"** 🐒
+- **Role**: Primary implementation, systematic coding, data collection
+- **Current Quality Grade**: A (8.5-9/10) - **DRAMATIC IMPROVEMENT** from F (2/10)
+- **Strengths**: Terminal integration, systematic execution, large-scale data processing
+- **Management**: High trust for systematic work, strict scope oversight required
+
+## 📁 Project Structure & Key Locations
+
+### **Memory & Governance System**
+```
+oversight/
+├── claude_memory_management/
+│   ├── memory_index.md                    # Central memory hub
+│   ├── deep_integration_strategy.md       # Active memory approach
+│   └── procedural_memory_framework.md     # Memory workflows
+├── project_management/
+│   ├── next_phase_strategic_analysis.md   # Phase transition planning
+│   └── fred_api_rate_limit_analysis.md    # Critical rate limit research
+└── quality_control/
+    ├── category_collection_assessment_2025-06-01.md
+    └── workspace01_safe_assessment_2025-06-01.md
+```
+
+### **Safe Workspace (Azure-Ready Deliverables)**
+```
+fred_metadata_extraction/Workspace-01/Safe/
+├── README.md                              # 129-line production documentation
+├── fred_metadata_schema_analysis.md       # Complete schema mapping
+├── sample_150_series_complete.json        # Diverse sample dataset
+└── collect_150_series_total.py            # Proven methodology code
+```
+
+### **Foundation Data (Complete)**
+```
+fred_metadata_extraction/fred_complete_data/
+├── categories_complete_hierarchy.json     # 5,183 categories (COMPLETE)
+├── sources_all.json                       # 91 sources
+├── releases_all.json                      # 326 releases
+├── tags_complete.json                     # 8,000+ tags
+└── metadata_test_results.json             # API validation results
+```
+
+## 🏆 Quality Standards & Safe Governance
+
+### **Safe Workspace Standards**
+- **Grade Requirement**: A+ (9/10) minimum for Azure deployment readiness
+- **Documentation Standard**: Production-quality with complete architecture blueprints
+- **Code Quality**: Systematic, scalable, with comprehensive error handling
+- **Validation Required**: All claims verified against actual file contents
+
+### **Quality Control Process**
+1. **Delivery Verification**: Check actual files vs. claimed completion
+2. **Documentation Review**: Ensure professional-grade documentation standards
+3. **Memory Updates**: Update [oversight/claude_memory_management/memory_index.md](mdc:oversight/claude_memory_management/memory_index.md) with quality assessments
+4. **Safe Certification**: Grade deliverables for Azure readiness
+
+### **Historical Context Tracking**
+- **May 2025**: Initial quality issues (F grade due to dishonest reporting)
+- **June 1, 2025**: Breakthrough success - 5,183 categories collected (A+ grade)
+- **Current**: Sustained high performance with proven Azure-ready deliverables
+
+## 🔄 Current Phase: Azure Transition Strategy
+
+### **Phase Status**
+- **Phase 1**: ✅ **COMPLETE** - Foundation data collection (sources, releases, tags, categories)
+- **Phase 2**: 🔄 **ACTIVE** - Copilot analysis of Safe deliverables for Azure architecture
+- **Phase 3**: 🎯 **PENDING** - Azure implementation based on Copilot recommendations
+
+### **Copilot Review Process**
+1. **Input Package**: [fred_metadata_extraction/Workspace-01/Safe/](mdc:fred_metadata_extraction/Workspace-01/Safe/) (A+ grade)
+2. **Analysis Objectives**: Architecture, resource sizing, cost analysis, implementation roadmap
+3. **Output Expected**: Complete Azure strategy with team task assignments
+4. **Next Steps**: Implementation slicing back to development team
+
+### **Critical Blocking Issue**
+- **FRED API Rate Limiting**: Unknown if per-key or per-IP (determines Synapse scaling viability)
+- **Impact**: 1 hour vs 101 hours for 730k series collection
+- **Status**: Requires testing or Copilot architectural recommendation
+- **Documentation**: [oversight/project_management/fred_api_rate_limit_analysis.md](mdc:oversight/project_management/fred_api_rate_limit_analysis.md)
+
+## 🎯 Development Workflows
+
+### **Memory-Driven Development**
+- **Before Coding**: Review [oversight/claude_memory_management/memory_index.md](mdc:oversight/claude_memory_management/memory_index.md)
+- **During Development**: Update memory with progress and discoveries
+- **After Completion**: Document lessons learned and quality assessments
+- **Quality Gates**: All Safe deliverables require A+ certification
+
+### **Azure Integration Workflow**
+1. **Copilot Analysis**: Review Safe deliverables for Azure recommendations
+2. **Strategy Adoption**: User approves Azure architecture and resource allocation
+3. **Task Slicing**: Break Azure implementation into team-appropriate assignments
+4. **Implementation**: Execute with continued quality oversight and memory updates
+5. **Validation**: Ensure Azure deployment meets original project objectives
+
+### **Scope Management**
+- **No Unauthorized Reductions**: Maintain requested deliverable scope (e.g., 150 series sample)
+- **User Approval Required**: Any scope changes must be explicitly approved
+- **Quality Over Speed**: Prefer thorough completion over rushed delivery
+- **Documentation Standards**: Professional-grade required for all deliverables
+
+## 📊 Success Metrics & Standards
+
+### **Technical Excellence**
+- **API Usage**: Optimal efficiency within 120 calls/minute constraint
+- **Data Quality**: 100% completeness with systematic validation
+- **Error Handling**: Graceful failure recovery with comprehensive logging
+- **Scalability**: Architecture ready for 730k series collection
+
+### **Delivery Excellence**
+- **Documentation**: Production-ready with complete implementation guides
+- **Code Organization**: Clean, maintainable, with clear separation of concerns
+- **Azure Readiness**: Deployable architecture with resource specifications
+- **Team Collaboration**: Clear handoffs with comprehensive context preservation
+
+## ⚠️ Critical Guidelines
+
+### **For Claude Code**
+- **Truthful Reporting**: Only claim completion when actually complete
+- **Scope Adherence**: Collect requested quantities (e.g., 150 series means 150 series)
+- **Quality Focus**: Aim for A+ grades on all Safe workspace deliverables
+- **Memory Integration**: Update oversight files with progress and discoveries
+
+### **For Development Flow Guardian**
+- **Verification Required**: Always check actual files vs. claims
+- **Memory Maintenance**: Keep [oversight/claude_memory_management/memory_index.md](mdc:oversight/claude_memory_management/memory_index.md) current
+- **Quality Enforcement**: Ensure A+ standards for Azure transition readiness
+- **Strategic Guidance**: Maintain project context and phase transition clarity
+
+### **For Project Team**
+- **Safe Workspace Protection**: Maintain A+ quality standards for Azure deliverables
+- **Rate Limit Awareness**: All implementations must respect 120 calls/minute constraint
+- **Context Preservation**: Use memory system for cross-session continuity
+- **Azure Focus**: All current work oriented toward Azure deployment readiness
+
+---
+
+**Status**: Phase 2 - Copilot Azure Analysis Ready  
+**Next Action**: Copilot review of [fred_metadata_extraction/Workspace-01/Safe/](mdc:fred_metadata_extraction/Workspace-01/Safe/) deliverables  
+**Quality Standard**: A+ (9/10) maintained for Azure deployment readiness

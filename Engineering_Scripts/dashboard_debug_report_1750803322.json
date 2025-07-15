@@ -1,0 +1,99 @@
+{
+  "timestamp": 1750803322.275203,
+  "summary": {
+    "total_tests": 17,
+    "passed": 9,
+    "errors": 8,
+    "warnings": 0
+  },
+  "passed_tests": [
+    {
+      "test": "Basic Loading",
+      "details": "Title: User Dashboard",
+      "timestamp": 1750803304.3453372
+    },
+    {
+      "test": "Navigation",
+      "details": "Found 10 tabs",
+      "timestamp": 1750803304.363543
+    },
+    {
+      "test": "Navigation",
+      "details": "All expected tabs present: ['overview', 'mailbox', 'cosmos', 'graph', 'agents', 'manager', 'workspace', 'research', 'documentation', 'deepcontext']",
+      "timestamp": 1750803304.399839
+    },
+    {
+      "test": "Architecture Categories",
+      "details": "Found 9 categories",
+      "timestamp": 1750803306.4463842
+    },
+    {
+      "test": "Architecture Category Names",
+      "details": "Categories: ['General', 'Process Workflows', 'Project Architecture', 'Communication Protocols', 'System Architecture']",
+      "timestamp": 1750803306.465895
+    },
+    {
+      "test": "Architecture File Click",
+      "details": "Clicked 'Macro Analysis Journey', iframe loaded: http://localhost:8420/api/v1/architecture/raw?path=%2FUsers%2Fmikaeleage%2FResearch%20%26%20Analytic...",
+      "timestamp": 1750803308.54792
+    },
+    {
+      "test": "Architecture Viewer Title",
+      "details": "Title updated to: Macro Analysis Journey",
+      "timestamp": 1750803308.5527859
+    },
+    {
+      "test": "Documentation",
+      "details": "Content loaded",
+      "timestamp": 1750803311.60016
+    },
+    {
+      "test": "Screenshots",
+      "details": "Saved debug_full_1750803319.png and debug_architecture_1750803319.png",
+      "timestamp": 1750803322.275199
+    }
+  ],
+  "errors": [
+    {
+      "test": "Overview Tab",
+      "error": "Page.query_selector: Unexpected token \"#\" while parsing css selector \"#$overview\". Did you mean to CSS.escape it?",
+      "timestamp": 1750803313.642953
+    },
+    {
+      "test": "Cosmos Explorer Tab",
+      "error": "Page.query_selector: Unexpected token \"#\" while parsing css selector \"#$cosmos\". Did you mean to CSS.escape it?",
+      "timestamp": 1750803315.685549
+    },
+    {
+      "test": "Agent Shell Tab",
+      "error": "Page.query_selector: Unexpected token \"#\" while parsing css selector \"#$agents\". Did you mean to CSS.escape it?",
+      "timestamp": 1750803317.732491
+    },
+    {
+      "test": "Mailbox Tab",
+      "error": "Page.query_selector: Unexpected token \"#\" while parsing css selector \"#$mailbox\". Did you mean to CSS.escape it?",
+      "timestamp": 1750803319.781813
+    },
+    {
+      "test": "API /api/v1/architecture/list",
+      "error": "name 'r' is not defined",
+      "timestamp": 1750803319.781831
+    },
+    {
+      "test": "API /api/v1/architecture/health",
+      "error": "name 'r' is not defined",
+      "timestamp": 1750803319.781833
+    },
+    {
+      "test": "API /api/v1/agents/list",
+      "error": "name 'r' is not defined",
+      "timestamp": 1750803319.781835
+    },
+    {
+      "test": "API /api/v1/docs/structure",
+      "error": "name 'r' is not defined",
+      "timestamp": 1750803319.781836
+    }
+  ],
+  "warnings": []
+}

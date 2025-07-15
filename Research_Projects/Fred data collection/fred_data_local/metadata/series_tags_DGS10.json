@@ -1,0 +1,115 @@
+{
+  "realtime_start": "2025-05-30",
+  "realtime_end": "2025-05-30",
+  "order_by": "series_count",
+  "sort_order": "asc",
+  "count": 13,
+  "offset": 0,
+  "limit": 1000,
+  "tags": [
+    {
+      "name": "h15",
+      "group_id": "rls",
+      "notes": "H.15 Selected Interest Rates",
+      "created": "2012-08-16 15:21:17-05",
+      "popularity": 54,
+      "series_count": 276
+    },
+    {
+      "name": "10-year",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 52,
+      "series_count": 292
+    },
+    {
+      "name": "interest rate",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-05-29 10:14:19-05",
+      "popularity": 69,
+      "series_count": 1646
+    },
+    {
+      "name": "daily",
+      "group_id": "freq",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 68,
+      "series_count": 1754
+    },
+    {
+      "name": "treasury",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 59,
+      "series_count": 2226
+    },
+    {
+      "name": "interest",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 70,
+      "series_count": 2994
+    },
+    {
+      "name": "maturity",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 54,
+      "series_count": 3856
+    },
+    {
+      "name": "rate",
+      "group_id": "gen",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 82,
+      "series_count": 47018
+    },
+    {
+      "name": "frb",
+      "group_id": "src",
+      "notes": "Board of Governors",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 78,
+      "series_count": 62420
+    },
+    {
+      "name": "nation",
+      "group_id": "geot",
+      "notes": "",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 96,
+      "series_count": 269312
+    },
+    {
+      "name": "public domain: citation requested",
+      "group_id": "cc",
+      "notes": null,
+      "created": "2018-12-17 23:33:13-06",
+      "popularity": 99,
+      "series_count": 614076
+    },
+    {
+      "name": "usa",
+      "group_id": "geo",
+      "notes": "United States of America",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 100,
+      "series_count": 662238
+    },
+    {
+      "name": "nsa",
+      "group_id": "seas",
+      "notes": "Not Seasonally Adjusted",
+      "created": "2012-02-27 10:18:19-06",
+      "popularity": 100,
+      "series_count": 732374
+    }
+  ]
+}

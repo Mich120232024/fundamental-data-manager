@@ -1,0 +1,142 @@
+{
+  "timestamp": "2025-06-28T16:01:00.516879",
+  "api_connectivity": {
+    "status": "SUCCESS",
+    "response_time_ms": 407.27,
+    "status_code": 200,
+    "series_found": 1,
+    "api_key_valid": true
+  },
+  "rate_limit_test": {
+    "status": "SUCCESS",
+    "requests_completed": 5,
+    "rate_limit_hit": false,
+    "avg_response_time_ms": 316.54,
+    "individual_times_ms": [
+      301.08,
+      307.29,
+      344.98,
+      310.04,
+      319.29
+    ]
+  },
+  "endpoint_tests": {
+    "series": {
+      "status": "SUCCESS",
+      "response_time_ms": 334.68,
+      "data_keys": [
+        "realtime_start",
+        "realtime_end",
+        "seriess"
+      ],
+      "data_count": 0
+    },
+    "categories": {
+      "status": "SUCCESS",
+      "response_time_ms": 304.44,
+      "data_keys": [
+        "categories"
+      ],
+      "data_count": 1
+    },
+    "category_series": {
+      "status": "SUCCESS",
+      "response_time_ms": 315.74,
+      "data_keys": [
+        "realtime_start",
+        "realtime_end",
+        "order_by",
+        "sort_order",
+        "count",
+        "offset",
+        "limit",
+        "seriess"
+      ],
+      "data_count": 0
+    },
+    "sources": {
+      "status": "SUCCESS",
+      "response_time_ms": 303.36,
+      "data_keys": [
+        "realtime_start",
+        "realtime_end",
+        "order_by",
+        "sort_order",
+        "count",
+        "offset",
+        "limit",
+        "sources"
+      ],
+      "data_count": 117
+    },
+    "series_observations": {
+      "status": "SUCCESS",
+      "response_time_ms": 328.61,
+      "data_keys": [
+        "realtime_start",
+        "realtime_end",
+        "observation_start",
+        "observation_end",
+        "units",
+        "output_type",
+        "file_type",
+        "order_by",
+        "sort_order",
+        "count",
+        "offset",
+        "limit",
+        "observations"
+      ],
+      "data_count": 0
+    }
+  },
+  "series_sample": {
+    "status": "SUCCESS",
+    "series_info": {
+      "id": "GDP",
+      "title": "Gross Domestic Product",
+      "units": "Billions of Dollars",
+      "frequency": "Quarterly",
+      "last_updated": "2025-06-26 07:56:50-05",
+      "observation_start": "1947-01-01",
+      "observation_end": "2025-01-01"
+    },
+    "recent_observations": [
+      {
+        "realtime_start": "2025-06-26",
+        "realtime_end": "2025-06-26",
+        "date": "2025-01-01",
+        "value": "29962.047"
+      },
+      {
+        "realtime_start": "2025-06-26",
+        "realtime_end": "2025-06-26",
+        "date": "2024-10-01",
+        "value": "29723.864"
+      },
+      {
+        "realtime_start": "2025-06-26",
+        "realtime_end": "2025-06-26",
+        "date": "2024-07-01",
+        "value": "29374.914"
+      }
+    ]
+  },
+  "category_test": {
+    "status": "SUCCESS",
+    "root_categories_count": 1,
+    "test_category_id": 0,
+    "test_category_series_count": 0,
+    "sample_categories": [
+      {
+        "id": 0,
+        "name": "Categories"
+      }
+    ]
+  },
+  "overall_health": {
+    "status": "HEALTHY",
+    "message": "All systems operational",
+    "failed_tests": []
+  }
+}

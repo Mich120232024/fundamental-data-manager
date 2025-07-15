@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmos DB Viewer</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+        
+        .header {
+            background: #0078d4;
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            display: flex;
+            height: calc(100vh - 60px);
+        }
+        
+        .sidebar {
+            width: 300px;
+            background: white;
+            border-right: 1px solid #ddd;
+            overflow-y: auto;
+        }
+        
+        .main {
+            flex: 1;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+        
+        .container-item {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .container-item:hover {
+            background: #f0f0f0;
+        }
+        
+        .container-item.active {
+            background: #e3f2fd;
+            border-left: 4px solid #0078d4;
+        }
+        
+        .container-name {
+            font-weight: 600;
+            color: #0078d4;
+        }
+        
+        .container-count {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+        }
+        
+        .document-list {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .document-item {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .document-item:hover {
+            background: #f8f8f8;
+        }
+        
+        .document-id {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.25rem;
+        }
+        
+        .document-meta {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        
+        .document-detail {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 2rem;
+        }
+        
+        .json-viewer {
+            background: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 1rem;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+        
+        .error {
+            background: #fee;
+            color: #c00;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+        
+        .search-box {
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        
+        .stats {
+            background: #f0f7ff;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .refresh-btn {
+            background: #0078d4;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .refresh-btn:hover {
+            background: #005a9e;
+        }
+        
+        .document-actions {
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .copy-btn {
+            background: #40a040;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .copy-btn:hover {
+            background: #308030;
+        }
+        
+        .close-btn {
+            background: #666;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .close-btn:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Cosmos DB Document Viewer</h1>
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <div class="search-box">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search containers...">
+            </div>
+            <div id="containerList"></div>
+        </div>
+        
+        <div class="main">
+            <div id="content">
+                <div class="loading">Select a container to view documents</div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Configuration - Update these with your Cosmos DB details
+        const config = {
+            endpoint: 'https://cosmos-research-analytics-prod.documents.azure.com:443/',
+            key: '', // Will be set from Python server
+            databaseId: 'research-analytics-db'
+        };
+        
+        let currentContainer = null;
+        let allContainers = [];
+        let allDocuments = [];
+        
+        // Initialize the viewer
+        async function init() {
+            try {
+                await loadContainers();
+            } catch (error) {
+                showError('Failed to initialize: ' + error.message);
+            }
+        }
+        
+        // API configuration
+        const API_BASE = window.location.origin;
+        
+        // Load all containers
+        async function loadContainers() {
+            const containerList = document.getElementById('containerList');
+            containerList.innerHTML = '<div class="loading">Loading containers...</div>';
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/containers`);
+                
+                if (!response.ok) {
+                    throw new Error(`API error: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    allContainers = data.containers;
+                    displayContainers(data.containers);
+                } else {
+                    throw new Error(data.error || 'Unknown error');
+                }
+                
+            } catch (error) {
+                containerList.innerHTML = `<div class="error">Failed to load containers: ${error.message}</div>`;
+            }
+        }
+        
+        // Display containers in sidebar
+        function displayContainers(containers) {
+            const containerList = document.getElementById('containerList');
+            containerList.innerHTML = '';
+            
+            containers.forEach(container => {
+                const item = document.createElement('div');
+                item.className = 'container-item';
+                item.innerHTML = `
+                    <div class="container-name">${container.id}</div>
+                    <div class="container-count">${container.count} documents</div>
+                `;
+                item.onclick = () => selectContainer(container.id);
+                containerList.appendChild(item);
+            });
+        }
+        
+        // Select a container and load its documents
+        async function selectContainer(containerId) {
+            currentContainer = containerId;
+            
+            // Update UI
+            document.querySelectorAll('.container-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.querySelector('.container-name').textContent === containerId) {
+                    item.classList.add('active');
+                }
+            });
+            
+            // Load documents
+            await loadDocuments(containerId);
+        }
+        
+        // Load documents from selected container
+        async function loadDocuments(containerId) {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <div class="stats">
+                    <strong>Container:</strong> ${containerId}
+                    <button class="refresh-btn" style="float: right;" onclick="loadDocuments('${containerId}')">Refresh</button>
+                </div>
+                <div class="loading">Loading documents...</div>
+            `;
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/containers/${containerId}/documents?limit=50&offset=0`);
+                
+                if (!response.ok) {
+                    throw new Error(`API error: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    allDocuments = data.documents;
+                    displayDocuments(data.documents);
+                } else {
+                    throw new Error(data.error || 'No documents found');
+                }
+                
+            } catch (error) {
+                content.innerHTML = `<div class="error">Failed to load documents: ${error.message}</div>`;
+            }
+        }
+        
+        // Display documents list
+        function displayDocuments(documents) {
+            const content = document.getElementById('content');
+            const stats = content.querySelector('.stats');
+            
+            const listHtml = `
+                <div class="document-list">
+                    ${documents.map(doc => `
+                        <div class="document-item" onclick="viewDocument('${doc.id}')">
+                            <div class="document-id">${doc.id}</div>
+                            <div class="document-meta">
+                                ${doc.timestamp || doc.createdDate || 'No timestamp'} | 
+                                ${doc.type || doc.logType || 'No type'}
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            content.innerHTML = stats.outerHTML + listHtml;
+        }
+        
+        // View individual document
+        function viewDocument(documentId) {
+            const doc = allDocuments.find(d => d.id === documentId);
+            if (!doc) return;
+            
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <div class="document-detail">
+                    <div class="document-actions">
+                        <button class="close-btn" onclick="loadDocuments('${currentContainer}')">← Back to List</button>
+                        <button class="copy-btn" onclick="copyDocument('${documentId}')">Copy JSON</button>
+                    </div>
+                    <h2>${documentId}</h2>
+                    <div class="json-viewer" id="jsonContent">${JSON.stringify(doc, null, 2)}</div>
+                </div>
+            `;
+        }
+        
+        // Copy document JSON to clipboard
+        function copyDocument(documentId) {
+            const doc = allDocuments.find(d => d.id === documentId);
+            if (!doc) return;
+            
+            navigator.clipboard.writeText(JSON.stringify(doc, null, 2))
+                .then(() => alert('Document copied to clipboard!'))
+                .catch(err => alert('Failed to copy: ' + err));
+        }
+        
+        // Search containers
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const search = e.target.value.toLowerCase();
+            const filtered = allContainers.filter(c => 
+                c.id.toLowerCase().includes(search)
+            );
+            displayContainers(filtered);
+        });
+        
+        // Generate mock documents for demo (fallback only)
+        function generateMockDocuments(containerId) {
+            const types = {
+                messages: ['ACTIVITY', 'COORDINATION', 'RESPONSE'],
+                logs: ['SESSION_START', 'ACTIVITY', 'SESSION_END'],
+                audit: ['compliance_report', 'violation', 'review'],
+                documents: ['policy', 'guide', 'standard']
+            };
+            
+            const docs = [];
+            const count = Math.min(10, allContainers.find(c => c.id === containerId)?.count || 5);
+            
+            for (let i = 0; i < count; i++) {
+                const typeList = types[containerId] || ['document'];
+                docs.push({
+                    id: `${containerId}-sample-${i+1}`,
+                    type: typeList[i % typeList.length],
+                    timestamp: new Date(Date.now() - i * 3600000).toISOString(),
+                    content: `Sample content for ${containerId} document ${i+1}`,
+                    status: 'active',
+                    _rid: `sample_rid_${i}`,
+                    _etag: `sample_etag_${i}`
+                });
+            }
+            
+            return docs;
+        }
+        
+        // Error display
+        function showError(message) {
+            document.getElementById('content').innerHTML = `
+                <div class="error">${message}</div>
+            `;
+        }
+        
+        // Initialize on load
+        window.onload = init;
+    </script>
+</body>
+</html>

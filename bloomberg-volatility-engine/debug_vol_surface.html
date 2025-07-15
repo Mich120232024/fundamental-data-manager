@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debug Volatility Surface</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>Bloomberg Volatility Surface Debug</h1>
+    <button onclick="testVolatility()">Test Volatility Calculation</button>
+    <pre id="output"></pre>
+
+    <script>
+        async function testVolatility() {
+            const output = document.getElementById('output');
+            output.textContent = 'Testing Bloomberg API...\n';
+            
+            try {
+                // Test ATM volatility
+                const atmResponse = await axios.post('http://20.172.249.92:8080/api/market-data', {
+                    securities: ['EURUSDV1M Curncy'],
+                    fields: ['PX_LAST', 'PX_BID', 'PX_ASK']
+                });
+                
+                output.textContent += '\nATM Volatility:\n' + JSON.stringify(atmResponse.data, null, 2);
+                
+                // Test Risk Reversal
+                const rrResponse = await axios.post('http://20.172.249.92:8080/api/market-data', {
+                    securities: ['EUR25R1M Curncy'],
+                    fields: ['PX_LAST', 'PX_BID', 'PX_ASK']
+                });
+                
+                output.textContent += '\n\n25D Risk Reversal:\n' + JSON.stringify(rrResponse.data, null, 2);
+                
+                // Test Butterfly
+                const bfResponse = await axios.post('http://20.172.249.92:8080/api/market-data', {
+                    securities: ['EUR25B1M Curncy'],
+                    fields: ['PX_LAST', 'PX_BID', 'PX_ASK']
+                });
+                
+                output.textContent += '\n\n25D Butterfly:\n' + JSON.stringify(bfResponse.data, null, 2);
+                
+                // Calculate smile
+                const atm = atmResponse.data['EURUSDV1M Curncy']?.PX_LAST || 7.5;
+                const rr = rrResponse.data['EUR25R1M Curncy']?.PX_LAST || 0;
+                const bf = bfResponse.data['EUR25B1M Curncy']?.PX_LAST || 0.15;
+                
+                output.textContent += '\n\nCalculated Smile:\n';
+                output.textContent += `ATM: ${atm}%\n`;
+                output.textContent += `25D Put: ${(atm + bf - rr/2).toFixed(2)}%\n`;
+                output.textContent += `25D Call: ${(atm + bf + rr/2).toFixed(2)}%\n`;
+                output.textContent += `\nExpected variance: ${Math.abs(rr) + 2*bf}%`;
+                
+            } catch (error) {
+                output.textContent += '\nError: ' + error.message;
+            }
+        }
+    </script>
+</body>
+</html>

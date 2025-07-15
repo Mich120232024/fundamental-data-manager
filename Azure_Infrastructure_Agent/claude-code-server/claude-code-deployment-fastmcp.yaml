@@ -1,0 +1,225 @@
+# Professional Claude Code MCP Server Deployment
+# Based on Audit #2 findings with FINMA compliance
+# Production-ready for GZC Kubernetes Engine
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gzc-trading
+  labels:
+    compliance: finma
+    data-residency: switzerland
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: claude-api-key
+  namespace: gzc-trading
+type: Opaque
+data:
+  # Base64 encoded placeholder - replace with actual key
+  api-key: cGxhY2Vob2xkZXItYXBpLWtleQ==
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: claude-code-config
+  namespace: gzc-trading
+data:
+  KEY_VAULT_URL: "https://gzc-finma-keyvault.vault.azure.net/"
+  AZURE_SUBSCRIPTION_ID: "6f928fec-8d15-47d7-b27b-be8b568e9789"
+  WORKSPACE_PATH: "/workspace"
+  LOG_LEVEL: "INFO"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: audit-logs-pvc
+  namespace: gzc-trading
+  labels:
+    finma.compliance: "true"
+    retention.period: "7years"
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: managed-premium
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: claude-code-sa
+  namespace: gzc-trading
+  annotations:
+    azure.workload.identity/client-id: "ae954be9-9a46-4085-849a-191d8884119c"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: claude-code-server
+  namespace: gzc-trading
+  labels:
+    app: claude-code-server
+    version: v1.1.0
+    compliance: finma
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: claude-code-server
+  template:
+    metadata:
+      labels:
+        app: claude-code-server
+        version: v1.1.0
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
+        azure.workload.identity/use: "true"
+    spec:
+      serviceAccountName: claude-code-sa
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1001
+        runAsGroup: 1001
+        fsGroup: 1001
+      containers:
+      - name: mcp-server
+        image: gzcacr.azurecr.io/claude-code-server:v1.1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+          name: health
+          protocol: TCP
+        - containerPort: 8081
+          name: mcp-http
+          protocol: TCP
+        env:
+        - name: AZURE_CLIENT_ID
+          valueFrom:
+            secretKeyRef:
+              name: azure-identity
+              key: client-id
+              optional: true
+        - name: AZURE_TENANT_ID
+          value: "your-tenant-id"
+        - name: APPLICATIONINSIGHTS_CONNECTION_STRING
+          value: "InstrumentationKey=068ac725-7cac-4272-8392-16ad8f1f3d9b;IngestionEndpoint=https://eastus-8.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus.livediagnostics.monitor.azure.com/"
+        envFrom:
+        - configMapRef:
+            name: claude-code-config
+        volumeMounts:
+        - name: anthropic-api-key
+          mountPath: /var/run/secrets/anthropic-api-key
+          readOnly: true
+        - name: audit-logs
+          mountPath: /var/log
+        - name: workspace
+          mountPath: /workspace
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "500m"
+          limits:
+            memory: "1Gi"
+            cpu: "1000m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 30
+          timeoutSeconds: 10
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+        startupProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 15
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 30
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: false
+          capabilities:
+            drop:
+            - ALL
+      volumes:
+      - name: anthropic-api-key
+        secret:
+          secretName: claude-api-key
+          items:
+          - key: api-key
+            path: api-key
+      - name: audit-logs
+        persistentVolumeClaim:
+          claimName: audit-logs-pvc
+      - name: workspace
+        emptyDir:
+          sizeLimit: 1Gi
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: claude-code-service
+  namespace: gzc-trading
+  labels:
+    app: claude-code-server
+spec:
+  selector:
+    app: claude-code-server
+  ports:
+  - name: health
+    protocol: TCP
+    port: 8080
+    targetPort: 8080
+  - name: mcp-http
+    protocol: TCP
+    port: 8081
+    targetPort: 8081
+  type: ClusterIP
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: claude-code-network-policy
+  namespace: gzc-trading
+spec:
+  podSelector:
+    matchLabels:
+      app: claude-code-server
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          name: gzc-trading
+    ports:
+    - protocol: TCP
+      port: 8080
+    - protocol: TCP
+      port: 8081
+  egress:
+  - to: []
+    ports:
+    - protocol: TCP
+      port: 443  # HTTPS for Azure services
+    - protocol: TCP
+      port: 53   # DNS
+    - protocol: UDP
+      port: 53   # DNS

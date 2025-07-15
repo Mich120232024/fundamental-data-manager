@@ -1,0 +1,3 @@
+client:733 [vite] connecting...
+client:826 [vite] connected.
+DataTable.tsx:4 Uncaught SyntaxError: The requested module '/node_modules/.vite/deps/@tanstack_react-table.js?v=6c3b224e' does not provide an export named 'ColumnDef' (at DataTable.tsx:4:5)

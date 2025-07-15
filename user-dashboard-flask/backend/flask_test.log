@@ -1,0 +1,276 @@
+2025-06-24 20:44:02,960 - CosmosDBManager - INFO - CosmosDBManager initialized - Database: research-analytics-db, Container: messages
+Memory layer API not available
+Live data API not available
+Message status API not available
+Log collection API not available
+Gremlin API not available
+System API not available
+Graph diagnostic API not available
+Graph test API not available
+Static Cytoscape API not available
+🚀 Starting User Management Dashboard...
+Container already exists: agent_session_logs
+Container already exists: agent_logs
+Container already exists: system_inbox
+Container already exists: identity_cards
+Container already exists: working_contexts
+Container already exists: journal_entries
+Container already exists: memory_contexts
+✅ Database connection established
+\n📋 Available endpoints:
+   http://localhost:5001/ - Main dashboard
+   http://localhost:5001/debug - Debug mode
+   http://localhost:5001/api/containers - API endpoints
+\n🌐 User Management Dashboard running on http://localhost:5001
+   Press Ctrl+C to stop
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [24/Jun/2025 20:44:09] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2025 20:44:31] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:44:32] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2025 20:44:33] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:44:36] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2025 20:44:39] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:44:41] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:45:31] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:45:32] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2025 20:45:33] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:45:36] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2025 20:45:39] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:45:41] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:46:31] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:46:33] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:46:39] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:46:41] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:46:46] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2025 20:46:46] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2025 20:47:31] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:47:32] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2025 20:47:33] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:47:36] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2025 20:47:39] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:47:41] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:48:31] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:48:33] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:48:39] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:48:41] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:49:13] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2025 20:49:14] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2025 20:49:52] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:49:53] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2025 20:49:54] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:49:57] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2025 20:50:00] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:50:02] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:51:12] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:51:13] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2025 20:51:14] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:51:17] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2025 20:51:20] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Jun/2025 20:51:22] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:09:56] "[33mGET /viewer HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:09:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:09:56] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:38:54] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:38:56] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:39:02] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:39:04] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:39:06] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:39:09] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:39:54] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:39:55] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:40:04] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:40:04] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:40:04] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:40:37] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:41:10] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:41:11] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:41:33] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:41:33] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:41:33] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:41:34] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:42:33] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:42:34] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:43:33] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:43:33] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:43:33] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:43:34] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:44:31] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:44:33] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:44:39] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:44:41] "[36mGET / HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Jun/2025 00:44:41] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:44:41] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:44:41] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:44:41] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:44:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:44:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:44:44] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:44:46] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:44:51] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:44:51] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:44:52] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:45:41] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:45:41] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:45:43] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:45:46] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:45:49] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:45:51] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:46:41] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:46:42] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:46:43] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:46:46] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:46:49] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:46:51] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:47:41] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:47:42] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:47:43] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:47:46] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:47:49] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:47:51] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:48:41] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:48:42] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:48:43] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:48:46] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:48:49] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:48:51] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:49:41] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:49:42] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:49:43] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:49:46] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:49:49] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:49:51] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:50:41] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:50:43] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:50:49] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:50:51] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:50:54] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:50:55] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:51:54] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:51:55] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:51:56] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:51:59] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 00:52:02] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 00:52:04] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:35:09] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:35:11] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:35:17] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:35:19] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:35:23] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 09:35:25] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 09:36:10] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:36:10] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 09:36:12] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:36:14] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 09:36:18] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:36:20] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:37:31] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:37:32] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 09:37:52] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:37:52] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:37:52] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:37:53] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 09:40:26] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:40:35] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:40:35] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:40:40] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 09:40:46] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 09:41:55] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:45:07] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:45:08] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 09:58:42] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:58:42] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:58:42] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 09:58:55] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 13:28:21] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 13:28:27] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 13:28:29] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 13:28:32] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 13:28:34] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 13:29:19] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 13:29:20] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 13:29:23] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 13:29:24] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 13:29:57] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 13:29:57] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 13:30:30] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 13:30:31] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 13:31:13] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 13:31:13] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 13:31:13] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 13:31:14] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 13:32:20] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 13:32:21] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 13:32:38] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 13:32:38] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 13:32:38] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 13:32:39] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 13:33:58] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 13:34:11] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 13:35:18] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 13:35:18] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 13:35:18] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 13:35:19] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 13:46:00] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 13:46:13] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [25/Jun/2025 16:37:40] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 16:37:40] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 16:37:40] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Jun/2025 16:37:54] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jun/2025 00:22:20] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:22:21] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jun/2025 00:22:21] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:22:21] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:22:21] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:22:21] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:22:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:22:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:22:32] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jun/2025 00:22:33] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jun/2025 00:22:33] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jun/2025 00:22:33] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jun/2025 00:23:22] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:23:22] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jun/2025 00:23:24] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:23:26] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jun/2025 00:23:30] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:23:32] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:24:22] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:24:22] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jun/2025 00:24:24] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:24:26] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jun/2025 00:24:30] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:24:32] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:25:22] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:25:23] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jun/2025 00:25:24] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:25:27] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jun/2025 00:25:30] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:25:32] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:26:22] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:26:23] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jun/2025 00:26:24] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:26:27] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jun/2025 00:26:30] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:26:32] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:27:22] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:27:23] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jun/2025 00:27:24] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:27:27] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jun/2025 00:27:30] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:27:32] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:28:22] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:28:24] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:28:30] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:28:32] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:28:34] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jun/2025 00:28:38] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jun/2025 00:30:00] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:30:01] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jun/2025 00:30:02] "[33mGET /api/live/system-health HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:30:05] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jun/2025 00:30:08] "[33mGET /api/live/agents HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Jun/2025 00:30:10] "[33mGET /api/live/core-documents HTTP/1.1[0m" 404 -

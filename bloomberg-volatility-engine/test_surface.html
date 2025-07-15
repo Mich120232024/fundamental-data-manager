@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Volatility Surface</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id="surface" style="width:800px;height:600px;"></div>
+    
+    <script>
+        // Simulate our exact data structure
+        const tenorDays = [7, 14, 30, 60, 90, 180, 365];
+        const deltas = [5, 15, 25, 35, 50, 65, 75, 85, 95];
+        
+        // Bloomberg test data (1M example)
+        const atmVol = 7.6375;
+        const rr25 = -0.045;
+        const bf25 = 0.1575;
+        
+        // Calculate key points
+        const put25Vol = atmVol - 0.5 * rr25 + bf25; // 7.817
+        const call25Vol = atmVol + 0.5 * rr25 + bf25; // 7.772
+        
+        console.log('Test data:', {
+            put25Vol: put25Vol.toFixed(3),
+            atmVol: atmVol.toFixed(3), 
+            call25Vol: call25Vol.toFixed(3),
+            variance: (put25Vol - atmVol).toFixed(3)
+        });
+        
+        // Build z-matrix like our code
+        const z = [];
+        for (let j = 0; j < deltas.length; j++) {
+            z[j] = [];
+            const delta = deltas[j];
+            
+            for (let i = 0; i < tenorDays.length; i++) {
+                let vol;
+                
+                // Simple test smile
+                if (delta === 25) {
+                    vol = put25Vol;
+                } else if (delta === 50) {
+                    vol = atmVol; 
+                } else if (delta === 75) {
+                    vol = call25Vol;
+                } else if (delta < 25) {
+                    vol = put25Vol + (25 - delta) * 0.02; // Wing effect
+                } else if (delta > 75) {
+                    vol = call25Vol + (delta - 75) * 0.015; // Wing effect
+                } else if (delta < 50) {
+                    // Linear between put and ATM
+                    const weight = (delta - 25) / 25;
+                    vol = put25Vol + (atmVol - put25Vol) * weight;
+                } else {
+                    // Linear between ATM and call
+                    const weight = (delta - 50) / 25;
+                    vol = atmVol + (call25Vol - atmVol) * weight;
+                }
+                
+                z[j][i] = vol;
+            }
+        }
+        
+        console.log('Z-matrix:', z);
+        console.log('Sample values:');
+        console.log('Delta 25:', z[2]);
+        console.log('Delta 50:', z[4]); 
+        console.log('Delta 75:', z[6]);
+        
+        // Check variance
+        const allVols = z.flat();
+        const minVol = Math.min(...allVols);
+        const maxVol = Math.max(...allVols);
+        console.log('Vol range:', minVol.toFixed(3), 'to', maxVol.toFixed(3));
+        console.log('Variance:', (maxVol - minVol).toFixed(3));
+        
+        // Plot surface
+        const data = [{
+            x: tenorDays,
+            y: deltas,
+            z: z,
+            type: 'surface',
+            colorscale: [
+                [0, 'rgb(0, 100, 0)'],
+                [0.3, 'rgb(0, 255, 0)'],
+                [0.5, 'rgb(255, 255, 0)'],
+                [0.7, 'rgb(255, 165, 0)'],
+                [1, 'rgb(255, 0, 0)']
+            ]
+        }];
+        
+        const layout = {
+            title: 'Test Volatility Surface',
+            scene: {
+                xaxis: { title: 'Days to Expiry' },
+                yaxis: { title: 'Delta' },
+                zaxis: { title: 'Implied Volatility (%)' }
+            }
+        };
+        
+        Plotly.newPlot('surface', data, layout);
+    </script>
+</body>
+</html>

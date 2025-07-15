@@ -1,0 +1,20 @@
+{
+  "name": "research-analytics-services",
+  "version": "1.0.0",
+  "description": "Research and Analytics Services with Claude SDK integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "claude",
+    "sdk",
+    "analytics",
+    "research"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/claude-code": "^1.0.43"
+  }
+}

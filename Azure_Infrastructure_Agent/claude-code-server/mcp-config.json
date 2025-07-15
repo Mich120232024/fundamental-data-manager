@@ -1,0 +1,57 @@
+{
+  "version": "1.0",
+  "tools": {
+    "filesystem": {
+      "enabled": true,
+      "config": {
+        "rootPath": "/workspace",
+        "allowedPaths": ["/workspace"],
+        "blockedPaths": ["/etc", "/var", "/usr", "/bin", "/sbin", "/root"]
+      }
+    },
+    "azure": {
+      "enabled": true,
+      "config": {
+        "subscriptionId": "6f928fec-8d15-47d7-b27b-be8b568e9789",
+        "useManagedIdentity": true,
+        "keyVaultUrl": "https://gzc-finma-keyvault.vault.azure.net/"
+      }
+    },
+    "cosmos_db": {
+      "enabled": true,
+      "config": {
+        "endpoint": "${COSMOS_DB_ENDPOINT}",
+        "databaseName": "research-analytics",
+        "containerName": "messages",
+        "useManagedIdentity": true
+      }
+    },
+    "github": {
+      "enabled": true,
+      "config": {
+        "tokenPath": "/var/run/secrets/github-token/token"
+      }
+    },
+    "memory": {
+      "enabled": true,
+      "config": {
+        "persistencePath": "/workspace/.claude-memory"
+      }
+    }
+  },
+  "security": {
+    "allowedOperations": [
+      "read", "write", "analyze", "query"
+    ],
+    "blockedOperations": [
+      "exec", "shell", "system"
+    ],
+    "maxRequestSize": "10MB",
+    "timeout": 300000
+  },
+  "logging": {
+    "level": "info",
+    "destination": "stdout",
+    "includeTimestamps": true
+  }
+}

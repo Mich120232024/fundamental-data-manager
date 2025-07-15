@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Safari Fetch Test</title>
+    <style>
+        body { 
+            font-family: Arial; 
+            margin: 20px; 
+            background: #1a1a1a; 
+            color: white;
+        }
+        .test { 
+            margin: 10px 0; 
+            padding: 10px; 
+            background: #2a2a2a; 
+            border-radius: 4px;
+        }
+        .success { color: #4CAF50; }
+        .error { color: #f44336; }
+    </style>
+</head>
+<body>
+    <h1>Safari Fetch Test</h1>
+    <div id="results"></div>
+    
+    <script>
+        const resultsDiv = document.getElementById('results');
+        
+        function log(msg, isError = false) {
+            const div = document.createElement('div');
+            div.className = 'test ' + (isError ? 'error' : 'success');
+            div.textContent = msg;
+            resultsDiv.appendChild(div);
+        }
+        
+        // Test 1: Basic fetch
+        async function test1() {
+            try {
+                log('Test 1: Basic fetch to /api/stats...');
+                const response = await fetch('/api/stats');
+                const data = await response.json();
+                log(`✓ Success! Total documents: ${data.stats.totalDocuments}`);
+            } catch (e) {
+                log(`✗ Error: ${e.message}`, true);
+            }
+        }
+        
+        // Test 2: Fetch with full URL
+        async function test2() {
+            try {
+                log('Test 2: Fetch with full URL...');
+                const response = await fetch('http://127.0.0.1:5001/api/stats');
+                const data = await response.json();
+                log(`✓ Success! Database: ${data.stats.database}`);
+            } catch (e) {
+                log(`✗ Error: ${e.message}`, true);
+            }
+        }
+        
+        // Test 3: Fetch to slow endpoint
+        async function test3() {
+            try {
+                log('Test 3: Fetch to slow endpoint /api/live/system-health...');
+                const response = await fetch('/api/live/system-health');
+                const data = await response.json();
+                log(`✓ Success! Status: ${data.health.overall_status}`);
+            } catch (e) {
+                log(`✗ Error: ${e.message}`, true);
+            }
+        }
+        
+        // Run tests
+        test1().then(() => test2()).then(() => test3());
+    </script>
+</body>
+</html>

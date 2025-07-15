@@ -1,0 +1,118 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gzc-trading
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: claude-api-key
+  namespace: gzc-trading
+type: Opaque
+data:
+  # Base64 encoded placeholder - will be replaced with actual key
+  api-key: cGxhY2Vob2xkZXItYXBpLWtleQ==
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: claude-code-config
+  namespace: gzc-trading
+data:
+  COSMOS_DB_ENDPOINT: "https://your-cosmos-account.documents.azure.com:443/"
+  AZURE_SUBSCRIPTION_ID: "6f928fec-8d15-47d7-b27b-be8b568e9789"
+  WORKSPACE_PATH: "/workspace"
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: claude-code-server
+  namespace: gzc-trading
+spec:
+  serviceName: claude-code-service
+  replicas: 1
+  selector:
+    matchLabels:
+      app: claude-code-server
+  template:
+    metadata:
+      labels:
+        app: claude-code-server
+    spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1001
+        runAsGroup: 1001
+        fsGroup: 1001
+      containers:
+      - name: claude-code
+        image: gzcacr.azurecr.io/claude-code-server:v1.0.35
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+          name: mcp-server
+        env:
+        - name: APPLICATIONINSIGHTS_CONNECTION_STRING
+          value: "InstrumentationKey=068ac725-7cac-4272-8392-16ad8f1f3d9b;IngestionEndpoint=https://eastus-8.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus.livediagnostics.monitor.azure.com/"
+        envFrom:
+        - configMapRef:
+            name: claude-code-config
+        volumeMounts:
+        - name: anthropic-api-key
+          mountPath: /var/run/secrets/anthropic-api-key
+          readOnly: true
+        - name: workspace
+          mountPath: /workspace
+        resources:
+          requests:
+            memory: "2Gi"
+            cpu: "1000m"
+          limits:
+            memory: "4Gi"
+            cpu: "2000m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 8080
+          initialDelaySeconds: 20
+          periodSeconds: 5
+          timeoutSeconds: 3
+          failureThreshold: 3
+      volumes:
+      - name: anthropic-api-key
+        secret:
+          secretName: claude-api-key
+          items:
+          - key: api-key
+            path: api-key
+  volumeClaimTemplates:
+  - metadata:
+      name: workspace
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      storageClassName: "managed-premium"
+      resources:
+        requests:
+          storage: 100Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: claude-code-service
+  namespace: gzc-trading
+spec:
+  selector:
+    app: claude-code-server
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: ClusterIP

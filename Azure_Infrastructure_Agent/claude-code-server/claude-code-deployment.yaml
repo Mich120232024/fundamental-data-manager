@@ -1,0 +1,148 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gzc-trading
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: claude-code-sa
+  namespace: gzc-trading
+  annotations:
+    azure.workload.identity/client-id: "ae954be9-9a46-4085-849a-191d8884119c"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: claude-code-config
+  namespace: gzc-trading
+data:
+  COSMOS_DB_ENDPOINT: "https://your-cosmos-account.documents.azure.com:443/"
+  AZURE_SUBSCRIPTION_ID: "6f928fec-8d15-47d7-b27b-be8b568e9789"
+  WORKSPACE_PATH: "/workspace"
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: claude-code-server
+  namespace: gzc-trading
+spec:
+  serviceName: claude-code-service
+  replicas: 1
+  selector:
+    matchLabels:
+      app: claude-code-server
+  template:
+    metadata:
+      labels:
+        app: claude-code-server
+        azure.workload.identity/use: "true"
+    spec:
+      serviceAccountName: claude-code-sa
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1001
+        runAsGroup: 1001
+        fsGroup: 1001
+      containers:
+      - name: claude-code
+        image: gzcacr.azurecr.io/claude-code-server:v1.0.34
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+          name: mcp-server
+        env:
+        - name: AZURE_CLIENT_ID
+          value: "ae954be9-9a46-4085-849a-191d8884119c"
+        - name: AZURE_TENANT_ID
+          value: "8274c97d-de9d-4328-98cf-2d4ee94bf104"
+        envFrom:
+        - configMapRef:
+            name: claude-code-config
+        volumeMounts:
+        - name: anthropic-api-key
+          mountPath: /var/run/secrets/anthropic-api-key
+          readOnly: true
+        - name: github-token
+          mountPath: /var/run/secrets/github-token
+          readOnly: true
+        - name: workspace
+          mountPath: /workspace
+        resources:
+          requests:
+            memory: "2Gi"
+            cpu: "1000m"
+          limits:
+            memory: "4Gi"
+            cpu: "2000m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 8080
+          initialDelaySeconds: 20
+          periodSeconds: 5
+      volumes:
+      - name: anthropic-api-key
+        csi:
+          driver: secrets-store.csi.k8s.io
+          readOnly: true
+          volumeAttributes:
+            secretProviderClass: claude-code-secrets
+      - name: github-token
+        secret:
+          secretName: github-token
+          optional: true
+  volumeClaimTemplates:
+  - metadata:
+      name: workspace
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      storageClassName: "managed-premium"
+      resources:
+        requests:
+          storage: 100Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: claude-code-service
+  namespace: gzc-trading
+spec:
+  selector:
+    app: claude-code-server
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: ClusterIP
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: claude-code-ingress
+  namespace: gzc-trading
+  annotations:
+    kubernetes.io/ingress.class: azure/application-gateway
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  tls:
+  - hosts:
+    - claude-code.gzc.internal
+    secretName: claude-code-tls
+  rules:
+  - host: claude-code.gzc.internal
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: claude-code-service
+            port:
+              number: 80

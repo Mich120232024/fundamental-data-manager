@@ -1,0 +1,172 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: claude-code-db-specialist
+  namespace: gzc-trading
+  labels:
+    app: claude-code-db-specialist
+    compliance: finma
+    version: v1.0.0
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: claude-code-db-specialist
+  template:
+    metadata:
+      labels:
+        app: claude-code-db-specialist
+        version: v1.0.0
+      annotations:
+        azure.workload.identity/use: "true"
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
+    spec:
+      serviceAccountName: claude-code-sa
+      containers:
+      - name: claude-specialist
+        image: gzcacr.azurecr.io/claude-code-db-specialist:v1.0.0
+        ports:
+        - containerPort: 8080
+          name: http
+        env:
+        - name: AZURE_CLIENT_ID
+          valueFrom:
+            secretKeyRef:
+              name: azure-identity
+              key: client-id
+              optional: true
+        - name: AZURE_TENANT_ID
+          value: "8274c97d-de9d-4328-98cf-2d4ee94bf104"
+        - name: ANTHROPIC_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: claude-api-key
+              key: api-key
+        - name: COSMOS_ENDPOINT
+          valueFrom:
+            secretKeyRef:
+              name: cosmos-db-secret
+              key: endpoint
+              optional: true
+        - name: COSMOS_KEY
+          valueFrom:
+            secretKeyRef:
+              name: cosmos-db-secret
+              key: key
+              optional: true
+        - name: ENVIRONMENT
+          value: "production"
+        - name: LOG_LEVEL
+          value: "INFO"
+        envFrom:
+        - configMapRef:
+            name: claude-specialist-config
+            optional: false
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 30
+          timeoutSeconds: 10
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+        startupProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 15
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 30
+        volumeMounts:
+        - name: workspace
+          mountPath: /workspace
+        - name: cache-volume
+          mountPath: /app/.cache
+      volumes:
+      - name: workspace
+        emptyDir:
+          sizeLimit: 1Gi
+      - name: cache-volume
+        emptyDir:
+          sizeLimit: 500Mi
+      nodeSelector:
+        kubernetes.io/os: linux
+      tolerations:
+      - key: "node.kubernetes.io/memory-pressure"
+        operator: "Exists"
+        effect: "NoSchedule"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: claude-specialist-service
+  namespace: gzc-trading
+  labels:
+    app: claude-code-db-specialist
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: claude-code-db-specialist
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: claude-specialist-config
+  namespace: gzc-trading
+  labels:
+    app: claude-code-db-specialist
+data:
+  SPECIALIST_ROLE: "database_architect"
+  FOCUS_AREAS: "cosmos_db,sql_optimization,data_pipelines,schema_design"
+  MAX_RESPONSE_LENGTH: "4000"
+  ENABLE_STREAMING: "true"
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: claude-specialist-ingress
+  namespace: gzc-trading
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "300"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "300"
+spec:
+  tls:
+  - hosts:
+    - claude-db-specialist.gzc-trading.local
+    secretName: claude-specialist-tls
+  rules:
+  - host: claude-db-specialist.gzc-trading.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: claude-specialist-service
+            port:
+              number: 80

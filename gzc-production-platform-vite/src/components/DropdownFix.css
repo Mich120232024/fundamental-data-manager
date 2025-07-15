@@ -1,0 +1,33 @@
+/* Fix for dropdown cursor sticking issue */
+select {
+    position: relative !important;
+    z-index: 1000;
+    pointer-events: auto !important;
+}
+
+select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(149, 189, 120, 0.3);
+}
+
+/* Prevent dropdown from sticking to cursor */
+select option {
+    position: static !important;
+    cursor: pointer;
+}
+
+/* Fix for grid layout dropdowns */
+.react-grid-item select {
+    width: 100%;
+    position: relative !important;
+    pointer-events: auto !important;
+}
+
+/* Prevent grid dragging when interacting with form elements */
+select, input, textarea, button {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}

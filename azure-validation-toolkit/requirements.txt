@@ -1,0 +1,7 @@
+azure-cli
+azure-identity
+azure-storage-blob
+azure-keyvault-secrets
+azure-cosmos
+pytest
+requests

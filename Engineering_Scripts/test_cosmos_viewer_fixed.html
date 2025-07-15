@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Cosmos Viewer Fixed</title>
+    <script>
+        console.log('Test page loaded');
+        
+        // Test if the viewer loads containers
+        fetch('http://localhost:5001/viewer')
+            .then(response => response.text())
+            .then(html => {
+                console.log('Viewer HTML length:', html.length);
+                console.log('Contains init function:', html.includes('function init()'));
+                console.log('Contains API_BASE:', html.includes('API_BASE'));
+                console.log('Contains window.location.origin:', html.includes('window.location.origin'));
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</head>
+<body>
+    <h1>Testing Cosmos Viewer</h1>
+    <p>Check the browser console for results</p>
+    <br>
+    <a href="http://localhost:5001/viewer" target="_blank">Open Viewer in New Tab</a>
+</body>
+</html>

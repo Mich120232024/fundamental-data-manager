@@ -1,0 +1,252 @@
+{
+  "timestamp": 1750807759.2055511,
+  "tests": {
+    "cosmos_esc": "\u2705 WORKING - ESC key closes modal",
+    "graph_loading": "\u274c BROKEN - No cytoscape element found",
+    "architecture_esc": "\u274c ERROR - ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    58 \u00d7 waiting for element to be visible, enabled and stable\n       - element is not visible\n     - retrying click action\n       - waiting 500ms\n",
+    "styling_quality": "\u2705 WORKING - CSS variables loaded properly",
+    "console_errors": "Errors: 2, Warnings: 2"
+  },
+  "screenshots": [
+    "/Users/mikaeleage/Research & Analytics Services/Engineering Workspace/Scripts/mcp_test_cosmos_modal_1750807764.png",
+    "/Users/mikaeleage/Research & Analytics Services/Engineering Workspace/Scripts/mcp_test_graph_1750807771.png",
+    "/Users/mikaeleage/Research & Analytics Services/Engineering Workspace/Scripts/mcp_test_styling_1750807804.png"
+  ],
+  "console_logs": [
+    {
+      "type": "log",
+      "text": "Nav item clicked: Cosmos Explorer cosmos",
+      "timestamp": 1750807759.2554681
+    },
+    {
+      "type": "log",
+      "text": "switchTab called with: cosmos",
+      "timestamp": 1750807759.255651
+    },
+    {
+      "type": "log",
+      "text": "currentTab set to: cosmos",
+      "timestamp": 1750807759.255795
+    },
+    {
+      "type": "log",
+      "text": "Nav item clicked: Graph DB graph",
+      "timestamp": 1750807766.41602
+    },
+    {
+      "type": "log",
+      "text": "switchTab called with: graph",
+      "timestamp": 1750807766.416215
+    },
+    {
+      "type": "log",
+      "text": "currentTab set to: graph",
+      "timestamp": 1750807766.416373
+    },
+    {
+      "type": "log",
+      "text": "Loading graph data from agent context memory...",
+      "timestamp": 1750807766.416605
+    },
+    {
+      "type": "log",
+      "text": "Found 10 documents for graph",
+      "timestamp": 1750807766.758589
+    },
+    {
+      "type": "log",
+      "text": "Built graph data: 10 nodes, 10 edges",
+      "timestamp": 1750807766.758712
+    },
+    {
+      "type": "warning",
+      "text": "You have set a custom wheel sensitivity.  This will make your app zoom unnaturally when using mainstream mice.  You should change this value from the default only if you can guarantee that all your users will use the same hardware and OS configuration as your current machine.",
+      "timestamp": 1750807766.7625642
+    },
+    {
+      "type": "error",
+      "text": "Graph loading error: Error: Can not create edge `HEAD_OF_DIGITAL_STAFF_reports_to_The_Smart_and_Fun_Guy` with nonexistant target `The_Smart_and_Fun_Guy`\n    at Oe (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:23:13238)\n    at $o.restore (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:29:78321)\n    at new Zo (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:29:74852)\n    at Ns.add (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:29:82512)\n    at https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:61537\n    at https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:61789\n    at https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:61333\n    at new Ns (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:61338)\n    at Uu (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:218590)\n    at initializeCytoscape (http://localhost:8420/:2208:24)",
+      "timestamp": 1750807766.765911
+    },
+    {
+      "type": "log",
+      "text": "Loading graph data from agent context memory...",
+      "timestamp": 1750807767.940371
+    },
+    {
+      "type": "log",
+      "text": "Found 10 documents for graph",
+      "timestamp": 1750807768.286092
+    },
+    {
+      "type": "log",
+      "text": "Built graph data: 10 nodes, 10 edges",
+      "timestamp": 1750807768.286258
+    },
+    {
+      "type": "warning",
+      "text": "You have set a custom wheel sensitivity.  This will make your app zoom unnaturally when using mainstream mice.  You should change this value from the default only if you can guarantee that all your users will use the same hardware and OS configuration as your current machine.",
+      "timestamp": 1750807768.2873878
+    },
+    {
+      "type": "error",
+      "text": "Graph loading error: Error: Can not create edge `HEAD_OF_DIGITAL_STAFF_reports_to_The_Smart_and_Fun_Guy` with nonexistant target `The_Smart_and_Fun_Guy`\n    at Oe (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:23:13238)\n    at $o.restore (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:29:78321)\n    at new Zo (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:29:74852)\n    at Ns.add (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:29:82512)\n    at https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:61537\n    at https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:61789\n    at https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:61333\n    at new Ns (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:61338)\n    at Uu (https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js:32:218590)\n    at initializeCytoscape (http://localhost:8420/:2208:24)",
+      "timestamp": 1750807768.288343
+    },
+    {
+      "type": "log",
+      "text": "Nav item clicked: Architecture research",
+      "timestamp": 1750807771.514051
+    },
+    {
+      "type": "log",
+      "text": "switchTab called with: research",
+      "timestamp": 1750807771.5141912
+    },
+    {
+      "type": "log",
+      "text": "currentTab set to: research",
+      "timestamp": 1750807771.514306
+    },
+    {
+      "type": "log",
+      "text": "loadResearch function called",
+      "timestamp": 1750807771.5143838
+    },
+    {
+      "type": "log",
+      "text": "loadArchitecture called",
+      "timestamp": 1750807771.514463
+    },
+    {
+      "type": "log",
+      "text": "Fetching: http://localhost:8420/api/v1/architecture/list",
+      "timestamp": 1750807771.51457
+    },
+    {
+      "type": "log",
+      "text": "Architecture data received: {files: Array(102), count: 102, base_paths: Array(4)}",
+      "timestamp": 1750807771.524804
+    },
+    {
+      "type": "log",
+      "text": "Files count: 102",
+      "timestamp": 1750807771.524946
+    },
+    {
+      "type": "log",
+      "text": "Categories: [General, Process Workflows, Project Architecture, Communication Protocols, System Architecture, Database Design, Frontend Components, Agent & Team Systems, Operations & Maintenance]",
+      "timestamp": 1750807771.525056
+    },
+    {
+      "type": "log",
+      "text": "About to call displayArchitectureFiles with categories: [General, Process Workflows, Project Architecture, Communication Protocols, System Architecture, Database Design, Frontend Components, Agent & Team Systems, Operations & Maintenance]",
+      "timestamp": 1750807771.525155
+    },
+    {
+      "type": "log",
+      "text": "displayArchitectureFiles called with: [General, Process Workflows, Project Architecture, Communication Protocols, System Architecture, Database Design, Frontend Components, Agent & Team Systems, Operations & Maintenance]",
+      "timestamp": 1750807771.525262
+    },
+    {
+      "type": "log",
+      "text": "Found fileList element, selectedCategory: ",
+      "timestamp": 1750807771.525358
+    },
+    {
+      "type": "log",
+      "text": "Processing category: General with 10 files",
+      "timestamp": 1750807771.525561
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: General",
+      "timestamp": 1750807771.525722
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Process Workflows with 13 files",
+      "timestamp": 1750807771.5259352
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Process Workflows",
+      "timestamp": 1750807771.526036
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Project Architecture with 2 files",
+      "timestamp": 1750807771.526222
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Project Architecture",
+      "timestamp": 1750807771.5263202
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Communication Protocols with 2 files",
+      "timestamp": 1750807771.526538
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Communication Protocols",
+      "timestamp": 1750807771.5266392
+    },
+    {
+      "type": "log",
+      "text": "Processing category: System Architecture with 56 files",
+      "timestamp": 1750807771.52685
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: System Architecture",
+      "timestamp": 1750807771.526958
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Database Design with 2 files",
+      "timestamp": 1750807771.527153
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Database Design",
+      "timestamp": 1750807771.5272691
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Frontend Components with 5 files",
+      "timestamp": 1750807771.5274591
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Frontend Components",
+      "timestamp": 1750807771.5275578
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Agent & Team Systems with 7 files",
+      "timestamp": 1750807771.527798
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Agent & Team Systems",
+      "timestamp": 1750807771.527915
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Operations & Maintenance with 5 files",
+      "timestamp": 1750807771.52814
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Operations & Maintenance",
+      "timestamp": 1750807771.528246
+    }
+  ],
+  "summary": {
+    "total_tests": 4,
+    "passed_tests": 2,
+    "success_rate": 50.0
+  }
+}

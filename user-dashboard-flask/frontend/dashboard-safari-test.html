@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safari Dashboard Test</title>
+    
+    <!-- Test Safari loading without defer -->
+    <script src="./js/cytoscape.min.js"></script>
+    <script src="./js/cytoscape-cose-bilkent.js"></script>
+    <script>
+        console.log('Cytoscape loaded immediately?', typeof cytoscape !== 'undefined');
+    </script>
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #000;
+            color: #fff;
+            padding: 20px;
+        }
+        .test {
+            padding: 10px;
+            margin: 10px 0;
+            background: #333;
+            border-radius: 5px;
+        }
+        .success { color: #0f0; }
+        .error { color: #f00; }
+    </style>
+</head>
+<body>
+    <h1>Safari Loading Test</h1>
+    
+    <div id="results"></div>
+    
+    <script>
+        const log = (msg, success = true) => {
+            const div = document.createElement('div');
+            div.className = `test ${success ? 'success' : 'error'}`;
+            div.textContent = msg;
+            document.getElementById('results').appendChild(div);
+        };
+        
+        // Test 1: Check if Cytoscape is available
+        log(`Cytoscape available: ${typeof cytoscape !== 'undefined'}`);
+        
+        // Test 2: Check Safari detection
+        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        log(`Safari detected: ${isSafari}`);
+        log(`User Agent: ${navigator.userAgent}`);
+        
+        // Test 3: Try to create a graph
+        if (typeof cytoscape !== 'undefined') {
+            try {
+                const cy = cytoscape({
+                    container: document.createElement('div'),
+                    elements: [],
+                    style: [
+                        {
+                            selector: 'node',
+                            style: {
+                                'background-color': '#666',
+                                'label': 'data(id)'
+                            }
+                        }
+                    ]
+                });
+                log('Cytoscape instance created successfully');
+            } catch (e) {
+                log(`Cytoscape error: ${e.message}`, false);
+            }
+        } else {
+            log('Cannot test Cytoscape - not loaded', false);
+        }
+        
+        // Test 4: Check for defer attribute issues
+        document.addEventListener('DOMContentLoaded', () => {
+            log('DOMContentLoaded fired');
+            log(`Cytoscape available at DOMContentLoaded: ${typeof cytoscape !== 'undefined'}`);
+        });
+        
+        window.addEventListener('load', () => {
+            log('Window load event fired');
+            log(`Cytoscape available at load: ${typeof cytoscape !== 'undefined'}`);
+        });
+    </script>
+</body>
+</html>

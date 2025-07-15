@@ -1,0 +1,23 @@
+# Professional MCP Server Dependencies
+# Based on Audit #2 findings for production deployment
+
+# Core MCP SDK with FastMCP
+mcp>=1.0.0
+
+# FastAPI for health endpoints and HTTP transport
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+
+# Azure SDK for FINMA compliance
+azure-identity>=1.15.0
+azure-keyvault-secrets>=4.7.0
+azure-storage-blob>=12.19.0
+azure-monitor-opentelemetry>=1.2.0
+
+# Security and monitoring
+cryptography>=41.0.0
+pydantic>=2.5.0
+
+# Production utilities
+python-dotenv>=1.0.0
+structlog>=23.2.0

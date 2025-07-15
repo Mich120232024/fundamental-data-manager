@@ -1,0 +1,44 @@
+{
+  "generated_at": "2025-06-16T22:21:20.008612Z",
+  "total_documents": 4,
+  "compliance_summary": {
+    "naming_convention": {
+      "compliant": 4,
+      "total": 4,
+      "rate": 1.0
+    },
+    "required_tags": {
+      "compliant": 4,
+      "total": 4,
+      "rate": 1.0
+    },
+    "engineering_tags": {
+      "complexity": {
+        "present": 4,
+        "total": 4,
+        "rate": 1.0
+      },
+      "dependencies": {
+        "present": 4,
+        "total": 4,
+        "rate": 1.0
+      },
+      "test_coverage": {
+        "present": 4,
+        "total": 4,
+        "rate": 1.0
+      }
+    }
+  },
+  "document_breakdown": {
+    "by_type": {
+      "guide": 2,
+      "technical-documentation": 1,
+      "procedure": 1
+    },
+    "by_complexity": {
+      "high": 1,
+      "medium": 3
+    }
+  }
+}

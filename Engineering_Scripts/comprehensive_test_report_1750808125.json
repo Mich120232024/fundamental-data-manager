@@ -1,0 +1,412 @@
+{
+  "timestamp": 1750808079.997555,
+  "tests": {
+    "cosmos_esc": "\u2705 WORKING - ESC key closes modal",
+    "graph_loading": "\u2705 WORKING - Graph visualization loaded",
+    "architecture_esc": "\u274c ERROR - ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    58 \u00d7 waiting for element to be visible, enabled and stable\n       - element is not visible\n     - retrying click action\n       - waiting 500ms\n",
+    "styling_quality": "\u2705 WORKING - CSS variables loaded properly",
+    "console_errors": "Errors: 0, Warnings: 36"
+  },
+  "screenshots": [
+    "/Users/mikaeleage/Research & Analytics Services/Engineering Workspace/Scripts/mcp_test_cosmos_modal_1750808085.png",
+    "/Users/mikaeleage/Research & Analytics Services/Engineering Workspace/Scripts/mcp_test_graph_1750808092.png",
+    "/Users/mikaeleage/Research & Analytics Services/Engineering Workspace/Scripts/mcp_test_styling_1750808125.png"
+  ],
+  "console_logs": [
+    {
+      "type": "log",
+      "text": "Nav item clicked: Cosmos Explorer cosmos",
+      "timestamp": 1750808080.035241
+    },
+    {
+      "type": "log",
+      "text": "switchTab called with: cosmos",
+      "timestamp": 1750808080.035404
+    },
+    {
+      "type": "log",
+      "text": "currentTab set to: cosmos",
+      "timestamp": 1750808080.0356321
+    },
+    {
+      "type": "log",
+      "text": "Nav item clicked: Graph DB graph",
+      "timestamp": 1750808087.2084868
+    },
+    {
+      "type": "log",
+      "text": "switchTab called with: graph",
+      "timestamp": 1750808087.208763
+    },
+    {
+      "type": "log",
+      "text": "currentTab set to: graph",
+      "timestamp": 1750808087.208936
+    },
+    {
+      "type": "log",
+      "text": "Loading graph data from hierarchy endpoint...",
+      "timestamp": 1750808087.209049
+    },
+    {
+      "type": "log",
+      "text": "Falling back to graph data endpoint...",
+      "timestamp": 1750808087.209188
+    },
+    {
+      "type": "log",
+      "text": "Graph data returned: 13 nodes, 14 edges",
+      "timestamp": 1750808087.2101161
+    },
+    {
+      "type": "warning",
+      "text": "The style property `shape: box` is invalid",
+      "timestamp": 1750808087.223555
+    },
+    {
+      "type": "warning",
+      "text": "Custom function mappers may not return invalid values for the property type (i.e. `shape` for ele `COSMOS_DB` is invalid)",
+      "timestamp": 1750808087.223697
+    },
+    {
+      "type": "warning",
+      "text": "The style property `shape: box` is invalid",
+      "timestamp": 1750808087.2237802
+    },
+    {
+      "type": "warning",
+      "text": "Custom function mappers may not return invalid values for the property type (i.e. `shape` for ele `AZURE_SYNAPSE` is invalid)",
+      "timestamp": 1750808087.2238889
+    },
+    {
+      "type": "warning",
+      "text": "The style property `shape: box` is invalid",
+      "timestamp": 1750808087.223959
+    },
+    {
+      "type": "warning",
+      "text": "Custom function mappers may not return invalid values for the property type (i.e. `shape` for ele `FRED_API` is invalid)",
+      "timestamp": 1750808087.224054
+    },
+    {
+      "type": "warning",
+      "text": "The style property `shape: box` is invalid",
+      "timestamp": 1750808087.2241359
+    },
+    {
+      "type": "warning",
+      "text": "Custom function mappers may not return invalid values for the property type (i.e. `shape` for ele `USER_DASHBOARD` is invalid)",
+      "timestamp": 1750808087.224263
+    },
+    {
+      "type": "warning",
+      "text": "The style property `shape: box` is invalid",
+      "timestamp": 1750808087.2281191
+    },
+    {
+      "type": "warning",
+      "text": "Custom function mappers may not return invalid values for the property type (i.e. `shape` for ele `COSMOS_DB` is invalid)",
+      "timestamp": 1750808087.228262
+    },
+    {
+      "type": "warning",
+      "text": "The style property `shape: box` is invalid",
+      "timestamp": 1750808087.2283661
+    },
+    {
+      "type": "warning",
+      "text": "Custom function mappers may not return invalid values for the property type (i.e. `shape` for ele `AZURE_SYNAPSE` is invalid)",
+      "timestamp": 1750808087.22844
+    },
+    {
+      "type": "warning",
+      "text": "The style property `shape: box` is invalid",
+      "timestamp": 1750808087.228587
+    },
+    {
+      "type": "warning",
+      "text": "Custom function mappers may not return invalid values for the property type (i.e. `shape` for ele `FRED_API` is invalid)",
+      "timestamp": 1750808087.2286909
+    },
+    {
+      "type": "warning",
+      "text": "The style property `shape: box` is invalid",
+      "timestamp": 1750808087.228773
+    },
+    {
+      "type": "warning",
+      "text": "Custom function mappers may not return invalid values for the property type (i.e. `shape` for ele `USER_DASHBOARD` is invalid)",
+      "timestamp": 1750808087.228853
+    },
+    {
+      "type": "warning",
+      "text": "The style property `shape: box` is invalid",
+      "timestamp": 1750808087.24098
+    },
+    {
+      "type": "warning",
+      "text": "Custom function mappers may not return invalid values for the property type (i.e. `shape` for ele `COSMOS_DB` is invalid)",
+      "timestamp": 1750808087.24127
+    },
+    {
+      "type": "log",
+      "text": "Loading graph data from hierarchy endpoint...",
+      "timestamp": 1750808088.743158
+    },
+    {
+      "type": "log",
+      "text": "Falling back to graph data endpoint...",
+      "timestamp": 1750808088.743401
+    },
+    {
+      "type": "log",
+      "text": "Graph data returned: 13 nodes, 14 edges",
+      "timestamp": 1750808088.744886
+    },
+    {
+      "type": "warning",
+      "text": "The style property `shape: box` is invalid",
+      "timestamp": 1750808088.75063
+    },
+    {
+      "type": "warning",
+      "text": "Custom function mappers may not return invalid values for the property type (i.e. `shape` for ele `COSMOS_DB` is invalid)",
+      "timestamp": 1750808088.750776
+    },
+    {
+      "type": "warning",
+      "text": "The style property `shape: box` is invalid",
+      "timestamp": 1750808088.75089
+    },
+    {
+      "type": "warning",
+      "text": "Custom function mappers may not return invalid values for the property type (i.e. `shape` for ele `AZURE_SYNAPSE` is invalid)",
+      "timestamp": 1750808088.751004
+    },
+    {
+      "type": "warning",
+      "text": "The style property `shape: box` is invalid",
+      "timestamp": 1750808088.751106
+    },
+    {
+      "type": "warning",
+      "text": "Custom function mappers may not return invalid values for the property type (i.e. `shape` for ele `FRED_API` is invalid)",
+      "timestamp": 1750808088.751206
+    },
+    {
+      "type": "warning",
+      "text": "The style property `shape: box` is invalid",
+      "timestamp": 1750808088.751302
+    },
+    {
+      "type": "warning",
+      "text": "Custom function mappers may not return invalid values for the property type (i.e. `shape` for ele `USER_DASHBOARD` is invalid)",
+      "timestamp": 1750808088.7513971
+    },
+    {
+      "type": "warning",
+      "text": "The style property `shape: box` is invalid",
+      "timestamp": 1750808088.75223
+    },
+    {
+      "type": "warning",
+      "text": "Custom function mappers may not return invalid values for the property type (i.e. `shape` for ele `COSMOS_DB` is invalid)",
+      "timestamp": 1750808088.75239
+    },
+    {
+      "type": "warning",
+      "text": "The style property `shape: box` is invalid",
+      "timestamp": 1750808088.7525928
+    },
+    {
+      "type": "warning",
+      "text": "Custom function mappers may not return invalid values for the property type (i.e. `shape` for ele `AZURE_SYNAPSE` is invalid)",
+      "timestamp": 1750808088.7527208
+    },
+    {
+      "type": "warning",
+      "text": "The style property `shape: box` is invalid",
+      "timestamp": 1750808088.752822
+    },
+    {
+      "type": "warning",
+      "text": "Custom function mappers may not return invalid values for the property type (i.e. `shape` for ele `FRED_API` is invalid)",
+      "timestamp": 1750808088.752924
+    },
+    {
+      "type": "warning",
+      "text": "The style property `shape: box` is invalid",
+      "timestamp": 1750808088.753027
+    },
+    {
+      "type": "warning",
+      "text": "Custom function mappers may not return invalid values for the property type (i.e. `shape` for ele `USER_DASHBOARD` is invalid)",
+      "timestamp": 1750808088.753155
+    },
+    {
+      "type": "warning",
+      "text": "The style property `shape: box` is invalid",
+      "timestamp": 1750808088.758461
+    },
+    {
+      "type": "warning",
+      "text": "Custom function mappers may not return invalid values for the property type (i.e. `shape` for ele `COSMOS_DB` is invalid)",
+      "timestamp": 1750808088.75865
+    },
+    {
+      "type": "log",
+      "text": "Nav item clicked: Architecture research",
+      "timestamp": 1750808092.340755
+    },
+    {
+      "type": "log",
+      "text": "switchTab called with: research",
+      "timestamp": 1750808092.340891
+    },
+    {
+      "type": "log",
+      "text": "currentTab set to: research",
+      "timestamp": 1750808092.341123
+    },
+    {
+      "type": "log",
+      "text": "loadResearch function called",
+      "timestamp": 1750808092.341206
+    },
+    {
+      "type": "log",
+      "text": "loadArchitecture called",
+      "timestamp": 1750808092.3412821
+    },
+    {
+      "type": "log",
+      "text": "Fetching: http://localhost:8420/api/v1/architecture/list",
+      "timestamp": 1750808092.341393
+    },
+    {
+      "type": "log",
+      "text": "Architecture data received: {files: Array(102), count: 102, base_paths: Array(4)}",
+      "timestamp": 1750808092.351337
+    },
+    {
+      "type": "log",
+      "text": "Files count: 102",
+      "timestamp": 1750808092.35158
+    },
+    {
+      "type": "log",
+      "text": "Categories: [General, Process Workflows, Project Architecture, Communication Protocols, System Architecture, Database Design, Frontend Components, Agent & Team Systems, Operations & Maintenance]",
+      "timestamp": 1750808092.351703
+    },
+    {
+      "type": "log",
+      "text": "About to call displayArchitectureFiles with categories: [General, Process Workflows, Project Architecture, Communication Protocols, System Architecture, Database Design, Frontend Components, Agent & Team Systems, Operations & Maintenance]",
+      "timestamp": 1750808092.351817
+    },
+    {
+      "type": "log",
+      "text": "displayArchitectureFiles called with: [General, Process Workflows, Project Architecture, Communication Protocols, System Architecture, Database Design, Frontend Components, Agent & Team Systems, Operations & Maintenance]",
+      "timestamp": 1750808092.3519669
+    },
+    {
+      "type": "log",
+      "text": "Found fileList element, selectedCategory: ",
+      "timestamp": 1750808092.352101
+    },
+    {
+      "type": "log",
+      "text": "Processing category: General with 10 files",
+      "timestamp": 1750808092.352329
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: General",
+      "timestamp": 1750808092.352432
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Process Workflows with 13 files",
+      "timestamp": 1750808092.35264
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Process Workflows",
+      "timestamp": 1750808092.352748
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Project Architecture with 2 files",
+      "timestamp": 1750808092.3529758
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Project Architecture",
+      "timestamp": 1750808092.353075
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Communication Protocols with 2 files",
+      "timestamp": 1750808092.353375
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Communication Protocols",
+      "timestamp": 1750808092.353499
+    },
+    {
+      "type": "log",
+      "text": "Processing category: System Architecture with 56 files",
+      "timestamp": 1750808092.353701
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: System Architecture",
+      "timestamp": 1750808092.353825
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Database Design with 2 files",
+      "timestamp": 1750808092.3540852
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Database Design",
+      "timestamp": 1750808092.354198
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Frontend Components with 5 files",
+      "timestamp": 1750808092.3543942
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Frontend Components",
+      "timestamp": 1750808092.3544981
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Agent & Team Systems with 7 files",
+      "timestamp": 1750808092.354732
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Agent & Team Systems",
+      "timestamp": 1750808092.3548381
+    },
+    {
+      "type": "log",
+      "text": "Processing category: Operations & Maintenance with 5 files",
+      "timestamp": 1750808092.3550458
+    },
+    {
+      "type": "log",
+      "text": "Added category to DOM: Operations & Maintenance",
+      "timestamp": 1750808092.355152
+    }
+  ],
+  "summary": {
+    "total_tests": 4,
+    "passed_tests": 3,
+    "success_rate": 75.0
+  }
+}

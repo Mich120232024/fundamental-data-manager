@@ -1,0 +1,74 @@
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { MsalProvider } from '@azure/msal-react';
+import { LayoutProvider } from '@layouts/LayoutProvider';
+import { ThemeProvider } from '@store/ThemeProvider';
+import { msalInstance } from '@services/auth/msal';
+import { AppRouter } from './AppRouter';
+import { theme } from './theme';
+import { ProfessionalHeader } from './components/ProfessionalHeader';
+import '@modules/registry'; // This will register all components
+import './index.css';
+
+// Create query client
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 60 * 1000, // 1 minute
+      gcTime: 5 * 60 * 1000, // 5 minutes
+      retry: 1,
+      refetchOnWindowFocus: false,
+    },
+  },
+});
+
+function App() {
+  const [activeTab, setActiveTab] = useState('dashboard');
+  const [portfolioValue, setPortfolioValue] = useState(2453932.42);
+  const [dailyPnL, setDailyPnL] = useState(12497.97);
+
+  // Simulate portfolio value updates
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPortfolioValue(prev => prev + (Math.random() - 0.5) * 1000);
+      setDailyPnL(prev => prev + (Math.random() - 0.5) * 100);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div style={{ 
+      background: theme.background,
+      color: theme.text,
+      minHeight: '100vh',
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif',
+      display: 'flex',
+      flexDirection: 'column'
+    }}>
+      <MsalProvider instance={msalInstance}>
+        <QueryClientProvider client={queryClient}>
+          <BrowserRouter>
+            <ThemeProvider>
+              <ProfessionalHeader
+                activeTab={activeTab}
+                setActiveTab={setActiveTab}
+                portfolioValue={portfolioValue}
+                dailyPnL={dailyPnL}
+              />
+              <div style={{ flex: 1, overflow: 'hidden' }}>
+                <LayoutProvider>
+                  <AppRouter />
+                </LayoutProvider>
+              </div>
+            </ThemeProvider>
+          </BrowserRouter>
+          <ReactQueryDevtools initialIsOpen={false} />
+        </QueryClientProvider>
+      </MsalProvider>
+    </div>
+  );
+}
+
+export default App;

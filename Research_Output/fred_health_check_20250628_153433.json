@@ -1,0 +1,116 @@
+{
+  "timestamp": "2025-06-28T15:34:27.511209",
+  "api_connectivity": {
+    "status": "SUCCESS",
+    "response_time_ms": 494.32,
+    "status_code": 200,
+    "series_found": 1,
+    "api_key_valid": true
+  },
+  "rate_limit_test": {
+    "status": "SUCCESS",
+    "requests_completed": 5,
+    "rate_limit_hit": false,
+    "avg_response_time_ms": 323.46,
+    "individual_times_ms": [
+      302.29,
+      301.01,
+      310.62,
+      318.72,
+      384.69
+    ]
+  },
+  "endpoint_tests": {
+    "series": {
+      "status": "SUCCESS",
+      "response_time_ms": 308.99,
+      "data_keys": [
+        "realtime_start",
+        "realtime_end",
+        "seriess"
+      ],
+      "data_count": 0
+    },
+    "categories": {
+      "status": "SUCCESS",
+      "response_time_ms": 323.56,
+      "data_keys": [
+        "categories"
+      ],
+      "data_count": 1
+    },
+    "category_series": {
+      "status": "SUCCESS",
+      "response_time_ms": 354.76,
+      "data_keys": [
+        "realtime_start",
+        "realtime_end",
+        "order_by",
+        "sort_order",
+        "count",
+        "offset",
+        "limit",
+        "seriess"
+      ],
+      "data_count": 0
+    },
+    "sources": {
+      "status": "SUCCESS",
+      "response_time_ms": 332.16,
+      "data_keys": [
+        "realtime_start",
+        "realtime_end",
+        "order_by",
+        "sort_order",
+        "count",
+        "offset",
+        "limit",
+        "sources"
+      ],
+      "data_count": 117
+    },
+    "series_observations": {
+      "status": "SUCCESS",
+      "response_time_ms": 355.08,
+      "data_keys": [
+        "realtime_start",
+        "realtime_end",
+        "observation_start",
+        "observation_end",
+        "units",
+        "output_type",
+        "file_type",
+        "order_by",
+        "sort_order",
+        "count",
+        "offset",
+        "limit",
+        "observations"
+      ],
+      "data_count": 0
+    }
+  },
+  "series_sample": {
+    "status": "FAILED",
+    "error": "No series data returned"
+  },
+  "category_test": {
+    "status": "SUCCESS",
+    "root_categories_count": 1,
+    "test_category_id": 0,
+    "test_category_series_count": 0,
+    "sample_categories": [
+      {
+        "id": 0,
+        "name": "Categories"
+      }
+    ]
+  },
+  "overall_health": {
+    "status": "DEGRADED",
+    "message": "Issues detected: Sample Data",
+    "failed_tests": [
+      "Sample Data"
+    ]
+  }
+}

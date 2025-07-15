@@ -1,0 +1,879 @@
+{
+  "nodes": [
+    {
+      "id": "monthly",
+      "label": "monthly",
+      "degree": 17,
+      "category": "frequency"
+    },
+    {
+      "id": "public domain: citation requested",
+      "label": "public domain: citation requested",
+      "degree": 21,
+      "category": "hub"
+    },
+    {
+      "id": "bea",
+      "label": "bea",
+      "degree": 10,
+      "category": "source"
+    },
+    {
+      "id": "inflation",
+      "label": "inflation",
+      "degree": 10,
+      "category": "economic"
+    },
+    {
+      "id": "china",
+      "label": "china",
+      "degree": 10,
+      "category": "geographic"
+    },
+    {
+      "id": "gdp",
+      "label": "gdp",
+      "degree": 10,
+      "category": "economic"
+    },
+    {
+      "id": "manufacturing",
+      "label": "manufacturing",
+      "degree": 10,
+      "category": "sector"
+    },
+    {
+      "id": "rate",
+      "label": "rate",
+      "degree": 13,
+      "category": "type"
+    },
+    {
+      "id": "usa",
+      "label": "usa",
+      "degree": 26,
+      "category": "geographic"
+    },
+    {
+      "id": "europe",
+      "label": "europe",
+      "degree": 10,
+      "category": "geographic"
+    },
+    {
+      "id": "unemployment",
+      "label": "unemployment",
+      "degree": 10,
+      "category": "economic"
+    },
+    {
+      "id": "census",
+      "label": "census",
+      "degree": 11,
+      "category": "source"
+    },
+    {
+      "id": "copyrighted: citation required",
+      "label": "copyrighted: citation required",
+      "degree": 10,
+      "category": "normal"
+    },
+    {
+      "id": "housing",
+      "label": "housing",
+      "degree": 10,
+      "category": "sector"
+    },
+    {
+      "id": "nsa",
+      "label": "nsa",
+      "degree": 24,
+      "category": "hub"
+    },
+    {
+      "id": "japan",
+      "label": "japan",
+      "degree": 10,
+      "category": "geographic"
+    },
+    {
+      "id": "finance",
+      "label": "finance",
+      "degree": 10,
+      "category": "sector"
+    },
+    {
+      "id": "daily",
+      "label": "daily",
+      "degree": 10,
+      "category": "frequency"
+    },
+    {
+      "id": "pandemic",
+      "label": "pandemic",
+      "degree": 10,
+      "category": "special"
+    },
+    {
+      "id": "nation",
+      "label": "nation",
+      "degree": 19,
+      "category": "hub"
+    },
+    {
+      "id": "frb",
+      "label": "frb",
+      "degree": 10,
+      "category": "source"
+    },
+    {
+      "id": "retail",
+      "label": "retail",
+      "degree": 10,
+      "category": "sector"
+    },
+    {
+      "id": "annual",
+      "label": "annual",
+      "degree": 22,
+      "category": "frequency"
+    },
+    {
+      "id": "bls",
+      "label": "bls",
+      "degree": 14,
+      "category": "source"
+    },
+    {
+      "id": "price",
+      "label": "price",
+      "degree": 12,
+      "category": "type"
+    },
+    {
+      "id": "employment",
+      "label": "employment",
+      "degree": 11,
+      "category": "type"
+    },
+    {
+      "id": "interest rate",
+      "label": "interest rate",
+      "degree": 10,
+      "category": "economic"
+    },
+    {
+      "id": "quarterly",
+      "label": "quarterly",
+      "degree": 15,
+      "category": "frequency"
+    }
+  ],
+  "edges": [
+    {
+      "source": "monthly",
+      "target": "price",
+      "weight": 63634
+    },
+    {
+      "source": "monthly",
+      "target": "bls",
+      "weight": 80662
+    },
+    {
+      "source": "monthly",
+      "target": "retail",
+      "weight": 6478
+    },
+    {
+      "source": "monthly",
+      "target": "unemployment",
+      "weight": 11386
+    },
+    {
+      "source": "monthly",
+      "target": "public domain: citation requested",
+      "weight": 93356
+    },
+    {
+      "source": "monthly",
+      "target": "inflation",
+      "weight": 12878
+    },
+    {
+      "source": "monthly",
+      "target": "copyrighted: citation required",
+      "weight": 120972
+    },
+    {
+      "source": "monthly",
+      "target": "employment",
+      "weight": 52228
+    },
+    {
+      "source": "monthly",
+      "target": "manufacturing",
+      "weight": 11904
+    },
+    {
+      "source": "monthly",
+      "target": "interest rate",
+      "weight": 658
+    },
+    {
+      "source": "monthly",
+      "target": "nsa",
+      "weight": 176262
+    },
+    {
+      "source": "monthly",
+      "target": "japan",
+      "weight": 736
+    },
+    {
+      "source": "monthly",
+      "target": "usa",
+      "weight": 188002
+    },
+    {
+      "source": "monthly",
+      "target": "europe",
+      "weight": 2300
+    },
+    {
+      "source": "public domain: citation requested",
+      "target": "bea",
+      "weight": 78340
+    },
+    {
+      "source": "public domain: citation requested",
+      "target": "inflation",
+      "weight": 15248
+    },
+    {
+      "source": "public domain: citation requested",
+      "target": "china",
+      "weight": 342
+    },
+    {
+      "source": "public domain: citation requested",
+      "target": "gdp",
+      "weight": 70742
+    },
+    {
+      "source": "public domain: citation requested",
+      "target": "manufacturing",
+      "weight": 31500
+    },
+    {
+      "source": "public domain: citation requested",
+      "target": "rate",
+      "weight": 28552
+    },
+    {
+      "source": "public domain: citation requested",
+      "target": "usa",
+      "weight": 557430
+    },
+    {
+      "source": "public domain: citation requested",
+      "target": "unemployment",
+      "weight": 21178
+    },
+    {
+      "source": "public domain: citation requested",
+      "target": "census",
+      "weight": 238142
+    },
+    {
+      "source": "public domain: citation requested",
+      "target": "housing",
+      "weight": 14494
+    },
+    {
+      "source": "public domain: citation requested",
+      "target": "finance",
+      "weight": 10716
+    },
+    {
+      "source": "public domain: citation requested",
+      "target": "pandemic",
+      "weight": 404
+    },
+    {
+      "source": "public domain: citation requested",
+      "target": "frb",
+      "weight": 62012
+    },
+    {
+      "source": "public domain: citation requested",
+      "target": "retail",
+      "weight": 10738
+    },
+    {
+      "source": "public domain: citation requested",
+      "target": "annual",
+      "weight": 451080
+    },
+    {
+      "source": "public domain: citation requested",
+      "target": "bls",
+      "weight": 175018
+    },
+    {
+      "source": "public domain: citation requested",
+      "target": "price",
+      "weight": 29796
+    },
+    {
+      "source": "public domain: citation requested",
+      "target": "employment",
+      "weight": 93298
+    },
+    {
+      "source": "public domain: citation requested",
+      "target": "interest rate",
+      "weight": 678
+    },
+    {
+      "source": "public domain: citation requested",
+      "target": "quarterly",
+      "weight": 62254
+    },
+    {
+      "source": "bea",
+      "target": "annual",
+      "weight": 65968
+    },
+    {
+      "source": "bea",
+      "target": "gdp",
+      "weight": 59862
+    },
+    {
+      "source": "bea",
+      "target": "nsa",
+      "weight": 67100
+    },
+    {
+      "source": "bea",
+      "target": "usa",
+      "weight": 78060
+    },
+    {
+      "source": "inflation",
+      "target": "price",
+      "weight": 15362
+    },
+    {
+      "source": "inflation",
+      "target": "bls",
+      "weight": 14842
+    },
+    {
+      "source": "inflation",
+      "target": "nsa",
+      "weight": 14176
+    },
+    {
+      "source": "inflation",
+      "target": "nation",
+      "weight": 11572
+    },
+    {
+      "source": "inflation",
+      "target": "usa",
+      "weight": 15102
+    },
+    {
+      "source": "china",
+      "target": "annual",
+      "weight": 618
+    },
+    {
+      "source": "china",
+      "target": "copyrighted: citation required",
+      "weight": 626
+    },
+    {
+      "source": "china",
+      "target": "nsa",
+      "weight": 860
+    },
+    {
+      "source": "china",
+      "target": "nation",
+      "weight": 778
+    },
+    {
+      "source": "china",
+      "target": "quarterly",
+      "weight": 224
+    },
+    {
+      "source": "gdp",
+      "target": "annual",
+      "weight": 64542
+    },
+    {
+      "source": "gdp",
+      "target": "nsa",
+      "weight": 64082
+    },
+    {
+      "source": "gdp",
+      "target": "nation",
+      "weight": 27142
+    },
+    {
+      "source": "gdp",
+      "target": "usa",
+      "weight": 59886
+    },
+    {
+      "source": "manufacturing",
+      "target": "annual",
+      "weight": 20102
+    },
+    {
+      "source": "manufacturing",
+      "target": "bls",
+      "weight": 22104
+    },
+    {
+      "source": "manufacturing",
+      "target": "nsa",
+      "weight": 29872
+    },
+    {
+      "source": "manufacturing",
+      "target": "nation",
+      "weight": 22542
+    },
+    {
+      "source": "manufacturing",
+      "target": "usa",
+      "weight": 31582
+    },
+    {
+      "source": "rate",
+      "target": "annual",
+      "weight": 28392
+    },
+    {
+      "source": "rate",
+      "target": "usa",
+      "weight": 28248
+    },
+    {
+      "source": "rate",
+      "target": "unemployment",
+      "weight": 14640
+    },
+    {
+      "source": "rate",
+      "target": "copyrighted: citation required",
+      "weight": 18500
+    },
+    {
+      "source": "rate",
+      "target": "interest rate",
+      "weight": 1558
+    },
+    {
+      "source": "rate",
+      "target": "nsa",
+      "weight": 37896
+    },
+    {
+      "source": "rate",
+      "target": "nation",
+      "weight": 23882
+    },
+    {
+      "source": "rate",
+      "target": "japan",
+      "weight": 604
+    },
+    {
+      "source": "rate",
+      "target": "daily",
+      "weight": 398
+    },
+    {
+      "source": "usa",
+      "target": "unemployment",
+      "weight": 21188
+    },
+    {
+      "source": "usa",
+      "target": "census",
+      "weight": 213174
+    },
+    {
+      "source": "usa",
+      "target": "housing",
+      "weight": 14850
+    },
+    {
+      "source": "usa",
+      "target": "nsa",
+      "weight": 600118
+    },
+    {
+      "source": "usa",
+      "target": "finance",
+      "weight": 9992
+    },
+    {
+      "source": "usa",
+      "target": "daily",
+      "weight": 1478
+    },
+    {
+      "source": "usa",
+      "target": "pandemic",
+      "weight": 156
+    },
+    {
+      "source": "usa",
+      "target": "nation",
+      "weight": 157280
+    },
+    {
+      "source": "usa",
+      "target": "frb",
+      "weight": 60916
+    },
+    {
+      "source": "usa",
+      "target": "annual",
+      "weight": 400552
+    },
+    {
+      "source": "usa",
+      "target": "bls",
+      "weight": 173776
+    },
+    {
+      "source": "usa",
+      "target": "retail",
+      "weight": 10838
+    },
+    {
+      "source": "usa",
+      "target": "price",
+      "weight": 61586
+    },
+    {
+      "source": "usa",
+      "target": "employment",
+      "weight": 94108
+    },
+    {
+      "source": "usa",
+      "target": "interest rate",
+      "weight": 974
+    },
+    {
+      "source": "usa",
+      "target": "quarterly",
+      "weight": 65468
+    },
+    {
+      "source": "europe",
+      "target": "copyrighted: citation required",
+      "weight": 5534
+    },
+    {
+      "source": "europe",
+      "target": "nsa",
+      "weight": 4468
+    },
+    {
+      "source": "europe",
+      "target": "quarterly",
+      "weight": 2194
+    },
+    {
+      "source": "unemployment",
+      "target": "annual",
+      "weight": 15408
+    },
+    {
+      "source": "unemployment",
+      "target": "bls",
+      "weight": 17358
+    },
+    {
+      "source": "unemployment",
+      "target": "copyrighted: citation required",
+      "weight": 11318
+    },
+    {
+      "source": "unemployment",
+      "target": "nsa",
+      "weight": 26168
+    },
+    {
+      "source": "unemployment",
+      "target": "nation",
+      "weight": 12154
+    },
+    {
+      "source": "census",
+      "target": "annual",
+      "weight": 225418
+    },
+    {
+      "source": "census",
+      "target": "housing",
+      "weight": 8132
+    },
+    {
+      "source": "census",
+      "target": "nsa",
+      "weight": 235004
+    },
+    {
+      "source": "copyrighted: citation required",
+      "target": "price",
+      "weight": 55114
+    },
+    {
+      "source": "copyrighted: citation required",
+      "target": "interest rate",
+      "weight": 808
+    },
+    {
+      "source": "copyrighted: citation required",
+      "target": "japan",
+      "weight": 2574
+    },
+    {
+      "source": "copyrighted: citation required",
+      "target": "quarterly",
+      "weight": 45288
+    },
+    {
+      "source": "copyrighted: citation required",
+      "target": "daily",
+      "weight": 390
+    },
+    {
+      "source": "housing",
+      "target": "annual",
+      "weight": 11874
+    },
+    {
+      "source": "housing",
+      "target": "price",
+      "weight": 4588
+    },
+    {
+      "source": "housing",
+      "target": "nsa",
+      "weight": 14746
+    },
+    {
+      "source": "housing",
+      "target": "nation",
+      "weight": 4670
+    },
+    {
+      "source": "nsa",
+      "target": "japan",
+      "weight": 1936
+    },
+    {
+      "source": "nsa",
+      "target": "finance",
+      "weight": 10948
+    },
+    {
+      "source": "nsa",
+      "target": "daily",
+      "weight": 862
+    },
+    {
+      "source": "nsa",
+      "target": "pandemic",
+      "weight": 404
+    },
+    {
+      "source": "nsa",
+      "target": "frb",
+      "weight": 47274
+    },
+    {
+      "source": "nsa",
+      "target": "retail",
+      "weight": 9176
+    },
+    {
+      "source": "nsa",
+      "target": "annual",
+      "weight": 475408
+    },
+    {
+      "source": "nsa",
+      "target": "bls",
+      "weight": 145868
+    },
+    {
+      "source": "nsa",
+      "target": "price",
+      "weight": 82150
+    },
+    {
+      "source": "nsa",
+      "target": "employment",
+      "weight": 73690
+    },
+    {
+      "source": "nsa",
+      "target": "interest rate",
+      "weight": 1558
+    },
+    {
+      "source": "nsa",
+      "target": "quarterly",
+      "weight": 72708
+    },
+    {
+      "source": "japan",
+      "target": "annual",
+      "weight": 1098
+    },
+    {
+      "source": "japan",
+      "target": "nation",
+      "weight": 2490
+    },
+    {
+      "source": "japan",
+      "target": "quarterly",
+      "weight": 1102
+    },
+    {
+      "source": "finance",
+      "target": "annual",
+      "weight": 5806
+    },
+    {
+      "source": "finance",
+      "target": "nation",
+      "weight": 9502
+    },
+    {
+      "source": "finance",
+      "target": "quarterly",
+      "weight": 6086
+    },
+    {
+      "source": "daily",
+      "target": "nation",
+      "weight": 1458
+    },
+    {
+      "source": "pandemic",
+      "target": "nation",
+      "weight": 254
+    },
+    {
+      "source": "pandemic",
+      "target": "quarterly",
+      "weight": 250
+    },
+    {
+      "source": "nation",
+      "target": "frb",
+      "weight": 58246
+    },
+    {
+      "source": "nation",
+      "target": "retail",
+      "weight": 5762
+    },
+    {
+      "source": "nation",
+      "target": "annual",
+      "weight": 148824
+    },
+    {
+      "source": "nation",
+      "target": "bls",
+      "weight": 62886
+    },
+    {
+      "source": "nation",
+      "target": "price",
+      "weight": 28410
+    },
+    {
+      "source": "nation",
+      "target": "interest rate",
+      "weight": 1492
+    },
+    {
+      "source": "nation",
+      "target": "quarterly",
+      "weight": 74126
+    },
+    {
+      "source": "frb",
+      "target": "annual",
+      "weight": 25734
+    },
+    {
+      "source": "frb",
+      "target": "quarterly",
+      "weight": 30588
+    },
+    {
+      "source": "retail",
+      "target": "annual",
+      "weight": 4812
+    },
+    {
+      "source": "retail",
+      "target": "bls",
+      "weight": 8860
+    },
+    {
+      "source": "retail",
+      "target": "employment",
+      "weight": 5334
+    },
+    {
+      "source": "annual",
+      "target": "bls",
+      "weight": 83024
+    },
+    {
+      "source": "annual",
+      "target": "employment",
+      "weight": 43184
+    },
+    {
+      "source": "bls",
+      "target": "employment",
+      "weight": 89458
+    }
+  ],
+  "stats": {
+    "total_nodes": 28,
+    "total_edges": 138,
+    "categories": [
+      "type",
+      "economic",
+      "frequency",
+      "normal",
+      "geographic",
+      "special",
+      "source",
+      "sector",
+      "hub"
+    ]
+  }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graph Visualization - Standalone</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #1a1a1a; color: #fff; }
+        #cy { width: 100%; height: 500px; background: #2a2a2a; border: 2px solid #3a3a3a; }
+        .controls { margin: 20px 0; }
+        button { padding: 10px 20px; margin: 5px; background: #3b82f6; color: white; border: none; cursor: pointer; }
+        .status { padding: 10px; background: #2a2a2a; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Graph Visualization Test - Standalone</h1>
+    <div id="status" class="status">Loading...</div>
+    <div class="controls">
+        <button onclick="loadLocalCytoscape()">1. Load Cytoscape from Local</button>
+        <button onclick="testSimpleGraph()">2. Test Simple Graph</button>
+        <button onclick="loadRealData()">3. Load Real Data</button>
+    </div>
+    <div id="cy"></div>
+
+    <script>
+        let cy = null;
+        
+        function updateStatus(msg) {
+            document.getElementById('status').textContent = msg;
+            console.log(msg);
+        }
+        
+        function loadLocalCytoscape() {
+            updateStatus('Loading Cytoscape from local server...');
+            const script = document.createElement('script');
+            script.src = '/static/cytoscape.min.js';
+            script.onload = () => {
+                updateStatus('✅ Cytoscape loaded successfully!');
+                window.cytoscapeLoaded = true;
+            };
+            script.onerror = () => {
+                updateStatus('❌ Failed to load Cytoscape from local');
+            };
+            document.head.appendChild(script);
+        }
+        
+        function testSimpleGraph() {
+            if (typeof cytoscape === 'undefined') {
+                updateStatus('❌ Cytoscape not loaded. Click button 1 first.');
+                return;
+            }
+            
+            try {
+                cy = cytoscape({
+                    container: document.getElementById('cy'),
+                    style: [
+                        {
+                            selector: 'node',
+                            style: {
+                                'background-color': '#3b82f6',
+                                'label': 'data(id)',
+                                'color': '#fff',
+                                'text-outline-width': 2,
+                                'text-outline-color': '#2a2a2a'
+                            }
+                        },
+                        {
+                            selector: 'edge',
+                            style: {
+                                'line-color': '#666',
+                                'target-arrow-color': '#666',
+                                'target-arrow-shape': 'triangle'
+                            }
+                        }
+                    ],
+                    elements: [
+                        { data: { id: 'a' } },
+                        { data: { id: 'b' } },
+                        { data: { id: 'c' } },
+                        { data: { id: 'ab', source: 'a', target: 'b' } },
+                        { data: { id: 'bc', source: 'b', target: 'c' } }
+                    ],
+                    layout: { name: 'circle' }
+                });
+                
+                updateStatus('✅ Simple test graph created!');
+            } catch (error) {
+                updateStatus('❌ Error creating graph: ' + error.message);
+            }
+        }
+        
+        async function loadRealData() {
+            if (!cy) {
+                updateStatus('❌ Initialize graph first. Click button 2.');
+                return;
+            }
+            
+            try {
+                updateStatus('Loading real data from API...');
+                const response = await fetch('/api/graph/full?node_limit=10');
+                const data = await response.json();
+                
+                if (data.success && data.elements) {
+                    cy.elements().remove();
+                    cy.add(data.elements);
+                    cy.layout({ name: 'circle' }).run();
+                    updateStatus('✅ Loaded ' + data.elements.length + ' elements from API');
+                } else {
+                    updateStatus('❌ No data from API');
+                }
+            } catch (error) {
+                updateStatus('❌ Error loading data: ' + error.message);
+            }
+        }
+    </script>
+</body>
+</html>

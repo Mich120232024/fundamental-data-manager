@@ -1,0 +1,297 @@
+{
+  "start_time": "2025-06-17 18:44:07.174047+00:00",
+  "phases": {
+    "document_generation": {
+      "duration_seconds": 0.0,
+      "research_findings": 50,
+      "technical_specifications": 25,
+      "governance_policies": 15,
+      "total_documents": 90
+    },
+    "validation": {
+      "total_validated": 90,
+      "passed": 90,
+      "failed": 0,
+      "issues": [],
+      "quality_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "duration_seconds": 0.0,
+      "average_quality_score": 1.0,
+      "validation_rate": 100.0
+    },
+    "migration": {
+      "duration_seconds": 19.76,
+      "total_batches": 9,
+      "documents_migrated": 40,
+      "migration_failures": 50,
+      "success_rate": 44.4,
+      "average_batch_time": 2.2,
+      "throughput_per_second": 2.02
+    },
+    "verification": {
+      "duration_seconds": 6.59,
+      "basic_verification": {
+        "error": "name 'timedelta' is not defined",
+        "verification_incomplete": true
+      },
+      "extended_verification": {
+        "partition_distribution": {
+          "total_partitions": 4,
+          "partition_counts": {
+            "unknown": 5,
+            "research_finding": 33,
+            "engineering_specification": 12,
+            "governance_policy": 9
+          },
+          "distribution_variance": 0.539,
+          "well_distributed": false
+        },
+        "index_coverage": {
+          "category": {
+            "documents_with_field": 59,
+            "query_time_ms": 693.34,
+            "indexed_performance": false
+          },
+          "type": {
+            "documents_with_field": 59,
+            "query_time_ms": 527.71,
+            "indexed_performance": false
+          },
+          "epochTimestamp": {
+            "documents_with_field": 54,
+            "query_time_ms": 514.24,
+            "indexed_performance": false
+          },
+          "partitionKey": {
+            "documents_with_field": 54,
+            "query_time_ms": 428.36,
+            "indexed_performance": false
+          },
+          "searchText": {
+            "documents_with_field": 54,
+            "query_time_ms": 665.07,
+            "indexed_performance": false
+          },
+          "tags": {
+            "documents_with_field": 59,
+            "query_time_ms": 484.7,
+            "indexed_performance": false
+          }
+        },
+        "data_completeness": {
+          "total_documents": 59,
+          "documents_with_content": {
+            "count": 55,
+            "percentage": 93.2
+          },
+          "documents_with_tags": {
+            "count": 59,
+            "percentage": 100.0
+          },
+          "documents_with_metadata": {
+            "count": 59,
+            "percentage": 100.0
+          },
+          "documents_with_knowledge_base": {
+            "count": 54,
+            "percentage": 91.5
+          },
+          "documents_with_search_text": {
+            "count": 54,
+            "percentage": 91.5
+          }
+        },
+        "relationship_integrity": {
+          "documents_with_relationships": 9,
+          "total_relationships": 18,
+          "orphaned_references": 18,
+          "integrity_score": 0.0
+        }
+      },
+      "all_checks_passed": false
+    },
+    "performance_testing": {
+      "query_patterns": [
+        {
+          "pattern": "Point lookup by ID",
+          "execution_time_ms": 140.05,
+          "result_count": 0,
+          "meets_50ms_target": false,
+          "performance_grade": "Needs Improvement"
+        },
+        {
+          "pattern": "Category filtering",
+          "execution_time_ms": 129.83,
+          "result_count": 33,
+          "meets_50ms_target": false,
+          "performance_grade": "Needs Improvement"
+        },
+        {
+          "pattern": "Date range query",
+          "execution_time_ms": 227.84,
+          "result_count": 54,
+          "meets_50ms_target": false,
+          "performance_grade": "Needs Improvement"
+        },
+        {
+          "pattern": "Complex filter with sorting",
+          "execution_time_ms": 133.12,
+          "result_count": 33,
+          "meets_50ms_target": false,
+          "performance_grade": "Needs Improvement"
+        },
+        {
+          "pattern": "Tag search",
+          "execution_time_ms": 128.75,
+          "result_count": 34,
+          "meets_50ms_target": false,
+          "performance_grade": "Needs Improvement"
+        }
+      ],
+      "scalability_tests": [
+        {
+          "result_size": 10,
+          "execution_time_ms": 772.78,
+          "ms_per_document": 13.1
+        },
+        {
+          "result_size": 50,
+          "execution_time_ms": 259.84,
+          "ms_per_document": 4.4
+        },
+        {
+          "result_size": 100,
+          "execution_time_ms": 134.36,
+          "ms_per_document": 2.28
+        },
+        {
+          "result_size": 500,
+          "execution_time_ms": 129.62,
+          "ms_per_document": 2.2
+        },
+        {
+          "result_size": 1000,
+          "execution_time_ms": 143.08,
+          "ms_per_document": 2.43
+        }
+      ],
+      "concurrent_access": [],
+      "recommendations": [
+        "Optimize 5 query patterns that exceed 50ms target",
+        "  - Point lookup by ID: 140.05ms",
+        "  - Category filtering: 129.83ms",
+        "  - Date range query: 227.84ms",
+        "  - Complex filter with sorting: 133.12ms",
+        "  - Tag search: 128.75ms",
+        "Monitor hot partitions regularly",
+        "Review and optimize indexes quarterly",
+        "Implement caching for frequently accessed data",
+        "Consider read replicas for geo-distributed access"
+      ],
+      "duration_seconds": 2.2
+    }
+  },
+  "overall_metrics": {
+    "total_documents_processed": 90,
+    "successful_migrations": 40,
+    "failed_migrations": 50,
+    "overall_success_rate": 44.4,
+    "average_quality_score": 1.0,
+    "total_migration_time_minutes": 0.48,
+    "documents_per_minute": 84.03
+  },
+  "verification_results": {},
+  "recommendations": [],
+  "end_time": "2025-06-17 18:44:35.736362+00:00",
+  "total_duration_seconds": 28.56
+}

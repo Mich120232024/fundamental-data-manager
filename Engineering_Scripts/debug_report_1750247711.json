@@ -1,0 +1,16 @@
+{
+  "timestamp": 1750247711.256715,
+  "debug_log": [],
+  "page_metrics": {
+    "url": "http://localhost:5001/viewer",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/136.0.7103.25 Safari/537.36",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "containers": 0,
+    "documents": 0,
+    "errors": []
+  },
+  "status": "completed"
+}

@@ -1,0 +1,56 @@
+{
+  "ENFORCED_MESSAGE_SCHEMA_V2": {
+    "id": "REQUIRED - Format: YYYYMMDD_HHMMSS_SENDER_AGENT_NAME_##",
+    "partitionKey": "REQUIRED - Always the RECIPIENT agent name",
+    "from_agent": "REQUIRED - Sending agent name (standardized)",
+    "to_agent": "REQUIRED - Recipient agent name (standardized)",
+    "created_at": "REQUIRED - ISO format: 2025-06-26T18:30:00.000Z",
+    "message_type": "REQUIRED - One of: task_assignment|status_update|completion_report|help_request|system_alert|general",
+    "priority": "REQUIRED - One of: critical|high|normal|low",
+    "subject": "REQUIRED - Brief description (max 200 chars)",
+    "content": "REQUIRED - The actual message content",
+    "status": "REQUIRED - One of: unread|read|in_progress|completed|archived",
+    "thread_id": "OPTIONAL - Parent message ID if this is a reply",
+    "attachments": "OPTIONAL - Array of {type, location, description}",
+    "tags": "OPTIONAL - Array of strings for categorization",
+    "expires_at": "OPTIONAL - ISO format for message expiration",
+    "_metadata": {
+      "schema_version": "2.0",
+      "created_by": "system_name_and_version",
+      "index_hints": [
+        "created_at",
+        "from_agent",
+        "to_agent",
+        "status",
+        "priority"
+      ]
+    }
+  },
+  "PARTITIONING_STRATEGY": {
+    "partition_key": "/partitionKey",
+    "value": "ALWAYS the recipient agent name",
+    "reasoning": "Each agent queries their own partition for messages"
+  },
+  "NAMING_CONVENTIONS": {
+    "agent_names": [
+      "HEAD_OF_ENGINEERING",
+      "HEAD_OF_RESEARCH",
+      "AZURE_INFRASTRUCTURE_AGENT",
+      "DATA_ANALYST",
+      "FULL_STACK_SOFTWARE_ENGINEER",
+      "RESEARCH_ADVANCED_ANALYST",
+      "RESEARCH_QUANTITATIVE_ANALYST",
+      "RESEARCH_STRATEGY_ANALYST",
+      "BUSINESS_OWNER",
+      "SYSTEM"
+    ],
+    "message_types": [
+      "task_assignment - New work assignment",
+      "status_update - Progress report",
+      "completion_report - Task completed",
+      "help_request - Blocked and need help",
+      "system_alert - Critical system notification",
+      "general - General communication"
+    ]
+  }
+}

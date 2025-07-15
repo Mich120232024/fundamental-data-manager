@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Dashboard</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #1a1a1a;
+            color: #fff;
+        }
+        .status {
+            padding: 20px;
+            background: #2a2a2a;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .success { color: #4CAF50; }
+        .error { color: #f44336; }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            background: #007aff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minimal Working Dashboard</h1>
+    
+    <div class="status">
+        <h2>System Status</h2>
+        <div id="status">Loading...</div>
+    </div>
+    
+    <div class="status">
+        <h2>Quick Tests</h2>
+        <button onclick="testAPI()">Test API</button>
+        <button onclick="testGraph()">Test Graph</button>
+        <button onclick="showDebug()">Show Debug Info</button>
+    </div>
+    
+    <div id="debug" class="status" style="display:none;">
+        <h2>Debug Information</h2>
+        <pre id="debugInfo"></pre>
+    </div>
+    
+    <div id="graph-container" style="width:100%; height:400px; background:#333; margin-top:20px; display:none;"></div>
+    
+    <!-- Load Cytoscape directly from CDN -->
+    <script src="https://unpkg.com/cytoscape@3.29.2/dist/cytoscape.min.js"></script>
+    
+    <script>
+        // Simple status update
+        function updateStatus(msg, isError = false) {
+            const status = document.getElementById('status');
+            status.innerHTML = msg;
+            status.className = isError ? 'error' : 'success';
+        }
+        
+        // Test API
+        async function testAPI() {
+            try {
+                updateStatus('Testing API...');
+                const response = await fetch('/api/stats');
+                const data = await response.json();
+                updateStatus(`API Working! Total docs: ${data.stats.totalDocuments}`);
+            } catch (e) {
+                updateStatus(`API Error: ${e.message}`, true);
+            }
+        }
+        
+        // Test Graph
+        function testGraph() {
+            const container = document.getElementById('graph-container');
+            container.style.display = 'block';
+            
+            try {
+                const cy = cytoscape({
+                    container: container,
+                    elements: [
+                        { data: { id: 'a' } },
+                        { data: { id: 'b' } },
+                        { data: { id: 'c' } },
+                        { data: { id: 'ab', source: 'a', target: 'b' } },
+                        { data: { id: 'bc', source: 'b', target: 'c' } }
+                    ],
+                    style: [
+                        {
+                            selector: 'node',
+                            style: {
+                                'background-color': '#666',
+                                'label': 'data(id)'
+                            }
+                        },
+                        {
+                            selector: 'edge',
+                            style: {
+                                'width': 3,
+                                'line-color': '#ccc',
+                                'target-arrow-color': '#ccc',
+                                'target-arrow-shape': 'triangle'
+                            }
+                        }
+                    ],
+                    layout: {
+                        name: 'grid',
+                        rows: 1
+                    }
+                });
+                updateStatus('Graph created successfully!');
+            } catch (e) {
+                updateStatus(`Graph Error: ${e.message}`, true);
+            }
+        }
+        
+        // Show debug info
+        function showDebug() {
+            const debugDiv = document.getElementById('debug');
+            debugDiv.style.display = 'block';
+            
+            const info = {
+                userAgent: navigator.userAgent,
+                cytoscapeLoaded: typeof cytoscape !== 'undefined',
+                documentState: document.readyState,
+                scriptsCount: document.scripts.length,
+                baseURL: window.location.href
+            };
+            
+            document.getElementById('debugInfo').textContent = JSON.stringify(info, null, 2);
+        }
+        
+        // Initial load
+        window.onload = () => {
+            updateStatus('Dashboard loaded successfully!');
+            showDebug();
+        };
+    </script>
+</body>
+</html>

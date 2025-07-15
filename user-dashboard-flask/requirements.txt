@@ -1,0 +1,22 @@
+# Flask and Web Framework
+Flask==3.1.0
+Flask-CORS==4.0.0
+
+# Database and Storage
+azure-cosmos==4.5.1
+redis==5.0.1
+gremlinpython==3.7.1
+
+# HTTP and Networking
+urllib3==1.26.18  # Downgraded to fix SSL/TLS compatibility warning
+requests==2.31.0
+
+# Environment and Config
+python-dotenv==1.0.0
+
+# Utilities
+markdown==3.5.2
+Werkzeug==3.1.0
+
+# Optional: Graph Visualization Support
+networkx==3.2.1
