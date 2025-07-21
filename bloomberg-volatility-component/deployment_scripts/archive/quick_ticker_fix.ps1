@@ -1,0 +1,8 @@
+$content = Get-Content 'C:\BloombergAPI\main.py'
+$content = $content -replace '"{\$pair}{\$tenor} ATM Vol"', '"{\$pair}V{\$tenor} BGN Curncy"'
+$content = $content -replace '"{\$pair}{\$tenor} 25D RR"', '"{\$pair}25RR{\$tenor} BGN Curncy"'
+$content = $content -replace '"{\$pair}{\$tenor} 25D BF"', '"{\$pair}25BF{\$tenor} BGN Curncy"'
+$content = $content -replace '"{\$pair}{\$tenor} 10D RR"', '"{\$pair}10RR{\$tenor} BGN Curncy"'
+$content = $content -replace '"{\$pair}{\$tenor} 10D BF"', '"{\$pair}10BF{\$tenor} BGN Curncy"'
+$content | Set-Content 'C:\BloombergAPI\main.py'
+Write-Output 'Fixed all ticker formats'

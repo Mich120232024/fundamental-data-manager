@@ -20,6 +20,7 @@ This documentation provides comprehensive details about the Bloomberg Terminal A
 - **[Volatility Formats](./VOLATILITY_FORMATS.md)**: Bloomberg security formats and data structures
 - **[Setup Guide](./SETUP_GUIDE.md)**: VM setup and configuration instructions
 - **[Networking](./NETWORKING.md)**: Network configuration and troubleshooting
+- **[Frontend Integration Guide](./FRONTEND_INTEGRATION_GUIDE.md)**: React frontend integration with lessons learned
 
 ---
 
@@ -48,10 +49,22 @@ BLOOMBERG_VM_PASSWORD=Ii89rra137+*
 ## API Server Configuration
 
 ### Server Location
-- **Path**: `C:\BloombergAPI\main.py`
+- **CRITICAL**: Use `C:\Bloomberg\APIServer\main_checkpoint_working_2025_07_16.py` (NOT the other API files!)
 - **Port**: `8080`
 - **Protocol**: HTTP
 - **Authentication**: Bearer token (`test`)
+
+### ⚠️ WARNING: Multiple API Files Exist (SOURCE OF MAJOR CONFUSION!)
+There are several API files on the VM that can cause confusion:
+- ❌ `bloomberg-api-fixed.py` - Has broken `/api/market-data` endpoint (wasted 2+ hours)
+- ❌ `real_bloomberg_api.py` - Different endpoint structure, missing generic endpoint
+- ❌ Volatility-specific endpoints - Incomplete implementation
+- ✅ `main_checkpoint_working_2025_07_16.py` - The ONLY working API with generic endpoint
+
+**LESSON LEARNED**: This confusion cost hours of debugging. Always verify which API is running by:
+1. Checking the process: `Get-Process python* | Select-Object Path`
+2. Testing the endpoint: `curl http://20.172.249.92:8080/api/bloomberg/reference`
+3. Checking logs: `curl http://20.172.249.92:8080/api/logs`
 
 ### Server Management
 ```bash
@@ -81,6 +94,15 @@ C:\BloombergAPI\logs\
 ├── system_events.log      # System-level events
 ├── performance.log        # Performance metrics
 └── raw_responses.log      # Raw Bloomberg API responses
+```
+
+### 📍 IMPORTANT: Logs Endpoint (Often Missed!)
+```bash
+# View recent API logs - VERY USEFUL for debugging
+GET http://20.172.249.92:8080/api/logs
+
+# Returns last 100 log entries from all log files
+curl http://20.172.249.92:8080/api/logs
 ```
 
 ## Network Configuration

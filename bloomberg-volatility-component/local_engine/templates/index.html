@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloomberg Volatility Surface</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        
+        .header {
+            background-color: #000;
+            padding: 10px;
+            border-bottom: 2px solid #ff6600;
+        }
+        
+        .header-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .currency-pair {
+            font-size: 24px;
+            color: #00ff00;
+        }
+        
+        .price-info {
+            color: #00ff00;
+        }
+        
+        .nav-tabs {
+            background-color: #333;
+            padding: 5px 0;
+            display: flex;
+            gap: 10px;
+            padding-left: 20px;
+        }
+        
+        .nav-tab {
+            background-color: #666;
+            color: #fff;
+            padding: 5px 15px;
+            cursor: pointer;
+            border: 1px solid #999;
+        }
+        
+        .nav-tab.active {
+            background-color: #ff6600;
+        }
+        
+        .controls {
+            background-color: #222;
+            padding: 10px 20px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .control-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .control-label {
+            color: #ff6600;
+        }
+        
+        .vol-table {
+            margin: 20px;
+            border-collapse: collapse;
+            width: calc(100% - 40px);
+        }
+        
+        .vol-table th {
+            background-color: #333;
+            color: #ff6600;
+            padding: 8px;
+            text-align: right;
+            border: 1px solid #666;
+        }
+        
+        .vol-table th:first-child {
+            text-align: left;
+            background-color: #ff6600;
+            color: #000;
+        }
+        
+        .vol-table td {
+            padding: 6px 10px;
+            text-align: right;
+            border: 1px solid #333;
+            background-color: #111;
+        }
+        
+        .vol-table td:first-child {
+            text-align: left;
+            background-color: #ff6600;
+            color: #000;
+            font-weight: bold;
+        }
+        
+        .vol-table tr:hover td:not(:first-child) {
+            background-color: #222;
+        }
+        
+        .positive {
+            color: #00ff00;
+        }
+        
+        .negative {
+            color: #ff0000;
+        }
+        
+        .atm-cell {
+            color: #ffff00;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #ff6600;
+        }
+        
+        .error {
+            color: #ff0000;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        select {
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #666;
+            padding: 5px;
+        }
+        
+        button {
+            background-color: #ff6600;
+            color: #000;
+            border: none;
+            padding: 5px 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        button:hover {
+            background-color: #ff8800;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .radio-group label {
+            color: #ff6600;
+            cursor: pointer;
+        }
+        
+        .radio-group input[type="radio"] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-info">
+            <div>
+                <span class="currency-pair" id="currencyPair">EURUSD</span>
+                <span class="price-info">BGN 1.1638/1.1644 BGN</span>
+            </div>
+            <div style="color: #ff6600">
+                Bloomberg Volatility Surface | Local Engine
+            </div>
+        </div>
+    </div>
+    
+    <div class="nav-tabs">
+        <div class="nav-tab active" onclick="setView('table')">Vol Table</div>
+        <div class="nav-tab" onclick="setView('surface')">3D Surface</div>
+        <div class="nav-tab" onclick="setView('smile')">Smile</div>
+        <div class="nav-tab" onclick="setView('term')">Term Structure</div>
+    </div>
+    
+    <div class="controls">
+        <div class="control-group">
+            <span class="control-label">Format:</span>
+            <div class="radio-group">
+                <label><input type="radio" name="format" value="RR/BF" checked onchange="updateDisplay()"> RR/BF</label>
+                <label><input type="radio" name="format" value="Put/Call" onchange="updateDisplay()"> Put/Call</label>
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <span class="control-label">Side:</span>
+            <div class="radio-group">
+                <label><input type="radio" name="side" value="Bid/Ask" checked onchange="updateDisplay()"> Bid/Ask</label>
+                <label><input type="radio" name="side" value="Mid/Spread" onchange="updateDisplay()"> Mid/Spread</label>
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <span class="control-label">Currency:</span>
+            <select id="currencySelect" onchange="changeCurrency()">
+                <option value="EURUSD">EURUSD</option>
+                <option value="USDJPY">USDJPY</option>
+                <option value="GBPUSD">GBPUSD</option>
+                <option value="USDCHF">USDCHF</option>
+            </select>
+        </div>
+        
+        <div class="control-group">
+            <button onclick="loadVolatilityData()">Refresh</button>
+        </div>
+    </div>
+    
+    <div id="content">
+        <div class="loading">Loading volatility surface...</div>
+    </div>
+    
+    <script>
+        let currentView = 'table';
+        let volatilityData = null;
+        
+        function setView(view) {
+            currentView = view;
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            updateDisplay();
+        }
+        
+        function changeCurrency() {
+            const currency = document.getElementById('currencySelect').value;
+            document.getElementById('currencyPair').textContent = currency;
+            loadVolatilityData();
+        }
+        
+        function formatValue(value, isRR = false) {
+            if (value === null || value === undefined) {
+                return '<span style="color: #666">-</span>';
+            }
+            const formatted = value.toFixed(3);
+            if (isRR) {
+                if (value > 0) {
+                    return `<span class="positive">${formatted}</span>`;
+                } else if (value < 0) {
+                    return `<span class="negative">${formatted}</span>`;
+                }
+            }
+            return formatted;
+        }
+        
+        function updateDisplay() {
+            if (!volatilityData) return;
+            
+            const content = document.getElementById('content');
+            const showBidAsk = document.querySelector('input[name="side"]:checked').value === 'Bid/Ask';
+            
+            if (currentView === 'table') {
+                // Create volatility table
+                let html = '<table class="vol-table">';
+                html += '<thead><tr>';
+                html += '<th>Exp</th>';
+                
+                if (showBidAsk) {
+                    html += '<th colspan="2">ATM</th>';
+                } else {
+                    html += '<th>ATM</th>';
+                }
+                
+                // Add delta columns
+                const deltas = ['5D', '10D', '15D', '25D', '35D'];
+                deltas.forEach(delta => {
+                    html += `<th colspan="2">${delta}</th>`;
+                });
+                
+                html += '</tr>';
+                
+                // Sub-header
+                html += '<tr>';
+                html += '<th></th>';
+                
+                if (showBidAsk) {
+                    html += '<th>Bid</th><th>Ask</th>';
+                } else {
+                    html += '<th>Mid</th>';
+                }
+                
+                deltas.forEach(delta => {
+                    html += '<th>RR</th><th>BF</th>';
+                });
+                
+                html += '</tr></thead>';
+                html += '<tbody>';
+                
+                // Data rows
+                volatilityData.full_delta.forEach(row => {
+                    html += '<tr>';
+                    html += `<td>${row.Exp}</td>`;
+                    
+                    if (showBidAsk) {
+                        html += `<td class="atm-cell">${formatValue(row.ATM_Bid)}</td>`;
+                        html += `<td class="atm-cell">${formatValue(row.ATM_Ask)}</td>`;
+                    } else {
+                        html += `<td class="atm-cell">${formatValue(row.ATM_Mid)}</td>`;
+                    }
+                    
+                    // Delta columns
+                    html += `<td>${formatValue(row['5D_RR'], true)}</td>`;
+                    html += `<td>${formatValue(row['5D_BF'])}</td>`;
+                    html += `<td>${formatValue(row['10D_RR'], true)}</td>`;
+                    html += `<td>${formatValue(row['10D_BF'])}</td>`;
+                    html += `<td>${formatValue(row['15D_RR'], true)}</td>`;
+                    html += `<td>${formatValue(row['15D_BF'])}</td>`;
+                    html += `<td>${formatValue(row['25D_RR'], true)}</td>`;
+                    html += `<td>${formatValue(row['25D_BF'])}</td>`;
+                    html += `<td>${formatValue(row['35D_RR'], true)}</td>`;
+                    html += `<td>${formatValue(row['35D_BF'])}</td>`;
+                    
+                    html += '</tr>';
+                });
+                
+                html += '</tbody></table>';
+                
+                if (volatilityData.failed_count > 0) {
+                    html += '<div class="error">Failed to load ' + volatilityData.failed_count + ' tenors</div>';
+                }
+                
+                content.innerHTML = html;
+            }
+        }
+        
+        async function loadVolatilityData() {
+            const content = document.getElementById('content');
+            content.innerHTML = '<div class="loading">Loading volatility surface...</div>';
+            
+            const currency = document.getElementById('currencySelect').value;
+            
+            try {
+                const response = await fetch(`/api/volatility/${currency}`);
+                volatilityData = await response.json();
+                updateDisplay();
+            } catch (error) {
+                content.innerHTML = `<div class="error">Error loading data: ${error.message}</div>`;
+            }
+        }
+        
+        // Load data on page load
+        window.onload = () => {
+            loadVolatilityData();
+        };
+    </script>
+</body>
+</html>

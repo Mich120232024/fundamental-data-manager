@@ -1,5 +1,18 @@
 # Bloomberg API Endpoints Documentation
 
+## ⚠️ CRITICAL: Use the Correct Endpoint!
+**ONLY USE**: `/api/bloomberg/reference` - This is the generic endpoint that works with ANY Bloomberg security
+**DO NOT USE**: Other endpoints are incomplete or broken
+
+### Why This Caused Major Confusion
+1. **Multiple API Files**: The VM has several Python API files with different endpoints
+2. **Wrong API Running**: Initially had `bloomberg-api-fixed.py` running with `/api/market-data` endpoint
+3. **Incomplete Endpoints**: Volatility-specific endpoints like `/api/fx/volatility/live` don't return all data
+4. **Hours Wasted**: Spent 2+ hours debugging because wrong API was running
+
+### The Solution: Generic Bloomberg Reference Endpoint
+The `/api/bloomberg/reference` endpoint is universal - it can fetch ANY Bloomberg security with ANY field. This eliminates the need for specialized endpoints and ensures complete data retrieval.
+
 ## Base Configuration
 - **Base URL**: `http://20.172.249.92:8080`
 - **Authentication**: Bearer Token
@@ -16,10 +29,210 @@
 ## Endpoints Overview
 
 ### 1. Health Check
-### 2. Live FX Rates
-### 3. Live FX Volatility
-### 4. EOD FX Volatility
-### 5. Historical FX Volatility
+### 2. **Logs Endpoint** (USEFUL FOR DEBUGGING!)
+### 3. **Generic Bloomberg Reference Data** (MAIN ENDPOINT - USE THIS!)
+### 4. Live FX Rates (Limited use)
+### 5. Live FX Volatility (Don't use - incomplete)
+### 6. EOD FX Volatility (Don't use - incomplete)
+### 7. Historical FX Volatility (Don't use - incomplete)
+
+---
+
+## 4. Generic Bloomberg Reference Data (PRODUCTION READY)
+
+### Endpoint
+```
+POST /api/bloomberg/reference
+```
+
+### Description
+**Universal Bloomberg data endpoint** - retrieve ANY Bloomberg security with ANY field without API modifications.
+
+### Headers
+```
+Content-Type: application/json
+Authorization: Bearer test
+```
+
+### Request Body
+```json
+{
+  "securities": [
+    "EURUSDV1M BGN Curncy",
+    "EURUSD25R1M BGN Curncy", 
+    "EURUSD10B3M BGN Curncy"
+  ],
+  "fields": ["PX_LAST", "PX_BID", "PX_ASK"]
+}
+```
+
+### Response Format
+```json
+{
+  "success": true,
+  "data": {
+    "securities_data": [
+      {
+        "security": "EURUSDV1M BGN Curncy",
+        "fields": {
+          "PX_LAST": 8.1975,
+          "PX_BID": 7.96,
+          "PX_ASK": 8.435
+        },
+        "success": true
+      },
+      {
+        "security": "EURUSD25R1M BGN Curncy",
+        "fields": {
+          "PX_LAST": 0.18,
+          "PX_BID": 0.015,
+          "PX_ASK": 0.345
+        },
+        "success": true
+      },
+      {
+        "security": "INVALID_TICKER",
+        "fields": {},
+        "success": false,
+        "error": "Error: Unknown/Invalid Security [nid:23007]"
+      }
+    ],
+    "source": "Bloomberg Terminal"
+  }
+}
+```
+
+### Usage Examples
+
+#### Complete Volatility Surface
+```json
+{
+  "securities": [
+    "EURUSDV1M BGN Curncy",
+    "EURUSD5R1M BGN Curncy", "EURUSD10R1M BGN Curncy", "EURUSD25R1M BGN Curncy",
+    "EURUSD5B1M BGN Curncy", "EURUSD10B1M BGN Curncy", "EURUSD25B1M BGN Curncy"
+  ],
+  "fields": ["PX_LAST", "PX_BID", "PX_ASK"]
+}
+```
+
+#### Multiple Currency Pairs
+```json
+{
+  "securities": [
+    "EURUSDV1M BGN Curncy", "GBPUSDV1M BGN Curncy", "USDJPYV1M BGN Curncy"
+  ],
+  "fields": ["PX_LAST", "PX_BID", "PX_ASK", "PX_HIGH", "PX_LOW"]
+}
+```
+
+#### Complete Intraday Data
+```json
+{
+  "securities": ["EURUSDV1M BGN Curncy"],
+  "fields": ["PX_LAST", "PX_BID", "PX_ASK", "PX_HIGH", "PX_LOW", "PX_OPEN", "CHG_PCT_1D", "VOLUME"]
+}
+```
+
+#### Sample Response with Full Data
+```json
+{
+  "security": "EURUSDV1M BGN Curncy",
+  "fields": {
+    "PX_LAST": 8.1975,
+    "PX_BID": 7.96,
+    "PX_ASK": 8.435,
+    "PX_HIGH": 8.5175,
+    "PX_LOW": 7.8275,
+    "PX_OPEN": 7.9375,
+    "CHG_PCT_1D": 3.6674
+  },
+  "success": true
+}
+```
+
+### Key Features
+- **✅ 100% No Mock Data** - Real Bloomberg Terminal connection
+- **✅ Universal Access** - Any ticker, any field, any data type
+- **✅ Production Ready** - Handles errors gracefully
+- **✅ Complete Market Depth** - Bid/Ask spreads included
+- **✅ All Deltas** - 5D, 10D, 15D, 25D, 35D supported
+
+---
+
+## 2. **Logs Endpoint** (USEFUL FOR DEBUGGING!)
+
+### Endpoint
+```
+GET /api/logs
+```
+
+### Description
+Returns recent API logs from all log files - **EXTREMELY USEFUL for debugging!** This endpoint was often missed but would have saved hours of debugging time.
+
+### Headers
+```
+Authorization: Bearer test
+```
+
+### Response
+```json
+{
+  "success": true,
+  "logs": [
+    {
+      "timestamp": "2025-07-20T15:23:45",
+      "level": "INFO",
+      "message": "Bloomberg API request received",
+      "file": "api_requests.log"
+    },
+    {
+      "timestamp": "2025-07-20T15:23:46",
+      "level": "INFO", 
+      "message": "Bloomberg Terminal connected successfully",
+      "file": "bloomberg_connection.log"
+    },
+    {
+      "timestamp": "2025-07-20T15:23:47",
+      "level": "DEBUG",
+      "message": "Retrieved data for EURUSD25R1M BGN Curncy: 0.18",
+      "file": "bloomberg_data.log"
+    }
+  ],
+  "total_entries": 100,
+  "log_files": [
+    "api_requests.log",
+    "bloomberg_connection.log", 
+    "bloomberg_data.log",
+    "bloomberg_errors.log",
+    "system_events.log",
+    "performance.log",
+    "raw_responses.log"
+  ]
+}
+```
+
+### Log Files Available
+- `api_requests.log` - All API requests and responses
+- `bloomberg_connection.log` - Bloomberg Terminal connection status
+- `bloomberg_data.log` - Raw Bloomberg data retrieval
+- `bloomberg_errors.log` - Bloomberg-specific errors
+- `system_events.log` - System-level events
+- `performance.log` - Performance metrics
+- `raw_responses.log` - Raw Bloomberg API responses
+
+### cURL Example
+```bash
+curl -X GET http://20.172.249.92:8080/api/logs \
+  -H "Authorization: Bearer test"
+```
+
+### Why This Was Missed
+This endpoint wasn't documented in the original API documentation, causing hours of blind debugging. When troubleshooting:
+1. Always check `/api/logs` first
+2. Look for patterns in error logs
+3. Verify Bloomberg Terminal connection in bloomberg_connection.log
+4. Check raw responses if parsing issues suspected
 
 ---
 

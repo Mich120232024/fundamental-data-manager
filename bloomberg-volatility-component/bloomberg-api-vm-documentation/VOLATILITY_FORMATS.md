@@ -40,21 +40,23 @@ This document details the discovered Bloomberg security formats for FX volatilit
 
 ### 2. Risk Reversals
 ```
-{PAIR}{DELTA}RR{TENOR} BGN Curncy
+{PAIR}{DELTA}R{TENOR} BGN Curncy
 ```
-**Examples:**
-- `EURUSD25RR1M BGN Curncy` (25-delta risk reversal)
-- `EURUSD10RR1M BGN Curncy` (10-delta risk reversal)
-- `GBPUSD25RR3M BGN Curncy`
+**Examples (VALIDATED):**
+- `EURUSD25R1M BGN Curncy` (25-delta risk reversal) → 0.18%
+- `EURUSD10R1M BGN Curncy` (10-delta risk reversal) → 0.285%
+- `EURUSD5R1M BGN Curncy` (5-delta risk reversal) → -0.2775%
+- `GBPUSD25R1M BGN Curncy` (25-delta risk reversal) → -0.7275%
 
 ### 3. Butterflies
 ```
-{PAIR}{DELTA}BF{TENOR} BGN Curncy
+{PAIR}{DELTA}B{TENOR} BGN Curncy
 ```
-**Examples:**
-- `EURUSD25BF1M BGN Curncy` (25-delta butterfly)
-- `EURUSD10BF1M BGN Curncy` (10-delta butterfly)
-- `GBPUSD25BF3M BGN Curncy`
+**Examples (VALIDATED):**
+- `EURUSD25B1M BGN Curncy` (25-delta butterfly) → 0.1725%
+- `EURUSD10B1M BGN Curncy` (10-delta butterfly) → 0.615%
+- `EURUSD5B1M BGN Curncy` (5-delta butterfly) → 0.81%
+- `GBPUSD25B1M BGN Curncy` (25-delta butterfly) → 0.175%
 
 ## Failed Formats (From Specifications)
 
@@ -99,8 +101,11 @@ The original analyst specifications contained these **INVALID** formats:
 
 ### Tested Strikes (Deltas)
 ```
-✅ 10D - 10 Delta (Risk Reversals & Butterflies)
-✅ 25D - 25 Delta (Risk Reversals & Butterflies)
+✅ 5D  - 5 Delta (Risk Reversals & Butterflies) - VALIDATED
+✅ 10D - 10 Delta (Risk Reversals & Butterflies) - VALIDATED
+✅ 15D - 15 Delta (Risk Reversals & Butterflies) - VALIDATED
+✅ 25D - 25 Delta (Risk Reversals & Butterflies) - VALIDATED
+✅ 35D - 35 Delta (Risk Reversals & Butterflies) - VALIDATED
 ```
 
 ## Data Structure Examples
@@ -119,39 +124,41 @@ The original analyst specifications contained these **INVALID** formats:
 ### Risk Reversal Response
 ```json
 {
-  "security": "EURUSD25RR1M BGN Curncy",
-  "PX_LAST": -0.45,
-  "PX_BID": -0.50,
-  "PX_ASK": -0.40,
-  "LAST_UPDATE_TIME": "2025-07-16T14:30:00"
+  "security": "EURUSD25R1M BGN Curncy",
+  "PX_LAST": 0.18,
+  "PX_BID": 0.015,
+  "PX_ASK": 0.345,
+  "LAST_UPDATE_TIME": "2025-07-16T18:30:00"
 }
 ```
 
 ### Butterfly Response
 ```json
 {
-  "security": "EURUSD25BF1M BGN Curncy",
-  "PX_LAST": 0.23,
-  "PX_BID": 0.20,
-  "PX_ASK": 0.25,
-  "LAST_UPDATE_TIME": "2025-07-16T14:30:00"
+  "security": "EURUSD25B1M BGN Curncy",
+  "PX_LAST": 0.1725,
+  "PX_BID": 0.055,
+  "PX_ASK": 0.29,
+  "LAST_UPDATE_TIME": "2025-07-16T18:30:00"
 }
 ```
 
 ## Bloomberg Fields Reference
 
-### Primary Fields
-- `PX_LAST` - Last price/volatility level
-- `PX_BID` - Bid price/volatility
-- `PX_ASK` - Ask price/volatility
-- `LAST_UPDATE_TIME` - Last update timestamp
+### Primary Fields (VALIDATED)
+- `PX_LAST` - Last price/volatility level ✅
+- `PX_BID` - Bid price/volatility ✅
+- `PX_ASK` - Ask price/volatility ✅
+- `PX_HIGH` - Intraday high ✅
+- `PX_LOW` - Intraday low ✅
+- `PX_OPEN` - Opening price ✅
+- `CHG_PCT_1D` - 1-day change percentage ✅
 
 ### Additional Fields (Available)
-- `PX_OPEN` - Opening price
-- `PX_HIGH` - High price
-- `PX_LOW` - Low price
 - `VOLUME` - Trading volume
-- `CHG_PCT_1D` - 1-day change percentage
+- `LAST_UPDATE_TIME` - Last update timestamp
+- `PX_CLOSE` - Previous close
+- `CHG_NET_1D` - Net change from previous day
 
 ## API Usage Patterns
 

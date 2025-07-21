@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bloomberg Volatility Surface - EURUSD</title>
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            margin: 20px;
+        }
+        h1 {
+            color: #ff6600;
+            text-align: center;
+        }
+        .header {
+            background: #000;
+            border-bottom: 2px solid #ff6600;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-size: 14px;
+        }
+        th {
+            background: #333;
+            color: #ff6600;
+            padding: 8px;
+            border: 1px solid #666;
+            text-align: right;
+            font-weight: normal;
+        }
+        th:first-child {
+            text-align: left;
+            background: #ff6600;
+            color: #000;
+            font-weight: bold;
+        }
+        td {
+            padding: 6px 10px;
+            border: 1px solid #333;
+            background: #111;
+            text-align: right;
+        }
+        td:first-child {
+            text-align: left;
+            background: #ff6600;
+            color: #000;
+            font-weight: bold;
+        }
+        .positive { color: #00ff00; }
+        .negative { color: #ff0000; }
+        .atm { color: #ffff00; }
+        .info {
+            text-align: center;
+            color: #666;
+            margin: 20px;
+        }
+        tr:hover td:not(:first-child) {
+            background: #222;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>EURUSD VOLATILITY SURFACE</h1>
+    </div>
+    
+    <table>
+        <tr>
+            <th>Exp</th>
+            <th colspan="3">ATM</th>
+            <th colspan="2">5D</th>
+            <th colspan="2">10D</th>
+            <th colspan="2">15D</th>
+            <th colspan="2">25D</th>
+            <th colspan="2">35D</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>Bid</th><th>Mid</th><th>Ask</th>
+            <th>RR</th><th>BF</th>
+            <th>RR</th><th>BF</th>
+            <th>RR</th><th>BF</th>
+            <th>RR</th><th>BF</th>
+            <th>RR</th><th>BF</th>
+        </tr>
+<tr><td>1W</td><td class="atm">7.740</td><td class="atm">8.443</td><td class="atm">9.145</td><td class="negative">-0.610</td><td>0.765</td><td class="positive">0.325</td><td>0.627</td><td class="positive">0.253</td><td>0.432</td><td class="positive">0.147</td><td>0.188</td><td class="positive">0.077</td><td>0.058</td></tr><tr><td>2W</td><td class="atm">7.590</td><td class="atm">8.095</td><td class="atm">8.600</td><td class="negative">-0.520</td><td>0.755</td><td class="positive">0.468</td><td>0.620</td><td class="positive">0.385</td><td>0.430</td><td class="positive">0.250</td><td>0.188</td><td class="positive">0.142</td><td>0.060</td></tr><tr><td>1M</td><td class="atm">7.965</td><td class="atm">8.185</td><td class="atm">8.405</td><td class="negative">-0.278</td><td>0.810</td><td class="positive">0.315</td><td>0.620</td><td class="positive">0.278</td><td>0.417</td><td class="positive">0.198</td><td>0.170</td><td class="positive">0.120</td><td>0.052</td></tr><tr><td>2M</td><td class="atm">7.705</td><td class="atm">7.893</td><td class="atm">8.080</td><td class="negative">-0.003</td><td>0.853</td><td class="positive">0.405</td><td>0.647</td><td class="positive">0.345</td><td>0.438</td><td class="positive">0.240</td><td>0.177</td><td class="positive">0.140</td><td>0.055</td></tr><tr><td>3M</td><td class="atm">7.635</td><td class="atm">7.798</td><td class="atm">7.960</td><td class="positive">0.125</td><td>0.907</td><td class="positive">0.480</td><td>0.677</td><td class="positive">0.400</td><td>0.458</td><td class="positive">0.268</td><td>0.185</td><td class="positive">0.152</td><td>0.055</td></tr><tr><td>6M</td><td class="atm">7.475</td><td class="atm">7.612</td><td class="atm">7.750</td><td class="positive">0.420</td><td>1.060</td><td class="positive">0.630</td><td>0.750</td><td class="positive">0.530</td><td>0.510</td><td class="positive">0.352</td><td>0.210</td><td class="positive">0.203</td><td>0.062</td></tr><tr><td>1Y</td><td class="atm">7.455</td><td class="atm">7.580</td><td class="atm">7.705</td><td class="positive">0.810</td><td>1.333</td><td class="positive">0.800</td><td>0.890</td><td class="positive">0.667</td><td>0.600</td><td class="positive">0.443</td><td>0.242</td><td class="positive">0.255</td><td>0.075</td></tr>
+    </table>
+    
+    <div class="info">
+        <p>Data from Bloomberg Terminal API - Real-time FX Option Volatilities</p>
+        <p>RR = Risk Reversal, BF = Butterfly</p>
+        <p>All values in implied volatility %</p>
+    </div>
+</body>
+</html>

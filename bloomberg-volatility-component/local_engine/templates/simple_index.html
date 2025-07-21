@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bloomberg Volatility Surface</title>
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            margin: 20px;
+        }
+        h1 {
+            color: #ff6600;
+        }
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th {
+            background: #333;
+            color: #ff6600;
+            padding: 8px;
+            border: 1px solid #666;
+            text-align: right;
+        }
+        th:first-child {
+            text-align: left;
+            background: #ff6600;
+            color: #000;
+        }
+        td {
+            padding: 6px 10px;
+            border: 1px solid #333;
+            background: #111;
+            text-align: right;
+        }
+        td:first-child {
+            text-align: left;
+            background: #ff6600;
+            color: #000;
+            font-weight: bold;
+        }
+        .positive { color: #00ff00; }
+        .negative { color: #ff0000; }
+        .atm { color: #ffff00; }
+        button {
+            background: #ff6600;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 10px 5px;
+        }
+        #loading {
+            color: #ff6600;
+            padding: 20px;
+        }
+        select {
+            background: #333;
+            color: #fff;
+            border: 1px solid #666;
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bloomberg Volatility Surface - EURUSD</h1>
+    
+    <div>
+        <label>Currency Pair: </label>
+        <select id="currency" onchange="loadData()">
+            <option value="EURUSD">EURUSD</option>
+            <option value="USDJPY">USDJPY</option>
+            <option value="GBPUSD">GBPUSD</option>
+        </select>
+        <button onclick="loadData()">Refresh</button>
+    </div>
+    
+    <div id="loading">Loading...</div>
+    <div id="content"></div>
+    
+    <script>
+        function formatValue(value, isRR = false) {
+            if (value === null || value === undefined) {
+                return '-';
+            }
+            const formatted = value.toFixed(3);
+            if (isRR && value !== 0) {
+                const className = value > 0 ? 'positive' : 'negative';
+                return `<span class="${className}">${formatted}</span>`;
+            }
+            return formatted;
+        }
+        
+        async function loadData() {
+            const currency = document.getElementById('currency').value;
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('content').innerHTML = '';
+            
+            try {
+                const response = await fetch(`/api/volatility/${currency}`);
+                const result = await response.json();
+                
+                if (result.success) {
+                    let html = '<table>';
+                    
+                    // Header row
+                    html += '<tr>';
+                    html += '<th>Exp</th>';
+                    html += '<th colspan="3">ATM</th>';
+                    html += '<th colspan="2">5D</th>';
+                    html += '<th colspan="2">10D</th>';
+                    html += '<th colspan="2">15D</th>';
+                    html += '<th colspan="2">25D</th>';
+                    html += '<th colspan="2">35D</th>';
+                    html += '</tr>';
+                    
+                    // Sub-header
+                    html += '<tr>';
+                    html += '<th></th>';
+                    html += '<th>Bid</th><th>Mid</th><th>Ask</th>';
+                    html += '<th>RR</th><th>BF</th>';
+                    html += '<th>RR</th><th>BF</th>';
+                    html += '<th>RR</th><th>BF</th>';
+                    html += '<th>RR</th><th>BF</th>';
+                    html += '<th>RR</th><th>BF</th>';
+                    html += '</tr>';
+                    
+                    // Data rows
+                    result.data.forEach(row => {
+                        html += '<tr>';
+                        html += `<td>${row.Exp}</td>`;
+                        html += `<td class="atm">${formatValue(row.ATM_Bid)}</td>`;
+                        html += `<td class="atm">${formatValue(row.ATM_Mid)}</td>`;
+                        html += `<td class="atm">${formatValue(row.ATM_Ask)}</td>`;
+                        html += `<td>${formatValue(row['5D_RR'], true)}</td>`;
+                        html += `<td>${formatValue(row['5D_BF'])}</td>`;
+                        html += `<td>${formatValue(row['10D_RR'], true)}</td>`;
+                        html += `<td>${formatValue(row['10D_BF'])}</td>`;
+                        html += `<td>${formatValue(row['15D_RR'], true)}</td>`;
+                        html += `<td>${formatValue(row['15D_BF'])}</td>`;
+                        html += `<td>${formatValue(row['25D_RR'], true)}</td>`;
+                        html += `<td>${formatValue(row['25D_BF'])}</td>`;
+                        html += `<td>${formatValue(row['35D_RR'], true)}</td>`;
+                        html += `<td>${formatValue(row['35D_BF'])}</td>`;
+                        html += '</tr>';
+                    });
+                    
+                    html += '</table>';
+                    document.getElementById('content').innerHTML = html;
+                } else {
+                    document.getElementById('content').innerHTML = `<p style="color: red">Error: ${result.error}</p>`;
+                }
+            } catch (error) {
+                document.getElementById('content').innerHTML = `<p style="color: red">Error: ${error.message}</p>`;
+            } finally {
+                document.getElementById('loading').style.display = 'none';
+            }
+        }
+        
+        // Load data on page load
+        window.onload = () => loadData();
+    </script>
+</body>
+</html>
