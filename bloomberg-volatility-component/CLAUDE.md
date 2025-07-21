@@ -78,3 +78,5 @@ curl -X POST http://20.172.249.92:8080/api/bloomberg/reference \
 - Added filtering for empty tenor rows
 - Discovered 1D/2D/3D tickers don't exist in Bloomberg FX options
 - Implemented historical data selection with proper date formatting
+- Added Historical Analysis tab with time series table view
+- Tab navigation between Surface and Historical views

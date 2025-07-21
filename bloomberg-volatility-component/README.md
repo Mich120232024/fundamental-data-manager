@@ -8,11 +8,16 @@ This React + TypeScript application displays real-time FX options volatility sur
 
 ## Features
 
+- **Dual View Modes**:
+  - **Volatility Surface**: Real-time grid view of current market volatilities
+  - **Historical Analysis**: Time series table showing volatility evolution
 - **Real-time Bloomberg Data**: Live volatility surface data from Bloomberg Terminal
 - **Multiple Data Modes**: Live, EOD (End of Day), and Historical data views
 - **28 Currency Pairs**: All major FX pairs supported
 - **Full Delta Coverage**: 5D, 10D, 15D, 25D, 35D for both risk reversals and butterflies
 - **Bid/Ask Spreads**: Complete bid/ask pricing for all volatility components
+- **Historical Date Ranges**: 7 days to 2 years of historical data
+- **Tab Navigation**: Easy switching between Surface and Historical views
 - **Auto-refresh**: Configurable refresh intervals for live data
 - **Dark/Light Themes**: Professional terminal-style themes
 
@@ -103,8 +108,13 @@ npm run build
 
 ## Key Components
 
+### `MainAppContainer.tsx`
+- Top-level container with tab navigation
+- Manages switching between Surface and Historical views
+- Consistent header and styling across views
+
 ### `VolatilitySurfaceContainer.tsx`
-- Main container component
+- Container for real-time volatility surface
 - Handles data fetching and state management
 - Implements date selection and currency pair switching
 - Filters out empty tenors automatically
@@ -113,6 +123,12 @@ npm run build
 - Displays the volatility grid
 - Color-codes risk reversals (green/red for positive/negative)
 - Shows bid/ask spreads for all values
+
+### `VolatilityHistoricalTable.tsx`
+- Historical time series table view
+- Configurable date ranges (7 days to 2 years)
+- Tenor-specific analysis
+- Shows evolution of ATM, RR, and BF values over time
 
 ### `bloomberg.ts`
 - API client for Bloomberg data
@@ -150,12 +166,21 @@ npm run build
 
 ## Recent Updates (2025-01-21)
 
+### Morning Session
 1. Fixed substring matching bug that caused data misalignment
 2. Added filtering to remove empty tenor rows
 3. Improved historical data handling
 4. Added comprehensive bid/ask spreads
 5. Documented 1D/2D/3D ticker investigation results
 6. Enhanced error handling and logging
+
+### Afternoon Session - Historical Analysis Feature
+1. Added new Historical Analysis tab with time series table
+2. Implemented date range selector (7 days to 2 years)
+3. Added tenor-specific historical view
+4. Created tab navigation between Surface and Historical views
+5. Maintained consistent GZC Intel app styling
+6. Optimized historical data fetching with parallel API calls
 
 ## References
 
