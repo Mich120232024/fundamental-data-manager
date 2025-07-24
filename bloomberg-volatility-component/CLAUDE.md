@@ -80,3 +80,6 @@ curl -X POST http://20.172.249.92:8080/api/bloomberg/reference \
 - Implemented historical data selection with proper date formatting
 - Added Historical Analysis tab with time series table view
 - Tab navigation between Surface and Historical views
+- Added Smile Analysis tab with lightweight-charts for volatility smile visualization
+- Implemented 4-quadrant dashboard: smile curve, key metrics, term structure, trading signals
+- Installed lightweight-charts for GZC Intel app compatibility

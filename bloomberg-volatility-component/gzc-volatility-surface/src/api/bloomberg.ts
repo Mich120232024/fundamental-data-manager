@@ -1,8 +1,11 @@
 // Bloomberg API Client for Volatility Surface
 import axios from 'axios'
+import { DataValidator, ValidatedVolatilityData } from '../utils/dataValidation'
+import { BloombergErrorRecovery, CircuitBreaker } from '../utils/errorRecovery'
 
-// Always use direct Bloomberg VM API URL
-const BLOOMBERG_API_URL = 'http://20.172.249.92:8080'
+// Use proxy in development, direct URL in production
+// @ts-ignore - Vite provides import.meta.env
+const BLOOMBERG_API_URL = import.meta.env.DEV ? '' : 'http://20.172.249.92:8080'
 const API_KEY = 'test'
 
 export interface VolatilityData {
@@ -65,10 +68,28 @@ class BloombergAPIClient {
     'Authorization': `Bearer ${API_KEY}`,
     'X-API-Key': API_KEY
   }
+  
+  private circuitBreaker = new CircuitBreaker(5, 60000) // Open after 5 failures, reset after 1 minute
+  private lastSuccessfulFetch: Date | null = null
 
   async healthCheck() {
     try {
-      const response = await axios.get(`${BLOOMBERG_API_URL}/health`)
+      // In dev mode, need to call the API directly since /health isn't under /api path
+      const url = import.meta.env.DEV 
+        ? 'http://20.172.249.92:8080/health'
+        : `${BLOOMBERG_API_URL}/health`
+      
+      // Add cache-busting to prevent stale status
+      const response = await axios.get(url, {
+        headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0'
+        },
+        params: {
+          _t: Date.now() // Cache buster
+        }
+      })
       return response.data
     } catch (error) {
       console.error('Health check failed:', error)
@@ -77,19 +98,33 @@ class BloombergAPIClient {
   }
 
   async getReferenceData(securities: string[], fields: string[]) {
-    try {
-      console.log('Sending request to bloomberg/reference:', { securities, fields })
-      const response = await axios.post(
-        `${BLOOMBERG_API_URL}/api/bloomberg/reference`,
-        { securities, fields },
-        { headers: this.headers }
+    return this.circuitBreaker.execute(async () => {
+      const result = await BloombergErrorRecovery.withRetry(
+        async () => {
+          console.log('Sending request to bloomberg/reference:', { securities, fields })
+          const response = await axios.post(
+            `${BLOOMBERG_API_URL}/api/bloomberg/reference`,
+            { securities, fields },
+            { 
+              headers: this.headers,
+              timeout: 30000 // 30 second timeout
+            }
+          )
+          console.log('Raw API response:', JSON.stringify(response.data, null, 2))
+          this.lastSuccessfulFetch = new Date()
+          return response.data
+        },
+        { maxRetries: 3, initialDelay: 1000 }
       )
-      console.log('Raw API response:', JSON.stringify(response.data, null, 2))
-      return response.data
-    } catch (error) {
-      console.error('Reference data request failed:', error)
-      throw error
-    }
+      
+      if (!result.success) {
+        const errorMsg = BloombergErrorRecovery.getErrorMessage(result.error)
+        console.error('Reference data request failed after retries:', errorMsg)
+        throw new Error(errorMsg)
+      }
+      
+      return result.data
+    })
   }
 
   async startBloombergService() {
@@ -159,202 +194,97 @@ class BloombergAPIClient {
     }
   }
 
-  async getVolatilitySurface(currencyPair: string = "EURUSD", tenors: string[] = STANDARD_TENORS, date?: string): Promise<VolatilityData[]> {
-    const results: VolatilityData[] = []
+  async getVolatilitySurface(currencyPair: string = "EURUSD", tenors: string[] = STANDARD_TENORS, date?: string): Promise<ValidatedVolatilityData[]> {
+    console.log('🔍 getVolatilitySurface called with:', { currencyPair, tenors: tenors.length, date })
     
     // If date is provided, we need to use historical data endpoint
     if (date) {
       // Get historical data for the specific date
       return this.getHistoricalVolatilitySurface(currencyPair, tenors, date)
     }
+
+    // Process all tenors
+    const tenorsToProcess = tenors
+    console.log('Processing all tenors:', tenorsToProcess)
     
-    // Process tenors in batches (live data)
-    for (const tenor of tenors) {
-      try {
-        // For ON tenor, use different format (no BGN)
-        const isON = tenor === 'ON'
-        // For 1D/2D/3D tenors, use special format per production requirements
-        const isShortDated = ['1D', '2D', '3D'].includes(tenor)
-        
-        const securities = [
-          // ATM Volatility
-          isON ? `${currencyPair}V${tenor} Curncy` : `${currencyPair}V${tenor} BGN Curncy`,
-          
-          // Risk Reversals - All available deltas
-          `${currencyPair}5R${tenor} BGN Curncy`,    // 5D RR
-          `${currencyPair}10R${tenor} BGN Curncy`,   // 10D RR
-          `${currencyPair}15R${tenor} BGN Curncy`,   // 15D RR
-          `${currencyPair}25R${tenor} BGN Curncy`,   // 25D RR
-          `${currencyPair}35R${tenor} BGN Curncy`,   // 35D RR
-          
-          // Butterflies - All available deltas
-          `${currencyPair}5B${tenor} BGN Curncy`,    // 5D BF
-          `${currencyPair}10B${tenor} BGN Curncy`,   // 10D BF
-          `${currencyPair}15B${tenor} BGN Curncy`,   // 15D BF
-          `${currencyPair}25B${tenor} BGN Curncy`,   // 25D BF
-          `${currencyPair}35B${tenor} BGN Curncy`    // 35D BF
-        ]
-        
-        const response = await this.getReferenceData(securities, ["PX_LAST", "PX_BID", "PX_ASK"])
-        
-        if (response.success && response.data) {
-          console.log(`Processing ${tenor}:`, response.data.securities_data.length, 'securities')
-          console.log('Securities data:', response.data.securities_data.map((s: any) => ({ 
-            security: s.security, 
-            success: s.success,
-            fields: s.fields 
-          })))
-          const data = response.data.securities_data as SecurityData[]
-          
-          const tenorData: VolatilityData = {
-            tenor,
-            atm_bid: null,
-            atm_ask: null,
-            rr_5d_bid: null,
-            rr_5d_ask: null,
-            bf_5d_bid: null,
-            bf_5d_ask: null,
-            rr_10d_bid: null,
-            rr_10d_ask: null,
-            bf_10d_bid: null,
-            bf_10d_ask: null,
-            rr_15d_bid: null,
-            rr_15d_ask: null,
-            bf_15d_bid: null,
-            bf_15d_ask: null,
-            rr_25d_bid: null,
-            rr_25d_ask: null,
-            bf_25d_bid: null,
-            bf_25d_ask: null,
-            rr_35d_bid: null,
-            rr_35d_ask: null,
-            bf_35d_bid: null,
-            bf_35d_ask: null
-          }
-          
-          // Process each security with proper regex matching
-          data.forEach((sec) => {
-            if (sec.success && sec.fields) {
-              const security = sec.security
-              console.log(`Processing security: ${security}, value: ${sec.fields.PX_LAST}`)
-              
-              // Use regex to properly match delta and type
-              // Pattern: EURUSD + delta + type + tenor + BGN Curncy (or just Curncy for ON)
-              const atmMatch = isON 
-                ? security.match(new RegExp(`${currencyPair}V${tenor}\\s+Curncy`))
-                : security.match(new RegExp(`${currencyPair}V${tenor}\\s+BGN`))
-              const rrBfMatch = security.match(new RegExp(`${currencyPair}(\\d+)(R|B)${tenor}\\s+BGN`))
-              
-              if (atmMatch) {
-                // ATM volatility
-                tenorData.atm_bid = sec.fields.PX_BID ?? null
-                tenorData.atm_ask = sec.fields.PX_ASK ?? null
-              } else if (rrBfMatch) {
-                const delta = rrBfMatch[1]
-                const type = rrBfMatch[2]
-                
-                if (type === 'R') {
-                  // Risk Reversal
-                  switch(delta) {
-                    case '5': 
-                      tenorData.rr_5d_bid = sec.fields.PX_BID ?? null
-                      tenorData.rr_5d_ask = sec.fields.PX_ASK ?? null
-                      break
-                    case '10': 
-                      tenorData.rr_10d_bid = sec.fields.PX_BID ?? null
-                      tenorData.rr_10d_ask = sec.fields.PX_ASK ?? null
-                      break
-                    case '15': 
-                      tenorData.rr_15d_bid = sec.fields.PX_BID ?? null
-                      tenorData.rr_15d_ask = sec.fields.PX_ASK ?? null
-                      break
-                    case '25': 
-                      tenorData.rr_25d_bid = sec.fields.PX_BID ?? null
-                      tenorData.rr_25d_ask = sec.fields.PX_ASK ?? null
-                      break
-                    case '35': 
-                      tenorData.rr_35d_bid = sec.fields.PX_BID ?? null
-                      tenorData.rr_35d_ask = sec.fields.PX_ASK ?? null
-                      break
-                  }
-                } else if (type === 'B') {
-                  // Butterfly
-                  switch(delta) {
-                    case '5': 
-                      tenorData.bf_5d_bid = sec.fields.PX_BID ?? null
-                      tenorData.bf_5d_ask = sec.fields.PX_ASK ?? null
-                      break
-                    case '10': 
-                      tenorData.bf_10d_bid = sec.fields.PX_BID ?? null
-                      tenorData.bf_10d_ask = sec.fields.PX_ASK ?? null
-                      break
-                    case '15': 
-                      tenorData.bf_15d_bid = sec.fields.PX_BID ?? null
-                      tenorData.bf_15d_ask = sec.fields.PX_ASK ?? null
-                      break
-                    case '25': 
-                      tenorData.bf_25d_bid = sec.fields.PX_BID ?? null
-                      tenorData.bf_25d_ask = sec.fields.PX_ASK ?? null
-                      break
-                    case '35': 
-                      tenorData.bf_35d_bid = sec.fields.PX_BID ?? null
-                      tenorData.bf_35d_ask = sec.fields.PX_ASK ?? null
-                      break
-                  }
-                }
-              }
-            }
-          })
-          
-          console.log(`Final data for ${tenor}:`, {
-            atm: { bid: tenorData.atm_bid, ask: tenorData.atm_ask },
-            '5D': { rr_bid: tenorData.rr_5d_bid, rr_ask: tenorData.rr_5d_ask, bf_bid: tenorData.bf_5d_bid, bf_ask: tenorData.bf_5d_ask },
-            '10D': { rr_bid: tenorData.rr_10d_bid, rr_ask: tenorData.rr_10d_ask, bf_bid: tenorData.bf_10d_bid, bf_ask: tenorData.bf_10d_ask }
-          })
-          console.log('Full tenorData:', tenorData)
-          results.push(tenorData)
-        }
-      } catch (error) {
-        console.error(`Failed to fetch data for tenor ${tenor}:`, error)
-        // Add empty data for failed tenor
-        results.push({
-          tenor,
-          atm_bid: null,
-          atm_ask: null,
-          rr_5d_bid: null,
-          rr_5d_ask: null,
-          bf_5d_bid: null,
-          bf_5d_ask: null,
-          rr_10d_bid: null,
-          rr_10d_ask: null,
-          bf_10d_bid: null,
-          bf_10d_ask: null,
-          rr_15d_bid: null,
-          rr_15d_ask: null,
-          bf_15d_bid: null,
-          bf_15d_ask: null,
-          rr_25d_bid: null,
-          rr_25d_ask: null,
-          bf_25d_bid: null,
-          bf_25d_ask: null,
-          rr_35d_bid: null,
-          rr_35d_ask: null,
-          bf_35d_bid: null,
-          bf_35d_ask: null
-        })
+    // OPTIMIZATION: Batch ALL securities into smaller chunks to respect rate limits
+    // Build all securities first
+    const allSecurities: string[] = []
+    const tenorMap = new Map<string, string>()
+    
+    for (const tenor of tenorsToProcess) {
+      const isON = tenor === 'ON'
+      
+      // ATM
+      const atmSecurity = isON ? `${currencyPair}V${tenor} Curncy` : `${currencyPair}V${tenor} BGN Curncy`
+      allSecurities.push(atmSecurity)
+      tenorMap.set(atmSecurity, tenor)
+      
+      // Risk Reversals and Butterflies for all deltas
+      const deltas = [5, 10, 15, 25, 35]
+      for (const delta of deltas) {
+        const rrSecurity = `${currencyPair}${delta}R${tenor} BGN Curncy`
+        const bfSecurity = `${currencyPair}${delta}B${tenor} BGN Curncy`
+        allSecurities.push(rrSecurity, bfSecurity)
+        tenorMap.set(rrSecurity, tenor)
+        tenorMap.set(bfSecurity, tenor)
       }
     }
     
-    return results
-  }
-
-  async getHistoricalVolatilitySurface(currencyPair: string, tenors: string[], date: string): Promise<VolatilityData[]> {
-    console.log('getHistoricalVolatilitySurface called with:', { currencyPair, date, tenorCount: tenors.length })
-    const results: VolatilityData[] = []
+    console.log(`📊 Total securities to fetch for ${currencyPair}: ${allSecurities.length}`)
+    console.log(`📈 Sample securities:`, allSecurities.slice(0, 3))
     
-    // For historical data, we need to fetch each security individually
-    for (const tenor of tenors) {
-      const tenorData: VolatilityData = {
+    // Process in chunks of 50 securities (well under Bloomberg's limit)
+    const chunkSize = 50
+    const chunks: string[][] = []
+    for (let i = 0; i < allSecurities.length; i += chunkSize) {
+      chunks.push(allSecurities.slice(i, i + chunkSize))
+    }
+    
+    console.log(`Processing ${chunks.length} chunks...`)
+    
+    // Fetch all chunks with error recovery
+    const batchResult = await BloombergErrorRecovery.batchWithRecovery(
+      chunks,
+      1, // Process one chunk at a time
+      async (batch) => {
+        const chunk = batch[0] // Since batch size is 1
+        console.log(`Fetching chunk (${chunk.length} securities)`)
+        const response = await this.getReferenceData(chunk, ["PX_LAST", "PX_BID", "PX_ASK"])
+        
+        if (!response.success || !response.data) {
+          throw new Error('Invalid response from Bloomberg API')
+        }
+        
+        return response.data.securities_data
+      },
+      (batch, error) => {
+        console.error(`Failed to fetch chunk with ${batch[0].length} securities:`, error)
+      }
+    )
+    
+    // Collect all successful responses
+    const allResponses: SecurityData[] = []
+    for (const chunk of batchResult.successful) {
+      const response = await this.getReferenceData(chunk, ["PX_LAST", "PX_BID", "PX_ASK"])
+      if (response.success && response.data) {
+        allResponses.push(...response.data.securities_data)
+      }
+    }
+    
+    // Validate the security data
+    const { valid: validSecurities, summary } = DataValidator.validateSecurityData(allResponses)
+    
+    if (summary.failed > 0) {
+      console.warn(`Failed to fetch ${summary.failed} securities out of ${summary.totalRequested}`)
+    }
+    
+    // Now organize the data by tenor
+    const tenorDataMap = new Map<string, VolatilityData>()
+    
+    // Initialize tenor data
+    for (const tenor of tenorsToProcess) {
+      tenorDataMap.set(tenor, {
         tenor,
         atm_bid: null,
         atm_ask: null,
@@ -378,122 +308,133 @@ class BloombergAPIClient {
         rr_35d_ask: null,
         bf_35d_bid: null,
         bf_35d_ask: null
-      }
-
-      try {
-        // Fetch all securities for this tenor
-        const isON = tenor === 'ON'
-        // For 1D/2D/3D tenors, use special format per production requirements
-        const isShortDated = ['1D', '2D', '3D'].includes(tenor)
-        
-        const securities = [
-          isON ? `${currencyPair}V${tenor} Curncy` : `${currencyPair}V${tenor} BGN Curncy`,
-          `${currencyPair}5R${tenor} BGN Curncy`,
-          `${currencyPair}10R${tenor} BGN Curncy`,
-          `${currencyPair}15R${tenor} BGN Curncy`,
-          `${currencyPair}25R${tenor} BGN Curncy`,
-          `${currencyPair}35R${tenor} BGN Curncy`,
-          `${currencyPair}5B${tenor} BGN Curncy`,
-          `${currencyPair}10B${tenor} BGN Curncy`,
-          `${currencyPair}15B${tenor} BGN Curncy`,
-          `${currencyPair}25B${tenor} BGN Curncy`,
-          `${currencyPair}35B${tenor} BGN Curncy`
-        ]
-
-        // Fetch historical data for each security
-        const promises = securities.map(security => 
-          this.getHistoricalData(security, ['PX_LAST', 'PX_BID', 'PX_ASK'], date, date)
-            .then(result => {
-              console.log(`Historical data for ${security}:`, result)
-              return result
-            })
-            .catch(err => {
-              console.error(`Failed to get historical data for ${security}:`, err)
-              return { success: false, error: err.message, security }
-            })
-        )
-
-        const responses = await Promise.all(promises)
-
-        // Process responses
-        responses.forEach((resp, index) => {
-          if (resp.success && resp.data?.data?.length > 0) {
-            const security = securities[index]
-            const data = resp.data.data[0] // Get data for the specific date
-            
-            if (index === 0) {
-              // ATM
-              tenorData.atm_bid = data.PX_BID ?? null
-              tenorData.atm_ask = data.PX_ASK ?? null
-            } else {
-              // Parse delta and type from security name
-              const match = security.match(new RegExp(`${currencyPair}(\\d+)(R|B)${tenor}`))
-              if (match) {
-                const delta = match[1]
-                const type = match[2]
-                
-                if (type === 'R') {
-                  // Risk Reversal
-                  switch(delta) {
-                    case '5': 
-                      tenorData.rr_5d_bid = data.PX_BID ?? null
-                      tenorData.rr_5d_ask = data.PX_ASK ?? null
-                      break
-                    case '10': 
-                      tenorData.rr_10d_bid = data.PX_BID ?? null
-                      tenorData.rr_10d_ask = data.PX_ASK ?? null
-                      break
-                    case '15': 
-                      tenorData.rr_15d_bid = data.PX_BID ?? null
-                      tenorData.rr_15d_ask = data.PX_ASK ?? null
-                      break
-                    case '25': 
-                      tenorData.rr_25d_bid = data.PX_BID ?? null
-                      tenorData.rr_25d_ask = data.PX_ASK ?? null
-                      break
-                    case '35': 
-                      tenorData.rr_35d_bid = data.PX_BID ?? null
-                      tenorData.rr_35d_ask = data.PX_ASK ?? null
-                      break
-                  }
-                } else if (type === 'B') {
-                  // Butterfly
-                  switch(delta) {
-                    case '5': 
-                      tenorData.bf_5d_bid = data.PX_BID ?? null
-                      tenorData.bf_5d_ask = data.PX_ASK ?? null
-                      break
-                    case '10': 
-                      tenorData.bf_10d_bid = data.PX_BID ?? null
-                      tenorData.bf_10d_ask = data.PX_ASK ?? null
-                      break
-                    case '15': 
-                      tenorData.bf_15d_bid = data.PX_BID ?? null
-                      tenorData.bf_15d_ask = data.PX_ASK ?? null
-                      break
-                    case '25': 
-                      tenorData.bf_25d_bid = data.PX_BID ?? null
-                      tenorData.bf_25d_ask = data.PX_ASK ?? null
-                      break
-                    case '35': 
-                      tenorData.bf_35d_bid = data.PX_BID ?? null
-                      tenorData.bf_35d_ask = data.PX_ASK ?? null
-                      break
-                  }
-                }
-              }
+      })
+    }
+    
+    // Process all valid responses
+    for (const sec of validSecurities) {
+      if (!sec.success || !sec.fields) continue
+      
+      const tenor = tenorMap.get(sec.security)
+      if (!tenor) continue
+      
+      const tenorData = tenorDataMap.get(tenor)
+      if (!tenorData) continue
+      
+      const security = sec.security
+      
+      // Parse security type
+      if (security.includes(`V${tenor}`)) {
+        // ATM
+        tenorData.atm_bid = sec.fields.PX_BID ?? null
+        tenorData.atm_ask = sec.fields.PX_ASK ?? null
+      } else {
+        // Extract delta and type
+        const match = security.match(new RegExp(`${currencyPair}(\\d+)(R|B)${tenor}`))
+        if (match) {
+          const delta = parseInt(match[1])
+          const type = match[2]
+          
+          if (type === 'R') {
+            // Risk Reversal
+            switch(delta) {
+              case 5: 
+                tenorData.rr_5d_bid = sec.fields.PX_BID ?? null
+                tenorData.rr_5d_ask = sec.fields.PX_ASK ?? null
+                break
+              case 10: 
+                tenorData.rr_10d_bid = sec.fields.PX_BID ?? null
+                tenorData.rr_10d_ask = sec.fields.PX_ASK ?? null
+                break
+              case 15: 
+                tenorData.rr_15d_bid = sec.fields.PX_BID ?? null
+                tenorData.rr_15d_ask = sec.fields.PX_ASK ?? null
+                break
+              case 25: 
+                tenorData.rr_25d_bid = sec.fields.PX_BID ?? null
+                tenorData.rr_25d_ask = sec.fields.PX_ASK ?? null
+                break
+              case 35: 
+                tenorData.rr_35d_bid = sec.fields.PX_BID ?? null
+                tenorData.rr_35d_ask = sec.fields.PX_ASK ?? null
+                break
+            }
+          } else if (type === 'B') {
+            // Butterfly
+            switch(delta) {
+              case 5: 
+                tenorData.bf_5d_bid = sec.fields.PX_BID ?? null
+                tenorData.bf_5d_ask = sec.fields.PX_ASK ?? null
+                break
+              case 10: 
+                tenorData.bf_10d_bid = sec.fields.PX_BID ?? null
+                tenorData.bf_10d_ask = sec.fields.PX_ASK ?? null
+                break
+              case 15: 
+                tenorData.bf_15d_bid = sec.fields.PX_BID ?? null
+                tenorData.bf_15d_ask = sec.fields.PX_ASK ?? null
+                break
+              case 25: 
+                tenorData.bf_25d_bid = sec.fields.PX_BID ?? null
+                tenorData.bf_25d_ask = sec.fields.PX_ASK ?? null
+                break
+              case 35: 
+                tenorData.bf_35d_bid = sec.fields.PX_BID ?? null
+                tenorData.bf_35d_ask = sec.fields.PX_ASK ?? null
+                break
             }
           }
-        })
-
-        results.push(tenorData)
-      } catch (error) {
-        console.error(`Failed to fetch historical data for tenor ${tenor}:`, error)
-        results.push(tenorData) // Push empty data
+        }
       }
     }
+    
+    // Convert map to array in correct order and validate
+    const validatedResults: ValidatedVolatilityData[] = []
+    const timestamp = new Date()
+    
+    for (const tenor of tenorsToProcess) {
+      const data = tenorDataMap.get(tenor)
+      if (data) {
+        const validatedData = DataValidator.validateVolatilityData(data, timestamp)
+        validatedResults.push(validatedData)
+      } else {
+        // Create fallback data for missing tenors
+        const fallbackData = BloombergErrorRecovery.createFallbackData(tenor)
+        const validatedData = DataValidator.validateVolatilityData(fallbackData, timestamp)
+        validatedData.quality.warnings.push('No data received from Bloomberg')
+        validatedResults.push(validatedData)
+      }
+    }
+    
+    // Apply interpolation for missing values if needed
+    const interpolatedResults = DataValidator.interpolateMissingData(validatedResults)
+    
+    // Log data quality summary
+    const qualitySummary = DataValidator.getDataQualitySummary(interpolatedResults)
+    console.log(`Data quality: ${qualitySummary.overallScore}% (${qualitySummary.completeRecords}/${qualitySummary.totalRecords} complete)`)
+    
+    if (qualitySummary.criticalWarnings.length > 0) {
+      console.warn('Critical warnings:', qualitySummary.criticalWarnings)
+    }
+    
+    return interpolatedResults
+  }
 
-    return results
+  async getHistoricalVolatilitySurface(currencyPair: string, tenors: string[], date: string): Promise<ValidatedVolatilityData[]> {
+    // TODO: Implement historical data fetching
+    // For now, return empty array
+    console.log('getHistoricalVolatilitySurface called with:', { currencyPair, date, tenorCount: tenors.length })
+    return []
+  }
+  
+  getDataQualityStatus(): {
+    lastSuccessfulFetch: Date | null
+    circuitBreakerState: any
+  } {
+    return {
+      lastSuccessfulFetch: this.lastSuccessfulFetch,
+      circuitBreakerState: this.circuitBreaker.getState()
+    }
   }
 }
 

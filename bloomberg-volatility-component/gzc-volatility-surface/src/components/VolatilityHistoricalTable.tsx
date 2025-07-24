@@ -86,9 +86,9 @@ export function VolatilityHistoricalTable() {
       // Process and combine data by date
       const dataByDate = new Map<string, HistoricalVolData>()
       
-      responses.forEach(({ security, result, error }) => {
-        if (!error && result?.success && result.data?.data) {
-          result.data.data.forEach((point: any) => {
+      responses.forEach((response: any) => {
+        if (!response.error && response.result?.success && response.result.data?.data) {
+          response.result.data.data?.forEach((point: any) => {
             const dateStr = point.date
             if (!dataByDate.has(dateStr)) {
               dataByDate.set(dateStr, {
@@ -103,10 +103,10 @@ export function VolatilityHistoricalTable() {
             const value = point.PX_LAST
             
             // Parse security type and delta
-            if (security.includes(`V${selectedTenor}`)) {
+            if (response.security.includes(`V${selectedTenor}`)) {
               data.atm = value
             } else {
-              const match = security.match(new RegExp(`${selectedCurrency}(\\d+)(R|B)${selectedTenor}`))
+              const match = response.security.match(new RegExp(`${selectedCurrency}(\\d+)(R|B)${selectedTenor}`))
               if (match) {
                 const delta = match[1]
                 const type = match[2]

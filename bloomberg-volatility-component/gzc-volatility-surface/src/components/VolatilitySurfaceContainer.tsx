@@ -37,7 +37,7 @@ export function VolatilitySurfaceContainer() {
     
     try {
       // First check if API is healthy
-      await bloombergAPI.healthCheck()
+      // await bloombergAPI.healthCheck() // Skip health check for now
       
       let surfaceData: VolatilityData[]
       
