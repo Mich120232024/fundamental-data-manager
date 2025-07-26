@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useTheme } from '../contexts/ThemeContext'
 import { bloombergAPI } from '../api/bloomberg'
-import { ValidatedVolatilityData, getQualityColor } from '../utils/dataValidation'
+import { ValidatedVolatilityData } from '../api/DataValidator'
+import { getQualityColor } from '../utils/dataValidation'
 import * as d3 from 'd3'
 import { PlotlyVolatilitySurface } from './PlotlyVolatilitySurface'
 import { ErrorRetryBanner } from './ErrorRetryBanner'
@@ -18,7 +19,7 @@ export function VolatilityAnalysisTab() {
   const [surfaceData, setSurfaceData] = useState<ValidatedVolatilityData[]>([])
   const [loadingProgress, setLoadingProgress] = useState<string>('')
   const [visibleTenorsForSmile, setVisibleTenorsForSmile] = useState<Set<string>>(new Set(['1M', '3M', '6M']))
-  const [visibleDeltasForTerm, setVisibleDeltasForTerm] = useState<Set<number>>(new Set([10, 25]))
+  const [visibleDeltasForTerm, setVisibleDeltasForTerm] = useState<Set<number>>(new Set([10, 25, 50]))
   const [dataQualityScore, setDataQualityScore] = useState<number>(0)
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null)
   
@@ -58,7 +59,7 @@ export function VolatilityAnalysisTab() {
         console.log('Tenors received:', data.map(d => d.tenor))
         
         // Calculate overall data quality
-        const totalScore = data.reduce((sum, d) => sum + d.quality.completenessScore, 0)
+        const totalScore = data.reduce((sum, d) => sum + (d.quality?.completeness || 0), 0)
         const avgScore = Math.round(totalScore / data.length)
         setDataQualityScore(avgScore)
         
@@ -77,9 +78,8 @@ export function VolatilityAnalysisTab() {
       console.error('Bloomberg API failed:', err)
       console.error('Full error:', err)
       
-      // Use the error recovery utility to get user-friendly message
-      const { BloombergErrorRecovery } = await import('../utils/errorRecovery')
-      const userMessage = BloombergErrorRecovery.getErrorMessage(err)
+      // Show real error - no error recovery
+      const userMessage = err instanceof Error ? err.message : String(err)
       
       setError(userMessage)
       setSurfaceData([])
@@ -98,12 +98,38 @@ export function VolatilityAnalysisTab() {
 
   // D3.js Term Structure Visualization
   const drawTermStructureChart = useCallback(() => {
-    if (!termChartRef.current) return
+    console.log('🔍 drawTermStructureChart called')
+    if (!termChartRef.current) {
+      console.error('❌ No termChartRef.current')
+      return
+    }
     
     // Clear previous chart
     d3.select(termChartRef.current).selectAll("*").remove()
     
-    if (!surfaceData.length) return
+    if (!surfaceData.length) {
+      console.warn('⚠️ No surfaceData available')
+      return
+    }
+    console.log('✅ Surface data available:', surfaceData.length, 'tenors')
+    
+    // Convert tenor to actual time in years
+    const tenorToYears = (tenor: string): number => {
+      const map: Record<string, number> = {
+        'ON': 1/365,    // Overnight = 1 day
+        '1W': 7/365,    // 1 week
+        '2W': 14/365,   // 2 weeks
+        '1M': 30/365,   // ~1 month
+        '2M': 60/365,   // ~2 months
+        '3M': 90/365,   // ~3 months
+        '6M': 180/365,  // ~6 months
+        '9M': 270/365,  // ~9 months
+        '1Y': 1.0,      // 1 year
+        '18M': 1.5,     // 1.5 years
+        '2Y': 2.0       // 2 years
+      }
+      return map[tenor] || 0
+    }
 
     // Get all term structure curves for selected deltas
     const allTermCurves: Array<{delta: number, points: Array<{tenor: string, vol: number, sortKey: number, delta: number}>}> = []
@@ -111,12 +137,16 @@ export function VolatilityAnalysisTab() {
     console.log('Drawing term structure for visible deltas:', Array.from(visibleDeltasForTerm))
     
     visibleDeltasForTerm.forEach(delta => {
+      console.log(`📊 Processing delta ${delta}`)
       const termPoints: Array<{tenor: string, vol: number, sortKey: number, delta: number}> = []
       
       surfaceData.forEach(data => {
-        if (!data.atm_bid || !data.atm_ask) return
+        if (!data.raw?.atm_bid || !data.raw?.atm_ask) {
+          console.warn(`⚠️ Missing ATM data for tenor ${data.tenor}`)
+          return
+        }
         
-        const atmMid = (data.atm_bid + data.atm_ask) / 2
+        const atmMid = (data.raw.atm_bid + data.raw.atm_ask) / 2
         let deltaVol = atmMid // Default to ATM
         
         // Calculate volatility for this delta
@@ -125,24 +155,24 @@ export function VolatilityAnalysisTab() {
           
           switch(delta) {
             case 5:
-              rr = data.rr_5d_bid && data.rr_5d_ask ? (data.rr_5d_bid + data.rr_5d_ask) / 2 : 0
-              bf = data.bf_5d_bid && data.bf_5d_ask ? (data.bf_5d_bid + data.bf_5d_ask) / 2 : 0
+              rr = data.raw?.rr_5d_bid && data.raw?.rr_5d_ask ? (data.raw.rr_5d_bid + data.raw.rr_5d_ask) / 2 : 0
+              bf = data.raw?.bf_5d_bid && data.raw?.bf_5d_ask ? (data.raw.bf_5d_bid + data.raw.bf_5d_ask) / 2 : 0
               break
             case 10:
-              rr = data.rr_10d_bid && data.rr_10d_ask ? (data.rr_10d_bid + data.rr_10d_ask) / 2 : 0
-              bf = data.bf_10d_bid && data.bf_10d_ask ? (data.bf_10d_bid + data.bf_10d_ask) / 2 : 0
+              rr = data.raw?.rr_10d_bid && data.raw?.rr_10d_ask ? (data.raw.rr_10d_bid + data.raw.rr_10d_ask) / 2 : 0
+              bf = data.raw?.bf_10d_bid && data.raw?.bf_10d_ask ? (data.raw.bf_10d_bid + data.raw.bf_10d_ask) / 2 : 0
               break
             case 15:
-              rr = data.rr_15d_bid && data.rr_15d_ask ? (data.rr_15d_bid + data.rr_15d_ask) / 2 : 0
-              bf = data.bf_15d_bid && data.bf_15d_ask ? (data.bf_15d_bid + data.bf_15d_ask) / 2 : 0
+              rr = data.raw?.rr_15d_bid && data.raw?.rr_15d_ask ? (data.raw.rr_15d_bid + data.raw.rr_15d_ask) / 2 : 0
+              bf = data.raw?.bf_15d_bid && data.raw?.bf_15d_ask ? (data.raw.bf_15d_bid + data.raw.bf_15d_ask) / 2 : 0
               break
             case 25:
-              rr = data.rr_25d_bid && data.rr_25d_ask ? (data.rr_25d_bid + data.rr_25d_ask) / 2 : 0
-              bf = data.bf_25d_bid && data.bf_25d_ask ? (data.bf_25d_bid + data.bf_25d_ask) / 2 : 0
+              rr = data.raw?.rr_25d_bid && data.raw?.rr_25d_ask ? (data.raw.rr_25d_bid + data.raw.rr_25d_ask) / 2 : 0
+              bf = data.raw?.bf_25d_bid && data.raw?.bf_25d_ask ? (data.raw.bf_25d_bid + data.raw.bf_25d_ask) / 2 : 0
               break
             case 35:
-              rr = data.rr_35d_bid && data.rr_35d_ask ? (data.rr_35d_bid + data.rr_35d_ask) / 2 : 0
-              bf = data.bf_35d_bid && data.bf_35d_ask ? (data.bf_35d_bid + data.bf_35d_ask) / 2 : 0
+              rr = data.raw?.rr_35d_bid && data.raw?.rr_35d_ask ? (data.raw.rr_35d_bid + data.raw.rr_35d_ask) / 2 : 0
+              bf = data.raw?.bf_35d_bid && data.raw?.bf_35d_ask ? (data.raw.bf_35d_bid + data.raw.bf_35d_ask) / 2 : 0
               break
           }
           
@@ -159,6 +189,10 @@ export function VolatilityAnalysisTab() {
       })
       
       if (termPoints.length > 0) {
+        // Add timeYears to each point for x-axis positioning
+        termPoints.forEach(p => {
+          (p as any).timeYears = tenorToYears(p.tenor)
+        })
         allTermCurves.push({
           delta,
           points: termPoints.sort((a, b) => a.sortKey - b.sortKey)
@@ -166,14 +200,28 @@ export function VolatilityAnalysisTab() {
       }
     })
 
-    if (allTermCurves.length === 0) return
+    console.log('Term Structure data:', { 
+      curvesCount: allTermCurves.length,
+      curves: allTermCurves.map(c => ({ delta: c.delta, pointsCount: c.points.length }))
+    })
+    
+    if (allTermCurves.length === 0) {
+      console.warn('No term curves to display')
+      return
+    }
 
     // Clear previous chart
     d3.select(termChartRef.current).selectAll("*").remove()
 
-    const margin = { top: 20, right: 30, bottom: 40, left: 50 }
+    const margin = { top: 20, right: 30, bottom: 50, left: 50 }
     const width = termChartRef.current.clientWidth - margin.left - margin.right
     const height = termChartRef.current.clientHeight - margin.top - margin.bottom
+    
+    console.log('Term Structure Chart dimensions:', { width, height })
+    if (width <= 0 || height <= 0) {
+      console.error('Invalid chart dimensions', { width, height })
+      return
+    }
 
     const svg = d3.select(termChartRef.current)
       .append("svg")
@@ -185,16 +233,20 @@ export function VolatilityAnalysisTab() {
 
     // Get all data points for scale calculations
     const allPoints = allTermCurves.flatMap(curve => curve.points)
-    const allTenors = [...new Set(allPoints.map(p => p.tenor))].sort((a, b) => TENORS.indexOf(a) - TENORS.indexOf(b))
     const volExtent = d3.extent(allPoints, d => d.vol) as [number, number]
+    
+    // Add time in years to each point
+    allPoints.forEach(p => {
+      (p as any).timeYears = tenorToYears(p.tenor)
+    })
+    
+    // Time extent for x-scale
+    const timeExtent = d3.extent(allPoints, d => (d as any).timeYears) as [number, number]
 
-    // Scales
-    const xScale = d3.scaleBand()
-      .domain(allTenors)
+    // Use LINEAR scale for realistic time spacing
+    const xScale = d3.scaleLinear()
+      .domain(timeExtent)
       .range([0, width])
-      .padding(0.3)
-
-    if (!xScale.bandwidth) return
 
     const yScale = d3.scaleLinear()
       .domain([Math.max(0, volExtent[0] - 0.5), volExtent[1] + 0.5])
@@ -219,19 +271,49 @@ export function VolatilityAnalysisTab() {
       .attr("stroke-width", 0.5)
       .attr("opacity", 0.2)
 
-    // Axes
-    g.append("g")
+    // Custom x-axis with tenor labels at correct time positions
+    const xAxis = g.append("g")
       .attr("transform", `translate(0,${height})`)
-      .call(d3.axisBottom(xScale))
-      .style("color", currentTheme.textSecondary)
+    
+    // Draw axis line
+    xAxis.append("line")
+      .attr("x1", 0)
+      .attr("x2", width)
+      .attr("stroke", currentTheme.textSecondary)
+    
+    // Add tenor labels at correct time positions
+    const uniqueTenors = [...new Set(allPoints.map(p => p.tenor))]
+      .sort((a, b) => tenorToYears(a) - tenorToYears(b))
+    
+    xAxis.selectAll(".tick")
+      .data(uniqueTenors)
+      .enter()
+      .append("g")
+      .attr("class", "tick")
+      .attr("transform", d => `translate(${xScale(tenorToYears(d))}, 0)`)
+      .each(function(d) {
+        const tick = d3.select(this)
+        // Tick mark
+        tick.append("line")
+          .attr("y1", 0)
+          .attr("y2", 6)
+          .attr("stroke", currentTheme.textSecondary)
+        // Label
+        tick.append("text")
+          .attr("y", 16)
+          .attr("text-anchor", "middle")
+          .style("font-size", "10px")
+          .style("fill", currentTheme.textSecondary)
+          .text(d)
+      })
 
     g.append("g")
       .call(d3.axisLeft(yScale).tickFormat(d => `${d}%`))
       .style("color", currentTheme.textSecondary)
 
-    // Line generator
+    // Line generator using time-based x position
     const line = d3.line<any>()
-      .x(d => (xScale(d.tenor) || 0) + (xScale.bandwidth() || 0) / 2)
+      .x(d => xScale((d as any).timeYears || tenorToYears(d.tenor)))
       .y(d => yScale(d.vol))
       .curve(d3.curveCatmullRom)
 
@@ -244,11 +326,11 @@ export function VolatilityAnalysisTab() {
         .datum(curve.points)
         .attr("fill", "none")
         .attr("stroke", curveColor)
-        .attr("stroke-width", 4)
-        .attr("stroke-opacity", 0.3)
+        .attr("stroke-width", 1)
+        .attr("stroke-opacity", 0.2)
         .attr("stroke-linejoin", "round")
         .attr("stroke-linecap", "round")
-        .style("filter", "blur(2px)")
+        .style("filter", "blur(1px)")
         .attr("d", line)
 
       // Main line
@@ -256,69 +338,84 @@ export function VolatilityAnalysisTab() {
         .datum(curve.points)
         .attr("fill", "none")
         .attr("stroke", curveColor)
-        .attr("stroke-width", 2.5)
+        .attr("stroke-width", 1.2)
         .attr("stroke-linejoin", "round")
         .attr("stroke-linecap", "round")
         .attr("d", line)
-        .style("filter", "drop-shadow(0 2px 4px rgba(0,0,0,0.2))")
+        .style("filter", "drop-shadow(0 1px 2px rgba(0,0,0,0.15))")
 
-      // Points with hover
-      const pointGroup = g.selectAll(`.term-point-group-${curve.delta}`)
-        .data(curve.points)
-        .enter()
-        .append("g")
-        .attr("class", `term-point-group-${curve.delta}`)
-        .attr("transform", (d: any) => `translate(${(xScale(d.tenor) || 0) + (xScale.bandwidth() || 0) / 2}, ${yScale(d.vol)})`)
-        .style("cursor", "pointer")
+      // Enhanced tooltip on hover - no visible points
+      const lineElement = g.select(`path`).nodes()[g.selectAll(`path`).nodes().length - 1]
+      
+      // Create tooltip div if doesn't exist
+      let tooltipDiv = d3.select("body").select(".term-tooltip")
+      if (tooltipDiv.empty()) {
+        tooltipDiv = d3.select("body").append("div")
+          .attr("class", "term-tooltip")
+          .style("opacity", 0)
+          .style("position", "absolute")
+          .style("background", currentTheme.surface)
+          .style("border", `1px solid ${currentTheme.border}`)
+          .style("border-radius", "6px")
+          .style("padding", "10px")
+          .style("font-size", "11px")
+          .style("color", currentTheme.text)
+          .style("pointer-events", "none")
+          .style("box-shadow", "0 2px 8px rgba(0,0,0,0.15)")
+          .style("backdrop-filter", "blur(10px)")
+      }
 
-      // Outer circle
-      pointGroup.append("circle")
-        .attr("r", 5)
-        .attr("fill", curveColor)
-        .attr("fill-opacity", 0.3)
-
-      // Inner circle
-      pointGroup.append("circle")
-        .attr("r", 3)
-        .attr("fill", currentTheme.background)
-        .attr("stroke", curveColor)
-        .attr("stroke-width", 2)
-
-      // Hover tooltip
-      const tooltip = pointGroup.append("g")
-        .attr("class", "tooltip")
-        .attr("transform", "translate(0, -25)")
-        .style("opacity", 0)
-
-      tooltip.append("rect")
-        .attr("x", -25)
-        .attr("y", -12)
-        .attr("width", 50)
-        .attr("height", 20)
-        .attr("rx", 3)
-        .attr("fill", currentTheme.surface)
-        .attr("stroke", curveColor)
-        .attr("stroke-width", 1)
-        .style("filter", "drop-shadow(0 2px 4px rgba(0,0,0,0.3))")
-
-      tooltip.append("text")
-        .attr("text-anchor", "middle")
-        .attr("y", -2)
-        .style("font-size", "9px")
-        .style("font-weight", "600")
-        .style("fill", currentTheme.text)
-        .text((d: any) => `${curve.delta}Δ: ${d.vol.toFixed(2)}%`)
-
-      pointGroup
-        .on("mouseenter", function() {
-          d3.select(this).select(".tooltip")
-            .transition()
-            .duration(200)
-            .style("opacity", 1)
+      // Invisible overlay for mouse interaction
+      g.append("path")
+        .datum(curve.points)
+        .attr("fill", "none")
+        .attr("stroke", "transparent")
+        .attr("stroke-width", 20)
+        .attr("d", line)
+        .style("cursor", "crosshair")
+        .on("mousemove", function(event) {
+          const [mouseX] = d3.pointer(event)
+          const xValue = xScale.invert(mouseX)
+          
+          // Find closest data point
+          let closestPoint = curve.points[0]
+          let minDist = Math.abs((closestPoint as any).timeYears - xValue)
+          
+          curve.points.forEach(p => {
+            const dist = Math.abs((p as any).timeYears - xValue)
+            if (dist < minDist) {
+              minDist = dist
+              closestPoint = p
+            }
+          })
+          
+          tooltipDiv.transition()
+            .duration(50)
+            .style("opacity", .95)
+          
+          const deltaType = curve.delta < 50 ? "Put" : curve.delta > 50 ? "Call" : "ATM"
+          tooltipDiv.html(`
+            <div style="font-weight: 600; margin-bottom: 6px; color: ${curveColor}">
+              ${curve.delta}Δ ${deltaType}
+            </div>
+            <div style="display: flex; justify-content: space-between; gap: 20px;">
+              <span style="color: ${currentTheme.textSecondary}">Tenor:</span>
+              <span style="font-weight: 500">${closestPoint.tenor}</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; gap: 20px;">
+              <span style="color: ${currentTheme.textSecondary}">Volatility:</span>
+              <span style="font-weight: 500">${closestPoint.vol.toFixed(3)}%</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; gap: 20px; margin-top: 4px; padding-top: 4px; border-top: 1px solid ${currentTheme.border}">
+              <span style="color: ${currentTheme.textSecondary}; font-size: 10px">Time:</span>
+              <span style="font-size: 10px">${((closestPoint as any).timeYears * 365).toFixed(0)} days</span>
+            </div>
+          `)
+            .style("left", (event.pageX + 15) + "px")
+            .style("top", (event.pageY - 40) + "px")
         })
-        .on("mouseleave", function() {
-          d3.select(this).select(".tooltip")
-            .transition()
+        .on("mouseout", function() {
+          tooltipDiv.transition()
             .duration(200)
             .style("opacity", 0)
         })
@@ -392,18 +489,18 @@ export function VolatilityAnalysisTab() {
         return
       }
 
-      const atmMid = data.atm_bid && data.atm_ask ? (data.atm_bid + data.atm_ask) / 2 : null
+      const atmMid = data.raw?.atm_bid && data.raw?.atm_ask ? (data.raw.atm_bid + data.raw.atm_ask) / 2 : null
       if (!atmMid) return
 
       const smilePoints = []
       
       // All available delta points from Bloomberg data
       const deltaData = [
-        { delta: 5, rrBid: data.rr_5d_bid, rrAsk: data.rr_5d_ask, bfBid: data.bf_5d_bid, bfAsk: data.bf_5d_ask },
-        { delta: 10, rrBid: data.rr_10d_bid, rrAsk: data.rr_10d_ask, bfBid: data.bf_10d_bid, bfAsk: data.bf_10d_ask },
-        { delta: 15, rrBid: data.rr_15d_bid, rrAsk: data.rr_15d_ask, bfBid: data.bf_15d_bid, bfAsk: data.bf_15d_ask },
-        { delta: 25, rrBid: data.rr_25d_bid, rrAsk: data.rr_25d_ask, bfBid: data.bf_25d_bid, bfAsk: data.bf_25d_ask },
-        { delta: 35, rrBid: data.rr_35d_bid, rrAsk: data.rr_35d_ask, bfBid: data.bf_35d_bid, bfAsk: data.bf_35d_ask }
+        { delta: 5, rrBid: data.raw?.rr_5d_bid, rrAsk: data.raw?.rr_5d_ask, bfBid: data.raw?.bf_5d_bid, bfAsk: data.raw?.bf_5d_ask },
+        { delta: 10, rrBid: data.raw?.rr_10d_bid, rrAsk: data.raw?.rr_10d_ask, bfBid: data.raw?.bf_10d_bid, bfAsk: data.raw?.bf_10d_ask },
+        { delta: 15, rrBid: data.raw?.rr_15d_bid, rrAsk: data.raw?.rr_15d_ask, bfBid: data.raw?.bf_15d_bid, bfAsk: data.raw?.bf_15d_ask },
+        { delta: 25, rrBid: data.raw?.rr_25d_bid, rrAsk: data.raw?.rr_25d_ask, bfBid: data.raw?.bf_25d_bid, bfAsk: data.raw?.bf_25d_ask },
+        { delta: 35, rrBid: data.raw?.rr_35d_bid, rrAsk: data.raw?.rr_35d_ask, bfBid: data.raw?.bf_35d_bid, bfAsk: data.raw?.bf_35d_ask }
       ]
 
       deltaData.forEach(({ delta, rrBid, rrAsk, bfBid, bfAsk }) => {
@@ -508,8 +605,8 @@ export function VolatilityAnalysisTab() {
         .datum(sortedPoints)
         .attr("fill", "none")
         .attr("stroke", curveColor)
-        .attr("stroke-width", 6)
-        .attr("stroke-opacity", 0.3)
+        .attr("stroke-width", 1)
+        .attr("stroke-opacity", 0.2)
         .attr("stroke-linejoin", "round")
         .attr("stroke-linecap", "round")
         .style("filter", "blur(3px)")
@@ -520,71 +617,80 @@ export function VolatilityAnalysisTab() {
         .datum(sortedPoints)
         .attr("fill", "none")
         .attr("stroke", curveColor)
-        .attr("stroke-width", 2.5)
+        .attr("stroke-width", 1.2)
         .attr("stroke-linejoin", "round")
         .attr("stroke-linecap", "round")
         .attr("d", line)
-        .style("filter", "drop-shadow(0 2px 4px rgba(0,0,0,0.2))")
+        .style("filter", "drop-shadow(0 1px 2px rgba(0,0,0,0.15))")
 
-      // Modern hover points - only show on hover
-      const pointGroup = g.selectAll(`.point-group-${curve.tenor}`)
-        .data(sortedPoints)
-        .enter()
-        .append("g")
-        .attr("class", `point-group-${curve.tenor}`)
-        .attr("transform", (d: any) => `translate(${xScale(d.delta)}, ${yScale(d.vol)})`)
-        .style("opacity", 0)
-        .style("cursor", "pointer")
+      // Enhanced tooltip on hover - no visible points for smile chart
+      let smileTooltipDiv = d3.select("body").select(".smile-tooltip")
+      if (smileTooltipDiv.empty()) {
+        smileTooltipDiv = d3.select("body").append("div")
+          .attr("class", "smile-tooltip")
+          .style("opacity", 0)
+          .style("position", "absolute")
+          .style("background", currentTheme.surface)
+          .style("border", `1px solid ${currentTheme.border}`)
+          .style("border-radius", "6px")
+          .style("padding", "10px")
+          .style("font-size", "11px")
+          .style("color", currentTheme.text)
+          .style("pointer-events", "none")
+          .style("box-shadow", "0 2px 8px rgba(0,0,0,0.15)")
+          .style("backdrop-filter", "blur(10px)")
+      }
 
-      // Outer glow circle
-      pointGroup.append("circle")
-        .attr("r", 6)
-        .attr("fill", curveColor)
-        .attr("fill-opacity", 0.2)
-        .attr("stroke", "none")
-
-      // Inner circle
-      pointGroup.append("circle")
-        .attr("r", 3)
-        .attr("fill", currentTheme.background)
-        .attr("stroke", curveColor)
-        .attr("stroke-width", 2)
-
-      // Modern tooltip box
-      const tooltip = pointGroup.append("g")
-        .attr("class", "tooltip")
-        .attr("transform", "translate(0, -25)")
-
-      tooltip.append("rect")
-        .attr("x", -25)
-        .attr("y", -12)
-        .attr("width", 50)
-        .attr("height", 20)
-        .attr("rx", 4)
-        .attr("fill", currentTheme.surface)
-        .attr("stroke", curveColor)
-        .attr("stroke-width", 1)
-        .style("filter", "drop-shadow(0 2px 4px rgba(0,0,0,0.3))")
-
-      tooltip.append("text")
-        .attr("text-anchor", "middle")
-        .attr("y", -2)
-        .style("font-size", "9px")
-        .style("font-weight", "600")
-        .style("fill", currentTheme.text)
-        .text((d: any) => `${curve.tenor}: ${d.vol.toFixed(2)}%`)
-
-      // Hover interactions
-      pointGroup
-        .on("mouseenter", function() {
-          d3.select(this)
-            .transition()
-            .duration(200)
-            .style("opacity", 1)
+      // Invisible overlay for mouse interaction on smile curve
+      g.append("path")
+        .datum(sortedPoints)
+        .attr("fill", "none")
+        .attr("stroke", "transparent")
+        .attr("stroke-width", 20)
+        .attr("d", line)
+        .style("cursor", "crosshair")
+        .on("mousemove", function(event) {
+          const [mouseX] = d3.pointer(event)
+          const deltaValue = xScale.invert(mouseX)
+          
+          // Find closest data point
+          let closestPoint = sortedPoints[0]
+          let minDist = Math.abs(closestPoint.delta - deltaValue)
+          
+          sortedPoints.forEach((p: any) => {
+            const dist = Math.abs(p.delta - deltaValue)
+            if (dist < minDist) {
+              minDist = dist
+              closestPoint = p
+            }
+          })
+          
+          smileTooltipDiv.transition()
+            .duration(50)
+            .style("opacity", .95)
+          
+          smileTooltipDiv.html(`
+            <div style="font-weight: 600; margin-bottom: 6px; color: ${curveColor}">
+              ${curve.tenor} Smile
+            </div>
+            <div style="display: flex; justify-content: space-between; gap: 20px;">
+              <span style="color: ${currentTheme.textSecondary}">Strike:</span>
+              <span style="font-weight: 500">${closestPoint.label}</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; gap: 20px;">
+              <span style="color: ${currentTheme.textSecondary}">Volatility:</span>
+              <span style="font-weight: 500">${closestPoint.vol.toFixed(3)}%</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; gap: 20px; margin-top: 4px; padding-top: 4px; border-top: 1px solid ${currentTheme.border}">
+              <span style="color: ${currentTheme.textSecondary}; font-size: 10px">Delta:</span>
+              <span style="font-size: 10px">${closestPoint.delta}Δ</span>
+            </div>
+          `)
+            .style("left", (event.pageX + 15) + "px")
+            .style("top", (event.pageY - 40) + "px")
         })
-        .on("mouseleave", function() {
-          d3.select(this)
-            .transition()
+        .on("mouseout", function() {
+          smileTooltipDiv.transition()
             .duration(200)
             .style("opacity", 0)
         })
@@ -605,7 +711,7 @@ export function VolatilityAnalysisTab() {
         .attr("y1", 0)
         .attr("y2", 0)
         .attr("stroke", colorScale(curve.tenor) as string)
-        .attr("stroke-width", 2.5)
+        .attr("stroke-width", 1.2)
 
       legendItem.append("text")
         .attr("x", 20)
@@ -657,7 +763,10 @@ export function VolatilityAnalysisTab() {
         'NZDCAD': 0.823,
         'NZDCHF': 0.542
       }
-      return spotRates[pair] || 1.0
+      if (!spotRates[pair]) {
+        throw new Error(`No spot rate available for ${pair} - no fallback allowed`)
+      }
+      return spotRates[pair]
     }
     const estimatedForward = getEstimatedSpot(selectedPair)
     
@@ -750,9 +859,15 @@ export function VolatilityAnalysisTab() {
 
 
   useEffect(() => {
+    console.log('🎯 Chart render useEffect triggered:', { 
+      surfaceDataLength: surfaceData.length, 
+      loading,
+      shouldRender: surfaceData.length > 0 && !loading 
+    })
     if (surfaceData.length > 0 && !loading) {
       // Add a small delay to ensure DOM is ready
       const timer = setTimeout(() => {
+        console.log('⏰ Drawing charts after 100ms delay')
         drawSmileChart()
         drawTermStructureChart()
       }, 100)

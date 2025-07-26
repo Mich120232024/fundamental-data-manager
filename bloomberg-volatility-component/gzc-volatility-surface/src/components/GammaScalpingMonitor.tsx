@@ -108,7 +108,7 @@ export function GammaScalpingMonitor() {
         const samplePositions: GammaPosition[] = [
           {
             pair: 'EURUSD',
-            spotPrice: newSpotPrices.get('EURUSD') || 1.0950,
+            spotPrice: spotPrices.get('EURUSD') || (() => { throw new Error('EURUSD spot price missing - no fallback allowed') })(),
             strikePrice: 1.1000,
             optionType: 'CALL',
             quantity: 1000000, // 1M EUR notional
@@ -122,7 +122,7 @@ export function GammaScalpingMonitor() {
           },
           {
             pair: 'GBPUSD',
-            spotPrice: newSpotPrices.get('GBPUSD') || 1.2700,
+            spotPrice: spotPrices.get('GBPUSD') || (() => { throw new Error('GBPUSD spot price missing - no fallback allowed') })(),
             strikePrice: 1.2650,
             optionType: 'PUT',
             quantity: 500000, // 500K GBP notional

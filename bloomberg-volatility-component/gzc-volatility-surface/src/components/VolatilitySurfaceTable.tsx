@@ -22,6 +22,21 @@ export function VolatilitySurfaceTable({ data }: Props) {
     return currentTheme.text
   }
   
+  if (!data || data.length === 0) {
+    return (
+      <div style={{
+        padding: '60px',
+        textAlign: 'center',
+        color: currentTheme.textSecondary
+      }}>
+        <div style={{ fontSize: '16px', marginBottom: '8px' }}>No Data Available</div>
+        <div style={{ fontSize: '12px' }}>
+          Bloomberg returned no volatility data for this currency pair
+        </div>
+      </div>
+    )
+  }
+  
   return (
     <div style={{ overflowX: 'auto' }}>
       <table style={{

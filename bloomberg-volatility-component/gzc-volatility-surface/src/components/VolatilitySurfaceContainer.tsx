@@ -32,6 +32,7 @@ export function VolatilitySurfaceContainer() {
   }, [selectedCurrency, dataMode, selectedDate])
   
   const loadVolatilityData = async () => {
+    console.log('🚀 loadVolatilityData CALLED - currency:', selectedCurrency, 'mode:', dataMode)
     setLoading(true)
     setError(null)
     
@@ -44,6 +45,9 @@ export function VolatilitySurfaceContainer() {
       if (dataMode === 'live') {
         // Fetch REAL Bloomberg volatility surface data - Only populated tenors
         surfaceData = await bloombergAPI.getVolatilitySurface(selectedCurrency)
+        console.log('🎯 RAW SURFACE DATA RECEIVED:', surfaceData)
+        console.log('🎯 DATA TYPE:', typeof surfaceData, 'LENGTH:', surfaceData?.length)
+        console.log('🎯 FIRST ITEM:', surfaceData?.[0])
       } else if (dataMode === 'eod') {
         // Get latest EOD data (yesterday)
         const yesterday = new Date()
@@ -66,26 +70,61 @@ export function VolatilitySurfaceContainer() {
       
       // Filter out empty tenors (no data at all)
       const filteredData = surfaceData.filter(row => {
-        return row.atm_bid !== null || row.atm_ask !== null ||
-               row.rr_5d_bid !== null || row.rr_5d_ask !== null ||
-               row.rr_10d_bid !== null || row.rr_10d_ask !== null ||
-               row.rr_15d_bid !== null || row.rr_15d_ask !== null ||
-               row.rr_25d_bid !== null || row.rr_25d_ask !== null ||
-               row.rr_35d_bid !== null || row.rr_35d_ask !== null ||
-               row.bf_5d_bid !== null || row.bf_5d_ask !== null ||
-               row.bf_10d_bid !== null || row.bf_10d_ask !== null ||
-               row.bf_15d_bid !== null || row.bf_15d_ask !== null ||
-               row.bf_25d_bid !== null || row.bf_25d_ask !== null ||
-               row.bf_35d_bid !== null || row.bf_35d_ask !== null
+        // ValidatedVolatilityData has raw property with original data
+        const rawData = (row as any).raw || row
+        return rawData.atm_bid !== null || rawData.atm_ask !== null ||
+               rawData.rr_5d_bid !== null || rawData.rr_5d_ask !== null ||
+               rawData.rr_10d_bid !== null || rawData.rr_10d_ask !== null ||
+               rawData.rr_15d_bid !== null || rawData.rr_15d_ask !== null ||
+               rawData.rr_25d_bid !== null || rawData.rr_25d_ask !== null ||
+               rawData.rr_35d_bid !== null || rawData.rr_35d_ask !== null ||
+               rawData.bf_5d_bid !== null || rawData.bf_5d_ask !== null ||
+               rawData.bf_10d_bid !== null || rawData.bf_10d_ask !== null ||
+               rawData.bf_15d_bid !== null || rawData.bf_15d_ask !== null ||
+               rawData.bf_25d_bid !== null || rawData.bf_25d_ask !== null ||
+               rawData.bf_35d_bid !== null || rawData.bf_35d_ask !== null
       })
       
       console.log(`Filtered ${surfaceData.length} tenors down to ${filteredData.length} with data`)
-      setData(filteredData)
+      
+      // Convert ValidatedVolatilityData back to VolatilityData for the table
+      console.log('🔍 FILTERED DATA:', filteredData)
+      console.log('🔍 FILTERED DATA LENGTH:', filteredData.length)
+      console.log('🔍 FIRST ROW:', filteredData.length > 0 ? filteredData[0] : 'no data')
+      console.log('🔍 RAW SURFACE DATA LENGTH:', surfaceData?.length || 0)
+      
+      const tableData = filteredData.map(row => {
+        const validatedRow = row as any
+        console.log('📊 Processing row:', validatedRow.tenor || 'NO TENOR', 'has raw?', !!validatedRow.raw)
+        console.log('📊 Full row data:', JSON.stringify(validatedRow, null, 2))
+        
+        // If it's ValidatedVolatilityData, extract the raw data properly
+        if (validatedRow.raw) {
+          return {
+            tenor: validatedRow.tenor,
+            ...validatedRow.raw  // Spread all the raw fields
+          }
+        }
+        // Otherwise it's already VolatilityData format
+        return row
+      })
+      
+      // ALWAYS set data, even if empty - show the reality
+      setData(tableData)
       setLastUpdate(new Date())
+      
+      // If no data, set a clear message
+      if (tableData.length === 0) {
+        console.warn('NO DATA RECEIVED FROM BLOOMBERG')
+        setError('No data available from Bloomberg for ' + selectedCurrency)
+      }
     } catch (err) {
+      console.error('🔴 ACTUAL ERROR in VolatilitySurfaceContainer:', err)
+      console.error('Stack trace:', err instanceof Error ? err.stack : 'No stack')
       setError(err instanceof Error ? err.message : 'Failed to load Bloomberg data')
       console.error('Bloomberg API Error:', err)
     } finally {
+      console.log('📍 FINALLY: Setting loading to false')
       setLoading(false)
     }
   }
@@ -223,6 +262,17 @@ export function VolatilitySurfaceContainer() {
           </button>
         </div>
       </div>
+      {error && (
+        <div style={{
+          padding: '16px',
+          backgroundColor: currentTheme.surface,
+          color: currentTheme.danger,
+          fontSize: '12px',
+          borderTop: `1px solid ${currentTheme.border}`
+        }}>
+          <strong>Error:</strong> {error}
+        </div>
+      )}
       <VolatilitySurfaceTable data={data} />
     </div>
   )

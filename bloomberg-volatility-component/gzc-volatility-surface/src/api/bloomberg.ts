@@ -1,11 +1,15 @@
 // Bloomberg API Client for Volatility Surface
 import axios from 'axios'
-import { DataValidator, ValidatedVolatilityData } from '../utils/dataValidation'
-import { BloombergErrorRecovery, CircuitBreaker } from '../utils/errorRecovery'
+import { DataValidator, ValidatedVolatilityData } from './DataValidator'
+// BloombergErrorRecovery removed - no fallbacks allowed
 
-// Use proxy in development, direct URL in production
+// Bloomberg Gateway Configuration
+// Development: Local gateway (no cache, always fresh data)
+// Production: Can be deployed gateway with Redis cache
 // @ts-ignore - Vite provides import.meta.env
-const BLOOMBERG_API_URL = import.meta.env.DEV ? '' : 'http://20.172.249.92:8080'
+const BLOOMBERG_API_URL = import.meta.env.DEV 
+  ? 'http://localhost:8000'  // Local gateway for development
+  : 'http://20.172.249.92:8080'  // Direct to VM for now, update when gateway deployed
 const API_KEY = 'test'
 
 export interface VolatilityData {
@@ -69,7 +73,7 @@ class BloombergAPIClient {
     'X-API-Key': API_KEY
   }
   
-  private circuitBreaker = new CircuitBreaker(5, 60000) // Open after 5 failures, reset after 1 minute
+  // Circuit breaker removed - fail fast approach
   private lastSuccessfulFetch: Date | null = null
 
   async healthCheck() {
@@ -98,9 +102,7 @@ class BloombergAPIClient {
   }
 
   async getReferenceData(securities: string[], fields: string[]) {
-    return this.circuitBreaker.execute(async () => {
-      const result = await BloombergErrorRecovery.withRetry(
-        async () => {
+      const result = await (async () => {
           console.log('Sending request to bloomberg/reference:', { securities, fields })
           const response = await axios.post(
             `${BLOOMBERG_API_URL}/api/bloomberg/reference`,
@@ -113,18 +115,15 @@ class BloombergAPIClient {
           console.log('Raw API response:', JSON.stringify(response.data, null, 2))
           this.lastSuccessfulFetch = new Date()
           return response.data
-        },
-        { maxRetries: 3, initialDelay: 1000 }
-      )
+        })()
       
       if (!result.success) {
-        const errorMsg = BloombergErrorRecovery.getErrorMessage(result.error)
+        const errorMsg = result.error?.message || 'Unknown Bloomberg API error'
         console.error('Reference data request failed after retries:', errorMsg)
         throw new Error(errorMsg)
       }
       
       return result.data
-    })
   }
 
   async startBloombergService() {
@@ -196,6 +195,7 @@ class BloombergAPIClient {
 
   async getVolatilitySurface(currencyPair: string = "EURUSD", tenors: string[] = STANDARD_TENORS, date?: string): Promise<ValidatedVolatilityData[]> {
     console.log('🔍 getVolatilitySurface called with:', { currencyPair, tenors: tenors.length, date })
+    console.log('Tenors requested:', tenors)
     
     // If date is provided, we need to use historical data endpoint
     if (date) {
@@ -244,33 +244,22 @@ class BloombergAPIClient {
     console.log(`Processing ${chunks.length} chunks...`)
     
     // Fetch all chunks with error recovery
-    const batchResult = await BloombergErrorRecovery.batchWithRecovery(
-      chunks,
-      1, // Process one chunk at a time
-      async (batch) => {
-        const chunk = batch[0] // Since batch size is 1
-        console.log(`Fetching chunk (${chunk.length} securities)`)
-        const response = await this.getReferenceData(chunk, ["PX_LAST", "PX_BID", "PX_ASK"])
-        
-        if (!response.success || !response.data) {
-          throw new Error('Invalid response from Bloomberg API')
-        }
-        
-        return response.data.securities_data
-      },
-      (batch, error) => {
-        console.error(`Failed to fetch chunk with ${batch[0].length} securities:`, error)
-      }
-    )
-    
-    // Collect all successful responses
-    const allResponses: SecurityData[] = []
-    for (const chunk of batchResult.successful) {
+    // Process chunks sequentially - NO ERROR RECOVERY, FAIL FAST
+    const batchResult: any[] = []
+    for (const chunk of chunks) {
+      console.log(`Fetching chunk (${chunk.length} securities)`)
       const response = await this.getReferenceData(chunk, ["PX_LAST", "PX_BID", "PX_ASK"])
-      if (response.success && response.data) {
-        allResponses.push(...response.data.securities_data)
+      
+      // getReferenceData returns the data directly, not wrapped in success/data
+      if (!response || !response.securities_data) {
+        throw new Error('Invalid response from Bloomberg API - no fallback allowed')
       }
+      
+      batchResult.push(...response.securities_data)
     }
+    
+    // Use collected responses
+    const allResponses: SecurityData[] = batchResult
     
     // Validate the security data
     const { valid: validSecurities, summary } = DataValidator.validateSecurityData(allResponses)
@@ -395,14 +384,18 @@ class BloombergAPIClient {
     for (const tenor of tenorsToProcess) {
       const data = tenorDataMap.get(tenor)
       if (data) {
+        console.log(`🔍 VALIDATING TENOR ${tenor}:`, JSON.stringify(data, null, 2))
         const validatedData = DataValidator.validateVolatilityData(data, timestamp)
-        validatedResults.push(validatedData)
+        console.log(`✅ VALIDATED RESULT for ${tenor}:`, validatedData ? 'SUCCESS' : 'NULL')
+        if (validatedData) {
+          console.log(`✅ VALIDATED DATA:`, JSON.stringify(validatedData, null, 2))
+          validatedResults.push(validatedData)
+        } else {
+          console.error(`❌ VALIDATION FAILED for ${tenor}`)
+        }
       } else {
-        // Create fallback data for missing tenors
-        const fallbackData = BloombergErrorRecovery.createFallbackData(tenor)
-        const validatedData = DataValidator.validateVolatilityData(fallbackData, timestamp)
-        validatedData.quality.warnings.push('No data received from Bloomberg')
-        validatedResults.push(validatedData)
+        // Skip tenors with no data - this is normal for some tenors
+        console.warn(`No Bloomberg data for tenor ${tenor} - skipping`)
       }
     }
     
@@ -433,7 +426,7 @@ class BloombergAPIClient {
   } {
     return {
       lastSuccessfulFetch: this.lastSuccessfulFetch,
-      circuitBreakerState: this.circuitBreaker.getState()
+      circuitBreakerState: 'DISABLED'
     }
   }
 }

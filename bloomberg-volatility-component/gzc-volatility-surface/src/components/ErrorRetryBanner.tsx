@@ -1,5 +1,5 @@
 import { useTheme } from '../contexts/ThemeContext'
-import { BloombergErrorRecovery } from '../utils/errorRecovery'
+// BloombergErrorRecovery removed - no fallbacks allowed
 
 interface ErrorRetryBannerProps {
   error: Error | string
@@ -11,12 +11,10 @@ export function ErrorRetryBanner({ error, onRetry, retrying = false }: ErrorRetr
   const { currentTheme } = useTheme()
   
   const errorMessage = error instanceof Error 
-    ? BloombergErrorRecovery.getErrorMessage(error)
+    ? error.message
     : error
     
-  const isRetryable = error instanceof Error 
-    ? BloombergErrorRecovery.isRetryableError(error)
-    : true
+  const isRetryable = true // Always allow retry
   
   return (
     <div style={{

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Plot from 'react-plotly.js'
 import { useTheme } from '../contexts/ThemeContext'
-import { ValidatedVolatilityData } from '../utils/dataValidation'
+import { ValidatedVolatilityData } from '../api/DataValidator'
 
 interface PlotlyVolatilitySurfaceProps {
   surfaceData: ValidatedVolatilityData[]
@@ -36,7 +36,7 @@ export function PlotlyVolatilitySurface({ surfaceData, selectedPair }: PlotlyVol
       tenorLabels.push(tenor.tenor)
       
       // Get mid values
-      const atmMid = tenor.atm_bid && tenor.atm_ask ? (tenor.atm_bid + tenor.atm_ask) / 2 : 0
+      const atmMid = tenor.raw?.atm_bid && tenor.raw?.atm_ask ? (tenor.raw.atm_bid + tenor.raw.atm_ask) / 2 : 0
       
       // Process each delta point
       deltaPoints.forEach(delta => {
@@ -58,24 +58,24 @@ export function PlotlyVolatilitySurface({ surfaceData, selectedPair }: PlotlyVol
         
         switch(deltaKey) {
           case 5:
-            rr = tenor.rr_5d_bid && tenor.rr_5d_ask ? (tenor.rr_5d_bid + tenor.rr_5d_ask) / 2 : 0
-            bf = tenor.bf_5d_bid && tenor.bf_5d_ask ? (tenor.bf_5d_bid + tenor.bf_5d_ask) / 2 : 0
+            rr = tenor.raw?.rr_5d_bid && tenor.raw?.rr_5d_ask ? (tenor.raw.rr_5d_bid + tenor.raw.rr_5d_ask) / 2 : 0
+            bf = tenor.raw?.bf_5d_bid && tenor.raw?.bf_5d_ask ? (tenor.raw.bf_5d_bid + tenor.raw.bf_5d_ask) / 2 : 0
             break
           case 10:
-            rr = tenor.rr_10d_bid && tenor.rr_10d_ask ? (tenor.rr_10d_bid + tenor.rr_10d_ask) / 2 : 0
-            bf = tenor.bf_10d_bid && tenor.bf_10d_ask ? (tenor.bf_10d_bid + tenor.bf_10d_ask) / 2 : 0
+            rr = tenor.raw?.rr_10d_bid && tenor.raw?.rr_10d_ask ? (tenor.raw.rr_10d_bid + tenor.raw.rr_10d_ask) / 2 : 0
+            bf = tenor.raw?.bf_10d_bid && tenor.raw?.bf_10d_ask ? (tenor.raw.bf_10d_bid + tenor.raw.bf_10d_ask) / 2 : 0
             break
           case 15:
-            rr = tenor.rr_15d_bid && tenor.rr_15d_ask ? (tenor.rr_15d_bid + tenor.rr_15d_ask) / 2 : 0
-            bf = tenor.bf_15d_bid && tenor.bf_15d_ask ? (tenor.bf_15d_bid + tenor.bf_15d_ask) / 2 : 0
+            rr = tenor.raw?.rr_15d_bid && tenor.raw?.rr_15d_ask ? (tenor.raw.rr_15d_bid + tenor.raw.rr_15d_ask) / 2 : 0
+            bf = tenor.raw?.bf_15d_bid && tenor.raw?.bf_15d_ask ? (tenor.raw.bf_15d_bid + tenor.raw.bf_15d_ask) / 2 : 0
             break
           case 25:
-            rr = tenor.rr_25d_bid && tenor.rr_25d_ask ? (tenor.rr_25d_bid + tenor.rr_25d_ask) / 2 : 0
-            bf = tenor.bf_25d_bid && tenor.bf_25d_ask ? (tenor.bf_25d_bid + tenor.bf_25d_ask) / 2 : 0
+            rr = tenor.raw?.rr_25d_bid && tenor.raw?.rr_25d_ask ? (tenor.raw.rr_25d_bid + tenor.raw.rr_25d_ask) / 2 : 0
+            bf = tenor.raw?.bf_25d_bid && tenor.raw?.bf_25d_ask ? (tenor.raw.bf_25d_bid + tenor.raw.bf_25d_ask) / 2 : 0
             break
           case 35:
-            rr = tenor.rr_35d_bid && tenor.rr_35d_ask ? (tenor.rr_35d_bid + tenor.rr_35d_ask) / 2 : 0
-            bf = tenor.bf_35d_bid && tenor.bf_35d_ask ? (tenor.bf_35d_bid + tenor.bf_35d_ask) / 2 : 0
+            rr = tenor.raw?.rr_35d_bid && tenor.raw?.rr_35d_ask ? (tenor.raw.rr_35d_bid + tenor.raw.rr_35d_ask) / 2 : 0
+            bf = tenor.raw?.bf_35d_bid && tenor.raw?.bf_35d_ask ? (tenor.raw.bf_35d_bid + tenor.raw.bf_35d_ask) / 2 : 0
             break
         }
         
@@ -120,7 +120,12 @@ export function PlotlyVolatilitySurface({ surfaceData, selectedPair }: PlotlyVol
         x: -10000,
         y: 10000,
         z: 5000
-      }
+      },
+      hovertemplate: 
+        '<b>%{y}</b><br>' +
+        'Strike: <b>%{x}</b><br>' +
+        'IV: <b>%{z:.2f}%</b><br>' +
+        '<extra></extra>'
     }]
 
     const layout = {

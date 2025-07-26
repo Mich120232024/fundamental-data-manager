@@ -3,8 +3,10 @@ import { useTheme } from '../contexts/ThemeContext'
 import { VolatilitySurfaceContainer } from './VolatilitySurfaceContainer'
 import { VolatilityHistoricalTable } from './VolatilityHistoricalTable'
 import { VolatilityAnalysisTab } from './VolatilityAnalysisTab'
+import { RateCurvesTab } from './RateCurvesTabD3'
+import { OptionsPricingTab } from './OptionsPricingTab'
 
-type TabType = 'surface' | 'historical' | 'analysis'
+type TabType = 'surface' | 'historical' | 'analysis' | 'ratecurves' | 'options'
 
 export function MainAppContainer() {
   const { currentTheme } = useTheme()
@@ -73,6 +75,38 @@ export function MainAppContainer() {
         >
           Volatility Analysis
         </button>
+        <button
+          onClick={() => setActiveTab('ratecurves')}
+          style={{
+            backgroundColor: 'transparent',
+            border: 'none',
+            padding: '16px 0',
+            color: activeTab === 'ratecurves' ? currentTheme.primary : currentTheme.textSecondary,
+            fontSize: '14px',
+            fontWeight: '600',
+            cursor: 'pointer',
+            borderBottom: activeTab === 'ratecurves' ? `2px solid ${currentTheme.primary}` : '2px solid transparent',
+            transition: 'all 0.2s ease'
+          }}
+        >
+          Rate Curves
+        </button>
+        <button
+          onClick={() => setActiveTab('options')}
+          style={{
+            backgroundColor: 'transparent',
+            border: 'none',
+            padding: '16px 0',
+            color: activeTab === 'options' ? currentTheme.primary : currentTheme.textSecondary,
+            fontSize: '14px',
+            fontWeight: '600',
+            cursor: 'pointer',
+            borderBottom: activeTab === 'options' ? `2px solid ${currentTheme.primary}` : '2px solid transparent',
+            transition: 'all 0.2s ease'
+          }}
+        >
+          Options Pricing
+        </button>
       </div>
       
       {/* Tab Content */}
@@ -83,6 +117,10 @@ export function MainAppContainer() {
           <VolatilityHistoricalTable />
         ) : activeTab === 'analysis' ? (
           <VolatilityAnalysisTab />
+        ) : activeTab === 'ratecurves' ? (
+          <RateCurvesTab />
+        ) : activeTab === 'options' ? (
+          <OptionsPricingTab />
         ) : null}
       </div>
     </div>

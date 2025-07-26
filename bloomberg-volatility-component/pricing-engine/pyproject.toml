@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "fx-options-pricing-engine"
+version = "0.1.0"
+description = "FX Options pricing engine with Bloomberg data integration"
+authors = ["GZC Intel Team"]
+readme = "README.md"
+packages = [{include = "pricing_engine"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.109.0"
+uvicorn = {extras = ["standard"], version = "^0.27.0"}
+pydantic = "^2.5.3"
+numpy = "^1.26.3"
+scipy = "^1.11.4"
+pandas = "^2.1.4"
+httpx = "^0.26.0"
+python-multipart = "^0.0.6"
+prometheus-client = "^0.19.0"
+quantlib = "^1.39"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.4"
+pytest-asyncio = "^0.23.3"
+black = "^23.12.1"
+ruff = "^0.1.11"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+
+[tool.ruff]
+select = ["E", "F", "I"]
+line-length = 88

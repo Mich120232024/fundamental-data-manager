@@ -164,9 +164,17 @@ npm run build
 - Ensure selected date has market data
 - Check console logs for API responses
 
-## Recent Updates (2025-01-21)
+## Recent Updates
 
-### Morning Session
+### 2025-01-24 - Debug Fixes
+1. Fixed duplicate Bloomberg status indicators (removed hardcoded status bar)
+2. Removed Trading Analytics tab containing hardcoded values
+3. Fixed Bloomberg API health check in development mode
+4. Added cache-busting headers to prevent stale connection status
+5. All three tabs now working with real Bloomberg data
+- See [Checkpoint Documentation](./checkpoint/CHECKPOINT_2025_01_24_DEBUG_FIXES.md)
+
+### 2025-01-21 - Morning Session
 1. Fixed substring matching bug that caused data misalignment
 2. Added filtering to remove empty tenor rows
 3. Improved historical data handling
@@ -174,7 +182,7 @@ npm run build
 5. Documented 1D/2D/3D ticker investigation results
 6. Enhanced error handling and logging
 
-### Afternoon Session - Historical Analysis Feature
+### 2025-01-21 - Afternoon Session - Historical Analysis Feature
 1. Added new Historical Analysis tab with time series table
 2. Implemented date range selector (7 days to 2 years)
 3. Added tenor-specific historical view
