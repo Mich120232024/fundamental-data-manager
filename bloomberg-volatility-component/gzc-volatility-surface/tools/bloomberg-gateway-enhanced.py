@@ -372,6 +372,80 @@ async def bloomberg_historical_proxy(request: Dict[str, Any]):
         logger.error(f"Bloomberg historical proxy error: {e}")
         raise HTTPException(status_code=503, detail=str(e))
 
+# Trade Synchronization Endpoints
+@app.post("/api/trades/sync-check")
+async def check_trade_sync():
+    """Check if database synchronization is needed"""
+    import subprocess
+    import os
+    
+    try:
+        # Set PostgreSQL password from environment
+        env = os.environ.copy()
+        if 'POSTGRES_PASSWORD' not in env:
+            logger.warning("POSTGRES_PASSWORD not set - using placeholder")
+            env['POSTGRES_PASSWORD'] = 'placeholder'
+        
+        # Run sync check script
+        result = subprocess.run([
+            'python3', 
+            '/Users/mikaeleage/GZC Intel Workspace/scripts/database_analysis/check_and_sync_trades.py'
+        ], 
+        capture_output=True, 
+        text=True, 
+        env=env,
+        timeout=30
+        )
+        
+        if result.returncode == 0:
+            return json.loads(result.stdout)
+        else:
+            logger.error(f"Sync check failed: {result.stderr}")
+            return {"status": "error", "error": result.stderr}
+            
+    except subprocess.TimeoutExpired:
+        return {"status": "error", "error": "Sync check timed out"}
+    except Exception as e:
+        logger.error(f"Sync check error: {e}")
+        return {"status": "error", "error": str(e)}
+
+@app.post("/api/trades/perform-sync")
+async def perform_trade_sync():
+    """Actually perform the trade synchronization"""
+    import subprocess
+    import os
+    
+    try:
+        # Set PostgreSQL password from environment
+        env = os.environ.copy()
+        if 'POSTGRES_PASSWORD' not in env:
+            logger.warning("POSTGRES_PASSWORD not set - using placeholder")
+            env['POSTGRES_PASSWORD'] = 'placeholder'
+        
+        # Run sync with --sync flag
+        result = subprocess.run([
+            'python3', 
+            '/Users/mikaeleage/GZC Intel Workspace/scripts/database_analysis/check_and_sync_trades.py',
+            '--sync'
+        ], 
+        capture_output=True, 
+        text=True, 
+        env=env,
+        timeout=120  # Longer timeout for actual sync
+        )
+        
+        if result.returncode == 0:
+            return json.loads(result.stdout)
+        else:
+            logger.error(f"Trade sync failed: {result.stderr}")
+            return {"status": "error", "error": result.stderr}
+            
+    except subprocess.TimeoutExpired:
+        return {"status": "error", "error": "Trade sync timed out"}
+    except Exception as e:
+        logger.error(f"Trade sync error: {e}")
+        return {"status": "error", "error": str(e)}
+
 # Container/Kubernetes specific endpoints
 @app.get("/ready")
 async def readiness():

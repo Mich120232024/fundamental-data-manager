@@ -23,9 +23,11 @@ interface Stats {
 
 function App() {
   const [apis, setApis] = useState<APIEntry[]>([])
+  const [inventory, setInventory] = useState<any[]>([])
   const [stats, setStats] = useState<Stats | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [activeTab, setActiveTab] = useState<'catalog' | 'inventory'>('catalog')
 
   useEffect(() => {
     loadData()
@@ -36,19 +38,22 @@ function App() {
       setLoading(true)
       setError(null)
       
-      const [catalogRes, statsRes] = await Promise.all([
+      const [catalogRes, inventoryRes, statsRes] = await Promise.all([
         fetch(`${API_BASE}/api/catalog`),
+        fetch(`${API_BASE}/api/inventory`),
         fetch(`${API_BASE}/api/stats`)
       ])
       
-      if (!catalogRes.ok || !statsRes.ok) {
+      if (!catalogRes.ok || !inventoryRes.ok || !statsRes.ok) {
         throw new Error('Failed to fetch data')
       }
       
       const catalogData = await catalogRes.json()
+      const inventoryData = await inventoryRes.json()
       const statsData = await statsRes.json()
       
       setApis(catalogData)
+      setInventory(inventoryData)
       setStats(statsData)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load data')
@@ -153,7 +158,45 @@ function App() {
       </header>
 
       <div style={containerStyle}>
-        {stats && (
+        {/* Tab Navigation */}
+        <div style={{
+          display: 'flex',
+          borderBottom: '1px solid #3a3632',
+          marginBottom: '20px'
+        }}>
+          <button
+            onClick={() => setActiveTab('catalog')}
+            style={{
+              padding: '12px 24px',
+              backgroundColor: activeTab === 'catalog' ? '#7A9E65' : 'transparent',
+              color: activeTab === 'catalog' ? '#f8f6f0' : '#c8c0b0',
+              border: 'none',
+              borderBottom: activeTab === 'catalog' ? '2px solid #7A9E65' : '2px solid transparent',
+              cursor: 'pointer',
+              fontSize: '14px',
+              fontWeight: '500'
+            }}
+          >
+            API Catalog ({apis.length})
+          </button>
+          <button
+            onClick={() => setActiveTab('inventory')}
+            style={{
+              padding: '12px 24px',
+              backgroundColor: activeTab === 'inventory' ? '#7A9E65' : 'transparent',
+              color: activeTab === 'inventory' ? '#f8f6f0' : '#c8c0b0',
+              border: 'none',
+              borderBottom: activeTab === 'inventory' ? '2px solid #7A9E65' : '2px solid transparent',
+              cursor: 'pointer',
+              fontSize: '14px',
+              fontWeight: '500'
+            }}
+          >
+            Full Application Registry ({inventory.length})
+          </button>
+        </div>
+
+        {stats && activeTab === 'catalog' && (
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
@@ -182,12 +225,13 @@ function App() {
           </div>
         )}
 
-        <div style={{marginTop: '24px'}}>
-          <h3 style={{fontSize: '14px', fontWeight: '600', color: '#c8c0b0', marginBottom: '16px'}}>
-            API Catalog • {apis.length} Economic Data APIs
-          </h3>
-          <div style={gridStyle}>
-            {apis.map((api) => (
+        {activeTab === 'catalog' && (
+          <div style={{marginTop: '24px'}}>
+            <h3 style={{fontSize: '14px', fontWeight: '600', color: '#c8c0b0', marginBottom: '16px'}}>
+              API Catalog • {apis.length} Economic Data APIs
+            </h3>
+            <div style={gridStyle}>
+              {apis.map((api) => (
               <div key={api.id} style={cardStyle}>
                 <div style={{marginBottom: '12px', borderBottom: '1px solid #3a3632', paddingBottom: '8px'}}>
                   <h4 style={{margin: 0, fontSize: '14px', fontWeight: '600', color: '#95BD78'}}>
@@ -244,9 +288,69 @@ function App() {
                   </div>
                 </div>
               </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        )}
+
+        {activeTab === 'inventory' && (
+          <div style={{marginTop: '24px'}}>
+            <h3 style={{fontSize: '14px', fontWeight: '600', color: '#c8c0b0', marginBottom: '16px'}}>
+              Full Application Registry • {inventory.length} Applications
+            </h3>
+            <div style={gridStyle}>
+              {inventory.map((item, index) => (
+                <div key={item.id || index} style={cardStyle}>
+                  <div style={{marginBottom: '12px', borderBottom: '1px solid #3a3632', paddingBottom: '8px'}}>
+                    <h4 style={{margin: 0, fontSize: '14px', fontWeight: '600', color: '#95BD78'}}>
+                      {item.name || item.title || item.id || `Application ${index + 1}`}
+                    </h4>
+                    <div style={{display: 'flex', gap: '12px', marginTop: '4px'}}>
+                      {item.catalog_type && (
+                        <div style={{fontSize: '11px', color: '#9a9488'}}>
+                          {item.catalog_type}
+                        </div>
+                      )}
+                      {item.catalog_type && item.classification && (
+                        <div style={{fontSize: '11px', color: '#9a9488'}}>•</div>
+                      )}
+                      {item.classification && (
+                        <div style={{fontSize: '11px', color: '#9a9488'}}>
+                          {item.classification}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  
+                  <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(2, 1fr)',
+                    gap: '12px',
+                    textAlign: 'center'
+                  }}>
+                    <div>
+                      <div style={{fontSize: '18px', fontWeight: '600', color: '#7A9E65'}}>
+                        {item.version || 'N/A'}
+                      </div>
+                      <div style={{fontSize: '10px', color: '#9a9488', textTransform: 'uppercase', letterSpacing: '0.5px'}}>
+                        Version
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <div style={{fontSize: '18px', fontWeight: '600', color: '#8BB4DD'}}>
+                        {item._ts ? new Date(item._ts * 1000).getFullYear() : 'N/A'}
+                      </div>
+                      <div style={{fontSize: '10px', color: '#9a9488', textTransform: 'uppercase', letterSpacing: '0.5px'}}>
+                        Updated
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )

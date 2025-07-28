@@ -5,8 +5,9 @@ import { VolatilityHistoricalTable } from './VolatilityHistoricalTable'
 import { VolatilityAnalysisTab } from './VolatilityAnalysisTab'
 import { RateCurvesTab } from './RateCurvesTabD3'
 import { OptionsPricingTab } from './OptionsPricingTab'
+import { PortfolioTab } from './PortfolioTab'
 
-type TabType = 'surface' | 'historical' | 'analysis' | 'ratecurves' | 'options'
+type TabType = 'surface' | 'historical' | 'analysis' | 'ratecurves' | 'options' | 'portfolio'
 
 export function MainAppContainer() {
   const { currentTheme } = useTheme()
@@ -107,6 +108,22 @@ export function MainAppContainer() {
         >
           Options Pricing
         </button>
+        <button
+          onClick={() => setActiveTab('portfolio')}
+          style={{
+            backgroundColor: 'transparent',
+            border: 'none',
+            padding: '16px 0',
+            color: activeTab === 'portfolio' ? currentTheme.primary : currentTheme.textSecondary,
+            fontSize: '14px',
+            fontWeight: '600',
+            cursor: 'pointer',
+            borderBottom: activeTab === 'portfolio' ? `2px solid ${currentTheme.primary}` : '2px solid transparent',
+            transition: 'all 0.2s ease'
+          }}
+        >
+          FX Portfolio
+        </button>
       </div>
       
       {/* Tab Content */}
@@ -121,6 +138,8 @@ export function MainAppContainer() {
           <RateCurvesTab />
         ) : activeTab === 'options' ? (
           <OptionsPricingTab />
+        ) : activeTab === 'portfolio' ? (
+          <PortfolioTab />
         ) : null}
       </div>
     </div>

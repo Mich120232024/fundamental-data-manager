@@ -13,6 +13,10 @@ from pydantic import BaseModel
 import uvicorn
 from azure.cosmos import CosmosClient
 from datetime import datetime
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Configuration
 API_PORT = 8850  # Dedicated port for this service
@@ -66,6 +70,75 @@ async def get_api_catalog():
         return items
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to fetch API catalog: {str(e)}")
+
+@app.get("/api/databases")
+async def list_databases():
+    """List all databases and containers in Cosmos DB"""
+    try:
+        databases = []
+        for db in cosmos_client.list_databases():
+            db_name = db['id']
+            db_client = cosmos_client.get_database_client(db_name)
+            containers = []
+            try:
+                for container in db_client.list_containers():
+                    containers.append(container['id'])
+            except Exception as e:
+                containers = [f"Error: {str(e)}"]
+            
+            databases.append({
+                "database": db_name,
+                "containers": containers
+            })
+        
+        return databases
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to list databases: {str(e)}")
+
+@app.get("/api/inventory")
+async def get_api_inventory():
+    """Get all API entries from the larger api_inventory container"""
+    try:
+        database = cosmos_client.get_database_client("data-collection-db")
+        container = database.get_container_client("api_inventory")
+        
+        items = list(container.query_items(
+            query="SELECT * FROM c",
+            enable_cross_partition_query=True
+        ))
+        
+        return items
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to fetch API inventory: {str(e)}")
+
+@app.get("/api/container/{container_name}")
+async def get_container_data(container_name: str):
+    """Get data from any container in data-collection-db"""
+    try:
+        database = cosmos_client.get_database_client("data-collection-db")
+        container = database.get_container_client(container_name)
+        
+        # Get count first
+        count_items = list(container.query_items(
+            query="SELECT VALUE COUNT(1) FROM c",
+            enable_cross_partition_query=True
+        ))
+        count = count_items[0] if count_items else 0
+        
+        # Get sample items (limit to first 100 for performance)
+        items = list(container.query_items(
+            query="SELECT * FROM c OFFSET 0 LIMIT 100",
+            enable_cross_partition_query=True
+        ))
+        
+        return {
+            "container": container_name,
+            "total_count": count,
+            "sample_items": items,
+            "showing": len(items)
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to fetch from {container_name}: {str(e)}")
 
 @app.get("/api/stats")
 async def get_catalog_stats():
