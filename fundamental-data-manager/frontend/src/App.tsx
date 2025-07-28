@@ -81,8 +81,8 @@ function App() {
   }
 
   const containerStyle: React.CSSProperties = {
-    padding: '20px',
-    maxWidth: '1600px',
+    padding: '16px 24px',
+    maxWidth: '1800px',
     margin: '0 auto'
   }
 
@@ -96,9 +96,9 @@ function App() {
 
   const gridStyle: React.CSSProperties = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
-    gap: '16px',
-    marginTop: '16px'
+    gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+    gap: '12px',
+    marginTop: '12px'
   }
 
   if (loading) {
@@ -157,51 +157,59 @@ function App() {
         </h1>
       </header>
 
+      {/* Bloomberg-style Tab Navigation - integrated with header */}
+      <div style={{
+        backgroundColor: '#2A2A2A',
+        borderBottom: '1px solid #3a3632',
+        padding: '0 24px',
+        display: 'flex',
+        gap: '32px',
+        overflowX: 'auto'
+      }}>
+        <button
+          onClick={() => setActiveTab('catalog')}
+          style={{
+            backgroundColor: 'transparent',
+            border: 'none',
+            padding: '16px 0',
+            color: activeTab === 'catalog' ? '#7A9E65' : '#c8c0b0',
+            fontSize: '14px',
+            fontWeight: '600',
+            cursor: 'pointer',
+            borderBottom: activeTab === 'catalog' ? '2px solid #7A9E65' : '2px solid transparent',
+            transition: 'all 0.2s ease',
+            whiteSpace: 'nowrap'
+          }}
+        >
+          API Catalog ({apis.length})
+        </button>
+        <button
+          onClick={() => setActiveTab('inventory')}
+          style={{
+            backgroundColor: 'transparent',
+            border: 'none',
+            padding: '16px 0',
+            color: activeTab === 'inventory' ? '#7A9E65' : '#c8c0b0',
+            fontSize: '14px',
+            fontWeight: '600',
+            cursor: 'pointer',
+            borderBottom: activeTab === 'inventory' ? '2px solid #7A9E65' : '2px solid transparent',
+            transition: 'all 0.2s ease',
+            whiteSpace: 'nowrap'
+          }}
+        >
+          Full Application Registry ({inventory.length})
+        </button>
+      </div>
+
       <div style={containerStyle}>
-        {/* Tab Navigation */}
-        <div style={{
-          display: 'flex',
-          borderBottom: '1px solid #3a3632',
-          marginBottom: '20px'
-        }}>
-          <button
-            onClick={() => setActiveTab('catalog')}
-            style={{
-              padding: '12px 24px',
-              backgroundColor: activeTab === 'catalog' ? '#7A9E65' : 'transparent',
-              color: activeTab === 'catalog' ? '#f8f6f0' : '#c8c0b0',
-              border: 'none',
-              borderBottom: activeTab === 'catalog' ? '2px solid #7A9E65' : '2px solid transparent',
-              cursor: 'pointer',
-              fontSize: '14px',
-              fontWeight: '500'
-            }}
-          >
-            API Catalog ({apis.length})
-          </button>
-          <button
-            onClick={() => setActiveTab('inventory')}
-            style={{
-              padding: '12px 24px',
-              backgroundColor: activeTab === 'inventory' ? '#7A9E65' : 'transparent',
-              color: activeTab === 'inventory' ? '#f8f6f0' : '#c8c0b0',
-              border: 'none',
-              borderBottom: activeTab === 'inventory' ? '2px solid #7A9E65' : '2px solid transparent',
-              cursor: 'pointer',
-              fontSize: '14px',
-              fontWeight: '500'
-            }}
-          >
-            Full Application Registry ({inventory.length})
-          </button>
-        </div>
 
         {stats && activeTab === 'catalog' && (
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
             gap: '12px',
-            marginBottom: '24px'
+            marginBottom: '16px'
           }}>
             <div style={{...cardStyle, padding: '12px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
               <div style={{fontSize: '12px', color: '#c8c0b0'}}>Total APIs</div>
@@ -225,10 +233,39 @@ function App() {
           </div>
         )}
 
+        {activeTab === 'inventory' && (
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '12px',
+            marginBottom: '16px'
+          }}>
+            <div style={{...cardStyle, padding: '12px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+              <div style={{fontSize: '12px', color: '#c8c0b0'}}>Total Applications</div>
+              <div style={{fontSize: '24px', fontWeight: '600', color: '#7A9E65'}}>{inventory.length}</div>
+            </div>
+            
+            <div style={{...cardStyle, padding: '12px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+              <div style={{fontSize: '12px', color: '#c8c0b0'}}>Registry Size</div>
+              <div style={{fontSize: '24px', fontWeight: '600', color: '#95BD78'}}>Full</div>
+            </div>
+            
+            <div style={{...cardStyle, padding: '12px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+              <div style={{fontSize: '12px', color: '#c8c0b0'}}>Source</div>
+              <div style={{fontSize: '24px', fontWeight: '600', color: '#8BB4DD'}}>Cosmos DB</div>
+            </div>
+            
+            <div style={{...cardStyle, padding: '12px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+              <div style={{fontSize: '12px', color: '#c8c0b0'}}>Container</div>
+              <div style={{fontSize: '14px', fontWeight: '600', color: '#c8c0b0'}}>api_inventory</div>
+            </div>
+          </div>
+        )}
+
         {activeTab === 'catalog' && (
-          <div style={{marginTop: '24px'}}>
-            <h3 style={{fontSize: '14px', fontWeight: '600', color: '#c8c0b0', marginBottom: '16px'}}>
-              API Catalog • {apis.length} Economic Data APIs
+          <div>
+            <h3 style={{fontSize: '13px', fontWeight: '600', color: '#c8c0b0', marginBottom: '12px', marginTop: '8px'}}>
+              Economic Data APIs
             </h3>
             <div style={gridStyle}>
               {apis.map((api) => (
@@ -294,9 +331,9 @@ function App() {
         )}
 
         {activeTab === 'inventory' && (
-          <div style={{marginTop: '24px'}}>
-            <h3 style={{fontSize: '14px', fontWeight: '600', color: '#c8c0b0', marginBottom: '16px'}}>
-              Full Application Registry • {inventory.length} Applications
+          <div>
+            <h3 style={{fontSize: '13px', fontWeight: '600', color: '#c8c0b0', marginBottom: '12px', marginTop: '8px'}}>
+              Application Registry • {inventory.length} Items
             </h3>
             <div style={gridStyle}>
               {inventory.map((item, index) => (
