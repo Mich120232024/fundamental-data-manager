@@ -1,0 +1,30 @@
+{
+  "name": "volatility-agent",
+  "version": "1.0.0",
+  "description": "Autonomous FX Volatility Trading Agent with LLM Reasoning",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "agent": "tsx src/agent.ts"
+  },
+  "keywords": [
+    "volatility",
+    "trading",
+    "agent",
+    "claude",
+    "bloomberg"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.57.0",
+    "@types/node": "^24.1.0",
+    "axios": "^1.11.0",
+    "dotenv": "^17.2.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,12 +1,12 @@
 import { Outlet } from 'react-router-dom'
-import Sidebar from '../Sidebar'
-import Header from '../Header'
+// import Sidebar from '../Sidebar'  // Component doesn't exist
+import { Header } from '../Header'
 
 const Layout = () => {
   return (
     <div className="flex h-screen bg-background">
       {/* Sidebar */}
-      <Sidebar />
+      {/* <Sidebar /> Component doesn't exist */}
       
       {/* Main Content */}
       <div className="flex-1 flex flex-col overflow-hidden">

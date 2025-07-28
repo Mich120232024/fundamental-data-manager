@@ -725,8 +725,9 @@ export function VolatilityAnalysisTab() {
     // Show all available delta points
     const availableDeltas = [...new Set(allSmilePoints.map(p => p.delta))].sort((a, b) => a - b)
     
-    // Estimate forward price based on currency pair
-    // In production, fetch actual spot rates from Bloomberg
+    // WARNING: Using estimated spot rates for strike visualization only
+    // These are NOT real-time Bloomberg rates - for display purposes only
+    // TODO: Fetch actual spot rates from Bloomberg API
     const getEstimatedSpot = (pair: string) => {
       const spotRates: Record<string, number> = {
         // Major USD pairs
@@ -772,13 +773,8 @@ export function VolatilityAnalysisTab() {
     
     // Calculate strikes using simplified Black-Scholes delta-to-strike conversion
     const calculateStrike = (delta: number, vol: number) => {
-      // Convert tenor to years (rough approximation)
-      const tenorToYears: Record<string, number> = {
-        'ON': 1/365, '1W': 7/365, '2W': 14/365, '1M': 30/365, 
-        '2M': 60/365, '3M': 90/365, '6M': 180/365, '9M': 270/365, 
-        '1Y': 1, '18M': 1.5
-      }
-      const timeToExpiry = tenorToYears[selectedTenor] || 30/365
+      // Use the existing tenorToYears function
+      const timeToExpiry = tenorToYears(selectedTenor)
       
       // Simplified strike calculation: K = F * exp(-N^(-1)(delta) * vol * sqrt(T))
       // Where N^(-1) is inverse normal CDF
@@ -854,6 +850,15 @@ export function VolatilityAnalysisTab() {
       .style("font-size", "12px")
       .style("fill", currentTheme.textSecondary)
       .text("Delta")
+
+    // Add warning about estimated strikes
+    g.append("text")
+      .attr("transform", `translate(${width - 10}, 10)`)
+      .style("text-anchor", "end")
+      .style("font-size", "10px")
+      .style("fill", currentTheme.warning || '#ff9800')
+      .style("font-style", "italic")
+      .text("⚠️ Strike prices are estimates")
 
   }, [surfaceData, selectedTenor, currentTheme, visibleTenorsForSmile, visibleDeltasForTerm, selectedPair])
 

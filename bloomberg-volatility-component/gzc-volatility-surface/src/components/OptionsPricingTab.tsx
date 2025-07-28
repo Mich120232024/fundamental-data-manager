@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useTheme } from '../contexts/ThemeContext'
+import { garmanKohlhagen, calculateForward, type FXOptionResult } from '../utils/garmanKohlhagen'
 
 interface OptionParameters {
   currencyPair: string
@@ -9,12 +10,7 @@ interface OptionParameters {
   notional: number
 }
 
-interface OptionPrice {
-  premium: number
-  delta: number
-  gamma: number
-  vega: number
-  theta: number
+interface OptionPrice extends FXOptionResult {
   impliedVol: number
 }
 
@@ -39,99 +35,11 @@ export function OptionsPricingTab() {
   const [spotRate, setSpotRate] = useState<number | null>(null)
   const [forwardRate, setForwardRate] = useState<number | null>(null)
   const [forwardPoints, setForwardPoints] = useState<number | null>(null)
-  const [volatility, setVoltaility] = useState<number | null>(null)
+  const [volatility, setVolatility] = useState<number | null>(null)
   const [riskFreeRate, setRiskFreeRate] = useState<number | null>(null)
   const [eurRate, setEurRate] = useState<number | null>(null)
   const [usdRate, setUsdRate] = useState<number | null>(null)
   
-  // Garman-Kohlhagen pricing function for FX options
-  const calculateOptionPrice = (
-    F: number, // Forward price (not spot!)
-    K: number, // Strike price
-    T: number, // Time to expiry (years)
-    rDomestic: number, // Domestic risk-free rate (quote currency)
-    vol: number, // Volatility
-    optType: 'call' | 'put'
-  ): OptionPrice => {
-    // Convert percentage inputs
-    const rDecimal = rDomestic / 100
-    const volDecimal = vol / 100
-    
-    // For FX options, we use forward price directly
-    // Garman-Kohlhagen model: d1 uses F instead of S
-    const d1 = (Math.log(F / K) + (0.5 * volDecimal * volDecimal) * T) / (volDecimal * Math.sqrt(T))
-    const d2 = d1 - volDecimal * Math.sqrt(T)
-    
-    // Standard normal CDF - using accurate approximation
-    const normCDF = (x: number) => {
-      // Abramowitz and Stegun approximation
-      const a1 =  0.254829592
-      const a2 = -0.284496736
-      const a3 =  1.421413741
-      const a4 = -1.453152027
-      const a5 =  1.061405429
-      const p  =  0.3275911
-      
-      const sign = x >= 0 ? 1 : -1
-      x = Math.abs(x) / Math.sqrt(2)
-      
-      const t = 1.0 / (1.0 + p * x)
-      const y = 1.0 - (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1) * t * Math.exp(-x * x)
-      
-      return 0.5 * (1.0 + sign * y)
-    }
-    
-    const Nd1 = normCDF(d1)
-    const Nd2 = normCDF(d2)
-    const nd1 = Math.exp(-0.5 * d1 * d1) / Math.sqrt(2 * Math.PI)
-    
-    let premium: number
-    let delta: number
-    
-    // Garman-Kohlhagen formula for FX options
-    // Premium is in quote currency terms (e.g., USD for EURUSD)
-    const discountFactor = Math.exp(-rDecimal * T)
-    
-    if (optType === 'call') {
-      // Call: discounted [F*N(d1) - K*N(d2)]
-      premium = discountFactor * (F * Nd1 - K * Nd2)
-      delta = discountFactor * Nd1
-    } else {
-      // Put: discounted [K*N(-d2) - F*N(-d1)]
-      premium = discountFactor * (K * (1 - Nd2) - F * (1 - Nd1))
-      delta = discountFactor * (Nd1 - 1)
-    }
-    
-    // DEBUG: Log detailed pricing calculation
-    console.log('=== PRICING CALCULATION DEBUG ===')
-    console.log('Forward (F):', F)
-    console.log('Strike (K):', K)
-    console.log('Time (T):', T)
-    console.log('Risk-free rate (r):', rDecimal)
-    console.log('Volatility:', volDecimal)
-    console.log('d1:', d1)
-    console.log('d2:', d2)
-    console.log('N(d1):', Nd1)
-    console.log('N(d2):', Nd2)
-    console.log('Discount factor:', discountFactor)
-    console.log('Raw premium:', premium)
-    console.log('Premium %:', premium * 100)
-    
-    // Greeks for FX options (using forward price)
-    const gamma = discountFactor * nd1 / (F * volDecimal * Math.sqrt(T))
-    const vega = discountFactor * F * nd1 * Math.sqrt(T) / 100 // Per 1% vol change
-    const theta = -(F * nd1 * volDecimal / (2 * Math.sqrt(T)) * discountFactor + 
-                   rDecimal * premium) / 365 // Per day
-    
-    return {
-      premium,
-      delta,
-      gamma,
-      vega,
-      theta,
-      impliedVol: vol
-    }
-  }
   
   // Fetch market data and calculate pricing
   const fetchMarketData = async () => {
@@ -140,9 +48,7 @@ export function OptionsPricingTab() {
     
     try {
       // Fetch spot rate
-      const endpoint = import.meta.env.DEV 
-        ? 'http://localhost:8000/api/bloomberg/reference'
-        : 'http://20.172.249.92:8080/api/bloomberg/reference'
+      const endpoint = 'http://localhost:8000/api/bloomberg/reference' // Always use local gateway
       const spotResponse = await fetch(endpoint, {
         method: 'POST',
         headers: {
@@ -172,7 +78,7 @@ export function OptionsPricingTab() {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          securities: [`${params.currencyPair}V${params.tenor.replace('M', '')}M BGN Curncy`],
+          securities: [`${params.currencyPair}V${params.tenor} BGN Curncy`],
           fields: ['PX_LAST']
         })
       })
@@ -235,36 +141,55 @@ export function OptionsPricingTab() {
       // Calculate forward rate using interest rate parity
       const rBase = baseCcy === 'EUR' ? eurDepoRate : usdDepoRate
       const rQuote = quoteCcy === 'USD' ? usdDepoRate : eurDepoRate
-      const calculatedForward = currentSpot * Math.exp((rQuote - rBase) * tenorYears / 100)
+      const calculatedForward = calculateForward(currentSpot, tenorYears, rQuote, rBase)
       const calculatedForwardPoints = (calculatedForward - currentSpot) * 10000
       
       // Update market data with REAL Bloomberg values
       setSpotRate(currentSpot)
-      setVoltaility(currentVol)
+      setVolatility(currentVol)
       setForwardRate(calculatedForward)
       setForwardPoints(calculatedForwardPoints)
       setEurRate(eurDepoRate)
       setUsdRate(usdDepoRate)
-      setRiskFreeRate(rQuote) // Use quote currency rate for Black-Scholes
+      setRiskFreeRate(rQuote) // Use quote currency rate
       
       // Only calculate if we have ALL real data
-      if (currentSpot && currentVol && rQuote) {
-        // DEBUG: Log precision discrepancy
-        console.log('=== PRECISION DEBUG ===')
-        console.log('calculatedForward (F):', calculatedForward)
-        console.log('params.strike (K):', params.strike)
-        console.log('F - K difference:', calculatedForward - params.strike)
-        console.log('Difference in basis points:', (calculatedForward - params.strike) * 10000)
+      if (currentSpot && currentVol && rQuote !== undefined && rBase !== undefined) {
+        // DEBUG: Log professional pricing inputs
+        console.log('=== PROFESSIONAL GARMAN-KOHLHAGEN PRICING ===')
+        console.log('Spot (S):', currentSpot)
+        console.log('Strike (K):', params.strike)
+        console.log('Time (T):', tenorYears, 'years')
+        console.log('Domestic rate (rd):', rQuote, '% (quote currency)')
+        console.log('Foreign rate (rf):', rBase, '% (base currency)')
+        console.log('Volatility:', currentVol, '%')
+        console.log('Forward:', calculatedForward)
+        console.log('Forward Points:', calculatedForwardPoints.toFixed(2))
         
-        const price = calculateOptionPrice(
-          calculatedForward, // Use forward rate for options pricing
+        // Use professional Garman-Kohlhagen implementation
+        const result = garmanKohlhagen(
+          currentSpot,
           params.strike,
           tenorYears,
-          rQuote,
+          rQuote,    // Quote currency rate (e.g., USD for EURUSD)
+          rBase,     // Base currency rate (e.g., EUR for EURUSD)
           currentVol,
-          params.optionType
+          params.optionType,
+          params.notional
         )
-        setPricing(price)
+        
+        // Convert to component's OptionPrice interface
+        setPricing({
+          ...result,
+          impliedVol: currentVol
+        })
+        
+        console.log('Premium %:', result.premiumPercent.toFixed(4), '%')
+        console.log('Premium amount:', result.premium.toFixed(2))
+        console.log('Delta:', result.delta)
+        console.log('Gamma:', result.gamma)
+        console.log('Vega:', result.vega)
+        console.log('Theta:', result.theta)
       } else {
         throw new Error('Incomplete market data - cannot calculate option price')
       }
@@ -585,13 +510,13 @@ export function OptionsPricingTab() {
                   <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px' }}>
                     <span style={{ fontSize: '10px', color: currentTheme.textSecondary }}>PREMIUM</span>
                     <span style={{ fontSize: '16px', fontFamily: 'monospace', fontWeight: '700', color: currentTheme.primary }}>
-                      {(pricing.premium * 100).toFixed(4)}%
+                      {pricing.premiumPercent.toFixed(4)}%
                     </span>
                     <span style={{ fontSize: '12px', fontFamily: 'monospace', fontWeight: '600' }}>
-                      ${(pricing.premium * params.notional).toLocaleString()}
+                      ${pricing.premium.toLocaleString()}
                     </span>
                     <span style={{ fontSize: '10px', fontFamily: 'monospace', color: currentTheme.textSecondary }}>
-                      ({(pricing.premium * 10000).toFixed(1)} pips)
+                      ({(pricing.premiumPercent * 100).toFixed(1)} pips)
                     </span>
                   </div>
                 </div>
@@ -613,7 +538,7 @@ export function OptionsPricingTab() {
                   <div style={{ backgroundColor: currentTheme.surface, padding: '4px 6px' }}>
                     <div style={{ fontSize: '9px', color: currentTheme.textSecondary }}>DELTA</div>
                     <div style={{ fontSize: '11px', fontFamily: 'monospace', fontWeight: '600' }}>
-                      {(pricing.delta * 100).toFixed(2)}%
+                      {pricing.delta.toFixed(2)}%
                     </div>
                   </div>
                   <div style={{ backgroundColor: currentTheme.surface, padding: '4px 6px' }}>
@@ -625,13 +550,35 @@ export function OptionsPricingTab() {
                   <div style={{ backgroundColor: currentTheme.surface, padding: '4px 6px' }}>
                     <div style={{ fontSize: '9px', color: currentTheme.textSecondary }}>VEGA</div>
                     <div style={{ fontSize: '11px', fontFamily: 'monospace', fontWeight: '600' }}>
-                      ${(pricing.vega * params.notional).toFixed(0)}
+                      ${(pricing.vegaNotional || pricing.vega).toFixed(0)}
                     </div>
                   </div>
                   <div style={{ backgroundColor: currentTheme.surface, padding: '4px 6px' }}>
                     <div style={{ fontSize: '9px', color: currentTheme.textSecondary }}>THETA</div>
                     <div style={{ fontSize: '11px', fontFamily: 'monospace', fontWeight: '600' }}>
-                      ${(pricing.theta * params.notional).toFixed(0)}
+                      ${(pricing.thetaNotional || pricing.theta).toFixed(0)}
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Second row of Greeks */}
+                <div style={{ 
+                  display: 'grid', 
+                  gridTemplateColumns: 'repeat(2, 1fr)', 
+                  gap: '1px',
+                  backgroundColor: currentTheme.border,
+                  marginTop: '1px'
+                }}>
+                  <div style={{ backgroundColor: currentTheme.surface, padding: '4px 6px' }}>
+                    <div style={{ fontSize: '9px', color: currentTheme.textSecondary }}>RHO (USD)</div>
+                    <div style={{ fontSize: '11px', fontFamily: 'monospace', fontWeight: '600' }}>
+                      ${pricing.rhoNotional ? pricing.rhoNotional.toFixed(0) : pricing.rho ? pricing.rho.toFixed(0) : '0'}
+                    </div>
+                  </div>
+                  <div style={{ backgroundColor: currentTheme.surface, padding: '4px 6px' }}>
+                    <div style={{ fontSize: '9px', color: currentTheme.textSecondary }}>IV</div>
+                    <div style={{ fontSize: '11px', fontFamily: 'monospace', fontWeight: '600' }}>
+                      {pricing.impliedVol.toFixed(2)}%
                     </div>
                   </div>
                 </div>
@@ -657,7 +604,7 @@ export function OptionsPricingTab() {
                     fontWeight: '700', 
                     color: pricing.delta < 0 ? '#ef4444' : '#4ade80' 
                   }}>
-                    {params.currencyPair.slice(0, 3)} {(-pricing.delta * params.notional).toLocaleString(undefined, { 
+                    {params.currencyPair.slice(0, 3)} {(pricing.deltaNotional ? -pricing.deltaNotional : 0).toLocaleString(undefined, { 
                       minimumFractionDigits: 2,
                       maximumFractionDigits: 2 
                     })}
