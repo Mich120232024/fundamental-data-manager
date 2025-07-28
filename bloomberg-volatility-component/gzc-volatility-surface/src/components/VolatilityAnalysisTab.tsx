@@ -22,6 +22,7 @@ export function VolatilityAnalysisTab() {
   const [visibleDeltasForTerm, setVisibleDeltasForTerm] = useState<Set<number>>(new Set([10, 25, 50]))
   const [dataQualityScore, setDataQualityScore] = useState<number>(0)
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null)
+  const [spotRates, setSpotRates] = useState<Record<string, number>>({})
   
   const smileChartRef = useRef<HTMLDivElement>(null)
   const termChartRef = useRef<HTMLDivElement>(null)
@@ -41,6 +42,55 @@ export function VolatilityAnalysisTab() {
   ]
 
 
+  // Fetch spot rates for all currency pairs
+  const fetchSpotRates = useCallback(async () => {
+    try {
+      // Build list of spot tickers
+      const spotTickers = currencyPairs.map(pair => `${pair} Curncy`)
+      
+      const endpoint = import.meta.env.DEV 
+        ? 'http://localhost:8000/api/bloomberg/reference'
+        : 'http://20.172.249.92:8080/api/bloomberg/reference'
+      
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Bearer test',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          securities: spotTickers,
+          fields: ['PX_LAST']
+        })
+      })
+      
+      if (!response.ok) {
+        console.error('Failed to fetch spot rates:', response.statusText)
+        return
+      }
+      
+      const result = await response.json()
+      
+      if (result.success && result.data?.securities_data) {
+        const rates: Record<string, number> = {}
+        
+        result.data.securities_data.forEach((sec: any) => {
+          if (sec.success && sec.fields?.PX_LAST) {
+            // Extract pair name from ticker (e.g., "EURUSD Curncy" -> "EURUSD")
+            const pair = sec.security.replace(' Curncy', '')
+            rates[pair] = sec.fields.PX_LAST
+          }
+        })
+        
+        console.log('Fetched spot rates:', rates)
+        setSpotRates(rates)
+      }
+    } catch (error) {
+      console.error('Error fetching spot rates:', error)
+      // Don't fail the whole component if spot rates fail
+    }
+  }, [])
+  
   const fetchData = useCallback(async () => {
     console.log('fetchData called for', selectedPair)
     setLoading(true)
@@ -89,12 +139,13 @@ export function VolatilityAnalysisTab() {
       setLoading(false)
       setLoadingProgress('')
     }
-  }, [selectedPair])
+  }, [selectedPair, fetchSpotRates])
 
   useEffect(() => {
     console.log('useEffect triggered, calling fetchData')
+    fetchSpotRates() // Fetch spot rates on component mount
     fetchData()
-  }, [fetchData])
+  }, [fetchData, fetchSpotRates])
 
   // D3.js Term Structure Visualization
   const drawTermStructureChart = useCallback(() => {
@@ -725,78 +776,48 @@ export function VolatilityAnalysisTab() {
     // Show all available delta points
     const availableDeltas = [...new Set(allSmilePoints.map(p => p.delta))].sort((a, b) => a - b)
     
-    // WARNING: Using estimated spot rates for strike visualization only
-    // These are NOT real-time Bloomberg rates - for display purposes only
-    // TODO: Fetch actual spot rates from Bloomberg API
-    const getEstimatedSpot = (pair: string) => {
-      const spotRates: Record<string, number> = {
-        // Major USD pairs
-        'EURUSD': 1.08,
-        'GBPUSD': 1.26,
-        'USDJPY': 148.50,
-        'USDCHF': 0.89,
-        'AUDUSD': 0.65,
-        'USDCAD': 1.35,
-        'NZDUSD': 0.61,
-        // EUR crosses
-        'EURGBP': 0.857,
-        'EURJPY': 160.38,
-        'EURCHF': 0.961,
-        'EURAUD': 1.662,
-        'EURCAD': 1.458,
-        'EURNZD': 1.770,
-        // GBP crosses
-        'GBPJPY': 187.11,
-        'GBPCHF': 1.121,
-        'GBPAUD': 1.938,
-        'GBPCAD': 1.701,
-        'GBPNZD': 2.066,
-        // JPY crosses
-        'AUDJPY': 96.53,
-        'CADJPY': 110.00,
-        'NZDJPY': 90.60,
-        'CHFJPY': 166.85,
-        // Other crosses
-        'AUDCAD': 0.878,
-        'AUDCHF': 0.578,
-        'AUDNZD': 1.066,
-        'CADCHF': 0.659,
-        'NZDCAD': 0.823,
-        'NZDCHF': 0.542
+    // Use real spot rates from Bloomberg or show warning
+    const getSpotRate = (pair: string) => {
+      // First check if we have real Bloomberg spot rates
+      if (spotRates[pair]) {
+        return spotRates[pair]
       }
-      if (!spotRates[pair]) {
-        throw new Error(`No spot rate available for ${pair} - no fallback allowed`)
-      }
-      return spotRates[pair]
+      
+      // If no real rate available, return null to indicate missing data
+      console.warn(`No Bloomberg spot rate available for ${pair}`)
+      return null
     }
-    const estimatedForward = getEstimatedSpot(selectedPair)
+    const spotRate = getSpotRate(selectedPair)
     
     // Calculate strikes using simplified Black-Scholes delta-to-strike conversion
     const calculateStrike = (delta: number, vol: number) => {
+      // If no spot rate available, return null
+      if (!spotRate) return null
+      
       // Use the existing tenorToYears function
       const timeToExpiry = tenorToYears(selectedTenor)
       
       // Simplified strike calculation: K = F * exp(-N^(-1)(delta) * vol * sqrt(T))
       // Where N^(-1) is inverse normal CDF
-      if (delta === 50) return estimatedForward // ATM
+      if (delta === 50) return spotRate // ATM
       
       // Rough approximation of inverse normal CDF for common deltas
       const invNorm = delta < 50 
         ? (delta === 5 ? -1.645 : delta === 10 ? -1.282 : delta === 15 ? -1.036 : delta === 25 ? -0.674 : delta === 35 ? -0.385 : -0.674)
         : (delta === 65 ? 0.385 : delta === 75 ? 0.674 : delta === 85 ? 1.036 : delta === 90 ? 1.282 : delta === 95 ? 1.645 : 0.674)
       
-      return estimatedForward * Math.exp(-invNorm * (vol/100) * Math.sqrt(timeToExpiry))
+      return spotRate * Math.exp(-invNorm * (vol/100) * Math.sqrt(timeToExpiry))
     }
     
     const deltaLabels = availableDeltas.map(delta => {
       const point = allSmilePoints.find(p => p.delta === delta)
-      const strike = point ? calculateStrike(delta, point.vol) : estimatedForward
+      const strike = point ? calculateStrike(delta, point.vol) : spotRate
       
       return {
         delta,
         strike,
         label: delta === 50 ? 'ATM' : delta < 50 ? `${delta}ΔP` : `${100-delta}ΔC`,
-        strikeLabel: strike.toFixed(4),
+        strikeLabel: strike ? strike.toFixed(4) : 'N/A',
         color: delta === 50 ? currentTheme.primary : currentTheme.textSecondary
       }
     })
@@ -851,16 +872,18 @@ export function VolatilityAnalysisTab() {
       .style("fill", currentTheme.textSecondary)
       .text("Delta")
 
-    // Add warning about estimated strikes
-    g.append("text")
-      .attr("transform", `translate(${width - 10}, 10)`)
-      .style("text-anchor", "end")
-      .style("font-size", "10px")
-      .style("fill", currentTheme.warning || '#ff9800')
-      .style("font-style", "italic")
-      .text("⚠️ Strike prices are estimates")
+    // Add status about strike prices
+    if (!spotRate) {
+      g.append("text")
+        .attr("transform", `translate(${width - 10}, 10)`)
+        .style("text-anchor", "end")
+        .style("font-size", "10px")
+        .style("fill", currentTheme.danger || '#f44336')
+        .style("font-style", "italic")
+        .text("⚠️ No Bloomberg spot rate available")
+    }
 
-  }, [surfaceData, selectedTenor, currentTheme, visibleTenorsForSmile, visibleDeltasForTerm, selectedPair])
+  }, [surfaceData, selectedTenor, currentTheme, visibleTenorsForSmile, visibleDeltasForTerm, selectedPair, spotRates])
 
 
   useEffect(() => {
@@ -903,7 +926,10 @@ export function VolatilityAnalysisTab() {
           </label>
           <select
             value={selectedPair}
-            onChange={(e) => setSelectedPair(e.target.value)}
+            onChange={(e) => {
+              setSelectedPair(e.target.value)
+              fetchSpotRates() // Refresh spot rates when pair changes
+            }}
             style={{
               backgroundColor: currentTheme.background,
               color: currentTheme.text,
