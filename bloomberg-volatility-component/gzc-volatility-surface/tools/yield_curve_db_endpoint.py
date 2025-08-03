@@ -113,15 +113,15 @@ async def get_available_curves():
         cursor.execute("""
             SELECT 
                 rcd.curve_name,
-                rcd.currency,
+                rcd.currency_code,
                 rcd.curve_type,
-                rcd.description,
-                COUNT(DISTINCT rcm.ticker_id) as member_count
+                rcd.methodology as description,
+                COUNT(DISTINCT rcm.bloomberg_ticker) as member_count
             FROM rate_curve_definitions rcd
-            LEFT JOIN rate_curve_memberships rcm ON rcd.id = rcm.curve_id
-            WHERE rcd.active = true
-            GROUP BY rcd.id, rcd.curve_name, rcd.currency, rcd.curve_type, rcd.description
-            ORDER BY rcd.currency, rcd.curve_type
+            LEFT JOIN rate_curve_mappings rcm ON rcd.curve_name = rcm.curve_name
+            WHERE rcd.is_active = true
+            GROUP BY rcd.id, rcd.curve_name, rcd.currency_code, rcd.curve_type, rcd.methodology
+            ORDER BY rcd.currency_code, rcd.curve_type
         """)
         
         curves = []
@@ -149,84 +149,101 @@ async def get_available_curves():
 
 @yield_curve_router.post("/config", response_model=YieldCurveResponse)
 async def get_yield_curve_config(request: YieldCurveRequest):
-    """Get yield curve configuration from database"""
+    """Get yield curve configuration from database using actual schema"""
     conn = None
     try:
         conn = get_database_connection()
         cursor = conn.cursor()
         
-        # First, find the appropriate curve for this currency
-        # Priority: OIS > IRS > Government
-        curve_query = """
-            SELECT rcd.id, rcd.curve_name, rcd.description
+        # Get all tickers for this currency through curve mappings
+        ticker_query = """
+            SELECT 
+                bt.bloomberg_ticker,
+                bt.tenor,
+                bt.tenor_numeric,
+                bt.properties,
+                rcd.curve_name,
+                bt.category,
+                rcm.sorting_order
             FROM rate_curve_definitions rcd
-            WHERE rcd.currency = %s 
-            AND rcd.active = true
-            AND EXISTS (
-                SELECT 1 FROM rate_curve_memberships rcm 
-                WHERE rcm.curve_id = rcd.id
-            )
+            JOIN rate_curve_mappings rcm ON rcd.curve_name = rcm.curve_name
+            JOIN bloomberg_tickers bt ON bt.bloomberg_ticker = rcm.bloomberg_ticker
+            WHERE rcd.currency_code = %s 
+            AND rcd.is_active = true
+            AND bt.is_active = true
             ORDER BY 
+                rcd.curve_name,
+                COALESCE(rcm.sorting_order, 999),
                 CASE 
-                    WHEN rcd.curve_type = 'OIS' THEN 1
-                    WHEN rcd.curve_type = 'IRS' THEN 2
-                    WHEN rcd.curve_type = 'GOVT' THEN 3
-                    ELSE 4
+                    WHEN bt.tenor_numeric IS NOT NULL THEN bt.tenor_numeric
+                    ELSE 999999
                 END
-            LIMIT 1
         """
         
-        cursor.execute(curve_query, (request.currency,))
-        curve_result = cursor.fetchone()
+        cursor.execute(ticker_query, (request.currency,))
+        ticker_results = cursor.fetchall()
         
-        if not curve_result:
+        if not ticker_results:
             return YieldCurveResponse(
                 success=False,
                 currency=request.currency,
                 title=f"{request.currency} Yield Curve",
                 instruments=[],
-                error=f"No curve found for {request.currency}"
+                error=f"No curve members found for {request.currency}"
             )
         
-        curve_id, curve_name, description = curve_result
-        
-        # Get all members of this curve
-        member_query = """
-            SELECT 
-                bt.ticker,
-                bt.tenor,
-                rcm.order_index,
-                bt.properties
-            FROM rate_curve_memberships rcm
-            JOIN bloomberg_tickers bt ON rcm.ticker_id = bt.id
-            WHERE rcm.curve_id = %s
-            ORDER BY rcm.order_index, bt.tenor
-        """
-        
-        cursor.execute(member_query, (curve_id,))
-        
         instruments = []
-        for ticker, tenor, order_index, properties in cursor.fetchall():
-            # Calculate years from tenor
-            years = tenor / 365.0 if tenor else 0
+        curve_name = f"{request.currency}_OIS"  # Default curve name
+        
+        for bloomberg_ticker, tenor, tenor_numeric, properties, db_curve_name, category, sorting_order in ticker_results:
+            # Use tenor_numeric if available, otherwise try to parse tenor
+            days = tenor_numeric
+            if days is None and tenor:
+                # Try to parse tenor string to days
+                try:
+                    if tenor == 'O/N':
+                        days = 1
+                    elif tenor.endswith('W'):
+                        days = int(tenor[:-1]) * 7
+                    elif tenor.endswith('M'):
+                        days = int(tenor[:-1]) * 30
+                    elif tenor.endswith('Y'):
+                        days = int(tenor[:-1]) * 365
+                    else:
+                        days = 0
+                except:
+                    days = 0
             
-            # Generate label
-            label = tenor_to_label(tenor) if tenor else "N/A"
+            # Calculate years (handle Decimal from database)
+            years = float(days) / 365.0 if days else 0
             
-            # Determine instrument type
-            instrument_type = get_instrument_type(ticker)
+            # Use label from properties or generate from tenor
+            label = tenor or "N/A"
+            if properties and isinstance(properties, dict) and 'label' in properties:
+                label = properties['label']
+            
+            # Determine instrument type from category or ticker
+            instrument_type = category or get_instrument_type(bloomberg_ticker)
+            
+            # Use sorting_order from mappings table or properties
+            order = sorting_order
+            if order is None and properties and isinstance(properties, dict) and 'curve_order' in properties:
+                order = properties['curve_order']
             
             instruments.append(CurveInstrument(
-                ticker=ticker,
-                tenor=tenor or 0,
+                ticker=bloomberg_ticker,
+                tenor=int(days) if days else 0,
                 label=label,
                 years=round(years, 3),
                 instrumentType=instrument_type,
-                order=order_index
+                order=order
             ))
         
-        # Generate title
-        title = description or f"{request.currency} {curve_name.replace('_', ' ')}"
+        # Use curve name from database or generate default
+        if db_curve_name:
+            curve_name = db_curve_name
+        
+        title = f"{request.currency} Yield Curve ({len(instruments)} instruments)"
         
         response = YieldCurveResponse(
             success=True,

@@ -1,33 +1,17 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useTheme } from '../contexts/ThemeContext'
 import * as d3 from 'd3'
-import { Currency, FXPair } from '../constants/currencies'
-import { YIELD_CURVE_CONFIGS, getYieldCurveConfig } from '../data/yieldCurveConfigs'
 
 type CurveType = 'yield' | 'forward'
 type ForwardDisplayMode = 'outright' | 'points'
-type CurrencyPair = FXPair
+type Currency = 'USD' | 'EUR' | 'GBP' | 'JPY' | 'CHF' | 'AUD' | 'CAD' | 'NZD'
+type CurrencyPair = 'EURUSD' | 'GBPUSD' | 'USDJPY' | 'USDCHF' | 'AUDUSD' | 'USDCAD' | 'NZDUSD' | 'EURGBP' | 'EURJPY' | 'GBPJPY'
 
 interface CurvePoint {
   tenor: number // Days to maturity
   rate: number  // Rate in %
   label: string // Display label
   ticker?: string // Bloomberg ticker
-  years: number // Years to maturity for proper scaling
-}
-
-interface CurveInstrument {
-  ticker: string
-  tenor: number
-  label: string
-  years: number
-  instrumentType: 'money_market' | 'swap' | 'bond'
-  order?: number
-}
-
-interface YieldCurveConfig {
-  title: string
-  instruments: CurveInstrument[]
 }
 
 export function RateCurvesTab() {
@@ -44,10 +28,6 @@ export function RateCurvesTab() {
   const [curvePointsByCurrency, setCurvePointsByCurrency] = useState<Map<Currency | CurrencyPair, CurvePoint[]>>(new Map())
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  
-  // Store configurations fetched from database
-  const [yieldCurveConfigs, setYieldCurveConfigs] = useState<Map<Currency, YieldCurveConfig>>(new Map())
-  const [configsLoading, setConfigsLoading] = useState(true)
 
   // Modern color scheme for different currencies and pairs
   const currencyColors: { [key in Currency | CurrencyPair]?: string } = {
@@ -73,71 +53,100 @@ export function RateCurvesTab() {
     GBPJPY: '#D35400'   // Dark Orange
   }
 
-  // Fetch yield curve configurations from database
-  const fetchYieldCurveConfigs = async () => {
-    setConfigsLoading(true)
-    try {
-      // Get unique currencies to fetch
-      const currenciesToFetch = Array.from(selectedCurrencies)
-      if (currenciesToFetch.length === 0) return
-      
-      const response = await fetch('http://localhost:8000/api/yield-curves/batch-config', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(currenciesToFetch)
-      })
-      
-      if (!response.ok) {
-        throw new Error(`Failed to fetch curve configs: ${response.status}`)
-      }
-      
-      const data = await response.json()
-      const newConfigs = new Map<Currency, YieldCurveConfig>()
-      
-      if (data.success && data.curves) {
-        Object.entries(data.curves).forEach(([currency, curveData]: [string, any]) => {
-          if (curveData.success && curveData.instruments?.length > 0) {
-            newConfigs.set(currency as Currency, {
-              title: curveData.title,
-              instruments: curveData.instruments
-            })
-          }
-        })
-      }
-      
-      setYieldCurveConfigs(newConfigs)
-    } catch (error) {
-      console.error('Failed to fetch yield curve configs:', error)
-      // Don't set error - we'll use fallback configs
-      // setError('Failed to load curve configurations')
-    } finally {
-      setConfigsLoading(false)
-    }
-  }
-  
-  // Fetch configs when currencies change
-  useEffect(() => {
-    if (curveType === 'yield' && selectedCurrencies.size > 0) {
-      fetchYieldCurveConfigs()
-    }
-  }, [selectedCurrencies, curveType])
-
   // Curve configuration based on type and currency/pair
   const getCurveConfig = (currencyOrPair: Currency | CurrencyPair) => {
     if (curveType === 'yield') {
       const currency = currencyOrPair as Currency
-      
-      // First check if we have a database configuration
-      const dbConfig = yieldCurveConfigs.get(currency)
-      if (dbConfig && dbConfig.instruments.length > 0) {
-        return dbConfig
+      const configs = {
+        USD: { 
+          title: 'USD Treasury Yield Curve',
+          instruments: [
+            { ticker: 'GB1 Govt', tenor: 30, label: '1M' },
+            { ticker: 'GB3 Govt', tenor: 90, label: '3M' },
+            { ticker: 'GB6 Govt', tenor: 180, label: '6M' },
+            { ticker: 'GB12 Govt', tenor: 365, label: '1Y' },
+            { ticker: 'USGG2YR Index', tenor: 730, label: '2Y' },
+            { ticker: 'USGG3YR Index', tenor: 1095, label: '3Y' },
+            { ticker: 'USGG5YR Index', tenor: 1825, label: '5Y' },
+            { ticker: 'USGG7YR Index', tenor: 2555, label: '7Y' },
+            { ticker: 'USGG10YR Index', tenor: 3650, label: '10Y' },
+            { ticker: 'USGG20YR Index', tenor: 7300, label: '20Y' },
+            { ticker: 'USGG30YR Index', tenor: 10950, label: '30Y' }
+          ]
+        },
+        EUR: {
+          title: 'German Government Bond Yield Curve', 
+          instruments: [
+            { ticker: 'EUR003M Index', tenor: 90, label: '3M' },
+            { ticker: 'EUR006M Index', tenor: 180, label: '6M' },
+            { ticker: 'EUR012M Index', tenor: 365, label: '1Y' },
+            { ticker: 'GDBR2 Index', tenor: 730, label: '2Y' },
+            { ticker: 'GDBR3 Index', tenor: 1095, label: '3Y' },
+            { ticker: 'GDBR5 Index', tenor: 1825, label: '5Y' },
+            { ticker: 'GDBR7 Index', tenor: 2555, label: '7Y' },
+            { ticker: 'GDBR10 Index', tenor: 3650, label: '10Y' },
+            { ticker: 'GDBR15 Index', tenor: 5475, label: '15Y' },
+            { ticker: 'GDBR20 Index', tenor: 7300, label: '20Y' },
+            { ticker: 'GDBR30 Index', tenor: 10950, label: '30Y' }
+          ]
+        },
+        GBP: {
+          title: 'UK Gilt Yield Curve',
+          instruments: [
+            { ticker: 'BP0003M Index', tenor: 90, label: '3M' },
+            { ticker: 'BP0006M Index', tenor: 180, label: '6M' },
+            { ticker: 'BP0012M Index', tenor: 365, label: '1Y' },
+            { ticker: 'GUKG2 Index', tenor: 730, label: '2Y' },
+            { ticker: 'GUKG3 Index', tenor: 1095, label: '3Y' },
+            { ticker: 'GUKG5 Index', tenor: 1825, label: '5Y' },
+            { ticker: 'GUKG7 Index', tenor: 2555, label: '7Y' },
+            { ticker: 'GUKG10 Index', tenor: 3650, label: '10Y' },
+            { ticker: 'GUKG15 Index', tenor: 5475, label: '15Y' },
+            { ticker: 'GUKG20 Index', tenor: 7300, label: '20Y' },
+            { ticker: 'GUKG30 Index', tenor: 10950, label: '30Y' }
+          ]
+        },
+        CHF: {
+          title: 'Swiss Government Bond Yield Curve',
+          instruments: [
+            { ticker: 'SF0003M Index', tenor: 90, label: '3M' },
+            { ticker: 'SF0006M Index', tenor: 180, label: '6M' },
+            { ticker: 'GSWISS2 Index', tenor: 730, label: '2Y' },
+            { ticker: 'GSWISS3 Index', tenor: 1095, label: '3Y' },
+            { ticker: 'GSWISS5 Index', tenor: 1825, label: '5Y' },
+            { ticker: 'GSWISS7 Index', tenor: 2555, label: '7Y' },
+            { ticker: 'GSWISS10 Index', tenor: 3650, label: '10Y' },
+            { ticker: 'GSWISS15 Index', tenor: 5475, label: '15Y' },
+            { ticker: 'GSWISS20 Index', tenor: 7300, label: '20Y' },
+            { ticker: 'GSWISS30 Index', tenor: 10950, label: '30Y' }
+          ]
+        },
+        JPY: {
+          title: 'Japanese Government Bond Yield Curve',
+          instruments: [
+            { ticker: 'JY0003M Index', tenor: 90, label: '3M' },
+            { ticker: 'JY0006M Index', tenor: 180, label: '6M' },
+            { ticker: 'GJGB2 Index', tenor: 730, label: '2Y' },
+            { ticker: 'GJGB5 Index', tenor: 1825, label: '5Y' },
+            { ticker: 'GJGB10 Index', tenor: 3650, label: '10Y' },
+            { ticker: 'GJGB20 Index', tenor: 7300, label: '20Y' },
+            { ticker: 'GJGB30 Index', tenor: 10950, label: '30Y' }
+          ]
+        },
+        AUD: {
+          title: 'Australian Government Bond Yield Curve',
+          instruments: [
+            { ticker: 'BBSW3M Index', tenor: 90, label: '3M' },
+            { ticker: 'BBSW6M Index', tenor: 180, label: '6M' },
+            { ticker: 'GACGB2 Index', tenor: 730, label: '2Y' },
+            { ticker: 'GACGB3 Index', tenor: 1095, label: '3Y' },
+            { ticker: 'GACGB5 Index', tenor: 1825, label: '5Y' },
+            { ticker: 'GACGB10 Index', tenor: 3650, label: '10Y' },
+            { ticker: 'GACGB15 Index', tenor: 5475, label: '15Y' }
+          ]
+        }
       }
-      
-      // NO FALLBACK - if database fails, show error
-      console.error(`No database data available for ${currency}`)
-      return null
+      return configs[currency] || configs.USD
     } else {
       // FX Forward curves (OTC) - NOT futures! Using forward points to calculate outright rates
       // TODO: Review FX forward curve implementation:
@@ -150,130 +159,130 @@ export function RateCurvesTab() {
         EURUSD: {
           title: 'EURUSD OTC Forward Rates',
           instruments: [
-            { ticker: 'EURUSD Curncy', tenor: 0, label: 'Spot', years: 0 },
-            { ticker: 'EURUSD1W Curncy', tenor: 7, label: '1W', years: 7/365 },
-            { ticker: 'EUR1M Curncy', tenor: 30, label: '1M', years: 30/365 },
-            { ticker: 'EUR2M Curncy', tenor: 60, label: '2M', years: 60/365 },
-            { ticker: 'EUR3M Curncy', tenor: 90, label: '3M', years: 90/365 },
-            { ticker: 'EUR6M Curncy', tenor: 180, label: '6M', years: 180/365 },
-            { ticker: 'EUR9M Curncy', tenor: 270, label: '9M', years: 270/365 },
-            { ticker: 'EURUSD12M Curncy', tenor: 365, label: '1Y', years: 1 },
-            { ticker: 'EURUSD18M Curncy', tenor: 540, label: '18M', years: 540/365 },
-            { ticker: 'EURUSD2Y Curncy', tenor: 730, label: '2Y', years: 2 }
+            { ticker: 'EURUSD Curncy', tenor: 0, label: 'Spot' },
+            { ticker: 'EURUSD1W Curncy', tenor: 7, label: '1W' },
+            { ticker: 'EUR1M Curncy', tenor: 30, label: '1M' },
+            { ticker: 'EUR2M Curncy', tenor: 60, label: '2M' },
+            { ticker: 'EUR3M Curncy', tenor: 90, label: '3M' },
+            { ticker: 'EUR6M Curncy', tenor: 180, label: '6M' },
+            { ticker: 'EUR9M Curncy', tenor: 270, label: '9M' },
+            { ticker: 'EURUSD12M Curncy', tenor: 365, label: '1Y' },
+            { ticker: 'EURUSD18M Curncy', tenor: 540, label: '18M' },
+            { ticker: 'EURUSD2Y Curncy', tenor: 730, label: '2Y' }
           ],
           pipDivisor: 10000
         },
         GBPUSD: {
           title: 'GBPUSD OTC Forward Rates',
           instruments: [
-            { ticker: 'GBPUSD Curncy', tenor: 0, label: 'Spot', years: 0 },
-            { ticker: 'GBP1W Curncy', tenor: 7, label: '1W', years: 7/365 },
-            { ticker: 'GBP1M Curncy', tenor: 30, label: '1M', years: 30/365 },
-            { ticker: 'GBP3M Curncy', tenor: 90, label: '3M', years: 90/365 },
-            { ticker: 'GBP6M Curncy', tenor: 180, label: '6M', years: 180/365 },
-            { ticker: 'GBP12M Curncy', tenor: 365, label: '1Y', years: 1 },
-            { ticker: 'GBP2Y Curncy', tenor: 730, label: '2Y', years: 2 }
+            { ticker: 'GBPUSD Curncy', tenor: 0, label: 'Spot' },
+            { ticker: 'GBP1W Curncy', tenor: 7, label: '1W' },
+            { ticker: 'GBP1M Curncy', tenor: 30, label: '1M' },
+            { ticker: 'GBP3M Curncy', tenor: 90, label: '3M' },
+            { ticker: 'GBP6M Curncy', tenor: 180, label: '6M' },
+            { ticker: 'GBP12M Curncy', tenor: 365, label: '1Y' },
+            { ticker: 'GBP2Y Curncy', tenor: 730, label: '2Y' }
           ],
           pipDivisor: 10000
         },
         USDJPY: {
           title: 'USDJPY OTC Forward Rates',
           instruments: [
-            { ticker: 'USDJPY Curncy', tenor: 0, label: 'Spot', years: 0 },
-            { ticker: 'JPY1W Curncy', tenor: 7, label: '1W', years: 7/365 },
-            { ticker: 'JPY1M Curncy', tenor: 30, label: '1M', years: 30/365 },
-            { ticker: 'JPY3M Curncy', tenor: 90, label: '3M', years: 90/365 },
-            { ticker: 'JPY6M Curncy', tenor: 180, label: '6M', years: 180/365 },
-            { ticker: 'JPY12M Curncy', tenor: 365, label: '1Y', years: 1 },
-            { ticker: 'JPY2Y Curncy', tenor: 730, label: '2Y', years: 2 }
+            { ticker: 'USDJPY Curncy', tenor: 0, label: 'Spot' },
+            { ticker: 'JPY1W Curncy', tenor: 7, label: '1W' },
+            { ticker: 'JPY1M Curncy', tenor: 30, label: '1M' },
+            { ticker: 'JPY3M Curncy', tenor: 90, label: '3M' },
+            { ticker: 'JPY6M Curncy', tenor: 180, label: '6M' },
+            { ticker: 'JPY12M Curncy', tenor: 365, label: '1Y' },
+            { ticker: 'JPY2Y Curncy', tenor: 730, label: '2Y' }
           ],
           pipDivisor: 100
         },
         USDCHF: {
           title: 'USDCHF OTC Forward Rates',
           instruments: [
-            { ticker: 'USDCHF Curncy', tenor: 0, label: 'Spot', years: 0 },
-            { ticker: 'CHF1W Curncy', tenor: 7, label: '1W', years: 7/365 },
-            { ticker: 'CHF1M Curncy', tenor: 30, label: '1M', years: 30/365 },
-            { ticker: 'CHF3M Curncy', tenor: 90, label: '3M', years: 90/365 },
-            { ticker: 'CHF6M Curncy', tenor: 180, label: '6M', years: 180/365 },
-            { ticker: 'CHF12M Curncy', tenor: 365, label: '1Y', years: 1 },
-            { ticker: 'CHF2Y Curncy', tenor: 730, label: '2Y', years: 2 }
+            { ticker: 'USDCHF Curncy', tenor: 0, label: 'Spot' },
+            { ticker: 'CHF1W Curncy', tenor: 7, label: '1W' },
+            { ticker: 'CHF1M Curncy', tenor: 30, label: '1M' },
+            { ticker: 'CHF3M Curncy', tenor: 90, label: '3M' },
+            { ticker: 'CHF6M Curncy', tenor: 180, label: '6M' },
+            { ticker: 'CHF12M Curncy', tenor: 365, label: '1Y' },
+            { ticker: 'CHF2Y Curncy', tenor: 730, label: '2Y' }
           ],
           pipDivisor: 10000
         },
         AUDUSD: {
           title: 'AUDUSD OTC Forward Rates',
           instruments: [
-            { ticker: 'AUDUSD Curncy', tenor: 0, label: 'Spot', years: 0 },
-            { ticker: 'AUD1W Curncy', tenor: 7, label: '1W', years: 7/365 },
-            { ticker: 'AUD1M Curncy', tenor: 30, label: '1M', years: 30/365 },
-            { ticker: 'AUD3M Curncy', tenor: 90, label: '3M', years: 90/365 },
-            { ticker: 'AUD6M Curncy', tenor: 180, label: '6M', years: 180/365 },
-            { ticker: 'AUD12M Curncy', tenor: 365, label: '1Y', years: 1 },
-            { ticker: 'AUD2Y Curncy', tenor: 730, label: '2Y', years: 2 }
+            { ticker: 'AUDUSD Curncy', tenor: 0, label: 'Spot' },
+            { ticker: 'AUD1W Curncy', tenor: 7, label: '1W' },
+            { ticker: 'AUD1M Curncy', tenor: 30, label: '1M' },
+            { ticker: 'AUD3M Curncy', tenor: 90, label: '3M' },
+            { ticker: 'AUD6M Curncy', tenor: 180, label: '6M' },
+            { ticker: 'AUD12M Curncy', tenor: 365, label: '1Y' },
+            { ticker: 'AUD2Y Curncy', tenor: 730, label: '2Y' }
           ],
           pipDivisor: 10000
         },
         USDCAD: {
           title: 'USDCAD OTC Forward Rates',
           instruments: [
-            { ticker: 'USDCAD Curncy', tenor: 0, label: 'Spot', years: 0 },
-            { ticker: 'CAD1W Curncy', tenor: 7, label: '1W', years: 7/365 },
-            { ticker: 'CAD1M Curncy', tenor: 30, label: '1M', years: 30/365 },
-            { ticker: 'CAD3M Curncy', tenor: 90, label: '3M', years: 90/365 },
-            { ticker: 'CAD6M Curncy', tenor: 180, label: '6M', years: 180/365 },
-            { ticker: 'CAD12M Curncy', tenor: 365, label: '1Y', years: 1 },
-            { ticker: 'CAD2Y Curncy', tenor: 730, label: '2Y', years: 2 }
+            { ticker: 'USDCAD Curncy', tenor: 0, label: 'Spot' },
+            { ticker: 'CAD1W Curncy', tenor: 7, label: '1W' },
+            { ticker: 'CAD1M Curncy', tenor: 30, label: '1M' },
+            { ticker: 'CAD3M Curncy', tenor: 90, label: '3M' },
+            { ticker: 'CAD6M Curncy', tenor: 180, label: '6M' },
+            { ticker: 'CAD12M Curncy', tenor: 365, label: '1Y' },
+            { ticker: 'CAD2Y Curncy', tenor: 730, label: '2Y' }
           ],
           pipDivisor: 10000
         },
         NZDUSD: {
           title: 'NZDUSD OTC Forward Rates',
           instruments: [
-            { ticker: 'NZDUSD Curncy', tenor: 0, label: 'Spot', years: 0 },
-            { ticker: 'NZD1W Curncy', tenor: 7, label: '1W', years: 7/365 },
-            { ticker: 'NZD1M Curncy', tenor: 30, label: '1M', years: 30/365 },
-            { ticker: 'NZD3M Curncy', tenor: 90, label: '3M', years: 90/365 },
-            { ticker: 'NZD6M Curncy', tenor: 180, label: '6M', years: 180/365 },
-            { ticker: 'NZD12M Curncy', tenor: 365, label: '1Y', years: 1 },
-            { ticker: 'NZD2Y Curncy', tenor: 730, label: '2Y', years: 2 }
+            { ticker: 'NZDUSD Curncy', tenor: 0, label: 'Spot' },
+            { ticker: 'NZD1W Curncy', tenor: 7, label: '1W' },
+            { ticker: 'NZD1M Curncy', tenor: 30, label: '1M' },
+            { ticker: 'NZD3M Curncy', tenor: 90, label: '3M' },
+            { ticker: 'NZD6M Curncy', tenor: 180, label: '6M' },
+            { ticker: 'NZD12M Curncy', tenor: 365, label: '1Y' },
+            { ticker: 'NZD2Y Curncy', tenor: 730, label: '2Y' }
           ],
           pipDivisor: 10000
         },
         EURGBP: {
           title: 'EURGBP OTC Forward Rates',
           instruments: [
-            { ticker: 'EURGBP Curncy', tenor: 0, label: 'Spot', years: 0 },
-            { ticker: 'EURGBP1M Curncy', tenor: 30, label: '1M', years: 30/365 },
-            { ticker: 'EURGBP3M Curncy', tenor: 90, label: '3M', years: 90/365 },
-            { ticker: 'EURGBP6M Curncy', tenor: 180, label: '6M', years: 180/365 },
-            { ticker: 'EURGBP12M Curncy', tenor: 365, label: '1Y', years: 1 },
-            { ticker: 'EURGBP2Y Curncy', tenor: 730, label: '2Y', years: 2 }
+            { ticker: 'EURGBP Curncy', tenor: 0, label: 'Spot' },
+            { ticker: 'EURGBP1M Curncy', tenor: 30, label: '1M' },
+            { ticker: 'EURGBP3M Curncy', tenor: 90, label: '3M' },
+            { ticker: 'EURGBP6M Curncy', tenor: 180, label: '6M' },
+            { ticker: 'EURGBP12M Curncy', tenor: 365, label: '1Y' },
+            { ticker: 'EURGBP2Y Curncy', tenor: 730, label: '2Y' }
           ],
           pipDivisor: 10000
         },
         EURJPY: {
           title: 'EURJPY OTC Forward Rates',
           instruments: [
-            { ticker: 'EURJPY Curncy', tenor: 0, label: 'Spot', years: 0 },
-            { ticker: 'EURJPY1M Curncy', tenor: 30, label: '1M', years: 30/365 },
-            { ticker: 'EURJPY3M Curncy', tenor: 90, label: '3M', years: 90/365 },
-            { ticker: 'EURJPY6M Curncy', tenor: 180, label: '6M', years: 180/365 },
-            { ticker: 'EURJPY12M Curncy', tenor: 365, label: '1Y', years: 1 },
-            { ticker: 'EURJPY2Y Curncy', tenor: 730, label: '2Y', years: 2 }
+            { ticker: 'EURJPY Curncy', tenor: 0, label: 'Spot' },
+            { ticker: 'EURJPY1M Curncy', tenor: 30, label: '1M' },
+            { ticker: 'EURJPY3M Curncy', tenor: 90, label: '3M' },
+            { ticker: 'EURJPY6M Curncy', tenor: 180, label: '6M' },
+            { ticker: 'EURJPY12M Curncy', tenor: 365, label: '1Y' },
+            { ticker: 'EURJPY2Y Curncy', tenor: 730, label: '2Y' }
           ],
           pipDivisor: 100
         },
         GBPJPY: {
           title: 'GBPJPY OTC Forward Rates',
           instruments: [
-            { ticker: 'GBPJPY Curncy', tenor: 0, label: 'Spot', years: 0 },
-            { ticker: 'GBPJPY1M Curncy', tenor: 30, label: '1M', years: 30/365 },
-            { ticker: 'GBPJPY3M Curncy', tenor: 90, label: '3M', years: 90/365 },
-            { ticker: 'GBPJPY6M Curncy', tenor: 180, label: '6M', years: 180/365 },
-            { ticker: 'GBPJPY12M Curncy', tenor: 365, label: '1Y', years: 1 },
-            { ticker: 'GBPJPY2Y Curncy', tenor: 730, label: '2Y', years: 2 }
+            { ticker: 'GBPJPY Curncy', tenor: 0, label: 'Spot' },
+            { ticker: 'GBPJPY1M Curncy', tenor: 30, label: '1M' },
+            { ticker: 'GBPJPY3M Curncy', tenor: 90, label: '3M' },
+            { ticker: 'GBPJPY6M Curncy', tenor: 180, label: '6M' },
+            { ticker: 'GBPJPY12M Curncy', tenor: 365, label: '1Y' },
+            { ticker: 'GBPJPY2Y Curncy', tenor: 730, label: '2Y' }
           ],
           pipDivisor: 100
         }
@@ -318,6 +327,9 @@ export function RateCurvesTab() {
           const points: CurvePoint[] = []
           const securities = data.data.securities_data
           
+          // For FX forwards, we need to calculate outright rates from spot + forward points
+          let spotRate: number | null = null
+          
           securities?.forEach((item: any, index: number) => {
             const instrument = config.instruments[index]
             if (!instrument) return
@@ -325,13 +337,12 @@ export function RateCurvesTab() {
             if (item.success && item.fields?.PX_LAST) {
               const value = item.fields.PX_LAST
               
-              // Yield curve - use values as-is and include years for proper scaling
+              // Yield curve - use values as-is (this is inside the yield curve section)
               points.push({
                 tenor: instrument.tenor,
                 rate: value,
                 label: instrument.label,
-                ticker: instrument.ticker,
-                years: instrument.years
+                ticker: instrument.ticker
               })
             }
           })
@@ -385,8 +396,7 @@ export function RateCurvesTab() {
                     tenor: instrument.tenor,
                     rate: value,
                     label: instrument.label,
-                    ticker: instrument.ticker,
-                    years: instrument.years
+                    ticker: instrument.ticker
                   })
                 } else if (spotRate !== null) {
                   // Calculate outright forward rate from spot + forward points
@@ -395,8 +405,7 @@ export function RateCurvesTab() {
                     tenor: instrument.tenor,
                     rate: forwardRate,
                     label: instrument.label,
-                    ticker: instrument.ticker,
-                    years: instrument.years
+                    ticker: instrument.ticker
                   })
                 }
               }
@@ -702,24 +711,6 @@ export function RateCurvesTab() {
             }}>
               <div style={{ color: currentTheme.textSecondary }}>
                 Loading rate curves...
-              </div>
-            </div>
-          )}
-          {configsLoading && (
-            <div style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              backgroundColor: currentTheme.background + 'dd',
-              borderRadius: '6px'
-            }}>
-              <div style={{ color: currentTheme.textSecondary }}>
-                Loading curve configurations...
               </div>
             </div>
           )}

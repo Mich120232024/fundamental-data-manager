@@ -389,6 +389,11 @@ class BloombergAPIClient {
         console.log(`✅ VALIDATED RESULT for ${tenor}:`, validatedData ? 'SUCCESS' : 'NULL')
         if (validatedData) {
           console.log(`✅ VALIDATED DATA:`, JSON.stringify(validatedData, null, 2))
+          console.log(`✅ VALIDATED RAW ATM DATA:`, {
+            atmBid: validatedData.raw?.atm_bid,
+            atmAsk: validatedData.raw?.atm_ask,
+            hasRaw: !!validatedData.raw
+          })
           validatedResults.push(validatedData)
         } else {
           console.error(`❌ VALIDATION FAILED for ${tenor}`)

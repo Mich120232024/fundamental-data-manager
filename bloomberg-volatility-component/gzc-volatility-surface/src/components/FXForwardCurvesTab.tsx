@@ -18,16 +18,7 @@ interface ForwardPoint {
   isInterpolated?: boolean
 }
 
-interface ForwardCurveConfig {
-  title: string
-  spotTicker: string
-  forwardTickers: Array<{
-    ticker: string
-    tenor: number
-    label: string
-    years: number
-  }>
-}
+// Interface removed - using backend API for all configurations
 
 export function FXForwardCurvesTab() {
   const { currentTheme } = useTheme()
@@ -35,7 +26,7 @@ export function FXForwardCurvesTab() {
   
   // Controls
   const [selectedPairs, setSelectedPairs] = useState<Set<CurrencyPair>>(new Set(['EURUSD', 'GBPUSD']))
-  const [displayMode, setDisplayMode] = useState<DisplayMode>('points')
+  const [displayMode] = useState<DisplayMode>('outright') // Fixed to outright mode - shows actual forward FX rates
   const [showGrid, setShowGrid] = useState(true)
   const [showLegend, setShowLegend] = useState(true)
   const [expandedSelector, setExpandedSelector] = useState(false)
@@ -123,317 +114,9 @@ export function FXForwardCurvesTab() {
     return colors[pair] || '#757575'  // Default grey if not defined
   }
 
-  // Forward curve configurations
-  const getForwardConfig = (pair: CurrencyPair): ForwardCurveConfig => {
-    const configs: Partial<Record<CurrencyPair, ForwardCurveConfig>> = {
-      EURUSD: {
-        title: 'EUR/USD Forward Curve',
-        spotTicker: 'EURUSD Curncy',
-        forwardTickers: [
-          { ticker: 'EURUSD1W Curncy', tenor: 7, label: '1W', years: 0.019 },
-          { ticker: 'EURUSD2W Curncy', tenor: 14, label: '2W', years: 0.038 },
-          { ticker: 'EURUSD1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'EURUSD2M Curncy', tenor: 60, label: '2M', years: 0.167 },
-          { ticker: 'EURUSD3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'EURUSD6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'EURUSD9M Curncy', tenor: 270, label: '9M', years: 0.75 },
-          { ticker: 'EURUSD1Y Curncy', tenor: 365, label: '1Y', years: 1 },
-          { ticker: 'EURUSD18M Curncy', tenor: 548, label: '18M', years: 1.5 },
-          { ticker: 'EURUSD2Y Curncy', tenor: 730, label: '2Y', years: 2 },
-          { ticker: 'EURUSD3Y Curncy', tenor: 1095, label: '3Y', years: 3 },
-          { ticker: 'EURUSD4Y Curncy', tenor: 1460, label: '4Y', years: 4 },
-          { ticker: 'EURUSD5Y Curncy', tenor: 1825, label: '5Y', years: 5 }
-        ]
-      },
-      GBPUSD: {
-        title: 'GBP/USD Forward Curve',
-        spotTicker: 'GBPUSD Curncy',
-        forwardTickers: [
-          { ticker: 'GBPUSD1W Curncy', tenor: 7, label: '1W', years: 0.019 },
-          { ticker: 'GBPUSD2W Curncy', tenor: 14, label: '2W', years: 0.038 },
-          { ticker: 'GBPUSD1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'GBPUSD2M Curncy', tenor: 60, label: '2M', years: 0.167 },
-          { ticker: 'GBPUSD3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'GBPUSD6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'GBPUSD9M Curncy', tenor: 270, label: '9M', years: 0.75 },
-          { ticker: 'GBPUSD1Y Curncy', tenor: 365, label: '1Y', years: 1 },
-          { ticker: 'GBPUSD18M Curncy', tenor: 548, label: '18M', years: 1.5 },
-          { ticker: 'GBPUSD2Y Curncy', tenor: 730, label: '2Y', years: 2 },
-          { ticker: 'GBPUSD3Y Curncy', tenor: 1095, label: '3Y', years: 3 },
-          { ticker: 'GBPUSD5Y Curncy', tenor: 1825, label: '5Y', years: 5 }
-        ]
-      },
-      USDJPY: {
-        title: 'USD/JPY Forward Curve',
-        spotTicker: 'USDJPY Curncy',
-        forwardTickers: [
-          { ticker: 'USDJPY1W Curncy', tenor: 7, label: '1W', years: 0.019 },
-          { ticker: 'USDJPY2W Curncy', tenor: 14, label: '2W', years: 0.038 },
-          { ticker: 'USDJPY1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'USDJPY2M Curncy', tenor: 60, label: '2M', years: 0.167 },
-          { ticker: 'USDJPY3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'USDJPY6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'USDJPY9M Curncy', tenor: 270, label: '9M', years: 0.75 },
-          { ticker: 'USDJPY1Y Curncy', tenor: 365, label: '1Y', years: 1 },
-          { ticker: 'USDJPY18M Curncy', tenor: 548, label: '18M', years: 1.5 },
-          { ticker: 'USDJPY2Y Curncy', tenor: 730, label: '2Y', years: 2 },
-          { ticker: 'USDJPY3Y Curncy', tenor: 1095, label: '3Y', years: 3 },
-          { ticker: 'USDJPY5Y Curncy', tenor: 1825, label: '5Y', years: 5 }
-        ]
-      },
-      USDCHF: {
-        title: 'USD/CHF Forward Curve',
-        spotTicker: 'USDCHF Curncy',
-        forwardTickers: [
-          { ticker: 'USDCHF1W Curncy', tenor: 7, label: '1W', years: 0.019 },
-          { ticker: 'USDCHF1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'USDCHF2M Curncy', tenor: 60, label: '2M', years: 0.167 },
-          { ticker: 'USDCHF3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'USDCHF6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'USDCHF9M Curncy', tenor: 270, label: '9M', years: 0.75 },
-          { ticker: 'USDCHF1Y Curncy', tenor: 365, label: '1Y', years: 1 },
-          { ticker: 'USDCHF2Y Curncy', tenor: 730, label: '2Y', years: 2 },
-          { ticker: 'USDCHF3Y Curncy', tenor: 1095, label: '3Y', years: 3 },
-          { ticker: 'USDCHF5Y Curncy', tenor: 1825, label: '5Y', years: 5 }
-        ]
-      },
-      AUDUSD: {
-        title: 'AUD/USD Forward Curve',
-        spotTicker: 'AUDUSD Curncy',
-        forwardTickers: [
-          { ticker: 'AUDUSD1W Curncy', tenor: 7, label: '1W', years: 0.019 },
-          { ticker: 'AUDUSD1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'AUDUSD2M Curncy', tenor: 60, label: '2M', years: 0.167 },
-          { ticker: 'AUDUSD3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'AUDUSD6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'AUDUSD9M Curncy', tenor: 270, label: '9M', years: 0.75 },
-          { ticker: 'AUDUSD1Y Curncy', tenor: 365, label: '1Y', years: 1 },
-          { ticker: 'AUDUSD2Y Curncy', tenor: 730, label: '2Y', years: 2 },
-          { ticker: 'AUDUSD3Y Curncy', tenor: 1095, label: '3Y', years: 3 },
-          { ticker: 'AUDUSD5Y Curncy', tenor: 1825, label: '5Y', years: 5 }
-        ]
-      },
-      USDCAD: {
-        title: 'USD/CAD Forward Curve',
-        spotTicker: 'USDCAD Curncy',
-        forwardTickers: [
-          { ticker: 'USDCAD1W Curncy', tenor: 7, label: '1W', years: 0.019 },
-          { ticker: 'USDCAD1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'USDCAD2M Curncy', tenor: 60, label: '2M', years: 0.167 },
-          { ticker: 'USDCAD3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'USDCAD6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'USDCAD9M Curncy', tenor: 270, label: '9M', years: 0.75 },
-          { ticker: 'USDCAD1Y Curncy', tenor: 365, label: '1Y', years: 1 },
-          { ticker: 'USDCAD2Y Curncy', tenor: 730, label: '2Y', years: 2 },
-          { ticker: 'USDCAD3Y Curncy', tenor: 1095, label: '3Y', years: 3 },
-          { ticker: 'USDCAD5Y Curncy', tenor: 1825, label: '5Y', years: 5 }
-        ]
-      },
-      NZDUSD: {
-        title: 'NZD/USD Forward Curve',
-        spotTicker: 'NZDUSD Curncy',
-        forwardTickers: [
-          { ticker: 'NZDUSD1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'NZDUSD3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'NZDUSD6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'NZDUSD1Y Curncy', tenor: 365, label: '1Y', years: 1 },
-          { ticker: 'NZDUSD2Y Curncy', tenor: 730, label: '2Y', years: 2 }
-        ]
-      },
-      EURGBP: {
-        title: 'EUR/GBP Forward Curve',
-        spotTicker: 'EURGBP Curncy',
-        forwardTickers: [
-          { ticker: 'EURGBP1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'EURGBP3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'EURGBP6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'EURGBP1Y Curncy', tenor: 365, label: '1Y', years: 1 },
-          { ticker: 'EURGBP2Y Curncy', tenor: 730, label: '2Y', years: 2 }
-        ]
-      },
-      EURJPY: {
-        title: 'EUR/JPY Forward Curve',
-        spotTicker: 'EURJPY Curncy',
-        forwardTickers: [
-          { ticker: 'EURJPY1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'EURJPY3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'EURJPY6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'EURJPY1Y Curncy', tenor: 365, label: '1Y', years: 1 },
-          { ticker: 'EURJPY2Y Curncy', tenor: 730, label: '2Y', years: 2 }
-        ]
-      },
-      GBPJPY: {
-        title: 'GBP/JPY Forward Curve',
-        spotTicker: 'GBPJPY Curncy',
-        forwardTickers: [
-          { ticker: 'GBPJPY1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'GBPJPY3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'GBPJPY6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'GBPJPY1Y Curncy', tenor: 365, label: '1Y', years: 1 },
-          { ticker: 'GBPJPY2Y Curncy', tenor: 730, label: '2Y', years: 2 }
-        ]
-      },
-      // Emerging Market pairs
-      USDMXN: {
-        title: 'USD/MXN Forward Curve',
-        spotTicker: 'USDMXN Curncy',
-        forwardTickers: [
-          { ticker: 'USDMXN1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'USDMXN3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'USDMXN6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'USDMXN1Y Curncy', tenor: 365, label: '1Y', years: 1 },
-          { ticker: 'USDMXN2Y Curncy', tenor: 730, label: '2Y', years: 2 }
-        ]
-      },
-      USDZAR: {
-        title: 'USD/ZAR Forward Curve',
-        spotTicker: 'USDZAR Curncy',
-        forwardTickers: [
-          { ticker: 'USDZAR1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'USDZAR3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'USDZAR6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'USDZAR1Y Curncy', tenor: 365, label: '1Y', years: 1 },
-          { ticker: 'USDZAR2Y Curncy', tenor: 730, label: '2Y', years: 2 }
-        ]
-      },
-      USDTRY: {
-        title: 'USD/TRY Forward Curve',
-        spotTicker: 'USDTRY Curncy',
-        forwardTickers: [
-          { ticker: 'USDTRY1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'USDTRY3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'USDTRY6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'USDTRY1Y Curncy', tenor: 365, label: '1Y', years: 1 },
-          { ticker: 'USDTRY2Y Curncy', tenor: 730, label: '2Y', years: 2 }
-        ]
-      },
-      USDBRL: {
-        title: 'USD/BRL Forward Curve',
-        spotTicker: 'USDBRL Curncy',
-        forwardTickers: [
-          { ticker: 'USDBRL1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'USDBRL3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'USDBRL6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'USDBRL1Y Curncy', tenor: 365, label: '1Y', years: 1 },
-          { ticker: 'USDBRL2Y Curncy', tenor: 730, label: '2Y', years: 2 }
-        ]
-      },
-      // EUR crosses
-      EURCHF: {
-        title: 'EUR/CHF Forward Curve',
-        spotTicker: 'EURCHF Curncy',
-        forwardTickers: [
-          { ticker: 'EURCHF1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'EURCHF3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'EURCHF6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'EURCHF1Y Curncy', tenor: 365, label: '1Y', years: 1 },
-          { ticker: 'EURCHF2Y Curncy', tenor: 730, label: '2Y', years: 2 }
-        ]
-      },
-      EURAUD: {
-        title: 'EUR/AUD Forward Curve',
-        spotTicker: 'EURAUD Curncy',
-        forwardTickers: [
-          { ticker: 'EURAUD1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'EURAUD3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'EURAUD6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'EURAUD1Y Curncy', tenor: 365, label: '1Y', years: 1 }
-        ]
-      },
-      EURCAD: {
-        title: 'EUR/CAD Forward Curve',
-        spotTicker: 'EURCAD Curncy',
-        forwardTickers: [
-          { ticker: 'EURCAD1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'EURCAD3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'EURCAD6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'EURCAD1Y Curncy', tenor: 365, label: '1Y', years: 1 }
-        ]
-      },
-      EURNZD: {
-        title: 'EUR/NZD Forward Curve',
-        spotTicker: 'EURNZD Curncy',
-        forwardTickers: [
-          { ticker: 'EURNZD1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'EURNZD3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'EURNZD6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'EURNZD1Y Curncy', tenor: 365, label: '1Y', years: 1 }
-        ]
-      },
-      // GBP crosses
-      GBPCHF: {
-        title: 'GBP/CHF Forward Curve',
-        spotTicker: 'GBPCHF Curncy',
-        forwardTickers: [
-          { ticker: 'GBPCHF1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'GBPCHF3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'GBPCHF6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'GBPCHF1Y Curncy', tenor: 365, label: '1Y', years: 1 }
-        ]
-      },
-      GBPAUD: {
-        title: 'GBP/AUD Forward Curve',
-        spotTicker: 'GBPAUD Curncy',
-        forwardTickers: [
-          { ticker: 'GBPAUD1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'GBPAUD3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'GBPAUD6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'GBPAUD1Y Curncy', tenor: 365, label: '1Y', years: 1 }
-        ]
-      },
-      // JPY crosses
-      AUDJPY: {
-        title: 'AUD/JPY Forward Curve',
-        spotTicker: 'AUDJPY Curncy',
-        forwardTickers: [
-          { ticker: 'AUDJPY1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'AUDJPY3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'AUDJPY6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'AUDJPY1Y Curncy', tenor: 365, label: '1Y', years: 1 }
-        ]
-      },
-      CADJPY: {
-        title: 'CAD/JPY Forward Curve',
-        spotTicker: 'CADJPY Curncy',
-        forwardTickers: [
-          { ticker: 'CADJPY1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'CADJPY3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'CADJPY6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'CADJPY1Y Curncy', tenor: 365, label: '1Y', years: 1 }
-        ]
-      },
-      NZDJPY: {
-        title: 'NZD/JPY Forward Curve',
-        spotTicker: 'NZDJPY Curncy',
-        forwardTickers: [
-          { ticker: 'NZDJPY1M Curncy', tenor: 30, label: '1M', years: 0.083 },
-          { ticker: 'NZDJPY3M Curncy', tenor: 90, label: '3M', years: 0.25 },
-          { ticker: 'NZDJPY6M Curncy', tenor: 180, label: '6M', years: 0.5 },
-          { ticker: 'NZDJPY1Y Curncy', tenor: 365, label: '1Y', years: 1 }
-        ]
-      }
-    }
-    
-    // For pairs not explicitly configured, generate standard config
-    if (!configs[pair]) {
-      const standardTenors = [
-        { ticker: `${pair}1M Curncy`, tenor: 30, label: '1M', years: 0.083 },
-        { ticker: `${pair}3M Curncy`, tenor: 90, label: '3M', years: 0.25 },
-        { ticker: `${pair}6M Curncy`, tenor: 180, label: '6M', years: 0.5 },
-        { ticker: `${pair}1Y Curncy`, tenor: 365, label: '1Y', years: 1 }
-      ]
-      
-      return {
-        title: `${pair} Forward Curve`,
-        spotTicker: `${pair} Curncy`,
-        forwardTickers: standardTenors
-      }
-    }
-    
-    return configs[pair]
-  }
+  // Configuration removed - using backend API for all curve definitions and calculations
 
-  // Fetch forward data from Bloomberg
+  // Fetch forward data from backend FX forwards endpoint
   const fetchForwardData = async () => {
     setLoading(true)
     setError(null)
@@ -442,90 +125,66 @@ export function FXForwardCurvesTab() {
       const apiUrl = import.meta.env.DEV ? 'http://localhost:8000' : 'http://20.172.249.92:8080'
       const newForwardData = new Map<CurrencyPair, ForwardPoint[]>()
       
-      // Fetch data for each selected pair
-      for (const pair of selectedPairs) {
-        const config = getForwardConfig(pair)
-        const allTickers = [config.spotTicker, ...config.forwardTickers.map(f => f.ticker)]
-        
-        const response = await fetch(`${apiUrl}/api/bloomberg/reference`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer test'
-          },
-          body: JSON.stringify({
-            securities: allTickers,
-            fields: ['PX_LAST', 'PX_BID', 'PX_ASK']
-          })
+      // Call backend FX forward curves endpoint
+      const response = await fetch(`${apiUrl}/api/fx-forwards/curves`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer test'
+        },
+        body: JSON.stringify({
+          currency_pairs: Array.from(selectedPairs),
+          display_mode: "outright", // Always request outright rates - the actual forward FX rates
+          max_tenor: "3Y"
         })
-        
-        if (!response.ok) {
-          throw new Error(`HTTP ${response.status}`)
-        }
-        
-        const result = await response.json()
-        
-        if (result.data?.securities_data) {
+      })
+      
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`)
+      }
+      
+      const result = await response.json()
+      
+      if (result.success && result.curves) {
+        // Process each curve from backend
+        result.curves.forEach((curve: any) => {
           const points: ForwardPoint[] = []
-          let spotRate = 0
           
-          // Get spot rate first
-          if (result.data.securities_data[0]?.success) {
-            spotRate = result.data.securities_data[0].fields?.PX_LAST || 0
+          // Add spot point first
+          if (curve.spot_rate) {
+            points.push({
+              tenor: 0,
+              years: 0,
+              spot: curve.spot_rate,
+              forward: curve.spot_rate,
+              points: 0,
+              impliedYield: 0,
+              label: 'Spot',
+              ticker: `${curve.currency_pair} Curncy`
+            })
           }
           
-          // Process forward points
-          config.forwardTickers.forEach((fwdConfig, index) => {
-            const dataIndex = index + 1 // Skip spot at index 0
-            if (dataIndex < result.data.securities_data.length && 
-                result.data.securities_data[dataIndex]?.success) {
-              const forward = result.data.securities_data[dataIndex].fields?.PX_LAST
-              
-              if (forward !== null && forward !== undefined && spotRate > 0) {
-                // Bloomberg forward tickers return forward POINTS directly, not outright rates
-                const forwardPoints = forward // This IS the forward points value
-                
-                // Calculate outright forward rate from spot + points
-                const forwardRate = pair.includes('JPY') 
-                  ? spotRate + (forwardPoints / 100)    // JPY pairs: points are in hundredths
-                  : spotRate + (forwardPoints / 10000)  // Major pairs: points are in ten-thousandths
-                
-                // Calculate implied yield differential
-                const impliedYield = ((forwardRate / spotRate) - 1) * (365 / fwdConfig.tenor) * 100
-                
-                points.push({
-                  tenor: fwdConfig.tenor,
-                  years: fwdConfig.years,
-                  spot: spotRate,
-                  forward: forwardRate,     // Use calculated outright rate
-                  points: forwardPoints,    // Use direct points from Bloomberg
-                  impliedYield: impliedYield,
-                  label: fwdConfig.label,
-                  ticker: fwdConfig.ticker
-                })
-              }
+          // Process curve points from backend (all calculations done server-side)
+          curve.curve_points.forEach((point: any) => {
+            if (point.forward_points !== null) {
+              points.push({
+                tenor: point.tenor_days,
+                years: point.tenor_days / 365.25, // Convert days to years
+                spot: curve.spot_rate,
+                forward: point.outright_rate || curve.spot_rate,
+                points: point.forward_points,
+                impliedYield: point.implied_yield || 0,
+                label: point.tenor,
+                ticker: point.bloomberg_ticker
+              })
             }
           })
           
           // Sort by years
           points.sort((a, b) => a.years - b.years)
           
-          // Add spot point at the beginning
-          if (spotRate > 0) {
-            points.unshift({
-              tenor: 0,
-              years: 0,
-              spot: spotRate,
-              forward: spotRate,
-              points: 0,
-              impliedYield: 0,
-              label: 'Spot',
-              ticker: config.spotTicker
-            })
-          }
-          
-          newForwardData.set(pair, points)
-        }
+          newForwardData.set(curve.currency_pair as CurrencyPair, points)
+        })
       }
       
       setForwardData(newForwardData)
@@ -938,26 +597,11 @@ export function FXForwardCurvesTab() {
         flexWrap: 'wrap',
         gap: '12px'
       }}>
-        {/* Display Mode Selector */}
+        {/* Display Mode Info - Backend handles calculations */}
         <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-          {(['points', 'outright', 'implied_yield'] as DisplayMode[]).map(mode => (
-            <button
-              key={mode}
-              onClick={() => setDisplayMode(mode)}
-              style={{
-                padding: '2px 6px',
-                backgroundColor: displayMode === mode ? currentTheme.primary : currentTheme.surface,
-                color: displayMode === mode ? currentTheme.background : currentTheme.textSecondary,
-                border: `1px solid ${currentTheme.border}`,
-                borderRadius: '3px',
-                cursor: 'pointer',
-                fontSize: '9px',
-                transition: 'all 0.2s ease'
-              }}
-            >
-              {mode === 'points' ? 'Points' : mode === 'outright' ? 'Outright' : 'Implied Yield'}
-            </button>
-          ))}
+          <span style={{ fontSize: '11px', color: currentTheme.textSecondary }}>
+            FX Forward Rates (Outright)
+          </span>
         </div>
 
         {/* Display Options */}
@@ -1279,7 +923,7 @@ export function FXForwardCurvesTab() {
             margin: '0 0 12px 0',
             color: currentTheme.text
           }}>
-            FX Forward Curves - {displayMode === 'points' ? 'Forward Points' : displayMode === 'outright' ? 'Outright Rates' : 'Implied Yield Differential'}
+            FX Forward Curves - Outright Rates
           </h3>
           
           {loading && (

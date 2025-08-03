@@ -2,7 +2,20 @@ import { useState, useEffect } from 'react'
 import { useTheme } from '../contexts/ThemeContext'
 import { bloombergAPI, VolatilityData, STANDARD_TENORS } from '../api/bloomberg'
 import { VolatilitySurfaceTable } from './VolatilitySurfaceTable'
-import { ALL_FX_PAIRS } from '../constants/currencies'
+
+// Major FX pairs for volatility trading
+const CURRENCY_PAIRS = [
+  // Major USD pairs
+  'EURUSD', 'GBPUSD', 'USDJPY', 'USDCHF', 'AUDUSD', 'USDCAD', 'NZDUSD',
+  // EUR crosses
+  'EURGBP', 'EURJPY', 'EURCHF', 'EURAUD', 'EURCAD', 'EURNZD',
+  // GBP crosses
+  'GBPJPY', 'GBPCHF', 'GBPAUD', 'GBPCAD', 'GBPNZD',
+  // JPY crosses
+  'AUDJPY', 'CADJPY', 'NZDJPY', 'CHFJPY',
+  // Other crosses
+  'AUDCAD', 'AUDCHF', 'AUDNZD', 'CADCHF', 'NZDCAD', 'NZDCHF'
+]
 
 export function VolatilitySurfaceContainer() {
   const { currentTheme } = useTheme()
@@ -55,22 +68,31 @@ export function VolatilitySurfaceContainer() {
         console.log('Historical data result:', surfaceData.length, 'tenors received')
       }
       
-      // Filter out empty tenors (no data at all)
-      const filteredData = surfaceData.filter(row => {
-        // ValidatedVolatilityData has raw property with original data
-        const rawData = (row as any).raw || row
-        return rawData.atm_bid !== null || rawData.atm_ask !== null ||
-               rawData.rr_5d_bid !== null || rawData.rr_5d_ask !== null ||
-               rawData.rr_10d_bid !== null || rawData.rr_10d_ask !== null ||
-               rawData.rr_15d_bid !== null || rawData.rr_15d_ask !== null ||
-               rawData.rr_25d_bid !== null || rawData.rr_25d_ask !== null ||
-               rawData.rr_35d_bid !== null || rawData.rr_35d_ask !== null ||
-               rawData.bf_5d_bid !== null || rawData.bf_5d_ask !== null ||
-               rawData.bf_10d_bid !== null || rawData.bf_10d_ask !== null ||
-               rawData.bf_15d_bid !== null || rawData.bf_15d_ask !== null ||
-               rawData.bf_25d_bid !== null || rawData.bf_25d_ask !== null ||
-               rawData.bf_35d_bid !== null || rawData.bf_35d_ask !== null
-      })
+      // Filter out empty tenors and convert ValidatedVolatilityData to VolatilityData format
+      const filteredData = surfaceData
+        .filter(row => {
+          // ValidatedVolatilityData has raw property with original data
+          const rawData = (row as any).raw || row
+          return rawData.atm_bid !== null || rawData.atm_ask !== null ||
+                 rawData.rr_5d_bid !== null || rawData.rr_5d_ask !== null ||
+                 rawData.rr_10d_bid !== null || rawData.rr_10d_ask !== null ||
+                 rawData.rr_15d_bid !== null || rawData.rr_15d_ask !== null ||
+                 rawData.rr_25d_bid !== null || rawData.rr_25d_ask !== null ||
+                 rawData.rr_35d_bid !== null || rawData.rr_35d_ask !== null ||
+                 rawData.bf_5d_bid !== null || rawData.bf_5d_ask !== null ||
+                 rawData.bf_10d_bid !== null || rawData.bf_10d_ask !== null ||
+                 rawData.bf_15d_bid !== null || rawData.bf_15d_ask !== null ||
+                 rawData.bf_25d_bid !== null || rawData.bf_25d_ask !== null ||
+                 rawData.bf_35d_bid !== null || rawData.bf_35d_ask !== null
+        })
+        .map(row => {
+          // Convert ValidatedVolatilityData to VolatilityData format for table display
+          const rawData = (row as any).raw || row
+          return {
+            tenor: row.tenor,
+            ...rawData
+          }
+        })
       
       console.log(`Filtered ${surfaceData.length} tenors down to ${filteredData.length} with data`)
       
@@ -225,75 +247,7 @@ export function VolatilitySurfaceContainer() {
               outline: 'none'
             }}
           >
-            <optgroup label="G10 USD Pairs">
-              <option value="EURUSD">EURUSD</option>
-              <option value="GBPUSD">GBPUSD</option>
-              <option value="AUDUSD">AUDUSD</option>
-              <option value="NZDUSD">NZDUSD</option>
-              <option value="USDJPY">USDJPY</option>
-              <option value="USDCHF">USDCHF</option>
-              <option value="USDCAD">USDCAD</option>
-              <option value="USDSEK">USDSEK</option>
-              <option value="USDNOK">USDNOK</option>
-            </optgroup>
-            <optgroup label="EM USD Pairs - Major">
-              <option value="USDBRL">USDBRL</option>
-              <option value="USDMXN">USDMXN</option>
-              <option value="USDZAR">USDZAR</option>
-              <option value="USDTRY">USDTRY</option>
-              <option value="USDINR">USDINR</option>
-              <option value="USDCNH">USDCNH</option>
-              <option value="USDKRW">USDKRW</option>
-              <option value="USDTWD">USDTWD</option>
-              <option value="USDSGD">USDSGD</option>
-              <option value="USDHKD">USDHKD</option>
-              <option value="USDTHB">USDTHB</option>
-            </optgroup>
-            <optgroup label="EM USD Pairs - CEEMEA">
-              <option value="USDPLN">USDPLN</option>
-              <option value="USDCZK">USDCZK</option>
-              <option value="USDHUF">USDHUF</option>
-              <option value="USDRUB">USDRUB</option>
-              <option value="USDILS">USDILS</option>
-            </optgroup>
-            <optgroup label="EM USD Pairs - LatAm & Asia">
-              <option value="USDPHP">USDPHP</option>
-              <option value="USDDKK">USDDKK</option>
-            </optgroup>
-            <optgroup label="Precious Metals">
-              <option value="XAUUSD">XAUUSD (Gold)</option>
-              <option value="XAGUSD">XAGUSD (Silver)</option>
-            </optgroup>
-            <optgroup label="EUR Crosses">
-              <option value="EURGBP">EURGBP</option>
-              <option value="EURJPY">EURJPY</option>
-              <option value="EURCHF">EURCHF</option>
-              <option value="EURAUD">EURAUD</option>
-              <option value="EURCAD">EURCAD</option>
-              <option value="EURNZD">EURNZD</option>
-              <option value="EURSEK">EURSEK</option>
-              <option value="EURNOK">EURNOK</option>
-            </optgroup>
-            <optgroup label="GBP Crosses">
-              <option value="GBPJPY">GBPJPY</option>
-              <option value="GBPCHF">GBPCHF</option>
-              <option value="GBPAUD">GBPAUD</option>
-              <option value="GBPCAD">GBPCAD</option>
-              <option value="GBPNZD">GBPNZD</option>
-            </optgroup>
-            <optgroup label="JPY Crosses">
-              <option value="AUDJPY">AUDJPY</option>
-              <option value="CADJPY">CADJPY</option>
-              <option value="NZDJPY">NZDJPY</option>
-              <option value="CHFJPY">CHFJPY</option>
-            </optgroup>
-            {ALL_FX_PAIRS.filter(pair => ![
-              'EURUSD', 'GBPUSD', 'AUDUSD', 'NZDUSD', 'USDJPY', 'USDCHF', 'USDCAD', 'USDSEK', 'USDNOK',
-              'USDBRL', 'USDCNH', 'USDCZK', 'USDHUF', 'USDILS', 'USDINR', 'USDKRW', 'USDMXN', 'USDPLN', 
-              'USDRUB', 'USDSGD', 'USDTHB', 'USDTRY', 'USDTWD', 'USDZAR', 'XAUUSD', 'XAGUSD',
-              'EURGBP', 'EURJPY', 'EURCHF', 'EURAUD', 'EURCAD', 'EURNZD', 'EURSEK', 'EURNOK',
-              'GBPJPY', 'GBPCHF', 'GBPAUD', 'GBPCAD', 'GBPNZD', 'AUDJPY', 'CADJPY', 'NZDJPY', 'CHFJPY'
-            ].includes(pair)).map(pair => (
+            {CURRENCY_PAIRS.map(pair => (
               <option key={pair} value={pair}>{pair}</option>
             ))}
           </select>

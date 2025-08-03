@@ -1,7 +1,15 @@
 import { useState, useEffect } from 'react'
 import { useTheme } from '../contexts/ThemeContext'
 import { bloombergAPI, STANDARD_TENORS } from '../api/bloomberg'
-import { ALL_FX_PAIRS } from '../constants/currencies'
+
+// Major FX pairs for volatility trading
+const CURRENCY_PAIRS = [
+  'EURUSD', 'GBPUSD', 'USDJPY', 'USDCHF', 'AUDUSD', 'USDCAD', 'NZDUSD',
+  'EURGBP', 'EURJPY', 'EURCHF', 'EURAUD', 'EURCAD', 'EURNZD',
+  'GBPJPY', 'GBPCHF', 'GBPAUD', 'GBPCAD', 'GBPNZD',
+  'AUDJPY', 'CADJPY', 'NZDJPY', 'CHFJPY',
+  'AUDCAD', 'AUDCHF', 'AUDNZD', 'CADCHF', 'NZDCAD', 'NZDCHF'
+]
 
 interface HistoricalVolData {
   date: string
@@ -224,7 +232,7 @@ export function VolatilityHistoricalTable() {
                 outline: 'none'
               }}
             >
-              {ALL_FX_PAIRS.map(pair => (
+              {CURRENCY_PAIRS.map(pair => (
                 <option key={pair} value={pair}>{pair}</option>
               ))}
             </select>

@@ -25,7 +25,6 @@ export interface Theme {
   danger: string
   warning: string
   info: string
-  error: string
   muted: string
   
   // Special effects
@@ -68,7 +67,6 @@ export const themes: Record<string, Theme> = {
     danger: '#D69A82',
     warning: '#E6D690',
     info: '#8BB4DD',
-    error: '#D69A82',
     muted: '#9a9488',
     gradient: `linear-gradient(135deg, ${GZC_GREEN.base} 0%, ${GZC_GREEN.light} 100%)`,
     headerColor: GZC_GREEN.base

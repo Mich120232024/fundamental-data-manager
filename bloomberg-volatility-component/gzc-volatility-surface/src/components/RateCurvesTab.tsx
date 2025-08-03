@@ -1,8 +1,9 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { useTheme } from '../contexts/ThemeContext'
-import { Currency } from '../constants/currencies'
+import * as d3 from 'd3'
 
 type CurveType = 'yield' | 'forward'
+type Currency = 'USD' | 'EUR' | 'GBP' | 'JPY' | 'CHF' | 'AUD' | 'CAD' | 'NZD'
 
 interface CurvePoint {
   tenor: number // Days to maturity
@@ -13,6 +14,8 @@ interface CurvePoint {
 export function RateCurvesTab() {
   const { currentTheme } = useTheme()
   const chartContainerRef = useRef<HTMLDivElement>(null)
+  const chartRef = useRef<IChartApi | null>(null)
+  const seriesRefs = useRef<Map<Currency, ISeriesApi<'Line'>>>(new Map())
   
   // Controls
   const [curveType, setCurveType] = useState<CurveType>('yield')
@@ -29,7 +32,7 @@ export function RateCurvesTab() {
   const [historicalDataCache, setHistoricalDataCache] = useState<Map<string, Map<Currency, CurvePoint[]>>>(new Map())
 
   // Animation
-  const animationRef = useRef<NodeJS.Timeout | null>(null)
+  const animationRef = useRef<NodeJS.Timeout>()
   const currentDateIndex = useRef(0)
 
   // Curve configuration based on type and currency
