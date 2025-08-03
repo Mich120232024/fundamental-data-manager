@@ -1,0 +1,606 @@
+{
+  "api_research_batch_14_chunk_4": {
+    "research_date": "2025-08-02",
+    "schema_version": "enhanced_v2",
+    "total_apis_researched": 5,
+    "apis": [
+      {
+        "name": "FinancialModelingPrep API",
+        "category": "Financial statements and market data",
+        "description": "Comprehensive financial data API offering real-time stock prices, financial statements, company information, and over 100 endpoints with continuous expansion of features",
+        "technical_info": {
+          "base_url": "https://financialmodelingprep.com/api",
+          "protocol": "REST",
+          "data_formats": ["JSON", "CSV"],
+          "auth_method": "api_key",
+          "authentication_details": "API key passed as URL parameter ?apikey=YOUR_API_KEY or &apikey=YOUR_API_KEY if other parameters exist",
+          "endpoints": [
+            {
+              "path": "/v3/quote/{symbol}",
+              "full_url": "https://financialmodelingprep.com/api/v3/quote/{symbol}",
+              "method": "GET",
+              "description": "Full quote with latest bid/ask prices, volume, and last trade price in real-time",
+              "documentation_link": "https://site.financialmodelingprep.com/developer/docs/stock-api",
+              "parameters": ["symbol", "apikey"],
+              "response_format": "JSON with comprehensive quote data including price, volume, change percentages"
+            },
+            {
+              "path": "/v3/income-statement/{symbol}",
+              "full_url": "https://financialmodelingprep.com/api/v3/income-statement/{symbol}",
+              "method": "GET",
+              "description": "Annual and quarterly income statements with detailed financial data",
+              "documentation_link": "https://site.financialmodelingprep.com/developer/docs",
+              "parameters": ["symbol", "period", "limit", "apikey"],
+              "response_format": "JSON array with income statement data for multiple periods"
+            },
+            {
+              "path": "/v3/historical-price-full/{symbol}",
+              "full_url": "https://financialmodelingprep.com/api/v3/historical-price-full/{symbol}",
+              "method": "GET",
+              "description": "Historical stock prices from 1 minute to daily intervals",
+              "documentation_link": "https://site.financialmodelingprep.com/developer/docs",
+              "parameters": ["symbol", "from", "to", "apikey"],
+              "response_format": "JSON with historical OHLCV data"
+            },
+            {
+              "path": "/v3/profile/{symbol}",
+              "full_url": "https://financialmodelingprep.com/api/v3/profile/{symbol}",
+              "method": "GET",
+              "description": "Company profile with core information and market capitalization",
+              "documentation_link": "https://site.financialmodelingprep.com/developer/docs",
+              "parameters": ["symbol", "apikey"],
+              "response_format": "JSON with company details, sector, industry, employees, description"
+            },
+            {
+              "path": "/v3/stock-screener",
+              "full_url": "https://financialmodelingprep.com/api/v3/stock-screener",
+              "method": "GET",
+              "description": "Stock screener to filter stocks by market cap, price, volume, beta, sector, country",
+              "documentation_link": "https://site.financialmodelingprep.com/developer/docs",
+              "parameters": ["marketCapMoreThan", "marketCapLowerThan", "priceMoreThan", "priceLowerThan", "volumeMoreThan", "sector", "country", "limit", "apikey"],
+              "response_format": "JSON array with filtered stock results"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://site.financialmodelingprep.com/developer/docs",
+            "authentication": "API key authentication via URL parameters",
+            "endpoints_reference": "https://site.financialmodelingprep.com/developer/docs/stable",
+            "code_examples": "Available in documentation with multiple programming languages",
+            "sdks_libraries": "Community libraries available on GitHub"
+          }
+        },
+        "pricing": {
+          "model": "subscription_tiers",
+          "pricing_tiers": [
+            {
+              "name": "Free",
+              "price": "$0/month",
+              "requests_included": "250 requests/day with 500MB bandwidth",
+              "features": ["Limited endpoints", "Exploration and evaluation", "Basic data access"]
+            },
+            {
+              "name": "Starter",
+              "price": "Contact for pricing",
+              "requests_included": "20GB bandwidth/month",
+              "features": ["Fundamental financial market data", "More endpoints", "Higher limits"]
+            },
+            {
+              "name": "Premium",
+              "price": "Contact for pricing",
+              "requests_included": "50GB bandwidth/month",
+              "features": ["Comprehensive fundamental and advanced data", "All standard endpoints"]
+            },
+            {
+              "name": "Ultimate",
+              "price": "Contact for pricing",
+              "requests_included": "150GB bandwidth/month",
+              "features": ["Complete access to all financial market data", "All endpoints"]
+            },
+            {
+              "name": "Enterprise",
+              "price": "Custom pricing",
+              "requests_included": "1TB+ bandwidth/month",
+              "features": ["Custom endpoints", "Dedicated support", "Data licensing"]
+            }
+          ],
+          "free_tier": "250 requests/day with 500MB bandwidth",
+          "rate_limits": "Varies by plan with trailing 30-day bandwidth limits"
+        },
+        "data_coverage": {
+          "geographic_coverage": "Global markets with focus on US",
+          "asset_classes": ["Stocks", "ETFs", "Crypto", "Forex", "Commodities"],
+          "data_history": "20+ years of historical data",
+          "update_frequency": "Real-time and daily updates",
+          "total_instruments": "70,000+ symbols"
+        },
+        "unique_features": [
+          "Excel Add-on for data integration",
+          "WebSocket for real-time price data",
+          "Code-free API Playground",
+          "M&A RSS Feed",
+          "Stock financial scores",
+          "30% student discount"
+        ],
+        "contact_info": {
+          "website": "https://site.financialmodelingprep.com/",
+          "support": "Available through website contact form"
+        },
+        "api_status": "Active",
+        "last_verified": "2025-08-02"
+      },
+      {
+        "name": "Alpha Vantage API",
+        "category": "Stock market data and technical indicators",
+        "description": "Free JSON APIs for realtime and historical stock market data with over 50 technical indicators, economic data, and AI-powered news sentiment analysis",
+        "technical_info": {
+          "base_url": "https://www.alphavantage.co/query",
+          "protocol": "REST",
+          "data_formats": ["JSON", "CSV"],
+          "auth_method": "api_key",
+          "authentication_details": "API key passed as URL parameter &apikey=YOUR_API_KEY",
+          "endpoints": [
+            {
+              "path": "/query?function=TIME_SERIES_DAILY",
+              "full_url": "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY",
+              "method": "GET",
+              "description": "Daily time series with 20+ years of historical depth",
+              "documentation_link": "https://www.alphavantage.co/documentation/",
+              "parameters": ["function", "symbol", "outputsize", "datatype", "apikey"],
+              "response_format": "JSON/CSV with daily OHLCV data"
+            },
+            {
+              "path": "/query?function=GLOBAL_QUOTE",
+              "full_url": "https://www.alphavantage.co/query?function=GLOBAL_QUOTE",
+              "method": "GET",
+              "description": "Latest price and volume information for a ticker",
+              "documentation_link": "https://www.alphavantage.co/documentation/",
+              "parameters": ["function", "symbol", "apikey"],
+              "response_format": "JSON with current quote data"
+            },
+            {
+              "path": "/query?function=NEWS_SENTIMENT",
+              "full_url": "https://www.alphavantage.co/query?function=NEWS_SENTIMENT",
+              "method": "GET",
+              "description": "Real-time news and AI-powered sentiment analysis",
+              "documentation_link": "https://www.alphavantage.co/documentation/",
+              "parameters": ["function", "tickers", "topics", "time_from", "time_to", "sort", "limit", "apikey"],
+              "response_format": "JSON with news articles and sentiment scores"
+            },
+            {
+              "path": "/query?function=RSI",
+              "full_url": "https://www.alphavantage.co/query?function=RSI",
+              "method": "GET",
+              "description": "Relative Strength Index technical indicator",
+              "documentation_link": "https://www.alphavantage.co/documentation/",
+              "parameters": ["function", "symbol", "interval", "time_period", "series_type", "apikey"],
+              "response_format": "JSON with RSI values"
+            },
+            {
+              "path": "/query?function=TREASURY_YIELD",
+              "full_url": "https://www.alphavantage.co/query?function=TREASURY_YIELD",
+              "method": "GET",
+              "description": "US treasury yield rates and economic indicators",
+              "documentation_link": "https://www.alphavantage.co/documentation/",
+              "parameters": ["function", "interval", "maturity", "apikey"],
+              "response_format": "JSON with treasury yield data"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.alphavantage.co/documentation/",
+            "authentication": "Free API key with lifetime access",
+            "endpoints_reference": "https://www.alphavantage.co/documentation/",
+            "code_examples": "Available in documentation for multiple languages",
+            "sdks_libraries": "1000+ community libraries across 20+ languages"
+          }
+        },
+        "pricing": {
+          "model": "freemium",
+          "pricing_tiers": [
+            {
+              "name": "Free",
+              "price": "$0/month",
+              "requests_included": "25 requests/day, 5 requests/minute",
+              "features": ["Most API endpoints", "Limited rate", "500 requests/day max"]
+            },
+            {
+              "name": "Premium",
+              "price": "Starting at $29.99/month",
+              "requests_included": "Higher limits based on plan",
+              "features": ["All endpoints", "Higher rate limits", "Premium functions", "Priority support"]
+            }
+          ],
+          "free_tier": "25 API requests/day with 5 requests/minute",
+          "rate_limits": "5 per minute and 500 per day on free tier"
+        },
+        "data_coverage": {
+          "geographic_coverage": "Global markets",
+          "asset_classes": ["Stocks", "ETFs", "Crypto", "Forex", "Commodities"],
+          "data_history": "20+ years of historical data",
+          "update_frequency": "Real-time with 15-minute delay for US data on free tier",
+          "total_instruments": "Global equity coverage"
+        },
+        "unique_features": [
+          "50+ technical indicators",
+          "AI-powered news sentiment",
+          "Economic indicators data",
+          "Alpha Intelligence™ features",
+          "Excel and Google Sheets add-ons",
+          "Extensive community support"
+        ],
+        "contact_info": {
+          "website": "https://www.alphavantage.co/",
+          "support": "https://www.alphavantage.co/support/"
+        },
+        "api_status": "Active",
+        "last_verified": "2025-08-02"
+      },
+      {
+        "name": "IEX Cloud API",
+        "category": "Financial data platform for developers",
+        "description": "IEX Cloud was a comprehensive financial data platform that provided REST APIs for market data. The service was officially retired on August 31, 2024",
+        "technical_info": {
+          "base_url": "https://cloud.iexapis.com/stable",
+          "protocol": "REST",
+          "data_formats": ["JSON"],
+          "auth_method": "api_key",
+          "authentication_details": "API token passed as URL parameter ?token=YOUR_TOKEN",
+          "endpoints": [
+            {
+              "path": "/stock/{symbol}/quote",
+              "full_url": "https://cloud.iexapis.com/stable/stock/{symbol}/quote",
+              "method": "GET",
+              "description": "Real-time stock quote data",
+              "documentation_link": "https://iexcloud.io/docs/api/",
+              "parameters": ["symbol", "token"],
+              "response_format": "JSON with quote data"
+            },
+            {
+              "path": "/stock/{symbol}/chart/{range}",
+              "full_url": "https://cloud.iexapis.com/stable/stock/{symbol}/chart/{range}",
+              "method": "GET",
+              "description": "Historical price data for various time ranges",
+              "documentation_link": "https://iexcloud.io/docs/api/",
+              "parameters": ["symbol", "range", "token"],
+              "response_format": "JSON array with historical data"
+            },
+            {
+              "path": "/stock/market/{index}/quote",
+              "full_url": "https://cloud.iexapis.com/stable/stock/market/{index}/quote",
+              "method": "GET",
+              "description": "Market index data",
+              "documentation_link": "https://iexcloud.io/docs/api/",
+              "parameters": ["index", "token"],
+              "response_format": "JSON with market data"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "Service discontinued",
+            "authentication": "Token-based authentication (legacy)",
+            "endpoints_reference": "https://iexcloud.io/docs/api/ (archived)",
+            "code_examples": "Legacy documentation",
+            "sdks_libraries": "Various community libraries (deprecated)"
+          }
+        },
+        "pricing": {
+          "model": "discontinued",
+          "pricing_tiers": [
+            {
+              "name": "Free (Historical)",
+              "price": "$0/month",
+              "requests_included": "500,000 messages/month",
+              "features": ["Limited endpoints", "Basic data access"]
+            },
+            {
+              "name": "Launch (Historical)",
+              "price": "$9/month",
+              "requests_included": "5 million messages/month",
+              "features": ["Core features", "More endpoints"]
+            },
+            {
+              "name": "Grow/Scale (Historical)",
+              "price": "Variable",
+              "requests_included": "Pay-as-you-go credits",
+              "features": ["All features", "Volume pricing"]
+            }
+          ],
+          "free_tier": "Service discontinued",
+          "rate_limits": "N/A - Service closed"
+        },
+        "data_coverage": {
+          "geographic_coverage": "Previously global with US focus",
+          "asset_classes": ["Stocks", "ETFs", "Market indices"],
+          "data_history": "Multiple years (when active)",
+          "update_frequency": "Was real-time",
+          "total_instruments": "Comprehensive US market coverage (historical)"
+        },
+        "unique_features": [
+          "Developer-friendly design (historical)",
+          "Sandbox environment for development",
+          "Simple pricing model",
+          "Clean API design"
+        ],
+        "contact_info": {
+          "website": "Service discontinued",
+          "support": "Migrated to alternatives"
+        },
+        "api_status": "Discontinued (August 31, 2024)",
+        "last_verified": "2025-08-02",
+        "notes": "IEX Cloud shut down to allow parent company IEX to refocus on core exchange operations. Users have migrated to alternatives like Alpha Vantage and Polygon.io"
+      },
+      {
+        "name": "Polygon.io API",
+        "category": "Stock market data and financial APIs",
+        "description": "Comprehensive financial market data API providing real-time and historical data with ultra-low latency, unlimited usage, and transparent pricing across stocks, options, forex, and crypto",
+        "technical_info": {
+          "base_url": "https://api.polygon.io",
+          "protocol": "REST and WebSocket",
+          "data_formats": ["JSON", "CSV"],
+          "auth_method": "api_key",
+          "authentication_details": "API key passed as URL parameter ?apikey=YOUR_API_KEY",
+          "endpoints": [
+            {
+              "path": "/v2/aggs/ticker/{ticker}/range/{multiplier}/{timespan}/{from}/{to}",
+              "full_url": "https://api.polygon.io/v2/aggs/ticker/{ticker}/range/{multiplier}/{timespan}/{from}/{to}",
+              "method": "GET",
+              "description": "Stock aggregates (OHLC) data for specific time ranges",
+              "documentation_link": "https://polygon.io/docs/rest/quickstart",
+              "parameters": ["ticker", "multiplier", "timespan", "from", "to", "adjusted", "sort", "limit", "apikey"],
+              "response_format": "JSON with aggregate bars data"
+            },
+            {
+              "path": "/v2/snapshot/locale/us/markets/stocks/tickers",
+              "full_url": "https://api.polygon.io/v2/snapshot/locale/us/markets/stocks/tickers",
+              "method": "GET",
+              "description": "Snapshot of all tickers or specific ticker groups",
+              "documentation_link": "https://polygon.io/docs",
+              "parameters": ["tickers", "apikey"],
+              "response_format": "JSON with market snapshot data"
+            },
+            {
+              "path": "/v1/open-close/{ticker}/{date}",
+              "full_url": "https://api.polygon.io/v1/open-close/{ticker}/{date}",
+              "method": "GET",
+              "description": "Daily open, close, high, and low for a stock",
+              "documentation_link": "https://polygon.io/docs",
+              "parameters": ["ticker", "date", "adjusted", "apikey"],
+              "response_format": "JSON with daily OHLC data"
+            },
+            {
+              "path": "/v2/reference/tickers",
+              "full_url": "https://api.polygon.io/v2/reference/tickers",
+              "method": "GET",
+              "description": "Reference data for all available tickers",
+              "documentation_link": "https://polygon.io/docs",
+              "parameters": ["ticker", "type", "market", "exchange", "active", "sort", "order", "limit", "apikey"],
+              "response_format": "JSON with ticker reference data"
+            },
+            {
+              "path": "/v2/reference/dividends",
+              "full_url": "https://api.polygon.io/v2/reference/dividends",
+              "method": "GET",
+              "description": "Dividend data for stocks",
+              "documentation_link": "https://polygon.io/docs",
+              "parameters": ["ticker", "ex_dividend_date", "record_date", "declaration_date", "pay_date", "frequency", "limit", "apikey"],
+              "response_format": "JSON with dividend information"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://polygon.io/docs/rest/quickstart",
+            "authentication": "API key authentication",
+            "endpoints_reference": "https://polygon.io/docs",
+            "code_examples": "Available in documentation with tutorials",
+            "sdks_libraries": "https://github.com/polygon-io"
+          }
+        },
+        "pricing": {
+          "model": "subscription_tiers",
+          "pricing_tiers": [
+            {
+              "name": "Free",
+              "price": "$0/month",
+              "requests_included": "5 API calls/minute",
+              "features": ["End of day data", "Historical data", "Basic access"]
+            },
+            {
+              "name": "Starter",
+              "price": "$29/month",
+              "requests_included": "Higher limits",
+              "features": ["Real-time data", "More API calls", "WebSocket access"]
+            },
+            {
+              "name": "Developer",
+              "price": "$79/month",
+              "requests_included": "Professional limits",
+              "features": ["All starter features", "Advanced endpoints", "Priority support"]
+            },
+            {
+              "name": "Advanced/Enterprise",
+              "price": "Custom pricing",
+              "requests_included": "Custom limits",
+              "features": ["Full access", "Custom solutions", "Dedicated support"]
+            }
+          ],
+          "free_tier": "5 API calls/minute with end-of-day and historical data",
+          "rate_limits": "Varies by plan from 5/minute to unlimited"
+        },
+        "data_coverage": {
+          "geographic_coverage": "Global with 50+ countries",
+          "asset_classes": ["Stocks", "Options", "Forex", "Crypto", "Indices"],
+          "data_history": "10+ years of historical data",
+          "update_frequency": "Real-time with <20ms latency",
+          "total_instruments": "1 million+ public instruments"
+        },
+        "unique_features": [
+          "Ultra-low latency (<20ms)",
+          "WebSocket streaming",
+          "Flat Files for bulk downloads",
+          "S3-compatible interface",
+          "MCP server integration (2025)",
+          "Benzinga partnership for news data",
+          "Beautiful API documentation"
+        ],
+        "contact_info": {
+          "website": "https://polygon.io/",
+          "github": "https://github.com/polygon-io"
+        },
+        "api_status": "Active",
+        "last_verified": "2025-08-02"
+      },
+      {
+        "name": "Twelve Data API",
+        "category": "Real-time and historical financial data",
+        "description": "Global financial market data API covering 1 million+ instruments across 50+ countries with real-time streaming, 100+ technical indicators, and comprehensive historical data",
+        "technical_info": {
+          "base_url": "https://api.twelvedata.com",
+          "protocol": "REST and WebSocket",
+          "data_formats": ["JSON", "CSV"],
+          "auth_method": "api_key",
+          "authentication_details": "API key passed as URL parameter &apikey=YOUR_API_KEY",
+          "endpoints": [
+            {
+              "path": "/time_series",
+              "full_url": "https://api.twelvedata.com/time_series",
+              "method": "GET",
+              "description": "Time series data with OHLC prices ordered by time",
+              "documentation_link": "https://twelvedata.com/docs",
+              "parameters": ["symbol", "interval", "outputsize", "timezone", "start_date", "end_date", "format", "apikey"],
+              "response_format": "JSON/CSV with meta and time series data"
+            },
+            {
+              "path": "/price",
+              "full_url": "https://api.twelvedata.com/price",
+              "method": "GET",
+              "description": "Real-time price for stocks, forex, and crypto",
+              "documentation_link": "https://twelvedata.com/docs",
+              "parameters": ["symbol", "apikey"],
+              "response_format": "JSON with current price"
+            },
+            {
+              "path": "/quote",
+              "full_url": "https://api.twelvedata.com/quote",
+              "method": "GET",
+              "description": "Real-time quote data with full market information",
+              "documentation_link": "https://twelvedata.com/docs",
+              "parameters": ["symbol", "interval", "apikey"],
+              "response_format": "JSON with comprehensive quote data"
+            },
+            {
+              "path": "/{indicator}",
+              "full_url": "https://api.twelvedata.com/{indicator}",
+              "method": "GET",
+              "description": "Technical indicators (100+ available)",
+              "documentation_link": "https://twelvedata.com/docs",
+              "parameters": ["symbol", "interval", "indicator-specific-params", "apikey"],
+              "response_format": "JSON with indicator values"
+            },
+            {
+              "path": "/income_statement",
+              "full_url": "https://api.twelvedata.com/income_statement",
+              "method": "GET",
+              "description": "Company income statement fundamental data",
+              "documentation_link": "https://twelvedata.com/docs",
+              "parameters": ["symbol", "period", "apikey"],
+              "response_format": "JSON with financial statement data"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://twelvedata.com/docs",
+            "authentication": "API key via URL parameter",
+            "endpoints_reference": "https://twelvedata.com/docs",
+            "code_examples": "Available in documentation",
+            "sdks_libraries": "https://github.com/twelvedata/twelvedata-python"
+          }
+        },
+        "pricing": {
+          "model": "credit_based",
+          "pricing_tiers": [
+            {
+              "name": "Free",
+              "price": "$0/month",
+              "requests_included": "Limited credits",
+              "features": ["Basic real-time and historical data", "Limited API calls", "Evaluation access"]
+            },
+            {
+              "name": "Starter",
+              "price": "$29/month",
+              "requests_included": "More API credits",
+              "features": ["Extended data access", "More symbols", "Email support"]
+            },
+            {
+              "name": "Pro 610",
+              "price": "Higher tier",
+              "requests_included": "610 credits/minute",
+              "features": ["WebSocket access", "100+ technical indicators", "Priority support"]
+            },
+            {
+              "name": "Custom",
+              "price": "Contact for pricing",
+              "requests_included": "Custom credit limits",
+              "features": ["Unlimited flexibility", "Custom solutions", "Dedicated support"]
+            }
+          ],
+          "free_tier": "Available with limited access for evaluation",
+          "rate_limits": "Credit-based system, resets each minute"
+        },
+        "data_coverage": {
+          "geographic_coverage": "50+ global countries",
+          "asset_classes": ["Stocks", "Forex", "ETFs", "Mutual Funds", "Commodities", "Crypto", "Indices"],
+          "data_history": "10+ years of historical data",
+          "update_frequency": "Real-time with 170ms average latency via WebSocket",
+          "total_instruments": "1 million+ instruments, 100,000+ symbols"
+        },
+        "unique_features": [
+          "100+ technical indicators",
+          "Ultra-low WebSocket latency (170ms)",
+          "Batch requests up to 120 symbols",
+          "Pre/Post market data for US equities",
+          "99.95% uptime SLA",
+          "Credit-based flexible system",
+          "Commodity data including metals and agriculture"
+        ],
+        "contact_info": {
+          "website": "https://twelvedata.com/",
+          "support": "Available through website"
+        },
+        "api_status": "Active",
+        "last_verified": "2025-08-02"
+      }
+    ],
+    "research_methodology": {
+      "sources_used": [
+        "Official API documentation sites",
+        "Developer portals",
+        "Pricing pages",
+        "GitHub repositories",
+        "API marketplace listings",
+        "Technical blog posts"
+      ],
+      "verification_methods": [
+        "Cross-referenced official documentation",
+        "Verified pricing information",
+        "Checked API status and availability",
+        "Reviewed recent updates and announcements"
+      ]
+    },
+    "summary_insights": {
+      "active_apis": 4,
+      "discontinued_apis": 1,
+      "pricing_models": {
+        "subscription_based": 3,
+        "credit_based": 1,
+        "freemium": 2,
+        "discontinued": 1
+      },
+      "authentication_methods": {
+        "api_key_url_param": 5
+      },
+      "unique_offerings": {
+        "websocket_streaming": 3,
+        "technical_indicators": 2,
+        "ai_features": 1,
+        "excel_integration": 2,
+        "student_discounts": 1
+      }
+    }
+  }
+}

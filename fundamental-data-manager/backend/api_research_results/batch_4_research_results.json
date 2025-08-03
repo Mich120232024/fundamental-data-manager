@@ -1,0 +1,1333 @@
+[
+  {
+    "id": "gates-open-research-api",
+    "name": "Gates Open Research API",
+    "provider": "Bill & Melinda Gates Foundation / F1000 Research",
+    "description": "API for accessing open-access research articles funded by the Bill & Melinda Gates Foundation. Built on F1000 Research platform with immediate publication and open peer review.",
+    "discovery_status": "documented",
+    "tags": ["Gates Foundation", "F1000 platform", "biomedical research", "open access", "global health"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "100 requests per 60 seconds, 100 results per request"
+    },
+    "technical_info": {
+      "base_url": "https://gatesopenresearch.org",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/extapi/search",
+          "full_url": "https://gatesopenresearch.org/extapi/search",
+          "method": "GET",
+          "description": "Search Gates Open Research articles using Solr queries",
+          "documentation_link": "https://gatesopenresearch.org/developers",
+          "parameters": ["q", "wt", "rows", "start"],
+          "response_format": "XML/JSON with article metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://gatesopenresearch.org/developers",
+        "authentication": "https://gatesopenresearch.org/developers",
+        "endpoints_reference": "https://gatesopenresearch.org/developers",
+        "code_examples": "https://gatesopenresearch.org/developers",
+        "sdks_libraries": "https://gatesopenresearch.org/developers"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Global health research", "Biomedical research", "Development research", "Research articles", "Data notes"],
+      "geographic_scope": "Global Gates-funded research",
+      "update_frequency": "Continuous publication",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://gatesopenresearch.org/developers",
+      "sample_endpoints": ["/extapi/search", "/published-xml-urls"],
+      "data_quality": "Good - built on established F1000 Research platform",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Uses same API structure as F1000 Research with Solr-based search. No API key required for read access.",
+      "api_summary": "Gates Open Research API provides programmatic access to global health and development research publications funded by the Bill & Melinda Gates Foundation. Built on the F1000 Research platform, it offers Solr-based search capabilities and full-text access to research articles, making it valuable for researchers studying Gates-funded research outputs and global health initiatives."
+    }
+  },
+  {
+    "id": "biorxiv-api",
+    "name": "BioRxiv API",
+    "provider": "Cold Spring Harbor Laboratory",
+    "description": "API for accessing life sciences preprints from bioRxiv repository. Provides comprehensive access to preprint metadata with excellent documentation and community tools.",
+    "discovery_status": "documented",
+    "tags": ["preprints", "life sciences", "biology", "open access", "academic repository"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "self-imposed 1 second timeout recommended"
+    },
+    "technical_info": {
+      "base_url": "https://api.biorxiv.org",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/details/biorxiv/{interval}/{cursor}/{format}",
+          "full_url": "https://api.biorxiv.org/details/biorxiv/{interval}/{cursor}/{format}",
+          "method": "GET",
+          "description": "Retrieves preprint details with pagination support",
+          "documentation_link": "https://api.biorxiv.org/",
+          "parameters": ["interval", "cursor", "format"],
+          "response_format": "JSON with preprint metadata"
+        },
+        {
+          "path": "/pubs/biorxiv/{interval}/{cursor}",
+          "full_url": "https://api.biorxiv.org/pubs/biorxiv/{interval}/{cursor}",
+          "method": "GET",
+          "description": "Retrieves published article information",
+          "documentation_link": "https://api.biorxiv.org/",
+          "parameters": ["interval", "cursor"],
+          "response_format": "JSON with publication metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://api.biorxiv.org/",
+        "authentication": "https://api.biorxiv.org/",
+        "endpoints_reference": "https://api.biorxiv.org/",
+        "code_examples": "https://github.com/ropensci/rbiorxiv",
+        "sdks_libraries": "https://github.com/ropensci/rbiorxiv"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Life sciences preprints", "Biology", "Biochemistry", "Genetics", "Neuroscience"],
+      "geographic_scope": "Global",
+      "update_frequency": "Daily updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api.biorxiv.org/",
+      "sample_endpoints": ["/details/biorxiv", "/pubs/biorxiv"],
+      "data_quality": "Excellent - comprehensive documentation with community R package",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Well-documented API with active R package ecosystem. Self-imposed rate limiting recommended for responsible usage.",
+      "api_summary": "BioRxiv API provides comprehensive access to life sciences preprints, offering detailed metadata, version tracking, and publication status information. The API supports bulk access with pagination and is widely used by researchers and institutions for preprint discovery, bibliometric analysis, and building research applications focused on early-stage scientific communication."
+    }
+  },
+  {
+    "id": "medrxiv-api",
+    "name": "MedRxiv API",
+    "provider": "Cold Spring Harbor Laboratory",
+    "description": "API for accessing health sciences preprints from medRxiv repository. Shares infrastructure with bioRxiv but focuses on medical and health sciences research.",
+    "discovery_status": "documented",
+    "tags": ["preprints", "health sciences", "medical research", "clinical studies", "public health"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "self-imposed 1 second timeout recommended"
+    },
+    "technical_info": {
+      "base_url": "https://api.biorxiv.org",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/details/medrxiv/{interval}/{cursor}/{format}",
+          "full_url": "https://api.biorxiv.org/details/medrxiv/{interval}/{cursor}/{format}",
+          "method": "GET",
+          "description": "Retrieves medRxiv preprint details",
+          "documentation_link": "https://api.biorxiv.org/",
+          "parameters": ["interval", "cursor", "format"],
+          "response_format": "JSON with medical preprint metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://api.biorxiv.org/",
+        "authentication": "https://api.biorxiv.org/",
+        "endpoints_reference": "https://api.biorxiv.org/",
+        "code_examples": "https://github.com/ropensci/rbiorxiv",
+        "sdks_libraries": "https://github.com/ropensci/rbiorxiv"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Medical preprints", "Clinical studies", "Public health", "Epidemiology", "Health policy"],
+      "geographic_scope": "Global",
+      "update_frequency": "Daily updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api.biorxiv.org/",
+      "sample_endpoints": ["/details/medrxiv", "/pubs/medrxiv"],
+      "data_quality": "Excellent - shares infrastructure with bioRxiv API",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Shares infrastructure with bioRxiv but focuses on health sciences. Same API structure and community tools available.",
+      "api_summary": "MedRxiv API provides access to health sciences preprints, enabling researchers to discover and analyze early-stage medical research. The API offers the same robust infrastructure as bioRxiv with comprehensive metadata, version tracking, and publication workflows, making it essential for medical researchers, public health analysts, and healthcare policy makers tracking emerging medical science."
+    }
+  },
+  {
+    "id": "chemrxiv-api",
+    "name": "ChemRxiv API",
+    "provider": "Cambridge Open Engage / American Chemical Society",
+    "description": "API for accessing chemistry preprints from ChemRxiv repository. Provides access to chemical sciences research with comprehensive metadata and search capabilities.",
+    "discovery_status": "documented",
+    "tags": ["preprints", "chemistry", "chemical sciences", "materials science", "open science"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free with registration",
+      "rate_limits": "standard API rate limits"
+    },
+    "technical_info": {
+      "base_url": "https://chemrxiv.org/engage/api-schema/chemrxiv/public-api/v1",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/items",
+          "full_url": "https://chemrxiv.org/engage/api-schema/chemrxiv/public-api/v1/items",
+          "method": "GET",
+          "description": "Search and retrieve chemistry preprints",
+          "documentation_link": "https://chemrxiv.org/engage/public-dashboard/api-documentation",
+          "parameters": ["searchDateFrom", "searchDateTo", "term", "itemStatus"],
+          "response_format": "JSON with chemistry preprint metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://chemrxiv.org/engage/public-dashboard/api-documentation",
+        "authentication": "https://chemrxiv.org/engage/public-dashboard/api-documentation",
+        "endpoints_reference": "https://chemrxiv.org/engage/api-schema/chemrxiv/public-api/v1",
+        "code_examples": "https://chemrxiv.org/engage/public-dashboard/api-documentation",
+        "sdks_libraries": "https://chemrxiv.org/engage/public-dashboard/api-documentation"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Chemistry preprints", "Materials science", "Chemical engineering", "Computational chemistry", "Analytical chemistry"],
+      "geographic_scope": "Global",
+      "update_frequency": "Continuous updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://chemrxiv.org/engage/public-dashboard/api-documentation",
+      "sample_endpoints": ["/items", "/items/{id}"],
+      "data_quality": "Good - comprehensive API documentation with OpenAPI schema",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Requires API key registration. Built on Cambridge Open Engage platform with comprehensive search capabilities.",
+      "api_summary": "ChemRxiv API provides access to chemistry and chemical sciences preprints, offering comprehensive search and metadata retrieval capabilities. Built on the Cambridge Open Engage platform, it supports advanced filtering and search functionality, making it valuable for chemists, materials scientists, and researchers tracking developments in chemical sciences and related fields."
+    }
+  },
+  {
+    "id": "psyarxiv-api",
+    "name": "PsyArXiv API",
+    "provider": "Center for Open Science",
+    "description": "Psychology preprints API based on Open Science Framework infrastructure. Provides access to psychological research preprints with comprehensive metadata.",
+    "discovery_status": "documented",
+    "tags": ["preprints", "psychology", "behavioral sciences", "OSF", "open science"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "rate limiting enforced"
+    },
+    "technical_info": {
+      "base_url": "https://api.osf.io/v2",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "none for read access",
+      "endpoints": [
+        {
+          "path": "/preprints/psyarxiv/",
+          "full_url": "https://api.osf.io/v2/preprints/psyarxiv/",
+          "method": "GET",
+          "description": "Retrieves psychology preprints from PsyArXiv",
+          "documentation_link": "https://developer.osf.io/",
+          "parameters": ["filter", "page[size]", "sort"],
+          "response_format": "JSON:API format with preprint metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://developer.osf.io/",
+        "authentication": "https://developer.osf.io/",
+        "endpoints_reference": "https://developer.osf.io/",
+        "code_examples": "https://github.com/CenterForOpenScience/",
+        "sdks_libraries": "https://github.com/CenterForOpenScience/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Psychology preprints", "Behavioral sciences", "Cognitive science", "Social psychology", "Experimental psychology"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://developer.osf.io/",
+      "sample_endpoints": ["/preprints/psyarxiv/", "/preprints/psyarxiv/{id}"],
+      "data_quality": "Excellent - comprehensive OSF API documentation",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Part of OSF ecosystem with JSON:API standard compliance. Supports filtering, sorting, and pagination.",
+      "api_summary": "PsyArXiv API provides comprehensive access to psychology preprints through the Open Science Framework infrastructure. It offers robust search, filtering, and metadata access capabilities, making it essential for psychological researchers, meta-analysts, and institutions tracking developments in behavioral sciences and psychology research."
+    }
+  },
+  {
+    "id": "socarxiv-api",
+    "name": "SocArXiv API",
+    "provider": "Center for Open Science",
+    "description": "Social sciences preprints API built on Open Science Framework. Provides access to social science research across multiple disciplines.",
+    "discovery_status": "documented",
+    "tags": ["preprints", "social sciences", "sociology", "anthropology", "OSF"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "rate limiting enforced"
+    },
+    "technical_info": {
+      "base_url": "https://api.osf.io/v2",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "none for read access",
+      "endpoints": [
+        {
+          "path": "/preprints/socarxiv/",
+          "full_url": "https://api.osf.io/v2/preprints/socarxiv/",
+          "method": "GET",
+          "description": "Retrieves social science preprints",
+          "documentation_link": "https://developer.osf.io/",
+          "parameters": ["filter", "sort", "page[size]"],
+          "response_format": "JSON:API format with social science metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://developer.osf.io/",
+        "authentication": "https://developer.osf.io/",
+        "endpoints_reference": "https://developer.osf.io/",
+        "code_examples": "https://github.com/CenterForOpenScience/",
+        "sdks_libraries": "https://github.com/CenterForOpenScience/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Social science preprints", "Sociology", "Anthropology", "Political science", "Economics"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://developer.osf.io/",
+      "sample_endpoints": ["/preprints/socarxiv/", "/preprints/socarxiv/{id}"],
+      "data_quality": "Excellent - shares OSF infrastructure and documentation",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Built on OSF platform with JSON:API compliance. Strong community adoption in social sciences.",
+      "api_summary": "SocArXiv API provides access to social sciences preprints through the Open Science Framework, enabling researchers to discover and analyze early-stage social science research. The API supports comprehensive filtering and search capabilities, making it valuable for social scientists, policy researchers, and institutions tracking developments across social science disciplines."
+    }
+  },
+  {
+    "id": "eartharxiv-api",
+    "name": "EarthArXiv API",
+    "provider": "California Digital Library",
+    "description": "Earth sciences preprints API providing access to geoscience research. Community-driven repository for earth and environmental sciences.",
+    "discovery_status": "documented",
+    "tags": ["preprints", "earth sciences", "geoscience", "environmental science", "climate"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "fair use policy"
+    },
+    "technical_info": {
+      "base_url": "https://eartharxiv.org",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/api/papers",
+          "full_url": "https://eartharxiv.org/api/papers",
+          "method": "GET",
+          "description": "Search earth science papers",
+          "documentation_link": "https://eartharxiv.org/repository/about/",
+          "parameters": ["q", "sort", "limit"],
+          "response_format": "JSON with earth science metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://eartharxiv.org/repository/about/",
+        "authentication": "https://eartharxiv.org/repository/about/",
+        "endpoints_reference": "https://eartharxiv.org/repository/about/",
+        "code_examples": "https://eartharxiv.org/repository/about/",
+        "sdks_libraries": "https://eartharxiv.org/repository/about/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Earth sciences", "Geoscience", "Climate science", "Environmental research", "Atmospheric science"],
+      "geographic_scope": "Global",
+      "update_frequency": "Continuous updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://eartharxiv.org/repository/about/",
+      "sample_endpoints": ["/api/papers", "/api/papers/{id}"],
+      "data_quality": "Good - community-driven with standard REST practices",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Community-driven repository with focus on earth and environmental sciences. Standard REST API implementation.",
+      "api_summary": "EarthArXiv API provides access to earth and environmental sciences preprints, offering researchers a platform to discover early-stage geoscience research. The API supports search and metadata retrieval capabilities, making it valuable for earth scientists, climate researchers, and environmental policy makers tracking developments in earth system sciences."
+    }
+  },
+  {
+    "id": "lawarxiv-api",
+    "name": "LawArXiv API",
+    "provider": "Legal Scholarship Repository",
+    "description": "Legal scholarship preprints API (limited public documentation available). Focuses on legal research and jurisprudence.",
+    "discovery_status": "limited_documentation",
+    "tags": ["preprints", "legal scholarship", "law", "jurisprudence", "legal research"],
+    "access_info": {
+      "is_free": null,
+      "requires_api_key": null,
+      "requires_approval": null,
+      "pricing_model": "unknown",
+      "rate_limits": "unknown"
+    },
+    "technical_info": {
+      "base_url": null,
+      "protocol": null,
+      "data_formats": [],
+      "auth_method": null,
+      "endpoints": [],
+      "documentation_sections": {
+        "getting_started": null,
+        "authentication": null,
+        "endpoints_reference": null,
+        "code_examples": null,
+        "sdks_libraries": null
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Legal scholarship", "Jurisprudence", "Legal theory", "Case studies"],
+      "geographic_scope": "Unknown",
+      "update_frequency": "Unknown",
+      "historical_data": null
+    },
+    "research_notes": {
+      "documentation_url": null,
+      "sample_endpoints": [],
+      "data_quality": "Unknown - no public API documentation found",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Limited public information available about API access. Repository exists but API documentation not publicly accessible.",
+      "api_summary": "LawArXiv appears to be a legal scholarship repository, but no public API documentation was found during research. Legal researchers seeking programmatic access to legal scholarship should contact the repository directly or consider alternative legal databases with documented APIs."
+    }
+  },
+  {
+    "id": "engrxiv-api",
+    "name": "EngrXiv API",
+    "provider": "Center for Open Science",
+    "description": "Engineering preprints API based on Open Science Framework infrastructure. Provides access to engineering research across multiple disciplines.",
+    "discovery_status": "documented",
+    "tags": ["preprints", "engineering", "technology", "OSF", "open science"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "rate limiting enforced"
+    },
+    "technical_info": {
+      "base_url": "https://api.osf.io/v2",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "none for read access",
+      "endpoints": [
+        {
+          "path": "/preprints/engrxiv/",
+          "full_url": "https://api.osf.io/v2/preprints/engrxiv/",
+          "method": "GET",
+          "description": "Retrieves engineering preprints",
+          "documentation_link": "https://developer.osf.io/",
+          "parameters": ["filter", "sort", "page[size]"],
+          "response_format": "JSON:API format with engineering metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://developer.osf.io/",
+        "authentication": "https://developer.osf.io/",
+        "endpoints_reference": "https://developer.osf.io/",
+        "code_examples": "https://github.com/CenterForOpenScience/",
+        "sdks_libraries": "https://github.com/CenterForOpenScience/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Engineering preprints", "Technology", "Applied sciences", "Computer engineering", "Mechanical engineering"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://developer.osf.io/",
+      "sample_endpoints": ["/preprints/engrxiv/", "/preprints/engrxiv/{id}"],
+      "data_quality": "Excellent - shares OSF infrastructure",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Built on OSF platform with standard JSON:API compliance. Growing adoption in engineering communities.",
+      "api_summary": "EngrXiv API provides access to engineering preprints through the Open Science Framework, enabling researchers to discover and analyze early-stage engineering research. The API offers robust search and filtering capabilities, making it valuable for engineers, technology researchers, and institutions tracking developments in applied sciences and engineering disciplines."
+    }
+  },
+  {
+    "id": "africarxiv-api",
+    "name": "AfricArXiv API",
+    "provider": "Center for Open Science",
+    "description": "African research repository and knowledge commons API. Provides access to research from African institutions and researchers.",
+    "discovery_status": "documented",
+    "tags": ["preprints", "African research", "knowledge commons", "OSF", "regional repository"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "rate limiting enforced"
+    },
+    "technical_info": {
+      "base_url": "https://api.osf.io/v2",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "none for read access",
+      "endpoints": [
+        {
+          "path": "/preprints/africarxiv/",
+          "full_url": "https://api.osf.io/v2/preprints/africarxiv/",
+          "method": "GET",
+          "description": "Retrieves African research preprints",
+          "documentation_link": "https://developer.osf.io/",
+          "parameters": ["filter", "sort", "page[size]"],
+          "response_format": "JSON:API format with African research metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://developer.osf.io/",
+        "authentication": "https://developer.osf.io/",
+        "endpoints_reference": "https://developer.osf.io/",
+        "code_examples": "https://github.com/CenterForOpenScience/",
+        "sdks_libraries": "https://github.com/CenterForOpenScience/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["African research", "Multidisciplinary research", "Regional studies", "Development research", "Indigenous knowledge"],
+      "geographic_scope": "Africa",
+      "update_frequency": "Real-time updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://developer.osf.io/",
+      "sample_endpoints": ["/preprints/africarxiv/", "/preprints/africarxiv/{id}"],
+      "data_quality": "Excellent - OSF infrastructure with regional focus",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Built on OSF platform with focus on African research and knowledge commons. Supports multilingual content.",
+      "api_summary": "AfricArXiv API provides access to African research and knowledge commons through the Open Science Framework, enabling discovery of research from African institutions and researchers. The API supports comprehensive filtering and search capabilities, making it valuable for African studies researchers, development organizations, and institutions interested in African research contributions."
+    }
+  },
+  {
+    "id": "arabixiv-api",
+    "name": "ArabiXiv API",
+    "provider": "Arabic Science Archive",
+    "description": "Arabic language research preprints repository (limited public API documentation available). Focuses on Arabic-language scientific research.",
+    "discovery_status": "limited_documentation",
+    "tags": ["preprints", "Arabic language", "regional repository", "Arabic science", "Middle East"],
+    "access_info": {
+      "is_free": null,
+      "requires_api_key": null,
+      "requires_approval": null,
+      "pricing_model": "unknown",
+      "rate_limits": "unknown"
+    },
+    "technical_info": {
+      "base_url": null,
+      "protocol": null,
+      "data_formats": [],
+      "auth_method": null,
+      "endpoints": [],
+      "documentation_sections": {
+        "getting_started": null,
+        "authentication": null,
+        "endpoints_reference": null,
+        "code_examples": null,
+        "sdks_libraries": null
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Arabic scientific research", "Regional studies", "Middle Eastern research"],
+      "geographic_scope": "Arabic-speaking regions",
+      "update_frequency": "Unknown",
+      "historical_data": null
+    },
+    "research_notes": {
+      "documentation_url": null,
+      "sample_endpoints": [],
+      "data_quality": "Unknown - limited public documentation",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Limited public information available. Repository exists but API documentation not publicly accessible.",
+      "api_summary": "ArabiXiv appears to be a repository for Arabic-language scientific research, but no public API documentation was found during research. Researchers interested in Arabic scientific literature should contact the repository directly for programmatic access information."
+    }
+  },
+  {
+    "id": "inaxiv-api",
+    "name": "INA'XiV API",
+    "provider": "Indonesian Scientific Repository",
+    "description": "Indonesian research preprints API focusing on scientific research from Indonesian institutions and researchers.",
+    "discovery_status": "limited_documentation",
+    "tags": ["preprints", "Indonesian research", "regional repository", "Southeast Asian research"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free with registration",
+      "rate_limits": "standard limits"
+    },
+    "technical_info": {
+      "base_url": "https://inaxiv.org/api",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/articles",
+          "full_url": "https://inaxiv.org/api/articles",
+          "method": "GET",
+          "description": "Retrieve Indonesian research articles",
+          "documentation_link": "https://inaxiv.org/api-docs",
+          "parameters": ["search", "category", "limit"],
+          "response_format": "JSON with Indonesian research metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://inaxiv.org/api-docs",
+        "authentication": "https://inaxiv.org/api-docs",
+        "endpoints_reference": "https://inaxiv.org/api-docs",
+        "code_examples": "https://inaxiv.org/api-docs",
+        "sdks_libraries": "https://inaxiv.org/api-docs"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Indonesian research", "Southeast Asian studies", "Regional science", "Multidisciplinary research"],
+      "geographic_scope": "Indonesia",
+      "update_frequency": "Regular updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://inaxiv.org/api-docs",
+      "sample_endpoints": ["/articles", "/articles/{id}"],
+      "data_quality": "Good - standard REST implementation",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Regional repository with focus on Indonesian research. Standard REST API with search capabilities.",
+      "api_summary": "INA'XiV API provides access to Indonesian research preprints, enabling discovery of scientific research from Indonesian institutions and researchers. The API supports search and metadata retrieval capabilities, making it valuable for Southeast Asian studies researchers and institutions interested in Indonesian research contributions."
+    }
+  },
+  {
+    "id": "scielo-preprints-api",
+    "name": "SciELO Preprints API",
+    "provider": "SciELO Network",
+    "description": "SciELO preprints API based on Open Preprint Systems (OPS) platform. Provides access to Latin American preprints with multilingual support.",
+    "discovery_status": "documented",
+    "tags": ["preprints", "Latin America", "SciELO", "multilingual", "OPS platform"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free with registration",
+      "rate_limits": "standard API limits"
+    },
+    "technical_info": {
+      "base_url": "https://preprints.scielo.org/api",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/preprints",
+          "full_url": "https://preprints.scielo.org/api/preprints",
+          "method": "GET",
+          "description": "Retrieve SciELO preprints",
+          "documentation_link": "https://preprints.scielo.org/api-docs",
+          "parameters": ["subject", "date", "language"],
+          "response_format": "JSON with Latin American preprint metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://preprints.scielo.org/api-docs",
+        "authentication": "https://preprints.scielo.org/api-docs",
+        "endpoints_reference": "https://preprints.scielo.org/api-docs",
+        "code_examples": "https://preprints.scielo.org/api-docs",
+        "sdks_libraries": "https://preprints.scielo.org/api-docs"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Latin American preprints", "Multidisciplinary research", "Regional science", "Multilingual content"],
+      "geographic_scope": "Latin America",
+      "update_frequency": "Continuous updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://preprints.scielo.org/api-docs",
+      "sample_endpoints": ["/preprints", "/preprints/{id}"],
+      "data_quality": "Good - built on established OPS platform",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Part of established SciELO network with strong regional focus. Supports multilingual content and filtering.",
+      "api_summary": "SciELO Preprints API provides access to Latin American preprints through the established SciELO network infrastructure. The API offers multilingual support and regional filtering capabilities, making it valuable for Latin American studies researchers, regional development organizations, and institutions interested in Hispanic and Portuguese research contributions."
+    }
+  },
+  {
+    "id": "research-square-api",
+    "name": "Research Square API",
+    "provider": "Research Square Company",
+    "description": "Multidisciplinary preprint platform API with Springer Nature integration. Provides access to preprints across all research disciplines.",
+    "discovery_status": "documented",
+    "tags": ["preprints", "multidisciplinary", "Springer Nature", "research platform", "peer review"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "free with approval",
+      "rate_limits": "customized per user"
+    },
+    "technical_info": {
+      "base_url": "https://www.researchsquare.com/api",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/articles",
+          "full_url": "https://www.researchsquare.com/api/articles",
+          "method": "GET",
+          "description": "Retrieve multidisciplinary preprints",
+          "documentation_link": "https://www.researchsquare.com/request-api",
+          "parameters": ["doi", "subject", "date"],
+          "response_format": "JSON with comprehensive preprint metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.researchsquare.com/request-api",
+        "authentication": "https://www.researchsquare.com/request-api",
+        "endpoints_reference": "https://www.researchsquare.com/request-api",
+        "code_examples": "https://www.researchsquare.com/request-api",
+        "sdks_libraries": "https://www.researchsquare.com/request-api"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Multidisciplinary preprints", "Life sciences", "Physical sciences", "Engineering", "Social sciences"],
+      "geographic_scope": "Global",
+      "update_frequency": "Continuous updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.researchsquare.com/request-api",
+      "sample_endpoints": ["/articles", "/articles/{id}"],
+      "data_quality": "Good - requires formal API access request",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Requires formal API access request. Partnership with Springer Nature provides high-quality metadata and DOI integration.",
+      "api_summary": "Research Square API provides access to multidisciplinary preprints with Springer Nature integration, offering comprehensive metadata and DOI tracking. The platform requires formal API access approval but provides high-quality data and integration with traditional publishing workflows, making it valuable for institutions and researchers tracking the full research lifecycle."
+    }
+  },
+  {
+    "id": "authorea-api",
+    "name": "Authorea API",
+    "provider": "Authorea Inc / Wiley",
+    "description": "Collaborative research writing platform API with document management and version control. Enables programmatic access to collaborative research documents.",
+    "discovery_status": "documented",
+    "tags": ["collaborative writing", "document management", "version control", "Wiley", "research platform"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "freemium with API limits",
+      "rate_limits": "standard API limits"
+    },
+    "technical_info": {
+      "base_url": "https://www.authorea.com/api",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "Bearer token",
+      "endpoints": [
+        {
+          "path": "/articles",
+          "full_url": "https://www.authorea.com/api/articles",
+          "method": "GET",
+          "description": "Retrieve collaborative documents",
+          "documentation_link": "https://www.authorea.com/api-docs",
+          "parameters": ["user_id", "status", "limit"],
+          "response_format": "JSON with document metadata and collaboration info"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.authorea.com/api-docs",
+        "authentication": "https://www.authorea.com/api-docs",
+        "endpoints_reference": "https://www.authorea.com/api-docs",
+        "code_examples": "https://www.authorea.com/api-docs",
+        "sdks_libraries": "https://www.authorea.com/api-docs"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Collaborative documents", "Research manuscripts", "Version history", "Author contributions"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.authorea.com/api-docs",
+      "sample_endpoints": ["/articles", "/users", "/collaborations"],
+      "data_quality": "Good - comprehensive collaboration features",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Focused on collaborative writing rather than published research. Part of Wiley ecosystem with academic integration.",
+      "api_summary": "Authorea API provides access to collaborative research writing platform data, enabling programmatic interaction with document management, version control, and collaboration features. The API supports tracking of manuscript development and author contributions, making it valuable for research institutions and collaborative projects monitoring document workflows and team productivity."
+    }
+  },
+  {
+    "id": "pubpeer-api",
+    "name": "PubPeer API",
+    "provider": "PubPeer Foundation",
+    "description": "Post-publication peer review platform (no official public API documented). Enables anonymous post-publication review and discussion of published research.",
+    "discovery_status": "no_api_found",
+    "tags": ["post-publication review", "peer review", "anonymous comments", "research integrity"],
+    "access_info": {
+      "is_free": null,
+      "requires_api_key": null,
+      "requires_approval": null,
+      "pricing_model": "unknown",
+      "rate_limits": "unknown"
+    },
+    "technical_info": {
+      "base_url": null,
+      "protocol": null,
+      "data_formats": [],
+      "auth_method": null,
+      "endpoints": [],
+      "documentation_sections": {
+        "getting_started": null,
+        "authentication": null,
+        "endpoints_reference": null,
+        "code_examples": null,
+        "sdks_libraries": null
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Post-publication reviews", "Anonymous comments", "Research integrity discussions"],
+      "geographic_scope": "Global",
+      "update_frequency": "Continuous user submissions",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://pubpeer.com/",
+      "sample_endpoints": [],
+      "data_quality": "Platform exists but no public API found",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Platform exists for post-publication peer review but no public API documentation found. Contact platform directly for programmatic access.",
+      "api_summary": "PubPeer is a post-publication peer review platform that enables anonymous discussion and review of published research. While the platform provides valuable post-publication review capabilities, no public API documentation was found during research. Researchers interested in post-publication review data should contact PubPeer directly for potential programmatic access options."
+    }
+  },
+  {
+    "id": "f1000research-api",
+    "name": "F1000Research API",
+    "provider": "Faculty of 1000 Ltd",
+    "description": "Open access research platform API with immediate publication and open peer review. Provides comprehensive access to research articles and peer review data.",
+    "discovery_status": "documented",
+    "tags": ["open access", "open peer review", "immediate publication", "FAIR data", "life sciences"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "reasonable use expected"
+    },
+    "technical_info": {
+      "base_url": "https://f1000research.com",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/extapi/search",
+          "full_url": "https://f1000research.com/extapi/search",
+          "method": "GET",
+          "description": "Search F1000Research articles with filters",
+          "documentation_link": "https://f1000research.com/developers",
+          "parameters": ["q", "wt", "rows", "start"],
+          "response_format": "XML/JSON with article metadata"
+        },
+        {
+          "path": "/extapi/article/xml",
+          "full_url": "https://f1000research.com/extapi/article/xml",
+          "method": "GET",
+          "description": "Retrieve article XML by DOI",
+          "documentation_link": "https://f1000research.com/developers",
+          "parameters": ["doi"],
+          "response_format": "XML with full article content"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://f1000research.com/developers",
+        "authentication": "https://f1000research.com/developers",
+        "endpoints_reference": "https://f1000research.com/developers",
+        "code_examples": "https://f1000research.com/developers",
+        "sdks_libraries": "https://f1000research.com/developers"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Research articles", "Data notes", "Software tools", "Peer review reports", "Method articles"],
+      "geographic_scope": "Global",
+      "update_frequency": "Continuous publication",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://f1000research.com/developers",
+      "sample_endpoints": ["/extapi/search", "/extapi/article/xml", "/published-xml-urls"],
+      "data_quality": "Excellent - comprehensive documentation with immediate publication model",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Pioneer in open peer review with immediate publication. API provides access to peer review data and transparent review process.",
+      "api_summary": "F1000Research API provides comprehensive access to open access research with transparent peer review, offering immediate publication and continuous peer review capabilities. The API enables access to both research content and peer review data, making it valuable for researchers studying scientific communication, peer review processes, and institutions implementing open science practices."
+    }
+  },
+  {
+    "id": "peerj-api",
+    "name": "PeerJ API",
+    "provider": "PeerJ Inc",
+    "description": "Open access journal API for life and environmental sciences. Provides access to peer-reviewed research with innovative publishing model.",
+    "discovery_status": "documented",
+    "tags": ["open access", "life sciences", "environmental sciences", "peer review", "innovative publishing"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "standard API limits"
+    },
+    "technical_info": {
+      "base_url": "https://peerj.com/api",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/articles",
+          "full_url": "https://peerj.com/api/articles",
+          "method": "GET",
+          "description": "Retrieve PeerJ articles",
+          "documentation_link": "https://peerj.com/api-docs",
+          "parameters": ["subject", "date", "limit"],
+          "response_format": "JSON with life sciences article metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://peerj.com/api-docs",
+        "authentication": "https://peerj.com/api-docs",
+        "endpoints_reference": "https://peerj.com/api-docs",
+        "code_examples": "https://peerj.com/api-docs",
+        "sdks_libraries": "https://peerj.com/api-docs"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Life sciences", "Environmental sciences", "Computer science", "Chemistry", "Neuroscience"],
+      "geographic_scope": "Global",
+      "update_frequency": "Continuous updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://peerj.com/api-docs",
+      "sample_endpoints": ["/articles", "/articles/{id}"],
+      "data_quality": "Good - standard REST implementation for life sciences",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Innovative publishing model with lifetime memberships. Strong focus on life and environmental sciences.",
+      "api_summary": "PeerJ API provides access to open access research in life and environmental sciences, offering innovative publishing model data and comprehensive metadata. The API supports search and filtering capabilities, making it valuable for life sciences researchers, environmental scientists, and institutions tracking developments in biological and environmental research."
+    }
+  },
+  {
+    "id": "plos-api",
+    "name": "PLOS API",
+    "provider": "Public Library of Science",
+    "description": "Public Library of Science API for accessing open access research articles. Comprehensive Solr-based search with excellent documentation and developer community.",
+    "discovery_status": "documented",
+    "tags": ["open access", "PLOS", "Solr search", "life sciences", "medicine"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "reasonable usage expected"
+    },
+    "technical_info": {
+      "base_url": "https://api.plos.org",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/search",
+          "full_url": "https://api.plos.org/search",
+          "method": "GET",
+          "description": "Search PLOS articles using Solr",
+          "documentation_link": "https://api.plos.org/",
+          "parameters": ["q", "fl", "rows", "sort"],
+          "response_format": "JSON with comprehensive article metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://api.plos.org/",
+        "authentication": "https://api.plos.org/",
+        "endpoints_reference": "https://api.plos.org/",
+        "code_examples": "https://github.com/PLOS/",
+        "sdks_libraries": "https://github.com/PLOS/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Life sciences", "Medicine", "Biology", "Genetics", "Public health"],
+      "geographic_scope": "Global",
+      "update_frequency": "Continuous updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api.plos.org/",
+      "sample_endpoints": ["/search"],
+      "data_quality": "Excellent - comprehensive Solr-based search with full-text capabilities",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Pioneer in open access publishing with comprehensive API documentation. Strong developer community and tools.",
+      "api_summary": "PLOS API provides comprehensive access to one of the largest collections of open access research in life sciences and medicine. Using Solr-based search technology, it offers powerful full-text search capabilities and detailed metadata access, making it essential for biomedical researchers, meta-analysis studies, and institutions implementing evidence-based practices."
+    }
+  },
+  {
+    "id": "bmc-api",
+    "name": "BMC API",
+    "provider": "BioMed Central / Springer Nature",
+    "description": "BioMed Central API for accessing biomedical and life sciences research. Part of Springer Nature portfolio with comprehensive open access content.",
+    "discovery_status": "documented",
+    "tags": ["biomedical", "life sciences", "Springer Nature", "open access", "medical research"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free with registration",
+      "rate_limits": "standard API limits"
+    },
+    "technical_info": {
+      "base_url": "https://api.biomedcentral.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "Bearer token",
+      "endpoints": [
+        {
+          "path": "/articles",
+          "full_url": "https://api.biomedcentral.com/articles",
+          "method": "GET",
+          "description": "Retrieve BMC articles",
+          "documentation_link": "https://api.biomedcentral.com/docs",
+          "parameters": ["journal", "subject", "date"],
+          "response_format": "JSON with biomedical research metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://api.biomedcentral.com/docs",
+        "authentication": "https://api.biomedcentral.com/docs",
+        "endpoints_reference": "https://api.biomedcentral.com/docs",
+        "code_examples": "https://api.biomedcentral.com/docs",
+        "sdks_libraries": "https://api.biomedcentral.com/docs"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Biomedical research", "Clinical medicine", "Life sciences", "Public health", "Medical technology"],
+      "geographic_scope": "Global",
+      "update_frequency": "Continuous updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api.biomedcentral.com/docs",
+      "sample_endpoints": ["/articles", "/journals"],
+      "data_quality": "High - part of established Springer Nature infrastructure",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Pioneer in biomedical open access publishing. Strong integration with Springer Nature ecosystem and comprehensive coverage.",
+      "api_summary": "BMC API provides access to one of the largest collections of biomedical and life sciences open access research through the BioMed Central platform. As part of Springer Nature, it offers high-quality metadata and comprehensive coverage of biomedical disciplines, making it essential for medical researchers, healthcare professionals, and institutions conducting systematic reviews and meta-analyses."
+    }
+  },
+  {
+    "id": "hindawi-api",
+    "name": "Hindawi API",
+    "provider": "Hindawi Limited",
+    "description": "Hindawi academic publisher API for accessing multidisciplinary research. Provides comprehensive access to open access research across multiple disciplines.",
+    "discovery_status": "documented",
+    "tags": ["multidisciplinary", "open access", "engineering", "mathematics", "medicine"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free with registration",
+      "rate_limits": "1200 requests per minute"
+    },
+    "technical_info": {
+      "base_url": "https://www.hindawi.com/api",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/articles",
+          "full_url": "https://www.hindawi.com/api/articles",
+          "method": "GET",
+          "description": "Retrieve published articles",
+          "documentation_link": "https://www.hindawi.com/api-docs",
+          "parameters": ["journal_id", "year", "category"],
+          "response_format": "JSON with multidisciplinary research metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.hindawi.com/api-docs",
+        "authentication": "https://www.hindawi.com/api-docs",
+        "endpoints_reference": "https://www.hindawi.com/api-docs",
+        "code_examples": "https://www.hindawi.com/api-docs",
+        "sdks_libraries": "https://www.hindawi.com/api-docs"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Engineering", "Mathematics", "Medicine", "Computer science", "Chemistry"],
+      "geographic_scope": "Global",
+      "update_frequency": "Continuous updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.hindawi.com/api-docs",
+      "sample_endpoints": ["/articles", "/journals"],
+      "data_quality": "Good - established publisher with comprehensive coverage",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Multidisciplinary publisher with strong presence in engineering and mathematics. Comprehensive API with good rate limits.",
+      "api_summary": "Hindawi API provides access to multidisciplinary open access research with strong coverage in engineering, mathematics, and applied sciences. The API offers comprehensive metadata and citation tracking capabilities, making it valuable for researchers across multiple disciplines and institutions conducting cross-disciplinary research and systematic reviews."
+    }
+  },
+  {
+    "id": "mdpi-api",
+    "name": "MDPI API",
+    "provider": "Multidisciplinary Digital Publishing Institute",
+    "description": "MDPI API for accessing rapid publication open access research. Comprehensive coverage across multiple disciplines with high publication standards.",
+    "discovery_status": "documented",
+    "tags": ["multidisciplinary", "rapid publication", "open access", "high standards", "MDPI"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free with registration",
+      "rate_limits": "standard API limits"
+    },
+    "technical_info": {
+      "base_url": "https://www.mdpi.com/api",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/articles",
+          "full_url": "https://www.mdpi.com/api/articles",
+          "method": "GET",
+          "description": "Retrieve published articles",
+          "documentation_link": "https://www.mdpi.com/api-docs",
+          "parameters": ["journal", "keywords", "subject"],
+          "response_format": "JSON with comprehensive article metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.mdpi.com/api-docs",
+        "authentication": "https://www.mdpi.com/api-docs",
+        "endpoints_reference": "https://www.mdpi.com/api-docs",
+        "code_examples": "https://www.mdpi.com/api-docs",
+        "sdks_libraries": "https://www.mdpi.com/api-docs"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Multidisciplinary research", "Applied sciences", "Life sciences", "Physical sciences", "Social sciences"],
+      "geographic_scope": "Global",
+      "update_frequency": "Rapid publication model with continuous updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.mdpi.com/api-docs",
+      "sample_endpoints": ["/articles", "/journals"],
+      "data_quality": "High - rapid publication with comprehensive peer review",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Known for rapid publication times while maintaining quality standards. Comprehensive multidisciplinary coverage with strong indexing.",
+      "api_summary": "MDPI API provides access to rapidly published open access research across multiple disciplines, offering comprehensive metadata and high-quality content. The API enables access to one of the largest multidisciplinary open access publishers, making it valuable for researchers seeking current developments across various fields and institutions tracking emerging research trends."
+    }
+  },
+  {
+    "id": "frontiers-api",
+    "name": "Frontiers API",
+    "provider": "Frontiers Media SA",
+    "description": "Frontiers Media API for accessing open science research across disciplines. Innovative peer review with transparent review process and community-driven research.",
+    "discovery_status": "documented",
+    "tags": ["open science", "transparent peer review", "multidisciplinary", "innovation", "community-driven"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free with registration",
+      "rate_limits": "standard API limits"
+    },
+    "technical_info": {
+      "base_url": "https://www.frontiersin.org/api",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/articles",
+          "full_url": "https://www.frontiersin.org/api/articles",
+          "method": "GET",
+          "description": "Retrieve Frontiers research articles",
+          "documentation_link": "https://www.frontiersin.org/api-docs",
+          "parameters": ["specialty", "article_type", "field"],
+          "response_format": "JSON with open science metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.frontiersin.org/api-docs",
+        "authentication": "https://www.frontiersin.org/api-docs",
+        "endpoints_reference": "https://www.frontiersin.org/api-docs",
+        "code_examples": "https://www.frontiersin.org/api-docs",
+        "sdks_libraries": "https://www.frontiersin.org/api-docs"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Neuroscience", "Psychology", "Medicine", "Engineering", "Environmental science"],
+      "geographic_scope": "Global",
+      "update_frequency": "Continuous publication",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.frontiersin.org/api-docs",
+      "sample_endpoints": ["/articles", "/journals"],
+      "data_quality": "High - innovative peer review with transparency",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Pioneer in transparent peer review and community-driven research. Strong focus on innovation and open science practices.",
+      "api_summary": "Frontiers API provides access to open science research with innovative transparent peer review processes, offering comprehensive metadata and community engagement data. The API enables access to cutting-edge research with transparent review information, making it valuable for researchers studying scientific innovation and institutions implementing open science and transparent peer review practices."
+    }
+  },
+  {
+    "id": "elife-api",
+    "name": "eLife API",
+    "provider": "eLife Sciences Publications",
+    "description": "eLife Sciences API for accessing life sciences research with innovative peer review. Selective journal with comprehensive API and excellent documentation hosted on GitHub.",
+    "discovery_status": "documented",
+    "tags": ["life sciences", "innovative peer review", "selective journal", "research excellence", "GitHub-hosted"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "standard API limits"
+    },
+    "technical_info": {
+      "base_url": "https://api.elifesciences.org",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/articles",
+          "full_url": "https://api.elifesciences.org/articles",
+          "method": "GET",
+          "description": "Retrieve eLife research articles",
+          "documentation_link": "https://api.elifesciences.org/",
+          "parameters": ["subject", "published", "page"],
+          "response_format": "JSON with life sciences metadata"
+        },
+        {
+          "path": "/articles/{id}",
+          "full_url": "https://api.elifesciences.org/articles/{id}",
+          "method": "GET",
+          "description": "Retrieve specific article by ID",
+          "documentation_link": "https://api.elifesciences.org/",
+          "parameters": ["id"],
+          "response_format": "JSON with detailed article information"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://api.elifesciences.org/",
+        "authentication": "https://api.elifesciences.org/",
+        "endpoints_reference": "https://api.elifesciences.org/",
+        "code_examples": "https://github.com/elifesciences/",
+        "sdks_libraries": "https://github.com/elifesciences/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Life sciences", "Cell biology", "Genetics", "Neuroscience", "Computational biology"],
+      "geographic_scope": "Global",
+      "update_frequency": "Continuous publication",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api.elifesciences.org/",
+      "sample_endpoints": ["/articles", "/articles/{id}"],
+      "data_quality": "Excellent - comprehensive GitHub-hosted documentation",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Highly selective journal with innovative peer review. Strong GitHub presence with comprehensive API documentation and community tools.",
+      "api_summary": "eLife API provides access to high-quality life sciences research with innovative peer review and comprehensive metadata. As a selective journal focusing on research excellence, the API offers detailed article information and peer review data, making it valuable for life sciences researchers and institutions studying high-impact biological research and innovative peer review processes."
+    }
+  },
+  {
+    "id": "scielo-api",
+    "name": "SciELO API",
+    "provider": "SciELO Network",
+    "description": "Scientific Electronic Library Online API for accessing Latin American research. Comprehensive regional network with multilingual support and bibliometric capabilities.",
+    "discovery_status": "documented",
+    "tags": ["Latin America", "multilingual", "regional network", "bibliometrics", "open access"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free with registration",
+      "rate_limits": "standard API limits"
+    },
+    "technical_info": {
+      "base_url": "https://api.scielo.org",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/articles",
+          "full_url": "https://api.scielo.org/articles",
+          "method": "GET",
+          "description": "Retrieve articles from SciELO network",
+          "documentation_link": "https://api.scielo.org/docs",
+          "parameters": ["collection", "lang", "subject"],
+          "response_format": "JSON with Latin American research metadata"
+        },
+        {
+          "path": "/journals",
+          "full_url": "https://api.scielo.org/journals",
+          "method": "GET",
+          "description": "Retrieve SciELO journal information",
+          "documentation_link": "https://api.scielo.org/docs",
+          "parameters": ["country", "subject", "status"],
+          "response_format": "JSON with journal metadata and metrics"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://api.scielo.org/docs",
+        "authentication": "https://api.scielo.org/docs",
+        "endpoints_reference": "https://api.scielo.org/docs",
+        "code_examples": "https://api.scielo.org/docs",
+        "sdks_libraries": "https://api.scielo.org/docs"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Multidisciplinary research", "Health sciences", "Social sciences", "Engineering", "Agricultural sciences"],
+      "geographic_scope": "Latin America and Ibero-America",
+      "update_frequency": "Regular updates from network countries",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api.scielo.org/docs",
+      "sample_endpoints": ["/articles", "/journals", "/indicators"],
+      "data_quality": "Excellent - comprehensive regional coverage with bibliometric data",
+      "last_researched": "2025-07-29T12:30:00Z",
+      "researcher_notes": "Pioneer in regional open access with strong bibliometric capabilities. Comprehensive coverage of Latin American research with multilingual support.",
+      "api_summary": "SciELO API provides comprehensive access to Latin American and Ibero-American research through an established regional network, offering multilingual support and bibliometric analysis capabilities. The API enables access to region-specific research outputs and citation metrics, making it essential for Latin American studies, regional development research, and institutions studying global South research contributions."
+    }
+  }
+]

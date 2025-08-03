@@ -1,0 +1,1885 @@
+[
+  {
+    "id": "yewno",
+    "name": "Yewno Finance API",
+    "provider": "Yewno",
+    "description": "Knowledge discovery and analytics platform providing concept-driven search and document analysis for financial research using AI-powered semantic analysis.",
+    "discovery_status": "documented",
+    "tags": [
+      "knowledge discovery",
+      "concept search",
+      "financial research",
+      "semantic analysis",
+      "document analysis"
+    ],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Free trial available, contact for enterprise pricing",
+      "rate_limits": "JWT tokens with 24-hour expiration"
+    },
+    "technical_info": {
+      "base_url": "https://apis.yewno.com/public",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "JWT tokens",
+      "endpoints": [
+        {
+          "path": "/concept/search",
+          "full_url": "https://apis.yewno.com/public/concept/search",
+          "method": "GET",
+          "description": "Search for concepts with definitions and metadata",
+          "documentation_link": "https://github.com/yewno/public-API-docs",
+          "parameters": [
+            "query",
+            "limit",
+            "offset"
+          ],
+          "response_format": "JSON with concept definitions and relationships"
+        },
+        {
+          "path": "/document/search",
+          "full_url": "https://apis.yewno.com/public/document/search",
+          "method": "GET",
+          "description": "Search for documents by concepts or topics",
+          "documentation_link": "https://github.com/yewno/public-API-docs",
+          "parameters": [
+            "concepts",
+            "topics",
+            "date_range"
+          ],
+          "response_format": "JSON with document metadata and relevance scores"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Concept definitions",
+        "Document analysis",
+        "Semantic relationships",
+        "Financial research"
+      ],
+      "geographic_scope": "Global",
+      "update_frequency": "Continuous updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://github.com/yewno/public-API-docs",
+      "api_summary": "Yewno provides AI-powered knowledge discovery through concept-driven search and document analysis, with public API documentation available on GitHub and registration required for access.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://auth.yewno.com/register",
+      "api_reference": "https://github.com/yewno/public-API-docs",
+      "examples": "https://github.com/yewno/public-API-docs",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "estimize",
+    "name": "Estimize Data API",
+    "provider": "Agora Inc. (Estimize)",
+    "description": "Crowdsourced earnings estimates platform providing EPS and revenue estimates from 120,000+ contributors, 70% more accurate than Wall Street estimates for 3000+ US listed companies.",
+    "discovery_status": "documented",
+    "tags": [
+      "earnings estimates",
+      "crowdsourced data",
+      "financial forecasts",
+      "Wall Street alternatives"
+    ],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Free trial available, institutional licensing for full access",
+      "rate_limits": "Contact for rate limit details"
+    },
+    "technical_info": {
+      "base_url": "https://api.estimize.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/estimates",
+          "full_url": "https://api.estimize.com/estimates",
+          "method": "GET",
+          "description": "Get EPS and revenue estimates for companies",
+          "documentation_link": "Contact for documentation",
+          "parameters": [
+            "ticker",
+            "period",
+            "estimate_type"
+          ],
+          "response_format": "JSON with consensus and individual estimates"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "EPS estimates",
+        "Revenue estimates",
+        "Economic indicators",
+        "Crowd-sourced forecasts"
+      ],
+      "geographic_scope": "US listed companies and ADRs, 27 US and 55 international economic metrics",
+      "update_frequency": "Real-time updates from contributor base",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact for documentation",
+      "api_summary": "Estimize provides crowdsourced earnings estimates from 120,000+ contributors with 70% better accuracy than Wall Street estimates, covering 3000+ US companies with historical data back to January 2012.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for access",
+      "api_reference": "Limited public documentation",
+      "examples": "Contact for examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "sentifi",
+    "name": "Sentifi API (Discontinued)",
+    "provider": "Sentifi (Service Discontinued)",
+    "description": "Former social sentiment analysis platform for financial markets. Service has been discontinued or merged with other providers. Alternative providers include SentiCrypt, Utradea, and StockTwits.",
+    "discovery_status": "documented",
+    "tags": [
+      "social sentiment",
+      "discontinued",
+      "financial markets",
+      "alternative providers available"
+    ],
+    "access_info": {
+      "is_free": null,
+      "requires_api_key": null,
+      "requires_approval": null,
+      "pricing_model": "Service discontinued - see alternative providers",
+      "rate_limits": "Not available"
+    },
+    "technical_info": {
+      "base_url": "Service discontinued",
+      "protocol": "Not applicable",
+      "data_formats": [
+        "Not applicable"
+      ],
+      "auth_method": "Not applicable",
+      "endpoints": []
+    },
+    "content_summary": {
+      "data_categories": [
+        "Service discontinued"
+      ],
+      "geographic_scope": "Not applicable",
+      "update_frequency": "Not applicable",
+      "historical_data": null
+    },
+    "research_notes": {
+      "documentation_url": "Not available",
+      "api_summary": "Sentifi service has been discontinued. Alternative providers include SentiCrypt for crypto sentiment, Utradea for social sentiment API, and StockTwits Firestream for real-time social sentiment streams.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Service discontinued",
+      "api_reference": "Not available",
+      "examples": "Not available",
+      "changelog": "Not available",
+      "status_page": "Not available"
+    }
+  },
+  {
+    "id": "tickertags",
+    "name": "TagniFi API (formerly TickerTags)",
+    "provider": "TagniFi",
+    "description": "Financial data platform providing point-in-time financial statement data with as-reported transparency, industry-specific templates, and comprehensive market data.",
+    "discovery_status": "documented",
+    "tags": [
+      "financial statements",
+      "point-in-time data",
+      "as-reported",
+      "market data"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Contact required for pricing",
+      "rate_limits": "Contact for rate limit information"
+    },
+    "technical_info": {
+      "base_url": "https://api.tagnifi.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "HTTP Basic Auth",
+      "endpoints": [
+        {
+          "path": "/fundamentals",
+          "full_url": "https://api.tagnifi.com/fundamentals",
+          "method": "GET",
+          "description": "Financial statement data with point-in-time capabilities",
+          "documentation_link": "Contact for documentation",
+          "parameters": [
+            "ticker",
+            "period",
+            "statement_type"
+          ],
+          "response_format": "JSON with financial statement data"
+        },
+        {
+          "path": "/markets",
+          "full_url": "https://api.tagnifi.com/markets",
+          "method": "GET",
+          "description": "End-of-day market prices and trading data",
+          "documentation_link": "Contact for documentation",
+          "parameters": [
+            "ticker",
+            "date_range"
+          ],
+          "response_format": "JSON with market price data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Financial statements",
+        "Market prices",
+        "Company profiles",
+        "Point-in-time data"
+      ],
+      "geographic_scope": "Global markets with US focus",
+      "update_frequency": "Daily market data, quarterly financials",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact for documentation",
+      "api_summary": "TagniFi provides point-in-time financial statement data with as-reported transparency and industry-specific templates, featuring HTTP Basic Auth and comprehensive market data coverage.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for access",
+      "api_reference": "Contact for documentation",
+      "examples": "Contact for examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "sentieo",
+    "name": "Sentieo Research Platform API",
+    "provider": "Sentieo",
+    "description": "AI-powered research platform for institutional investors providing document search, earnings call analysis, and enterprise research workflows for 900+ global institutional clients.",
+    "discovery_status": "documented",
+    "tags": [
+      "institutional research",
+      "AI analysis",
+      "earnings calls",
+      "document search",
+      "enterprise"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise-only, contact required",
+      "rate_limits": "Enterprise-specific limits"
+    },
+    "technical_info": {
+      "base_url": "Enterprise endpoints",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/research/search",
+          "full_url": "Enterprise endpoint/research/search",
+          "method": "GET",
+          "description": "AI-powered document search and analysis",
+          "documentation_link": "Enterprise documentation",
+          "parameters": [
+            "query",
+            "document_types",
+            "date_range"
+          ],
+          "response_format": "JSON with document search results and analysis"
+        },
+        {
+          "path": "/earnings/analysis",
+          "full_url": "Enterprise endpoint/earnings/analysis",
+          "method": "GET",
+          "description": "Earnings call transcript analysis with Smart Summary",
+          "documentation_link": "Enterprise documentation",
+          "parameters": [
+            "ticker",
+            "period",
+            "analysis_type"
+          ],
+          "response_format": "JSON with earnings call analysis and summaries"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Research documents",
+        "Earnings call transcripts",
+        "AI analysis",
+        "Enterprise workflows"
+      ],
+      "geographic_scope": "Global institutional coverage",
+      "update_frequency": "Real-time document updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Enterprise documentation provided",
+      "api_summary": "Sentieo serves 900+ global institutional clients with AI-powered research platform featuring document search, earnings call analysis, and cloud integrations for investment analysts and portfolio managers.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for enterprise access",
+      "api_reference": "Enterprise documentation",
+      "examples": "Enterprise examples provided",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "mkt-mediastats",
+    "name": "MKT MediaStats API",
+    "provider": "MKT MediaStats",
+    "description": "AI-driven narrative analysis of media and behavioral data for investment insights, providing global market coverage including stocks, FX, fixed income, and crypto with enterprise-only access.",
+    "discovery_status": "documented",
+    "tags": [
+      "narrative analysis",
+      "media data",
+      "behavioral analytics",
+      "investment insights",
+      "enterprise"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise/institutional only - contact for pricing",
+      "rate_limits": "Contact vendor for details"
+    },
+    "technical_info": {
+      "base_url": "Contact vendor for endpoint details",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/narrative/analysis",
+          "full_url": "Enterprise endpoint/narrative/analysis",
+          "method": "GET",
+          "description": "AI-driven narrative analysis of media and behavioral data",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": [
+            "asset_class",
+            "region",
+            "timeframe",
+            "narrative_themes"
+          ],
+          "response_format": "JSON with narrative insights and behavioral indicators"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Narrative economics",
+        "Alpha indicators",
+        "Risk assessment",
+        "Thematic baskets"
+      ],
+      "geographic_scope": "Global markets including stocks, FX, fixed income, crypto",
+      "update_frequency": "Real-time media analysis",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact vendor for documentation",
+      "api_summary": "MKT MediaStats provides AI-driven narrative analysis for institutional clients with no public API documentation found. Requires direct vendor contact for access and integration details.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact vendor directly",
+      "api_reference": "Enterprise documentation provided",
+      "examples": "Contact for examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "brain-company",
+    "name": "FinBrain Technologies API",
+    "provider": "Brain Company (FinBrain)",
+    "description": "AI-powered stock predictions and sentiment analysis platform providing technical indicators, earnings analysis, and risk signals for 10,000+ global stocks with Python SDK available.",
+    "discovery_status": "documented",
+    "tags": [
+      "AI predictions",
+      "stock analysis",
+      "sentiment analysis",
+      "technical indicators",
+      "risk signals"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Subscription-based with documented pricing tiers",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.finbrain.tech/v1",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/predictions",
+          "full_url": "https://api.finbrain.tech/v1/predictions",
+          "method": "GET",
+          "description": "AI-powered stock price predictions with confidence scores",
+          "documentation_link": "https://finbrain.tech/api-documentation",
+          "parameters": [
+            "ticker",
+            "timeframe",
+            "prediction_type"
+          ],
+          "response_format": "JSON with prediction values and confidence metrics"
+        },
+        {
+          "path": "/sentiment",
+          "full_url": "https://api.finbrain.tech/v1/sentiment",
+          "method": "GET",
+          "description": "Sentiment analysis and social media indicators",
+          "documentation_link": "https://finbrain.tech/api-documentation",
+          "parameters": [
+            "ticker",
+            "source",
+            "date_range"
+          ],
+          "response_format": "JSON with sentiment scores and social indicators"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Stock predictions",
+        "Sentiment analysis",
+        "Technical indicators",
+        "Earnings analysis",
+        "Risk signals"
+      ],
+      "geographic_scope": "10,000+ global stocks",
+      "update_frequency": "Multiple timeframes with extensive historical data",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://finbrain.tech/api-documentation",
+      "api_summary": "FinBrain provides AI-powered stock predictions with comprehensive documentation, Python SDK availability, and clear pricing structure covering 10,000+ global stocks with multiple prediction timeframes.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://finbrain.tech/api-documentation",
+      "api_reference": "https://finbrain.tech/api-documentation",
+      "examples": "Python SDK with examples available",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "prattle",
+    "name": "Prattle Analytics API (Discontinued)",
+    "provider": "Prattle Analytics (Acquired by Liquidnet 2019)",
+    "description": "Former central bank communication sentiment analysis platform. Service discontinued as independent offering after acquisition by Liquidnet in 2019. Access only through Liquidnet platform for institutional clients.",
+    "discovery_status": "documented",
+    "tags": [
+      "central bank analysis",
+      "discontinued",
+      "acquired",
+      "institutional access only"
+    ],
+    "access_info": {
+      "is_free": null,
+      "requires_api_key": null,
+      "requires_approval": null,
+      "pricing_model": "Service discontinued - access only through Liquidnet platform",
+      "rate_limits": "Not applicable"
+    },
+    "technical_info": {
+      "base_url": "Service discontinued",
+      "protocol": "Not applicable",
+      "data_formats": [
+        "Not applicable"
+      ],
+      "auth_method": "Not applicable",
+      "endpoints": []
+    },
+    "content_summary": {
+      "data_categories": [
+        "Service discontinued"
+      ],
+      "geographic_scope": "Formerly covered 15 central banks, 3,000+ US companies",
+      "update_frequency": "Not applicable",
+      "historical_data": null
+    },
+    "research_notes": {
+      "documentation_url": "Not available",
+      "api_summary": "Prattle Analytics was acquired by Liquidnet in 2019 and is no longer available as independent API service. Former services included central bank communication sentiment analysis covering 15 central banks and 3,000+ US companies.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Service discontinued",
+      "api_reference": "Not available",
+      "examples": "Not available",
+      "changelog": "Not available",
+      "status_page": "Not available"
+    }
+  },
+  {
+    "id": "geoquant",
+    "name": "Geoquant API (Identity Unclear)",
+    "provider": "Multiple geospatial providers",
+    "description": "No specific company named 'Geoquant' clearly identified. Multiple geospatial API providers offer similar services including climate risk data, geocoding, and spatial analysis. Requires clarification of specific company and requirements.",
+    "discovery_status": "documented",
+    "tags": [
+      "geospatial analysis",
+      "climate risk",
+      "geocoding",
+      "unclear identity",
+      "multiple providers"
+    ],
+    "access_info": {
+      "is_free": null,
+      "requires_api_key": null,
+      "requires_approval": null,
+      "pricing_model": "Varies by specific geospatial provider",
+      "rate_limits": "Varies by provider"
+    },
+    "technical_info": {
+      "base_url": "Varies by provider",
+      "protocol": "REST (typical for geospatial APIs)",
+      "data_formats": [
+        "JSON",
+        "GeoJSON"
+      ],
+      "auth_method": "API key (typical)",
+      "endpoints": []
+    },
+    "content_summary": {
+      "data_categories": [
+        "Climate risk data",
+        "Geocoding",
+        "Spatial analysis"
+      ],
+      "geographic_scope": "Varies by provider",
+      "update_frequency": "Varies by provider",
+      "historical_data": null
+    },
+    "research_notes": {
+      "documentation_url": "Requires specific company identification",
+      "api_summary": "No specific company named 'Geoquant' clearly identified. Multiple geospatial API providers exist with similar services. Need clarification of specific company and requirements for accurate API documentation.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Requires specific provider identification",
+      "api_reference": "Varies by provider",
+      "examples": "Varies by provider",
+      "changelog": "Varies by provider",
+      "status_page": "Varies by provider"
+    }
+  },
+  {
+    "id": "predictit-api",
+    "name": "PredictIt API",
+    "provider": "PredictIt",
+    "description": "Political prediction markets API providing real-time data on election betting, current events, and political forecasting with free access and no authentication required.",
+    "discovery_status": "documented",
+    "tags": [
+      "prediction markets",
+      "political betting",
+      "election data",
+      "current events",
+      "free access"
+    ],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "Completely free with no authentication required",
+      "rate_limits": "No published rate limits"
+    },
+    "technical_info": {
+      "base_url": "https://www.predictit.org/api/marketdata",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "None required",
+      "endpoints": [
+        {
+          "path": "/all",
+          "full_url": "https://www.predictit.org/api/marketdata/all",
+          "method": "GET",
+          "description": "All available prediction markets with current prices",
+          "documentation_link": "https://www.predictit.org/api/marketdata",
+          "parameters": [],
+          "response_format": "JSON with all markets and contract prices"
+        },
+        {
+          "path": "/markets/{id}",
+          "full_url": "https://www.predictit.org/api/marketdata/markets/{id}",
+          "method": "GET",
+          "description": "Specific market data by market ID",
+          "documentation_link": "https://www.predictit.org/api/marketdata",
+          "parameters": [
+            "id"
+          ],
+          "response_format": "JSON with specific market details and contracts"
+        },
+        {
+          "path": "/ticker/{ticker}",
+          "full_url": "https://www.predictit.org/api/marketdata/ticker/{ticker}",
+          "method": "GET",
+          "description": "Market data by ticker symbol",
+          "documentation_link": "https://www.predictit.org/api/marketdata",
+          "parameters": [
+            "ticker"
+          ],
+          "response_format": "JSON with ticker-specific market data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Political prediction markets",
+        "Election betting",
+        "Current events",
+        "Market prices"
+      ],
+      "geographic_scope": "Primarily US political events with some international coverage",
+      "update_frequency": "Real-time market data",
+      "historical_data": false
+    },
+    "research_notes": {
+      "documentation_url": "https://www.predictit.org/api/marketdata",
+      "api_summary": "PredictIt offers completely free API access to political prediction markets with no authentication required. Well-documented with multiple client libraries available and immediate integration capability.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://www.predictit.org/api/marketdata",
+      "api_reference": "https://www.predictit.org/api/marketdata",
+      "examples": "Multiple client libraries available",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "google-trends-api",
+    "name": "Google Trends API",
+    "provider": "Google (Official Alpha) / Third-party providers",
+    "description": "Search trend data and market research insights. Official API in Alpha requires application, but multiple third-party alternatives available including SerpApi and HasData for immediate access.",
+    "discovery_status": "documented",
+    "tags": [
+      "search trends",
+      "market research",
+      "consumer behavior",
+      "SEO analysis",
+      "third-party access"
+    ],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Official API: Alpha access. Third-party: SerpApi $75-275/month, HasData $49-249/month",
+      "rate_limits": "Varies by provider - third-party options have clear rate limits"
+    },
+    "technical_info": {
+      "base_url": "https://serpapi.com/google-trends-api (recommended third-party)",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/search",
+          "full_url": "https://serpapi.com/search.json?engine=google_trends",
+          "method": "GET",
+          "description": "Search trends data with geographic and temporal filtering",
+          "documentation_link": "https://serpapi.com/google-trends-api",
+          "parameters": [
+            "q",
+            "geo",
+            "date",
+            "cat",
+            "gprop"
+          ],
+          "response_format": "JSON with trend data and related queries"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Search trends",
+        "Geographic trends",
+        "Related queries",
+        "Interest over time"
+      ],
+      "geographic_scope": "Global with country-specific data",
+      "update_frequency": "Daily updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://serpapi.com/google-trends-api",
+      "api_summary": "Google Trends official API in Alpha with application required. Best immediate access through SerpApi ($75-275/month) or HasData ($49-249/month) with comprehensive documentation and free tiers available.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://serpapi.com/google-trends-api",
+      "api_reference": "https://serpapi.com/google-trends-api",
+      "examples": "Multiple examples provided by third-party providers",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "advan-research",
+    "name": "Advan Research API",
+    "provider": "Advan Research",
+    "description": "Location intelligence platform providing 300 billion monthly location data points and 500 million transactions covering 7,000+ companies across 300 sectors with enterprise-only access.",
+    "discovery_status": "documented",
+    "tags": [
+      "location intelligence",
+      "foot traffic",
+      "transaction data",
+      "enterprise analytics",
+      "real estate"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom enterprise pricing - contact required",
+      "rate_limits": "Custom per client agreement"
+    },
+    "technical_info": {
+      "base_url": "Enterprise endpoints provided upon subscription",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "CSV"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/foottraffic",
+          "full_url": "Enterprise endpoint/foottraffic",
+          "method": "GET",
+          "description": "Foot traffic analytics and location intelligence",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": [
+            "location",
+            "date_range",
+            "metrics",
+            "aggregation"
+          ],
+          "response_format": "JSON with foot traffic metrics and trends"
+        },
+        {
+          "path": "/transactions",
+          "full_url": "Enterprise endpoint/transactions",
+          "method": "GET",
+          "description": "Transaction data and consumer spending patterns",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": [
+            "merchant",
+            "sector",
+            "geography",
+            "time_period"
+          ],
+          "response_format": "JSON with transaction volumes and spending analytics"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Location data",
+        "Foot traffic",
+        "Transaction data",
+        "Consumer behavior",
+        "Real estate analytics"
+      ],
+      "geographic_scope": "300 billion monthly location data points, 7,000+ companies across 300 sectors",
+      "update_frequency": "Real-time updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact for enterprise documentation",
+      "api_summary": "Advan Research provides 300 billion monthly location data points and 500 million transactions with enterprise-only access covering 7,000+ companies across 300 sectors for location intelligence and foot traffic analytics.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact enterprise sales",
+      "api_reference": "Enterprise documentation provided",
+      "examples": "Enterprise examples provided",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "yipitdata",
+    "name": "YipitData API",
+    "provider": "YipitData",
+    "description": "Alternative financial data platform covering 2,000+ companies with 40+ datasets and 2M e-receipt panelists, focusing on investment research and earnings prediction with enterprise access.",
+    "discovery_status": "documented",
+    "tags": [
+      "alternative data",
+      "e-receipts",
+      "earnings prediction",
+      "investment research",
+      "enterprise"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom enterprise pricing - contact required",
+      "rate_limits": "Custom per client agreement"
+    },
+    "technical_info": {
+      "base_url": "Enterprise endpoints provided upon subscription",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "CSV"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/datasets",
+          "full_url": "Enterprise endpoint/datasets",
+          "method": "GET",
+          "description": "Access to 40+ alternative datasets covering various sectors",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": [
+            "dataset_id",
+            "company",
+            "date_range",
+            "metrics"
+          ],
+          "response_format": "JSON with dataset-specific metrics and trends"
+        },
+        {
+          "path": "/receipts",
+          "full_url": "Enterprise endpoint/receipts",
+          "method": "GET",
+          "description": "E-receipt data from 2M panelists for consumer spending analysis",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": [
+            "retailer",
+            "category",
+            "geography",
+            "time_period"
+          ],
+          "response_format": "JSON with receipt data and spending patterns"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "E-receipt data",
+        "Card transaction data",
+        "Alternative earnings data",
+        "Consumer spending"
+      ],
+      "geographic_scope": "2,000+ companies with 40+ datasets, 2M e-receipt panelists",
+      "update_frequency": "Daily updates with real-time components",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact for enterprise documentation",
+      "api_summary": "YipitData provides alternative financial data covering 2,000+ companies with 40+ datasets and 2M e-receipt panelists, focusing on investment research and earnings prediction with custom enterprise pricing.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact enterprise sales",
+      "api_reference": "Enterprise documentation provided",
+      "examples": "Enterprise examples provided",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "exante-data",
+    "name": "Exante Data API",
+    "provider": "Exante Data",
+    "description": "Global macroeconomic and sovereign risk data platform providing comprehensive economic indicators, risk assessments, and market intelligence with subscription-based access and GitHub code examples.",
+    "discovery_status": "documented",
+    "tags": [
+      "macroeconomic data",
+      "sovereign risk",
+      "economic indicators",
+      "market intelligence",
+      "subscription"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Subscription-based - contact for pricing",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.exantedata.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "CSV"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/economic-indicators",
+          "full_url": "https://api.exantedata.com/economic-indicators",
+          "method": "GET",
+          "description": "Global macroeconomic indicators and time series data",
+          "documentation_link": "https://apidocs.exantedata.com/",
+          "parameters": [
+            "country",
+            "indicator",
+            "date_range",
+            "frequency"
+          ],
+          "response_format": "JSON with economic indicator values and metadata"
+        },
+        {
+          "path": "/sovereign-risk",
+          "full_url": "https://api.exantedata.com/sovereign-risk",
+          "method": "GET",
+          "description": "Sovereign risk assessments and country risk ratings",
+          "documentation_link": "https://apidocs.exantedata.com/",
+          "parameters": [
+            "country",
+            "risk_type",
+            "date_range"
+          ],
+          "response_format": "JSON with risk ratings and assessment details"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Economic indicators",
+        "Sovereign risk",
+        "Country ratings",
+        "Market intelligence"
+      ],
+      "geographic_scope": "Global macroeconomic coverage",
+      "update_frequency": "Daily updates for most indicators",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://apidocs.exantedata.com/",
+      "api_summary": "Exante Data provides global macroeconomic and sovereign risk data with comprehensive API documentation available and GitHub repository with code examples for subscription-based access.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://apidocs.exantedata.com/",
+      "api_reference": "https://apidocs.exantedata.com/",
+      "examples": "GitHub repository available",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "corelogic",
+    "name": "CoreLogic API (now Cotality)",
+    "provider": "CoreLogic (Cotality)",
+    "description": "Comprehensive real estate data platform with 5.5 billion US property records spanning 50 years, providing 99.9% market coverage with analytics and property intelligence APIs.",
+    "discovery_status": "documented",
+    "tags": [
+      "real estate data",
+      "property records",
+      "market analytics",
+      "property intelligence",
+      "comprehensive coverage"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "~$12,000/year median pricing, varies by features",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.corelogic.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "XML"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/property/search",
+          "full_url": "https://api.corelogic.com/property/search",
+          "method": "GET",
+          "description": "Search property records and get detailed property information",
+          "documentation_link": "Contact for documentation",
+          "parameters": [
+            "address",
+            "apn",
+            "property_type",
+            "date_range"
+          ],
+          "response_format": "JSON with comprehensive property details"
+        },
+        {
+          "path": "/market/analytics",
+          "full_url": "https://api.corelogic.com/market/analytics",
+          "method": "GET",
+          "description": "Market analytics and trend data for geographic regions",
+          "documentation_link": "Contact for documentation",
+          "parameters": [
+            "region",
+            "market_type",
+            "metrics",
+            "time_period"
+          ],
+          "response_format": "JSON with market analytics and trends"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Property records",
+        "Market analytics",
+        "Property valuations",
+        "Real estate trends"
+      ],
+      "geographic_scope": "5.5 billion US property records, 99.9% market coverage, 50 years of data",
+      "update_frequency": "Regular updates with historical depth",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact for documentation",
+      "api_summary": "CoreLogic (now Cotality) provides comprehensive real estate data with 5.5 billion US property records spanning 50 years and 99.9% market coverage, with median pricing around $12,000/year varying by features.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for access",
+      "api_reference": "Contact for documentation",
+      "examples": "Contact for examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "sp-global-market-intelligence",
+    "name": "S&P Global Market Intelligence API",
+    "provider": "S&P Global",
+    "description": "Comprehensive financial and ESG data platform providing fundamental data, as-reported indicators, and ESG metrics with enterprise-only access and custom pricing based on data requirements.",
+    "discovery_status": "documented",
+    "tags": [
+      "financial data",
+      "ESG metrics",
+      "fundamental analysis",
+      "market intelligence",
+      "enterprise"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise-only with custom pricing based on data volume and requirements",
+      "rate_limits": "Custom per client agreement"
+    },
+    "technical_info": {
+      "base_url": "Enterprise endpoints provided upon subscription",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "XML",
+        "CSV"
+      ],
+      "auth_method": "API key with enterprise authentication",
+      "endpoints": [
+        {
+          "path": "/fundamentals",
+          "full_url": "Enterprise endpoint/fundamentals",
+          "method": "GET",
+          "description": "Comprehensive fundamental data and as-reported indicators",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": [
+            "ticker",
+            "data_type",
+            "period",
+            "currency"
+          ],
+          "response_format": "JSON with fundamental financial data"
+        },
+        {
+          "path": "/esg/metrics",
+          "full_url": "Enterprise endpoint/esg/metrics",
+          "method": "GET",
+          "description": "ESG metrics and sustainability indicators",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": [
+            "ticker",
+            "esg_category",
+            "date_range"
+          ],
+          "response_format": "JSON with ESG scores and metrics"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Fundamental data",
+        "As-reported indicators",
+        "ESG metrics",
+        "Market intelligence"
+      ],
+      "geographic_scope": "Global coverage with comprehensive market data",
+      "update_frequency": "Real-time and daily updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Enterprise documentation provided upon subscription",
+      "api_summary": "S&P Global Market Intelligence provides comprehensive financial and ESG data platform with enterprise-only access, covering fundamental data, as-reported indicators, and ESG metrics with custom pricing.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact enterprise sales",
+      "api_reference": "Enterprise documentation provided",
+      "examples": "Enterprise examples provided",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "esg-book",
+    "name": "ESG Book API",
+    "provider": "ESG Book",
+    "description": "Automated ESG data collection and sustainability reporting platform with strong focus on emissions estimation covering 45,000+ companies and consent-based data access for financial institutions.",
+    "discovery_status": "documented",
+    "tags": [
+      "ESG data",
+      "emissions estimation",
+      "sustainability reporting",
+      "automated collection",
+      "consent-based"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Contact for pricing - financial institution focus",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.esgbook.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/companies/{id}/esg",
+          "full_url": "https://api.esgbook.com/companies/{id}/esg",
+          "method": "GET",
+          "description": "Comprehensive ESG data for specific companies",
+          "documentation_link": "Contact for documentation",
+          "parameters": [
+            "id",
+            "metrics",
+            "date_range"
+          ],
+          "response_format": "JSON with ESG metrics and sustainability data"
+        },
+        {
+          "path": "/emissions/estimation",
+          "full_url": "https://api.esgbook.com/emissions/estimation",
+          "method": "GET",
+          "description": "Automated emissions estimation for companies",
+          "documentation_link": "Contact for documentation",
+          "parameters": [
+            "company_id",
+            "scope",
+            "period"
+          ],
+          "response_format": "JSON with emissions estimates and methodology"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "ESG metrics",
+        "Emissions estimation",
+        "Sustainability reporting",
+        "Automated data collection"
+      ],
+      "geographic_scope": "45,000+ companies globally",
+      "update_frequency": "Automated data collection with regular updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact for documentation",
+      "api_summary": "ESG Book specializes in automated ESG data collection and sustainability reporting with emissions estimation for 45,000+ companies, featuring consent-based data access designed for financial institutions.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for access",
+      "api_reference": "Contact for documentation",
+      "examples": "Contact for examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "msci-esg",
+    "name": "MSCI ESG API",
+    "provider": "MSCI",
+    "description": "Industry-leading ESG ratings platform with AAA to CCC scale covering 17,000+ issuers and 999,000+ securities, backed by 25+ years of ESG expertise and methodology.",
+    "discovery_status": "documented",
+    "tags": [
+      "ESG ratings",
+      "industry leading",
+      "comprehensive coverage",
+      "established methodology",
+      "securities"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise licensing with custom pricing",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.msci.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "XML"
+      ],
+      "auth_method": "API key with enterprise authentication",
+      "endpoints": [
+        {
+          "path": "/esg/ratings",
+          "full_url": "https://api.msci.com/esg/ratings",
+          "method": "GET",
+          "description": "ESG ratings on AAA to CCC scale for issuers and securities",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": [
+            "issuer",
+            "security",
+            "rating_type",
+            "date_range"
+          ],
+          "response_format": "JSON with ESG ratings and methodology details"
+        },
+        {
+          "path": "/esg/research",
+          "full_url": "https://api.msci.com/esg/research",
+          "method": "GET",
+          "description": "Detailed ESG research and analysis reports",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": [
+            "issuer",
+            "research_type",
+            "date_range"
+          ],
+          "response_format": "JSON with ESG research and analysis"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "ESG ratings",
+        "ESG research",
+        "Methodology details",
+        "Securities analysis"
+      ],
+      "geographic_scope": "17,000+ issuers and 999,000+ securities globally",
+      "update_frequency": "Regular updates with established methodology",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Enterprise documentation provided",
+      "api_summary": "MSCI provides industry-leading ESG ratings with AAA to CCC scale covering 17,000+ issuers and 999,000+ securities, backed by 25+ years of ESG expertise and comprehensive methodology.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact enterprise sales",
+      "api_reference": "Enterprise documentation provided",
+      "examples": "Enterprise examples provided",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "sustainalytics",
+    "name": "Sustainalytics ESG Assessment Platform (EAP) API",
+    "provider": "Sustainalytics (Morningstar)",
+    "description": "Comprehensive ESG risk ratings and research platform with two-phase authentication system, owned by Morningstar with extensive documentation available on GitHub.",
+    "discovery_status": "documented",
+    "tags": [
+      "ESG risk ratings",
+      "comprehensive research",
+      "Morningstar owned",
+      "GitHub documentation",
+      "two-phase auth"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Contact for pricing - enterprise focus",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.sustainalytics.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "Two-phase authentication system",
+      "endpoints": [
+        {
+          "path": "/esg/risk-ratings",
+          "full_url": "https://api.sustainalytics.com/esg/risk-ratings",
+          "method": "GET",
+          "description": "ESG risk ratings and assessment data",
+          "documentation_link": "GitHub documentation available",
+          "parameters": [
+            "company_id",
+            "risk_category",
+            "date_range"
+          ],
+          "response_format": "JSON with ESG risk ratings and detailed assessments"
+        },
+        {
+          "path": "/esg/research",
+          "full_url": "https://api.sustainalytics.com/esg/research",
+          "method": "GET",
+          "description": "Comprehensive ESG research and analysis",
+          "documentation_link": "GitHub documentation available",
+          "parameters": [
+            "company_id",
+            "research_type",
+            "date_range"
+          ],
+          "response_format": "JSON with detailed ESG research reports"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "ESG risk ratings",
+        "ESG research",
+        "Risk assessments",
+        "Sustainability analysis"
+      ],
+      "geographic_scope": "Global coverage with comprehensive company database",
+      "update_frequency": "Regular updates with detailed assessments",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "GitHub documentation available",
+      "api_summary": "Sustainalytics, owned by Morningstar, provides comprehensive ESG risk ratings and research with two-phase authentication system and extensive documentation available on GitHub for enterprise clients.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "GitHub documentation available",
+      "api_reference": "Comprehensive public docs on GitHub",
+      "examples": "GitHub repository with examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "reprisk",
+    "name": "RepRisk API",
+    "provider": "RepRisk",
+    "description": "AI-powered reputational risk intelligence platform combining AI with expert human analysis, focusing on due diligence and compliance use cases for enterprise clients.",
+    "discovery_status": "documented",
+    "tags": [
+      "reputational risk",
+      "AI powered",
+      "human analysis",
+      "due diligence",
+      "compliance"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise pricing - contact required",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.reprisk.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/risk/assessment",
+          "full_url": "https://api.reprisk.com/risk/assessment",
+          "method": "GET",
+          "description": "AI-powered reputational risk assessments with human expert analysis",
+          "documentation_link": "Client-only documentation",
+          "parameters": [
+            "company_id",
+            "risk_category",
+            "date_range"
+          ],
+          "response_format": "JSON with risk scores and detailed analysis"
+        },
+        {
+          "path": "/compliance/screening",
+          "full_url": "https://api.reprisk.com/compliance/screening",
+          "method": "GET",
+          "description": "Compliance screening and due diligence analysis",
+          "documentation_link": "Client-only documentation",
+          "parameters": [
+            "entity",
+            "screening_type",
+            "date_range"
+          ],
+          "response_format": "JSON with compliance screening results"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Reputational risk",
+        "Compliance screening",
+        "Due diligence",
+        "Risk assessments"
+      ],
+      "geographic_scope": "Global coverage with AI and human analysis",
+      "update_frequency": "Continuous AI monitoring with human validation",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Client-only access",
+      "api_summary": "RepRisk provides AI-powered reputational risk intelligence combining automated AI analysis with expert human validation, focusing on due diligence and compliance use cases with restricted client-only documentation access.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for client access",
+      "api_reference": "Client-only documentation",
+      "examples": "Client-only examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "housecanary",
+    "name": "HouseCanary API",
+    "provider": "HouseCanary",
+    "description": "Comprehensive residential real estate analytics platform with machine learning-based valuations, providing excellent API design, Python SDK, and test API keys for development.",
+    "discovery_status": "documented",
+    "tags": [
+      "residential real estate",
+      "machine learning",
+      "property valuations",
+      "Python SDK",
+      "development friendly"
+    ],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Test API keys for development, subscription-based for production",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.housecanary.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "HTTP Basic Authentication",
+      "endpoints": [
+        {
+          "path": "/v2/property/value",
+          "full_url": "https://api.housecanary.com/v2/property/value",
+          "method": "GET",
+          "description": "Machine learning-based property valuations and analytics",
+          "documentation_link": "https://api-docs.housecanary.com/",
+          "parameters": [
+            "address",
+            "zipcode",
+            "property_type"
+          ],
+          "response_format": "JSON with property value estimates and confidence scores"
+        },
+        {
+          "path": "/v2/property/details",
+          "full_url": "https://api.housecanary.com/v2/property/details",
+          "method": "GET",
+          "description": "Comprehensive property details and characteristics",
+          "documentation_link": "https://api-docs.housecanary.com/",
+          "parameters": [
+            "address",
+            "zipcode"
+          ],
+          "response_format": "JSON with detailed property information"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Property valuations",
+        "Real estate analytics",
+        "Property details",
+        "Market trends"
+      ],
+      "geographic_scope": "US residential real estate",
+      "update_frequency": "Regular updates with machine learning model improvements",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api-docs.housecanary.com/",
+      "api_summary": "HouseCanary provides comprehensive residential real estate analytics with excellent API design, Python SDK availability, and test API keys for development, making it highly accessible for developers.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://api-docs.housecanary.com/",
+      "api_reference": "https://api-docs.housecanary.com/",
+      "examples": "Python SDK with comprehensive examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "zillow",
+    "name": "Zillow API (Bridge Data Output)",
+    "provider": "Zillow",
+    "description": "Enterprise-focused real estate API providing Zestimate data and public records through Bridge Data Output platform with token-based authentication for institutional clients.",
+    "discovery_status": "documented",
+    "tags": [
+      "Zestimate",
+      "public records",
+      "enterprise",
+      "institutional",
+      "real estate data"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise/Custom pricing for institutional clients",
+      "rate_limits": "Based on enterprise agreement"
+    },
+    "technical_info": {
+      "base_url": "https://bridge-api.zillow.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "Token-based authentication",
+      "endpoints": [
+        {
+          "path": "/zestimate",
+          "full_url": "https://bridge-api.zillow.com/zestimate",
+          "method": "GET",
+          "description": "Zillow's automated property valuation model data",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": [
+            "property_id",
+            "address",
+            "date_range"
+          ],
+          "response_format": "JSON with Zestimate values and confidence intervals"
+        },
+        {
+          "path": "/public-records",
+          "full_url": "https://bridge-api.zillow.com/public-records",
+          "method": "GET",
+          "description": "Public property records and transaction history",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": [
+            "property_id",
+            "record_type",
+            "date_range"
+          ],
+          "response_format": "JSON with public records and transaction data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Zestimate values",
+        "Public records",
+        "Transaction history",
+        "Property data"
+      ],
+      "geographic_scope": "US real estate market",
+      "update_frequency": "Regular Zestimate model updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Enterprise documentation provided",
+      "api_summary": "Zillow Bridge Data Output provides enterprise-focused access to Zestimate data and public records with token-based authentication designed for institutional clients and custom pricing.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact enterprise sales",
+      "api_reference": "Enterprise documentation provided",
+      "examples": "Enterprise examples provided",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "redfin",
+    "name": "Redfin API (Unofficial)",
+    "provider": "Redfin (Community-driven unofficial access)",
+    "description": "Community-driven unofficial API access to Redfin real estate data through reverse-engineered endpoints, offering free access but with ToS concerns and no official support.",
+    "discovery_status": "documented",
+    "tags": [
+      "unofficial",
+      "community driven",
+      "reverse engineered",
+      "free access",
+      "ToS concerns"
+    ],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "Unofficial free access through community libraries",
+      "rate_limits": "Unofficial - use responsibly to avoid blocking"
+    },
+    "technical_info": {
+      "base_url": "Unofficial endpoints through community libraries",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "No authentication required (unofficial)",
+      "endpoints": [
+        {
+          "path": "/search",
+          "full_url": "Unofficial endpoint/search",
+          "method": "GET",
+          "description": "Property search through unofficial access",
+          "documentation_link": "Community library documentation",
+          "parameters": [
+            "location",
+            "property_type",
+            "price_range"
+          ],
+          "response_format": "JSON with property listings (unofficial)"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Property listings",
+        "Real estate data",
+        "Market information"
+      ],
+      "geographic_scope": "US real estate markets covered by Redfin",
+      "update_frequency": "Depends on unofficial access methods",
+      "historical_data": false
+    },
+    "research_notes": {
+      "documentation_url": "Community library documentation",
+      "api_summary": "Redfin offers unofficial free access through community libraries using reverse-engineered endpoints, though this approach has Terms of Service concerns and lacks official support.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Community library documentation",
+      "api_reference": "Unofficial community documentation",
+      "examples": "Community examples available",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "attom-data-solutions",
+    "name": "ATTOM Data Solutions API",
+    "provider": "ATTOM Data Solutions",
+    "description": "Industry-leading property data platform with 158+ million properties coverage, offering 30-day free trial with comprehensive documentation and extensive US market coverage (99% of population).",
+    "discovery_status": "documented",
+    "tags": [
+      "industry leading",
+      "comprehensive coverage",
+      "free trial",
+      "extensive documentation",
+      "158M+ properties"
+    ],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "30-day free trial, then subscription-based pricing",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.attomdata.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "XML"
+      ],
+      "auth_method": "API Key headers",
+      "endpoints": [
+        {
+          "path": "/property/search",
+          "full_url": "https://api.attomdata.com/property/search",
+          "method": "GET",
+          "description": "Search properties with detailed information and market data",
+          "documentation_link": "https://api.developer.attomdata.com/",
+          "parameters": [
+            "address",
+            "location",
+            "property_type",
+            "date_range"
+          ],
+          "response_format": "JSON with comprehensive property details"
+        },
+        {
+          "path": "/market/analytics",
+          "full_url": "https://api.attomdata.com/market/analytics",
+          "method": "GET",
+          "description": "Market analytics and neighborhood data",
+          "documentation_link": "https://api.developer.attomdata.com/",
+          "parameters": [
+            "region",
+            "analytics_type",
+            "time_period"
+          ],
+          "response_format": "JSON with market analytics and trends"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Property data",
+        "Market analytics",
+        "Neighborhood data",
+        "Property details"
+      ],
+      "geographic_scope": "158+ million US properties, 99% population coverage",
+      "update_frequency": "Regular updates with comprehensive market coverage",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api.developer.attomdata.com/",
+      "api_summary": "ATTOM Data Solutions is the most accessible option with 30-day free trial, comprehensive documentation, and extensive property coverage (158+ million properties, 99% US population coverage).",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://api.developer.attomdata.com/",
+      "api_reference": "https://api.developer.attomdata.com/",
+      "examples": "Comprehensive examples provided",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "costar",
+    "name": "CoStar API",
+    "provider": "CoStar",
+    "description": "Industry leader for commercial real estate data with partnership-only access, focusing on commercial properties, market analytics, and institutional clients with enterprise requirements.",
+    "discovery_status": "documented",
+    "tags": [
+      "commercial real estate",
+      "industry leader",
+      "partnership only",
+      "institutional",
+      "enterprise"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise partnerships and custom pricing required",
+      "rate_limits": "Based on partnership agreement"
+    },
+    "technical_info": {
+      "base_url": "Partnership-specific endpoints",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "XML"
+      ],
+      "auth_method": "API Key with partnership authentication",
+      "endpoints": [
+        {
+          "path": "/commercial/properties",
+          "full_url": "Partnership endpoint/commercial/properties",
+          "method": "GET",
+          "description": "Commercial property data and market intelligence",
+          "documentation_link": "Partnership documentation provided",
+          "parameters": [
+            "location",
+            "property_type",
+            "market_metrics"
+          ],
+          "response_format": "JSON with commercial property details"
+        },
+        {
+          "path": "/market/analysis",
+          "full_url": "Partnership endpoint/market/analysis",
+          "method": "GET",
+          "description": "Commercial real estate market analysis and trends",
+          "documentation_link": "Partnership documentation provided",
+          "parameters": [
+            "market",
+            "analysis_type",
+            "time_period"
+          ],
+          "response_format": "JSON with market analysis and commercial trends"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Commercial properties",
+        "Market analysis",
+        "Commercial trends",
+        "Institutional data"
+      ],
+      "geographic_scope": "US commercial real estate markets",
+      "update_frequency": "Regular updates with commercial focus",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Partnership documentation provided",
+      "api_summary": "CoStar is the industry leader for commercial real estate but requires enterprise partnerships with custom pricing, making it suitable only for institutional clients with significant commercial real estate needs.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for partnership",
+      "api_reference": "Partnership documentation provided",
+      "examples": "Partnership examples provided",
+      "changelog": null,
+      "status_page": null
+    }
+  }
+]

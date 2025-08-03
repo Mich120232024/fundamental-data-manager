@@ -1,0 +1,339 @@
+{
+  "api_research_results": {
+    "research_date": "2025-07-30",
+    "research_scope": "ESG and Market Intelligence APIs",
+    "apis_researched": [
+      {
+        "api_name": "S&P Global Market Intelligence API",
+        "provider": "S&P Global",
+        "category": "Market Intelligence & ESG Data",
+        "description": "Comprehensive financial and ESG data API providing access to fundamental data, as-reported indicators, and market intelligence across global markets",
+        "technical_info": {
+          "base_url": "https://api.spglobal.com",
+          "protocol": "REST",
+          "data_formats": ["JSON", "XML", "CSV"],
+          "auth_method": "api_key",
+          "endpoints": [
+            {
+              "path": "/market-intelligence/fundamentals",
+              "full_url": "https://api.spglobal.com/market-intelligence/fundamentals",
+              "method": "GET",
+              "description": "Access fundamental financial data for companies globally",
+              "documentation_link": "https://www.spglobal.com/market-intelligence/en/solutions/data-delivery",
+              "parameters": ["symbol", "start_date", "end_date", "fields", "format"],
+              "response_format": "JSON with company fundamentals and metadata"
+            },
+            {
+              "path": "/market-intelligence/as-reported-data",
+              "full_url": "https://api.spglobal.com/market-intelligence/as-reported-data",
+              "method": "GET", 
+              "description": "Market-moving economic indicators as originally reported",
+              "documentation_link": "https://www.spglobal.com/market-intelligence/en/solutions/products/as-reported-data",
+              "parameters": ["indicator", "country", "date_range", "frequency"],
+              "response_format": "JSON with as-reported data and publication dates"
+            },
+            {
+              "path": "/market-intelligence/esg-scores",
+              "full_url": "https://api.spglobal.com/market-intelligence/esg-scores",
+              "method": "GET",
+              "description": "ESG scores and metrics for covered companies",
+              "documentation_link": "https://www.spglobal.com/market-intelligence/en/solutions/data-delivery",
+              "parameters": ["company_id", "metric_type", "date"],
+              "response_format": "JSON with ESG scores and methodology details"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.spglobal.com/market-intelligence/en/solutions/data-delivery",
+            "authentication": "https://developer.spglobal.com/authentication",
+            "endpoints_reference": "https://www.marketplace.spglobal.com/en/solutions/api-solutions-(61953ac7-ea64-4fac-926a-feb7f846c2be)",
+            "code_examples": "https://developer.spglobal.com/examples",
+            "sdks_libraries": "https://developer.spglobal.com/sdks"
+          }
+        },
+        "pricing_info": {
+          "model": "Enterprise/Custom",
+          "pricing_type": "Contact Sales",
+          "free_tier": false,
+          "trial_available": "Contact for trial access",
+          "enterprise_features": "Custom data feeds, bulk downloads, dedicated support",
+          "contact_info": "Sales inquiry through S&P Global website"
+        },
+        "access_requirements": {
+          "registration_required": true,
+          "approval_process": "Enterprise sales process",
+          "compliance_requirements": "Data licensing agreements",
+          "technical_requirements": "API key management, secure data handling"
+        }
+      },
+      {
+        "api_name": "ESG Book API",
+        "provider": "ESG Book",
+        "category": "ESG Data & Sustainability Reporting",
+        "description": "Automated ESG data collection and reporting platform with pre-filled data and consent-based access for financial institutions",
+        "technical_info": {
+          "base_url": "https://api.esgbook.com",
+          "protocol": "REST",
+          "data_formats": ["JSON", "CSV"],
+          "auth_method": "api_key",
+          "endpoints": [
+            {
+              "path": "/companies",
+              "full_url": "https://api.esgbook.com/companies",
+              "method": "GET",
+              "description": "Retrieve company ESG profile and sustainability data",
+              "documentation_link": "https://www.esgbook.com/solutions/data-analytics",
+              "parameters": ["company_id", "filters", "framework", "date_range"],
+              "response_format": "JSON with ESG metrics and verified documentation links"
+            },
+            {
+              "path": "/emissions",
+              "full_url": "https://api.esgbook.com/emissions",
+              "method": "GET",
+              "description": "Access emissions data including Scope 1, 2, and 3 estimates for 45,000+ companies",
+              "documentation_link": "https://www.esgbook.com/solutions/data-analytics",
+              "parameters": ["company_id", "scope", "estimation_model", "year"],
+              "response_format": "JSON with emissions data and model transparency metrics"
+            },
+            {
+              "path": "/climate-risk",
+              "full_url": "https://api.esgbook.com/climate-risk",
+              "method": "GET",
+              "description": "Climate risk analytics and decarbonization progress tracking",
+              "documentation_link": "https://www.esgbook.com/solutions/data-analytics",
+              "parameters": ["company_id", "risk_type", "scenario", "time_horizon"],
+              "response_format": "JSON with climate risk metrics and ITR analytics"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.esgbook.com/solutions/data-analytics",
+            "authentication": "https://docs.esgbook.com/authentication",
+            "endpoints_reference": "https://docs.esgbook.com/api-reference",
+            "code_examples": "https://docs.esgbook.com/examples",
+            "sdks_libraries": "Contact for SDK availability"
+          }
+        },
+        "pricing_info": {
+          "model": "Subscription-based",
+          "pricing_type": "Tiered pricing by data access and usage",
+          "free_tier": false,
+          "trial_available": "Demo available on request",
+          "enterprise_features": "Advanced ML models, comprehensive coverage, regulatory compliance support",
+          "contact_info": "Contact through ESG Book website for pricing"
+        },
+        "access_requirements": {
+          "registration_required": true,
+          "approval_process": "Business verification for financial institutions",
+          "compliance_requirements": "Data consent management, regulatory compliance",
+          "technical_requirements": "Secure API integration, consent-based data access"
+        }
+      },
+      {
+        "api_name": "MSCI ESG API",
+        "provider": "MSCI Inc.",
+        "category": "ESG Ratings & Risk Analytics",
+        "description": "Industry-leading ESG ratings and risk analytics covering 17,000+ issuers and 999,000+ securities with 25+ years of ESG expertise",
+        "technical_info": {
+          "base_url": "https://api.msci.com",
+          "protocol": "REST", 
+          "data_formats": ["JSON", "XML"],
+          "auth_method": "oauth",
+          "endpoints": [
+            {
+              "path": "/esg/ratings",
+              "full_url": "https://api.msci.com/esg/ratings",
+              "method": "GET",
+              "description": "Retrieve MSCI ESG ratings (AAA to CCC scale) for companies and securities",
+              "documentation_link": "https://www.msci.com/data-and-analytics/sustainability-solutions/esg-ratings",
+              "parameters": ["issuer_id", "security_id", "date", "rating_type"],
+              "response_format": "JSON with ESG ratings, scores, and methodology details"
+            },
+            {
+              "path": "/esg/scores",
+              "full_url": "https://api.msci.com/esg/scores",
+              "method": "GET",
+              "description": "Access detailed ESG scores across 35 key issues and pillars",
+              "documentation_link": "https://www.msci.com/data-and-analytics/sustainability-solutions/esg-ratings",
+              "parameters": ["company_id", "pillar", "key_issue", "industry_adjustment"],
+              "response_format": "JSON with pillar scores, key issue ratings, and peer comparisons"
+            },
+            {
+              "path": "/esg/portfolio-analytics",
+              "full_url": "https://api.msci.com/esg/portfolio-analytics",
+              "method": "POST",
+              "description": "Portfolio-level ESG analysis and risk metrics",
+              "documentation_link": "https://www.msci.com/data-and-analytics/sustainability-solutions/esg-ratings",
+              "parameters": ["portfolio_holdings", "benchmark", "analysis_type"],
+              "response_format": "JSON with portfolio ESG metrics and risk exposures"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.msci.com/data-and-analytics/sustainability-solutions/esg-ratings",
+            "authentication": "https://developer.msci.com/authentication",
+            "endpoints_reference": "https://developer.msci.com/esg-api-reference",
+            "code_examples": "https://developer.msci.com/code-examples",
+            "sdks_libraries": "Python, R, and JavaScript SDKs available"
+          }
+        },
+        "pricing_info": {
+          "model": "Enterprise/Custom",
+          "pricing_type": "Contact Sales - Licensed data product",
+          "free_tier": false,
+          "trial_available": "Evaluation period available for qualified clients",
+          "enterprise_features": "Real-time data feeds, historical time series, custom analytics",
+          "contact_info": "MSCI Client Services and Sales teams"
+        },
+        "access_requirements": {
+          "registration_required": true,
+          "approval_process": "Enterprise licensing and data agreement",
+          "compliance_requirements": "MSCI data license compliance, usage restrictions",
+          "technical_requirements": "Secure API access, data attribution requirements"
+        }
+      },
+      {
+        "api_name": "Sustainalytics ESG Assessment Platform (EAP) API",
+        "provider": "Sustainalytics (Morningstar)",
+        "category": "ESG Risk Ratings & Research",
+        "description": "Comprehensive ESG risk ratings and research platform with two-phase authentication and extensive coverage of ESG risk factors",
+        "technical_info": {
+          "base_url": "https://esgperformance.sustainalytics.com",
+          "protocol": "REST",
+          "data_formats": ["JSON", "CSV"],
+          "auth_method": "token_based",
+          "endpoints": [
+            {
+              "path": "/api/4.0/authenticate",
+              "full_url": "https://esgperformance.sustainalytics.com/api/4.0/authenticate",
+              "method": "POST",
+              "description": "Authentication endpoint - first phase of two-phase authentication",
+              "documentation_link": "https://github.com/Morningstar/eap-api-docs",
+              "parameters": ["api_key"],
+              "response_format": "JSON with session token and expiration details"
+            },
+            {
+              "path": "/api/4.0/companies",
+              "full_url": "https://esgperformance.sustainalytics.com/api/4.0/companies",
+              "method": "POST",
+              "description": "Retrieve company ESG risk ratings and detailed assessments",
+              "documentation_link": "https://github.com/Morningstar/eap-api-docs",
+              "parameters": ["token", "company_ids", "page", "page_size"],
+              "response_format": "JSON with ESG risk scores, ratings, and detailed analysis"
+            },
+            {
+              "path": "/api/4.0/engagement",
+              "full_url": "https://esgperformance.sustainalytics.com/api/4.0/engagement",
+              "method": "POST",
+              "description": "Access engagement services data and milestone tracking",
+              "documentation_link": "https://github.com/Morningstar/eap-api-docs",
+              "parameters": ["token", "engagement_type", "filters"],
+              "response_format": "JSON with engagement status and milestone data"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://github.com/Morningstar/eap-api-docs",
+            "authentication": "https://github.com/Morningstar/eap-api-docs#authentication-phase",
+            "endpoints_reference": "https://github.com/Morningstar/eap-api-docs",
+            "code_examples": "https://github.com/Morningstar/eap-api-docs",
+            "sdks_libraries": "Not specified - REST API with examples"
+          }
+        },
+        "pricing_info": {
+          "model": "Subscription-based with different access levels",
+          "pricing_type": "Tiered based on organization plan",
+          "free_tier": false,
+          "trial_available": "Contact Sustainalytics for evaluation",
+          "enterprise_features": "Full resultsets, higher rate limits, bulk data access",
+          "contact_info": "Sustainalytics sales team"
+        },
+        "access_requirements": {
+          "registration_required": true,
+          "approval_process": "Organization plan verification",
+          "compliance_requirements": "Data usage compliance, rate limiting adherence",
+          "technical_requirements": "Two-phase authentication, token management, recommended async implementation"
+        }
+      },
+      {
+        "api_name": "RepRisk API",
+        "provider": "RepRisk AG",
+        "category": "ESG Risk Intelligence & Business Conduct",
+        "description": "AI-powered reputational risk and responsible business conduct data combining advanced AI with expert human analysis for due diligence and compliance",
+        "technical_info": {
+          "base_url": "https://api.reprisk.com",
+          "protocol": "REST",
+          "data_formats": ["JSON", "XML"],
+          "auth_method": "api_key",
+          "endpoints": [
+            {
+              "path": "/companies",
+              "full_url": "https://api.reprisk.com/companies",
+              "method": "GET",
+              "description": "Access company reputational risk profiles and RepRisk Index (RRI) scores",
+              "documentation_link": "https://www.reprisk.com/solutions",
+              "parameters": ["company_id", "sector", "country", "risk_level"],
+              "response_format": "JSON with RRI scores, risk incidents, and trend analysis"
+            },
+            {
+              "path": "/risk-incidents",
+              "full_url": "https://api.reprisk.com/risk-incidents",
+              "method": "GET",
+              "description": "Detailed risk incident data with AI analysis and expert tagging",
+              "documentation_link": "https://www.reprisk.com/solutions",
+              "parameters": ["company_id", "date_range", "risk_category", "severity"],
+              "response_format": "JSON with incident details, sources, and impact assessment"
+            },
+            {
+              "path": "/screening",
+              "full_url": "https://api.reprisk.com/screening",
+              "method": "POST",
+              "description": "Bulk screening capabilities for due diligence and compliance",
+              "documentation_link": "https://www.reprisk.com/solutions",
+              "parameters": ["company_list", "screening_criteria", "depth_level"],
+              "response_format": "JSON with screening results and risk flags"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.reprisk.com/solutions",
+            "authentication": "Contact RepRisk for API documentation",
+            "endpoints_reference": "Available to licensed clients",
+            "code_examples": "Provided with API access",
+            "sdks_libraries": "Contact RepRisk for SDK availability"
+          }
+        },
+        "pricing_info": {
+          "model": "Enterprise/Custom DaaS",
+          "pricing_type": "Contact Sales - Data as a Service model",
+          "free_tier": false,
+          "trial_available": "Demo and evaluation available",
+          "enterprise_features": "Real-time risk monitoring, historical data access, custom analytics",
+          "contact_info": "RepRisk sales team through website"
+        },
+        "access_requirements": {
+          "registration_required": true,
+          "approval_process": "Enterprise data licensing",
+          "compliance_requirements": "Data usage agreements, compliance with RepRisk terms",
+          "technical_requirements": "Secure API integration, data handling protocols"
+        }
+      }
+    ],
+    "research_summary": {
+      "total_apis_analyzed": 5,
+      "common_authentication_methods": ["api_key", "oauth", "token_based"],
+      "predominant_protocol": "REST",
+      "common_data_formats": ["JSON", "XML", "CSV"],
+      "pricing_models": ["Enterprise/Custom", "Subscription-based", "Contact Sales"],
+      "free_tier_availability": "None of the researched APIs offer free tiers - all require enterprise licensing",
+      "key_observations": [
+        "All APIs require enterprise-level licensing and approval processes",
+        "Pricing information is generally not publicly available - requires sales contact",
+        "Strong focus on compliance and data governance requirements", 
+        "Most providers offer evaluation periods or demos for qualified prospects",
+        "Documentation quality varies - some providers have comprehensive public docs while others restrict access to licensed clients"
+      ]
+    },
+    "research_limitations": {
+      "documentation_access": "Some API documentation requires licensed access",
+      "pricing_transparency": "Most pricing requires direct sales contact",
+      "endpoint_details": "Detailed endpoint specifications may vary from public documentation",
+      "authentication_specifics": "Some authentication details require developer account access"
+    }
+  }
+}

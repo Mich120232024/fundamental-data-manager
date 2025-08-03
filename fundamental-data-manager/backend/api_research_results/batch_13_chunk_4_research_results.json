@@ -1,0 +1,297 @@
+[
+  {
+    "id": "airsage",
+    "name": "AirSage Location Intelligence API",
+    "provider": "AirSage",
+    "description": "Location intelligence platform providing mobility data insights for transportation planning, retail analytics, and demographic analysis with COVID-19 pandemic mobility focus.",
+    "discovery_status": "documented",
+    "tags": ["location intelligence", "mobility data", "transportation planning", "demographic analysis", "COVID-19 analytics"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom enterprise pricing",
+      "rate_limits": "Not publicly documented"
+    },
+    "technical_info": {
+      "base_url": "https://api.airsage.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key (X-API-Key header)",
+      "endpoints": [
+        {
+          "path": "/mobility/patterns",
+          "full_url": "https://api.airsage.com/mobility/patterns",
+          "method": "GET",
+          "description": "Retrieve mobility pattern data for specified geographic areas",
+          "documentation_link": "Contact AirSage for documentation",
+          "parameters": ["region", "timeframe"],
+          "response_format": "JSON with mobility metrics"
+        },
+        {
+          "path": "/demographics/insights",
+          "full_url": "https://api.airsage.com/demographics/insights",
+          "method": "GET",
+          "description": "Access demographic insights for location-based analysis",
+          "documentation_link": "Contact AirSage for documentation",
+          "parameters": ["location"],
+          "response_format": "JSON with demographic data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Mobility patterns", "Demographic insights", "Transportation data", "Location analytics"],
+      "geographic_scope": "United States",
+      "update_frequency": "Regular updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://airsage.com/",
+      "api_summary": "AirSage specializes in COVID-19 pandemic mobility analysis with privacy-compliant anonymized data. Limited public API documentation available.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for access",
+      "api_reference": "Limited public documentation",
+      "examples": "Contact for examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "inrix",
+    "name": "INRIX Traffic & Mobility Analytics API",
+    "provider": "Inrix",
+    "description": "Comprehensive traffic data, parking information, and mobility analytics platform covering 50+ countries with real-time traffic intelligence and routing optimization.",
+    "discovery_status": "documented",
+    "tags": ["traffic data", "mobility analytics", "parking information", "routing optimization", "transportation intelligence"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Usage-based pricing",
+      "rate_limits": "Varies by API and subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.inrix.com",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "OAuth 2.0 client credentials",
+      "endpoints": [
+        {
+          "path": "/traffic/v1/segments/speed",
+          "full_url": "https://api.inrix.com/traffic/v1/segments/speed",
+          "method": "GET",
+          "description": "Real-time traffic speed data for road segments",
+          "documentation_link": "https://docs.inrix.com/",
+          "parameters": ["segments", "format"],
+          "response_format": "JSON/XML with traffic speed data"
+        },
+        {
+          "path": "/parking/v3/lots/search",
+          "full_url": "https://api.inrix.com/parking/v3/lots/search",
+          "method": "GET",
+          "description": "Search for parking lots and availability",
+          "documentation_link": "https://docs.inrix.com/",
+          "parameters": ["location", "radius"],
+          "response_format": "JSON with parking information"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Traffic data", "Parking availability", "Route optimization", "Mobility patterns", "Transportation analytics"],
+      "geographic_scope": "Global - 50+ countries",
+      "update_frequency": "Real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://docs.inrix.com/",
+      "api_summary": "INRIX provides comprehensive traffic and parking API with global coverage. OAuth2 authentication with variable pricing by usage volume.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://docs.inrix.com/",
+      "api_reference": "https://docs.inrix.com/",
+      "examples": "Available in documentation",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "transunion",
+    "name": "TransUnion Credit Data API",
+    "provider": "TransUnion",
+    "description": "Credit reporting and financial data services through third-party integrators and batch processing with XML feeds. No direct API access available.",
+    "discovery_status": "documented",
+    "tags": ["credit data", "financial services", "batch processing", "partner integration", "XML feeds"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": false,
+      "requires_approval": true,
+      "pricing_model": "Partner-based pricing",
+      "rate_limits": "Partner dependent"
+    },
+    "technical_info": {
+      "base_url": "https://api.transunion.com",
+      "protocol": "XML/Partner integration",
+      "data_formats": ["XML", "Partner-specific"],
+      "auth_method": "Partner integration required",
+      "endpoints": [
+        {
+          "path": "/credit/report",
+          "full_url": "Partner-specific endpoint",
+          "method": "POST",
+          "description": "Credit report retrieval through partner integration",
+          "documentation_link": "https://techservices.transunion.com/",
+          "parameters": ["consumer_data", "permissible_purpose"],
+          "response_format": "XML with credit report data"
+        },
+        {
+          "path": "/batch/upload",
+          "full_url": "Partner-specific endpoint",
+          "method": "POST",
+          "description": "Batch processing for high-volume credit checks",
+          "documentation_link": "https://techservices.transunion.com/",
+          "parameters": ["batch_file"],
+          "response_format": "Batch processing results"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Credit reports", "Consumer data", "Financial profiles", "Risk assessment"],
+      "geographic_scope": "United States, International markets",
+      "update_frequency": "Real-time through partners",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://techservices.transunion.com/",
+      "api_summary": "TransUnion does not offer direct API access. Integration available through certified partners like iSoftpull and batch processing with XML feeds.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact via partner network",
+      "api_reference": "Partner-dependent",
+      "examples": "Contact partners",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "equifax",
+    "name": "Equifax Credit Services API",
+    "provider": "Equifax",
+    "description": "Comprehensive credit reporting, identity verification, and fraud prevention services with over 50 API products including digital identity trust and employment verification.",
+    "discovery_status": "documented",
+    "tags": ["credit reporting", "identity verification", "fraud prevention", "employment verification", "digital identity"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Per-request pricing (contact sales)",
+      "rate_limits": "Product dependent"
+    },
+    "technical_info": {
+      "base_url": "https://api.equifax.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "OAuth 2.0 client credentials",
+      "endpoints": [
+        {
+          "path": "/identity/v1/digital-identity-trust",
+          "full_url": "https://api.equifax.com/identity/v1/digital-identity-trust",
+          "method": "POST",
+          "description": "Digital identity verification and trust scoring",
+          "documentation_link": "https://developer.equifax.com/",
+          "parameters": ["identity_data", "verification_level"],
+          "response_format": "JSON with identity verification results"
+        },
+        {
+          "path": "/credit/v1/oneview",
+          "full_url": "https://api.equifax.com/credit/v1/oneview",
+          "method": "POST",
+          "description": "Consumer credit report with comprehensive credit data",
+          "documentation_link": "https://developer.equifax.com/",
+          "parameters": ["consumer_info", "report_type"],
+          "response_format": "JSON with credit report"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Credit reports", "Identity verification", "Fraud detection", "Employment data", "Document verification"],
+      "geographic_scope": "US, Canada, UK, Australia",
+      "update_frequency": "Real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://developer.equifax.com/",
+      "api_summary": "Equifax provides extensive API catalog with 50+ products. Requires approval for production access and IP whitelisting. Sandbox available for development.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://developer.equifax.com/",
+      "api_reference": "https://developer.equifax.com/",
+      "examples": "Available in developer portal",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "lendingclub",
+    "name": "LendingClub Loan Data API",
+    "provider": "LendingClub Bank",
+    "description": "Peer-to-peer lending platform API providing access to loan data and investment opportunities. Consumer platform discontinued in 2020, now limited to institutional operations.",
+    "discovery_status": "deprecated",
+    "tags": ["peer-to-peer lending", "loan data", "institutional investing", "deprecated service", "financial data"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Institutional only (contact sales)",
+      "rate_limits": "Rate limited (not documented)"
+    },
+    "technical_info": {
+      "base_url": "https://api.lendingclub.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API token (requires investor account)",
+      "endpoints": [
+        {
+          "path": "/api/investor/v1/loans/listing",
+          "full_url": "https://api.lendingclub.com/api/investor/v1/loans/listing",
+          "method": "GET",
+          "description": "Retrieve available loan listings (deprecated service)",
+          "documentation_link": "https://www.lendingclub.com/developers/",
+          "parameters": ["showAll"],
+          "response_format": "JSON with loan listings (service discontinued)"
+        },
+        {
+          "path": "/api/lcx/v1/financial-summary",
+          "full_url": "https://api.lendingclub.com/api/lcx/v1/financial-summary",
+          "method": "GET",
+          "description": "Account financial summary for institutional investors",
+          "documentation_link": "https://www.lendingclub.com/developers/",
+          "parameters": ["account-id"],
+          "response_format": "JSON with financial summary"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Loan data", "Investment history", "Financial summaries", "Institutional accounts"],
+      "geographic_scope": "United States",
+      "update_frequency": "Limited updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.lendingclub.com/developers/",
+      "api_summary": "Consumer peer-to-peer lending platform discontinued in December 2020. API access now limited to institutional investors and secondary market operations.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Institutional access only",
+      "api_reference": "Limited documentation",
+      "examples": "Contact for institutional examples",
+      "changelog": null,
+      "status_page": null
+    }
+  }
+]

@@ -1,0 +1,288 @@
+[
+  {
+    "id": "housecanary",
+    "name": "HouseCanary API",
+    "provider": "HouseCanary",
+    "description": "Comprehensive residential real estate analytics platform with machine learning-based valuations, providing excellent API design, Python SDK, and test API keys for development.",
+    "discovery_status": "documented",
+    "tags": ["residential real estate", "machine learning", "property valuations", "Python SDK", "development friendly"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Test API keys for development, subscription-based for production",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.housecanary.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "HTTP Basic Authentication",
+      "endpoints": [
+        {
+          "path": "/v2/property/value",
+          "full_url": "https://api.housecanary.com/v2/property/value",
+          "method": "GET",
+          "description": "Machine learning-based property valuations and analytics",
+          "documentation_link": "https://api-docs.housecanary.com/",
+          "parameters": ["address", "zipcode", "property_type"],
+          "response_format": "JSON with property value estimates and confidence scores"
+        },
+        {
+          "path": "/v2/property/details",
+          "full_url": "https://api.housecanary.com/v2/property/details",
+          "method": "GET",
+          "description": "Comprehensive property details and characteristics",
+          "documentation_link": "https://api-docs.housecanary.com/",
+          "parameters": ["address", "zipcode"],
+          "response_format": "JSON with detailed property information"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Property valuations", "Real estate analytics", "Property details", "Market trends"],
+      "geographic_scope": "US residential real estate",
+      "update_frequency": "Regular updates with machine learning model improvements",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api-docs.housecanary.com/",
+      "api_summary": "HouseCanary provides comprehensive residential real estate analytics with excellent API design, Python SDK availability, and test API keys for development, making it highly accessible for developers.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://api-docs.housecanary.com/",
+      "api_reference": "https://api-docs.housecanary.com/",
+      "examples": "Python SDK with comprehensive examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "zillow",
+    "name": "Zillow API (Bridge Data Output)",
+    "provider": "Zillow",
+    "description": "Enterprise-focused real estate API providing Zestimate data and public records through Bridge Data Output platform with token-based authentication for institutional clients.",
+    "discovery_status": "documented",
+    "tags": ["Zestimate", "public records", "enterprise", "institutional", "real estate data"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise/Custom pricing for institutional clients",
+      "rate_limits": "Based on enterprise agreement"
+    },
+    "technical_info": {
+      "base_url": "https://bridge-api.zillow.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "Token-based authentication",
+      "endpoints": [
+        {
+          "path": "/zestimate",
+          "full_url": "https://bridge-api.zillow.com/zestimate",
+          "method": "GET",
+          "description": "Zillow's automated property valuation model data",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": ["property_id", "address", "date_range"],
+          "response_format": "JSON with Zestimate values and confidence intervals"
+        },
+        {
+          "path": "/public-records",
+          "full_url": "https://bridge-api.zillow.com/public-records",
+          "method": "GET",
+          "description": "Public property records and transaction history",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": ["property_id", "record_type", "date_range"],
+          "response_format": "JSON with public records and transaction data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Zestimate values", "Public records", "Transaction history", "Property data"],
+      "geographic_scope": "US real estate market",
+      "update_frequency": "Regular Zestimate model updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Enterprise documentation provided",
+      "api_summary": "Zillow Bridge Data Output provides enterprise-focused access to Zestimate data and public records with token-based authentication designed for institutional clients and custom pricing.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact enterprise sales",
+      "api_reference": "Enterprise documentation provided",
+      "examples": "Enterprise examples provided",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "redfin",
+    "name": "Redfin API (Unofficial)",
+    "provider": "Redfin (Community-driven unofficial access)",
+    "description": "Community-driven unofficial API access to Redfin real estate data through reverse-engineered endpoints, offering free access but with ToS concerns and no official support.",
+    "discovery_status": "documented",
+    "tags": ["unofficial", "community driven", "reverse engineered", "free access", "ToS concerns"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "Unofficial free access through community libraries",
+      "rate_limits": "Unofficial - use responsibly to avoid blocking"
+    },
+    "technical_info": {
+      "base_url": "Unofficial endpoints through community libraries",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "No authentication required (unofficial)",
+      "endpoints": [
+        {
+          "path": "/search",
+          "full_url": "Unofficial endpoint/search",
+          "method": "GET",
+          "description": "Property search through unofficial access",
+          "documentation_link": "Community library documentation",
+          "parameters": ["location", "property_type", "price_range"],
+          "response_format": "JSON with property listings (unofficial)"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Property listings", "Real estate data", "Market information"],
+      "geographic_scope": "US real estate markets covered by Redfin",
+      "update_frequency": "Depends on unofficial access methods",
+      "historical_data": false
+    },
+    "research_notes": {
+      "documentation_url": "Community library documentation",
+      "api_summary": "Redfin offers unofficial free access through community libraries using reverse-engineered endpoints, though this approach has Terms of Service concerns and lacks official support.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Community library documentation",
+      "api_reference": "Unofficial community documentation",
+      "examples": "Community examples available",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "attom-data-solutions",
+    "name": "ATTOM Data Solutions API",
+    "provider": "ATTOM Data Solutions",
+    "description": "Industry-leading property data platform with 158+ million properties coverage, offering 30-day free trial with comprehensive documentation and extensive US market coverage (99% of population).",
+    "discovery_status": "documented",
+    "tags": ["industry leading", "comprehensive coverage", "free trial", "extensive documentation", "158M+ properties"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "30-day free trial, then subscription-based pricing",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.attomdata.com",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "API Key headers",
+      "endpoints": [
+        {
+          "path": "/property/search",
+          "full_url": "https://api.attomdata.com/property/search",
+          "method": "GET",
+          "description": "Search properties with detailed information and market data",
+          "documentation_link": "https://api.developer.attomdata.com/",
+          "parameters": ["address", "location", "property_type", "date_range"],
+          "response_format": "JSON with comprehensive property details"
+        },
+        {
+          "path": "/market/analytics",
+          "full_url": "https://api.attomdata.com/market/analytics",
+          "method": "GET",
+          "description": "Market analytics and neighborhood data",
+          "documentation_link": "https://api.developer.attomdata.com/",
+          "parameters": ["region", "analytics_type", "time_period"],
+          "response_format": "JSON with market analytics and trends"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Property data", "Market analytics", "Neighborhood data", "Property details"],
+      "geographic_scope": "158+ million US properties, 99% population coverage",
+      "update_frequency": "Regular updates with comprehensive market coverage",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api.developer.attomdata.com/",
+      "api_summary": "ATTOM Data Solutions is the most accessible option with 30-day free trial, comprehensive documentation, and extensive property coverage (158+ million properties, 99% US population coverage).",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://api.developer.attomdata.com/",
+      "api_reference": "https://api.developer.attomdata.com/",
+      "examples": "Comprehensive examples provided",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "costar",
+    "name": "CoStar API",
+    "provider": "CoStar",
+    "description": "Industry leader for commercial real estate data with partnership-only access, focusing on commercial properties, market analytics, and institutional clients with enterprise requirements.",
+    "discovery_status": "documented",
+    "tags": ["commercial real estate", "industry leader", "partnership only", "institutional", "enterprise"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise partnerships and custom pricing required",
+      "rate_limits": "Based on partnership agreement"
+    },
+    "technical_info": {
+      "base_url": "Partnership-specific endpoints",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "API Key with partnership authentication",
+      "endpoints": [
+        {
+          "path": "/commercial/properties",
+          "full_url": "Partnership endpoint/commercial/properties",
+          "method": "GET",
+          "description": "Commercial property data and market intelligence",
+          "documentation_link": "Partnership documentation provided",
+          "parameters": ["location", "property_type", "market_metrics"],
+          "response_format": "JSON with commercial property details"
+        },
+        {
+          "path": "/market/analysis",
+          "full_url": "Partnership endpoint/market/analysis",
+          "method": "GET",
+          "description": "Commercial real estate market analysis and trends",
+          "documentation_link": "Partnership documentation provided",
+          "parameters": ["market", "analysis_type", "time_period"],
+          "response_format": "JSON with market analysis and commercial trends"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Commercial properties", "Market analysis", "Commercial trends", "Institutional data"],
+      "geographic_scope": "US commercial real estate markets",
+      "update_frequency": "Regular updates with commercial focus",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Partnership documentation provided",
+      "api_summary": "CoStar is the industry leader for commercial real estate but requires enterprise partnerships with custom pricing, making it suitable only for institutional clients with significant commercial real estate needs.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for partnership",
+      "api_reference": "Partnership documentation provided",
+      "examples": "Partnership examples provided",
+      "changelog": null,
+      "status_page": null
+    }
+  }
+]

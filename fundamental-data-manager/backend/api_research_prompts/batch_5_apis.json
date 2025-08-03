@@ -1,0 +1,127 @@
+[
+  {
+    "id": "doab-directory-of-open-access-books-api",
+    "name": "DOAB (Directory of Open Access Books) API",
+    "provider": "DOAB"
+  },
+  {
+    "id": "oapen-api",
+    "name": "OAPEN API",
+    "provider": "OAPEN"
+  },
+  {
+    "id": "openedition-books-api",
+    "name": "OpenEdition Books API",
+    "provider": "OpenEdition"
+  },
+  {
+    "id": "opentextbooks-api",
+    "name": "OpenTextbooks API",
+    "provider": "OpenTextbooks"
+  },
+  {
+    "id": "oer-commons-api",
+    "name": "OER Commons API",
+    "provider": "OER"
+  },
+  {
+    "id": "mit-opencourseware-api",
+    "name": "MIT OpenCourseWare API",
+    "provider": "MIT"
+  },
+  {
+    "id": "openstax-api",
+    "name": "OpenStax API",
+    "provider": "OpenStax"
+  },
+  {
+    "id": "dataverse-api",
+    "name": "Dataverse API",
+    "provider": "Dataverse"
+  },
+  {
+    "id": "dryad-api",
+    "name": "Dryad API",
+    "provider": "Dryad"
+  },
+  {
+    "id": "mendeley-data-api",
+    "name": "Mendeley Data API",
+    "provider": "Mendeley"
+  },
+  {
+    "id": "uk-data-service-api",
+    "name": "UK Data Service API",
+    "provider": "UK"
+  },
+  {
+    "id": "icpsr-inter-university-consortium-for-political-and-social-research-api",
+    "name": "ICPSR (Inter-university Consortium for Political and Social Research) API",
+    "provider": "ICPSR"
+  },
+  {
+    "id": "gesis-data-archive-api",
+    "name": "GESIS Data Archive API",
+    "provider": "GESIS"
+  },
+  {
+    "id": "harvard-dataverse-api",
+    "name": "Harvard Dataverse API",
+    "provider": "Harvard"
+  },
+  {
+    "id": "re3dataorg-api",
+    "name": "re3data.org API",
+    "provider": "re3data.org"
+  },
+  {
+    "id": "kaggle-api",
+    "name": "Kaggle API",
+    "provider": "Kaggle"
+  },
+  {
+    "id": "ieee-dataport-api",
+    "name": "IEEE DataPort API",
+    "provider": "IEEE"
+  },
+  {
+    "id": "registry-of-research-data-repositories-api",
+    "name": "Registry of Research Data Repositories API",
+    "provider": "Registry"
+  },
+  {
+    "id": "openaire-research-graph-api",
+    "name": "OpenAIRE Research Graph API",
+    "provider": "OpenAIRE"
+  },
+  {
+    "id": "genbank-api",
+    "name": "GenBank API",
+    "provider": "GenBank"
+  },
+  {
+    "id": "european-nucleotide-archive-api",
+    "name": "European Nucleotide Archive API",
+    "provider": "European"
+  },
+  {
+    "id": "dna-data-bank-of-japan-api",
+    "name": "DNA Data Bank of Japan API",
+    "provider": "DNA"
+  },
+  {
+    "id": "uniprot-api",
+    "name": "UniProt API",
+    "provider": "UniProt"
+  },
+  {
+    "id": "protein-data-bank-api",
+    "name": "Protein Data Bank API",
+    "provider": "Protein"
+  },
+  {
+    "id": "geo-gene-expression-omnibus-api",
+    "name": "GEO (Gene Expression Omnibus) API",
+    "provider": "GEO"
+  }
+]

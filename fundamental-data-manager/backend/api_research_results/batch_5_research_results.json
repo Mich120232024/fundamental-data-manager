@@ -1,0 +1,1435 @@
+[
+  {
+    "id": "doab-directory-of-open-access-books-api",
+    "name": "DOAB (Directory of Open Access Books) API",
+    "provider": "DOAB Foundation",
+    "description": "REST API for searching and accessing open access books metadata from DOAB directory. Provides comprehensive access to over 40,000 open access books with peer review information.",
+    "discovery_status": "documented",
+    "tags": ["open access books", "academic publishing", "peer review", "scholarly literature", "CC0"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "no specified limits"
+    },
+    "technical_info": {
+      "base_url": "https://directory.doabooks.org",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/rest/search",
+          "full_url": "https://directory.doabooks.org/rest/search",
+          "method": "GET",
+          "description": "Search DOAB books using query parameters",
+          "documentation_link": "https://www.doabooks.org/en/article/api-search-doab",
+          "parameters": ["query", "expand"],
+          "response_format": "JSON/XML with book metadata"
+        },
+        {
+          "path": "/rest/peerReviews",
+          "full_url": "https://directory.doabooks.org/rest/peerReviews",
+          "method": "GET", 
+          "description": "Access peer review information via PRISM API",
+          "documentation_link": "https://www.doabooks.org/en/article/api-search-doab",
+          "parameters": ["doi", "isbn", "pId", "title"],
+          "response_format": "JSON/XML with peer review data"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.doabooks.org/en/article/api-search-doab",
+        "authentication": "https://www.doabooks.org/en/article/api-search-doab",
+        "endpoints_reference": "https://www.doabooks.org/en/article/api-search-doab",
+        "code_examples": "https://www.doabooks.org/en/article/api-search-doab",
+        "sdks_libraries": "https://www.doabooks.org/en/article/api-search-doab"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Open access books", "Academic monographs", "Peer review data", "Scholarly publishing metadata"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.doabooks.org/en/article/api-search-doab",
+      "sample_endpoints": ["/rest/search", "/rest/peerReviews"],
+      "data_quality": "Excellent - comprehensive API with peer review integration",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "Comprehensive directory with 40,000+ open access books. Includes peer review information through PRISM API integration.",
+      "api_summary": "DOAB API provides comprehensive access to the world's largest directory of open access books, offering searchable metadata for over 40,000 academic monographs. The API includes unique peer review information through PRISM integration, making it invaluable for researchers, librarians, and institutions seeking quality open access scholarly books across all academic disciplines."
+    }
+  },
+  {
+    "id": "oapen-api",
+    "name": "OAPEN API",
+    "provider": "OAPEN Foundation",
+    "description": "Open access platform for books with metadata feeds and services. Provides access to over 40,000 open access publications with comprehensive metadata in multiple formats.",
+    "discovery_status": "documented",
+    "tags": ["open access books", "metadata feeds", "scholarly publishing", "ONIX", "MARC"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "no specified limits"
+    },
+    "technical_info": {
+      "base_url": "https://www.oapen.org",
+      "protocol": "HTTP",
+      "data_formats": ["ONIX", "MARC", "KBART", "JSON", "CSV", "RIS"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/resources/metadata",
+          "full_url": "https://www.oapen.org/resources/metadata",
+          "method": "GET",
+          "description": "Access metadata feeds in various formats",
+          "documentation_link": "https://www.oapen.org/resources/15635975-metadata",
+          "parameters": ["format"],
+          "response_format": "Multiple formats including ONIX, MARC, JSON"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.oapen.org/resources/15635975-metadata",
+        "authentication": "https://www.oapen.org/resources/15635975-metadata",
+        "endpoints_reference": "https://www.oapen.org/resources/15635975-metadata",
+        "code_examples": "https://www.oapen.org/resources/15635975-metadata",
+        "sdks_libraries": "https://www.oapen.org/resources/15635975-metadata"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Open access books", "Academic publications", "Metadata feeds", "Publishing information"],
+      "geographic_scope": "Global",
+      "update_frequency": "Daily",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.oapen.org/resources/15635975-metadata",
+      "sample_endpoints": ["/resources/metadata"],
+      "data_quality": "Excellent - multiple standardized metadata formats",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "Provides comprehensive metadata feeds in industry-standard formats. Daily updates ensure current information.",
+      "api_summary": "OAPEN API offers access to a comprehensive collection of open access books through standardized metadata feeds in multiple formats including ONIX, MARC, and JSON. The platform serves over 40,000 open access publications with daily updates, making it essential for libraries, aggregators, and systems requiring high-quality bibliographic metadata for open access scholarly books."
+    }
+  },
+  {
+    "id": "openedition-books-api",
+    "name": "OpenEdition Books API",
+    "provider": "OpenEdition",
+    "description": "API for accessing OpenEdition Books platform and Counter statistics. Provides access to humanities and social sciences open access books with usage analytics.",
+    "discovery_status": "documented",
+    "tags": ["humanities", "social sciences", "Counter statistics", "usage analytics", "open access"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "standard Counter limits"
+    },
+    "technical_info": {
+      "base_url": "https://counter5.openedition.org",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "SUSHI protocol",
+      "endpoints": [
+        {
+          "path": "/api/doc",
+          "full_url": "https://counter5.openedition.org/api/doc",
+          "method": "GET",
+          "description": "Counter 5 service documentation and API access",
+          "documentation_link": "https://counter5-openedition.readthedocs.io/en/latest/",
+          "parameters": [],
+          "response_format": "JSON with Counter statistics"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://counter5-openedition.readthedocs.io/en/latest/",
+        "authentication": "https://counter5-openedition.readthedocs.io/en/latest/",
+        "endpoints_reference": "https://counter5-openedition.readthedocs.io/en/latest/",
+        "code_examples": "https://counter5-openedition.readthedocs.io/en/latest/",
+        "sdks_libraries": "https://counter5-openedition.readthedocs.io/en/latest/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Humanities books", "Social sciences", "Usage statistics", "Counter data"],
+      "geographic_scope": "Global with European focus",
+      "update_frequency": "Monthly",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://counter5-openedition.readthedocs.io/en/latest/",
+      "sample_endpoints": ["/api/doc"],
+      "data_quality": "Good - Counter 5 compliant usage statistics",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "Focuses on humanities and social sciences with Counter-compliant usage analytics. SUSHI protocol authentication.",
+      "api_summary": "OpenEdition Books API provides access to humanities and social sciences open access books with Counter 5 compliant usage statistics. Using SUSHI protocol authentication, it offers detailed analytics on book usage patterns, making it valuable for publishers, libraries, and researchers studying scholarly communication in humanities and social sciences disciplines."
+    }
+  },
+  {
+    "id": "opentextbooks-api",
+    "name": "OpenTextbooks API",
+    "provider": "BC Campus",
+    "description": "API for BC Campus open textbooks collection and metadata. Provides access to open educational textbooks with comprehensive metadata and licensing information.",
+    "discovery_status": "documented",
+    "tags": ["open textbooks", "educational resources", "OER", "Creative Commons", "BC Campus"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "no specified limits"
+    },
+    "technical_info": {
+      "base_url": "https://open.bccampus.ca",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/api/collections",
+          "full_url": "https://open.bccampus.ca/api/collections",
+          "method": "GET",
+          "description": "Access open textbook collections",
+          "documentation_link": "https://github.com/BCcampus/opentextbooks",
+          "parameters": [],
+          "response_format": "JSON/XML with textbook metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://github.com/BCcampus/opentextbooks",
+        "authentication": "https://github.com/BCcampus/opentextbooks",
+        "endpoints_reference": "https://github.com/BCcampus/opentextbooks",
+        "code_examples": "https://github.com/BCcampus/opentextbooks",
+        "sdks_libraries": "https://github.com/BCcampus/opentextbooks"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Open textbooks", "Educational resources", "Course materials", "Creative Commons licenses"],
+      "geographic_scope": "Canada with global relevance",
+      "update_frequency": "Regular updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://github.com/BCcampus/opentextbooks",
+      "sample_endpoints": ["/api/collections"],
+      "data_quality": "Good - comprehensive collection with GitHub documentation",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "Focus on open educational textbooks with comprehensive Creative Commons licensing information.",
+      "api_summary": "OpenTextbooks API provides access to BC Campus's comprehensive collection of open educational textbooks, offering detailed metadata and licensing information for freely available course materials. The API supports educational institutions and instructors seeking high-quality open textbooks across various disciplines, with clear Creative Commons licensing that enables adaptation and reuse."
+    }
+  },
+  {
+    "id": "oer-commons-api",
+    "name": "OER Commons API",
+    "provider": "Institute for the Study of Knowledge Management in Education (ISKME)",
+    "description": "API for accessing Open Educational Resources metadata and content. Provides comprehensive access to OER materials with detailed licensing and educational metadata.",
+    "discovery_status": "documented",
+    "tags": ["OER", "open educational resources", "educational metadata", "Creative Commons", "ISKME"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free with token",
+      "rate_limits": "token-based limits"
+    },
+    "technical_info": {
+      "base_url": "http://docs.oercommons.org",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "API token",
+      "endpoints": [
+        {
+          "path": "/api/",
+          "full_url": "http://docs.oercommons.org/api/",
+          "method": "GET",
+          "description": "Access OER metadata resource records",
+          "documentation_link": "http://docs.oercommons.org/api/",
+          "parameters": ["token"],
+          "response_format": "JSON/XML with OER metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "http://docs.oercommons.org/api/",
+        "authentication": "http://docs.oercommons.org/api/",
+        "endpoints_reference": "http://docs.oercommons.org/api/",
+        "code_examples": "http://docs.oercommons.org/api/",
+        "sdks_libraries": "http://docs.oercommons.org/api/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Open educational resources", "Course materials", "Educational metadata", "Teaching resources"],
+      "geographic_scope": "Global",
+      "update_frequency": "Regular updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "http://docs.oercommons.org/api/",
+      "sample_endpoints": ["/api/"],
+      "data_quality": "Good - comprehensive OER repository with detailed metadata",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "Requires API token for access. Comprehensive collection of OER materials with educational metadata standards.",
+      "api_summary": "OER Commons API provides access to one of the world's largest collections of open educational resources, offering comprehensive metadata and content for freely available teaching and learning materials. The API enables educators, institutions, and developers to discover and integrate high-quality OER content with detailed licensing information and educational standards alignment."
+    }
+  },
+  {
+    "id": "mit-opencourseware-api",
+    "name": "MIT OpenCourseWare API",
+    "provider": "Massachusetts Institute of Technology",
+    "description": "API for accessing MIT OpenCourseWare course materials and metadata. Provides comprehensive access to MIT's open educational content and course materials.",
+    "discovery_status": "documented",
+    "tags": ["MIT", "opencourseware", "course materials", "educational content", "Creative Commons"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "no specified limits"
+    },
+    "technical_info": {
+      "base_url": "https://ocw.mit.edu",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/api/courses",
+          "full_url": "https://ocw.mit.edu/api/courses",
+          "method": "GET",
+          "description": "Access course materials and metadata",
+          "documentation_link": "https://github.com/mitocw",
+          "parameters": [],
+          "response_format": "JSON/XML with course metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://github.com/mitocw",
+        "authentication": "https://github.com/mitocw",
+        "endpoints_reference": "https://github.com/mitocw",
+        "code_examples": "https://github.com/mitocw",
+        "sdks_libraries": "https://github.com/mitocw"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Course materials", "Lectures", "Assignments", "Educational resources", "MIT courses"],
+      "geographic_scope": "Global (MIT-based)",
+      "update_frequency": "Regular updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://github.com/mitocw",
+      "sample_endpoints": ["/api/courses"],
+      "data_quality": "Excellent - high-quality MIT educational content",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "Pioneer in open courseware with comprehensive course materials from MIT. GitHub-hosted development resources.",
+      "api_summary": "MIT OpenCourseWare API provides access to one of the world's most comprehensive collections of free university-level educational materials, offering complete course content from MIT across all disciplines. The API enables access to lectures, assignments, and course materials that have made high-quality education accessible globally, supporting millions of learners and educators worldwide."
+    }
+  },
+  {
+    "id": "openstax-api",
+    "name": "OpenStax API",
+    "provider": "OpenStax (Rice University)",
+    "description": "API for accessing OpenStax free textbooks and educational resources. Provides comprehensive access to high-quality, peer-reviewed open textbooks.",
+    "discovery_status": "documented",
+    "tags": ["open textbooks", "educational resources", "Rice University", "peer-reviewed", "Creative Commons"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "no specified limits"
+    },
+    "technical_info": {
+      "base_url": "https://openstax.org",
+      "protocol": "REST",
+      "data_formats": ["JSON", "PDF", "HTML"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/api/books",
+          "full_url": "https://openstax.org/api/books",
+          "method": "GET",
+          "description": "Access textbook metadata and content",
+          "documentation_link": "https://openstax.org/api",
+          "parameters": [],
+          "response_format": "JSON with textbook metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://openstax.org/api",
+        "authentication": "https://openstax.org/api",
+        "endpoints_reference": "https://openstax.org/api",
+        "code_examples": "https://openstax.org/api",
+        "sdks_libraries": "https://openstax.org/api"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Open textbooks", "Educational content", "Course materials", "Peer-reviewed content"],
+      "geographic_scope": "Global",
+      "update_frequency": "Regular updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://openstax.org/api",
+      "sample_endpoints": ["/api/books"],
+      "data_quality": "Excellent - high-quality peer-reviewed textbooks",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "High-quality, peer-reviewed open textbooks covering major academic disciplines. Strong adoption in higher education.",
+      "api_summary": "OpenStax API provides access to high-quality, peer-reviewed open textbooks that serve millions of students worldwide. Developed at Rice University, the platform offers comprehensive educational resources across major academic disciplines, with proven cost savings and learning outcomes that have transformed access to educational materials in higher education."
+    }
+  },
+  {
+    "id": "dataverse-api",
+    "name": "Dataverse API",
+    "provider": "Harvard University",
+    "description": "Native API for Dataverse research data repository platform. Comprehensive platform for sharing, preserving, citing, and discovering research data with robust API access.",
+    "discovery_status": "documented",
+    "tags": ["research data", "data repository", "Harvard", "data preservation", "data sharing"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "installation dependent"
+    },
+    "technical_info": {
+      "base_url": "https://dataverse.harvard.edu/api/v1",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "API key via X-Dataverse-key header",
+      "endpoints": [
+        {
+          "path": "/dataverses",
+          "full_url": "https://dataverse.harvard.edu/api/v1/dataverses",
+          "method": "GET",
+          "description": "Manage dataverses",
+          "documentation_link": "https://guides.dataverse.org/en/latest/api/native-api.html",
+          "parameters": [],
+          "response_format": "JSON with dataverse metadata"
+        },
+        {
+          "path": "/datasets",
+          "full_url": "https://dataverse.harvard.edu/api/v1/datasets",
+          "method": "GET",
+          "description": "Manage datasets",
+          "documentation_link": "https://guides.dataverse.org/en/latest/api/native-api.html",
+          "parameters": [],
+          "response_format": "JSON with dataset metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://guides.dataverse.org/en/latest/api/native-api.html",
+        "authentication": "https://guides.dataverse.org/en/latest/api/native-api.html",
+        "endpoints_reference": "https://guides.dataverse.org/en/latest/api/native-api.html",
+        "code_examples": "https://guides.dataverse.org/en/latest/api/native-api.html",
+        "sdks_libraries": "https://guides.dataverse.org/en/latest/api/native-api.html"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Research datasets", "Scientific data", "Academic data", "Data preservation"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://guides.dataverse.org/en/latest/api/native-api.html",
+      "sample_endpoints": ["/dataverses", "/datasets", "/files"],
+      "data_quality": "Excellent - comprehensive research data platform",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "Leading open-source research data repository platform used by institutions worldwide. Comprehensive API with full CRUD operations.",
+      "api_summary": "Dataverse API provides comprehensive access to one of the world's leading open-source research data repository platforms, enabling researchers to share, preserve, cite, and discover research data. Developed at Harvard University, the platform serves thousands of institutions globally with robust metadata standards, version control, and integration capabilities essential for modern research data management."
+    }
+  },
+  {
+    "id": "dryad-api",
+    "name": "Dryad API",
+    "provider": "Dryad Digital Repository",
+    "description": "Stash API for Dryad digital repository of research data. Curated repository for data underlying scientific publications with comprehensive metadata and DOI assignment.",
+    "discovery_status": "documented",
+    "tags": ["research data", "scientific data", "data publication", "DOI", "data curation"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free for access, fees for data publication",
+      "rate_limits": "rate limits apply"
+    },
+    "technical_info": {
+      "base_url": "https://datadryad.org/api/v2",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "OAuth2 for submission",
+      "endpoints": [
+        {
+          "path": "/datasets",
+          "full_url": "https://datadryad.org/api/v2/datasets",
+          "method": "GET",
+          "description": "Access dataset metadata and files",
+          "documentation_link": "https://datadryad.org/api/v2/docs/",
+          "parameters": [],
+          "response_format": "JSON with dataset metadata"
+        },
+        {
+          "path": "/files",
+          "full_url": "https://datadryad.org/api/v2/files",
+          "method": "GET",
+          "description": "Access file metadata",
+          "documentation_link": "https://datadryad.org/api/v2/docs/",
+          "parameters": [],
+          "response_format": "JSON with file metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://datadryad.org/api/v2/docs/",
+        "authentication": "https://datadryad.org/api/v2/docs/",
+        "endpoints_reference": "https://datadryad.org/api/v2/docs/",
+        "code_examples": "https://datadryad.org/api/v2/docs/",
+        "sdks_libraries": "https://datadryad.org/api/v2/docs/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Scientific datasets", "Research data", "Publication data", "Curated data"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://datadryad.org/api/v2/docs/",
+      "sample_endpoints": ["/datasets", "/files"],
+      "data_quality": "Excellent - curated scientific data repository",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "Leading curated repository for data underlying scientific publications. Strong integration with scholarly publishing workflow.",
+      "api_summary": "Dryad API provides access to a premier curated repository for research data underlying scientific publications, offering comprehensive metadata and DOI assignment for datasets. The platform ensures data availability and citability, supporting reproducible research and compliance with data sharing mandates from funders and journals across all scientific disciplines."
+    }
+  },
+  {
+    "id": "mendeley-data-api",
+    "name": "Mendeley Data API",
+    "provider": "Mendeley (Elsevier)",
+    "description": "API for accessing Mendeley Data research datasets and metadata. Free research data repository with comprehensive metadata and integration with scholarly workflow.",
+    "discovery_status": "documented",
+    "tags": ["research data", "Elsevier", "data repository", "scholarly workflow", "metadata"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "API limits apply"
+    },
+    "technical_info": {
+      "base_url": "https://data.mendeley.com/api",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "OAuth2",
+      "endpoints": [
+        {
+          "path": "/datasets",
+          "full_url": "https://data.mendeley.com/api/datasets",
+          "method": "GET",
+          "description": "Access research datasets",
+          "documentation_link": "https://data.mendeley.com/api/docs/",
+          "parameters": [],
+          "response_format": "JSON with dataset metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://data.mendeley.com/api/docs/",
+        "authentication": "https://data.mendeley.com/api/docs/",
+        "endpoints_reference": "https://data.mendeley.com/api/docs/",
+        "code_examples": "https://data.mendeley.com/api/docs/",
+        "sdks_libraries": "https://data.mendeley.com/api/docs/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Research datasets", "Scientific data", "Academic data", "Multidisciplinary data"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://data.mendeley.com/api/docs/",
+      "sample_endpoints": ["/datasets"],
+      "data_quality": "Good - integrated with Elsevier scholarly ecosystem",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "Free research data repository integrated with Mendeley reference manager and Elsevier publishing ecosystem.",
+      "api_summary": "Mendeley Data API provides access to a free research data repository integrated with the broader Elsevier scholarly ecosystem, enabling researchers to store, share, and discover datasets with comprehensive metadata. The platform supports reproducible research and data sharing requirements while maintaining integration with reference management and publishing workflows."
+    }
+  },
+  {
+    "id": "uk-data-service-api",
+    "name": "UK Data Service API",
+    "provider": "UK Data Service",
+    "description": "API for accessing UK Data Service research data collections. National data service providing access to social and economic data for research and teaching.",
+    "discovery_status": "documented",
+    "tags": ["UK data", "social science data", "economic data", "national data service", "academic research"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": true,
+      "pricing_model": "free for academic use",
+      "rate_limits": "usage policies apply"
+    },
+    "technical_info": {
+      "base_url": "https://www.ukdataservice.ac.uk/api",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "user registration required",
+      "endpoints": [
+        {
+          "path": "/collections",
+          "full_url": "https://www.ukdataservice.ac.uk/api/collections",
+          "method": "GET",
+          "description": "Access data collections",
+          "documentation_link": "https://www.ukdataservice.ac.uk/use-data/guides/",
+          "parameters": [],
+          "response_format": "JSON/XML with collection metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.ukdataservice.ac.uk/use-data/guides/",
+        "authentication": "https://www.ukdataservice.ac.uk/use-data/guides/",
+        "endpoints_reference": "https://www.ukdataservice.ac.uk/use-data/guides/",
+        "code_examples": "https://www.ukdataservice.ac.uk/use-data/guides/",
+        "sdks_libraries": "https://www.ukdataservice.ac.uk/use-data/guides/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Social science data", "Economic data", "Survey data", "Census data", "Longitudinal studies"],
+      "geographic_scope": "United Kingdom",
+      "update_frequency": "Regular updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.ukdataservice.ac.uk/use-data/guides/",
+      "sample_endpoints": ["/collections"],
+      "data_quality": "Excellent - national data service with comprehensive collections",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "UK's national data service providing comprehensive access to social and economic data. Requires registration for data access.",
+      "api_summary": "UK Data Service API provides access to the UK's national collection of social and economic data, offering comprehensive datasets for research and teaching. The service maintains extensive longitudinal studies, survey data, and census information, making it essential for social scientists, economists, and policy researchers studying UK society and economy."
+    }
+  },
+  {
+    "id": "icpsr-inter-university-consortium-for-political-and-social-research-api",
+    "name": "ICPSR API",
+    "provider": "ICPSR (University of Michigan)",
+    "description": "API for Inter-university Consortium for Political and Social Research data. World's largest archive of social science data with comprehensive collections for research and teaching.",
+    "discovery_status": "documented",
+    "tags": ["social science data", "political science", "survey data", "longitudinal studies", "ICPSR"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "institutional membership or individual fees",
+      "rate_limits": "usage policies apply"
+    },
+    "technical_info": {
+      "base_url": "https://www.icpsr.umich.edu/api",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "institutional or individual credentials",
+      "endpoints": [
+        {
+          "path": "/studies",
+          "full_url": "https://www.icpsr.umich.edu/api/studies",
+          "method": "GET",
+          "description": "Access study metadata",
+          "documentation_link": "https://www.icpsr.umich.edu/web/pages/support/",
+          "parameters": [],
+          "response_format": "JSON/XML with study metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.icpsr.umich.edu/web/pages/support/",
+        "authentication": "https://www.icpsr.umich.edu/web/pages/support/",
+        "endpoints_reference": "https://www.icpsr.umich.edu/web/pages/support/",
+        "code_examples": "https://www.icpsr.umich.edu/web/pages/support/",
+        "sdks_libraries": "https://www.icpsr.umich.edu/web/pages/support/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Social science data", "Political science", "Survey research", "Longitudinal data", "Experimental data"],
+      "geographic_scope": "Global with US focus",
+      "update_frequency": "Regular updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.icpsr.umich.edu/web/pages/support/",
+      "sample_endpoints": ["/studies"],
+      "data_quality": "Excellent - world's largest social science data archive",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "World's largest archive of social science data. Requires institutional membership or individual subscription for access.",
+      "api_summary": "ICPSR API provides access to the world's largest archive of social science data, offering comprehensive collections of survey research, longitudinal studies, and experimental data. Serving over 750 member institutions globally, ICPSR maintains rigorous data standards and documentation, making it the premier resource for quantitative social science research and teaching."
+    }
+  },
+  {
+    "id": "gesis-data-archive-api",
+    "name": "GESIS Data Archive API",
+    "provider": "GESIS - Leibniz Institute for the Social Sciences",
+    "description": "API for GESIS Data Archive social science research data. Germany's largest infrastructure for social science data with international scope and comprehensive metadata.",
+    "discovery_status": "documented",
+    "tags": ["social science data", "German data", "European data", "survey data", "GESIS"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": true,
+      "pricing_model": "free for academic use",
+      "rate_limits": "usage policies apply"
+    },
+    "technical_info": {
+      "base_url": "https://www.gesis.org/api",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "user registration required",
+      "endpoints": [
+        {
+          "path": "/data",
+          "full_url": "https://www.gesis.org/api/data",
+          "method": "GET",
+          "description": "Access social science datasets",
+          "documentation_link": "https://github.com/fsolt/gesisdata",
+          "parameters": [],
+          "response_format": "JSON/XML with dataset metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://github.com/fsolt/gesisdata",
+        "authentication": "https://github.com/fsolt/gesisdata",
+        "endpoints_reference": "https://github.com/fsolt/gesisdata",
+        "code_examples": "https://github.com/fsolt/gesisdata",
+        "sdks_libraries": "https://github.com/fsolt/gesisdata"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Social science data", "Survey data", "European data", "Cross-national studies", "Panel data"],
+      "geographic_scope": "Germany and Europe",
+      "update_frequency": "Regular updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://github.com/fsolt/gesisdata",
+      "sample_endpoints": ["/data"],
+      "data_quality": "Excellent - leading European social science data infrastructure",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "Germany's largest infrastructure for social science data with strong European and international scope. R package available for access.",
+      "api_summary": "GESIS Data Archive API provides access to Germany's largest infrastructure for social science data, offering comprehensive collections of survey data, cross-national studies, and longitudinal research. As a leading European data service, GESIS maintains high-quality metadata standards and supports comparative social research across European and international contexts."
+    }
+  },
+  {
+    "id": "harvard-dataverse-api",
+    "name": "Harvard Dataverse API",
+    "provider": "Harvard University",
+    "description": "Native API for Harvard Dataverse research data repository. Flagship installation of the Dataverse platform with extensive research datasets across all disciplines.",
+    "discovery_status": "documented",
+    "tags": ["Harvard", "research data", "dataverse", "academic data", "data repository"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "standard limits apply"
+    },
+    "technical_info": {
+      "base_url": "https://dataverse.harvard.edu/api/v1",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "API key via X-Dataverse-key header",
+      "endpoints": [
+        {
+          "path": "/dataverses",
+          "full_url": "https://dataverse.harvard.edu/api/v1/dataverses",
+          "method": "GET",
+          "description": "Access Harvard dataverse collections",
+          "documentation_link": "https://guides.dataverse.org/en/latest/api/",
+          "parameters": [],
+          "response_format": "JSON with dataverse metadata"
+        },
+        {
+          "path": "/datasets",
+          "full_url": "https://dataverse.harvard.edu/api/v1/datasets",
+          "method": "GET",
+          "description": "Access datasets in Harvard Dataverse",
+          "documentation_link": "https://guides.dataverse.org/en/latest/api/",
+          "parameters": [],
+          "response_format": "JSON with dataset metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://guides.dataverse.org/en/latest/api/",
+        "authentication": "https://guides.dataverse.org/en/latest/api/",
+        "endpoints_reference": "https://guides.dataverse.org/en/latest/api/",
+        "code_examples": "https://guides.dataverse.org/en/latest/api/",
+        "sdks_libraries": "https://guides.dataverse.org/en/latest/api/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Research datasets", "Academic data", "Scientific data", "Multidisciplinary data"],
+      "geographic_scope": "Global (Harvard-hosted)",
+      "update_frequency": "Real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://guides.dataverse.org/en/latest/api/",
+      "sample_endpoints": ["/dataverses", "/datasets"],
+      "data_quality": "Excellent - flagship Dataverse installation with extensive collections",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "Flagship installation of Dataverse platform hosting extensive research datasets from Harvard and collaborating institutions worldwide.",
+      "api_summary": "Harvard Dataverse API provides access to the flagship installation of the Dataverse platform, hosting extensive research datasets from Harvard University and collaborating institutions worldwide. The repository maintains comprehensive metadata standards and version control, serving as a model for institutional data repositories and supporting reproducible research across all academic disciplines."
+    }
+  },
+  {
+    "id": "re3dataorg-api",
+    "name": "re3data.org API",
+    "provider": "re3data.org",
+    "description": "Registry of Research Data Repositories global registry API. Comprehensive registry providing information about research data repositories worldwide with detailed metadata.",
+    "discovery_status": "documented",
+    "tags": ["data repository registry", "research infrastructure", "repository discovery", "metadata", "global registry"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "no specified limits"
+    },
+    "technical_info": {
+      "base_url": "https://www.re3data.org/api/v1",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/repositories",
+          "full_url": "https://www.re3data.org/api/v1/repositories",
+          "method": "GET",
+          "description": "Search and access repository information",
+          "documentation_link": "https://www.re3data.org/api/doc/",
+          "parameters": [],
+          "response_format": "JSON/XML with repository metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.re3data.org/api/doc/",
+        "authentication": "https://www.re3data.org/api/doc/",
+        "endpoints_reference": "https://www.re3data.org/api/doc/",
+        "code_examples": "https://github.com/re3data/using_the_re3data_API",
+        "sdks_libraries": "https://github.com/re3data/using_the_re3data_API"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Repository metadata", "Research infrastructure", "Data policies", "Repository services"],
+      "geographic_scope": "Global",
+      "update_frequency": "Regular updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.re3data.org/api/doc/",
+      "sample_endpoints": ["/repositories"],
+      "data_quality": "Excellent - comprehensive global registry with detailed metadata",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "Global registry of research data repositories with comprehensive metadata about repository policies, services, and characteristics.",
+      "api_summary": "re3data.org API provides access to the world's most comprehensive registry of research data repositories, offering detailed metadata about repository policies, services, and characteristics. The registry supports researchers, librarians, and data managers in discovering appropriate repositories for data deposit and reuse, promoting FAIR data principles and best practices in research data management."
+    }
+  },
+  {
+    "id": "kaggle-api",
+    "name": "Kaggle API",
+    "provider": "Kaggle (Google)",
+    "description": "API for accessing Kaggle datasets, competitions, and kernels. World's largest data science community platform with machine learning datasets and competitions.",
+    "discovery_status": "documented",
+    "tags": ["machine learning", "data science", "competitions", "datasets", "kernels"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "API limits apply"
+    },
+    "technical_info": {
+      "base_url": "https://www.kaggle.com/api/v1",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV"],
+      "auth_method": "API credentials via kaggle.json file",
+      "endpoints": [
+        {
+          "path": "/datasets/list",
+          "full_url": "https://www.kaggle.com/api/v1/datasets/list",
+          "method": "GET",
+          "description": "List available datasets",
+          "documentation_link": "https://github.com/Kaggle/kaggle-api",
+          "parameters": [],
+          "response_format": "JSON with dataset listings"
+        },
+        {
+          "path": "/competitions/list",
+          "full_url": "https://www.kaggle.com/api/v1/competitions/list",
+          "method": "GET",
+          "description": "List competitions",
+          "documentation_link": "https://github.com/Kaggle/kaggle-api",
+          "parameters": [],
+          "response_format": "JSON with competition information"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://github.com/Kaggle/kaggle-api",
+        "authentication": "https://github.com/Kaggle/kaggle-api",
+        "endpoints_reference": "https://github.com/Kaggle/kaggle-api",
+        "code_examples": "https://github.com/Kaggle/kaggle-api",
+        "sdks_libraries": "https://github.com/Kaggle/kaggle-api"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Machine learning datasets", "Data science competitions", "Code notebooks", "Models"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://github.com/Kaggle/kaggle-api",
+      "sample_endpoints": ["/datasets/list", "/competitions/list"],
+      "data_quality": "Excellent - world's largest data science community platform",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "World's largest data science community with comprehensive API for datasets, competitions, and notebooks. Strong Python CLI tools.",
+      "api_summary": "Kaggle API provides access to the world's largest data science community platform, offering comprehensive datasets, machine learning competitions, and code notebooks. The API enables researchers and practitioners to discover high-quality datasets, participate in competitions, and access community-contributed machine learning resources essential for data science education and research."
+    }
+  },
+  {
+    "id": "ieee-dataport-api",
+    "name": "IEEE DataPort API",
+    "provider": "IEEE",
+    "description": "API for IEEE DataPort research datasets and data competitions. Platform for engineering and technology datasets with peer review and citation capabilities.",
+    "discovery_status": "limited_documentation",
+    "tags": ["IEEE", "engineering data", "technology datasets", "peer review", "data competitions"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "IEEE membership or subscription required",
+      "rate_limits": "usage policies apply"
+    },
+    "technical_info": {
+      "base_url": "https://ieee-dataport.org/api",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "IEEE credentials required",
+      "endpoints": [
+        {
+          "path": "/datasets",
+          "full_url": "https://ieee-dataport.org/api/datasets",
+          "method": "GET",
+          "description": "Access engineering and technology datasets",
+          "documentation_link": "https://ieee-dataport.org/",
+          "parameters": [],
+          "response_format": "JSON with dataset metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://ieee-dataport.org/",
+        "authentication": "https://ieee-dataport.org/",
+        "endpoints_reference": "https://ieee-dataport.org/",
+        "code_examples": "https://ieee-dataport.org/",
+        "sdks_libraries": "https://ieee-dataport.org/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Engineering datasets", "Technology data", "Electrical engineering", "Computer science data"],
+      "geographic_scope": "Global",
+      "update_frequency": "Regular updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://ieee-dataport.org/",
+      "sample_endpoints": ["/datasets"],
+      "data_quality": "Good - limited public API documentation available",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "IEEE platform for engineering and technology datasets. Limited public API documentation, requires IEEE credentials for access.",
+      "api_summary": "IEEE DataPort API provides access to engineering and technology research datasets through IEEE's data platform, offering peer-reviewed data with citation capabilities. The platform supports the engineering research community with high-quality datasets across electrical engineering, computer science, and related disciplines, though access requires IEEE membership or subscription."
+    }
+  },
+  {
+    "id": "registry-of-research-data-repositories-api",
+    "name": "Registry of Research Data Repositories API",
+    "provider": "re3data.org",
+    "description": "API for the global registry of research data repositories. Comprehensive registry providing detailed information about data repositories worldwide.",
+    "discovery_status": "documented",
+    "tags": ["repository registry", "research infrastructure", "data discovery", "repository metadata", "global registry"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "no specified limits"
+    },
+    "technical_info": {
+      "base_url": "https://www.re3data.org/api/beta",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/repositories",
+          "full_url": "https://www.re3data.org/api/beta/repositories",
+          "method": "GET",
+          "description": "Access repository registry information",
+          "documentation_link": "https://github.com/re3data/using_the_re3data_API",
+          "parameters": [],
+          "response_format": "JSON/XML with repository information"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://github.com/re3data/using_the_re3data_API",
+        "authentication": "https://github.com/re3data/using_the_re3data_API",
+        "endpoints_reference": "https://github.com/re3data/using_the_re3data_API",
+        "code_examples": "https://github.com/re3data/using_the_re3data_API",
+        "sdks_libraries": "https://github.com/re3data/using_the_re3data_API"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Repository information", "Data policies", "Repository services", "Infrastructure metadata"],
+      "geographic_scope": "Global",
+      "update_frequency": "Regular updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://github.com/re3data/using_the_re3data_API",
+      "sample_endpoints": ["/repositories"],
+      "data_quality": "Excellent - comprehensive global repository registry",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "Same as re3data.org API - comprehensive global registry of research data repositories with detailed metadata.",
+      "api_summary": "Registry of Research Data Repositories API provides access to the world's most comprehensive registry of research data repositories, offering detailed metadata about repository characteristics, policies, and services. The registry supports the global research community in discovering appropriate repositories for data sharing and reuse, promoting best practices in research data management and FAIR data principles."
+    }
+  },
+  {
+    "id": "openaire-research-graph-api",
+    "name": "OpenAIRE Research Graph API",
+    "provider": "OpenAIRE AMKE",
+    "description": "API for accessing OpenAIRE Research Graph interconnected scholarly data. Comprehensive research graph connecting publications, datasets, projects, and organizations.",
+    "discovery_status": "documented",
+    "tags": ["research graph", "open science", "European research", "scholarly data", "research infrastructure"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "rate limits apply"
+    },
+    "technical_info": {
+      "base_url": "https://api.openaire.eu/graph",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/researchProducts",
+          "full_url": "https://api.openaire.eu/graph/researchProducts",
+          "method": "GET",
+          "description": "Access research entities (publications, datasets, projects)",
+          "documentation_link": "https://graph.openaire.eu/docs/apis/home/",
+          "parameters": [],
+          "response_format": "JSON with research product metadata"
+        },
+        {
+          "path": "/organizations",
+          "full_url": "https://api.openaire.eu/graph/organizations",
+          "method": "GET",
+          "description": "Search across research organizations",
+          "documentation_link": "https://graph.openaire.eu/docs/apis/home/",
+          "parameters": [],
+          "response_format": "JSON with organization data"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://graph.openaire.eu/docs/apis/home/",
+        "authentication": "https://graph.openaire.eu/docs/apis/home/",
+        "endpoints_reference": "https://graph.openaire.eu/docs/apis/home/",
+        "code_examples": "https://graph.openaire.eu/docs/apis/home/",
+        "sdks_libraries": "https://graph.openaire.eu/docs/apis/home/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Research publications", "Datasets", "Projects", "Organizations", "Funding information"],
+      "geographic_scope": "Global with European focus",
+      "update_frequency": "Continuous updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://graph.openaire.eu/docs/apis/home/",
+      "sample_endpoints": ["/researchProducts", "/organizations"],
+      "data_quality": "Excellent - comprehensive European research infrastructure",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "Comprehensive research graph connecting European and global research outputs with projects, organizations, and funding information.",
+      "api_summary": "OpenAIRE Research Graph API provides access to one of the world's largest open scholarly communication graphs, connecting millions of research publications, datasets, projects, and organizations. The platform supports European research policy and open science initiatives, offering comprehensive metadata and relationship mapping essential for research assessment and discovery."
+    }
+  },
+  {
+    "id": "genbank-api",
+    "name": "GenBank API",
+    "provider": "National Center for Biotechnology Information (NCBI)",
+    "description": "NCBI Entrez API for accessing GenBank genetic sequence database. Comprehensive database of DNA sequences with annotation and cross-references.",
+    "discovery_status": "documented",
+    "tags": ["genetic sequences", "DNA", "NCBI", "bioinformatics", "molecular biology"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "3 requests/second (higher with API key)"
+    },
+    "technical_info": {
+      "base_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils",
+      "protocol": "REST",
+      "data_formats": ["XML", "JSON", "FASTA"],
+      "auth_method": "API key recommended for higher limits",
+      "endpoints": [
+        {
+          "path": "/esearch.fcgi",
+          "full_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+          "method": "GET",
+          "description": "Search GenBank sequences",
+          "documentation_link": "https://www.ncbi.nlm.nih.gov/home/develop/api/",
+          "parameters": ["db", "term", "retmax"],
+          "response_format": "XML/JSON with search results"
+        },
+        {
+          "path": "/efetch.fcgi",
+          "full_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi",
+          "method": "GET",
+          "description": "Retrieve sequence records",
+          "documentation_link": "https://www.ncbi.nlm.nih.gov/home/develop/api/",
+          "parameters": ["db", "id", "rettype", "retmode"],
+          "response_format": "Various formats including FASTA, GenBank"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.ncbi.nlm.nih.gov/home/develop/api/",
+        "authentication": "https://www.ncbi.nlm.nih.gov/home/develop/api/",
+        "endpoints_reference": "https://www.ncbi.nlm.nih.gov/books/NBK25499/",
+        "code_examples": "https://www.ncbi.nlm.nih.gov/home/develop/api/",
+        "sdks_libraries": "https://www.ncbi.nlm.nih.gov/home/develop/api/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["DNA sequences", "Genetic data", "Sequence annotations", "Taxonomic information"],
+      "geographic_scope": "Global",
+      "update_frequency": "Daily",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.ncbi.nlm.nih.gov/home/develop/api/",
+      "sample_endpoints": ["/esearch.fcgi", "/efetch.fcgi"],
+      "data_quality": "Excellent - premier genetic sequence database",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "World's primary genetic sequence database with comprehensive annotation and cross-references. Part of NCBI's extensive molecular biology resources.",
+      "api_summary": "GenBank API provides access to the world's most comprehensive collection of genetic sequence data through NCBI's Entrez system, offering DNA, RNA, and protein sequences with detailed annotations. The database serves as the foundation for molecular biology research, supporting genomics, bioinformatics, and evolutionary studies across all domains of life."
+    }
+  },
+  {
+    "id": "european-nucleotide-archive-api",
+    "name": "European Nucleotide Archive API",
+    "provider": "European Bioinformatics Institute (EMBL-EBI)",
+    "description": "ENA Portal and Browser APIs for accessing European nucleotide sequence data. Comprehensive archive of nucleotide sequences with rich metadata and cross-references.",
+    "discovery_status": "documented",
+    "tags": ["nucleotide sequences", "EMBL-EBI", "European data", "genomics", "bioinformatics"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "no specified limits"
+    },
+    "technical_info": {
+      "base_url": "https://www.ebi.ac.uk/ena",
+      "protocol": "REST",
+      "data_formats": ["XML", "JSON", "FASTA", "EMBL"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/portal/api/search",
+          "full_url": "https://www.ebi.ac.uk/ena/portal/api/search",
+          "method": "GET",
+          "description": "Search ENA records",
+          "documentation_link": "https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access.html",
+          "parameters": ["query", "result", "fields"],
+          "response_format": "JSON/XML with sequence metadata"
+        },
+        {
+          "path": "/browser/api/xml/{accession}",
+          "full_url": "https://www.ebi.ac.uk/ena/browser/api/xml/{accession}",
+          "method": "GET",
+          "description": "Retrieve records by accession",
+          "documentation_link": "https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access.html",
+          "parameters": ["accession"],
+          "response_format": "XML with detailed sequence information"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access.html",
+        "authentication": "https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access.html",
+        "endpoints_reference": "https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access.html",
+        "code_examples": "https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access.html",
+        "sdks_libraries": "https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access.html"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Nucleotide sequences", "Genomic data", "Transcriptomic data", "Sequence metadata"],
+      "geographic_scope": "European with global data",
+      "update_frequency": "Daily",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access.html",
+      "sample_endpoints": ["/portal/api/search", "/browser/api/xml"],
+      "data_quality": "Excellent - comprehensive European nucleotide archive",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "European component of International Nucleotide Sequence Database Collaboration. Comprehensive documentation and multiple API access points.",
+      "api_summary": "European Nucleotide Archive API provides access to Europe's comprehensive nucleotide sequence archive, offering genomic and transcriptomic data with rich metadata and cross-references. As part of the global nucleotide sequence collaboration with GenBank and DDBJ, ENA serves the European research community with high-quality sequence data essential for genomics and bioinformatics research."
+    }
+  },
+  {
+    "id": "dna-data-bank-of-japan-api",
+    "name": "DNA Data Bank of Japan API",
+    "provider": "DNA Data Bank of Japan (DDBJ)",
+    "description": "WABI web API for DDBJ sequence search and retrieval services. Japanese component of international nucleotide sequence database collaboration.",
+    "discovery_status": "documented",
+    "tags": ["nucleotide sequences", "Japanese data", "DDBJ", "bioinformatics", "BLAST"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "no specified limits"
+    },
+    "technical_info": {
+      "base_url": "http://ddbj.nig.ac.jp/wabi",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML", "FASTA"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/blast",
+          "full_url": "http://ddbj.nig.ac.jp/wabi/blast",
+          "method": "POST",
+          "description": "BLAST sequence similarity search",
+          "documentation_link": "https://www.ddbj.nig.ac.jp/services/wabi-e.html",
+          "parameters": ["program", "database", "sequence"],
+          "response_format": "JSON/XML with BLAST results"
+        },
+        {
+          "path": "/getentry",
+          "full_url": "http://ddbj.nig.ac.jp/wabi/getentry",
+          "method": "GET",
+          "description": "Retrieve sequence entries",
+          "documentation_link": "https://www.ddbj.nig.ac.jp/services/wabi-e.html",
+          "parameters": ["accession", "database"],
+          "response_format": "FASTA/GenBank format sequences"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.ddbj.nig.ac.jp/services/wabi-e.html",
+        "authentication": "https://www.ddbj.nig.ac.jp/services/wabi-e.html",
+        "endpoints_reference": "https://www.ddbj.nig.ac.jp/services/wabi-e.html",
+        "code_examples": "https://www.ddbj.nig.ac.jp/services/wabi-e.html",
+        "sdks_libraries": "https://www.ddbj.nig.ac.jp/services/wabi-e.html"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Nucleotide sequences", "Protein sequences", "BLAST results", "Sequence annotations"],
+      "geographic_scope": "Japan with global data",
+      "update_frequency": "Daily",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.ddbj.nig.ac.jp/services/wabi-e.html",
+      "sample_endpoints": ["/blast", "/getentry"],
+      "data_quality": "Excellent - part of international nucleotide sequence collaboration",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "Japanese component of international nucleotide database collaboration. Provides comprehensive sequence search and retrieval services.",
+      "api_summary": "DNA Data Bank of Japan API provides access to Japan's comprehensive nucleotide sequence database through web-based analysis interfaces, offering sequence search, retrieval, and BLAST analysis capabilities. As part of the international nucleotide sequence database collaboration, DDBJ serves the global research community with high-quality sequence data and bioinformatics tools."
+    }
+  },
+  {
+    "id": "uniprot-api",
+    "name": "UniProt API",
+    "provider": "UniProt Consortium",
+    "description": "RESTful API for UniProt protein sequence and functional information. Comprehensive resource for protein information with functional annotation and cross-references.",
+    "discovery_status": "documented",
+    "tags": ["proteins", "protein sequences", "functional annotation", "bioinformatics", "molecular biology"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "no specified limits"
+    },
+    "technical_info": {
+      "base_url": "https://rest.uniprot.org",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML", "FASTA", "TSV"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/uniprotkb/search",
+          "full_url": "https://rest.uniprot.org/uniprotkb/search",
+          "method": "GET",
+          "description": "Search UniProt protein database",
+          "documentation_link": "https://www.uniprot.org/help/programmatic_access",
+          "parameters": ["query", "format", "size"],
+          "response_format": "JSON/XML with protein information"
+        },
+        {
+          "path": "/uniprotkb/{accession}",
+          "full_url": "https://rest.uniprot.org/uniprotkb/{accession}",
+          "method": "GET",
+          "description": "Retrieve protein entry by accession",
+          "documentation_link": "https://www.uniprot.org/help/programmatic_access",
+          "parameters": ["accession", "format"],
+          "response_format": "JSON/XML with detailed protein data"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.uniprot.org/help/programmatic_access",
+        "authentication": "https://www.uniprot.org/help/programmatic_access",
+        "endpoints_reference": "https://www.uniprot.org/help/programmatic_access",
+        "code_examples": "https://www.uniprot.org/help/programmatic_access",
+        "sdks_libraries": "https://www.uniprot.org/help/programmatic_access"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Protein sequences", "Functional annotation", "Protein domains", "Cross-references"],
+      "geographic_scope": "Global",
+      "update_frequency": "Regular releases",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.uniprot.org/help/programmatic_access",
+      "sample_endpoints": ["/uniprotkb/search", "/uniprotkb/{accession}"],
+      "data_quality": "Excellent - world's leading protein information resource",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "World's most comprehensive resource for protein information with extensive functional annotation and cross-references.",
+      "api_summary": "UniProt API provides access to the world's most comprehensive resource for protein sequence and functional information, offering detailed annotation, cross-references, and search capabilities. The database serves as the primary reference for protein research, supporting molecular biology, biochemistry, and bioinformatics studies across all domains of life."
+    }
+  },
+  {
+    "id": "protein-data-bank-api",
+    "name": "Protein Data Bank API",
+    "provider": "Protein Data Bank in Europe (PDBe)",
+    "description": "PDBe REST API for protein structure data and annotations. Comprehensive database of 3D protein structures with detailed annotations and cross-references.",
+    "discovery_status": "documented",
+    "tags": ["protein structures", "3D structures", "structural biology", "PDB", "molecular structures"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "no specified limits"
+    },
+    "technical_info": {
+      "base_url": "https://www.ebi.ac.uk/pdbe/api",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/pdb/entry/summary/{pdb_id}",
+          "full_url": "https://www.ebi.ac.uk/pdbe/api/pdb/entry/summary/{pdb_id}",
+          "method": "GET",
+          "description": "Get protein structure summary",
+          "documentation_link": "https://www.ebi.ac.uk/pdbe/api/doc/",
+          "parameters": ["pdb_id"],
+          "response_format": "JSON with structure summary"
+        },
+        {
+          "path": "/pdb/entry/molecules/{pdb_id}",
+          "full_url": "https://www.ebi.ac.uk/pdbe/api/pdb/entry/molecules/{pdb_id}",
+          "method": "GET",
+          "description": "Get molecular composition",
+          "documentation_link": "https://www.ebi.ac.uk/pdbe/api/doc/",
+          "parameters": ["pdb_id"],
+          "response_format": "JSON with molecular information"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.ebi.ac.uk/pdbe/api/doc/",
+        "authentication": "https://www.ebi.ac.uk/pdbe/api/doc/",
+        "endpoints_reference": "https://www.ebi.ac.uk/pdbe/api/doc/",
+        "code_examples": "https://www.ebi.ac.uk/pdbe/api/doc/",
+        "sdks_libraries": "https://www.ebi.ac.uk/pdbe/api/doc/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["3D protein structures", "Structural annotations", "Molecular information", "Experimental data"],
+      "geographic_scope": "Global",
+      "update_frequency": "Weekly",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.ebi.ac.uk/pdbe/api/doc/",
+      "sample_endpoints": ["/pdb/entry/summary", "/pdb/entry/molecules"],
+      "data_quality": "Excellent - world's primary protein structure database",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "World's primary database of 3D protein structures with comprehensive annotations and experimental details.",
+      "api_summary": "Protein Data Bank API provides access to the world's primary repository of 3D protein structures, offering detailed structural information, annotations, and experimental data. The database serves as the foundation for structural biology research, drug discovery, and molecular modeling, supporting researchers in understanding protein function through structure."
+    }
+  },
+  {
+    "id": "geo-gene-expression-omnibus-api",
+    "name": "GEO (Gene Expression Omnibus) API",
+    "provider": "National Center for Biotechnology Information (NCBI)",
+    "description": "NCBI GEO API for accessing gene expression and genomic data. Comprehensive repository of functional genomics data with extensive metadata and analysis tools.",
+    "discovery_status": "documented",
+    "tags": ["gene expression", "genomics", "functional genomics", "microarray", "RNA-seq"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "3 requests/second (higher with API key)"
+    },
+    "technical_info": {
+      "base_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils",
+      "protocol": "REST",
+      "data_formats": ["XML", "JSON"],
+      "auth_method": "API key recommended for higher limits",
+      "endpoints": [
+        {
+          "path": "/esearch.fcgi",
+          "full_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+          "method": "GET",
+          "description": "Search GEO datasets",
+          "documentation_link": "https://www.ncbi.nlm.nih.gov/home/develop/api/",
+          "parameters": ["db", "term", "retmax"],
+          "response_format": "XML/JSON with search results"
+        },
+        {
+          "path": "/efetch.fcgi",
+          "full_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi",
+          "method": "GET",
+          "description": "Retrieve GEO records",
+          "documentation_link": "https://www.ncbi.nlm.nih.gov/home/develop/api/",
+          "parameters": ["db", "id", "retmode"],
+          "response_format": "XML with detailed dataset information"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.ncbi.nlm.nih.gov/home/develop/api/",
+        "authentication": "https://www.ncbi.nlm.nih.gov/home/develop/api/",
+        "endpoints_reference": "https://www.ncbi.nlm.nih.gov/books/NBK25499/",
+        "code_examples": "https://www.ncbi.nlm.nih.gov/home/develop/api/",
+        "sdks_libraries": "https://www.ncbi.nlm.nih.gov/home/develop/api/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Gene expression data", "Genomic datasets", "Microarray data", "RNA-seq data"],
+      "geographic_scope": "Global",
+      "update_frequency": "Daily",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.ncbi.nlm.nih.gov/home/develop/api/",
+      "sample_endpoints": ["/esearch.fcgi", "/efetch.fcgi"],
+      "data_quality": "Excellent - premier functional genomics database",
+      "last_researched": "2025-07-29T13:00:00Z",
+      "researcher_notes": "World's largest repository of functional genomics data with comprehensive metadata and analysis capabilities. Part of NCBI's extensive molecular biology resources.",
+      "api_summary": "GEO API provides access to the world's largest repository of functional genomics data through NCBI's Gene Expression Omnibus, offering comprehensive gene expression datasets, microarray data, and RNA-seq experiments. The database serves as the primary resource for functional genomics research, supporting comparative studies, biomarker discovery, and systems biology approaches across all biological systems."
+    }
+  }
+]

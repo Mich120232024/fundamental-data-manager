@@ -1,0 +1,48 @@
+{
+  "api_research_output_schema": {
+    "description": "Enhanced schema for subagent API research with comprehensive data collection",
+    "required_fields": {
+      "id": "string - original API ID",
+      "name": "string - clean API name", 
+      "provider": "string - organization/company providing the API",
+      "description": "string - 2-3 sentence summary of what the API provides",
+      "discovery_status": "enum - research completion status",
+      "tags": "array - relevant tags for categorization and filtering",
+      "access_info": {
+        "is_free": "boolean|null - true=free, false=paid, null=unknown",
+        "requires_api_key": "boolean|null - authentication requirement",
+        "requires_approval": "boolean - manual approval process needed",
+        "pricing_model": "string - free/freemium/subscription/pay-per-use/unknown",
+        "rate_limits": "string - documented rate limits or 'unknown'"
+      },
+      "technical_info": {
+        "base_url": "string - primary API endpoint URL",
+        "protocol": "string - REST/GraphQL/SOAP/WebSocket",
+        "data_formats": "array - supported formats (JSON, XML, CSV, etc.)",
+        "auth_method": "string - api_key/oauth/basic/jwt/none/unknown",
+        "endpoints": "array - list of main endpoint paths with descriptions"
+      },
+      "content_summary": {
+        "data_categories": "array - specific data types (Economic Data, Academic Publications, etc.)",
+        "geographic_scope": "string - global/regional/country-specific",
+        "update_frequency": "string - real-time/daily/weekly/monthly/unknown",
+        "historical_data": "boolean|null - provides historical data access"
+      },
+      "research_notes": {
+        "documentation_url": "string - link to official API documentation",
+        "sample_endpoints": "array - 3-5 example endpoint paths",
+        "data_quality": "string - excellent/good/fair/poor/unknown based on documentation",
+        "last_researched": "string - ISO timestamp of research",
+        "researcher_notes": "string - additional insights from research",
+        "api_summary": "string - comprehensive 1-paragraph summary of API capabilities and use cases"
+      }
+    },
+    "research_quality_requirements": {
+      "minimum_endpoints": 3,
+      "description_min_words": 10,
+      "categories_min": 1,
+      "documentation_url_required": true,
+      "api_summary_min_words": 30
+    }
+  }
+}

@@ -1,0 +1,654 @@
+{
+  "api_research": {
+    "research_metadata": {
+      "research_date": "2025-07-30",
+      "research_version": "v2.0",
+      "total_apis_researched": 5,
+      "research_focus": "Real Estate Data APIs",
+      "completion_status": "comprehensive"
+    },
+    "apis": [
+      {
+        "api_name": "HouseCanary",
+        "provider": "HouseCanary Inc.",
+        "category": "Real Estate Analytics",
+        "subcategory": "Property Valuation & Analytics",
+        "description": "Comprehensive real estate analytics API providing property valuations, rental estimates, market analytics, and property details for residential properties across the United States.",
+        "base_url": "https://api.housecanary.com",
+        "documentation_url": "https://api-docs-legacy.housecanary.com/",
+        "authentication": {
+          "type": "HTTP Basic Authentication",
+          "method": "API Key + API Secret",
+          "header_format": "Authorization: Basic {base64(api_key:api_secret)}",
+          "requirements": [
+            "HTTPS required for all requests",
+            "API Key as username",
+            "API Secret as password"
+          ],
+          "credentials_location": "Account settings page"
+        },
+        "pricing": {
+          "model": "Subscription-based with usage limits",
+          "tiers": [
+            {
+              "name": "Free Trial",
+              "description": "Test API key available for development",
+              "limitations": "Limited functionality and requests"
+            },
+            {
+              "name": "Commercial",
+              "description": "Full API access for production use",
+              "pricing": "Contact for pricing",
+              "features": ["Full endpoint access", "Rate limits based on contract"]
+            }
+          ],
+          "rate_limits": "Contractual limits based on subscription",
+          "billing_method": "Subscription",
+          "free_tier": true
+        },
+        "endpoints": [
+          {
+            "name": "Property Value",
+            "path": "/v2/property/value",
+            "method": "GET/POST",
+            "description": "Get current property valuation",
+            "parameters": {
+              "required": ["address", "zipcode"],
+              "optional": ["city", "state", "meta"]
+            }
+          },
+          {
+            "name": "Rental Value",
+            "path": "/v2/property/rental_value",
+            "method": "GET/POST",
+            "description": "Get rental value estimate"
+          },
+          {
+            "name": "Property Details",
+            "path": "/v2/property/details",
+            "method": "GET/POST",
+            "description": "Get detailed property information"
+          },
+          {
+            "name": "Sales History", 
+            "path": "/v2/property/sales_history",
+            "method": "GET/POST",
+            "description": "Get property sales history"
+          },
+          {
+            "name": "Value Forecast",
+            "path": "/v2/property/value_forecast",
+            "method": "GET/POST",
+            "description": "Get property value forecasts"
+          },
+          {
+            "name": "Census Data",
+            "path": "/v2/property/census",
+            "method": "GET/POST",
+            "description": "Get census information for property"
+          },
+          {
+            "name": "School Information",
+            "path": "/v2/property/school",
+            "method": "GET/POST",
+            "description": "Get school district and ratings"
+          },
+          {
+            "name": "Value Report",
+            "path": "/v2/property/value_report",
+            "method": "GET/POST",
+            "description": "Comprehensive property valuation report"
+          },
+          {
+            "name": "Rental Report",
+            "path": "/v2/property/rental_report", 
+            "method": "GET/POST",
+            "description": "Comprehensive rental analysis report"
+          },
+          {
+            "name": "HOA Estimate",
+            "path": "/v3/property/hoa_est",
+            "method": "GET/POST",
+            "description": "HOA fee estimates"
+          }
+        ],
+        "data_fields": [
+          "Property valuation",
+          "Rental estimates",
+          "Property details (beds, baths, sq ft)",
+          "Sales history",
+          "Value forecasts",
+          "Census data",
+          "School information",
+          "Market analytics",
+          "Neighborhood statistics",
+          "HOA estimates"
+        ],
+        "geographic_coverage": "United States (150+ million properties)",
+        "data_freshness": "Real-time and historical data",
+        "supported_formats": ["JSON"],
+        "sdks": [
+          {
+            "language": "Python",
+            "package": "housecanary",
+            "installation": "pip install housecanary",
+            "github": "https://github.com/housecanary/hc-api-python"
+          }
+        ],
+        "use_cases": [
+          "Property valuation",
+          "Rental pricing",
+          "Market analysis",
+          "Investment evaluation",
+          "Real estate applications"
+        ],
+        "strengths": [
+          "Comprehensive analytics",
+          "Machine learning-based valuations", 
+          "Multiple geographic levels",
+          "Python SDK available",
+          "Extensive documentation"
+        ],
+        "limitations": [
+          "US only coverage",
+          "Subscription required for full access",
+          "Rate limits apply"
+        ],
+        "status": "Active",
+        "last_updated": "2025-07-30"
+      },
+      {
+        "api_name": "Zillow API (Bridge Data Output)",
+        "provider": "Zillow Group",
+        "category": "Real Estate Data",
+        "subcategory": "Property Listings & Valuations",
+        "description": "Access to Zillow's Zestimate valuations, public records, and mortgage rate data. Commercial-focused API for businesses requiring real estate data at scale.",
+        "base_url": "https://bridgedataoutput.com",
+        "documentation_url": "https://bridgedataoutput.com/docs/platform/",
+        "authentication": {
+          "type": "Token-based",
+          "method": "Password and Access Token",
+          "header_format": "Authorization: Bearer {access_token}",
+          "requirements": [
+            "Invite-only platform",
+            "Commercial use focus",
+            "Registration required"
+          ],
+          "credentials_location": "Bridge Data Output platform"
+        },
+        "pricing": {
+          "model": "Enterprise/Commercial",
+          "tiers": [
+            {
+              "name": "Invite Only",
+              "description": "Contact for access",
+              "pricing": "Custom pricing",
+              "features": ["Zestimate API", "Public Records API", "Mortgage Rates API"]
+            }
+          ],
+          "rate_limits": "Based on agreement",
+          "billing_method": "Custom contract",
+          "free_tier": false
+        },
+        "endpoints": [
+          {
+            "name": "Zestimates",
+            "path": "/zestimates",
+            "method": "GET",
+            "description": "Property, Rental, and Foreclosure Zestimates for ~100M properties"
+          },
+          {
+            "name": "Public Records",
+            "path": "/parcels",
+            "method": "GET", 
+            "description": "Parcel, assessment, and transactional county data (15+ years)"
+          },
+          {
+            "name": "Mortgage Rates",
+            "path": "/api/getRates",
+            "method": "GET/POST",
+            "description": "Current mortgage rates and loan data"
+          }
+        ],
+        "data_fields": [
+          "Zestimate valuations",
+          "Public records data",
+          "Property assessments",
+          "Transaction history",
+          "Mortgage rates",
+          "Parcel information",
+          "County data"
+        ],
+        "geographic_coverage": "United States (~100 million properties)",
+        "data_freshness": "Real-time Zestimates, historical public records",
+        "supported_formats": ["JSON", "XML"],
+        "sdks": [],
+        "use_cases": [
+          "Property valuation",
+          "Market research", 
+          "Investment analysis",
+          "Mortgage rate tracking",
+          "Public records research"
+        ],
+        "strengths": [
+          "Massive property database",
+          "Established Zestimate algorithm",
+          "Historical data depth",
+          "Comprehensive public records"
+        ],
+        "limitations": [
+          "Invite-only access",
+          "Commercial focus only",
+          "Custom pricing required",
+          "Limited public documentation"
+        ],
+        "status": "Active (Invite Only)",
+        "last_updated": "2025-07-30"
+      },
+      {
+        "api_name": "Redfin (Unofficial)",
+        "provider": "Redfin Corporation",
+        "category": "Real Estate Listings",
+        "subcategory": "Property Search & Listings",
+        "description": "Unofficial API access to Redfin's property listings, market data, and property details through reverse-engineered endpoints. No official API provided by Redfin.",
+        "base_url": "https://www.redfin.com",
+        "documentation_url": "Community-driven (GitHub projects)",
+        "authentication": {
+          "type": "None (Unofficial)",
+          "method": "No authentication required",
+          "header_format": "User-Agent headers recommended",
+          "requirements": [
+            "Compliance with ToS required",
+            "Rate limiting recommended",
+            "Use appropriate User-Agent headers"
+          ],
+          "credentials_location": "N/A"
+        },
+        "pricing": {
+          "model": "Free (Unofficial)",
+          "tiers": [
+            {
+              "name": "Free",
+              "description": "Unofficial access through web scraping",
+              "pricing": "Free",
+              "limitations": ["No official support", "Subject to blocking", "ToS compliance required"]
+            }
+          ],
+          "rate_limits": "Self-imposed to avoid blocking",
+          "billing_method": "Free",
+          "free_tier": true
+        },
+        "endpoints": [
+          {
+            "name": "Property Search",
+            "path": "/stingray/api/gis-csv",
+            "method": "GET",
+            "description": "Search properties by location and criteria"
+          },
+          {
+            "name": "Property Details",
+            "path": "/api/home/details/*",
+            "method": "GET",
+            "description": "Detailed property information"
+          },
+          {
+            "name": "Initial Info",
+            "path": "/initial_info",
+            "method": "GET",
+            "description": "Basic property information from URL"
+          },
+          {
+            "name": "Below the Fold",
+            "path": "/below_the_fold",
+            "method": "GET",
+            "description": "Additional property details and history"
+          }
+        ],
+        "data_fields": [
+          "Property listings",
+          "Property details",
+          "Price history",
+          "Property features",
+          "Market data",
+          "Agent information",
+          "Photos and media"
+        ],
+        "geographic_coverage": "United States (where Redfin operates)",
+        "data_freshness": "Real-time property listings",
+        "supported_formats": ["JSON", "CSV"],
+        "sdks": [
+          {
+            "language": "Python",
+            "package": "redfin",
+            "installation": "pip install redfin",
+            "github": "https://github.com/reteps/redfin"
+          }
+        ],
+        "use_cases": [
+          "Property research",
+          "Market analysis",
+          "Lead generation",
+          "Price monitoring",
+          "Investment analysis"
+        ],
+        "strengths": [
+          "Real-time listing data",
+          "Comprehensive property details",
+          "Free access",
+          "Python library available"
+        ],
+        "limitations": [
+          "Unofficial/unsupported",
+          "Subject to blocking",
+          "No guaranteed uptime",
+          "Terms of Service concerns",
+          "Limited to Redfin markets"
+        ],
+        "status": "Unofficial (Active through scraping)",
+        "last_updated": "2025-07-30"
+      },
+      {
+        "api_name": "ATTOM Data Solutions",
+        "provider": "ATTOM Data Solutions",
+        "category": "Real Estate Data",
+        "subcategory": "Property & Market Intelligence",
+        "description": "Comprehensive real estate data API providing property details, valuations, sales history, market trends, and neighborhood data. Trusted by real estate professionals and enterprises.",
+        "base_url": "https://api.gateway.attomdata.com",
+        "documentation_url": "https://api.developer.attomdata.com/docs",
+        "authentication": {
+          "type": "API Key",
+          "method": "Header-based API Key",
+          "header_format": "apikey: {your_api_key}",
+          "requirements": [
+            "Registration required",
+            "API key in header",
+            "Accept: application/json header required"
+          ],
+          "credentials_location": "Developer portal Account > Applications"
+        },
+        "pricing": {
+          "model": "Freemium with subscription tiers",
+          "tiers": [
+            {
+              "name": "Free Trial",
+              "description": "30-day free trial",
+              "pricing": "Free",
+              "duration": "30 days",
+              "features": ["Full API access", "Limited requests"]
+            },
+            {
+              "name": "Commercial",
+              "description": "Production use with scalable pricing",
+              "pricing": "Custom pricing",
+              "features": ["Full endpoint access", "Higher rate limits", "Support"]
+            }
+          ],
+          "rate_limits": "Based on subscription tier",
+          "billing_method": "Subscription",
+          "free_tier": true
+        },
+        "endpoints": [
+          {
+            "name": "Property Detail",
+            "path": "/propertyapi/v1.0.0/property/detail",
+            "method": "GET",
+            "description": "Comprehensive property details including ownership, characteristics, and location data",
+            "parameters": {
+              "required": ["address1", "address2"],
+              "optional": ["attomId", "fips", "apn"]
+            }
+          },
+          {
+            "name": "Property Snapshot",
+            "path": "/propertyapi/v1.0.0/property/snapshot", 
+            "method": "GET",
+            "description": "Basic property information for multiple properties",
+            "parameters": {
+              "optional": ["latitude", "longitude", "radius", "postalcode"]
+            }
+          },
+          {
+            "name": "Sale History",
+            "path": "/propertyapi/v1.0.0/sale/history",
+            "method": "GET",
+            "description": "Property sale transaction history"
+          },
+          {
+            "name": "AVM (Automated Valuation Model)",
+            "path": "/propertyapi/v1.0.0/avm",
+            "method": "GET",
+            "description": "Property value estimates"
+          },
+          {
+            "name": "Foreclosure Events",
+            "path": "/propertyapi/v1.0.0/allevents/detail",
+            "method": "GET",
+            "description": "Foreclosure and distressed property events"
+          },
+          {
+            "name": "School Information",
+            "path": "/propertyapi/v1.0.0/school",
+            "method": "GET",
+            "description": "School district and ratings information"
+          },
+          {
+            "name": "Neighborhood Data",
+            "path": "/propertyapi/v1.0.0/neighborhood",
+            "method": "GET",
+            "description": "Neighborhood statistics and boundaries"
+          }
+        ],
+        "data_fields": [
+          "Property identifiers (ATTOM ID, APN, FIPS)",
+          "Property characteristics (beds, baths, sq ft, lot size)",
+          "Location data (lat/long, address, boundaries)",
+          "Ownership information",
+          "Sales history and pricing",
+          "Property valuations (AVM)",
+          "Tax information",
+          "School data and ratings",
+          "Neighborhood statistics",
+          "Foreclosure events",
+          "Market trends"
+        ],
+        "geographic_coverage": "United States (158+ million properties, 99% population coverage)",
+        "data_freshness": "Updated regularly with public records",
+        "supported_formats": ["JSON", "XML"],
+        "sdks": [
+          {
+            "language": "Python",
+            "github": "https://github.com/AttomDataSolutions/Sample_Code"
+          },
+          {
+            "language": "PHP", 
+            "github": "https://github.com/AttomDataSolutions/Sample_Code"
+          },
+          {
+            "language": "Ruby",
+            "github": "https://github.com/AttomDataSolutions/Sample_Code"
+          },
+          {
+            "language": "JavaScript",
+            "github": "https://github.com/AttomDataSolutions/Sample_Code"
+          }
+        ],
+        "use_cases": [
+          "Property valuation",
+          "Market analysis",
+          "Investment research",
+          "Risk assessment",
+          "Portfolio management",
+          "Real estate applications",
+          "Due diligence"
+        ],
+        "strengths": [
+          "Comprehensive data coverage",
+          "High data accuracy",
+          "Multiple data sources",
+          "Strong developer support",
+          "Free trial available",
+          "Multiple programming language examples"
+        ],
+        "limitations": [
+          "US coverage only",
+          "Subscription required for production",
+          "Rate limits on free tier"
+        ],
+        "status": "Active",
+        "last_updated": "2025-07-30"
+      },
+      {
+        "api_name": "CoStar (Limited/Unofficial)",
+        "provider": "CoStar Group Inc.",
+        "category": "Commercial Real Estate",
+        "subcategory": "Commercial Property Intelligence",
+        "description": "CoStar primarily focuses on commercial real estate data and analytics. No comprehensive public API available - mainly accessible through partnership agreements and limited integrations.",
+        "base_url": "No public API",
+        "documentation_url": "Limited/Partner-only documentation",
+        "authentication": {
+          "type": "Partnership/Enterprise Only",
+          "method": "Custom authentication for partners",
+          "header_format": "Partner-specific authentication",
+          "requirements": [
+            "Enterprise partnership required",
+            "Custom integration agreements",
+            "Direct business relationship needed"
+          ],
+          "credentials_location": "Partner/Enterprise portal"
+        },
+        "pricing": {
+          "model": "Enterprise Partnership",
+          "tiers": [
+            {
+              "name": "Enterprise Partnership",
+              "description": "Custom integrations for enterprise clients",
+              "pricing": "Custom negotiated pricing",
+              "features": ["Commercial property data", "Market analytics", "Custom data feeds"]
+            }
+          ],
+          "rate_limits": "Custom based on agreement",
+          "billing_method": "Enterprise contract",
+          "free_tier": false
+        },
+        "endpoints": [
+          {
+            "name": "Property Data (Limited)",
+            "path": "Custom/Partner endpoints",
+            "method": "Varies",
+            "description": "Commercial property information for partners"
+          },
+          {
+            "name": "Market Analytics (Limited)",
+            "path": "Custom/Partner endpoints", 
+            "method": "Varies",
+            "description": "Commercial market data and trends"
+          }
+        ],
+        "data_fields": [
+          "Commercial property details",
+          "Lease information",
+          "Market analytics",
+          "Property valuations",
+          "Tenant information",
+          "Commercial sales data",
+          "Market trends"
+        ],
+        "geographic_coverage": "United States and United Kingdom (Commercial focus)",
+        "data_freshness": "Real-time commercial market data",
+        "supported_formats": ["Custom based on partnership"],
+        "sdks": [],
+        "use_cases": [
+          "Commercial real estate analysis",
+          "Investment evaluation",
+          "Market research",
+          "Portfolio management",
+          "Due diligence"
+        ],
+        "strengths": [
+          "Leading commercial real estate data",
+          "Comprehensive market intelligence",
+          "High data quality",
+          "Industry standard for CRE"
+        ],
+        "limitations": [
+          "No public API",
+          "Enterprise partnerships required",
+          "Commercial focus only",
+          "High barrier to entry",
+          "Custom integration costs"
+        ],
+        "status": "Limited Access (Partnership Only)",
+        "last_updated": "2025-07-30"
+      }
+    ],
+    "summary": {
+      "total_apis": 5,
+      "public_apis": 3,
+      "subscription_required": 4,
+      "free_tier_available": 2,
+      "geographic_focus": {
+        "United States": 5,
+        "United Kingdom": 1
+      },
+      "primary_use_cases": [
+        "Property valuation and analysis",
+        "Market research and analytics", 
+        "Investment evaluation",
+        "Real estate application development",
+        "Portfolio management"
+      ],
+      "authentication_methods": {
+        "API Key": 2,
+        "HTTP Basic": 1,
+        "Token-based": 1,
+        "Partnership Only": 1,
+        "None (Unofficial)": 1
+      },
+      "data_coverage": {
+        "residential": 4,
+        "commercial": 1,
+        "both": 0
+      }
+    },
+    "recommendations": {
+      "best_for_residential": {
+        "api": "ATTOM Data Solutions",
+        "reasons": [
+          "Comprehensive property coverage (158M+ properties)",
+          "Free 30-day trial",
+          "Extensive documentation",
+          "Multiple programming language support",
+          "High data accuracy"
+        ]
+      },
+      "best_for_commercial": {
+        "api": "CoStar",
+        "reasons": [
+          "Industry leader in commercial real estate",
+          "Comprehensive market intelligence",
+          "High data quality"
+        ],
+        "note": "Requires enterprise partnership"
+      },
+      "best_for_development": {
+        "api": "HouseCanary", 
+        "reasons": [
+          "Strong API design",
+          "Python SDK available",
+          "Comprehensive analytics",
+          "Good documentation",
+          "Test API keys available"
+        ]
+      },
+      "most_accessible": {
+        "api": "ATTOM Data Solutions",
+        "reasons": [
+          "30-day free trial",
+          "Clear documentation",
+          "Multiple code examples",
+          "Responsive support"
+        ]
+      }
+    }
+  }
+}

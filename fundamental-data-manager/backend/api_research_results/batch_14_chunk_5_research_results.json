@@ -1,0 +1,647 @@
+{
+  "research_batch_14_chunk_5": {
+    "apis": [
+      {
+        "api_name": "EOD Historical Data API",
+        "category": "market_data",
+        "description": "Comprehensive financial data API providing end-of-day, real-time, and fundamental data for 150,000+ tickers including stocks, ETFs, funds, and currencies worldwide",
+        "website": "https://eodhd.com/",
+        "documentation_url": "https://eodhd.com/financial-apis/",
+        "technical_info": {
+          "base_url": "https://eodhd.com/api/",
+          "protocol": "REST",
+          "data_formats": ["JSON", "CSV"],
+          "auth_method": "api_key",
+          "endpoints": [
+            {
+              "path": "/eod/{ticker}",
+              "full_url": "https://eodhd.com/api/eod/MCD.US",
+              "method": "GET",
+              "description": "End-of-day historical stock price data with date range filtering",
+              "documentation_link": "https://eodhd.com/financial-apis/api-for-historical-data-and-volumes",
+              "parameters": ["api_token", "from", "to", "period", "order"],
+              "response_format": "JSON array with date, open, high, low, close, adjusted_close, volume"
+            },
+            {
+              "path": "/real-time/{ticker}",
+              "full_url": "https://eodhd.com/api/real-time/AAPL.US",
+              "method": "GET",
+              "description": "Live (delayed) stock prices with real-time data",
+              "documentation_link": "https://eodhd.com/financial-apis/live-delayed-stocks-api",
+              "parameters": ["api_token", "fmt", "s"],
+              "response_format": "JSON with current price, change, volume, timestamp"
+            },
+            {
+              "path": "/fundamentals/{ticker}",
+              "full_url": "https://eodhistoricaldata.com/api/fundamentals/AAPL.US",
+              "method": "GET",
+              "description": "Fundamental data for stocks, ETFs, mutual funds, and indices",
+              "documentation_link": "https://eodhd.com/financial-apis/stock-etfs-fundamental-data-feeds",
+              "parameters": ["api_token", "filter"],
+              "response_format": "JSON with comprehensive fundamental data including financials, ratios, highlights"
+            },
+            {
+              "path": "/bulk-api-eod-splits-dividends",
+              "full_url": "https://eodhd.com/api/eod-bulk-last-day/US",
+              "method": "GET",
+              "description": "Bulk download of entire exchange data for a particular day",
+              "documentation_link": "https://eodhd.com/financial-apis/bulk-api-eod-splits-dividends",
+              "parameters": ["api_token", "date", "symbols", "filter"],
+              "response_format": "JSON array with all tickers and their EOD data"
+            },
+            {
+              "path": "/search/{query}",
+              "full_url": "https://eodhd.com/api/search/apple",
+              "method": "GET",
+              "description": "Search API to find stock symbols using company names or partial symbols",
+              "documentation_link": "https://eodhd.com/financial-apis/search-api-for-stocks-etfs-mutual-funds-and-indices",
+              "parameters": ["api_token", "limit", "bonds_only", "type"],
+              "response_format": "JSON array with matching symbols and company information"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://eodhd.com/financial-apis/quick-start-with-our-financial-data-apis",
+            "authentication": "https://eodhd.com/register",
+            "endpoints_reference": "https://eodhd.com/financial-apis/",
+            "code_examples": "https://github.com/EodHistoricalData/EODHistoricalDataAPI",
+            "sdks_libraries": "https://github.com/DannyBen/eod"
+          }
+        },
+        "data_coverage": {
+          "asset_classes": ["stocks", "etfs", "mutual_funds", "indices", "forex", "cryptocurrencies", "commodities", "bonds"],
+          "geographic_coverage": "global",
+          "exchanges": "150+ exchanges worldwide",
+          "total_symbols": "150,000+",
+          "historical_depth": "Varies by ticker - US stocks from inception (e.g., Ford from 1972)",
+          "update_frequency": "End-of-day, real-time via WebSockets (50ms delay)"
+        },
+        "pricing_model": {
+          "free_tier": {
+            "available": true,
+            "limitations": "20 API calls/day, 1 year historical depth for EOD data only, limited demo tickers",
+            "rate_limits": "20 requests per day"
+          },
+          "paid_plans": [
+            {
+              "name": "All World",
+              "starting_price": "$19.99/month",
+              "features": ["Unlimited API calls", "Full historical data", "All exchanges"],
+              "rate_limits": "Minute and daily limits based on plan"
+            },
+            {
+              "name": "All World Extended",
+              "features": ["Real-time WebSocket data", "Intraday data", "Options data"],
+              "rate_limits": "Higher limits than basic plan"
+            }
+          ],
+          "enterprise": true,
+          "pay_as_you_go": false
+        },
+        "authentication": {
+          "methods": ["API Key"],
+          "oauth_supported": false,
+          "api_key_parameter": "api_token",
+          "example": "https://eodhd.com/api/eod/AAPL.US?api_token=YOUR_API_KEY"
+        },
+        "sdk_support": {
+          "official_sdks": ["Python", "R", "Excel"],
+          "community_sdks": ["Ruby", "PHP", "Java", "C#"],
+          "code_examples": true,
+          "documentation_quality": "comprehensive"
+        },
+        "unique_features": [
+          "WebSocket support for real-time data with <50ms delay",
+          "Bulk API for downloading entire exchange data",
+          "Financial news API included",
+          "Options data for US stocks",
+          "Pre-market and post-market data (4am-8pm EST)",
+          "Splits and dividends data",
+          "Technical indicators API"
+        ],
+        "limitations": [
+          "Free tier limited to demo tickers only",
+          "Real-time WebSocket requires premium plans",
+          "Some endpoints require specific plan levels"
+        ]
+      },
+      {
+        "api_name": "Marketstack API",
+        "category": "market_data",
+        "description": "Real-time, intraday and historical stock market data API supporting 70+ exchanges, 170,000+ tickers from 50+ countries",
+        "website": "https://marketstack.com/",
+        "documentation_url": "https://marketstack.com/documentation",
+        "technical_info": {
+          "base_url": "https://api.marketstack.com/v1/",
+          "protocol": "REST",
+          "data_formats": ["JSON", "CSV"],
+          "auth_method": "api_key",
+          "endpoints": [
+            {
+              "path": "/eod",
+              "full_url": "https://api.marketstack.com/v1/eod",
+              "method": "GET",
+              "description": "End-of-day data for one or multiple stock tickers",
+              "documentation_link": "https://marketstack.com/documentation#eod_data",
+              "parameters": ["access_key", "symbols", "date_from", "date_to", "limit", "offset"],
+              "response_format": "JSON with pagination and EOD price data"
+            },
+            {
+              "path": "/intraday",
+              "full_url": "https://api.marketstack.com/v1/intraday",
+              "method": "GET",
+              "description": "Intraday data with intervals as short as one minute",
+              "documentation_link": "https://marketstack.com/documentation#intraday_data",
+              "parameters": ["access_key", "symbols", "interval", "date_from", "date_to", "limit"],
+              "response_format": "JSON with intraday price bars"
+            },
+            {
+              "path": "/tickers",
+              "full_url": "https://api.marketstack.com/v1/tickers",
+              "method": "GET",
+              "description": "Search and filter available stock tickers",
+              "documentation_link": "https://marketstack.com/documentation#tickers",
+              "parameters": ["access_key", "search", "exchange", "limit", "offset"],
+              "response_format": "JSON array with ticker information"
+            },
+            {
+              "path": "/exchanges",
+              "full_url": "https://api.marketstack.com/v1/exchanges",
+              "method": "GET",
+              "description": "List all supported stock exchanges",
+              "documentation_link": "https://marketstack.com/documentation#exchanges",
+              "parameters": ["access_key", "search", "limit", "offset"],
+              "response_format": "JSON array with exchange details"
+            },
+            {
+              "path": "/currencies",
+              "full_url": "https://api.marketstack.com/v1/currencies",
+              "method": "GET",
+              "description": "List all supported currencies",
+              "documentation_link": "https://marketstack.com/documentation#currencies",
+              "parameters": ["access_key", "limit", "offset"],
+              "response_format": "JSON array with currency information"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://marketstack.com/quickstart",
+            "authentication": "https://marketstack.com/documentation#authentication",
+            "endpoints_reference": "https://marketstack.com/documentation",
+            "code_examples": "https://marketstack.com/documentation#code_examples",
+            "sdks_libraries": "https://github.com/apilayer/marketstack"
+          }
+        },
+        "data_coverage": {
+          "asset_classes": ["stocks", "etfs", "mutual_funds", "indices"],
+          "geographic_coverage": "50+ countries",
+          "exchanges": "70+ stock exchanges",
+          "total_symbols": "170,000+",
+          "historical_depth": "10 years",
+          "update_frequency": "Real-time (1min intervals for Professional plan), EOD daily"
+        },
+        "pricing_model": {
+          "free_tier": {
+            "available": true,
+            "limitations": "100 requests/month, EOD data only, no HTTPS",
+            "rate_limits": "100 requests per month"
+          },
+          "paid_plans": [
+            {
+              "name": "Basic",
+              "starting_price": "$9.99/month ($7.99 yearly)",
+              "features": ["10,000 requests/month", "Intraday data", "10-year history", "HTTPS"],
+              "rate_limits": "10,000 requests per month"
+            },
+            {
+              "name": "Professional",
+              "features": ["Real-time data (1min intervals)", "Higher request limits", "Priority support"],
+              "rate_limits": "Higher limits"
+            }
+          ],
+          "enterprise": true,
+          "pay_as_you_go": false
+        },
+        "authentication": {
+          "methods": ["API Key"],
+          "oauth_supported": false,
+          "api_key_parameter": "access_key",
+          "example": "https://api.marketstack.com/v1/eod?access_key=YOUR_ACCESS_KEY&symbols=AAPL"
+        },
+        "sdk_support": {
+          "official_sdks": ["PHP", "Python", "Node.js", ".NET"],
+          "community_sdks": ["Ruby", "Go", "Java"],
+          "code_examples": true,
+          "documentation_quality": "comprehensive"
+        },
+        "unique_features": [
+          "750+ market indices coverage",
+          "Lightweight JSON responses",
+          "Integration with EDGAR for SEC filings (V2)",
+          "CIK code information (V2)",
+          "256-bit HTTPS encryption",
+          "Powerful cloud infrastructure"
+        ],
+        "limitations": [
+          "V1 endpoints deprecated after June 30, 2025",
+          "Real-time data only for Professional plans",
+          "Intraday data limited to US stocks (IEX exchange)",
+          "Free tier has no HTTPS encryption"
+        ]
+      },
+      {
+        "api_name": "Finnhub API",
+        "category": "market_data",
+        "description": "Free APIs for real-time stock, forex, and cryptocurrency data, plus company fundamentals, economic data, and alternative data",
+        "website": "https://finnhub.io/",
+        "documentation_url": "https://finnhub.io/docs/api",
+        "technical_info": {
+          "base_url": "https://finnhub.io/api/v1/",
+          "protocol": "REST, WebSocket",
+          "data_formats": ["JSON"],
+          "auth_method": "api_key",
+          "endpoints": [
+            {
+              "path": "/quote",
+              "full_url": "https://finnhub.io/api/v1/quote",
+              "method": "GET",
+              "description": "Real-time stock prices for US stocks",
+              "documentation_link": "https://finnhub.io/docs/api/quote",
+              "parameters": ["symbol", "token"],
+              "response_format": "JSON with current price, change, percent change, high, low, open, previous close"
+            },
+            {
+              "path": "/stock/candle",
+              "full_url": "https://finnhub.io/api/v1/stock/candle",
+              "method": "GET",
+              "description": "Candlestick data for stocks",
+              "documentation_link": "https://finnhub.io/docs/api/stock-candles",
+              "parameters": ["symbol", "resolution", "from", "to", "token"],
+              "response_format": "JSON with arrays of timestamps, open, high, low, close, volume"
+            },
+            {
+              "path": "/stock/profile2",
+              "full_url": "https://finnhub.io/api/v1/stock/profile2",
+              "method": "GET",
+              "description": "Company profile including industry, CEO, address",
+              "documentation_link": "https://finnhub.io/docs/api/company-profile2",
+              "parameters": ["symbol", "token"],
+              "response_format": "JSON with company details, market cap, share outstanding"
+            },
+            {
+              "path": "/indicator",
+              "full_url": "https://finnhub.io/api/v1/indicator",
+              "method": "GET",
+              "description": "Technical indicators (RSI, SMA, EMA, etc.)",
+              "documentation_link": "https://finnhub.io/docs/api/technical-indicator",
+              "parameters": ["symbol", "resolution", "from", "to", "indicator", "token"],
+              "response_format": "JSON with technical indicator values"
+            },
+            {
+              "path": "/news",
+              "full_url": "https://finnhub.io/api/v1/news",
+              "method": "GET",
+              "description": "Market news and company news",
+              "documentation_link": "https://finnhub.io/docs/api/market-news",
+              "parameters": ["category", "token"],
+              "response_format": "JSON array with news articles"
+            },
+            {
+              "path": "/websocket",
+              "full_url": "wss://ws.finnhub.io",
+              "method": "WebSocket",
+              "description": "Real-time trades via WebSocket",
+              "documentation_link": "https://finnhub.io/docs/api/websocket-trades",
+              "parameters": ["token"],
+              "response_format": "JSON stream with real-time trade data"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://finnhub.io/docs/api/introduction",
+            "authentication": "https://finnhub.io/docs/api/authentication",
+            "endpoints_reference": "https://finnhub.io/docs/api",
+            "code_examples": "https://finnhub.io/docs/api/example",
+            "sdks_libraries": "https://github.com/Finnhub-Stock-API/finnhub-python"
+          }
+        },
+        "data_coverage": {
+          "asset_classes": ["stocks", "forex", "cryptocurrencies", "indices", "etfs", "mutual_funds"],
+          "geographic_coverage": "global",
+          "exchanges": "US exchanges, global forex brokers, 15+ crypto exchanges",
+          "total_symbols": "extensive coverage",
+          "historical_depth": "Varies by data type",
+          "update_frequency": "Real-time via WebSocket, delayed for free tier"
+        },
+        "pricing_model": {
+          "free_tier": {
+            "available": true,
+            "limitations": "60 API calls/minute, US stocks only for real-time WebSocket, limited endpoints",
+            "rate_limits": "60 requests per minute"
+          },
+          "paid_plans": [
+            {
+              "name": "Premium",
+              "features": ["More API calls", "Access to premium endpoints", "International markets"],
+              "rate_limits": "Higher limits"
+            },
+            {
+              "name": "Enterprise",
+              "features": ["Real-time international markets", "All endpoints", "Priority support"],
+              "rate_limits": "Custom limits"
+            }
+          ],
+          "enterprise": true,
+          "pay_as_you_go": false
+        },
+        "authentication": {
+          "methods": ["API Key"],
+          "oauth_supported": false,
+          "api_key_parameter": "token",
+          "example": "https://finnhub.io/api/v1/quote?symbol=AAPL&token=YOUR_API_KEY"
+        },
+        "sdk_support": {
+          "official_sdks": ["Python", "Go", "JavaScript"],
+          "community_sdks": ["Java", "Ruby", "PHP", "C#", "R"],
+          "code_examples": true,
+          "documentation_quality": "excellent"
+        },
+        "unique_features": [
+          "WebSocket support for real-time trades",
+          "Alternative data (social sentiment, earnings calendar)",
+          "Economic indicators and country data",
+          "IPO calendar and filings",
+          "Institutional ownership data",
+          "Free tier includes substantial functionality",
+          "Global workforce providing 24/7 data coverage"
+        ],
+        "limitations": [
+          "Most premium functions require paid subscription",
+          "Free WebSocket limited to US stocks, forex, and crypto",
+          "International real-time data requires enterprise account",
+          "Rate limits on free tier (60 calls/minute)"
+        ]
+      },
+      {
+        "api_name": "Barchart OnDemand API",
+        "category": "market_data",
+        "description": "Event-based market data API providing real-time, delayed, and historical data for stocks, futures, forex, and options with extensive financial fundamentals",
+        "website": "https://www.barchart.com/ondemand/api",
+        "documentation_url": "https://www.barchart.com/ondemand/api",
+        "technical_info": {
+          "base_url": "https://marketdata.websol.barchart.com/",
+          "protocol": "REST, Socket.IO",
+          "data_formats": ["JSON", "XML"],
+          "auth_method": "api_key",
+          "endpoints": [
+            {
+              "path": "/getQuote.{format}",
+              "full_url": "https://marketdata.websol.barchart.com/getQuote.json",
+              "method": "GET",
+              "description": "Real-time, delayed or end-of-day price data by symbol",
+              "documentation_link": "https://www.barchart.com/ondemand/api/getQuote",
+              "parameters": ["key", "symbols", "fields", "only"],
+              "response_format": "JSON/XML with quote data"
+            },
+            {
+              "path": "/getHistory.{format}",
+              "full_url": "https://ondemand.websol.barchart.com/getHistory.json",
+              "method": "GET",
+              "description": "Historical time series data as tick, minute bars or end-of-day",
+              "documentation_link": "https://www.barchart.com/ondemand/api/getHistory",
+              "parameters": ["apikey", "symbol", "type", "startDate", "endDate", "maxRecords", "interval"],
+              "response_format": "JSON/XML with historical price bars"
+            },
+            {
+              "path": "/getEquitiesByExchange.{format}",
+              "full_url": "https://marketdata.websol.barchart.com/getEquitiesByExchange.json",
+              "method": "GET",
+              "description": "All equities data by exchange in a single query",
+              "documentation_link": "https://www.barchart.com/ondemand/api/getEquitiesByExchange",
+              "parameters": ["key", "exchange", "fields"],
+              "response_format": "JSON/XML with all equities on exchange"
+            },
+            {
+              "path": "/getFuturesOptions.{format}",
+              "full_url": "https://marketdata.websol.barchart.com/getFuturesOptions.json",
+              "method": "GET",
+              "description": "Intraday options data on futures contracts",
+              "documentation_link": "https://www.barchart.com/ondemand/api/getFuturesOptions",
+              "parameters": ["key", "root", "expiration", "fields"],
+              "response_format": "JSON/XML with futures options chain"
+            },
+            {
+              "path": "/getFinancialRatios.{format}",
+              "full_url": "https://marketdata.websol.barchart.com/getFinancialRatios.json",
+              "method": "GET",
+              "description": "Key financial ratios including EPS, ROE, P/E",
+              "documentation_link": "https://www.barchart.com/ondemand/api/getFinancialRatios",
+              "parameters": ["key", "symbols", "fields"],
+              "response_format": "JSON/XML with financial ratios"
+            },
+            {
+              "path": "/getIncomeStatements.{format}",
+              "full_url": "https://marketdata.websol.barchart.com/getIncomeStatements.json",
+              "method": "GET",
+              "description": "Public company income statement data",
+              "documentation_link": "https://www.barchart.com/ondemand/api/getIncomeStatements",
+              "parameters": ["key", "symbols", "frequency", "count"],
+              "response_format": "JSON/XML with income statement data"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.barchart.com/ondemand/getting-started",
+            "authentication": "https://www.barchart.com/ondemand/api",
+            "endpoints_reference": "https://www.barchart.com/ondemand/api",
+            "code_examples": "https://github.com/yagop/barchart-market-data-api",
+            "sdks_libraries": "https://www.barchart.com/ondemand/client-libraries"
+          }
+        },
+        "data_coverage": {
+          "asset_classes": ["stocks", "futures", "forex", "options", "indices", "etfs", "mutual_funds", "cryptocurrencies", "commodities"],
+          "geographic_coverage": "global exchanges",
+          "exchanges": "Major global exchanges",
+          "total_symbols": "extensive coverage",
+          "historical_depth": "Tick data, minute bars, and EOD data available",
+          "update_frequency": "Real-time, delayed, and end-of-day"
+        },
+        "pricing_model": {
+          "free_tier": {
+            "available": true,
+            "limitations": "Limited API calls, delayed data only",
+            "rate_limits": "varies by endpoint"
+          },
+          "paid_plans": [
+            {
+              "name": "Usage-based",
+              "starting_price": "Pay per use",
+              "features": ["Flexible pricing", "Scale as needed", "Real-time data access"],
+              "rate_limits": "Based on package"
+            }
+          ],
+          "enterprise": true,
+          "pay_as_you_go": true
+        },
+        "authentication": {
+          "methods": ["API Key"],
+          "oauth_supported": false,
+          "api_key_parameter": "key or apikey",
+          "example": "https://marketdata.websol.barchart.com/getQuote.json?key=YOUR_API_KEY&symbols=AAPL"
+        },
+        "sdk_support": {
+          "official_sdks": ["Java", "JavaScript", "PHP", "Python", "MATLAB"],
+          "community_sdks": ["Node.js", "Ruby"],
+          "code_examples": true,
+          "documentation_quality": "comprehensive"
+        },
+        "unique_features": [
+          "Event-based API with Socket.IO support",
+          "Custom getData API for tailored queries",
+          "Extensive futures and options data",
+          "Cash commodities data",
+          "Balance sheet and income statement data",
+          "News and market commentary",
+          "Technical analysis indicators",
+          "Bulk data downloads"
+        ],
+        "limitations": [
+          "Complex pricing structure",
+          "Some endpoints require specific subscription levels",
+          "Real-time data requires paid plans"
+        ]
+      },
+      {
+        "api_name": "Xignite API",
+        "category": "market_data",
+        "description": "Cloud-based financial market data APIs serving 12 billion requests daily, offering comprehensive coverage across multiple asset classes",
+        "website": "https://www.xignite.com/",
+        "documentation_url": "https://www.xignite.com/developers",
+        "technical_info": {
+          "base_url": "https://api.xignite.com/",
+          "protocol": "REST, SOAP",
+          "data_formats": ["JSON", "XML", "CSV"],
+          "auth_method": "token",
+          "endpoints": [
+            {
+              "path": "/xGlobalQuotes/GetGlobalDelayedQuote",
+              "full_url": "https://api.xignite.com/xGlobalQuotes/GetGlobalDelayedQuote",
+              "method": "GET",
+              "description": "Delayed stock quotes for global equities",
+              "documentation_link": "https://www.xignite.com/product/global-stock-quote-data",
+              "parameters": ["_token", "Identifier", "IdentifierType"],
+              "response_format": "JSON/XML with quote data"
+            },
+            {
+              "path": "/xGlobalHistorical/GetGlobalHistoricalQuotesRange",
+              "full_url": "https://api.xignite.com/xGlobalHistorical/GetGlobalHistoricalQuotesRange",
+              "method": "GET",
+              "description": "Historical quotes for global securities",
+              "documentation_link": "https://www.xignite.com/product/historical-stock-prices",
+              "parameters": ["_token", "Identifier", "IdentifierType", "FromDate", "ToDate"],
+              "response_format": "JSON/XML with historical price data"
+            },
+            {
+              "path": "/xOptions/GetOptionChain",
+              "full_url": "https://api.xignite.com/xOptions/GetOptionChain",
+              "method": "GET",
+              "description": "Options chain data for North American and European options",
+              "documentation_link": "https://www.xignite.com/product/options-data",
+              "parameters": ["_token", "Identifier", "IdentifierType", "OptionExchange"],
+              "response_format": "JSON/XML with options chain"
+            },
+            {
+              "path": "/xFutures/GetDelayedFuture",
+              "full_url": "https://api.xignite.com/xFutures/GetDelayedFuture",
+              "method": "GET",
+              "description": "Delayed futures price quotes from global exchanges",
+              "documentation_link": "https://www.xignite.com/product/futures-data",
+              "parameters": ["_token", "Symbol", "Exchange"],
+              "response_format": "JSON/XML with futures quote"
+            },
+            {
+              "path": "/xCurrencies/GetRealTimeRate",
+              "full_url": "https://api.xignite.com/xCurrencies/GetRealTimeRate",
+              "method": "GET",
+              "description": "Real-time currency exchange rates",
+              "documentation_link": "https://www.xignite.com/product/forex-data",
+              "parameters": ["_token", "From", "To"],
+              "response_format": "JSON/XML with FX rate"
+            },
+            {
+              "path": "/xFundamentals/GetCompanyFundamentals",
+              "full_url": "https://api.xignite.com/xFundamentals/GetCompanyFundamentals",
+              "method": "GET",
+              "description": "Company fundamental data for 78,000+ companies from 118 countries",
+              "documentation_link": "https://www.xignite.com/product/company-fundamentals-data",
+              "parameters": ["_token", "Identifier", "IdentifierType", "UpdatedSince"],
+              "response_format": "JSON/XML with fundamental data"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.xignite.com/getting-started/",
+            "authentication": "https://www.xignite.com/developers",
+            "endpoints_reference": "https://www.xignite.com/products",
+            "code_examples": "https://www.xignite.com/developers",
+            "sdks_libraries": "https://www.xignite.com/support/solutions"
+          }
+        },
+        "data_coverage": {
+          "asset_classes": ["equities", "options", "futures", "forex", "funds", "fixed_income", "cryptocurrencies"],
+          "geographic_coverage": "118 countries",
+          "exchanges": "250+ data sources including exchanges and vendors",
+          "total_symbols": "78,000+ companies",
+          "historical_depth": "Extensive historical data",
+          "update_frequency": "Real-time and delayed options"
+        },
+        "pricing_model": {
+          "free_tier": {
+            "available": false,
+            "limitations": "No free tier available",
+            "rate_limits": "N/A"
+          },
+          "paid_plans": [
+            {
+              "name": "Custom Pricing",
+              "starting_price": "Contact for quote",
+              "features": ["Pay only for data needed", "By asset class", "By frequency", "By region"],
+              "rate_limits": "Unlimited usage included"
+            }
+          ],
+          "enterprise": true,
+          "pay_as_you_go": false
+        },
+        "authentication": {
+          "methods": ["Token"],
+          "oauth_supported": false,
+          "api_key_parameter": "_token",
+          "example": "https://api.xignite.com/xGlobalQuotes/GetGlobalDelayedQuote?_token=YOUR_TOKEN&Identifier=AAPL"
+        },
+        "sdk_support": {
+          "official_sdks": ["Multiple languages supported"],
+          "community_sdks": ["Various community implementations"],
+          "code_examples": true,
+          "documentation_quality": "comprehensive with customizable code samples"
+        },
+        "unique_features": [
+          "AWS Advanced Technology Partner with Financial Services Competency",
+          "12 billion API requests served daily",
+          "Unified cloud platform for all financial data needs",
+          "Customizable API responses - pick only needed fields",
+          "No complex packages - pay only for what you need",
+          "Partners with FactSet and Morningstar",
+          "Single platform for data consumption and management",
+          "SOAP and REST API support"
+        ],
+        "limitations": [
+          "No free tier available",
+          "Requires contact for pricing",
+          "Token-based auth may have security considerations"
+        ]
+      }
+    ],
+    "metadata": {
+      "research_date": "2025-01-02",
+      "batch_number": 14,
+      "chunk_number": 5,
+      "total_apis_researched": 5,
+      "schema_version": "v2"
+    }
+  }
+}

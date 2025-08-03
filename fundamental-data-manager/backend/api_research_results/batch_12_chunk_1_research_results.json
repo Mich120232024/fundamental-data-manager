@@ -1,0 +1,279 @@
+[
+  {
+    "id": "reonomy",
+    "name": "Reonomy API",
+    "provider": "Reonomy",
+    "description": "Commercial real estate intelligence platform providing comprehensive property data, ownership information, and market analytics through REST API with credit-based pricing model.",
+    "discovery_status": "documented",
+    "tags": ["commercial real estate", "property data", "ownership information", "market analytics", "CRE intelligence"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Credit-based pricing model - enterprise only",
+      "rate_limits": "5 requests/second"
+    },
+    "technical_info": {
+      "base_url": "https://api.reonomy.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "HTTP Basic Authentication",
+      "endpoints": [
+        {
+          "path": "/property/search",
+          "full_url": "https://api.reonomy.com/property/search",
+          "method": "GET",
+          "description": "Search commercial properties with comprehensive filters",
+          "documentation_link": "Contact Reonomy for documentation",
+          "parameters": ["location", "property_type", "size", "ownership"],
+          "response_format": "JSON with property data and ownership details"
+        },
+        {
+          "path": "/property/{id}",
+          "full_url": "https://api.reonomy.com/property/{id}",
+          "method": "GET",
+          "description": "Get detailed property information by ID",
+          "documentation_link": "Contact Reonomy for documentation",
+          "parameters": ["id"],
+          "response_format": "JSON with comprehensive property details"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Property details", "Ownership information", "Market analytics", "Transaction history"],
+      "geographic_scope": "US commercial real estate markets",
+      "update_frequency": "Regular updates from public records",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact Reonomy for documentation",
+      "api_summary": "Reonomy provides comprehensive commercial real estate data through REST API with credit-based pricing. Features HTTP Basic Auth and rate limit of 5 requests/second for enterprise clients.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact enterprise sales",
+      "api_reference": "Enterprise documentation provided",
+      "examples": "Provided with subscription",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "cherre",
+    "name": "Cherre GraphQL API",
+    "provider": "Cherre",
+    "description": "Real estate data platform integrating 100+ third-party data providers with 3.3+ billion addresses through GraphQL API, enabling quick implementation when pre-licensed data is used.",
+    "discovery_status": "documented",
+    "tags": ["real estate data", "GraphQL", "data integration", "property intelligence", "multi-source"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise licensing model",
+      "rate_limits": "Custom per enterprise agreement"
+    },
+    "technical_info": {
+      "base_url": "https://api.cherre.com/graphql",
+      "protocol": "GraphQL",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/graphql",
+          "full_url": "https://api.cherre.com/graphql",
+          "method": "POST",
+          "description": "Single GraphQL endpoint for all data queries across 100+ integrated sources",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": ["query", "variables"],
+          "response_format": "GraphQL JSON response with requested data fields"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Property data", "Market analytics", "Multi-source integration", "Real estate intelligence"],
+      "geographic_scope": "3.3+ billion addresses in database",
+      "update_frequency": "Real-time data integration from 100+ sources",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Enterprise documentation provided",
+      "api_summary": "Cherre provides GraphQL-based real estate data platform integrating 100+ third-party providers with 3.3+ billion addresses. Quick implementation possible when using pre-licensed data sources.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for access",
+      "api_reference": "GraphQL schema provided with access",
+      "examples": "Enterprise examples provided",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "measurabl",
+    "name": "Measurabl ESG API",
+    "provider": "Measurabl",
+    "description": "ESG and sustainability data platform providing 70+ ESG data points per asset covering 18 billion square feet across 93 countries with AI-enabled data ingestion.",
+    "discovery_status": "documented",
+    "tags": ["ESG data", "sustainability", "real estate ESG", "GRESB reporting", "AI data ingestion"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise subscription",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.measurabl.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/assets/{id}/esg",
+          "full_url": "https://api.measurabl.com/assets/{id}/esg",
+          "method": "GET",
+          "description": "Get 70+ ESG data points for specific asset",
+          "documentation_link": "Contact for documentation",
+          "parameters": ["id", "metrics", "period"],
+          "response_format": "JSON with comprehensive ESG metrics"
+        },
+        {
+          "path": "/reporting/gresb",
+          "full_url": "https://api.measurabl.com/reporting/gresb",
+          "method": "GET",
+          "description": "Pre-built GRESB reporting data",
+          "documentation_link": "Contact for documentation",
+          "parameters": ["portfolio", "reporting_year"],
+          "response_format": "JSON with GRESB-formatted data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["ESG metrics", "Sustainability data", "Energy consumption", "Emissions data", "Water usage"],
+      "geographic_scope": "18 billion square feet across 93 countries",
+      "update_frequency": "AI-enabled ingestion 4x faster than competitors",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact for documentation",
+      "api_summary": "Measurabl provides 70+ ESG data points per asset covering 18 billion sq ft across 93 countries. Features AI-enabled data ingestion (4x faster) and pre-built reporting for GRESB, SFDR, CDP.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for access",
+      "api_reference": "API documentation not public",
+      "examples": "Provided with subscription",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "weatheralpha",
+    "name": "WeatherAlpha API",
+    "provider": "WeatherAlpha",
+    "description": "Marketing-focused weather data platform providing weather-based marketing campaign triggers and audience targeting rather than traditional weather API services.",
+    "discovery_status": "documented",
+    "tags": ["weather marketing", "campaign triggers", "audience targeting", "marketing automation", "weather data"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Contact for pricing - marketing service focus",
+      "rate_limits": "Not publicly documented"
+    },
+    "technical_info": {
+      "base_url": "Contact for API details",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/weather-triggers",
+          "full_url": "Contact for endpoint details",
+          "method": "GET",
+          "description": "Weather-based marketing triggers",
+          "documentation_link": "Limited documentation available",
+          "parameters": ["location", "trigger_type", "threshold"],
+          "response_format": "JSON with marketing trigger data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Weather triggers", "Marketing conditions", "Audience targeting", "Campaign automation"],
+      "geographic_scope": "Focus on marketing-relevant locations",
+      "update_frequency": "Real-time weather monitoring",
+      "historical_data": false
+    },
+    "research_notes": {
+      "documentation_url": "Limited public documentation",
+      "api_summary": "WeatherAlpha focuses on weather-based marketing rather than traditional weather API. Integrates with The Trade Desk and LiveRamp for weather-triggered campaigns.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for marketing integration",
+      "api_reference": "Limited documentation available",
+      "examples": "Marketing use cases provided",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "climateai",
+    "name": "ClimateAI API",
+    "provider": "ClimateAI",
+    "description": "Climate risk analytics platform providing 1-14 day forecasts at 1km resolution through ClimateLens platform with ML models for business decision-making and risk assessment.",
+    "discovery_status": "documented",
+    "tags": ["climate analytics", "risk assessment", "weather forecasting", "ML models", "business intelligence"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise subscription",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.climate.ai",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/forecast",
+          "full_url": "https://api.climate.ai/forecast",
+          "method": "GET",
+          "description": "1-14 day climate forecasts at 1km resolution",
+          "documentation_link": "https://learn-more.climate.ai/api",
+          "parameters": ["location", "forecast_days", "resolution", "variables"],
+          "response_format": "JSON with high-resolution climate forecast data"
+        },
+        {
+          "path": "/risk-assessment",
+          "full_url": "https://api.climate.ai/risk-assessment",
+          "method": "GET",
+          "description": "Climate risk analytics for business decisions",
+          "documentation_link": "https://learn-more.climate.ai/api",
+          "parameters": ["location", "risk_type", "time_horizon"],
+          "response_format": "JSON with risk assessment metrics"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Climate forecasts", "Risk analytics", "Weather predictions", "Business intelligence"],
+      "geographic_scope": "Global coverage at 1km resolution",
+      "update_frequency": "Daily forecast updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://learn-more.climate.ai/api",
+      "api_summary": "ClimateAI provides 1-14 day forecasts at 1km resolution through ClimateLens platform with ML models focused on business decision-making and risk assessment.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://learn-more.climate.ai/api",
+      "api_reference": "https://learn-more.climate.ai/api",
+      "examples": "Provided with access",
+      "changelog": null,
+      "status_page": null
+    }
+  }
+]

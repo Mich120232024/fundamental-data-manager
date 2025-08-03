@@ -1,0 +1,288 @@
+[
+  {
+    "id": "google-trends-api",
+    "name": "Google Trends API",
+    "provider": "Google (Official Alpha) / Third-party providers",
+    "description": "Search trend data and market research insights. Official API in Alpha requires application, but multiple third-party alternatives available including SerpApi and HasData for immediate access.",
+    "discovery_status": "documented",
+    "tags": ["search trends", "market research", "consumer behavior", "SEO analysis", "third-party access"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Official API: Alpha access. Third-party: SerpApi $75-275/month, HasData $49-249/month",
+      "rate_limits": "Varies by provider - third-party options have clear rate limits"
+    },
+    "technical_info": {
+      "base_url": "https://serpapi.com/google-trends-api (recommended third-party)",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/search",
+          "full_url": "https://serpapi.com/search.json?engine=google_trends",
+          "method": "GET",
+          "description": "Search trends data with geographic and temporal filtering",
+          "documentation_link": "https://serpapi.com/google-trends-api",
+          "parameters": ["q", "geo", "date", "cat", "gprop"],
+          "response_format": "JSON with trend data and related queries"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Search trends", "Geographic trends", "Related queries", "Interest over time"],
+      "geographic_scope": "Global with country-specific data",
+      "update_frequency": "Daily updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://serpapi.com/google-trends-api",
+      "api_summary": "Google Trends official API in Alpha with application required. Best immediate access through SerpApi ($75-275/month) or HasData ($49-249/month) with comprehensive documentation and free tiers available.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://serpapi.com/google-trends-api",
+      "api_reference": "https://serpapi.com/google-trends-api",
+      "examples": "Multiple examples provided by third-party providers",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "advan-research",
+    "name": "Advan Research API",
+    "provider": "Advan Research",
+    "description": "Location intelligence platform providing 300 billion monthly location data points and 500 million transactions covering 7,000+ companies across 300 sectors with enterprise-only access.",
+    "discovery_status": "documented",
+    "tags": ["location intelligence", "foot traffic", "transaction data", "enterprise analytics", "real estate"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom enterprise pricing - contact required",
+      "rate_limits": "Custom per client agreement"
+    },
+    "technical_info": {
+      "base_url": "Enterprise endpoints provided upon subscription",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/foottraffic",
+          "full_url": "Enterprise endpoint/foottraffic",
+          "method": "GET",
+          "description": "Foot traffic analytics and location intelligence",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": ["location", "date_range", "metrics", "aggregation"],
+          "response_format": "JSON with foot traffic metrics and trends"
+        },
+        {
+          "path": "/transactions",
+          "full_url": "Enterprise endpoint/transactions",
+          "method": "GET",
+          "description": "Transaction data and consumer spending patterns",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": ["merchant", "sector", "geography", "time_period"],
+          "response_format": "JSON with transaction volumes and spending analytics"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Location data", "Foot traffic", "Transaction data", "Consumer behavior", "Real estate analytics"],
+      "geographic_scope": "300 billion monthly location data points, 7,000+ companies across 300 sectors",
+      "update_frequency": "Real-time updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact for enterprise documentation",
+      "api_summary": "Advan Research provides 300 billion monthly location data points and 500 million transactions with enterprise-only access covering 7,000+ companies across 300 sectors for location intelligence and foot traffic analytics.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact enterprise sales",
+      "api_reference": "Enterprise documentation provided",
+      "examples": "Enterprise examples provided",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "yipitdata",
+    "name": "YipitData API",
+    "provider": "YipitData",
+    "description": "Alternative financial data platform covering 2,000+ companies with 40+ datasets and 2M e-receipt panelists, focusing on investment research and earnings prediction with enterprise access.",
+    "discovery_status": "documented",
+    "tags": ["alternative data", "e-receipts", "earnings prediction", "investment research", "enterprise"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom enterprise pricing - contact required",
+      "rate_limits": "Custom per client agreement"
+    },
+    "technical_info": {
+      "base_url": "Enterprise endpoints provided upon subscription",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/datasets",
+          "full_url": "Enterprise endpoint/datasets",
+          "method": "GET",
+          "description": "Access to 40+ alternative datasets covering various sectors",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": ["dataset_id", "company", "date_range", "metrics"],
+          "response_format": "JSON with dataset-specific metrics and trends"
+        },
+        {
+          "path": "/receipts",
+          "full_url": "Enterprise endpoint/receipts",
+          "method": "GET",
+          "description": "E-receipt data from 2M panelists for consumer spending analysis",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": ["retailer", "category", "geography", "time_period"],
+          "response_format": "JSON with receipt data and spending patterns"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["E-receipt data", "Card transaction data", "Alternative earnings data", "Consumer spending"],
+      "geographic_scope": "2,000+ companies with 40+ datasets, 2M e-receipt panelists",
+      "update_frequency": "Daily updates with real-time components",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact for enterprise documentation",
+      "api_summary": "YipitData provides alternative financial data covering 2,000+ companies with 40+ datasets and 2M e-receipt panelists, focusing on investment research and earnings prediction with custom enterprise pricing.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact enterprise sales",
+      "api_reference": "Enterprise documentation provided",
+      "examples": "Enterprise examples provided",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "exante-data",
+    "name": "Exante Data API",
+    "provider": "Exante Data",
+    "description": "Global macroeconomic and sovereign risk data platform providing comprehensive economic indicators, risk assessments, and market intelligence with subscription-based access and GitHub code examples.",
+    "discovery_status": "documented",
+    "tags": ["macroeconomic data", "sovereign risk", "economic indicators", "market intelligence", "subscription"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Subscription-based - contact for pricing",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.exantedata.com",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/economic-indicators",
+          "full_url": "https://api.exantedata.com/economic-indicators",
+          "method": "GET",
+          "description": "Global macroeconomic indicators and time series data",
+          "documentation_link": "https://apidocs.exantedata.com/",
+          "parameters": ["country", "indicator", "date_range", "frequency"],
+          "response_format": "JSON with economic indicator values and metadata"
+        },
+        {
+          "path": "/sovereign-risk",
+          "full_url": "https://api.exantedata.com/sovereign-risk",
+          "method": "GET",
+          "description": "Sovereign risk assessments and country risk ratings",
+          "documentation_link": "https://apidocs.exantedata.com/",
+          "parameters": ["country", "risk_type", "date_range"],
+          "response_format": "JSON with risk ratings and assessment details"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Economic indicators", "Sovereign risk", "Country ratings", "Market intelligence"],
+      "geographic_scope": "Global macroeconomic coverage",
+      "update_frequency": "Daily updates for most indicators",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://apidocs.exantedata.com/",
+      "api_summary": "Exante Data provides global macroeconomic and sovereign risk data with comprehensive API documentation available and GitHub repository with code examples for subscription-based access.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://apidocs.exantedata.com/",
+      "api_reference": "https://apidocs.exantedata.com/",
+      "examples": "GitHub repository available",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "corelogic",
+    "name": "CoreLogic API (now Cotality)",
+    "provider": "CoreLogic (Cotality)",
+    "description": "Comprehensive real estate data platform with 5.5 billion US property records spanning 50 years, providing 99.9% market coverage with analytics and property intelligence APIs.",
+    "discovery_status": "documented",
+    "tags": ["real estate data", "property records", "market analytics", "property intelligence", "comprehensive coverage"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "~$12,000/year median pricing, varies by features",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.corelogic.com",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/property/search",
+          "full_url": "https://api.corelogic.com/property/search",
+          "method": "GET",
+          "description": "Search property records and get detailed property information",
+          "documentation_link": "Contact for documentation",
+          "parameters": ["address", "apn", "property_type", "date_range"],
+          "response_format": "JSON with comprehensive property details"
+        },
+        {
+          "path": "/market/analytics",
+          "full_url": "https://api.corelogic.com/market/analytics",
+          "method": "GET",
+          "description": "Market analytics and trend data for geographic regions",
+          "documentation_link": "Contact for documentation",
+          "parameters": ["region", "market_type", "metrics", "time_period"],
+          "response_format": "JSON with market analytics and trends"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Property records", "Market analytics", "Property valuations", "Real estate trends"],
+      "geographic_scope": "5.5 billion US property records, 99.9% market coverage, 50 years of data",
+      "update_frequency": "Regular updates with historical depth",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact for documentation",
+      "api_summary": "CoreLogic (now Cotality) provides comprehensive real estate data with 5.5 billion US property records spanning 50 years and 99.9% market coverage, with median pricing around $12,000/year varying by features.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for access",
+      "api_reference": "Contact for documentation",
+      "examples": "Contact for examples",
+      "changelog": null,
+      "status_page": null
+    }
+  }
+]

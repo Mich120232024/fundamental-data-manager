@@ -1,0 +1,79 @@
+
+Research these 25 APIs comprehensively using web search and official documentation:
+
+- SparkToro API (SparkToro) - SparkToro API service
+- OpenAI API (OpenAI) - OpenAI API service
+- Anthropic Claude API (Anthropic) - Anthropic Claude API service
+- Stability AI API (Stability) - Stability AI API service
+- Midjourney API (Midjourney) - Midjourney API service
+- HuggingFace Inference API (HuggingFace) - HuggingFace Inference API service
+- Cohere API (Cohere) - Cohere API service
+- Replicate API (Replicate) - Replicate API service
+- Runway ML API (Runway) - Runway ML API service
+- Perplexity API (Perplexity) - Perplexity API service
+- Gemini API (Google) (Gemini) - Gemini API (Google) service
+- Llama API (Meta) (Llama) - Llama API (Meta) service
+- AI21 Studio API (AI21) - AI21 Studio API service
+- Langchain API (Langchain) - Langchain API service
+- DALL-E API (DALL-E) - DALL-E API service
+- Eleven Labs API (Eleven) - Eleven Labs API service
+- AssemblyAI API (AssemblyAI) - AssemblyAI API service
+- Descript API (Descript) - Descript API service
+- Synthesia API (Synthesia) - Synthesia API service
+- D-ID API (D-ID) - D-ID API service
+- Deepgram API (Deepgram) - Deepgram API service
+- Whisper API (Whisper) - Whisper API service
+- Vercel AI SDK API (Vercel) - Vercel AI SDK API service
+- Clarifai API (Clarifai) - Clarifai API service
+- Roboflow API (Roboflow) - Roboflow API service
+
+For EACH API, provide this JSON structure using REAL DATA from official sources:
+{
+  "id": "original_api_id",
+  "name": "Official API Name from documentation",
+  "provider": "Actual Organization/Company Name", 
+  "description": "2-3 sentence summary based on official documentation",
+  "discovery_status": "documented",
+  "tags": ["actual", "relevant", "tags"],
+  "access_info": {
+    "is_free": true/false/null,
+    "requires_api_key": true/false/null,
+    "requires_approval": false,
+    "pricing_model": "actual pricing model from docs",
+    "rate_limits": "specific limits from documentation or 'unknown'"
+  },
+  "technical_info": {
+    "base_url": "actual base URL from documentation",
+    "protocol": "REST/GraphQL/SOAP based on documentation",
+    "data_formats": ["formats supported by API"],
+    "auth_method": "actual authentication method",
+    "endpoints": [
+      "List real endpoint paths with descriptions from official docs"
+    ]
+  },
+  "content_summary": {
+    "data_categories": ["Actual data categories from documentation"],
+    "geographic_scope": "based on API documentation",
+    "update_frequency": "from official documentation",
+    "historical_data": true/false/null
+  },
+  "research_notes": {
+    "documentation_url": "actual URL to official API documentation",
+    "sample_endpoints": ["real endpoints from documentation"],
+    "data_quality": "assessment based on documentation quality",
+    "last_researched": "2025-07-28T19:41:42.180114Z",
+    "researcher_notes": "insights from researching official sources",
+    "api_summary": "comprehensive paragraph based on official documentation about capabilities, data, users, and value"
+  }
+}
+
+RESEARCH REQUIREMENTS:
+1. Find OFFICIAL documentation for each API - use web search
+2. Extract REAL endpoint paths from documentation
+3. Get ACTUAL pricing and authentication info
+4. Identify REAL data categories provided
+5. Write comprehensive summary based on official sources
+
+OUTPUT: Return a JSON array with all researched APIs using REAL data only.
+
+BATCH ID: 16

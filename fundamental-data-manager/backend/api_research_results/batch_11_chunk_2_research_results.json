@@ -1,0 +1,259 @@
+[
+  {
+    "id": "mkt-mediastats",
+    "name": "MKT MediaStats API",
+    "provider": "MKT MediaStats",
+    "description": "AI-driven narrative analysis of media and behavioral data for investment insights, providing global market coverage including stocks, FX, fixed income, and crypto with enterprise-only access.",
+    "discovery_status": "documented",
+    "tags": ["narrative analysis", "media data", "behavioral analytics", "investment insights", "enterprise"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise/institutional only - contact for pricing",
+      "rate_limits": "Contact vendor for details"
+    },
+    "technical_info": {
+      "base_url": "Contact vendor for endpoint details",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/narrative/analysis",
+          "full_url": "Enterprise endpoint/narrative/analysis",
+          "method": "GET",
+          "description": "AI-driven narrative analysis of media and behavioral data",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": ["asset_class", "region", "timeframe", "narrative_themes"],
+          "response_format": "JSON with narrative insights and behavioral indicators"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Narrative economics", "Alpha indicators", "Risk assessment", "Thematic baskets"],
+      "geographic_scope": "Global markets including stocks, FX, fixed income, crypto",
+      "update_frequency": "Real-time media analysis",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact vendor for documentation",
+      "api_summary": "MKT MediaStats provides AI-driven narrative analysis for institutional clients with no public API documentation found. Requires direct vendor contact for access and integration details.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact vendor directly",
+      "api_reference": "Enterprise documentation provided",
+      "examples": "Contact for examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "brain-company",
+    "name": "FinBrain Technologies API",
+    "provider": "Brain Company (FinBrain)",
+    "description": "AI-powered stock predictions and sentiment analysis platform providing technical indicators, earnings analysis, and risk signals for 10,000+ global stocks with Python SDK available.",
+    "discovery_status": "documented",
+    "tags": ["AI predictions", "stock analysis", "sentiment analysis", "technical indicators", "risk signals"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Subscription-based with documented pricing tiers",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.finbrain.tech/v1",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/predictions",
+          "full_url": "https://api.finbrain.tech/v1/predictions",
+          "method": "GET",
+          "description": "AI-powered stock price predictions with confidence scores",
+          "documentation_link": "https://finbrain.tech/api-documentation",
+          "parameters": ["ticker", "timeframe", "prediction_type"],
+          "response_format": "JSON with prediction values and confidence metrics"
+        },
+        {
+          "path": "/sentiment",
+          "full_url": "https://api.finbrain.tech/v1/sentiment",
+          "method": "GET",
+          "description": "Sentiment analysis and social media indicators",
+          "documentation_link": "https://finbrain.tech/api-documentation",
+          "parameters": ["ticker", "source", "date_range"],
+          "response_format": "JSON with sentiment scores and social indicators"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Stock predictions", "Sentiment analysis", "Technical indicators", "Earnings analysis", "Risk signals"],
+      "geographic_scope": "10,000+ global stocks",
+      "update_frequency": "Multiple timeframes with extensive historical data",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://finbrain.tech/api-documentation",
+      "api_summary": "FinBrain provides AI-powered stock predictions with comprehensive documentation, Python SDK availability, and clear pricing structure covering 10,000+ global stocks with multiple prediction timeframes.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://finbrain.tech/api-documentation",
+      "api_reference": "https://finbrain.tech/api-documentation",
+      "examples": "Python SDK with examples available",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "prattle",
+    "name": "Prattle Analytics API (Discontinued)",
+    "provider": "Prattle Analytics (Acquired by Liquidnet 2019)",
+    "description": "Former central bank communication sentiment analysis platform. Service discontinued as independent offering after acquisition by Liquidnet in 2019. Access only through Liquidnet platform for institutional clients.",
+    "discovery_status": "documented",
+    "tags": ["central bank analysis", "discontinued", "acquired", "institutional access only"],
+    "access_info": {
+      "is_free": null,
+      "requires_api_key": null,
+      "requires_approval": null,
+      "pricing_model": "Service discontinued - access only through Liquidnet platform",
+      "rate_limits": "Not applicable"
+    },
+    "technical_info": {
+      "base_url": "Service discontinued",
+      "protocol": "Not applicable",
+      "data_formats": ["Not applicable"],
+      "auth_method": "Not applicable",
+      "endpoints": []
+    },
+    "content_summary": {
+      "data_categories": ["Service discontinued"],
+      "geographic_scope": "Formerly covered 15 central banks, 3,000+ US companies",
+      "update_frequency": "Not applicable",
+      "historical_data": null
+    },
+    "research_notes": {
+      "documentation_url": "Not available",
+      "api_summary": "Prattle Analytics was acquired by Liquidnet in 2019 and is no longer available as independent API service. Former services included central bank communication sentiment analysis covering 15 central banks and 3,000+ US companies.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Service discontinued",
+      "api_reference": "Not available",
+      "examples": "Not available",
+      "changelog": "Not available",
+      "status_page": "Not available"
+    }
+  },
+  {
+    "id": "geoquant",
+    "name": "Geoquant API (Identity Unclear)",
+    "provider": "Multiple geospatial providers",
+    "description": "No specific company named 'Geoquant' clearly identified. Multiple geospatial API providers offer similar services including climate risk data, geocoding, and spatial analysis. Requires clarification of specific company and requirements.",
+    "discovery_status": "documented",
+    "tags": ["geospatial analysis", "climate risk", "geocoding", "unclear identity", "multiple providers"],
+    "access_info": {
+      "is_free": null,
+      "requires_api_key": null,
+      "requires_approval": null,
+      "pricing_model": "Varies by specific geospatial provider",
+      "rate_limits": "Varies by provider"
+    },
+    "technical_info": {
+      "base_url": "Varies by provider",
+      "protocol": "REST (typical for geospatial APIs)",
+      "data_formats": ["JSON", "GeoJSON"],
+      "auth_method": "API key (typical)",
+      "endpoints": []
+    },
+    "content_summary": {
+      "data_categories": ["Climate risk data", "Geocoding", "Spatial analysis"],
+      "geographic_scope": "Varies by provider",
+      "update_frequency": "Varies by provider",
+      "historical_data": null
+    },
+    "research_notes": {
+      "documentation_url": "Requires specific company identification",
+      "api_summary": "No specific company named 'Geoquant' clearly identified. Multiple geospatial API providers exist with similar services. Need clarification of specific company and requirements for accurate API documentation.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Requires specific provider identification",
+      "api_reference": "Varies by provider",
+      "examples": "Varies by provider",
+      "changelog": "Varies by provider",
+      "status_page": "Varies by provider"
+    }
+  },
+  {
+    "id": "predictit-api",
+    "name": "PredictIt API",
+    "provider": "PredictIt",
+    "description": "Political prediction markets API providing real-time data on election betting, current events, and political forecasting with free access and no authentication required.",
+    "discovery_status": "documented",
+    "tags": ["prediction markets", "political betting", "election data", "current events", "free access"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "Completely free with no authentication required",
+      "rate_limits": "No published rate limits"
+    },
+    "technical_info": {
+      "base_url": "https://www.predictit.org/api/marketdata",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "None required",
+      "endpoints": [
+        {
+          "path": "/all",
+          "full_url": "https://www.predictit.org/api/marketdata/all",
+          "method": "GET",
+          "description": "All available prediction markets with current prices",
+          "documentation_link": "https://www.predictit.org/api/marketdata",
+          "parameters": [],
+          "response_format": "JSON with all markets and contract prices"
+        },
+        {
+          "path": "/markets/{id}",
+          "full_url": "https://www.predictit.org/api/marketdata/markets/{id}",
+          "method": "GET",
+          "description": "Specific market data by market ID",
+          "documentation_link": "https://www.predictit.org/api/marketdata",
+          "parameters": ["id"],
+          "response_format": "JSON with specific market details and contracts"
+        },
+        {
+          "path": "/ticker/{ticker}",
+          "full_url": "https://www.predictit.org/api/marketdata/ticker/{ticker}",
+          "method": "GET",
+          "description": "Market data by ticker symbol",
+          "documentation_link": "https://www.predictit.org/api/marketdata",
+          "parameters": ["ticker"],
+          "response_format": "JSON with ticker-specific market data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Political prediction markets", "Election betting", "Current events", "Market prices"],
+      "geographic_scope": "Primarily US political events with some international coverage",
+      "update_frequency": "Real-time market data",
+      "historical_data": false
+    },
+    "research_notes": {
+      "documentation_url": "https://www.predictit.org/api/marketdata",
+      "api_summary": "PredictIt offers completely free API access to political prediction markets with no authentication required. Well-documented with multiple client libraries available and immediate integration capability.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://www.predictit.org/api/marketdata",
+      "api_reference": "https://www.predictit.org/api/marketdata",
+      "examples": "Multiple client libraries available",
+      "changelog": null,
+      "status_page": null
+    }
+  }
+]

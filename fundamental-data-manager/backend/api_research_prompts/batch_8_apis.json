@@ -1,0 +1,127 @@
+[
+  {
+    "id": "scholarcy-api",
+    "name": "Scholarcy API",
+    "provider": "Scholarcy"
+  },
+  {
+    "id": "readcube-api",
+    "name": "Readcube API",
+    "provider": "Readcube"
+  },
+  {
+    "id": "mendeley-api",
+    "name": "Mendeley API",
+    "provider": "Mendeley"
+  },
+  {
+    "id": "zotero-api",
+    "name": "Zotero API",
+    "provider": "Zotero"
+  },
+  {
+    "id": "endnote-api",
+    "name": "EndNote API",
+    "provider": "EndNote"
+  },
+  {
+    "id": "overleaf-api",
+    "name": "Overleaf API",
+    "provider": "Overleaf"
+  },
+  {
+    "id": "journalauthor-name-estimator-api",
+    "name": "Journal/Author Name Estimator API",
+    "provider": "Journal/Author"
+  },
+  {
+    "id": "eigenfactor-api",
+    "name": "Eigenfactor API",
+    "provider": "Eigenfactor"
+  },
+  {
+    "id": "qeios-api",
+    "name": "QEIOS API",
+    "provider": "QEIOS"
+  },
+  {
+    "id": "openml-api",
+    "name": "OpenML API",
+    "provider": "OpenML"
+  },
+  {
+    "id": "tensorflow-hub-api",
+    "name": "TensorFlow Hub API",
+    "provider": "TensorFlow"
+  },
+  {
+    "id": "papers-with-code-api",
+    "name": "Papers with Code API",
+    "provider": "Papers"
+  },
+  {
+    "id": "jupyter-notebook-viewer-api",
+    "name": "Jupyter Notebook Viewer API",
+    "provider": "Jupyter"
+  },
+  {
+    "id": "scholarly-references-api",
+    "name": "Scholarly References API",
+    "provider": "Scholarly"
+  },
+  {
+    "id": "chorus-api",
+    "name": "CHORUS API",
+    "provider": "CHORUS"
+  },
+  {
+    "id": "coar-notify-api",
+    "name": "COAR Notify API",
+    "provider": "COAR"
+  },
+  {
+    "id": "orbital-insight",
+    "name": "Orbital Insight",
+    "provider": "Orbital"
+  },
+  {
+    "id": "planet-labs",
+    "name": "Planet Labs",
+    "provider": "Planet"
+  },
+  {
+    "id": "descartes-labs",
+    "name": "Descartes Labs",
+    "provider": "Descartes"
+  },
+  {
+    "id": "ursa-space",
+    "name": "Ursa Space",
+    "provider": "Ursa"
+  },
+  {
+    "id": "spaceknow",
+    "name": "Spaceknow",
+    "provider": "Spaceknow"
+  },
+  {
+    "id": "rs-metrics",
+    "name": "RS Metrics",
+    "provider": "RS"
+  },
+  {
+    "id": "kayrros",
+    "name": "Kayrros",
+    "provider": "Kayrros"
+  },
+  {
+    "id": "safegraph",
+    "name": "SafeGraph",
+    "provider": "SafeGraph"
+  },
+  {
+    "id": "placerai",
+    "name": "Placer.ai",
+    "provider": "Placer.ai"
+  }
+]

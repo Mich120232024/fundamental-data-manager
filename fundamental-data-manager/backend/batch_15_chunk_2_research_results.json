@@ -1,0 +1,411 @@
+{
+  "research_metadata": {
+    "research_date": "2025-08-02",
+    "researcher": "SOFTWARE_AGENT_001",
+    "chunk_info": "Batch 15, Chunk 2",
+    "api_count": 5,
+    "schema_version": "enhanced_api_research_schema_v2"
+  },
+  "apis": [
+    {
+      "api_name": "DTCC (Depository Trust & Clearing Corporation) Data API",
+      "api_id": "dtcc_data_api",
+      "description": "DTCC provides various data services including corporate actions, reference data, and trade processing APIs for the financial industry. Key services include CA 20022 Service, ETF Portfolio Data, Legal Notice System Data, and Security Master File Data.",
+      "status": "active",
+      "technical_info": {
+        "base_url": "https://www.dtcc.com/data-services",
+        "protocol": "REST/API",
+        "data_formats": ["JSON", "XML", "CSV", "MRO"],
+        "auth_method": "API key/Token-based authentication",
+        "endpoints": [
+          {
+            "path": "/corporate-actions-and-reference-data",
+            "full_url": "https://www.dtcc.com/data-services/corporate-actions-and-reference-data",
+            "method": "GET",
+            "description": "Corporate actions announcement and reference data solutions",
+            "documentation_link": "https://www.dtcc.com/data-services/corporate-actions-and-reference-data",
+            "parameters": ["security_id", "date_range", "action_type"],
+            "response_format": "JSON with corporate action details"
+          },
+          {
+            "path": "/ca-20022-service",
+            "full_url": "https://www.dtcc.com/data-services/corporate-actions-and-reference-data/dtcc-ca-20022-service",
+            "method": "GET",
+            "description": "Near-real-time messaging on corporate action announcements for 1.3 million active security issues using ISO 20022",
+            "documentation_link": "https://www.dtcc.com/data-services/corporate-actions-and-reference-data/dtcc-ca-20022-service",
+            "parameters": ["corporate_action_id", "iso_message_type"],
+            "response_format": "ISO 20022 compliant JSON/XML"
+          },
+          {
+            "path": "/etf-portfolio-data",
+            "full_url": "https://www.dtcc.com/data-services/corporate-actions-and-reference-data/etf-portfolio-data",
+            "method": "GET",
+            "description": "Consolidated feed of U.S.-listed ETF portfolio data",
+            "documentation_link": "https://www.dtcc.com/data-services/corporate-actions-and-reference-data/etf-portfolio-data",
+            "parameters": ["etf_symbol", "date", "portfolio_composition"],
+            "response_format": "JSON with ETF holdings and composition data"
+          },
+          {
+            "path": "/security-master-file-data",
+            "full_url": "https://www.dtcc.com/data-services/corporate-actions-and-reference-data/security-master-file-data",
+            "method": "GET",
+            "description": "Comprehensive, centralized source of DTCC eligible securities information",
+            "documentation_link": "https://www.dtcc.com/data-services/corporate-actions-and-reference-data/security-master-file-data",
+            "parameters": ["cusip", "ticker", "security_type"],
+            "response_format": "JSON with security master data"
+          }
+        ],
+        "documentation_sections": {
+          "getting_started": "https://dtcclearning.com/",
+          "authentication": "https://dtcclearning.com/login",
+          "endpoints_reference": "https://www.dtcc.com/data-services",
+          "code_examples": "https://dtcclearning.com/products-and-services/",
+          "sdks_libraries": "Not specified"
+        }
+      },
+      "pricing": {
+        "model": "Subscription-based",
+        "tiers": "Contact for pricing",
+        "free_tier": false,
+        "contact_required": true,
+        "details": "DTCC services typically require institutional agreements and custom pricing based on data usage and client requirements"
+      },
+      "data_coverage": {
+        "markets": ["US Equities", "Fixed Income", "ETFs", "Corporate Actions"],
+        "asset_classes": ["Equities", "Bonds", "ETFs", "Derivatives"],
+        "geographical_scope": "Primarily US markets with some international coverage",
+        "data_types": ["Reference Data", "Corporate Actions", "Trade Processing", "Legal Notices"],
+        "update_frequency": "Real-time to daily depending on service"
+      },
+      "unique_features": [
+        "ISO 20022 compliant messaging for corporate actions",
+        "Access to 1.3 million active security issues",
+        "Integration with major clearing and settlement systems",
+        "Legal Notice System (LENS) for regulatory notices",
+        "ETF portfolio transparency data",
+        "Security Master File as authoritative source"
+      ],
+      "limitations": [
+        "Primarily focused on US markets",
+        "Requires institutional access agreements",
+        "Limited public documentation available",
+        "Custom integration required for most services"
+      ]
+    },
+    {
+      "api_name": "Refinitiv (formerly Thomson Reuters) Real-Time API",
+      "api_id": "refinitiv_realtime_api",
+      "description": "Refinitiv Real-Time Optimized (RTO) provides access to real-time market data delivered via cloud infrastructure using WebSocket API protocol. Part of the Refinitiv Data Platform ecosystem offering comprehensive financial data access.",
+      "status": "active",
+      "technical_info": {
+        "base_url": "https://api.refinitiv.com",
+        "protocol": "WebSocket/REST",
+        "data_formats": ["JSON", "Binary"],
+        "auth_method": "OAuth 2.0 (V2 Authentication with Client Credentials)",
+        "endpoints": [
+          {
+            "path": "/auth/oauth2/v2/token",
+            "full_url": "https://api.refinitiv.com/auth/oauth2/v2/token",
+            "method": "POST",
+            "description": "OAuth 2.0 authentication endpoint for obtaining access tokens",
+            "documentation_link": "https://developers.lseg.com/en/article-catalog/article/webSocket-api-rto-v2-authentication-migration-guide",
+            "parameters": ["grant_type", "client_id", "client_secret", "scope"],
+            "response_format": "JSON with access_token and metadata"
+          },
+          {
+            "path": "/streaming/pricing/v1/",
+            "full_url": "https://api.refinitiv.com/streaming/pricing/v1/?transport=websocket&dataformat=tr_json2",
+            "method": "GET",
+            "description": "Service discovery endpoint to get WebSocket connection details",
+            "documentation_link": "https://developers.lseg.com/en/api-catalog/real-time-opnsrc/websocket-api",
+            "parameters": ["transport", "dataformat", "region"],
+            "response_format": "JSON with WebSocket endpoint URLs"
+          },
+          {
+            "path": "/WebSocket",
+            "full_url": "wss://emea-1-t1.streaming-pricing-api.refinitiv.com:443/WebSocket",
+            "method": "WebSocket",
+            "description": "Real-time data streaming via WebSocket protocol for EMEA region",
+            "documentation_link": "https://github.com/Refinitiv/websocket-api",
+            "parameters": ["login", "request", "view", "batch"],
+            "response_format": "JSON real-time market data messages"
+          },
+          {
+            "path": "/news/mrn",
+            "full_url": "WebSocket endpoint for Machine Readable News",
+            "method": "WebSocket",
+            "description": "Machine Readable News (MRN) data with news analytics",
+            "documentation_link": "https://developers.lseg.com/en/article-catalog/article/introduction-machine-readable-news-elektron-websocket-api-refinitiv",
+            "parameters": ["news_domain", "analytics_type", "symbols"],
+            "response_format": "JSON with structured news and analytics data"
+          }
+        ],
+        "documentation_sections": {
+          "getting_started": "https://developers.lseg.com/en/api-catalog/real-time-opnsrc/websocket-api",
+          "authentication": "https://developers.lseg.com/en/article-catalog/article/webSocket-api-rto-v2-authentication-migration-guide",
+          "endpoints_reference": "https://github.com/Refinitiv/websocket-api",
+          "code_examples": "https://github.com/Refinitiv/websocket-api/tree/master/Applications/Examples",
+          "sdks_libraries": "https://github.com/Refinitiv/websocket-api"
+        }
+      },
+      "pricing": {
+        "model": "Subscription-based with data licensing",
+        "tiers": "Contact for pricing",
+        "free_tier": false,
+        "contact_required": true,
+        "details": "Pricing varies by data packages, geographic coverage, and user count. Requires licensing agreements for market data access."
+      },
+      "data_coverage": {
+        "markets": ["Global Equities", "FX", "Fixed Income", "Commodities", "Derivatives"],
+        "asset_classes": ["Equities", "Bonds", "FX", "Commodities", "Options", "Futures"],
+        "geographical_scope": "Global coverage with regional endpoints (EMEA, AMER, APAC)",
+        "data_types": ["Real-time quotes", "Historical data", "News", "Analytics", "Reference data"],
+        "update_frequency": "Real-time (ultra-low latency)"
+      },
+      "unique_features": [
+        "Ultra-low latency real-time data streaming",
+        "Machine Readable News (MRN) with analytics",
+        "OAuth 2.0 V2 authentication with no token refresh required",
+        "Global coverage with regional optimization",
+        "WebSocket API with JSON protocol",
+        "Support for multiple programming languages",
+        "Cloud-based delivery (Real-Time Optimized)",
+        "Advanced news analytics integration"
+      ],
+      "limitations": [
+        "Requires market data licensing agreements",
+        "Complex pricing structure",
+        "Authentication complexity for new users",
+        "Regional endpoint management required",
+        "Limited free access options"
+      ]
+    },
+    {
+      "api_name": "Nasdaq TotalView-ITCH API",
+      "api_id": "nasdaq_totalview_itch_api",
+      "description": "Nasdaq TotalView-ITCH provides full-depth market data feed with ultra-low latency and high performance visibility into Nasdaq's equities markets. Delivers complete order book depth information for algorithmic trading and market analysis.",
+      "status": "active",
+      "technical_info": {
+        "base_url": "https://data.nasdaq.com",
+        "protocol": "Binary/ITCH Protocol",
+        "data_formats": ["Binary ITCH", "JSON via third-party providers"],
+        "auth_method": "API key/Subscription-based access",
+        "endpoints": [
+          {
+            "path": "/databases/NTV",
+            "full_url": "https://data.nasdaq.com/databases/NTV",
+            "method": "GET",
+            "description": "Access to Nasdaq TotalView-ITCH historical and real-time data",
+            "documentation_link": "https://data.nasdaq.com/databases/NTV",
+            "parameters": ["symbol", "date_range", "depth_level"],
+            "response_format": "Binary ITCH format or JSON (via providers)"
+          },
+          {
+            "path": "/api/v1/data",
+            "full_url": "https://www.nasdaq.com/solutions/data/nasdaq-data-link/api",
+            "method": "GET",
+            "description": "Nasdaq Data Link API for market data integration",
+            "documentation_link": "https://www.nasdaq.com/solutions/data/nasdaq-data-link/api",
+            "parameters": ["dataset", "api_key", "limit", "column_index"],
+            "response_format": "JSON/CSV/XML market data"
+          }
+        ],
+        "documentation_sections": {
+          "getting_started": "https://nasdaqtrader.com/Trader.aspx?id=Totalview2",
+          "authentication": "https://data.nasdaq.com/docs/authentication",
+          "endpoints_reference": "https://www.nasdaq.com/solutions/data/nasdaq-data-link/api",
+          "code_examples": "https://databento.com/docs/venues-and-datasets/xnas-itch",
+          "sdks_libraries": "Third-party providers like Databento offer SDKs"
+        }
+      },
+      "pricing": {
+        "model": "Tiered subscription with usage-based pricing",
+        "tiers": "Professional, Enterprise, Custom",
+        "free_tier": "Limited free tier available",
+        "contact_required": true,
+        "details": "Professional plans start around $50/month. Enterprise pricing requires consultation. Third-party providers like Databento offer alternative pricing models."
+      },
+      "data_coverage": {
+        "markets": ["Nasdaq", "Nasdaq BX", "PSX"],
+        "asset_classes": ["Equities", "ETFs"],
+        "geographical_scope": "US markets (Nasdaq exchanges)",
+        "data_types": ["Level 2 order book", "Trade data", "Market depth", "Order flow"],
+        "update_frequency": "Real-time (ultra-low latency, >19M updates/second)"
+      },
+      "unique_features": [
+        "Full market depth visibility (Level 2+ data)",
+        "Ultra-high frequency updates (>19 million book updates per second)",
+        "Complete order book reconstruction capability",
+        "Binary ITCH protocol for maximum efficiency",
+        "Millisecond-precision timestamps",
+        "Support for market replay at high speeds",
+        "Comprehensive order flow analysis",
+        "Integration with algorithmic trading systems"
+      ],
+      "limitations": [
+        "Limited to Nasdaq family of exchanges",
+        "Requires significant technical expertise for ITCH protocol",
+        "High bandwidth requirements for real-time feeds",
+        "US equities only (no international markets)",
+        "Binary format may require specialized parsing libraries"
+      ]
+    },
+    {
+      "api_name": "Eurex Exchange API",
+      "api_id": "eurex_exchange_api",
+      "description": "Eurex Exchange provides GraphQL-based Reference Data API for accessing derivative product parameters and market data. Offers both free reference data access and comprehensive trading connectivity solutions.",
+      "status": "active",
+      "technical_info": {
+        "base_url": "https://console.developer.deutsche-boerse.com",
+        "protocol": "GraphQL/REST",
+        "data_formats": ["JSON", "GraphQL"],
+        "auth_method": "API key (shared or dedicated)",
+        "endpoints": [
+          {
+            "path": "/apis/accesstot7-referencedata/1.1.0",
+            "full_url": "https://console.developer.deutsche-boerse.com/apis/accesstot7-referencedata/1.1.0",
+            "method": "GraphQL",
+            "description": "GraphQL-based reference data API for Eurex derivative products",
+            "documentation_link": "https://www.eurex.com/ex-en/data/free-reference-data-api",
+            "parameters": ["product_id", "maturity_date", "instrument_type"],
+            "response_format": "GraphQL JSON response with derivative parameters"
+          },
+          {
+            "path": "/connectivity",
+            "full_url": "https://www.eurex.com/ex-en/support/technology/connectivity",
+            "method": "Various",
+            "description": "Trading connectivity options and technical documentation",
+            "documentation_link": "https://www.eurex.com/ex-en/support/technology/connectivity",
+            "parameters": ["connection_type", "protocol", "certification"],
+            "response_format": "Various based on connection type"
+          }
+        ],
+        "documentation_sections": {
+          "getting_started": "https://www.eurex.com/ex-en/data/free-reference-data-api",
+          "authentication": "https://console.developer.deutsche-boerse.com",
+          "endpoints_reference": "https://www.eurex.com/ex-en/support/technology/",
+          "code_examples": "GraphQL introspection available",
+          "sdks_libraries": "Standard GraphQL client libraries"
+        }
+      },
+      "pricing": {
+        "model": "Freemium with paid trading access",
+        "tiers": "Free reference data, Paid trading connectivity",
+        "free_tier": true,
+        "contact_required": false,
+        "details": "Reference data API is free with rate limits. Trading connectivity and enhanced data services require paid subscriptions with custom pricing."
+      },
+      "data_coverage": {
+        "markets": ["Eurex", "XETRA"],
+        "asset_classes": ["Derivatives", "Equity Index Futures", "Fixed Income Derivatives", "Equity Options"],
+        "geographical_scope": "European markets, primarily EUR-denominated",
+        "data_types": ["Reference data", "Product parameters", "Market data", "Trading data"],
+        "update_frequency": "Daily for reference data, real-time for trading data"
+      },
+      "unique_features": [
+        "GraphQL-based API with flexible queries",
+        "Free access to comprehensive reference data",
+        "Self-documenting API via GraphQL introspection",
+        "Integration with T7 trading architecture",
+        "Supports both machine and human-readable formats",
+        "No overfetching of data (GraphQL advantage)",
+        "Centralized derivative product parameters",
+        "European regulatory compliance built-in"
+      ],
+      "limitations": [
+        "Primarily focused on European derivatives markets",
+        "Free tier has rate limitations",
+        "Limited to reference data without trading subscription",
+        "GraphQL may require learning curve for REST-only developers",
+        "Documentation primarily in English and German"
+      ]
+    },
+    {
+      "api_name": "Tokyo Stock Exchange arrowhead API",
+      "api_id": "tse_arrowhead_api",
+      "description": "Tokyo Stock Exchange's arrowhead trading system provides APIs for market data access, including real-time and delayed price information. Currently on arrowhead4.0 system launched in November 2024 for improved convenience and global competitiveness.",
+      "status": "active",
+      "technical_info": {
+        "base_url": "https://www.jpx.co.jp",
+        "protocol": "REST/WebSocket",
+        "data_formats": ["JSON", "CSV"],
+        "auth_method": "API key with IPLA agreement",
+        "endpoints": [
+          {
+            "path": "/english/markets/paid-info-equities/realtime/06.html",
+            "full_url": "https://www.jpx.co.jp/english/markets/paid-info-equities/realtime/06.html",
+            "method": "GET",
+            "description": "15-minute delayed stock price information API",
+            "documentation_link": "https://www.jpx.co.jp/english/markets/paid-info-equities/realtime/06.html",
+            "parameters": ["security_code", "exchange_code", "market_segment"],
+            "response_format": "JSON with price, volume, and trading information"
+          },
+          {
+            "path": "/api/market-data",
+            "full_url": "Contact api-service@jpx.co.jp for specific endpoints",
+            "method": "GET",
+            "description": "Real-time market data access (requires IPLA agreement)",
+            "documentation_link": "https://www.jpx.co.jp/english/markets/paid-info-equities/realtime/02.html",
+            "parameters": ["symbol", "market", "data_type"],
+            "response_format": "JSON with real-time market data"
+          }
+        ],
+        "documentation_sections": {
+          "getting_started": "https://www.jpx.co.jp/english/markets/paid-info-equities/realtime/index.html",
+          "authentication": "https://www.jpx.co.jp/english/markets/paid-info-equities/realtime/02.html",
+          "endpoints_reference": "Service Guide and Connection Specifications (PDF)",
+          "code_examples": "Swagger API Specification available",
+          "sdks_libraries": "Standard REST client libraries"
+        }
+      },
+      "pricing": {
+        "model": "Subscription-based with monthly fees",
+        "tiers": "Basic, Professional, Enterprise",
+        "free_tier": false,
+        "contact_required": true,
+        "details": "Monthly fees: Basic ¥80,000, API Information ¥0-¥350,000 (based on issues/frequency), Network Terminal ¥50,000-¥100,000"
+      },
+      "data_coverage": {
+        "markets": ["Tokyo Stock Exchange", "Fukuoka Stock Exchange", "Sapporo Stock Exchange"],
+        "asset_classes": ["Equities", "ETFs", "REITs"],
+        "geographical_scope": "Japanese markets",
+        "data_types": ["Last sales information", "Trading volume", "Price data", "Market segments"],
+        "update_frequency": "Real-time or 15-minute delayed (based on subscription)"
+      },
+      "unique_features": [
+        "arrowhead4.0 trading system (launched November 2024)",
+        "Enhanced global competitiveness and resilience",
+        "Integration across TSE, Fukuoka, and Sapporo exchanges",
+        "Swagger API specification for easy integration",
+        "Test server with dummy data for development",
+        "Multi-exchange coverage within Japan",
+        "Support for both real-time and delayed data feeds",
+        "Japanese market expertise and regulatory compliance"
+      ],
+      "limitations": [
+        "Limited to Japanese markets only",
+        "Requires Information Provision and License Agreement (IPLA)",
+        "High monthly fees for comprehensive access",
+        "Documentation primarily in Japanese and English",
+        "Limited international market coverage",
+        "Requires significant setup and certification process"
+      ]
+    }
+  ],
+  "research_summary": {
+    "total_apis_researched": 5,
+    "apis_with_free_access": 1,
+    "apis_requiring_subscription": 5,
+    "primary_protocols": ["REST", "WebSocket", "GraphQL", "Binary ITCH"],
+    "common_auth_methods": ["API key", "OAuth 2.0", "Token-based"],
+    "geographical_coverage": ["US", "Europe", "Japan", "Global"],
+    "key_findings": [
+      "Most APIs require institutional agreements and custom pricing",
+      "Real-time data access typically involves significant licensing costs",
+      "WebSocket protocols dominate for real-time streaming",
+      "Binary protocols (ITCH) offer highest performance for order book data",
+      "GraphQL adoption growing in European exchanges",
+      "Authentication complexity varies significantly between providers"
+    ]
+  }
+}

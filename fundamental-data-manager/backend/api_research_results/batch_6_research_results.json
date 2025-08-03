@@ -1,0 +1,1769 @@
+[
+  {
+    "id": "world_bank_api",
+    "name": "World Bank Indicators API",
+    "provider": "World Bank Group",
+    "description": "Provides programmatic access to nearly 16,000 time series indicators covering over 50 years of development data from World Development Indicators, International Debt Statistics, and other World Bank databases. The API offers comprehensive global development data including economic, social, environmental, and institutional metrics across 200+ countries and territories.",
+    "discovery_status": "documented",
+    "tags": ["development", "economics", "global", "indicators", "world-bank", "open-data"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "Free for public data with open access policy",
+      "rate_limits": "15,000 data points per SDMX call, URL length restrictions of 1,500 characters between slashes"
+    },
+    "technical_info": {
+      "base_url": "https://api.worldbank.org/v2/",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML", "JSONP"],
+      "auth_method": "None - open access",
+      "endpoints": [
+        {
+          "path": "country",
+          "full_url": "https://api.worldbank.org/v2/country",
+          "method": "GET",
+          "description": "Returns information about countries including ISO codes, regional classifications, income levels",
+          "documentation_link": "https://datahelpdesk.worldbank.org/knowledgebase/articles/898581-api-basic-call-structures",
+          "parameters": ["format", "date", "per_page", "page"],
+          "response_format": "JSON/XML with country metadata"
+        },
+        {
+          "path": "indicator/{indicator}",
+          "full_url": "https://api.worldbank.org/v2/indicator/{indicator}",
+          "method": "GET", 
+          "description": "Retrieves metadata about specific indicators including definitions and source information",
+          "documentation_link": "https://datahelpdesk.worldbank.org/knowledgebase/articles/898599-api-indicator-queries",
+          "parameters": ["indicator", "format", "per_page"],
+          "response_format": "JSON/XML with indicator metadata"
+        },
+        {
+          "path": "country/{country}/indicator/{indicator}",
+          "full_url": "https://api.worldbank.org/v2/country/{country}/indicator/{indicator}",
+          "method": "GET",
+          "description": "Returns time series data for specific indicators and countries",
+          "documentation_link": "https://datahelpdesk.worldbank.org/knowledgebase/articles/898599-api-indicator-queries", 
+          "parameters": ["country", "indicator", "date", "format", "frequency"],
+          "response_format": "JSON/XML with time series data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["World Development Indicators", "International Debt Statistics", "Doing Business", "Human Capital Index", "Subnational Poverty", "Gender Statistics", "Education Statistics", "Health Data", "Climate Change", "Governance Indicators"],
+      "geographic_scope": "Global - 200+ countries and territories",
+      "update_frequency": "Annual, quarterly, and monthly depending on indicator",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://datahelpdesk.worldbank.org/knowledgebase/topics/125589-developer-information",
+      "sample_endpoints": [
+        "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?format=json",
+        "https://api.worldbank.org/v2/country/US;BR/indicator/NY.GDP.MKTP.CD?date=2020:2023&format=json"
+      ],
+      "data_quality": "High quality with comprehensive metadata and source documentation",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "API version 2 is current, with version 1 deprecated as of June 2020. Extensive third-party library support in Python, R, and JavaScript.",
+      "api_summary": "The World Bank API represents one of the most comprehensive open data initiatives in international development, providing free access to decades of global development indicators without authentication requirements. It serves researchers, policymakers, and developers worldwide with standardized economic, social, and environmental data across countries, supporting evidence-based analysis and decision-making in development work."
+    },
+    "documentation": {
+      "getting_started": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation",
+      "api_reference": "https://datahelpdesk.worldbank.org/knowledgebase/topics/125589-developer-information",
+      "examples": "https://datahelpdesk.worldbank.org/knowledgebase/articles/898581-api-basic-call-structures",
+      "changelog": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation",
+      "status_page": null
+    }
+  },
+  {
+    "id": "imf_api",
+    "name": "IMF Data Services API",
+    "provider": "International Monetary Fund",
+    "description": "Provides access to IMF's extensive collection of macroeconomic and financial statistics through SDMX-compliant REST APIs. Includes International Financial Statistics, Balance of Payments, Government Finance Statistics, and other key economic datasets used for global economic analysis and policy research.",
+    "discovery_status": "documented", 
+    "tags": ["economics", "finance", "macroeconomic", "imf", "sdmx", "statistics"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "Free access with attribution requirements",
+      "rate_limits": "10 requests per IP per 5 seconds, 50 requests per second globally"
+    },
+    "technical_info": {
+      "base_url": "http://dataservices.imf.org/REST/SDMX_XML.svc/",
+      "protocol": "REST",
+      "data_formats": ["XML", "JSON"],
+      "auth_method": "None - monitored via user agent headers",
+      "endpoints": [
+        {
+          "path": "Dataflow",
+          "full_url": "http://dataservices.imf.org/REST/SDMX_XML.svc/Dataflow",
+          "method": "GET",
+          "description": "Lists available datasets including BOP, IFS, and other statistical databases",
+          "documentation_link": "https://datahelp.imf.org/knowledgebase/articles/667681-using-json-restful-web-service",
+          "parameters": ["format"],
+          "response_format": "XML/JSON list of available datasets"
+        },
+        {
+          "path": "DataStructure/{database}",
+          "full_url": "http://dataservices.imf.org/REST/SDMX_XML.svc/DataStructure/{database}",
+          "method": "GET",
+          "description": "Returns structural metadata for specified database including dimensions and code lists", 
+          "documentation_link": "https://datahelp.imf.org/knowledgebase/articles/667681-using-json-restful-web-service",
+          "parameters": ["database", "format"],
+          "response_format": "XML/JSON with database structure"
+        },
+        {
+          "path": "CompactData/{Database}/{Dimensions}",
+          "full_url": "http://dataservices.imf.org/REST/SDMX_XML.svc/CompactData/{Database}/{Dimensions}",
+          "method": "GET",
+          "description": "Retrieves time series data for specified database and dimension combinations",
+          "documentation_link": "https://datahelp.imf.org/knowledgebase/articles/667681-using-json-restful-web-service",
+          "parameters": ["Database", "Dimensions", "startPeriod", "endPeriod"],
+          "response_format": "XML/JSON with time series data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["International Financial Statistics", "Balance of Payments", "Government Finance Statistics", "Monetary and Financial Statistics", "International Trade Statistics", "Commodity Prices", "International Reserves"],
+      "geographic_scope": "Global - IMF member countries",
+      "update_frequency": "Monthly, quarterly, and annual depending on series",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://datahelp.imf.org/knowledgebase/articles/667681-using-json-restful-web-service",
+      "sample_endpoints": [
+        "http://dataservices.imf.org/REST/SDMX_XML.svc/CompactData/IFS/A.US.PCPI_IX",
+        "http://dataservices.imf.org/REST/SDMX_XML.svc/CompactData/BOP/A.US.BCA_BP6_USD"
+      ],
+      "data_quality": "High quality official statistics with comprehensive methodology documentation",
+      "last_researched": "2025-07-29T00:00:00.000000Z", 
+      "researcher_notes": "SDMX-compliant API requires understanding of dimension codes. Third-party libraries like imfp (Python) and imfr (R) simplify access.",
+      "api_summary": "The IMF Data Services API provides authoritative access to the world's most comprehensive collection of macroeconomic and financial statistics, serving as a critical resource for economic research, policy analysis, and financial market surveillance. Built on SDMX standards, it offers structured access to datasets that form the backbone of global economic monitoring and International Monetary Fund operations."
+    },
+    "documentation": {
+      "getting_started": "https://datahelp.imf.org/knowledgebase/articles/667681-using-json-restful-web-service",
+      "api_reference": "https://dataservices.imf.org/REST/SDMX_XML.svc/help",
+      "examples": "https://datahelp.imf.org/knowledgebase/articles/667681-using-json-restful-web-service",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "oecd_api", 
+    "name": "OECD Statistics API",
+    "provider": "Organisation for Economic Co-operation and Development",
+    "description": "RESTful API providing access to OECD's comprehensive statistical databases covering economic, social, and environmental indicators for OECD countries and partner economies. Based on SDMX-JSON standards, it offers data on education, health, trade, finance, innovation, and sustainable development metrics.",
+    "discovery_status": "documented",
+    "tags": ["oecd", "statistics", "economics", "social", "environmental", "sdmx"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "Free access under OECD open data policy",
+      "rate_limits": "Reasonable use policy - no specific limits documented"
+    },
+    "technical_info": {
+      "base_url": "https://stats.oecd.org/SDMX-JSON/data/",
+      "protocol": "REST", 
+      "data_formats": ["SDMX-JSON", "CSV", "XML"],
+      "auth_method": "None - open access",
+      "endpoints": [
+        {
+          "path": "{dataset}/{filter}",
+          "full_url": "https://stats.oecd.org/SDMX-JSON/data/{dataset}/{filter}",
+          "method": "GET",
+          "description": "Retrieves data from specified dataset with optional filtering by dimensions",
+          "documentation_link": "https://data.oecd.org/api/sdmx-json-documentation/",
+          "parameters": ["dataset", "filter", "startTime", "endTime", "dimensionAtObservation"],
+          "response_format": "SDMX-JSON format with time series data"
+        },
+        {
+          "path": "datastructure/OECD/{dataset}",
+          "full_url": "https://stats.oecd.org/restsdmx/sdmx.ashx/GetDataStructure/{dataset}",
+          "method": "GET",
+          "description": "Returns data structure definition for specified dataset including dimensions and codelists",
+          "documentation_link": "https://data.oecd.org/api/sdmx-json-documentation/",
+          "parameters": ["dataset"],
+          "response_format": "XML with dataset structure metadata"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["National Accounts", "Labour Market Statistics", "Health Statistics", "Education Indicators", "Trade Statistics", "Environmental Data", "Innovation Indicators", "Social Indicators", "Government Finance", "Business Statistics"],
+      "geographic_scope": "OECD countries plus key partner economies",
+      "update_frequency": "Varies by indicator - monthly, quarterly, annual",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://data.oecd.org/api/sdmx-json-documentation/",
+      "sample_endpoints": [
+        "https://stats.oecd.org/SDMX-JSON/data/QNA/AUS+AUT.GDP+B1_GE.CUR+VOBARSA.Q/all",
+        "https://stats.oecd.org/SDMX-JSON/data/KEI/CLI+CSCICP02.AUS+AUT.M/all"
+      ],
+      "data_quality": "High quality official statistics with detailed methodology documentation",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "SDMX-JSON format requires understanding of dataset structures. R package 'OECD' and Python libraries available for simplified access.",
+      "api_summary": "The OECD Statistics API serves as a comprehensive gateway to official statistics from one of the world's premier economic organizations, providing researchers, policymakers, and analysts with standardized data essential for comparative economic analysis across developed economies. The API's SDMX compliance ensures interoperability with statistical software while supporting evidence-based policy research across multiple domains."
+    },
+    "documentation": {
+      "getting_started": "https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html",
+      "api_reference": "https://data.oecd.org/api/sdmx-json-documentation/",
+      "examples": "https://data.oecd.org/api/sdmx-json-documentation/",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "un_data_api",
+    "name": "UNdata API",
+    "provider": "United Nations Statistics Division",
+    "description": "Provides programmatic access to UN statistical databases covering global development indicators, demographic data, economic statistics, and social metrics from across the UN system. Offers unified access to data from multiple UN agencies through standardized REST interfaces.",
+    "discovery_status": "documented",
+    "tags": ["united-nations", "statistics", "global", "development", "demographics", "undata"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Free access with API key registration",
+      "rate_limits": "Standard rate limits apply - not specifically documented"
+    },
+    "technical_info": {
+      "base_url": "http://api.undata-api.org/",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "API key via query parameter (app_id and app_key)",
+      "endpoints": [
+        {
+          "path": "organizations",
+          "full_url": "http://api.undata-api.org/organizations?format=json&app_id={app_id}&app_key={app_key}",
+          "method": "GET",
+          "description": "Lists available UN organizations providing data through the API",
+          "documentation_link": "https://www.undata-api.org/docs/",
+          "parameters": ["format", "app_id", "app_key"],
+          "response_format": "JSON/XML list of organizations"
+        },
+        {
+          "path": "{organization}/databases",
+          "full_url": "http://api.undata-api.org/{organization}/databases?format=json&app_id={app_id}&app_key={app_key}",
+          "method": "GET",
+          "description": "Returns databases available from specified UN organization",
+          "documentation_link": "https://www.undata-api.org/docs/",
+          "parameters": ["organization", "format", "app_id", "app_key"],
+          "response_format": "JSON/XML list of databases"
+        },
+        {
+          "path": "{organization}/datasets",
+          "full_url": "http://api.undata-api.org/{organization}/datasets?format=json&app_id={app_id}&app_key={app_key}",
+          "method": "GET",
+          "description": "Lists datasets available from specified organization",
+          "documentation_link": "https://www.undata-api.org/docs/",
+          "parameters": ["organization", "format", "app_id", "app_key"],
+          "response_format": "JSON/XML list of datasets"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Demographic Statistics", "Economic Indicators", "Social Statistics", "Environmental Data", "Trade Statistics", "Health Data", "Education Statistics", "Energy Statistics", "Population Data"],
+      "geographic_scope": "Global - UN member states and territories", 
+      "update_frequency": "Varies by dataset - annual, quarterly, monthly",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.undata-api.org/docs/",
+      "sample_endpoints": [
+        "http://api.undata-api.org/organizations?format=json",
+        "http://api.undata-api.org/unstats/databases?format=json"
+      ],
+      "data_quality": "Official UN statistics with comprehensive global coverage",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "Requires API key registration. Provides unified access to multiple UN agency databases. Some inconsistency in data availability across agencies.",
+      "api_summary": "The UNdata API serves as a centralized gateway to the United Nations' vast collection of global statistics, enabling researchers and policymakers to access authoritative data on economic, social, and environmental indicators from across the UN system. This unified interface simplifies access to traditionally fragmented UN databases while maintaining the integrity and official status of the underlying statistical data."
+    },
+    "documentation": {
+      "getting_started": "https://data.un.org/Host.aspx?Content=API",
+      "api_reference": "https://www.undata-api.org/docs/",
+      "examples": "https://www.undata-api.org/docs/",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "who_gho_api",
+    "name": "WHO Global Health Observatory API",
+    "provider": "World Health Organization",
+    "description": "Provides access to WHO's comprehensive health statistics and indicators covering disease surveillance, health system performance, risk factors, and health outcomes for all WHO member states. The API offers both current and historical health data essential for global health monitoring and research.",
+    "discovery_status": "documented",
+    "tags": ["health", "who", "global-health", "epidemiology", "health-statistics", "odata"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "Free access under WHO open data policy",
+      "rate_limits": "Reasonable use policy - no specific limits documented"
+    },
+    "technical_info": {
+      "base_url": "https://ghoapi.azureedge.net/api/",
+      "protocol": "REST/OData",
+      "data_formats": ["JSON", "XML", "CSV"],
+      "auth_method": "None - open access",
+      "endpoints": [
+        {
+          "path": "Indicator",
+          "full_url": "https://ghoapi.azureedge.net/api/Indicator",
+          "method": "GET",
+          "description": "Lists all available health indicators with metadata including definitions and data sources",
+          "documentation_link": "https://apps.who.int/gho/data/node.resources.api",
+          "parameters": ["$format", "$filter", "$select"],
+          "response_format": "JSON/XML list of indicators with metadata"
+        },
+        {
+          "path": "Dimension",
+          "full_url": "https://ghoapi.azureedge.net/api/Dimension",
+          "method": "GET",
+          "description": "Returns available dimensions such as countries, years, and demographic breakdowns",
+          "documentation_link": "https://apps.who.int/gho/data/node.resources.api",
+          "parameters": ["$format", "$filter"],
+          "response_format": "JSON/XML list of dimensions"
+        },
+        {
+          "path": "{IndicatorCode}",
+          "full_url": "https://ghoapi.azureedge.net/api/{IndicatorCode}",
+          "method": "GET",
+          "description": "Retrieves data for specific health indicator across countries and time periods",
+          "documentation_link": "https://apps.who.int/gho/data/node.resources.api",
+          "parameters": ["$filter", "$format", "$select"],
+          "response_format": "JSON/XML with indicator data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Mortality and Burden of Disease", "Communicable Diseases", "Non-communicable Diseases", "Health Service Coverage", "Risk Factors", "Health Equity", "Health Workforce", "Health Systems", "Universal Health Coverage", "Sustainable Development Goals"],
+      "geographic_scope": "Global - WHO member states (194 countries)",
+      "update_frequency": "Annual updates for most indicators, some quarterly",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://apps.who.int/gho/data/node.resources.api",
+      "sample_endpoints": [
+        "https://ghoapi.azureedge.net/api/WHOSIS_000001?$filter=SpatialDim eq 'USA'",
+        "https://ghoapi.azureedge.net/api/Indicator?$format=json"
+      ],
+      "data_quality": "High quality official health statistics with WHO validation processes",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "OData-compliant API with extensive filtering capabilities. Legacy Athena API being phased out in favor of current system.",
+      "api_summary": "The WHO Global Health Observatory API provides authoritative access to the world's most comprehensive collection of health statistics, enabling researchers, health professionals, and policymakers to monitor global health trends and assess progress toward health-related sustainable development goals. The API serves as the primary digital gateway to WHO's evidence base for global health governance and public health emergency response."
+    },
+    "documentation": {
+      "getting_started": "https://apps.who.int/gho/data/node.resources.api",
+      "api_reference": "https://www.who.int/data/gho/info/gho-odata-api",
+      "examples": "https://apps.who.int/gho/data/node.resources.examples?lang=en",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "ecb_api",
+    "name": "European Central Bank Statistical Data Warehouse API",
+    "provider": "European Central Bank",
+    "description": "SDMX-compliant REST API providing access to comprehensive monetary, financial, and economic statistics for the European Union and euro area. Includes exchange rates, interest rates, monetary aggregates, banking statistics, and other key indicators for European monetary policy analysis.",
+    "discovery_status": "documented",
+    "tags": ["ecb", "european", "monetary", "financial", "statistics", "sdmx", "eurozone"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "Free access under ECB open data policy",
+      "rate_limits": "No explicit limits documented - reasonable use expected"
+    },
+    "technical_info": {
+      "base_url": "https://data.ecb.europa.eu/api/v1/",
+      "protocol": "REST",
+      "data_formats": ["SDMX-ML", "JSON", "CSV"],
+      "auth_method": "None - open access",
+      "endpoints": [
+        {
+          "path": "dataflow",
+          "full_url": "https://data.ecb.europa.eu/api/v1/dataflow",
+          "method": "GET",
+          "description": "Lists all available datasets with metadata including descriptions and update frequencies",
+          "documentation_link": "https://data.ecb.europa.eu/help/api/overview",
+          "parameters": ["format", "detail"],
+          "response_format": "SDMX-ML/JSON list of datasets"
+        },
+        {
+          "path": "datastructure/{flow_ref}",
+          "full_url": "https://data.ecb.europa.eu/api/v1/datastructure/{flow_ref}",
+          "method": "GET",
+          "description": "Returns data structure definition for specified dataset including dimensions and code lists",
+          "documentation_link": "https://data.ecb.europa.eu/help/api/overview",
+          "parameters": ["flow_ref", "format", "references"],
+          "response_format": "SDMX-ML/JSON with structure metadata"
+        },
+        {
+          "path": "data/{flow_ref}/{key}",
+          "full_url": "https://data.ecb.europa.eu/api/v1/data/{flow_ref}/{key}",
+          "method": "GET",
+          "description": "Retrieves time series data for specified dataset and key combination",
+          "documentation_link": "https://data.ecb.europa.eu/help/api/overview",
+          "parameters": ["flow_ref", "key", "startPeriod", "endPeriod", "format"],
+          "response_format": "SDMX-ML/JSON/CSV with time series data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Exchange Rates", "Interest Rates", "Monetary Aggregates", "Banking Statistics", "Securities Issues", "Balance of Payments", "Government Finance", "National Accounts", "Prices", "Labour Markets"],
+      "geographic_scope": "European Union, Euro Area, and selected international data",
+      "update_frequency": "Daily, weekly, monthly, quarterly depending on series",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://data.ecb.europa.eu/help/api/overview",
+      "sample_endpoints": [
+        "https://data.ecb.europa.eu/api/v1/data/EXR/D.USD.EUR.SP00.A",
+        "https://data.ecb.europa.eu/api/v1/data/IRS/M.U2.L.L40.CI.0000.EUR.N.Z"
+      ],
+      "data_quality": "Highest quality official statistics from European Central Bank",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "SDMX 2.1 compliant with comprehensive documentation. Multiple R and Python packages available including 'ecb' for R and 'ecbdata' for Python.",
+      "api_summary": "The ECB Statistical Data Warehouse API provides authoritative access to the European Central Bank's comprehensive collection of monetary and financial statistics, serving as an essential resource for economic research, policy analysis, and financial market monitoring across the European Union and euro area. The SDMX-compliant interface ensures high-quality, standardized data access for academic research and professional financial analysis."
+    },
+    "documentation": {
+      "getting_started": "https://data.ecb.europa.eu/help/getting-data-web-services-sdmx",
+      "api_reference": "https://data.ecb.europa.eu/help/api/overview",
+      "examples": "https://data.ecb.europa.eu/help/data-examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "bank_of_england_api",
+    "name": "Bank of England Statistical Interactive Database API",
+    "provider": "Bank of England",
+    "description": "REST API providing access to UK monetary and financial statistics including interest rates, money supply, credit conditions, and financial stability indicators. Offers comprehensive data on UK monetary policy implementation and financial sector performance.",
+    "discovery_status": "documented",
+    "tags": ["bank-of-england", "uk", "monetary", "financial", "statistics", "interest-rates"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "Free access under Bank of England open data policy",
+      "rate_limits": "No explicit limits documented"
+    },
+    "technical_info": {
+      "base_url": "https://www.bankofengland.co.uk/boeapps/database/_iadb-base.asp",
+      "protocol": "REST",
+      "data_formats": ["CSV", "XML"],
+      "auth_method": "None - open access",
+      "endpoints": [
+        {
+          "path": "GetSeries.asp",
+          "full_url": "https://www.bankofengland.co.uk/boeapps/database/GetSeries.asp",
+          "method": "GET",
+          "description": "Retrieves time series data for specified series codes with date range filtering",
+          "documentation_link": "https://www.bankofengland.co.uk/statistics/online-datasets",
+          "parameters": ["SeriesCodes", "UsingCodes", "VPD", "CSVF"],
+          "response_format": "CSV/XML with time series data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Interest Rates", "Exchange Rates", "Money Supply", "Credit Conditions", "Banking Statistics", "Financial Stability", "Gilt Yields", "Corporate Bond Spreads", "Mortgage Rates", "Inflation"],
+      "geographic_scope": "United Kingdom with some international data",
+      "update_frequency": "Daily, weekly, monthly, quarterly depending on series",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.bankofengland.co.uk/statistics/online-datasets",
+      "sample_endpoints": [
+        "https://www.bankofengland.co.uk/boeapps/database/GetSeries.asp?SeriesCodes=IUDBEDR&UsingCodes=Y&VPD=Y&CSVF=TN"
+      ],
+      "data_quality": "High quality official UK monetary and financial statistics",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "Simple REST interface with CSV output. Series codes must be known in advance. Limited API documentation compared to other central banks.",
+      "api_summary": "The Bank of England API provides essential access to UK monetary and financial statistics that underpin British economic policy and financial market operations. While technically simpler than some central bank APIs, it delivers authoritative data crucial for understanding UK monetary policy transmission, financial stability conditions, and broader economic trends affecting the British economy."
+    },
+    "documentation": {
+      "getting_started": "https://www.bankofengland.co.uk/statistics/online-datasets",
+      "api_reference": "https://www.bankofengland.co.uk/statistics/online-datasets",
+      "examples": null,
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "fred_api",  
+    "name": "FRED API",
+    "provider": "Federal Reserve Bank of St. Louis",
+    "description": "REST API providing access to over 827,000 economic time series from 117 sources including Federal Reserve Economic Data (FRED) and ALFRED (Archival FRED). Comprehensive US economic indicators covering monetary policy, labor markets, inflation, GDP, and financial conditions with extensive historical coverage.",
+    "discovery_status": "documented",
+    "tags": ["fred", "federal-reserve", "economic-data", "us-economy", "monetary-policy", "statistics"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Free with API key registration",
+      "rate_limits": "120 calls per 60 seconds per API key"
+    },
+    "technical_info": {
+      "base_url": "https://api.stlouisfed.org/fred/",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "API key via query parameter",
+      "endpoints": [
+        {
+          "path": "series/observations",
+          "full_url": "https://api.stlouisfed.org/fred/series/observations",
+          "method": "GET",
+          "description": "Returns time series observations for specified series ID with date filtering options",
+          "documentation_link": "https://fred.stlouisfed.org/docs/api/fred/series_observations.html",
+          "parameters": ["series_id", "api_key", "observation_start", "observation_end", "file_type"],
+          "response_format": "JSON/XML with time series data points"
+        },
+        {
+          "path": "series",
+          "full_url": "https://api.stlouisfed.org/fred/series",
+          "method": "GET",
+          "description": "Returns metadata information for specified economic series including title, units, frequency",
+          "documentation_link": "https://fred.stlouisfed.org/docs/api/fred/series.html",
+          "parameters": ["series_id", "api_key", "file_type"],
+          "response_format": "JSON/XML with series metadata"
+        },
+        {
+          "path": "series/search",
+          "full_url": "https://api.stlouisfed.org/fred/series/search",
+          "method": "GET",
+          "description": "Searches for economic series based on text query with filtering and sorting options",
+          "documentation_link": "https://fred.stlouisfed.org/docs/api/fred/series_search.html",
+          "parameters": ["search_text", "api_key", "search_type", "limit", "order_by"],
+          "response_format": "JSON/XML with search results"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["National Economic Accounts", "Labor Market Data", "Inflation and Prices", "Money Supply", "Interest Rates", "Exchange Rates", "Banking", "International Trade", "Regional Data", "Population and Demographics"],
+      "geographic_scope": "United States with extensive state and local coverage, plus international data",
+      "update_frequency": "Real-time updates as data becomes available - daily to annual",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://fred.stlouisfed.org/docs/api/fred/",
+      "sample_endpoints": [
+        "https://api.stlouisfed.org/fred/series/observations?series_id=GDP&api_key=YOUR_API_KEY",
+        "https://api.stlouisfed.org/fred/series/search?search_text=unemployment&api_key=YOUR_API_KEY"
+      ],
+      "data_quality": "Highest quality official US economic statistics with real-time data availability",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "Comprehensive API with excellent documentation. Wide third-party library support including fredapi (Python) and FredR (R). Historical vintages available through ALFRED.",
+      "api_summary": "The FRED API represents the gold standard for accessing US economic data, providing researchers, analysts, and policymakers with real-time access to the most comprehensive collection of American economic statistics. Maintained by the Federal Reserve Bank of St. Louis, it serves as an essential infrastructure for economic research, forecasting, and policy analysis across academia, government, and the financial sector."
+    },
+    "documentation": {
+      "getting_started": "https://fred.stlouisfed.org/docs/api/fred/overview.html",
+      "api_reference": "https://fred.stlouisfed.org/docs/api/fred/",
+      "examples": "https://fred.stlouisfed.org/docs/api/fred/overview.html",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "bls_api",
+    "name": "Bureau of Labor Statistics API",
+    "provider": "U.S. Bureau of Labor Statistics",
+    "description": "REST API providing access to official US labor market statistics including employment, unemployment, wages, productivity, and price indices. Offers comprehensive workforce data essential for economic analysis and labor market research with extensive historical coverage.",
+    "discovery_status": "documented",
+    "tags": ["bls", "labor", "employment", "wages", "cpi", "us-statistics", "workforce"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Free with optional registration for higher limits",
+      "rate_limits": "25 queries per day (unregistered), 500 queries per day (registered)"
+    },
+    "technical_info": {
+      "base_url": "https://api.bls.gov/publicAPI/v2/",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "Optional API key for higher rate limits",
+      "endpoints": [
+        {
+          "path": "timeseries/data",
+          "full_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/",
+          "method": "POST",
+          "description": "Retrieves time series data for specified BLS series IDs with date range filtering",
+          "documentation_link": "https://www.bls.gov/developers/api_signature_v2.htm",
+          "parameters": ["seriesid", "startyear", "endyear", "registrationkey"],
+          "response_format": "JSON with time series data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Employment Statistics", "Unemployment Rates", "Consumer Price Index", "Producer Price Index", "Labor Force Statistics", "Wages", "Productivity", "Occupational Employment", "Industry Employment", "International Labor Comparisons"],
+      "geographic_scope": "United States with state and metropolitan area detail",
+      "update_frequency": "Monthly and quarterly releases following official schedule",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.bls.gov/developers/",
+      "sample_endpoints": [
+        "https://api.bls.gov/publicAPI/v2/timeseries/data/LAUCN040010000000005"
+      ],
+      "data_quality": "Official US labor statistics with highest quality standards",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "POST-based API requiring series IDs to be known in advance. Limited to 25 series per request. Registration increases daily limits significantly.",
+      "api_summary": "The Bureau of Labor Statistics API provides authoritative access to the United States' official labor market data, serving as a critical resource for economists, policymakers, researchers, and business analysts monitoring employment trends and workforce conditions. The API delivers the same high-quality statistics that drive federal policy decisions and economic research across the nation."
+    },
+    "documentation": {
+      "getting_started": "https://www.bls.gov/developers/api_signature_v2.htm",
+      "api_reference": "https://www.bls.gov/developers/",
+      "examples": "https://www.bls.gov/developers/api_signature_v2.htm",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "us_census_api",
+    "name": "U.S. Census Bureau APIs",
+    "provider": "U.S. Census Bureau",
+    "description": "Comprehensive collection of REST APIs providing access to demographic, economic, and geographic data from censuses, surveys, and estimates. Includes American Community Survey, Economic Census, Population Estimates, and other critical datasets for understanding American society and economy.",
+    "discovery_status": "documented",
+    "tags": ["census", "demographics", "population", "economics", "geography", "acs", "us-statistics"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Free with API key registration",
+      "rate_limits": "500 queries per IP address per day"
+    },
+    "technical_info": {
+      "base_url": "https://api.census.gov/data/",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key via query parameter",
+      "endpoints": [
+        {
+          "path": "{year}/acs/acs5",
+          "full_url": "https://api.census.gov/data/{year}/acs/acs5",
+          "method": "GET",
+          "description": "American Community Survey 5-year estimates providing detailed demographic and housing characteristics",
+          "documentation_link": "https://www.census.gov/data/developers/data-sets/acs-5year.html",
+          "parameters": ["get", "for", "in", "key"],
+          "response_format": "JSON with survey data"
+        },
+        {
+          "path": "{year}/pep/population",
+          "full_url": "https://api.census.gov/data/{year}/pep/population",
+          "method": "GET",
+          "description": "Population Estimates Program providing annual population estimates by geography",
+          "documentation_link": "https://www.census.gov/data/developers/data-sets/popest-popproj.html",
+          "parameters": ["get", "for", "key"],
+          "response_format": "JSON with population estimates"
+        },
+        {
+          "path": "{year}/cbp",
+          "full_url": "https://api.census.gov/data/{year}/cbp",
+          "method": "GET",
+          "description": "County Business Patterns providing business and employment statistics by industry and geography",
+          "documentation_link": "https://www.census.gov/data/developers/data-sets/cbp-nonemp-zbp.html",
+          "parameters": ["get", "for", "in", "key"],
+          "response_format": "JSON with business statistics"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Population Demographics", "Housing Characteristics", "Economic Statistics", "Business Patterns", "Income and Poverty", "Education", "Employment", "Geographic Data", "International Trade", "Government Finances"],
+      "geographic_scope": "United States with detail to block level for some datasets",
+      "update_frequency": "Annual, with some monthly and quarterly series",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.census.gov/data/developers/guidance.html",
+      "sample_endpoints": [
+        "https://api.census.gov/data/2021/acs/acs5?get=B25001_001E&for=state:*&key=YOUR_KEY",
+        "https://api.census.gov/data/2021/pep/population?get=POP&for=state:*&key=YOUR_KEY"
+      ],
+      "data_quality": "Highest quality official US demographic and economic statistics",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "Multiple APIs for different datasets. Requires understanding of variable codes and geographic hierarchies. Extensive documentation and examples available.",
+      "api_summary": "The U.S. Census Bureau APIs provide unparalleled access to the most comprehensive and authoritative collection of American demographic, social, and economic data. These APIs serve researchers, businesses, governments, and nonprofits with the detailed information needed to understand population trends, economic conditions, and social characteristics that shape American communities and inform critical policy decisions."
+    },
+    "documentation": {
+      "getting_started": "https://www.census.gov/data/developers/guidance/api-user-guide.html",
+      "api_reference": "https://www.census.gov/data/developers/data-sets.html",
+      "examples": "https://www.census.gov/data/developers/guidance/api-user-guide/Example_API_Queries.html",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "data_gov_api",
+    "name": "Data.gov API",
+    "provider": "U.S. General Services Administration",
+    "description": "Catalog API providing access to metadata about thousands of U.S. government datasets across federal, state, and local agencies. Serves as the central directory for American open government data with search and discovery capabilities for public sector information.",
+    "discovery_status": "documented",
+    "tags": ["data-gov", "government", "open-data", "catalog", "metadata", "federal", "ckan"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "Free public access",
+      "rate_limits": "No explicit limits documented"
+    },
+    "technical_info": {
+      "base_url": "https://catalog.data.gov/api/3/",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "None - open access",
+      "endpoints": [
+        {
+          "path": "action/package_search",
+          "full_url": "https://catalog.data.gov/api/3/action/package_search",
+          "method": "GET",
+          "description": "Searches for datasets using keywords, filters, and facets with pagination support",
+          "documentation_link": "https://docs.ckan.org/en/2.9/api/index.html",
+          "parameters": ["q", "fq", "rows", "start", "sort"],
+          "response_format": "JSON with dataset metadata"
+        },
+        {
+          "path": "action/package_show",
+          "full_url": "https://catalog.data.gov/api/3/action/package_show",
+          "method": "GET",
+          "description": "Returns detailed metadata for a specific dataset including resources and organization info",
+          "documentation_link": "https://docs.ckan.org/en/2.9/api/index.html",
+          "parameters": ["id"],
+          "response_format": "JSON with complete dataset metadata"
+        },
+        {
+          "path": "action/organization_list",
+          "full_url": "https://catalog.data.gov/api/3/action/organization_list",
+          "method": "GET",
+          "description": "Lists government organizations contributing data to the catalog",
+          "documentation_link": "https://docs.ckan.org/en/2.9/api/index.html",
+          "parameters": ["all_fields"],
+          "response_format": "JSON list of organizations"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Agriculture", "Business", "Climate", "Education", "Energy", "Finance", "Health", "Local Government", "Manufacturing", "Ocean", "Public Safety", "Science Research", "Transportation"],
+      "geographic_scope": "United States - federal, state, and local government data",
+      "update_frequency": "Continuous updates as agencies publish new datasets",
+      "historical_data": null
+    },
+    "research_notes": {
+      "documentation_url": "https://www.data.gov/developers/",
+      "sample_endpoints": [
+        "https://catalog.data.gov/api/3/action/package_search?q=health",
+        "https://catalog.data.gov/api/3/action/organization_list?all_fields=true"
+      ],
+      "data_quality": "Metadata quality varies by contributing agency",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "CKAN-based catalog API providing metadata only - actual data URLs must be accessed separately. Extensive search and filtering capabilities.",
+      "api_summary": "The Data.gov API serves as the central discovery mechanism for the United States government's open data initiative, providing researchers, developers, and citizens with comprehensive metadata about thousands of federal, state, and local datasets. While it functions as a catalog rather than direct data provider, it enables efficient discovery and access to the vast landscape of American public sector information resources."
+    },
+    "documentation": {
+      "getting_started": "https://www.data.gov/developers/",
+      "api_reference": "https://docs.ckan.org/en/2.9/api/index.html",
+      "examples": "https://www.data.gov/developers/",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "data_gov_uk_api",
+    "name": "Data.gov.uk API",
+    "provider": "UK Government Digital Service",
+    "description": "CKAN-based catalog API providing metadata about UK government datasets from central and local government agencies. Enables discovery and access to British public sector data across numerous policy domains and government levels.",
+    "discovery_status": "documented",
+    "tags": ["uk-government", "open-data", "catalog", "metadata", "ckan", "british"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "Free public access under UK Open Government License",
+      "rate_limits": "No explicit limits documented"
+    },
+    "technical_info": {
+      "base_url": "https://data.gov.uk/api/3/",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "None - open access",
+      "endpoints": [
+        {
+          "path": "action/package_search",
+          "full_url": "https://data.gov.uk/api/3/action/package_search",
+          "method": "GET",
+          "description": "Searches UK government datasets using keywords, themes, and organizational filters",
+          "documentation_link": "https://docs.ckan.org/en/2.9/api/index.html",
+          "parameters": ["q", "fq", "rows", "start", "facet.field"],
+          "response_format": "JSON with dataset metadata"
+        },
+        {
+          "path": "action/package_show",
+          "full_url": "https://data.gov.uk/api/3/action/package_show",
+          "method": "GET",
+          "description": "Returns detailed information about specific UK government datasets",
+          "documentation_link": "https://docs.ckan.org/en/2.9/api/index.html",
+          "parameters": ["id"],
+          "response_format": "JSON with complete dataset information"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Business and Economy", "Crime and Justice", "Defence", "Education", "Environment", "Government", "Government Spending", "Health", "Housing", "Society", "Towns and Cities", "Transport"],
+      "geographic_scope": "United Kingdom - England, Scotland, Wales, Northern Ireland",
+      "update_frequency": "Continuous as government agencies publish data",
+      "historical_data": null
+    },
+    "research_notes": {
+      "documentation_url": "https://data.gov.uk/support",
+      "sample_endpoints": [
+        "https://data.gov.uk/api/3/action/package_search?q=education",
+        "https://data.gov.uk/api/3/action/package_search?fq=theme:health"
+      ],
+      "data_quality": "Varies by department - generally high quality government data",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "Standard CKAN API implementation. Provides metadata catalog rather than direct data access. Strong organizational and thematic filtering capabilities.",
+      "api_summary": "The Data.gov.uk API provides essential access to the UK government's open data catalog, enabling researchers, businesses, and citizens to discover and access thousands of public sector datasets. As the central hub for British government transparency initiatives, it facilitates evidence-based research and democratic accountability through comprehensive metadata about official UK data resources."
+    },
+    "documentation": {
+      "getting_started": "https://data.gov.uk/support",
+      "api_reference": "https://docs.ckan.org/en/2.9/api/index.html",
+      "examples": "https://data.gov.uk/support",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "data_gouv_fr_api",
+    "name": "Data.gouv.fr API",
+    "provider": "French Government - Etalab",
+    "description": "REST API providing access to French government open data catalog with thousands of datasets from national and local administrations. Includes demographic, economic, environmental, and administrative data covering all aspects of French public sector information.",
+    "discovery_status": "documented",
+    "tags": ["france", "government", "open-data", "catalog", "etalab", "french"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "Free under French Open License",
+      "rate_limits": "No explicit limits documented"
+    },
+    "technical_info": {
+      "base_url": "https://www.data.gouv.fr/api/1/",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "None for read access - API key for write operations",
+      "endpoints": [
+        {
+          "path": "datasets/",
+          "full_url": "https://www.data.gouv.fr/api/1/datasets/",
+          "method": "GET",
+          "description": "Lists and searches French government datasets with filtering and pagination",
+          "documentation_link": "https://www.data.gouv.fr/fr/apidoc/",
+          "parameters": ["q", "organization", "tag", "page", "page_size"],
+          "response_format": "JSON with dataset metadata"
+        },
+        {
+          "path": "datasets/{id}/",
+          "full_url": "https://www.data.gouv.fr/api/1/datasets/{id}/",
+          "method": "GET",
+          "description": "Returns detailed information about specific French dataset including resources",
+          "documentation_link": "https://www.data.gouv.fr/fr/apidoc/",
+          "parameters": ["id"],
+          "response_format": "JSON with complete dataset details"
+        },
+        {
+          "path": "organizations/",
+          "full_url": "https://www.data.gouv.fr/api/1/organizations/",
+          "method": "GET",
+          "description": "Lists French government organizations contributing open data",
+          "documentation_link": "https://www.data.gouv.fr/fr/apidoc/",
+          "parameters": ["q", "page", "page_size"],
+          "response_format": "JSON list of organizations"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Administration", "Agriculture", "Culture", "Economics", "Education", "Employment", "Environment", "Health", "Housing", "Justice", "Social Affairs", "Transportation", "Urban Planning"],
+      "geographic_scope": "France including overseas territories and departments",
+      "update_frequency": "Continuous updates from participating organizations",
+      "historical_data": null
+    },
+    "research_notes": {
+      "documentation_url": "https://www.data.gouv.fr/fr/apidoc/",
+      "sample_endpoints": [
+        "https://www.data.gouv.fr/api/1/datasets/?q=population",
+        "https://www.data.gouv.fr/api/1/organizations/?q=insee"
+      ],
+      "data_quality": "High quality official French government data",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "Well-documented REST API with comprehensive search capabilities. Supports French language metadata with some English translations available.",
+      "api_summary": "The Data.gouv.fr API serves as France's premier gateway to public sector information, providing comprehensive access to thousands of datasets from French national and local governments. Managed by Etalab, it supports France's digital government initiatives and open data policies, enabling researchers, businesses, and citizens to access official French administrative, economic, and social data."
+    },
+    "documentation": {
+      "getting_started": "https://www.data.gouv.fr/fr/apidoc/",
+      "api_reference": "https://www.data.gouv.fr/fr/apidoc/",
+      "examples": "https://www.data.gouv.fr/fr/apidoc/",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "open_data_portal_watch_api",
+    "name": "OpenDataSoft API",
+    "provider": "OpenDataSoft",
+    "description": "Unified API platform providing access to thousands of open datasets from government agencies, research institutions, and organizations worldwide. Offers standardized access to diverse data sources with powerful search, filtering, and analytics capabilities.",
+    "discovery_status": "documented",
+    "tags": ["opendatasoft", "unified", "multi-source", "catalog", "search", "analytics"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Freemium - free tier with limits, paid plans for higher usage",
+      "rate_limits": "10,000 API calls per month on free tier"
+    },
+    "technical_info": {
+      "base_url": "https://public.opendatasoft.com/api/",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV", "GeoJSON"],
+      "auth_method": "API key for higher limits, anonymous for basic access",
+      "endpoints": [
+        {
+          "path": "catalog/v2/catalog/datasets",
+          "full_url": "https://public.opendatasoft.com/api/catalog/v2/catalog/datasets",
+          "method": "GET",
+          "description": "Searches across thousands of open datasets from multiple organizations and portals",
+          "documentation_link": "https://help.opendatasoft.com/apis/ods-search-v2/",
+          "parameters": ["where", "select", "limit", "offset", "search"],
+          "response_format": "JSON with dataset catalog"
+        },
+        {
+          "path": "explore/v2.1/catalog/datasets/{dataset_id}/records",
+          "full_url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/{dataset_id}/records",
+          "method": "GET",
+          "description": "Retrieves actual data records from specified dataset with filtering and aggregation",
+          "documentation_link": "https://help.opendatasoft.com/apis/ods-explore-v2/",
+          "parameters": ["where", "select", "limit", "offset", "group_by"],
+          "response_format": "JSON/CSV/GeoJSON with data records"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Government Data", "Transportation", "Environment", "Demographics", "Economics", "Geospatial", "Health", "Energy", "Education", "Culture"],
+      "geographic_scope": "Global - aggregated from worldwide sources",
+      "update_frequency": "Varies by source dataset",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://help.opendatasoft.com/apis/",
+      "sample_endpoints": [
+        "https://public.opendatasoft.com/api/catalog/v2/catalog/datasets?search=population",
+        "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/worldcitiespop/records"
+      ],
+      "data_quality": "Varies by source - aggregates from multiple providers",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "Powerful unified platform aggregating data from multiple open data portals. Strong geographic and analytical capabilities with built-in visualization tools.",
+      "api_summary": "OpenDataSoft provides a unique unified API approach to open data access, aggregating thousands of datasets from government agencies, research institutions, and organizations worldwide into a single searchable platform. This comprehensive approach enables researchers and developers to discover and access diverse data sources through standardized interfaces, significantly reducing the complexity of working with multiple open data portals."
+    },
+    "documentation": {
+      "getting_started": "https://help.opendatasoft.com/apis/",
+      "api_reference": "https://help.opendatasoft.com/apis/ods-explore-v2/",
+      "examples": "https://help.opendatasoft.com/apis/ods-explore-v2/",
+      "changelog": null,
+      "status_page": "https://status.opendatasoft.com/"
+    }
+  },
+  {
+    "id": "european_data_portal_api",
+    "name": "European Data Portal API",
+    "provider": "European Commission",
+    "description": "CKAN-based API providing metadata about open datasets from European Union member states, institutions, and agencies. Serves as the central catalog for European public sector information with standardized access across multiple countries and languages.",
+    "discovery_status": "documented",
+    "tags": ["european-union", "metadata", "catalog", "ckan", "multilingual", "cross-border"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "Free access under EU open data policies",
+      "rate_limits": "No explicit limits documented"
+    },
+    "technical_info": {
+      "base_url": "https://data.europa.eu/api/hub/search/",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "None - open access",
+      "endpoints": [
+        {
+          "path": "datasets",
+          "full_url": "https://data.europa.eu/api/hub/search/datasets",
+          "method": "GET",
+          "description": "Searches European datasets with country, theme, and language filters",
+          "documentation_link": "https://data.europa.eu/en/handbook",
+          "parameters": ["query", "filter", "limit", "page", "sort"],
+          "response_format": "JSON with dataset metadata"
+        },
+        {
+          "path": "catalogues",
+          "full_url": "https://data.europa.eu/api/hub/search/catalogues",
+          "method": "GET",
+          "description": "Lists European data catalogs from member states and EU institutions",
+          "documentation_link": "https://data.europa.eu/en/handbook",
+          "parameters": ["query", "filter", "limit"],
+          "response_format": "JSON with catalog information"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Agriculture", "Economics", "Education", "Energy", "Environment", "Government", "Health", "Justice", "Population", "Regions", "Science", "Transport"],
+      "geographic_scope": "European Union member states plus associated countries",
+      "update_frequency": "Regular updates from member state portals",
+      "historical_data": null
+    },
+    "research_notes": {
+      "documentation_url": "https://data.europa.eu/en/handbook",
+      "sample_endpoints": [
+        "https://data.europa.eu/api/hub/search/datasets?query=gdp&filter=country:DE",
+        "https://data.europa.eu/api/hub/search/catalogues?query=statistics"
+      ],
+      "data_quality": "Varies by member state - generally high quality government data",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "Aggregates metadata from 27+ EU member states. Multilingual support with standardized European data themes and vocabularies.",
+      "api_summary": "The European Data Portal API provides essential infrastructure for discovering and accessing open government data across the European Union, enabling researchers, businesses, and citizens to find relevant datasets from 27 member states and EU institutions through a single, standardized interface. This cross-border approach facilitates comparative European research and supports the EU's digital single market objectives."
+    },
+    "documentation": {
+      "getting_started": "https://data.europa.eu/en/handbook",
+      "api_reference": "https://data.europa.eu/en/handbook",
+      "examples": "https://data.europa.eu/en/handbook",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "nasa_api",
+    "name": "NASA Open APIs",
+    "provider": "National Aeronautics and Space Administration",
+    "description": "Collection of REST APIs providing access to NASA's extensive space, Earth science, and astronomical data including satellite imagery, planetary data, astronaut information, and space weather. Offers both current missions data and historical space exploration archives.",
+    "discovery_status": "documented",
+    "tags": ["nasa", "space", "earth-science", "astronomy", "satellites", "planetary"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Free with API key registration",
+      "rate_limits": "1,000 requests per hour per API key"
+    },
+    "technical_info": {
+      "base_url": "https://api.nasa.gov/",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML", "Binary"],
+      "auth_method": "API key via query parameter",
+      "endpoints": [
+        {
+          "path": "planetary/apod",
+          "full_url": "https://api.nasa.gov/planetary/apod",
+          "method": "GET",
+          "description": "Returns NASA's Astronomy Picture of the Day with description and metadata",
+          "documentation_link": "https://api.nasa.gov/",
+          "parameters": ["api_key", "date", "start_date", "end_date", "count"],
+          "response_format": "JSON with image URL and metadata"
+        },
+        {
+          "path": "planetary/earth/imagery",
+          "full_url": "https://api.nasa.gov/planetary/earth/imagery",
+          "method": "GET",
+          "description": "Retrieves Landsat 8 satellite imagery for specified coordinates and dates",
+          "documentation_link": "https://api.nasa.gov/",
+          "parameters": ["lat", "lon", "date", "dim", "api_key"],
+          "response_format": "PNG image data"
+        },
+        {
+          "path": "neo/rest/v1/feed",
+          "full_url": "https://api.nasa.gov/neo/rest/v1/feed",
+          "method": "GET",
+          "description": "Near Earth Object data including asteroid approaches and orbital information",
+          "documentation_link": "https://api.nasa.gov/",
+          "parameters": ["start_date", "end_date", "api_key"],
+          "response_format": "JSON with asteroid data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Earth Imagery", "Astronomy Pictures", "Mars Rover Photos", "Near Earth Objects", "Exoplanets", "Space Weather", "ISS Location", "Satellite Data", "Mission Information"],
+      "geographic_scope": "Global Earth coverage plus planetary and deep space data",
+      "update_frequency": "Real-time to daily depending on data source",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api.nasa.gov/",
+      "sample_endpoints": [
+        "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY",
+        "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY"
+      ],
+      "data_quality": "Highest quality space and Earth science data from NASA missions",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "Multiple specialized APIs for different data types. Excellent documentation with interactive examples. Some endpoints provide real mission data.",
+      "api_summary": "NASA's Open APIs provide unprecedented public access to the world's most comprehensive collection of space exploration and Earth science data, enabling researchers, educators, developers, and space enthusiasts to integrate authoritative NASA mission data into applications and research. These APIs democratize access to cutting-edge space science while supporting STEM education and public engagement with space exploration."
+    },
+    "documentation": {
+      "getting_started": "https://api.nasa.gov/",
+      "api_reference": "https://api.nasa.gov/",
+      "examples": "https://api.nasa.gov/",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "noaa_api",
+    "name": "NOAA Climate Data Online API",
+    "provider": "National Oceanic and Atmospheric Administration",
+    "description": "REST API providing access to NOAA's comprehensive weather and climate datasets including historical weather records, climate summaries, and severe weather events. Offers the most extensive collection of US weather and climate data for research and analysis.",
+    "discovery_status": "documented",
+    "tags": ["noaa", "climate", "weather", "meteorology", "atmospheric", "oceanic"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Free with API token registration",
+      "rate_limits": "1,000 requests per day per token"
+    },
+    "technical_info": {
+      "base_url": "https://www.ncdc.noaa.gov/cdo-web/api/v2/",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API token in header",
+      "endpoints": [
+        {
+          "path": "datasets",
+          "full_url": "https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets",
+          "method": "GET",
+          "description": "Lists available climate and weather datasets with metadata and coverage information",
+          "documentation_link": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2",
+          "parameters": ["datasetid", "datatypeid", "locationid", "startdate", "enddate"],
+          "response_format": "JSON with dataset information"
+        },
+        {
+          "path": "data",
+          "full_url": "https://www.ncdc.noaa.gov/cdo-web/api/v2/data",
+          "method": "GET",
+          "description": "Retrieves weather and climate observations for specified parameters and time periods",
+          "documentation_link": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2",
+          "parameters": ["datasetid", "datatypeid", "locationid", "startdate", "enddate", "limit"],
+          "response_format": "JSON with climate/weather data"
+        },
+        {
+          "path": "stations",
+          "full_url": "https://www.ncdc.noaa.gov/cdo-web/api/v2/stations",
+          "method": "GET",
+          "description": "Lists weather stations with location information and data availability periods",
+          "documentation_link": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2",
+          "parameters": ["datasetid", "locationid", "datatypeid", "extent"],
+          "response_format": "JSON with station metadata"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Daily Weather Summaries", "Climate Normals", "Precipitation", "Temperature", "Storm Events", "Drought Indices", "Snow", "Severe Weather", "Global Climate", "Marine Data"],
+      "geographic_scope": "United States with extensive global coverage for many datasets",
+      "update_frequency": "Daily updates for current data, historical records complete",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2",
+      "sample_endpoints": [
+        "https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets",
+        "https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS:US&startdate=2023-01-01&enddate=2023-12-31"
+      ],
+      "data_quality": "Highest quality official US weather and climate data",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "Comprehensive weather and climate API with extensive historical coverage. Requires understanding of dataset IDs and station networks.",
+      "api_summary": "The NOAA Climate Data Online API provides researchers, scientists, and developers with authoritative access to the world's largest archive of weather and climate data, spanning over 175 years of observations from thousands of weather stations worldwide. This API serves as the primary source for climate research, weather analysis, and environmental monitoring applications across academic, government, and commercial sectors."
+    },
+    "documentation": {
+      "getting_started": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2",
+      "api_reference": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2",
+      "examples": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "usgs_api",
+    "name": "USGS Web Services",
+    "provider": "U.S. Geological Survey",
+    "description": "Collection of REST APIs providing access to geological, hydrological, and environmental data including water resources, earthquakes, minerals, and geographic information. Offers real-time monitoring data and extensive historical datasets for Earth science research.",
+    "discovery_status": "documented",
+    "tags": ["usgs", "geology", "hydrology", "earthquakes", "water", "minerals", "geographic"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "Free public access",
+      "rate_limits": "No explicit limits documented - reasonable use expected"
+    },
+    "technical_info": {
+      "base_url": "https://waterservices.usgs.gov/",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML", "RDB", "WaterML"],
+      "auth_method": "None - open access",
+      "endpoints": [
+        {
+          "path": "nwis/iv",
+          "full_url": "https://waterservices.usgs.gov/nwis/iv",
+          "method": "GET",
+          "description": "Retrieves real-time water monitoring data from USGS stream gauges and groundwater sites",
+          "documentation_link": "https://waterservices.usgs.gov/docs/instantaneous-values/",
+          "parameters": ["sites", "parameterCd", "startDT", "endDT", "format"],
+          "response_format": "JSON/XML/RDB with water monitoring data"
+        },
+        {
+          "path": "nwis/dv",
+          "full_url": "https://waterservices.usgs.gov/nwis/dv",
+          "method": "GET",
+          "description": "Returns daily water data values including streamflow, water levels, and water quality parameters",
+          "documentation_link": "https://waterservices.usgs.gov/docs/daily-values/",
+          "parameters": ["sites", "parameterCd", "startDT", "endDT", "statCd"],
+          "response_format": "JSON/XML/RDB with daily water data"
+        },
+        {
+          "path": "nwis/site",
+          "full_url": "https://waterservices.usgs.gov/nwis/site",
+          "method": "GET",
+          "description": "Provides metadata about USGS monitoring sites including location and available parameters",
+          "documentation_link": "https://waterservices.usgs.gov/docs/site-service/",
+          "parameters": ["sites", "stateCd", "huc", "bbox", "hasDataTypeCd"],
+          "response_format": "JSON/XML/RDB with site information"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Water Resources", "Streamflow", "Groundwater", "Water Quality", "Earthquakes", "Geographic Names", "Mineral Resources", "Land Cover", "Topographic Data"],
+      "geographic_scope": "United States including territories and some international data",
+      "update_frequency": "Real-time for monitoring data, periodic for surveys and assessments",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://waterservices.usgs.gov/docs/",
+      "sample_endpoints": [
+        "https://waterservices.usgs.gov/nwis/iv/?sites=01646500&parameterCd=00065&period=P7D&format=json",
+        "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2023-01-01&endtime=2023-12-31"
+      ],
+      "data_quality": "Highest quality official US geological and hydrological data",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "Multiple specialized APIs for different data types. Water services API is most comprehensive. Real-time data availability varies by site.",
+      "api_summary": "USGS Web Services provide authoritative access to the United States' most comprehensive collection of geological, hydrological, and environmental monitoring data, serving researchers, water managers, emergency responders, and the public with real-time and historical information essential for understanding Earth processes and managing natural resources. These APIs support critical applications in water resource management, earthquake monitoring, and environmental research."
+    },
+    "documentation": {
+      "getting_started": "https://waterservices.usgs.gov/docs/",
+      "api_reference": "https://waterservices.usgs.gov/docs/",
+      "examples": "https://waterservices.usgs.gov/docs/",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "esa_api",
+    "name": "European Space Agency APIs",
+    "provider": "European Space Agency", 
+    "description": "Collection of APIs providing access to satellite data, space mission information, and Earth observation datasets from ESA missions including Sentinel satellites, planetary missions, and space science programs. Offers comprehensive European space data for research and applications.",
+    "discovery_status": "documented",
+    "tags": ["esa", "satellite", "earth-observation", "copernicus", "sentinel", "space-missions"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Free registration required for most services",
+      "rate_limits": "Varies by service - generally reasonable use policies"
+    },
+    "technical_info": {
+      "base_url": "https://scihub.copernicus.eu/dhus/",
+      "protocol": "REST/OData",
+      "data_formats": ["JSON", "XML", "SAFE", "NetCDF"],
+      "auth_method": "Username/password authentication for registered users",
+      "endpoints": [
+        {
+          "path": "odata/v1/Products",
+          "full_url": "https://scihub.copernicus.eu/dhus/odata/v1/Products",
+          "method": "GET",
+          "description": "Searches and retrieves Copernicus satellite data including Sentinel-1, 2, 3, and 5P products",
+          "documentation_link": "https://scihub.copernicus.eu/twiki/do/view/SciHubUserGuide/",
+          "parameters": ["$filter", "$orderby", "$top", "$skip", "$format"],
+          "response_format": "JSON/XML with product metadata"
+        },
+        {
+          "path": "api/hub/products/{id}/download",
+          "full_url": "https://scihub.copernicus.eu/dhus/api/hub/products/{id}/download",
+          "method": "GET",
+          "description": "Downloads actual satellite data products after search and selection",
+          "documentation_link": "https://scihub.copernicus.eu/twiki/do/view/SciHubUserGuide/",
+          "parameters": ["id"],
+          "response_format": "Binary satellite data files"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Earth Observation", "Land Monitoring", "Ocean Monitoring", "Atmosphere Monitoring", "Climate Change", "Disaster Monitoring", "Agricultural Monitoring", "Urban Planning", "Environmental Monitoring"],
+      "geographic_scope": "Global coverage with focus on Europe and surrounding regions",
+      "update_frequency": "Near real-time for operational missions, varies by mission type",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://scihub.copernicus.eu/twiki/do/view/SciHubUserGuide/",
+      "sample_endpoints": [
+        "https://scihub.copernicus.eu/dhus/odata/v1/Products?$filter=contains(Name,'S2A_')&$top=10",
+        "https://scihub.copernicus.eu/dhus/search?q=platformname:Sentinel-1"
+      ],
+      "data_quality": "Highest quality European satellite data with rigorous calibration",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "Registration required for Copernicus Open Access Hub. Large data files requiring substantial bandwidth. Python and other client libraries available.",
+      "api_summary": "The European Space Agency APIs provide access to Europe's premier collection of satellite Earth observation data and space mission information, enabling researchers, government agencies, and commercial users to access high-quality Copernicus programme data for environmental monitoring, climate research, and geospatial applications. These APIs serve as critical infrastructure for European space data policy and global Earth observation initiatives."
+    },
+    "documentation": {
+      "getting_started": "https://scihub.copernicus.eu/twiki/do/view/SciHubUserGuide/",
+      "api_reference": "https://scihub.copernicus.eu/twiki/do/view/SciHubUserGuide/ODataAPI",
+      "examples": "https://scihub.copernicus.eu/twiki/do/view/SciHubUserGuide/",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "openweathermap_api",
+    "name": "OpenWeatherMap API",
+    "provider": "OpenWeatherMap",
+    "description": "Comprehensive weather API providing current weather, forecasts, historical data, and weather maps for any location worldwide. Offers multiple pricing tiers from free basic access to professional weather services with high-frequency updates and advanced features.",
+    "discovery_status": "documented",
+    "tags": ["weather", "forecast", "climate", "meteorology", "commercial", "global"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Freemium - free tier with 1,000 calls/day, paid plans from $40/month",
+      "rate_limits": "60 calls/minute for free tier, higher limits for paid plans"
+    },
+    "technical_info": {
+      "base_url": "https://api.openweathermap.org/data/2.5/",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "API key via query parameter",
+      "endpoints": [
+        {
+          "path": "weather",
+          "full_url": "https://api.openweathermap.org/data/2.5/weather",
+          "method": "GET",
+          "description": "Returns current weather conditions for specified location including temperature, humidity, pressure",
+          "documentation_link": "https://openweathermap.org/current",
+          "parameters": ["q", "lat", "lon", "appid", "units", "lang"],
+          "response_format": "JSON/XML with current weather data"
+        },
+        {
+          "path": "forecast",
+          "full_url": "https://api.openweathermap.org/data/2.5/forecast",
+          "method": "GET",
+          "description": "Provides 5-day weather forecast with 3-hour intervals for any location",
+          "documentation_link": "https://openweathermap.org/forecast5",
+          "parameters": ["q", "lat", "lon", "appid", "cnt", "units"],
+          "response_format": "JSON/XML with forecast data"
+        },
+        {
+          "path": "onecall",
+          "full_url": "https://api.openweathermap.org/data/2.5/onecall",
+          "method": "GET",
+          "description": "Comprehensive weather data including current, forecast, and historical weather in one call",
+          "documentation_link": "https://openweathermap.org/api/one-call-api",
+          "parameters": ["lat", "lon", "appid", "exclude", "units"],
+          "response_format": "JSON with comprehensive weather data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Current Weather", "Weather Forecasts", "Historical Weather", "Weather Maps", "Air Pollution", "UV Index", "Weather Alerts", "Agricultural Weather", "Marine Weather"],
+      "geographic_scope": "Global coverage for all locations worldwide",
+      "update_frequency": "Real-time updates every 10 minutes for current weather",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://openweathermap.org/api",
+      "sample_endpoints": [
+        "https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=YOUR_API_KEY",
+        "https://api.openweathermap.org/data/2.5/forecast?lat=35&lon=139&appid=YOUR_API_KEY"
+      ],
+      "data_quality": "Commercial quality weather data with global coverage",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "Popular commercial weather API with generous free tier. Extensive documentation and SDKs available for multiple programming languages.",
+      "api_summary": "OpenWeatherMap API serves as one of the world's most widely used commercial weather data services, providing developers, businesses, and researchers with reliable access to global weather information through a well-designed REST API. With millions of users worldwide, it supports applications ranging from mobile weather apps to agricultural management systems and logistics optimization."
+    },
+    "documentation": {
+      "getting_started": "https://openweathermap.org/appid",
+      "api_reference": "https://openweathermap.org/api",
+      "examples": "https://openweathermap.org/current",
+      "changelog": "https://openweathermap.org/api/change-log",
+      "status_page": "https://openweathermap.statuspage.io/"
+    }
+  },
+  {
+    "id": "climate_data_online_api",
+    "name": "Climate Data Online API",
+    "provider": "National Centers for Environmental Information",
+    "description": "NOAA's comprehensive climate data service providing access to weather and climate observations from thousands of stations worldwide. Includes daily weather summaries, climate normals, and extreme weather events with extensive historical coverage dating back over 175 years.",
+    "discovery_status": "documented",
+    "tags": ["noaa", "climate", "weather", "historical", "ncei", "observations"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Free with registration for API token",
+      "rate_limits": "1,000 requests per day per token"
+    },
+    "technical_info": {
+      "base_url": "https://www.ncei.noaa.gov/cdo-web/api/v2/",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API token in request header",
+      "endpoints": [
+        {
+          "path": "datasets",
+          "full_url": "https://www.ncei.noaa.gov/cdo-web/api/v2/datasets",
+          "method": "GET",
+          "description": "Lists available climate datasets with coverage information and temporal ranges",
+          "documentation_link": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2",
+          "parameters": ["datasetid", "datatypeid", "locationid", "startdate", "enddate"],
+          "response_format": "JSON with dataset metadata"
+        },
+        {
+          "path": "data",
+          "full_url": "https://www.ncei.noaa.gov/cdo-web/api/v2/data",
+          "method": "GET",
+          "description": "Retrieves actual climate and weather observation data for specified parameters",
+          "documentation_link": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2",
+          "parameters": ["datasetid", "datatypeid", "locationid", "startdate", "enddate", "limit"],
+          "response_format": "JSON with climate observation data"
+        },
+        {
+          "path": "locations",
+          "full_url": "https://www.ncei.noaa.gov/cdo-web/api/v2/locations",
+          "method": "GET",
+          "description": "Returns geographic locations and regions with available climate data",
+          "documentation_link": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2",
+          "parameters": ["datasetid", "locationcategoryid", "datacategoryid", "startdate"],
+          "response_format": "JSON with location information"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Daily Weather Summaries", "Monthly Climate Data", "Annual Climate Data", "Climate Normals", "Precipitation", "Temperature Extremes", "Storm Events", "Drought Monitoring", "Snow Data"],
+      "geographic_scope": "Global with emphasis on United States and territories",
+      "update_frequency": "Daily updates for recent data, historical records complete",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2",
+      "sample_endpoints": [
+        "https://www.ncei.noaa.gov/cdo-web/api/v2/datasets?limit=25",
+        "https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS:US&startdate=2023-01-01&enddate=2023-01-31"
+      ],
+      "data_quality": "Authoritative US government climate data with quality controls",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "Same API as NOAA CDO but branded under NCEI. Comprehensive historical weather data with strict quality control procedures.",
+      "api_summary": "The Climate Data Online API represents the United States government's authoritative source for historical weather and climate data, providing researchers, scientists, and analysts with access to over 175 years of quality-controlled observations from thousands of weather stations worldwide. This service supports critical climate research, environmental impact assessments, and long-term climate trend analysis essential for understanding climate change and variability."
+    },
+    "documentation": {
+      "getting_started": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2",
+      "api_reference": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2",
+      "examples": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "gbif_api",
+    "name": "Global Biodiversity Information Facility API",
+    "provider": "Global Biodiversity Information Facility",
+    "description": "REST API providing access to over 1.4 billion species occurrence records and taxonomic information from natural history collections, observations, and research datasets worldwide. Serves as the primary global infrastructure for biodiversity data sharing and research.",
+    "discovery_status": "documented",
+    "tags": ["biodiversity", "species", "ecology", "taxonomy", "occurrences", "natural-history"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "Free access under GBIF data sharing principles",
+      "rate_limits": "No explicit rate limits - reasonable use expected"
+    },
+    "technical_info": {
+      "base_url": "https://api.gbif.org/v1/",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "None for read access - authentication required for data publishing",
+      "endpoints": [
+        {
+          "path": "occurrence/search",
+          "full_url": "https://api.gbif.org/v1/occurrence/search",
+          "method": "GET",
+          "description": "Searches species occurrence records with geographic, taxonomic, and temporal filters",
+          "documentation_link": "https://www.gbif.org/developer/occurrence",
+          "parameters": ["q", "scientificName", "country", "decimalLatitude", "decimalLongitude", "year"],
+          "response_format": "JSON/XML with occurrence records"
+        },
+        {
+          "path": "species/search",
+          "full_url": "https://api.gbif.org/v1/species/search",
+          "method": "GET",
+          "description": "Searches taxonomic information including species names, classifications, and synonyms",
+          "documentation_link": "https://www.gbif.org/developer/species",
+          "parameters": ["q", "rank", "kingdom", "status", "habitat"],
+          "response_format": "JSON/XML with taxonomic data"
+        },
+        {
+          "path": "dataset/search",
+          "full_url": "https://api.gbif.org/v1/dataset/search",
+          "method": "GET",
+          "description": "Lists and searches biodiversity datasets with metadata and publishing organization info",
+          "documentation_link": "https://www.gbif.org/developer/registry",
+          "parameters": ["q", "type", "keyword", "publishingCountry", "publishingOrg"],
+          "response_format": "JSON/XML with dataset metadata"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Species Occurrences", "Taxonomic Classifications", "Museum Collections", "Observation Data", "Genetic Sequences", "Species Images", "Literature References", "Conservation Status"],
+      "geographic_scope": "Global coverage with data from all continents and marine environments",
+      "update_frequency": "Continuous updates from data publishers worldwide",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.gbif.org/developer/summary",
+      "sample_endpoints": [
+        "https://api.gbif.org/v1/occurrence/search?scientificName=Puma concolor&limit=20",
+        "https://api.gbif.org/v1/species/search?q=Quercus&rank=GENUS"
+      ],
+      "data_quality": "Variable quality - depends on data publisher standards and verification",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "Massive database with over 1.4 billion records. Data quality varies significantly. Strong API documentation with R and Python client libraries available.",
+      "api_summary": "The GBIF API provides researchers, conservationists, and policymakers with unprecedented access to the world's largest collection of biodiversity data, enabling species distribution modeling, conservation planning, and ecological research at local to global scales. As the backbone of global biodiversity informatics, it facilitates evidence-based conservation decisions and scientific understanding of species distributions and ecosystem patterns."
+    },
+    "documentation": {
+      "getting_started": "https://www.gbif.org/developer/summary",
+      "api_reference": "https://www.gbif.org/developer/summary",
+      "examples": "https://www.gbif.org/developer/occurrence",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "inaturalist_api",
+    "name": "iNaturalist API",
+    "provider": "iNaturalist",
+    "description": "REST API providing access to community-contributed biodiversity observations, species identifications, and taxonomic data from the world's largest nature crowdsourcing platform. Includes photos, locations, and expert identifications from millions of naturalists worldwide.",
+    "discovery_status": "documented",
+    "tags": ["inaturalist", "citizen-science", "biodiversity", "observations", "crowdsourcing", "nature"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "Free access with community data sharing principles",
+      "rate_limits": "60 requests per minute per IP address"
+    },
+    "technical_info": {
+      "base_url": "https://api.inaturalist.org/v1/",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "None for public data - OAuth for user-specific actions",
+      "endpoints": [
+        {
+          "path": "observations",
+          "full_url": "https://api.inaturalist.org/v1/observations",
+          "method": "GET",
+          "description": "Searches species observations with location, date, quality, and taxonomic filtering options",
+          "documentation_link": "https://www.inaturalist.org/pages/api+reference",
+          "parameters": ["q", "taxon_id", "place_id", "lat", "lng", "radius", "d1", "d2", "quality_grade"],
+          "response_format": "JSON with observation records and photos"
+        },
+        {
+          "path": "taxa",
+          "full_url": "https://api.inaturalist.org/v1/taxa",
+          "method": "GET",
+          "description": "Searches taxonomic information including common names, photos, and conservation status",
+          "documentation_link": "https://www.inaturalist.org/pages/api+reference",
+          "parameters": ["q", "rank", "is_active", "parent_id", "all_names"],
+          "response_format": "JSON with taxonomic data and images"
+        },
+        {
+          "path": "places",
+          "full_url": "https://api.inaturalist.org/v1/places",
+          "method": "GET",
+          "description": "Returns geographic places and administrative boundaries with observation statistics",
+          "documentation_link": "https://www.inaturalist.org/pages/api+reference",
+          "parameters": ["q", "place_type", "nelat", "nelng", "swlat", "swlng"],
+          "response_format": "JSON with place information"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Species Observations", "Photos", "Sounds", "Taxonomic Data", "Geographic Data", "Phenology", "Community Identifications", "Research Grade Data", "Conservation Data"],
+      "geographic_scope": "Global coverage with strong representation in populated areas",
+      "update_frequency": "Real-time updates as community contributes observations",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.inaturalist.org/pages/api+reference",
+      "sample_endpoints": [
+        "https://api.inaturalist.org/v1/observations?quality_grade=research&taxon_id=3&place_id=1",
+        "https://api.inaturalist.org/v1/taxa?q=Quercus&rank=genus"
+      ],
+      "data_quality": "Community-verified with research grade designations for high-quality records",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "Large citizen science database with over 100 million observations. Quality filtering available through research grade designation. Rich photo and location data.",
+      "api_summary": "The iNaturalist API provides access to one of the world's largest citizen science biodiversity databases, enabling researchers to leverage millions of community-contributed species observations for ecological research, conservation planning, and biodiversity monitoring. The platform's unique combination of crowd-sourced observations, expert identifications, and rich multimedia content creates valuable datasets for understanding species distributions and ecosystem health."
+    },
+    "documentation": {
+      "getting_started": "https://www.inaturalist.org/pages/api+reference",
+      "api_reference": "https://www.inaturalist.org/pages/api+reference",
+      "examples": "https://www.inaturalist.org/pages/api+reference",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "ebird_api",
+    "name": "eBird API",
+    "provider": "Cornell Lab of Ornithology",
+    "description": "REST API providing access to the world's largest biodiversity citizen science database focused on bird observations. Includes real-time bird sightings, species distributions, abundance data, and migration patterns from millions of birdwatchers globally.",
+    "discovery_status": "documented",
+    "tags": ["ebird", "birds", "ornithology", "citizen-science", "cornell", "biodiversity"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Free with API key registration",
+      "rate_limits": "100 requests per minute per API key"
+    },
+    "technical_info": {
+      "base_url": "https://api.ebird.org/v2/",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key in header (X-eBirdApiToken)",
+      "endpoints": [
+        {
+          "path": "data/obs/{regionCode}/recent",
+          "full_url": "https://api.ebird.org/v2/data/obs/{regionCode}/recent",
+          "method": "GET",
+          "description": "Returns recent bird observations from specified geographic region with species and count data",
+          "documentation_link": "https://documenter.getpostman.com/view/664302/S1ENwy59",
+          "parameters": ["regionCode", "back", "maxResults", "locale", "hotspot"],
+          "response_format": "JSON with recent bird observations"
+        },
+        {
+          "path": "data/obs/{regionCode}/recent/{speciesCode}",
+          "full_url": "https://api.ebird.org/v2/data/obs/{regionCode}/recent/{speciesCode}",
+          "method": "GET",
+          "description": "Gets recent observations for specific bird species in geographic region",
+          "documentation_link": "https://documenter.getpostman.com/view/664302/S1ENwy59",
+          "parameters": ["regionCode", "speciesCode", "back", "maxResults", "includeProvisional"],
+          "response_format": "JSON with species-specific observations"
+        },
+        {
+          "path": "data/obs/geo/recent",
+          "full_url": "https://api.ebird.org/v2/data/obs/geo/recent",
+          "method": "GET",
+          "description": "Retrieves recent bird observations within specified geographic coordinates and radius",
+          "documentation_link": "https://documenter.getpostman.com/view/664302/S1ENwy59",
+          "parameters": ["lat", "lng", "dist", "back", "maxResults"],
+          "response_format": "JSON with geographic bird observations"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Bird Observations", "Species Abundance", "Geographic Distributions", "Seasonal Patterns", "Migration Data", "Hotspot Locations", "Rare Bird Alerts", "Historical Records", "Breeding Data"],
+      "geographic_scope": "Global coverage with detailed data for most countries",
+      "update_frequency": "Real-time updates as observers submit checklists",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://documenter.getpostman.com/view/664302/S1ENwy59",
+      "sample_endpoints": [
+        "https://api.ebird.org/v2/data/obs/US-NY/recent",
+        "https://api.ebird.org/v2/data/obs/geo/recent?lat=42.46&lng=-76.51&dist=25"
+      ],
+      "data_quality": "High quality citizen science data with review processes for rare species",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "World's largest bird database with over 1 billion observations. Strong data quality controls and expert review for unusual records. Excellent API documentation.",
+      "api_summary": "The eBird API provides researchers, conservationists, and bird enthusiasts with access to the world's largest and most comprehensive bird observation database, enabling studies of avian ecology, migration patterns, population trends, and conservation status assessment. Managed by the Cornell Lab of Ornithology, it represents a premier example of citizen science contributing to scientific research and conservation decision-making."
+    },
+    "documentation": {
+      "getting_started": "https://ebird.org/api/keygen",
+      "api_reference": "https://documenter.getpostman.com/view/664302/S1ENwy59",
+      "examples": "https://documenter.getpostman.com/view/664302/S1ENwy59",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "obis_api",
+    "name": "Ocean Biogeographic Information System API",
+    "provider": "Ocean Biogeographic Information System",
+    "description": "REST API providing access to marine biodiversity data including species occurrences, taxonomic information, and environmental data from global ocean surveys and research programs. Serves as the primary repository for marine species distribution and abundance information.",
+    "discovery_status": "documented",
+    "tags": ["marine", "ocean", "biodiversity", "species", "oceanography", "taxonomy"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "Free access under OBIS data sharing principles",
+      "rate_limits": "No explicit limits documented"
+    },
+    "technical_info": {
+      "base_url": "https://api.obis.org/",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "None - open access",
+      "endpoints": [
+        {
+          "path": "occurrence",
+          "full_url": "https://api.obis.org/occurrence",
+          "method": "GET",
+          "description": "Searches marine species occurrence records with taxonomic, geographic, and temporal filters",
+          "documentation_link": "https://api.obis.org/",
+          "parameters": ["scientificname", "geometry", "startdate", "enddate", "startdepth", "enddepth"],
+          "response_format": "JSON with marine occurrence records"
+        },
+        {
+          "path": "taxon",
+          "full_url": "https://api.obis.org/taxon",
+          "method": "GET",
+          "description": "Returns taxonomic information for marine species including classification hierarchy",
+          "documentation_link": "https://api.obis.org/",
+          "parameters": ["scientificname", "aphiaid", "rank"],
+          "response_format": "JSON with taxonomic data"
+        },
+        {
+          "path": "statistics",
+          "full_url": "https://api.obis.org/statistics",
+          "method": "GET",
+          "description": "Provides summary statistics on marine biodiversity data coverage and completeness",
+          "documentation_link": "https://api.obis.org/",
+          "parameters": ["geometry", "scientificname", "dataset"],
+          "response_format": "JSON with statistical summaries"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Marine Species Occurrences", "Taxonomic Classifications", "Bathymetric Data", "Ocean Survey Data", "Biodiversity Indices", "Conservation Status", "Environmental Data", "Research Collections"],
+      "geographic_scope": "Global ocean coverage including all marine environments",
+      "update_frequency": "Regular updates from contributing research institutions",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api.obis.org/",
+      "sample_endpoints": [
+        "https://api.obis.org/occurrence?scientificname=Gadus morhua&geometry=POLYGON((-10 50, 10 50, 10 60, -10 60, -10 50))",
+        "https://api.obis.org/taxon?scientificname=Cetacea"
+      ],
+      "data_quality": "Research-grade marine biodiversity data from scientific institutions",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "Comprehensive global marine biodiversity database. Strong integration with taxonomic authorities. Geographic and depth filtering capabilities for marine environments.",
+      "api_summary": "The OBIS API provides marine researchers, conservationists, and ecosystem managers with authoritative access to the world's most comprehensive database of marine species distributions and biodiversity information. As the official data system for marine biodiversity under the International Oceanographic Commission, it enables evidence-based marine conservation, ecosystem assessment, and oceanographic research across all ocean basins."
+    },
+    "documentation": {
+      "getting_started": "https://api.obis.org/",
+      "api_reference": "https://api.obis.org/",
+      "examples": "https://api.obis.org/",
+      "changelog": null,
+      "status_page": null
+    }
+  }
+]

@@ -1,0 +1,577 @@
+{
+  "comprehensive_api_research_output": {
+    "research_date": "2025-07-30",
+    "api_count": 5,
+    "apis": [
+      {
+        "name": "Reonomy",
+        "category": "Real Estate Intelligence",
+        "description": "Commercial real estate intelligence API delivering property data, ownership information, mortgage information, and comprehensive CRE analytics",
+        "website": "https://www.reonomy.com",
+        "technical_info": {
+          "base_url": "https://api.reonomy.com/v2",
+          "protocol": "REST",
+          "data_formats": ["JSON"],
+          "auth_method": "api_key",
+          "authentication_details": {
+            "method": "HTTP Basic Authentication",
+            "header": "Authorization",
+            "format": "base64(access_key:secret_key)",
+            "token_type": "Access Token",
+            "token_location": "Header"
+          },
+          "rate_limits": {
+            "general": "5 requests per second",
+            "bulk_operations": "Sequential processing, 1 job at a time",
+            "status_code_on_limit": 429
+          },
+          "endpoints": [
+            {
+              "path": "/search/summaries",
+              "full_url": "https://api.reonomy.com/v2/search/summaries",
+              "method": "POST",
+              "description": "Search for properties that meet specific criteria (sales price, mortgage dates, etc.)",
+              "documentation_link": "https://api.reonomy.com/v2/docs/guides/search/",
+              "parameters": ["settings", "limit", "search_token"],
+              "response_format": "JSON with property IDs, coordinates, and metadata"
+            },
+            {
+              "path": "/resolve/property",
+              "full_url": "https://api.reonomy.com/v2/resolve/property",
+              "method": "POST",
+              "description": "Search for specific property using address, geolocation, or place name",
+              "documentation_link": "https://api.reonomy.com/v2/docs/guides/search/",
+              "parameters": ["address", "lat", "lng", "place_name"],
+              "response_format": "JSON with resolved property ID and details"
+            },
+            {
+              "path": "/property/{id}",
+              "full_url": "https://api.reonomy.com/v2/property/{id}",
+              "method": "GET",
+              "description": "Get detailed information about a single property",
+              "documentation_link": "https://api.reonomy.com/v2/docs/api/reference/",
+              "parameters": ["property_id", "detail_type"],
+              "response_format": "JSON with comprehensive property data"
+            },
+            {
+              "path": "/property/bulk",
+              "full_url": "https://api.reonomy.com/v2/property/bulk",
+              "method": "POST",
+              "description": "Get detailed information about multiple properties",
+              "documentation_link": "https://api.reonomy.com/v2/docs/api/reference/",
+              "parameters": ["property_ids", "detail_types"],
+              "response_format": "JSON array with property data"
+            },
+            {
+              "path": "/jobs/file",
+              "full_url": "https://api.reonomy.com/v2/jobs/file",
+              "method": "POST",
+              "description": "Submit batch jobs for bulk property data download (up to 1M properties)",
+              "documentation_link": "https://api.reonomy.com/v2/docs/guides/batch-jobs/",
+              "parameters": ["job_type", "job_spec", "file"],
+              "response_format": "JSON with job ID and status"
+            }
+          ],
+          "data_types": [
+            "Property details",
+            "Ownership information", 
+            "Mortgage information",
+            "Sales history",
+            "Tax records",
+            "Contact information",
+            "Building characteristics",
+            "Zoning information"
+          ],
+          "documentation_sections": {
+            "getting_started": "https://api.reonomy.com/v2/docs/guides/getting-started/",
+            "authentication": "https://api.reonomy.com/v2/docs/api/basics/",
+            "endpoints_reference": "https://api.reonomy.com/v2/docs/api/reference/",
+            "code_examples": "https://api.reonomy.com/v2/docs/guides/getting-started/",
+            "sdks_libraries": "Not specified"
+          }
+        },
+        "pricing": {
+          "model": "Enterprise only",
+          "access_requirement": "Contact sales@reonomy.com for API access",
+          "billing_method": "Property data-based billing (not API calls)",
+          "free_tier": false,
+          "notes": "Available only to authorized users, requires approval process"
+        },
+        "coverage": {
+          "geographic": "United States commercial real estate",
+          "data_volume": "54M+ properties, 68M+ owners, 5.2M+ contact records, 30M+ records",
+          "update_frequency": "Weekly data pipeline"
+        }
+      },
+      {
+        "name": "Cherre",
+        "category": "Real Estate Data Platform",
+        "description": "Real estate data aggregation and normalization platform providing unified access to property, market, and analytics data through GraphQL API",
+        "website": "https://cherre.com",
+        "technical_info": {
+          "base_url": "https://api.cherre.com",
+          "protocol": "GraphQL",
+          "data_formats": ["JSON"],
+          "auth_method": "api_key",
+          "authentication_details": {
+            "method": "API Key",
+            "header": "Authorization",
+            "token_location": "Header",
+            "signup_required": true
+          },
+          "rate_limits": {
+            "status": "Not specified in public documentation"
+          },
+          "endpoints": [
+            {
+              "path": "/graphql",
+              "full_url": "https://api.cherre.com/graphql",
+              "method": "POST",
+              "description": "Main GraphQL endpoint for querying real estate data",
+              "documentation_link": "https://cherre.com/coreconnect/api/",
+              "parameters": ["query", "variables", "operationName"],
+              "response_format": "JSON with data, errors, and extensions"
+            },
+            {
+              "path": "/autocomplete",
+              "full_url": "https://api.cherre.com/autocomplete",
+              "method": "GET",
+              "description": "Autocomplete API for property and location search",
+              "documentation_link": "https://status.cherre.com/",
+              "parameters": ["query", "type", "limit"],
+              "response_format": "JSON with autocomplete suggestions"
+            },
+            {
+              "path": "/search",
+              "full_url": "https://api.cherre.com/search",
+              "method": "GET",
+              "description": "Search API for properties and locations",
+              "documentation_link": "https://status.cherre.com/",
+              "parameters": ["query", "filters", "sort", "limit", "offset"],
+              "response_format": "JSON with search results and metadata"
+            },
+            {
+              "path": "/validation",
+              "full_url": "https://api.cherre.com/validation",
+              "method": "POST",
+              "description": "Address and property validation API",
+              "documentation_link": "https://status.cherre.com/",
+              "parameters": ["address", "property_data"],
+              "response_format": "JSON with validation results"
+            }
+          ],
+          "data_types": [
+            "Property records",
+            "Transaction history",
+            "Market analytics",
+            "Building characteristics",
+            "Ownership data",
+            "Financial metrics",
+            "Zoning information",
+            "Demographics"
+          ],
+          "documentation_sections": {
+            "getting_started": "https://cherre.com/signup-coreconnect/",
+            "authentication": "https://cherre.com/coreconnect/api/",
+            "endpoints_reference": "https://cherre.com/coreconnect/api/",
+            "code_examples": "Available in developer portal",
+            "sdks_libraries": "Not specified"
+          }
+        },
+        "pricing": {
+          "model": "Subscription-based",
+          "access_requirement": "Free account signup required",
+          "free_tier": true,
+          "tiers": [
+            {
+              "name": "Developer",
+              "price": "Free",
+              "features": ["Basic API access", "Limited queries", "Developer portal access"]
+            },
+            {
+              "name": "Enterprise",
+              "price": "Contact for pricing",
+              "features": ["Full API access", "Unlimited queries", "Premium support", "Custom integrations"]
+            }
+          ],
+          "billing_method": "Subscription with query limits"
+        },
+        "coverage": {
+          "geographic": "United States real estate data",
+          "data_sources": "Multiple MLS, public records, and third-party data providers",
+          "update_frequency": "Real-time and daily updates"
+        }
+      },
+      {
+        "name": "Measurabl",
+        "category": "ESG/Sustainability",
+        "description": "ESG data management platform for real estate providing sustainability metrics, energy data, carbon emissions tracking, and ESG reporting",
+        "website": "https://www.measurabl.com",
+        "technical_info": {
+          "base_url": "https://api.measurabl.com",
+          "protocol": "REST",
+          "data_formats": ["JSON"],
+          "auth_method": "api_key",
+          "authentication_details": {
+            "method": "API Key",
+            "header": "X-Api-Key",
+            "access_requirement": "Premium Tier subscription or Partner status",
+            "json_api_spec": true
+          },
+          "rate_limits": {
+            "status": "Not specified in documentation"
+          },
+          "endpoints": [
+            {
+              "path": "/properties",
+              "full_url": "https://api.measurabl.com/properties",
+              "method": "GET",
+              "description": "Retrieve property portfolio data and ESG metrics",
+              "documentation_link": "https://www.measurabl.com/measurabl-api-faq/",
+              "parameters": ["portfolio_id", "property_id", "filters"],
+              "response_format": "JSON:API format with property ESG data"
+            },
+            {
+              "path": "/utility-data",
+              "full_url": "https://api.measurabl.com/utility-data",
+              "method": "GET/POST",
+              "description": "Access and submit utility consumption data",
+              "documentation_link": "https://www.measurabl.com/measurabl-api-faq/",
+              "parameters": ["property_id", "date_range", "utility_type"],
+              "response_format": "JSON:API format with utility data"
+            },
+            {
+              "path": "/carbon-emissions",
+              "full_url": "https://api.measurabl.com/carbon-emissions",
+              "method": "GET",
+              "description": "Retrieve calculated carbon emissions (Scope 1 & 2)",
+              "documentation_link": "https://www.measurabl.com/measurabl-api-faq/",
+              "parameters": ["property_id", "date_range", "scope"],
+              "response_format": "JSON:API format with emissions data"
+            },
+            {
+              "path": "/certifications",
+              "full_url": "https://api.measurabl.com/certifications",
+              "method": "GET/POST",
+              "description": "Manage green building certifications (LEED, BREEAM, ENERGY STAR)",
+              "documentation_link": "https://www.measurabl.com/measurabl-api-faq/",
+              "parameters": ["property_id", "certification_type", "status"],
+              "response_format": "JSON:API format with certification data"
+            },
+            {
+              "path": "/reports",
+              "full_url": "https://api.measurabl.com/reports",
+              "method": "GET/POST",
+              "description": "Generate ESG reports for frameworks like GRESB, CDP, TCFD",
+              "documentation_link": "https://www.measurabl.com/measurabl-api-faq/",
+              "parameters": ["report_type", "portfolio_id", "format"],
+              "response_format": "JSON:API format with report data"
+            }
+          ],
+          "data_types": [
+            "Utility consumption data",
+            "Carbon emissions (Scope 1 & 2)",
+            "Energy performance metrics",
+            "Water usage data",
+            "Waste management data",
+            "Green building certifications",
+            "Physical climate risk data",
+            "ESG benchmark comparisons"
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.measurabl.com/measurabl-api-faq/",
+            "authentication": "https://www.measurabl.com/measurabl-api-faq/",
+            "endpoints_reference": "Contact sales@measurabl.com",
+            "code_examples": "Available in API documentation",
+            "sdks_libraries": "Not specified"
+          }
+        },
+        "pricing": {
+          "model": "Subscription-based",
+          "access_requirement": "Premium Tier subscription required",
+          "free_tier": true,
+          "tiers": [
+            {
+              "name": "Free",
+              "price": "$0",
+              "features": ["Basic ESG tracking", "Limited portfolio size", "Basic reporting"]
+            },
+            {
+              "name": "Premium",
+              "price": "Contact for pricing",
+              "features": ["Full API access", "Unlimited properties", "Advanced analytics", "Custom reporting", "Priority support"]
+            }
+          ],
+          "billing_method": "Annual subscription",
+          "api_access": "Premium Tier or Partner status required"
+        },
+        "coverage": {
+          "geographic": "Global (93 countries)",
+          "data_volume": "18 billion square feet tracked, 1,000+ customers",
+          "update_frequency": "Real-time utility data collection, daily processing"
+        }
+      },
+      {
+        "name": "WeatherAlpha",
+        "category": "Weather Data",
+        "description": "Weather data and health condition analytics for advertising and marketing applications, providing current, forecast, and specialized weather conditions",
+        "website": "https://www.weatheralpha.com",
+        "technical_info": {
+          "base_url": "https://api.weatheralpha.com",
+          "protocol": "REST",
+          "data_formats": ["JSON", "XML"],
+          "auth_method": "api_key",
+          "authentication_details": {
+            "method": "API Key",
+            "delivery_method": "Via DSP integrations, ad servers, and direct API",
+            "platforms": ["The Trade Desk", "LiveRamp", "iHeart Media", "Aki", "UBIMO", "FlashTalking"]
+          },
+          "rate_limits": {
+            "status": "Varies by condition type and subscription"
+          },
+          "endpoints": [
+            {
+              "path": "/current",
+              "full_url": "https://api.weatheralpha.com/current",
+              "method": "GET",
+              "description": "Current weather conditions by zip code",
+              "documentation_link": "https://www.weatheralpha.com/about/faq",
+              "parameters": ["zip_code", "condition_type"],
+              "response_format": "JSON with current weather data"
+            },
+            {
+              "path": "/forecast",
+              "full_url": "https://api.weatheralpha.com/forecast",
+              "method": "GET",
+              "description": "Weather forecast data by location",
+              "documentation_link": "https://www.weatheralpha.com/about/faq",
+              "parameters": ["zip_code", "days", "condition_type"],
+              "response_format": "JSON with forecast data"
+            },
+            {
+              "path": "/historical",
+              "full_url": "https://api.weatheralpha.com/historical",
+              "method": "GET",
+              "description": "Historical weather data",
+              "documentation_link": "https://www.weatheralpha.com/about/faq",
+              "parameters": ["zip_code", "date_range", "condition_type"],
+              "response_format": "JSON with historical weather data"
+            },
+            {
+              "path": "/health-conditions",
+              "full_url": "https://api.weatheralpha.com/health-conditions",
+              "method": "GET",
+              "description": "Health-related conditions (pollen, cold/flu, migraine triggers)",
+              "documentation_link": "https://www.weatheralpha.com/about/faq",
+              "parameters": ["zip_code", "condition_type", "date_range"],
+              "response_format": "JSON with health condition data"
+            },
+            {
+              "path": "/specialty-conditions",
+              "full_url": "https://api.weatheralpha.com/specialty-conditions",
+              "method": "GET",
+              "description": "Specialized conditions (hazardous driving, departure from normal)",
+              "documentation_link": "https://www.weatheralpha.com/about/faq",
+              "parameters": ["zip_code", "condition_type"],
+              "response_format": "JSON with specialty condition data"
+            }
+          ],
+          "data_types": [
+            "Current weather conditions",
+            "Weather forecasts",
+            "Historical weather data",
+            "Pollen levels",
+            "Cold and flu indices",
+            "Migraine triggers",
+            "Hazardous driving conditions",
+            "Seasonal health conditions"
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.weatheralpha.com/about/faq",
+            "authentication": "Contact hello@weatheralpha.com",
+            "endpoints_reference": "https://www.weatheralpha.com/about/faq",
+            "code_examples": "Available upon request",
+            "sdks_libraries": "Platform-specific integrations available"
+          }
+        },
+        "pricing": {
+          "model": "CPM-based (Cost Per Mille)",
+          "billing_method": "Pay per thousand impressions",
+          "free_tier": false,
+          "pricing_tiers": [
+            {
+              "condition_type": "Past Weather",
+              "price": "$0.45 CPM"
+            },
+            {
+              "condition_type": "Current Weather",
+              "price": "$0.55 CPM"
+            },
+            {
+              "condition_type": "Forecast Weather",
+              "price": "$0.65 CPM"
+            },
+            {
+              "condition_type": "Specialty Conditions",
+              "price": "$0.75 CPM",
+              "includes": ["WeatherAlpha Pollen model", "WeatherAlpha Cold Flu", "Departure from Normal"]
+            },
+            {
+              "condition_type": "Product Specific Conditions",
+              "price": "$0.75 CPM"
+            },
+            {
+              "condition_type": "Custom Conditions",
+              "price": "$0.75 CPM"
+            },
+            {
+              "condition_type": "IQVIA Health Conditions",
+              "price": "$1.50 CPM",
+              "subscription_available": true
+            }
+          ],
+          "additional_features": ["No minimums", "No setup fees", "Pre-campaign consultation", "Mid-campaign reviews", "Post-campaign summaries"]
+        },
+        "coverage": {
+          "geographic": "United States (zip code level)",
+          "data_sources": ["Public sources (EPA, NWS)", "Private sources (IQVIA)"],
+          "update_frequency": {
+            "extreme_weather": "Every 15 minutes",
+            "current_conditions": "Every hour",
+            "forecasts": "Every 4-6 hours",
+            "seasonal_health": "Daily",
+            "general_health": "Monthly"
+          }
+        }
+      },
+      {
+        "name": "ClimateAI",
+        "category": "Climate Analytics",
+        "description": "Climate data and analytics API providing weather data, climatology, historical data, and forecast information for climate risk assessment and agricultural applications",
+        "website": "https://climateai.redoc.ly/",
+        "technical_info": {
+          "base_url": "https://api.climateai.com",
+          "protocol": "REST",
+          "data_formats": ["JSON"],
+          "auth_method": "api_key",
+          "authentication_details": {
+            "method": "API Key",
+            "header": "X-Api-Key",
+            "access_requirement": "Contact sales team for API key"
+          },
+          "rate_limits": {
+            "status": "Not specified in documentation"
+          },
+          "endpoints": [
+            {
+              "path": "/history",
+              "full_url": "https://api.climateai.com/history",
+              "method": "GET",
+              "description": "Historical weather data for last 366 days",
+              "documentation_link": "https://climateai.redoc.ly/",
+              "parameters": ["lat", "lon", "var"],
+              "response_format": "JSON with historical data and metadata"
+            },
+            {
+              "path": "/history/location/{id}",
+              "full_url": "https://api.climateai.com/history/location/{id}",
+              "method": "GET", 
+              "description": "Historical data for specific location ID",
+              "documentation_link": "https://climateai.redoc.ly/",
+              "parameters": ["location_id", "var"],
+              "response_format": "JSON with location-specific historical data"
+            },
+            {
+              "path": "/climatology",
+              "full_url": "https://api.climateai.com/climatology",
+              "method": "GET",
+              "description": "Long-term climate data for given coordinates",
+              "documentation_link": "https://climateai.redoc.ly/",
+              "parameters": ["lat", "lon", "var"],
+              "response_format": "JSON with climatological data"
+            },
+            {
+              "path": "/forecast",
+              "full_url": "https://api.climateai.com/forecast",
+              "method": "GET",
+              "description": "Weather forecast and seasonal predictions",
+              "documentation_link": "https://climateai.redoc.ly/",
+              "parameters": ["lat", "lon", "var", "forecast_type"],
+              "response_format": "JSON with forecast data and probabilities"
+            }
+          ],
+          "data_variables": [
+            "evapotranspiration",
+            "humidity", 
+            "soil_moisture",
+            "solar_radiation",
+            "soil_temperature",
+            "temp_mean",
+            "temp_max",
+            "temp_min",
+            "precipitation",
+            "wind_speed",
+            "max_wind_speed",
+            "max_wind_gust"
+          ],
+          "data_types": [
+            "Historical weather data",
+            "Climatological data",
+            "Seasonal forecasts",
+            "Soil conditions",
+            "Agricultural metrics",
+            "Climate risk indicators",
+            "Ensemble predictions",
+            "Probability distributions"
+          ],
+          "documentation_sections": {
+            "getting_started": "https://climateai.redoc.ly/",
+            "authentication": "https://climateai.redoc.ly/",
+            "endpoints_reference": "https://climateai.redoc.ly/",
+            "code_examples": "Available in API documentation",
+            "sdks_libraries": "Node.js, JavaScript, Python, Java, Go samples provided"
+          }
+        },
+        "pricing": {
+          "model": "Enterprise/Contact-based",
+          "access_requirement": "Contact sales team for API key and pricing",
+          "free_tier": false,
+          "billing_method": "Custom pricing based on usage and requirements",
+          "contact": "Sales team contact required for access"
+        },
+        "coverage": {
+          "geographic": "Global coverage",
+          "data_resolution": "High-resolution gridded data",
+          "historical_range": "Last 366 days for history endpoint",
+          "forecast_range": "Seasonal forecasts available",
+          "update_frequency": "Regular updates for forecast data"
+        }
+      }
+    ],
+    "research_summary": {
+      "total_apis_researched": 5,
+      "categories_covered": [
+        "Real Estate Intelligence",
+        "Real Estate Data Platform", 
+        "ESG/Sustainability",
+        "Weather Data",
+        "Climate Analytics"
+      ],
+      "common_patterns": {
+        "authentication": "API key-based authentication is standard",
+        "data_formats": "JSON is the primary data format across all APIs",
+        "access_models": ["Enterprise-only", "Freemium", "Subscription-based", "CPM-based"],
+        "documentation_quality": "Varies from comprehensive to limited public access"
+      },
+      "enterprise_focus": {
+        "apis": ["Reonomy", "Cherre", "Measurabl", "ClimateAI"],
+        "characteristics": ["B2B focused", "Contact sales for pricing", "Premium tier requirements"]
+      },
+      "data_integration_potential": {
+        "real_estate_focus": ["Reonomy", "Cherre", "Measurabl"],
+        "environmental_data": ["Measurabl", "WeatherAlpha", "ClimateAI"],
+        "risk_assessment": ["All APIs provide risk-related data"]
+      }
+    }
+  }
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "id": "unacast",
+    "name": "Unacast Location Intelligence API",
+    "provider": "Unacast",
+    "description": "Privacy-compliant location intelligence platform providing first-party mobility data and insights including footfall measurement, visit duration, and demographic analytics for retail, real estate, and public health applications.",
+    "discovery_status": "documented",
+    "tags": ["location intelligence", "mobility data", "footfall analytics", "privacy-compliant", "retail insights"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom pricing ranging from $1 per API call to $50,000 annually based on data scope and requirements",
+      "rate_limits": "Enterprise-specific limits based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.unacast.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "JWT tokens via Authorization header",
+      "endpoints": [
+        {
+          "path": "/v1/visitations",
+          "full_url": "https://api.unacast.com/v1/visitations",
+          "method": "GET",
+          "description": "Query footfall and visitation metrics for specified locations",
+          "documentation_link": "https://docs.unacast.com/visitations-api",
+          "parameters": ["location_id", "date_range", "metrics"],
+          "response_format": "JSON with footfall metrics and demographics"
+        },
+        {
+          "path": "/v1/audiences",
+          "full_url": "https://api.unacast.com/v1/audiences",
+          "method": "POST",
+          "description": "Create and manage audience segments based on location behavior",
+          "documentation_link": "https://docs.unacast.com/audiences-api",
+          "parameters": ["audience_definition", "location_criteria", "time_period"],
+          "response_format": "JSON audience segment data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Footfall measurement", "Visit duration", "Popular times", "Trade areas", "Demographics", "Audience analytics"],
+      "geographic_scope": "Global coverage across 247 countries",
+      "update_frequency": "Real-time and daily aggregations",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://docs.unacast.com",
+      "api_summary": "Unacast provides location intelligence APIs that transform mobility data into actionable business insights while maintaining strict privacy compliance. The platform processes 60-70 billion daily location signals to deliver metrics on footfall, visit patterns, and demographic analytics for retail, real estate, and public health applications.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://docs.unacast.com/getting-started",
+      "api_reference": "https://docs.unacast.com/api-reference",
+      "examples": "https://docs.unacast.com/examples",
+      "changelog": "https://docs.unacast.com/changelog",
+      "status_page": "https://status.unacast.com"
+    }
+  },
+  {
+    "id": "near",
+    "name": "Near Intelligence API (Discontinued)",
+    "provider": "Near Intelligence Inc. (Bankrupt 2023)",
+    "description": "Former location intelligence platform that provided consumer behavior insights through geospatial data analytics for retail, advertising, and market research applications. Service discontinued following bankruptcy in 2023.",
+    "discovery_status": "documented",
+    "tags": ["location intelligence", "consumer behavior", "geospatial analytics", "discontinued", "bankruptcy"],
+    "access_info": {
+      "is_free": null,
+      "requires_api_key": null,
+      "requires_approval": null,
+      "pricing_model": "Service discontinued - previously subscription-based with custom enterprise pricing",
+      "rate_limits": "Service no longer available"
+    },
+    "technical_info": {
+      "base_url": "https://api.near.com (discontinued)",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API keys (historical)",
+      "endpoints": [
+        {
+          "path": "/api/v1/location/foot-traffic",
+          "full_url": "https://api.near.com/api/v1/location/foot-traffic",
+          "method": "GET",
+          "description": "Historical endpoint for querying foot traffic data",
+          "documentation_link": "Documentation no longer available",
+          "parameters": ["location_id", "date_range"],
+          "response_format": "JSON foot traffic metrics (historical)"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Foot traffic analytics", "Demographic data", "Retail insights", "Marketing analytics"],
+      "geographic_scope": "Global (when operational)",
+      "update_frequency": "Real-time (when operational)",
+      "historical_data": null
+    },
+    "research_notes": {
+      "documentation_url": "No longer available",
+      "api_summary": "Near Intelligence was a location intelligence company that specialized in consumer behavior insights through geospatial data analytics. Despite filing for bankruptcy in 2023, the platform historically provided APIs for retail foot traffic analysis, demographic segmentation, and location-based marketing insights.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "No longer available",
+      "api_reference": "No longer available",
+      "examples": "No longer available",
+      "changelog": "No longer available",
+      "status_page": "No longer available"
+    }
+  },
+  {
+    "id": "foursquare",
+    "name": "Foursquare Places API",
+    "provider": "Foursquare Labs Inc.",
+    "description": "Comprehensive location platform providing real-time venue search, place data enrichment, and geospatial intelligence with a global database of 100+ million POIs enriched by 16 billion user-verified check-ins and reviews.",
+    "discovery_status": "documented",
+    "tags": ["places API", "POI data", "venue search", "geospatial intelligence", "location services"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Freemium with $200/month free credits, then tiered pricing from $1.25-$18.75 CPM based on endpoint type and volume",
+      "rate_limits": "QPS limits vary by plan tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.foursquare.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API keys via Authorization Bearer header",
+      "endpoints": [
+        {
+          "path": "/v3/places/search",
+          "full_url": "https://api.foursquare.com/v3/places/search",
+          "method": "GET",
+          "description": "Search for places by name, category, or location with rich metadata",
+          "documentation_link": "https://docs.foursquare.com/reference/place-search",
+          "parameters": ["query", "near", "categories", "radius", "limit"],
+          "response_format": "JSON with place details, location, categories, and metadata"
+        },
+        {
+          "path": "/v3/autocomplete",
+          "full_url": "https://api.foursquare.com/v3/autocomplete",
+          "method": "GET",
+          "description": "Get autocomplete suggestions for place names and addresses",
+          "documentation_link": "https://docs.foursquare.com/reference/autocomplete",
+          "parameters": ["text", "near", "radius", "types"],
+          "response_format": "JSON with autocomplete suggestions and place data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["POI database", "Place search", "Venue information", "Categories and attributes", "Photos and tips", "Real-time popularity"],
+      "geographic_scope": "Global coverage in 200+ countries",
+      "update_frequency": "Real-time updates with community contributions",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://docs.foursquare.com",
+      "api_summary": "Foursquare Places API provides comprehensive location intelligence through a global database of 100+ million POIs. The platform offers real-time venue search, place data enrichment, and geospatial intelligence capabilities, enhanced by 16 billion user-verified check-ins and leveraging H3 geospatial indexing for advanced location-based applications.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://docs.foursquare.com/docs/getting-started",
+      "api_reference": "https://docs.foursquare.com/reference",
+      "examples": "https://docs.foursquare.com/docs/examples",
+      "changelog": "https://docs.foursquare.com/changelog",
+      "status_page": "https://status.foursquare.com"
+    }
+  }
+]

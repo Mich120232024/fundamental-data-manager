@@ -1,0 +1,696 @@
+{
+  "batch_info": {
+    "batch_id": "batch_14_chunk_1",
+    "research_date": "2025-08-02",
+    "total_apis": 5,
+    "schema_version": "enhanced_v2",
+    "focus_area": "Alternative Investment and Private Market Data APIs"
+  },
+  "apis": [
+    {
+      "id": "hedge-fund-research-hfr",
+      "name": "Hedge Fund Research Inc. (HFR) API",
+      "provider": "HFR",
+      "category": "Alternative Investment Database",
+      "description": "Hedge Fund Research (HFR) is the established global leader in indexation, analysis and research of the global hedge fund industry. HFR provides comprehensive data on hedge fund performance, indices, and industry benchmarks through both database subscriptions and index data services.",
+      "use_cases": [
+        "Hedge fund performance benchmarking",
+        "Alternative investment index tracking",
+        "Risk analysis and portfolio management",
+        "Institutional investment research",
+        "Fund-of-funds analysis",
+        "Industry reporting and compliance"
+      ],
+      "target_industries": [
+        "Asset Management",
+        "Hedge Funds",
+        "Institutional Investors",
+        "Investment Banks",
+        "Pension Funds",
+        "Endowments"
+      ],
+      "technical_info": {
+        "base_url": "https://www.hfr.com",
+        "protocol": "REST",
+        "data_formats": [
+          "JSON",
+          "CSV",
+          "XML",
+          "Excel",
+          "SFTP"
+        ],
+        "auth_method": "api_key",
+        "endpoints": [
+          {
+            "path": "/api/indices/hfri",
+            "full_url": "https://www.hfr.com/api/indices/hfri",
+            "method": "GET",
+            "description": "Access to HFRI index performance data across all strategies",
+            "documentation_link": "https://www.hfr.com/hfr-indices/hfr-indices-faq/",
+            "parameters": [
+              "index_family",
+              "date_range",
+              "strategy",
+              "format"
+            ],
+            "response_format": "JSON with index performance metrics and metadata"
+          },
+          {
+            "path": "/api/database/funds",
+            "full_url": "https://www.hfr.com/api/database/funds",
+            "method": "GET", 
+            "description": "Access to hedge fund database with performance and characteristics data",
+            "documentation_link": "https://www.hfr.com/database/hfr-database/field-definitions/",
+            "parameters": [
+              "fund_id",
+              "strategy",
+              "aum_range",
+              "inception_date",
+              "region"
+            ],
+            "response_format": "JSON with fund profiles and performance data"
+          },
+          {
+            "path": "/api/constituents",
+            "full_url": "https://www.hfr.com/api/constituents", 
+            "method": "GET",
+            "description": "Access to index constituent fund information",
+            "documentation_link": "https://www.hfr.com/hfr-indices/hfr-indices-faq/",
+            "parameters": [
+              "index_name",
+              "date",
+              "fund_details"
+            ],
+            "response_format": "JSON with constituent fund details and weights"
+          }
+        ],
+        "documentation_sections": {
+          "getting_started": "https://www.hfr.com/product/hfr-database/",
+          "authentication": "Contact HFR at +1-312-658-0955 for API credentials",
+          "endpoints_reference": "https://www.hfr.com/database/hfr-database/field-definitions/",
+          "code_examples": "Available upon subscription",
+          "sdks_libraries": "Excel, Python, and third-party vendor integrations available"
+        }
+      },
+      "pricing": {
+        "model": "subscription_based",
+        "tiers": [
+          {
+            "name": "HFR Database Standard",
+            "price": "Contact for pricing",
+            "features": [
+              "5-100 users",
+              "Standard index constituents",
+              "Monthly reporting"
+            ]
+          },
+          {
+            "name": "Platinum Institutional",
+            "price": "Contact for pricing", 
+            "features": [
+              "100+ users",
+              "All index families licensing",
+              "Premium constituents access",
+              "Dead funds database"
+            ]
+          }
+        ],
+        "contact_sales": "database@hfr.com or +1-312-658-0955"
+      },
+      "data_coverage": {
+        "geographic_scope": "Global",
+        "historical_data": "Since 1990",
+        "update_frequency": "Monthly for indices, Daily for HFRX",
+        "fund_coverage": "5,800+ investment products from 1,650+ firms"
+      },
+      "compliance_security": {
+        "data_governance": "Institutional grade data validation",
+        "privacy_policy": "https://www.hfr.com/hfr-indices-data-terms-of-use",
+        "security_features": [
+          "API key authentication",
+          "IP whitelisting available",
+          "Secure data transmission"
+        ]
+      },
+      "limitations": [
+        "Commercial license required for API access",
+        "Subscription-based pricing model",
+        "Limited free access to index data",
+        "Authentication required for database access"
+      ],
+      "last_updated": "2025-08-02"
+    },
+    {
+      "id": "preqin-api",
+      "name": "Preqin API",
+      "provider": "Preqin (part of BlackRock)",
+      "category": "Private Capital and Alternative Investment Data",
+      "description": "Preqin provides comprehensive data and analytics on private capital markets including private equity, venture capital, hedge funds, real estate, and infrastructure. The Preqin Data Feeds API provides access to the industry's most comprehensive private capital and hedge fund datasets.",
+      "use_cases": [
+        "Private equity fund analysis",
+        "Venture capital deal sourcing",
+        "Limited partner due diligence",
+        "Market sizing and analysis",
+        "Fundraising benchmarking",
+        "Portfolio company monitoring"
+      ],
+      "target_industries": [
+        "Private Equity",
+        "Venture Capital", 
+        "Hedge Funds",
+        "Real Estate Investment",
+        "Infrastructure Investment",
+        "Asset Management"
+      ],
+      "technical_info": {
+        "base_url": "https://developer.preqin.com/api",
+        "protocol": "REST",
+        "data_formats": [
+          "CSV",
+          "JSON",
+          "XML",
+          "Delimited"
+        ],
+        "auth_method": "oauth",
+        "endpoints": [
+          {
+            "path": "/api/asset/company/currentinvestor",
+            "full_url": "https://developer.preqin.com/api/asset/company/currentinvestor",
+            "method": "GET",
+            "description": "Produces file containing Preqin Company Current Investor data",
+            "documentation_link": "https://developer.preqin.com/swagger-definitions-prod/",
+            "parameters": [
+              "date"
+            ],
+            "response_format": "CSV with company and investor information"
+          },
+          {
+            "path": "/api/asset/company/dealbuyout", 
+            "full_url": "https://developer.preqin.com/api/asset/company/dealbuyout",
+            "method": "GET",
+            "description": "Produces file containing Preqin Company Deal Buyout data",
+            "documentation_link": "https://developer.preqin.com/swagger-definitions-prod/",
+            "parameters": [
+              "date"
+            ],
+            "response_format": "CSV with deal and transaction information"
+          },
+          {
+            "path": "/api/funds/performance",
+            "full_url": "https://developer.preqin.com/api/funds/performance", 
+            "method": "GET",
+            "description": "Access to private capital fund performance data and benchmarks",
+            "documentation_link": "https://docs.preqin.com/pro/Private-Capital-Performance-Guide.pdf",
+            "parameters": [
+              "fund_type",
+              "vintage_year",
+              "strategy",
+              "region"
+            ],
+            "response_format": "CSV with performance metrics and quartile rankings"
+          }
+        ],
+        "documentation_sections": {
+          "getting_started": "https://developer.preqin.com/",
+          "authentication": "Contact apiqueries@preqin.com for OAuth credentials",
+          "endpoints_reference": "https://developer.preqin.com/swagger-definitions-prod/",
+          "code_examples": "Available in documentation",
+          "sdks_libraries": "RESTful API supports multiple programming languages"
+        }
+      },
+      "pricing": {
+        "model": "enterprise_custom",
+        "tiers": [
+          {
+            "name": "Basic Data Feed",
+            "price": "$25,000 - $81,000 annually",
+            "features": [
+              "Core dataset access",
+              "Monthly updates",
+              "Basic support"
+            ]
+          },
+          {
+            "name": "Premium Enterprise", 
+            "price": "Custom pricing",
+            "features": [
+              "Full dataset access",
+              "Real-time updates", 
+              "Dedicated support",
+              "Custom integrations"
+            ]
+          }
+        ],
+        "contact_sales": "Contact Preqin sales team for pricing"
+      },
+      "data_coverage": {
+        "geographic_scope": "Global coverage",
+        "historical_data": "20+ years of historical data",
+        "update_frequency": "Daily and monthly depending on dataset",
+        "coverage_stats": "200,000+ professionals globally use Preqin data"
+      },
+      "compliance_security": {
+        "data_governance": "Rigorous data collection and validation methods",
+        "privacy_policy": "https://www.preqin.com/item/privacy-policy/1592",
+        "security_features": [
+          "OAuth 2.0 authentication",
+          "Client ID and secret management",
+          "Secure API endpoints"
+        ]
+      },
+      "limitations": [
+        "Enterprise-only pricing",
+        "Authentication required for all endpoints",
+        "Limited free trial access",
+        "Custom pricing requires sales contact"
+      ],
+      "last_updated": "2025-08-02"
+    },
+    {
+      "id": "pitchbook-api",
+      "name": "PitchBook API",
+      "provider": "PitchBook Data Inc.",
+      "category": "Private Market Data Platform",
+      "description": "PitchBook provides comprehensive data on private and public capital markets including venture capital, private equity, and M&A transactions. The PitchBook API v2 allows direct, real-time access to their expansive database of companies, deals, people, investors, funds, and service providers.",
+      "use_cases": [
+        "Deal sourcing and screening",
+        "Market research and analysis",
+        "Competitive intelligence",
+        "Fund performance tracking",
+        "Portfolio company monitoring",
+        "Valuation benchmarking"
+      ],
+      "target_industries": [
+        "Venture Capital",
+        "Private Equity",
+        "Investment Banking",
+        "Corporate Development",
+        "Management Consulting",
+        "Financial Services"
+      ],
+      "technical_info": {
+        "base_url": "https://api.pitchbook.com",
+        "protocol": "REST",
+        "data_formats": [
+          "JSON"
+        ],
+        "auth_method": "api_key",
+        "endpoints": [
+          {
+            "path": "/companies",
+            "full_url": "https://api.pitchbook.com/companies",
+            "method": "GET",
+            "description": "Search and retrieve private company information and profiles",
+            "documentation_link": "https://documenter.getpostman.com/view/5190535/TzCV1iRc",
+            "parameters": [
+              "company_id",
+              "name",
+              "industry",
+              "location",
+              "funding_stage"
+            ],
+            "response_format": "JSON with company profiles and business data"
+          },
+          {
+            "path": "/deals",
+            "full_url": "https://api.pitchbook.com/deals",
+            "method": "GET",
+            "description": "Access investment deal and transaction data",
+            "documentation_link": "https://documenter.getpostman.com/view/5190535/TzCV1iRc",
+            "parameters": [
+              "deal_id",
+              "company_id",
+              "investor_id",
+              "deal_type",
+              "date_range"
+            ],
+            "response_format": "JSON with deal details and transaction information"
+          },
+          {
+            "path": "/investors",
+            "full_url": "https://api.pitchbook.com/investors",
+            "method": "GET",
+            "description": "Retrieve investor and fund information",
+            "documentation_link": "https://documenter.getpostman.com/view/5190535/TzCV1iRc",
+            "parameters": [
+              "investor_id",
+              "fund_type",
+              "location",
+              "investment_focus"
+            ],
+            "response_format": "JSON with investor profiles and fund data"
+          },
+          {
+            "path": "/funds",
+            "full_url": "https://api.pitchbook.com/funds",
+            "method": "GET",
+            "description": "Access fund performance and characteristics data",
+            "documentation_link": "https://documenter.getpostman.com/view/5190535/TzCV1iRc",
+            "parameters": [
+              "fund_id",
+              "vintage_year",
+              "strategy",
+              "target_size"
+            ],
+            "response_format": "JSON with fund details and performance metrics"
+          }
+        ],
+        "documentation_sections": {
+          "getting_started": "https://documenter.getpostman.com/view/5190535/TzCV1iRc",
+          "authentication": "PB-Token authentication with API key",
+          "endpoints_reference": "https://documenter.getpostman.com/view/5190535/TzCV1iRc",
+          "code_examples": "Available in Postman documentation",
+          "sdks_libraries": "RESTful API compatible with standard HTTP clients"
+        }
+      },
+      "pricing": {
+        "model": "credit_based",
+        "tiers": [
+          {
+            "name": "API Credits",
+            "price": "Custom pricing based on usage",
+            "features": [
+              "Pay-per-call model",
+              "Each endpoint has defined credit cost",
+              "Sandbox environment for testing"
+            ]
+          },
+          {
+            "name": "Enterprise API",
+            "price": "$30,875 median contract value",
+            "features": [
+              "Higher credit allocations",
+              "Priority support",
+              "Custom integrations"
+            ]
+          }
+        ],
+        "contact_sales": "Contact PitchBook account manager for API credits and pricing"
+      },
+      "data_coverage": {
+        "geographic_scope": "Global coverage",
+        "historical_data": "Comprehensive historical transaction data",
+        "update_frequency": "Real-time updates",
+        "coverage_stats": "5+ million private companies, 560k+ investors, 2.6+ million deals"
+      },
+      "compliance_security": {
+        "data_governance": "Enterprise-grade data quality and validation",
+        "security_features": [
+          "API key authentication", 
+          "Rate limiting and credit controls",
+          "Secure HTTPS endpoints"
+        ]
+      },
+      "limitations": [
+        "Credit-based pricing can be expensive for high usage",
+        "Requires separate API contract from platform access",
+        "Limited free sandbox access",
+        "Must estimate usage for credit purchasing"
+      ],
+      "last_updated": "2025-08-02"
+    },
+    {
+      "id": "cb-insights-api",
+      "name": "CB Insights API",
+      "provider": "CB Insights",
+      "category": "Market Intelligence and Startup Data",
+      "description": "CB Insights provides comprehensive market intelligence on technology companies, startups, and innovation trends. The CB Insights API enables programmatic access to organizations, deals, financial transactions, business relationships, and AI-generated market insights.",
+      "use_cases": [
+        "Technology market research",
+        "Startup ecosystem analysis", 
+        "Competitive intelligence gathering",
+        "Innovation trend tracking",
+        "Investment opportunity sourcing",
+        "Market sizing and analysis"
+      ],
+      "target_industries": [
+        "Technology Startups",
+        "Venture Capital",
+        "Corporate Innovation",
+        "Market Research",
+        "Investment Banking",
+        "Management Consulting"
+      ],
+      "technical_info": {
+        "base_url": "https://api.cbinsights.com",
+        "protocol": "REST",
+        "data_formats": [
+          "JSON"
+        ],
+        "auth_method": "api_key",
+        "endpoints": [
+          {
+            "path": "/v2/companies",
+            "full_url": "https://api.cbinsights.com/v2/companies",
+            "method": "GET", 
+            "description": "Search and retrieve technology company profiles and firmographics",
+            "documentation_link": "https://api-docs.cbinsights.com/v2/",
+            "parameters": [
+              "company_id",
+              "name",
+              "industry",
+              "location",
+              "funding_status"
+            ],
+            "response_format": "JSON with company profiles and business intelligence data"
+          },
+          {
+            "path": "/v2/deals",
+            "full_url": "https://api.cbinsights.com/v2/deals",
+            "method": "GET",
+            "description": "Access funding deals, M&A transactions, and financial data",
+            "documentation_link": "https://api-docs.cbinsights.com/v2/",
+            "parameters": [
+              "deal_id",
+              "company_id",
+              "investor_id",
+              "deal_type",
+              "date_range"
+            ],
+            "response_format": "JSON with deal details and AI-generated insights"
+          },
+          {
+            "path": "/v2/investors",
+            "full_url": "https://api.cbinsights.com/v2/investors",
+            "method": "GET",
+            "description": "Retrieve investor profiles and investment activity",
+            "documentation_link": "https://api-docs.cbinsights.com/v2/",
+            "parameters": [
+              "investor_id",
+              "investor_type",
+              "location",
+              "investment_focus"
+            ],
+            "response_format": "JSON with investor data and portfolio information"
+          },
+          {
+            "path": "/v2/market-insights", 
+            "full_url": "https://api.cbinsights.com/v2/market-insights",
+            "method": "GET",
+            "description": "Access technology market profiles and AI-generated analysis",
+            "documentation_link": "https://api-docs.cbinsights.com/v2/",
+            "parameters": [
+              "market_id",
+              "technology_area",
+              "report_type"
+            ],
+            "response_format": "JSON with market analysis and expert research"
+          }
+        ],
+        "documentation_sections": {
+          "getting_started": "https://api-docs.cbinsights.com/v2/",
+          "authentication": "API key authentication required",
+          "endpoints_reference": "https://api-docs.cbinsights.com/",
+          "code_examples": "Available in API documentation",
+          "sdks_libraries": "RESTful API with standard HTTP client support"
+        }
+      },
+      "pricing": {
+        "model": "subscription_tiered",
+        "tiers": [
+          {
+            "name": "Standard Plan",
+            "price": "Contact for pricing",
+            "features": [
+              "Basic API access",
+              "Company and deal data",
+              "Standard support"
+            ]
+          },
+          {
+            "name": "Enterprise Plan",
+            "price": "Custom pricing",
+            "features": [
+              "Full API access",
+              "AI-powered insights",
+              "ChatCBI access",
+              "Dedicated support"
+            ]
+          }
+        ],
+        "contact_sales": "Contact CB Insights sales team"
+      },
+      "data_coverage": {
+        "geographic_scope": "Global technology markets", 
+        "historical_data": "Comprehensive historical startup and deal data",
+        "update_frequency": "Real-time updates",
+        "coverage_stats": "10+ million companies, 1+ billion data points, 1,500+ market profiles"
+      },
+      "compliance_security": {
+        "data_governance": "Double verified, continually refreshed data",
+        "security_features": [
+          "API key authentication",
+          "Enterprise-grade security",
+          "Secure data transmission"
+        ]
+      },
+      "limitations": [
+        "API v1 is in maintenance mode",
+        "Enterprise pricing model",
+        "Limited free access",
+        "Requires subscription for full functionality"
+      ],
+      "last_updated": "2025-08-02"
+    },
+    {
+      "id": "angellist-api",
+      "name": "AngelList API",
+      "provider": "AngelList",
+      "category": "Startup and Investor Data Platform",
+      "description": "AngelList provides access to startup and investor data through multiple APIs including the Relay API for portfolio management and a GraphQL API for transaction data. The platform connects startups with investors and provides comprehensive data on the startup ecosystem.",
+      "use_cases": [
+        "Startup discovery and research",
+        "Investor portfolio tracking",
+        "Deal sourcing and screening",
+        "Market analysis of startup ecosystem",
+        "Investment transaction management",
+        "Company update monitoring"
+      ],
+      "target_industries": [
+        "Technology Startups",
+        "Angel Investors", 
+        "Venture Capital",
+        "Seed Funding",
+        "Early Stage Investment",
+        "Startup Ecosystem"
+      ],
+      "technical_info": {
+        "base_url": "https://api.relay.angellist.com/v1/external",
+        "protocol": "REST/GraphQL",
+        "data_formats": [
+          "JSON"
+        ],
+        "auth_method": "api_key",
+        "endpoints": [
+          {
+            "path": "/v1/companies",
+            "full_url": "https://api.relay.angellist.com/v1/external/companies",
+            "method": "GET",
+            "description": "Fetch list of companies in portfolio with associated funds",
+            "documentation_link": "https://docs.angellist.com/docs/endpoints",
+            "parameters": [
+              "cursor"
+            ],
+            "response_format": "JSON with company details and fund associations"
+          },
+          {
+            "path": "/v1/company/{id}/updates",
+            "full_url": "https://api.relay.angellist.com/v1/external/company/{id}/updates",
+            "method": "GET",
+            "description": "Get all updates for specific company by ID",
+            "documentation_link": "https://docs.angellist.com/docs/endpoints",
+            "parameters": [
+              "id",
+              "cursor"
+            ],
+            "response_format": "JSON with company updates and business metrics"
+          },
+          {
+            "path": "/beta/transaction",
+            "full_url": "https://portal-api.angellist.com/beta",
+            "method": "POST",
+            "description": "GraphQL endpoint for transaction data and investment management",
+            "documentation_link": "https://docs.angellist.com/docs/overview",
+            "parameters": [
+              "query",
+              "variables"
+            ],
+            "response_format": "GraphQL JSON response with transaction details"
+          }
+        ],
+        "documentation_sections": {
+          "getting_started": "https://docs.angellist.com/docs/overview",
+          "authentication": "API key generated from dashboard",
+          "endpoints_reference": "https://docs.angellist.com/docs/endpoints", 
+          "code_examples": "Available in documentation with curl examples",
+          "sdks_libraries": "GraphQL API Explorer available"
+        }
+      },
+      "pricing": {
+        "model": "contact_based",
+        "tiers": [
+          {
+            "name": "Relay API",
+            "price": "Contact for pricing",
+            "features": [
+              "Portfolio data access",
+              "Company updates",
+              "Fund associations"
+            ]
+          },
+          {
+            "name": "Transaction API",
+            "price": "Contact for pricing",
+            "features": [
+              "GraphQL transaction data",
+              "Investment management",
+              "Advanced analytics"
+            ]
+          }
+        ],
+        "contact_sales": "Submit request to AngelList team with organization details"
+      },
+      "data_coverage": {
+        "geographic_scope": "Global startup ecosystem",
+        "historical_data": "Historical startup and investment data",
+        "update_frequency": "Real-time company updates",
+        "coverage_stats": "Comprehensive startup and investor database"
+      },
+      "compliance_security": {
+        "data_governance": "Secure portfolio and transaction data management",
+        "security_features": [
+          "Bearer token authentication",
+          "HTTPS-only API access",
+          "Time-limited secure links for credentials"
+        ]
+      },
+      "limitations": [
+        "Limited public API endpoints",
+        "Requires approval for API access",
+        "Rate limiting of 1000 requests per hour historically", 
+        "Some endpoints require special authentication approval",
+        "No longer publicly available startup directory API"
+      ],
+      "last_updated": "2025-08-02"
+    }
+  ],
+  "research_summary": {
+    "total_apis_researched": 5,
+    "common_patterns": {
+      "authentication": "Most APIs use API key authentication with enterprise-level access controls",
+      "pricing": "Subscription or enterprise-custom pricing models predominate",
+      "data_formats": "JSON is standard, with CSV exports common for bulk data",
+      "geographic_coverage": "All APIs provide global market coverage",
+      "target_market": "Primarily institutional investors, VCs, and financial services"
+    },
+    "key_differentiators": {
+      "hfr": "Specialized in hedge fund indices and performance benchmarking",
+      "preqin": "Comprehensive private capital coverage with BlackRock backing",
+      "pitchbook": "Credit-based API with extensive private market coverage",
+      "cb_insights": "AI-powered insights focused on technology and innovation",
+      "angellist": "Startup ecosystem focus with portfolio management tools"
+    },
+    "data_quality_notes": "All providers emphasize data validation, institutional-grade quality, and regular updates. Most require direct sales contact for API access and pricing.",
+    "limitations_summary": "Limited free access across all APIs, enterprise pricing models, and authentication requirements are common barriers to entry."
+  }
+}

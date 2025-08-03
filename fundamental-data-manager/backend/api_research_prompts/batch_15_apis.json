@@ -1,0 +1,127 @@
+[
+  {
+    "id": "prosper-insights-analytics",
+    "name": "Prosper Insights & Analytics",
+    "provider": "Prosper"
+  },
+  {
+    "id": "morning-consult",
+    "name": "Morning Consult",
+    "provider": "Morning"
+  },
+  {
+    "id": "crimson-hexagon",
+    "name": "Crimson Hexagon",
+    "provider": "Crimson"
+  },
+  {
+    "id": "likefolio",
+    "name": "LikeFolio",
+    "provider": "LikeFolio"
+  },
+  {
+    "id": "black-knight-mortgage-monitor",
+    "name": "Black Knight Mortgage Monitor",
+    "provider": "Black"
+  },
+  {
+    "id": "zumper",
+    "name": "Zumper",
+    "provider": "Zumper"
+  },
+  {
+    "id": "apartment-list",
+    "name": "Apartment List",
+    "provider": "Apartment"
+  },
+  {
+    "id": "rentcaf\u00e9",
+    "name": "RENTCaf\u00e9",
+    "provider": "RENTCaf\u00e9"
+  },
+  {
+    "id": "compstak",
+    "name": "CompStak",
+    "provider": "CompStak"
+  },
+  {
+    "id": "trepp",
+    "name": "Trepp",
+    "provider": "Trepp"
+  },
+  {
+    "id": "reis-moodys",
+    "name": "REIS (Moody's)",
+    "provider": "REIS"
+  },
+  {
+    "id": "real-capital-analytics",
+    "name": "Real Capital Analytics",
+    "provider": "Real"
+  },
+  {
+    "id": "kastle-systems-back-to-work-barometer",
+    "name": "Kastle Systems Back-to-Work Barometer",
+    "provider": "Kastle"
+  },
+  {
+    "id": "42floors",
+    "name": "42Floors",
+    "provider": "42Floors"
+  },
+  {
+    "id": "smartci",
+    "name": "SMARTci",
+    "provider": "SMARTci"
+  },
+  {
+    "id": "meyers-research",
+    "name": "Meyers Research",
+    "provider": "Meyers"
+  },
+  {
+    "id": "john-burns-real-estate-consulting",
+    "name": "John Burns Real Estate Consulting",
+    "provider": "John"
+  },
+  {
+    "id": "zonda",
+    "name": "Zonda",
+    "provider": "Zonda"
+  },
+  {
+    "id": "cb-insights-api",
+    "name": "CB Insights API",
+    "provider": "CB"
+  },
+  {
+    "id": "crunchbase-api",
+    "name": "Crunchbase API",
+    "provider": "Crunchbase"
+  },
+  {
+    "id": "pitchbook-api",
+    "name": "PitchBook API",
+    "provider": "PitchBook"
+  },
+  {
+    "id": "gartner-digital-markets-api",
+    "name": "Gartner Digital Markets API",
+    "provider": "Gartner"
+  },
+  {
+    "id": "quid-api",
+    "name": "Quid API",
+    "provider": "Quid"
+  },
+  {
+    "id": "startus-insights-api",
+    "name": "StartUs Insights API",
+    "provider": "StartUs"
+  },
+  {
+    "id": "tracxn-api",
+    "name": "Tracxn API",
+    "provider": "Tracxn"
+  }
+]

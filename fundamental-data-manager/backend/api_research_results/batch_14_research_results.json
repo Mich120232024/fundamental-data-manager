@@ -1,0 +1,3737 @@
+[
+  {
+    "id": "hedge-fund-research-hfr",
+    "name": "Hedge Fund Research Inc. (HFR) API",
+    "provider": "HFR",
+    "category": "Alternative Investment Database",
+    "description": "Hedge Fund Research (HFR) is the established global leader in indexation, analysis and research of the global hedge fund industry. HFR provides comprehensive data on hedge fund performance, indices, and industry benchmarks through both database subscriptions and index data services.",
+    "use_cases": [
+      "Hedge fund performance benchmarking",
+      "Alternative investment index tracking",
+      "Risk analysis and portfolio management",
+      "Institutional investment research",
+      "Fund-of-funds analysis",
+      "Industry reporting and compliance"
+    ],
+    "target_industries": [
+      "Asset Management",
+      "Hedge Funds",
+      "Institutional Investors",
+      "Investment Banks",
+      "Pension Funds",
+      "Endowments"
+    ],
+    "technical_info": {
+      "base_url": "https://www.hfr.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "CSV",
+        "XML",
+        "Excel",
+        "SFTP"
+      ],
+      "auth_method": "api_key",
+      "endpoints": [
+        {
+          "path": "/api/indices/hfri",
+          "full_url": "https://www.hfr.com/api/indices/hfri",
+          "method": "GET",
+          "description": "Access to HFRI index performance data across all strategies",
+          "documentation_link": "https://www.hfr.com/hfr-indices/hfr-indices-faq/",
+          "parameters": [
+            "index_family",
+            "date_range",
+            "strategy",
+            "format"
+          ],
+          "response_format": "JSON with index performance metrics and metadata"
+        },
+        {
+          "path": "/api/database/funds",
+          "full_url": "https://www.hfr.com/api/database/funds",
+          "method": "GET",
+          "description": "Access to hedge fund database with performance and characteristics data",
+          "documentation_link": "https://www.hfr.com/database/hfr-database/field-definitions/",
+          "parameters": [
+            "fund_id",
+            "strategy",
+            "aum_range",
+            "inception_date",
+            "region"
+          ],
+          "response_format": "JSON with fund profiles and performance data"
+        },
+        {
+          "path": "/api/constituents",
+          "full_url": "https://www.hfr.com/api/constituents",
+          "method": "GET",
+          "description": "Access to index constituent fund information",
+          "documentation_link": "https://www.hfr.com/hfr-indices/hfr-indices-faq/",
+          "parameters": [
+            "index_name",
+            "date",
+            "fund_details"
+          ],
+          "response_format": "JSON with constituent fund details and weights"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.hfr.com/product/hfr-database/",
+        "authentication": "Contact HFR at +1-312-658-0955 for API credentials",
+        "endpoints_reference": "https://www.hfr.com/database/hfr-database/field-definitions/",
+        "code_examples": "Available upon subscription",
+        "sdks_libraries": "Excel, Python, and third-party vendor integrations available"
+      }
+    },
+    "pricing": {
+      "model": "subscription_based",
+      "tiers": [
+        {
+          "name": "HFR Database Standard",
+          "price": "Contact for pricing",
+          "features": [
+            "5-100 users",
+            "Standard index constituents",
+            "Monthly reporting"
+          ]
+        },
+        {
+          "name": "Platinum Institutional",
+          "price": "Contact for pricing",
+          "features": [
+            "100+ users",
+            "All index families licensing",
+            "Premium constituents access",
+            "Dead funds database"
+          ]
+        }
+      ],
+      "contact_sales": "database@hfr.com or +1-312-658-0955"
+    },
+    "data_coverage": {
+      "geographic_scope": "Global",
+      "historical_data": "Since 1990",
+      "update_frequency": "Monthly for indices, Daily for HFRX",
+      "fund_coverage": "5,800+ investment products from 1,650+ firms"
+    },
+    "compliance_security": {
+      "data_governance": "Institutional grade data validation",
+      "privacy_policy": "https://www.hfr.com/hfr-indices-data-terms-of-use",
+      "security_features": [
+        "API key authentication",
+        "IP whitelisting available",
+        "Secure data transmission"
+      ]
+    },
+    "limitations": [
+      "Commercial license required for API access",
+      "Subscription-based pricing model",
+      "Limited free access to index data",
+      "Authentication required for database access"
+    ],
+    "last_updated": "2025-08-02"
+  },
+  {
+    "id": "preqin-api",
+    "name": "Preqin API",
+    "provider": "Preqin (part of BlackRock)",
+    "category": "Private Capital and Alternative Investment Data",
+    "description": "Preqin provides comprehensive data and analytics on private capital markets including private equity, venture capital, hedge funds, real estate, and infrastructure. The Preqin Data Feeds API provides access to the industry's most comprehensive private capital and hedge fund datasets.",
+    "use_cases": [
+      "Private equity fund analysis",
+      "Venture capital deal sourcing",
+      "Limited partner due diligence",
+      "Market sizing and analysis",
+      "Fundraising benchmarking",
+      "Portfolio company monitoring"
+    ],
+    "target_industries": [
+      "Private Equity",
+      "Venture Capital",
+      "Hedge Funds",
+      "Real Estate Investment",
+      "Infrastructure Investment",
+      "Asset Management"
+    ],
+    "technical_info": {
+      "base_url": "https://developer.preqin.com/api",
+      "protocol": "REST",
+      "data_formats": [
+        "CSV",
+        "JSON",
+        "XML",
+        "Delimited"
+      ],
+      "auth_method": "oauth",
+      "endpoints": [
+        {
+          "path": "/api/asset/company/currentinvestor",
+          "full_url": "https://developer.preqin.com/api/asset/company/currentinvestor",
+          "method": "GET",
+          "description": "Produces file containing Preqin Company Current Investor data",
+          "documentation_link": "https://developer.preqin.com/swagger-definitions-prod/",
+          "parameters": [
+            "date"
+          ],
+          "response_format": "CSV with company and investor information"
+        },
+        {
+          "path": "/api/asset/company/dealbuyout",
+          "full_url": "https://developer.preqin.com/api/asset/company/dealbuyout",
+          "method": "GET",
+          "description": "Produces file containing Preqin Company Deal Buyout data",
+          "documentation_link": "https://developer.preqin.com/swagger-definitions-prod/",
+          "parameters": [
+            "date"
+          ],
+          "response_format": "CSV with deal and transaction information"
+        },
+        {
+          "path": "/api/funds/performance",
+          "full_url": "https://developer.preqin.com/api/funds/performance",
+          "method": "GET",
+          "description": "Access to private capital fund performance data and benchmarks",
+          "documentation_link": "https://docs.preqin.com/pro/Private-Capital-Performance-Guide.pdf",
+          "parameters": [
+            "fund_type",
+            "vintage_year",
+            "strategy",
+            "region"
+          ],
+          "response_format": "CSV with performance metrics and quartile rankings"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://developer.preqin.com/",
+        "authentication": "Contact apiqueries@preqin.com for OAuth credentials",
+        "endpoints_reference": "https://developer.preqin.com/swagger-definitions-prod/",
+        "code_examples": "Available in documentation",
+        "sdks_libraries": "RESTful API supports multiple programming languages"
+      }
+    },
+    "pricing": {
+      "model": "enterprise_custom",
+      "tiers": [
+        {
+          "name": "Basic Data Feed",
+          "price": "$25,000 - $81,000 annually",
+          "features": [
+            "Core dataset access",
+            "Monthly updates",
+            "Basic support"
+          ]
+        },
+        {
+          "name": "Premium Enterprise",
+          "price": "Custom pricing",
+          "features": [
+            "Full dataset access",
+            "Real-time updates",
+            "Dedicated support",
+            "Custom integrations"
+          ]
+        }
+      ],
+      "contact_sales": "Contact Preqin sales team for pricing"
+    },
+    "data_coverage": {
+      "geographic_scope": "Global coverage",
+      "historical_data": "20+ years of historical data",
+      "update_frequency": "Daily and monthly depending on dataset",
+      "coverage_stats": "200,000+ professionals globally use Preqin data"
+    },
+    "compliance_security": {
+      "data_governance": "Rigorous data collection and validation methods",
+      "privacy_policy": "https://www.preqin.com/item/privacy-policy/1592",
+      "security_features": [
+        "OAuth 2.0 authentication",
+        "Client ID and secret management",
+        "Secure API endpoints"
+      ]
+    },
+    "limitations": [
+      "Enterprise-only pricing",
+      "Authentication required for all endpoints",
+      "Limited free trial access",
+      "Custom pricing requires sales contact"
+    ],
+    "last_updated": "2025-08-02"
+  },
+  {
+    "id": "pitchbook-api",
+    "name": "PitchBook API",
+    "provider": "PitchBook Data Inc.",
+    "category": "Private Market Data Platform",
+    "description": "PitchBook provides comprehensive data on private and public capital markets including venture capital, private equity, and M&A transactions. The PitchBook API v2 allows direct, real-time access to their expansive database of companies, deals, people, investors, funds, and service providers.",
+    "use_cases": [
+      "Deal sourcing and screening",
+      "Market research and analysis",
+      "Competitive intelligence",
+      "Fund performance tracking",
+      "Portfolio company monitoring",
+      "Valuation benchmarking"
+    ],
+    "target_industries": [
+      "Venture Capital",
+      "Private Equity",
+      "Investment Banking",
+      "Corporate Development",
+      "Management Consulting",
+      "Financial Services"
+    ],
+    "technical_info": {
+      "base_url": "https://api.pitchbook.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "api_key",
+      "endpoints": [
+        {
+          "path": "/companies",
+          "full_url": "https://api.pitchbook.com/companies",
+          "method": "GET",
+          "description": "Search and retrieve private company information and profiles",
+          "documentation_link": "https://documenter.getpostman.com/view/5190535/TzCV1iRc",
+          "parameters": [
+            "company_id",
+            "name",
+            "industry",
+            "location",
+            "funding_stage"
+          ],
+          "response_format": "JSON with company profiles and business data"
+        },
+        {
+          "path": "/deals",
+          "full_url": "https://api.pitchbook.com/deals",
+          "method": "GET",
+          "description": "Access investment deal and transaction data",
+          "documentation_link": "https://documenter.getpostman.com/view/5190535/TzCV1iRc",
+          "parameters": [
+            "deal_id",
+            "company_id",
+            "investor_id",
+            "deal_type",
+            "date_range"
+          ],
+          "response_format": "JSON with deal details and transaction information"
+        },
+        {
+          "path": "/investors",
+          "full_url": "https://api.pitchbook.com/investors",
+          "method": "GET",
+          "description": "Retrieve investor and fund information",
+          "documentation_link": "https://documenter.getpostman.com/view/5190535/TzCV1iRc",
+          "parameters": [
+            "investor_id",
+            "fund_type",
+            "location",
+            "investment_focus"
+          ],
+          "response_format": "JSON with investor profiles and fund data"
+        },
+        {
+          "path": "/funds",
+          "full_url": "https://api.pitchbook.com/funds",
+          "method": "GET",
+          "description": "Access fund performance and characteristics data",
+          "documentation_link": "https://documenter.getpostman.com/view/5190535/TzCV1iRc",
+          "parameters": [
+            "fund_id",
+            "vintage_year",
+            "strategy",
+            "target_size"
+          ],
+          "response_format": "JSON with fund details and performance metrics"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://documenter.getpostman.com/view/5190535/TzCV1iRc",
+        "authentication": "PB-Token authentication with API key",
+        "endpoints_reference": "https://documenter.getpostman.com/view/5190535/TzCV1iRc",
+        "code_examples": "Available in Postman documentation",
+        "sdks_libraries": "RESTful API compatible with standard HTTP clients"
+      }
+    },
+    "pricing": {
+      "model": "credit_based",
+      "tiers": [
+        {
+          "name": "API Credits",
+          "price": "Custom pricing based on usage",
+          "features": [
+            "Pay-per-call model",
+            "Each endpoint has defined credit cost",
+            "Sandbox environment for testing"
+          ]
+        },
+        {
+          "name": "Enterprise API",
+          "price": "$30,875 median contract value",
+          "features": [
+            "Higher credit allocations",
+            "Priority support",
+            "Custom integrations"
+          ]
+        }
+      ],
+      "contact_sales": "Contact PitchBook account manager for API credits and pricing"
+    },
+    "data_coverage": {
+      "geographic_scope": "Global coverage",
+      "historical_data": "Comprehensive historical transaction data",
+      "update_frequency": "Real-time updates",
+      "coverage_stats": "5+ million private companies, 560k+ investors, 2.6+ million deals"
+    },
+    "compliance_security": {
+      "data_governance": "Enterprise-grade data quality and validation",
+      "security_features": [
+        "API key authentication",
+        "Rate limiting and credit controls",
+        "Secure HTTPS endpoints"
+      ]
+    },
+    "limitations": [
+      "Credit-based pricing can be expensive for high usage",
+      "Requires separate API contract from platform access",
+      "Limited free sandbox access",
+      "Must estimate usage for credit purchasing"
+    ],
+    "last_updated": "2025-08-02"
+  },
+  {
+    "id": "cb-insights-api",
+    "name": "CB Insights API",
+    "provider": "CB Insights",
+    "category": "Market Intelligence and Startup Data",
+    "description": "CB Insights provides comprehensive market intelligence on technology companies, startups, and innovation trends. The CB Insights API enables programmatic access to organizations, deals, financial transactions, business relationships, and AI-generated market insights.",
+    "use_cases": [
+      "Technology market research",
+      "Startup ecosystem analysis",
+      "Competitive intelligence gathering",
+      "Innovation trend tracking",
+      "Investment opportunity sourcing",
+      "Market sizing and analysis"
+    ],
+    "target_industries": [
+      "Technology Startups",
+      "Venture Capital",
+      "Corporate Innovation",
+      "Market Research",
+      "Investment Banking",
+      "Management Consulting"
+    ],
+    "technical_info": {
+      "base_url": "https://api.cbinsights.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "api_key",
+      "endpoints": [
+        {
+          "path": "/v2/companies",
+          "full_url": "https://api.cbinsights.com/v2/companies",
+          "method": "GET",
+          "description": "Search and retrieve technology company profiles and firmographics",
+          "documentation_link": "https://api-docs.cbinsights.com/v2/",
+          "parameters": [
+            "company_id",
+            "name",
+            "industry",
+            "location",
+            "funding_status"
+          ],
+          "response_format": "JSON with company profiles and business intelligence data"
+        },
+        {
+          "path": "/v2/deals",
+          "full_url": "https://api.cbinsights.com/v2/deals",
+          "method": "GET",
+          "description": "Access funding deals, M&A transactions, and financial data",
+          "documentation_link": "https://api-docs.cbinsights.com/v2/",
+          "parameters": [
+            "deal_id",
+            "company_id",
+            "investor_id",
+            "deal_type",
+            "date_range"
+          ],
+          "response_format": "JSON with deal details and AI-generated insights"
+        },
+        {
+          "path": "/v2/investors",
+          "full_url": "https://api.cbinsights.com/v2/investors",
+          "method": "GET",
+          "description": "Retrieve investor profiles and investment activity",
+          "documentation_link": "https://api-docs.cbinsights.com/v2/",
+          "parameters": [
+            "investor_id",
+            "investor_type",
+            "location",
+            "investment_focus"
+          ],
+          "response_format": "JSON with investor data and portfolio information"
+        },
+        {
+          "path": "/v2/market-insights",
+          "full_url": "https://api.cbinsights.com/v2/market-insights",
+          "method": "GET",
+          "description": "Access technology market profiles and AI-generated analysis",
+          "documentation_link": "https://api-docs.cbinsights.com/v2/",
+          "parameters": [
+            "market_id",
+            "technology_area",
+            "report_type"
+          ],
+          "response_format": "JSON with market analysis and expert research"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://api-docs.cbinsights.com/v2/",
+        "authentication": "API key authentication required",
+        "endpoints_reference": "https://api-docs.cbinsights.com/",
+        "code_examples": "Available in API documentation",
+        "sdks_libraries": "RESTful API with standard HTTP client support"
+      }
+    },
+    "pricing": {
+      "model": "subscription_tiered",
+      "tiers": [
+        {
+          "name": "Standard Plan",
+          "price": "Contact for pricing",
+          "features": [
+            "Basic API access",
+            "Company and deal data",
+            "Standard support"
+          ]
+        },
+        {
+          "name": "Enterprise Plan",
+          "price": "Custom pricing",
+          "features": [
+            "Full API access",
+            "AI-powered insights",
+            "ChatCBI access",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "contact_sales": "Contact CB Insights sales team"
+    },
+    "data_coverage": {
+      "geographic_scope": "Global technology markets",
+      "historical_data": "Comprehensive historical startup and deal data",
+      "update_frequency": "Real-time updates",
+      "coverage_stats": "10+ million companies, 1+ billion data points, 1,500+ market profiles"
+    },
+    "compliance_security": {
+      "data_governance": "Double verified, continually refreshed data",
+      "security_features": [
+        "API key authentication",
+        "Enterprise-grade security",
+        "Secure data transmission"
+      ]
+    },
+    "limitations": [
+      "API v1 is in maintenance mode",
+      "Enterprise pricing model",
+      "Limited free access",
+      "Requires subscription for full functionality"
+    ],
+    "last_updated": "2025-08-02"
+  },
+  {
+    "id": "angellist-api",
+    "name": "AngelList API",
+    "provider": "AngelList",
+    "category": "Startup and Investor Data Platform",
+    "description": "AngelList provides access to startup and investor data through multiple APIs including the Relay API for portfolio management and a GraphQL API for transaction data. The platform connects startups with investors and provides comprehensive data on the startup ecosystem.",
+    "use_cases": [
+      "Startup discovery and research",
+      "Investor portfolio tracking",
+      "Deal sourcing and screening",
+      "Market analysis of startup ecosystem",
+      "Investment transaction management",
+      "Company update monitoring"
+    ],
+    "target_industries": [
+      "Technology Startups",
+      "Angel Investors",
+      "Venture Capital",
+      "Seed Funding",
+      "Early Stage Investment",
+      "Startup Ecosystem"
+    ],
+    "technical_info": {
+      "base_url": "https://api.relay.angellist.com/v1/external",
+      "protocol": "REST/GraphQL",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "api_key",
+      "endpoints": [
+        {
+          "path": "/v1/companies",
+          "full_url": "https://api.relay.angellist.com/v1/external/companies",
+          "method": "GET",
+          "description": "Fetch list of companies in portfolio with associated funds",
+          "documentation_link": "https://docs.angellist.com/docs/endpoints",
+          "parameters": [
+            "cursor"
+          ],
+          "response_format": "JSON with company details and fund associations"
+        },
+        {
+          "path": "/v1/company/{id}/updates",
+          "full_url": "https://api.relay.angellist.com/v1/external/company/{id}/updates",
+          "method": "GET",
+          "description": "Get all updates for specific company by ID",
+          "documentation_link": "https://docs.angellist.com/docs/endpoints",
+          "parameters": [
+            "id",
+            "cursor"
+          ],
+          "response_format": "JSON with company updates and business metrics"
+        },
+        {
+          "path": "/beta/transaction",
+          "full_url": "https://portal-api.angellist.com/beta",
+          "method": "POST",
+          "description": "GraphQL endpoint for transaction data and investment management",
+          "documentation_link": "https://docs.angellist.com/docs/overview",
+          "parameters": [
+            "query",
+            "variables"
+          ],
+          "response_format": "GraphQL JSON response with transaction details"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://docs.angellist.com/docs/overview",
+        "authentication": "API key generated from dashboard",
+        "endpoints_reference": "https://docs.angellist.com/docs/endpoints",
+        "code_examples": "Available in documentation with curl examples",
+        "sdks_libraries": "GraphQL API Explorer available"
+      }
+    },
+    "pricing": {
+      "model": "contact_based",
+      "tiers": [
+        {
+          "name": "Relay API",
+          "price": "Contact for pricing",
+          "features": [
+            "Portfolio data access",
+            "Company updates",
+            "Fund associations"
+          ]
+        },
+        {
+          "name": "Transaction API",
+          "price": "Contact for pricing",
+          "features": [
+            "GraphQL transaction data",
+            "Investment management",
+            "Advanced analytics"
+          ]
+        }
+      ],
+      "contact_sales": "Submit request to AngelList team with organization details"
+    },
+    "data_coverage": {
+      "geographic_scope": "Global startup ecosystem",
+      "historical_data": "Historical startup and investment data",
+      "update_frequency": "Real-time company updates",
+      "coverage_stats": "Comprehensive startup and investor database"
+    },
+    "compliance_security": {
+      "data_governance": "Secure portfolio and transaction data management",
+      "security_features": [
+        "Bearer token authentication",
+        "HTTPS-only API access",
+        "Time-limited secure links for credentials"
+      ]
+    },
+    "limitations": [
+      "Limited public API endpoints",
+      "Requires approval for API access",
+      "Rate limiting of 1000 requests per hour historically",
+      "Some endpoints require special authentication approval",
+      "No longer publicly available startup directory API"
+    ],
+    "last_updated": "2025-08-02"
+  },
+  {
+    "name": "Crunchbase API",
+    "category": "Company Intelligence",
+    "description": "Company and startup database providing comprehensive information on organizations, funding rounds, acquisitions, and market intelligence",
+    "technical_info": {
+      "base_url": "https://api.crunchbase.com/v4/data/",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "api_key",
+      "endpoints": [
+        {
+          "path": "/entities/organizations/{id}",
+          "full_url": "https://api.crunchbase.com/v4/data/entities/organizations/{id}",
+          "method": "GET",
+          "description": "Retrieve information for a specific organization entity",
+          "documentation_link": "https://data.crunchbase.com/docs/using-the-api",
+          "parameters": [
+            "user_key",
+            "id",
+            "field_ids"
+          ],
+          "response_format": "JSON with organization information and metadata"
+        },
+        {
+          "path": "/searches/organizations",
+          "full_url": "https://api.crunchbase.com/v4/data/searches/organizations",
+          "method": "POST",
+          "description": "Search for organizations with flexible filtering criteria",
+          "documentation_link": "https://data.crunchbase.com/docs/using-search-apis",
+          "parameters": [
+            "field_ids",
+            "query",
+            "order",
+            "limit"
+          ],
+          "response_format": "JSON with results array and metadata"
+        },
+        {
+          "path": "/searches/funding_rounds",
+          "full_url": "https://api.crunchbase.com/v4/data/searches/funding_rounds",
+          "method": "POST",
+          "description": "Search for funding rounds with filtering by amount, date, investors",
+          "documentation_link": "https://data.crunchbase.com/docs/examples-search-api",
+          "parameters": [
+            "field_ids",
+            "query",
+            "order",
+            "limit"
+          ],
+          "response_format": "JSON with funding round information and metadata"
+        },
+        {
+          "path": "/searches/people",
+          "full_url": "https://api.crunchbase.com/v4/data/searches/people",
+          "method": "POST",
+          "description": "Search for people and their professional connections",
+          "documentation_link": "https://data.crunchbase.com/docs/using-search-apis",
+          "parameters": [
+            "field_ids",
+            "query",
+            "order",
+            "limit"
+          ],
+          "response_format": "JSON with people information and relationships"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://data.crunchbase.com/docs/using-the-api",
+        "authentication": "https://data.crunchbase.com/docs/using-the-api#authentication",
+        "endpoints_reference": "https://data.crunchbase.com/reference",
+        "code_examples": "https://data.crunchbase.com/docs/examples-search-api",
+        "sdks_libraries": "Not publicly available"
+      }
+    },
+    "business_info": {
+      "pricing_model": "Tiered subscription",
+      "pricing_tiers": [
+        {
+          "name": "Crunchbase Basic",
+          "price": "Limited free access",
+          "features": [
+            "Basic API access",
+            "Attribution required"
+          ]
+        },
+        {
+          "name": "Enterprise",
+          "price": "Custom pricing",
+          "features": [
+            "Full API access",
+            "High volume limits",
+            "Premium support"
+          ]
+        },
+        {
+          "name": "Applications",
+          "price": "Custom pricing",
+          "features": [
+            "Daily CSV export",
+            "REST API",
+            "Application development rights"
+          ]
+        }
+      ],
+      "rate_limits": {
+        "requests_per_second": 5,
+        "daily_limits": "Varies by plan",
+        "response_volume_per_minute": "50MB per minute"
+      },
+      "support_channels": [
+        "Email support",
+        "Documentation",
+        "API reference"
+      ],
+      "sla_guarantees": "Not publicly specified"
+    },
+    "coverage_info": {
+      "geographic_scope": "Global",
+      "company_coverage": "2.5+ million organizations",
+      "historical_coverage": "Since 2007",
+      "update_frequency": "Real-time to daily",
+      "source_types": [
+        "User contributions",
+        "Public filings",
+        "News sources",
+        "Direct submissions"
+      ]
+    },
+    "use_cases": [
+      "Market research and competitive intelligence",
+      "Investment deal sourcing and due diligence",
+      "Sales prospecting and lead generation",
+      "Startup ecosystem analysis",
+      "Venture capital portfolio tracking"
+    ],
+    "integration_complexity": "Medium",
+    "developer_experience": {
+      "documentation_quality": "Good",
+      "code_examples": "Available",
+      "sandbox_environment": "Not mentioned",
+      "community_support": "Limited",
+      "getting_started_time": "1-2 hours"
+    }
+  },
+  {
+    "name": "FactSet API",
+    "category": "Financial Information & Analytics",
+    "description": "Comprehensive financial information and analytics platform providing market information, fundamentals, estimates, and advanced analytics for investment professionals",
+    "technical_info": {
+      "base_url": "https://api.factset.com/",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "XML"
+      ],
+      "auth_method": "oauth2",
+      "endpoints": [
+        {
+          "path": "/content/factset-prices/v1/prices",
+          "full_url": "https://api.factset.com/content/factset-prices/v1/prices",
+          "method": "GET",
+          "description": "Retrieve equity and fixed income pricing information",
+          "documentation_link": "https://developer.factset.com/api-catalog/factset-prices-api",
+          "parameters": [
+            "ids",
+            "startDate",
+            "endDate",
+            "frequency"
+          ],
+          "response_format": "JSON with pricing information and metadata"
+        },
+        {
+          "path": "/content/factset-fundamentals/v2/fundamentals",
+          "full_url": "https://api.factset.com/content/factset-fundamentals/v2/fundamentals",
+          "method": "GET",
+          "description": "Access company fundamental information including financial statements",
+          "documentation_link": "https://developer.factset.com/api-catalog/factset-fundamentals-api",
+          "parameters": [
+            "ids",
+            "metrics",
+            "periodicity",
+            "fiscalPeriodStart"
+          ],
+          "response_format": "JSON with fundamental financial information"
+        },
+        {
+          "path": "/content/factset-estimates/v2/estimates",
+          "full_url": "https://api.factset.com/content/factset-estimates/v2/estimates",
+          "method": "GET",
+          "description": "Retrieve analyst estimates and consensus information",
+          "documentation_link": "https://developer.factset.com/api-catalog/factset-estimates-api",
+          "parameters": [
+            "ids",
+            "metrics",
+            "periodicity",
+            "statistic"
+          ],
+          "response_format": "JSON with estimates and consensus information"
+        },
+        {
+          "path": "/content/real-time-time-series/v1/prices/time-series",
+          "full_url": "https://api.factset.com/content/real-time-time-series/v1/prices/time-series",
+          "method": "GET",
+          "description": "Real-time and historical time series information",
+          "documentation_link": "https://developer.factset.com/api-catalog/real-time-time-series-api",
+          "parameters": [
+            "identifiers",
+            "startDate",
+            "endDate",
+            "interval"
+          ],
+          "response_format": "JSON with time series pricing information"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://developer.factset.com/",
+        "authentication": "https://github.com/factset/oauth2-guidelines",
+        "endpoints_reference": "https://developer.factset.com/api-catalog",
+        "code_examples": "https://developer.factset.com/",
+        "sdks_libraries": "https://github.com/factset/enterprise-sdk"
+      }
+    },
+    "business_info": {
+      "pricing_model": "Enterprise subscription",
+      "pricing_tiers": [
+        {
+          "name": "Enterprise",
+          "price": "Custom pricing",
+          "features": [
+            "Full API access",
+            "Real-time information",
+            "Historical information",
+            "Analytics"
+          ]
+        }
+      ],
+      "rate_limits": {
+        "requests_per_second": 25,
+        "daily_limits": "Varies by subscription",
+        "volume_limits": "Based on entitlements"
+      },
+      "support_channels": [
+        "Dedicated support",
+        "Documentation",
+        "SDK support",
+        "Training"
+      ],
+      "sla_guarantees": "Enterprise-level SLA available"
+    },
+    "coverage_info": {
+      "geographic_scope": "Global",
+      "company_coverage": "100,000+ companies",
+      "historical_coverage": "40+ years",
+      "update_frequency": "Real-time to daily",
+      "source_types": [
+        "100+ third-party sources",
+        "40+ proprietary sources",
+        "Market information providers"
+      ]
+    },
+    "use_cases": [
+      "Portfolio analytics and performance attribution",
+      "Risk management and stress testing",
+      "Quantitative research and backtesting",
+      "Investment screening and idea generation",
+      "Regulatory reporting and compliance"
+    ],
+    "integration_complexity": "High",
+    "developer_experience": {
+      "documentation_quality": "Excellent",
+      "code_examples": "Extensive",
+      "sandbox_environment": "Available",
+      "community_support": "Enterprise support",
+      "getting_started_time": "1-2 days"
+    }
+  },
+  {
+    "name": "S&P Capital IQ API",
+    "category": "Capital Markets Intelligence",
+    "description": "Capital markets intelligence platform providing company financials, market information, research, and analytics for investment professionals and financial institutions",
+    "technical_info": {
+      "base_url": "https://api.capitaliq.com/",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "XML"
+      ],
+      "auth_method": "oauth2",
+      "endpoints": [
+        {
+          "path": "/v1/companies/{id}/financials",
+          "full_url": "https://api.capitaliq.com/v1/companies/{id}/financials",
+          "method": "GET",
+          "description": "Retrieve company financial statements and metrics",
+          "documentation_link": "https://api.link.kensho.com/docs/guides/rest-api/",
+          "parameters": [
+            "id",
+            "period",
+            "statement_type",
+            "currency"
+          ],
+          "response_format": "JSON with financial statement information"
+        },
+        {
+          "path": "/v1/companies/search",
+          "full_url": "https://api.capitaliq.com/v1/companies/search",
+          "method": "POST",
+          "description": "Search for companies with flexible criteria",
+          "documentation_link": "https://api.link.kensho.com/docs/guides/rest-api/",
+          "parameters": [
+            "name",
+            "country",
+            "industry",
+            "market_cap_range"
+          ],
+          "response_format": "JSON with company search results"
+        },
+        {
+          "path": "/v1/markets/pricing",
+          "full_url": "https://api.capitaliq.com/v1/markets/pricing",
+          "method": "GET",
+          "description": "Access market pricing and trading information",
+          "documentation_link": "Not publicly available",
+          "parameters": [
+            "symbols",
+            "start_date",
+            "end_date",
+            "frequency"
+          ],
+          "response_format": "JSON with market pricing information"
+        },
+        {
+          "path": "/v1/estimates/{id}",
+          "full_url": "https://api.capitaliq.com/v1/estimates/{id}",
+          "method": "GET",
+          "description": "Retrieve analyst estimates and consensus information",
+          "documentation_link": "Not publicly available",
+          "parameters": [
+            "id",
+            "metric",
+            "period",
+            "currency"
+          ],
+          "response_format": "JSON with analyst estimates"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.marketplace.spglobal.com/",
+        "authentication": "OAuth 2.0 based",
+        "endpoints_reference": "Limited public documentation",
+        "code_examples": "Available through SDK",
+        "sdks_libraries": "Python SDK available (SPGMICIQ)"
+      }
+    },
+    "business_info": {
+      "pricing_model": "Enterprise subscription",
+      "pricing_tiers": [
+        {
+          "name": "S&P Capital IQ Pro",
+          "price": "Custom pricing",
+          "features": [
+            "Full platform access",
+            "API integration",
+            "Real-time information",
+            "Analytics"
+          ]
+        }
+      ],
+      "rate_limits": {
+        "requests_per_second": "Not publicly specified",
+        "daily_limits": "Based on subscription",
+        "volume_limits": "Varies by plan"
+      },
+      "support_channels": [
+        "Dedicated support",
+        "Training",
+        "Documentation"
+      ],
+      "sla_guarantees": "Enterprise SLA available"
+    },
+    "coverage_info": {
+      "geographic_scope": "Global",
+      "company_coverage": "60,000+ public and private companies",
+      "historical_coverage": "20+ years",
+      "update_frequency": "Real-time to daily",
+      "source_types": [
+        "Financial statements",
+        "Market information",
+        "News",
+        "Research reports"
+      ]
+    },
+    "use_cases": [
+      "Investment banking and M&A analysis",
+      "Equity research and valuation",
+      "Credit analysis and risk assessment",
+      "Portfolio management and screening",
+      "Regulatory compliance and reporting"
+    ],
+    "integration_complexity": "High",
+    "developer_experience": {
+      "documentation_quality": "Limited public documentation",
+      "code_examples": "Available in SDK",
+      "sandbox_environment": "Not publicly mentioned",
+      "community_support": "Enterprise support only",
+      "getting_started_time": "2-5 days"
+    }
+  },
+  {
+    "name": "Thomson Reuters Eikon API",
+    "category": "Financial Markets Information",
+    "description": "Financial markets information platform providing real-time and historical market information, news, fundamentals, and analytics through desktop integration",
+    "technical_info": {
+      "base_url": "Desktop-based API (local connection)",
+      "protocol": "REST/Python/R Libraries",
+      "data_formats": [
+        "JSON",
+        "DataFrame"
+      ],
+      "auth_method": "desktop_session",
+      "endpoints": [
+        {
+          "path": "get_data()",
+          "full_url": "eikon.get_data(instruments, fields, parameters)",
+          "method": "Function Call",
+          "description": "Retrieve fundamental and reference information for instruments",
+          "documentation_link": "https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api/documentation",
+          "parameters": [
+            "instruments",
+            "fields",
+            "parameters"
+          ],
+          "response_format": "DataFrame with requested information"
+        },
+        {
+          "path": "get_timeseries()",
+          "full_url": "eikon.get_timeseries(rics, start_date, end_date, interval)",
+          "method": "Function Call",
+          "description": "Retrieve historical time series information",
+          "documentation_link": "https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api/documentation",
+          "parameters": [
+            "rics",
+            "start_date",
+            "end_date",
+            "interval",
+            "fields"
+          ],
+          "response_format": "DataFrame with time series information"
+        },
+        {
+          "path": "get_news_headlines()",
+          "full_url": "eikon.get_news_headlines(query, date_from, date_to, count)",
+          "method": "Function Call",
+          "description": "Search and retrieve news headlines",
+          "documentation_link": "https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api/documentation",
+          "parameters": [
+            "query",
+            "date_from",
+            "date_to",
+            "count"
+          ],
+          "response_format": "DataFrame with news headlines"
+        },
+        {
+          "path": "get_symbology()",
+          "full_url": "eikon.get_symbology(symbols, from_symbol_type, to_symbol_type)",
+          "method": "Function Call",
+          "description": "Convert between different symbol types",
+          "documentation_link": "https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api/documentation",
+          "parameters": [
+            "symbols",
+            "from_symbol_type",
+            "to_symbol_type"
+          ],
+          "response_format": "DataFrame with symbol mappings"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api/quick-start",
+        "authentication": "Desktop session based",
+        "endpoints_reference": "https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api/documentation",
+        "code_examples": "https://github.com/yhilpisch/eikondataapi",
+        "sdks_libraries": "Python and R libraries available"
+      }
+    },
+    "business_info": {
+      "pricing_model": "Desktop license required",
+      "pricing_tiers": [
+        {
+          "name": "Eikon Desktop",
+          "price": "Subscription required",
+          "features": [
+            "Desktop application",
+            "API access",
+            "Real-time information",
+            "Historical information"
+          ]
+        }
+      ],
+      "rate_limits": {
+        "requests_per_second": 5,
+        "daily_limits": "Usage-based limits",
+        "response_volume_per_minute": "50MB per minute"
+      },
+      "support_channels": [
+        "Documentation",
+        "Q&A forum",
+        "Client support"
+      ],
+      "sla_guarantees": "Desktop license SLA"
+    },
+    "coverage_info": {
+      "geographic_scope": "Global",
+      "company_coverage": "Comprehensive global coverage",
+      "historical_coverage": "Extensive historical information",
+      "update_frequency": "Real-time",
+      "source_types": [
+        "Market information feeds",
+        "News services",
+        "Fundamental information",
+        "Research"
+      ]
+    },
+    "use_cases": [
+      "Desktop-based financial analysis",
+      "Research and analytics automation",
+      "Portfolio management tools",
+      "Risk management applications",
+      "Trading strategy development"
+    ],
+    "integration_complexity": "Medium",
+    "developer_experience": {
+      "documentation_quality": "Good",
+      "code_examples": "Available",
+      "sandbox_environment": "Desktop required",
+      "community_support": "Q&A forum",
+      "getting_started_time": "2-4 hours"
+    }
+  },
+  {
+    "name": "IBES (Institutional Brokers' Estimate System) API",
+    "category": "Analyst Estimates",
+    "description": "Analyst estimates and consensus information system providing earnings forecasts, recommendations, and consensus analytics from institutional brokers and analysts",
+    "technical_info": {
+      "base_url": "https://api.lseg.com/estimates/",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "CSV"
+      ],
+      "auth_method": "oauth2",
+      "endpoints": [
+        {
+          "path": "/v1/estimates/summary",
+          "full_url": "https://api.lseg.com/estimates/v1/estimates/summary",
+          "method": "GET",
+          "description": "Retrieve consensus estimates summary information",
+          "documentation_link": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/estimates-API",
+          "parameters": [
+            "universe",
+            "identifier",
+            "measures",
+            "period"
+          ],
+          "response_format": "JSON with consensus estimates information"
+        },
+        {
+          "path": "/v1/estimates/detail",
+          "full_url": "https://api.lseg.com/estimates/v1/estimates/detail",
+          "method": "GET",
+          "description": "Access detailed analyst-level estimates",
+          "documentation_link": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/estimates-API",
+          "parameters": [
+            "universe",
+            "identifier",
+            "measures",
+            "period",
+            "analyst_id"
+          ],
+          "response_format": "JSON with detailed analyst estimates"
+        },
+        {
+          "path": "/v1/recommendations",
+          "full_url": "https://api.lseg.com/estimates/v1/recommendations",
+          "method": "GET",
+          "description": "Retrieve analyst recommendations and ratings",
+          "documentation_link": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/estimates-API",
+          "parameters": [
+            "universe",
+            "identifier",
+            "period",
+            "recommendation_type"
+          ],
+          "response_format": "JSON with analyst recommendations"
+        },
+        {
+          "path": "/v1/smartestimate",
+          "full_url": "https://api.lseg.com/estimates/v1/smartestimate",
+          "method": "GET",
+          "description": "Access StarMine SmartEstimate analytics",
+          "documentation_link": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/estimates-API",
+          "parameters": [
+            "universe",
+            "identifier",
+            "measures",
+            "period"
+          ],
+          "response_format": "JSON with SmartEstimate information"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/estimates-API",
+        "authentication": "OAuth 2.0 required",
+        "endpoints_reference": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/estimates-API",
+        "code_examples": "Available in documentation",
+        "sdks_libraries": "LSEG Platform SDKs"
+      }
+    },
+    "business_info": {
+      "pricing_model": "Subscription based",
+      "pricing_tiers": [
+        {
+          "name": "Private Users",
+          "price": "Subscription required",
+          "features": [
+            "Intraday updates",
+            "2-hour delay",
+            "SmartEstimate access"
+          ]
+        },
+        {
+          "name": "Public Users",
+          "price": "Subscription required",
+          "features": [
+            "Updates with 4-hour delay",
+            "Basic estimates access"
+          ]
+        }
+      ],
+      "rate_limits": {
+        "requests_per_second": "Not publicly specified",
+        "daily_limits": "Based on subscription",
+        "volume_limits": "Varies by plan"
+      },
+      "support_channels": [
+        "LSEG support",
+        "Documentation",
+        "Developer portal"
+      ],
+      "sla_guarantees": "Based on subscription level"
+    },
+    "coverage_info": {
+      "geographic_scope": "Global",
+      "company_coverage": "23,000+ active companies in 90+ countries",
+      "historical_coverage": "Since 1976 (US), 1987 (International)",
+      "update_frequency": "Intraday (2-4 hour delay)",
+      "source_types": [
+        "950+ contributing firms",
+        "19,000+ analysts",
+        "Global brokers"
+      ]
+    },
+    "use_cases": [
+      "Earnings forecast analysis and modeling",
+      "Consensus estimate tracking",
+      "Analyst performance evaluation",
+      "Investment screening and research",
+      "Portfolio management and strategy"
+    ],
+    "integration_complexity": "Medium",
+    "developer_experience": {
+      "documentation_quality": "Good",
+      "code_examples": "Available",
+      "sandbox_environment": "Platform dependent",
+      "community_support": "LSEG developer community",
+      "getting_started_time": "1-3 hours"
+    }
+  },
+  {
+    "name": "Zacks Investment Research API",
+    "category": "Equity research and investment data",
+    "description": "Provides comprehensive financial data and proprietary stock rankings including earnings estimates, analyst ratings, and the famous Zacks Rank system",
+    "technical_info": {
+      "base_url": "https://api.zacks.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "api_key",
+      "authentication_details": "API key passed in request headers as 'X-Zacks-Client-Id'",
+      "endpoints": [
+        {
+          "path": "/v1/stock/quote",
+          "full_url": "https://api.zacks.com/v1/stock/quote",
+          "method": "GET",
+          "description": "Real-time and historical stock quotes",
+          "documentation_link": "Available through Zacks developer portal",
+          "parameters": [
+            "ticker",
+            "date",
+            "format"
+          ],
+          "response_format": "JSON with pricing data and market information"
+        },
+        {
+          "path": "/v1/earnings/estimates",
+          "full_url": "https://api.zacks.com/v1/earnings/estimates",
+          "method": "GET",
+          "description": "Consensus earnings estimates and revisions",
+          "documentation_link": "Available through Zacks developer portal",
+          "parameters": [
+            "ticker",
+            "period",
+            "estimate_type"
+          ],
+          "response_format": "JSON with earnings estimates and analyst data"
+        },
+        {
+          "path": "/v1/zacks/rank",
+          "full_url": "https://api.zacks.com/v1/zacks/rank",
+          "method": "GET",
+          "description": "Proprietary Zacks Rank scoring for stocks",
+          "documentation_link": "Available through Zacks developer portal",
+          "parameters": [
+            "ticker",
+            "rank_date"
+          ],
+          "response_format": "JSON with Zacks Rank score and supporting data"
+        },
+        {
+          "path": "/v1/fundamentals",
+          "full_url": "https://api.zacks.com/v1/fundamentals",
+          "method": "GET",
+          "description": "Company fundamental data and financial metrics",
+          "documentation_link": "Available through Zacks developer portal",
+          "parameters": [
+            "ticker",
+            "period",
+            "statement_type"
+          ],
+          "response_format": "JSON with financial statement data"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "Contact Zacks for developer portal access",
+        "authentication": "API key authentication via headers",
+        "endpoints_reference": "Available through Zacks developer documentation",
+        "code_examples": "Available via Quandl partnership",
+        "sdks_libraries": "Available through Quandl.com integration"
+      }
+    },
+    "pricing": {
+      "model": "subscription_tiers",
+      "pricing_tiers": [
+        {
+          "name": "Starter",
+          "price": "$100/month",
+          "requests_included": "10,000 daily requests",
+          "features": [
+            "Basic stock data",
+            "Earnings estimates",
+            "Zacks Rank"
+          ]
+        },
+        {
+          "name": "Professional",
+          "price": "Contact for pricing",
+          "requests_included": "Higher limits available",
+          "features": [
+            "All starter features",
+            "Historical data",
+            "Advanced analytics"
+          ]
+        }
+      ],
+      "free_tier": "Free testing available through Quandl",
+      "rate_limits": "10,000 requests per day on starter plan"
+    },
+    "data_coverage": {
+      "geographic_coverage": "US and Canadian markets",
+      "asset_classes": [
+        "Equities"
+      ],
+      "data_history": "30+ years of historical data",
+      "update_frequency": "Daily updates",
+      "total_instruments": "16,000+ active and inactive securities"
+    },
+    "unique_features": [
+      "Zacks Rank proprietary scoring system",
+      "Earnings estimate revisions tracking",
+      "Insider trading analysis",
+      "Industry classifications"
+    ],
+    "contact_info": {
+      "email": "adiraimondo@zacks.com",
+      "phone": "800-767-3771 ext. 9214",
+      "support": "DD@zacks.com"
+    },
+    "api_status": "Active",
+    "last_verified": "2025-08-02",
+    "id": "zacks-investment-research-api"
+  },
+  {
+    "name": "Morningstar Direct API",
+    "category": "Investment research and portfolio analytics",
+    "description": "Comprehensive investment research and portfolio analytics APIs with access to Morningstar's data and research across 300,000+ investments",
+    "technical_info": {
+      "base_url": "https://api.morningstar.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "XML"
+      ],
+      "auth_method": "api_key",
+      "authentication_details": "API key authentication with enterprise licensing",
+      "endpoints": [
+        {
+          "path": "/v1/portfolio/analysis",
+          "full_url": "https://api.morningstar.com/v1/portfolio/analysis",
+          "method": "POST",
+          "description": "Portfolio X-Ray and performance analysis",
+          "documentation_link": "https://developer.morningstar.com/direct-web-services/documentation/direct-web-services/portfolio-analysis-americas/overview",
+          "parameters": [
+            "portfolio_data",
+            "benchmark",
+            "analysis_type"
+          ],
+          "response_format": "JSON with detailed portfolio metrics and allocations"
+        },
+        {
+          "path": "/v1/investment/details",
+          "full_url": "https://api.morningstar.com/v1/investment/details",
+          "method": "GET",
+          "description": "Detailed investment information and ratings",
+          "documentation_link": "https://developer.morningstar.com/direct-web-services/documentation/direct-web-services/investment-details/overview",
+          "parameters": [
+            "identifier",
+            "data_points",
+            "currency"
+          ],
+          "response_format": "JSON with investment details, ratings, and performance"
+        },
+        {
+          "path": "/v1/intelligence/engine",
+          "full_url": "https://api.morningstar.com/v1/intelligence/engine",
+          "method": "POST",
+          "description": "AI-powered investment insights and natural language processing",
+          "documentation_link": "https://developer.morningstar.com/direct-web-services/documentation/direct-web-services/intelligence-engine/overview",
+          "parameters": [
+            "query",
+            "context",
+            "content_types"
+          ],
+          "response_format": "JSON with AI-generated insights and analysis"
+        },
+        {
+          "path": "/v1/reports",
+          "full_url": "https://api.morningstar.com/v1/reports",
+          "method": "GET",
+          "description": "Access to Morningstar analyst reports and research",
+          "documentation_link": "https://developer.morningstar.com/direct-web-services/documentation/direct-web-services/reports-americas/overview",
+          "parameters": [
+            "identifier",
+            "report_type",
+            "format"
+          ],
+          "response_format": "JSON or PDF format reports"
+        },
+        {
+          "path": "/v1/cost/calculator",
+          "full_url": "https://api.morningstar.com/v1/cost/calculator",
+          "method": "POST",
+          "description": "Investment cost analysis and fee calculation",
+          "documentation_link": "https://developer.morningstar.com/direct-web-services/documentation/direct-web-services/cost-calculator/overview",
+          "parameters": [
+            "investment_amount",
+            "time_horizon",
+            "fees"
+          ],
+          "response_format": "JSON with cost projections and impact analysis"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://developer.morningstar.com/apis/getting-started/morningstar-apis",
+        "authentication": "Enterprise licensing and API key setup",
+        "endpoints_reference": "https://developer.morningstar.com/direct-web-services/documentation/direct-web-services/about",
+        "code_examples": "Available in developer portal",
+        "sdks_libraries": "Python SDK available via PyPI (morningstar-data)"
+      }
+    },
+    "pricing": {
+      "model": "enterprise_licensing",
+      "pricing_tiers": [
+        {
+          "name": "Contact Sales",
+          "price": "Custom pricing",
+          "requests_included": "Variable based on agreement",
+          "features": [
+            "Full API access",
+            "Premium support",
+            "Custom integrations"
+          ]
+        }
+      ],
+      "free_tier": "Not available - enterprise only",
+      "rate_limits": "Custom limits based on agreement"
+    },
+    "data_coverage": {
+      "geographic_coverage": "Global (Americas, APAC, EMEA)",
+      "asset_classes": [
+        "Funds",
+        "ETFs",
+        "Stocks",
+        "Fixed Income",
+        "Indexes"
+      ],
+      "data_history": "Extensive historical coverage",
+      "update_frequency": "Real-time and daily updates",
+      "total_instruments": "300,000+ investments"
+    },
+    "unique_features": [
+      "Portfolio X-Ray analysis",
+      "AI-powered Intelligence Engine",
+      "Morningstar Star Ratings",
+      "Portfolio Optimizer",
+      "Risk profiling tools"
+    ],
+    "contact_info": {
+      "website": "https://www.morningstar.com/products/direct-web-services/contact",
+      "support": "Enterprise support included"
+    },
+    "api_status": "Active",
+    "last_verified": "2025-08-02",
+    "id": "morningstar-direct-api"
+  },
+  {
+    "name": "Benzinga API",
+    "category": "Financial news and market data",
+    "description": "Comprehensive financial news, market data, and company information APIs with real-time updates and extensive coverage",
+    "technical_info": {
+      "base_url": "https://api.benzinga.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "api_key",
+      "authentication_details": "API key via URL query parameter 'token'",
+      "endpoints": [
+        {
+          "path": "/api/v2/news",
+          "full_url": "https://api.benzinga.com/api/v2/news",
+          "method": "GET",
+          "description": "Financial news articles and market moving stories",
+          "documentation_link": "https://docs.benzinga.com/benzinga/newsfeed-v2.html",
+          "parameters": [
+            "pageSize",
+            "page",
+            "displayOutput",
+            "date",
+            "dateFrom",
+            "dateTo",
+            "lastId",
+            "updatedSince",
+            "publishedSince",
+            "company_tickers",
+            "channel"
+          ],
+          "response_format": "JSON with news articles, metadata, and relevance scores"
+        },
+        {
+          "path": "/api/v2.1/calendar/earnings",
+          "full_url": "https://api.benzinga.com/api/v2.1/calendar/earnings",
+          "method": "GET",
+          "description": "Earnings calendar and earnings-related events",
+          "documentation_link": "https://docs.benzinga.com/benzinga/calendar-v2.html",
+          "parameters": [
+            "page",
+            "pagesize",
+            "parameters[date]",
+            "parameters[date_from]",
+            "parameters[date_to]",
+            "parameters[tickers]",
+            "parameters[importance]",
+            "parameters[updated]"
+          ],
+          "response_format": "JSON with earnings events and company details"
+        },
+        {
+          "path": "/api/v1/signal/option_activity",
+          "full_url": "https://api.benzinga.com/api/v1/signal/option_activity",
+          "method": "GET",
+          "description": "Unusual options activity and signals",
+          "documentation_link": "Available in Benzinga developer docs",
+          "parameters": [
+            "page",
+            "pagesize",
+            "parameters[date]",
+            "parameters[date_from]",
+            "parameters[date_to]",
+            "parameters[tickers]"
+          ],
+          "response_format": "JSON with options activity data and analysis"
+        },
+        {
+          "path": "/api/v1/quoteDelayed",
+          "full_url": "https://api.benzinga.com/api/v1/quoteDelayed",
+          "method": "GET",
+          "description": "Delayed stock quotes and market data",
+          "documentation_link": "Available in Benzinga developer docs",
+          "parameters": [
+            "symbols"
+          ],
+          "response_format": "JSON with delayed quote data"
+        },
+        {
+          "path": "/api/v2.1/calendar/dividends",
+          "full_url": "https://api.benzinga.com/api/v2.1/calendar/dividends",
+          "method": "GET",
+          "description": "Dividend calendar and dividend-related events",
+          "documentation_link": "https://docs.benzinga.com/benzinga/calendar-v2.html",
+          "parameters": [
+            "page",
+            "pagesize",
+            "parameters[date]",
+            "parameters[date_from]",
+            "parameters[date_to]",
+            "parameters[tickers]",
+            "parameters[updated]"
+          ],
+          "response_format": "JSON with dividend events and payment details"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://docs.benzinga.com/home",
+        "authentication": "API key via URL parameter",
+        "endpoints_reference": "https://docs.benzinga.com/home",
+        "code_examples": "https://github.com/benzinga",
+        "sdks_libraries": "https://github.com/Benzinga/benzinga-python-client"
+      }
+    },
+    "pricing": {
+      "model": "subscription_tiers",
+      "pricing_tiers": [
+        {
+          "name": "Basic",
+          "price": "Contact for pricing",
+          "requests_included": "Variable",
+          "features": [
+            "News API",
+            "Basic calendar data"
+          ]
+        },
+        {
+          "name": "Pro",
+          "price": "Contact for pricing",
+          "requests_included": "Higher limits",
+          "features": [
+            "All basic features",
+            "Real-time data",
+            "Options signals"
+          ]
+        }
+      ],
+      "free_tier": "Free tier available on AWS Marketplace",
+      "rate_limits": "Varies by subscription level"
+    },
+    "data_coverage": {
+      "geographic_coverage": "Primarily US markets",
+      "asset_classes": [
+        "Equities",
+        "Options",
+        "ETFs"
+      ],
+      "data_history": "Historical news and calendar data available",
+      "update_frequency": "Real-time updates",
+      "total_instruments": "All US publicly traded securities"
+    },
+    "unique_features": [
+      "Real-time financial news",
+      "Unusual options activity detection",
+      "Earnings and events calendar",
+      "News sentiment analysis",
+      "Delta parameters for real-time ingestion"
+    ],
+    "contact_info": {
+      "email": "partners@benzinga.com",
+      "licensing": "licensing@benzinga.com",
+      "phone": "+1-877-440-ZING (9464)"
+    },
+    "api_status": "Active",
+    "last_verified": "2025-08-02",
+    "id": "benzinga-api"
+  },
+  {
+    "name": "Seeking Alpha API",
+    "category": "Investment research and analysis platform",
+    "description": "Access to Seeking Alpha's crowd-sourced investment research, analysis, news, and market data through third-party API providers",
+    "technical_info": {
+      "base_url": "Via RapidAPI - https://seeking-alpha.p.rapidapi.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "api_key",
+      "authentication_details": "RapidAPI key in X-RapidAPI-Key header",
+      "endpoints": [
+        {
+          "path": "/news/v2/list-trending",
+          "full_url": "https://seeking-alpha.p.rapidapi.com/news/v2/list-trending",
+          "method": "GET",
+          "description": "Get trending news articles and market stories",
+          "documentation_link": "https://rapidapi.com/apidojo/api/seeking-alpha",
+          "parameters": [
+            "size",
+            "until"
+          ],
+          "response_format": "JSON with trending news articles and metadata"
+        },
+        {
+          "path": "/symbols/get-chart",
+          "full_url": "https://seeking-alpha.p.rapidapi.com/symbols/get-chart",
+          "method": "GET",
+          "description": "Stock price charts and historical data",
+          "documentation_link": "https://rapidapi.com/apidojo/api/seeking-alpha",
+          "parameters": [
+            "symbol",
+            "period",
+            "size"
+          ],
+          "response_format": "JSON with chart data and price points"
+        },
+        {
+          "path": "/symbols/get-profile",
+          "full_url": "https://seeking-alpha.p.rapidapi.com/symbols/get-profile",
+          "method": "GET",
+          "description": "Company profile and basic information",
+          "documentation_link": "https://rapidapi.com/apidojo/api/seeking-alpha",
+          "parameters": [
+            "symbols"
+          ],
+          "response_format": "JSON with company profile data"
+        },
+        {
+          "path": "/market/get-movers",
+          "full_url": "https://seeking-alpha.p.rapidapi.com/market/get-movers",
+          "method": "GET",
+          "description": "Market movers and trending stocks",
+          "documentation_link": "https://rapidapi.com/apidojo/api/seeking-alpha",
+          "parameters": [
+            "id",
+            "template"
+          ],
+          "response_format": "JSON with market mover data"
+        },
+        {
+          "path": "/analysis/v2/list",
+          "full_url": "https://seeking-alpha.p.rapidapi.com/analysis/v2/list",
+          "method": "GET",
+          "description": "Investment analysis and research articles",
+          "documentation_link": "https://rapidapi.com/apidojo/api/seeking-alpha",
+          "parameters": [
+            "id",
+            "size",
+            "until",
+            "category"
+          ],
+          "response_format": "JSON with analysis articles and author information"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://rapidapi.com/apidojo/api/seeking-alpha",
+        "authentication": "RapidAPI key authentication",
+        "endpoints_reference": "https://rapidapi.com/apidojo/api/seeking-alpha",
+        "code_examples": "Available on RapidAPI",
+        "sdks_libraries": "Third-party Python packages available on GitHub"
+      }
+    },
+    "pricing": {
+      "model": "rapidapi_marketplace",
+      "pricing_tiers": [
+        {
+          "name": "Basic",
+          "price": "Free",
+          "requests_included": "100 requests/month",
+          "features": [
+            "Basic endpoints",
+            "Limited rate"
+          ]
+        },
+        {
+          "name": "Pro",
+          "price": "$10/month",
+          "requests_included": "10,000 requests/month",
+          "features": [
+            "All endpoints",
+            "Higher rate limits"
+          ]
+        },
+        {
+          "name": "Ultra",
+          "price": "$50/month",
+          "requests_included": "100,000 requests/month",
+          "features": [
+            "All features",
+            "Priority support"
+          ]
+        }
+      ],
+      "free_tier": "100 requests/month",
+      "rate_limits": "Varies by plan: 100-100,000 requests/month"
+    },
+    "data_coverage": {
+      "geographic_coverage": "Global markets with US focus",
+      "asset_classes": [
+        "Equities",
+        "ETFs",
+        "REITs"
+      ],
+      "data_history": "Historical articles and analysis available",
+      "update_frequency": "Real-time article publishing",
+      "total_instruments": "Thousands of securities covered"
+    },
+    "unique_features": [
+      "Crowd-sourced investment research",
+      "Author performance tracking",
+      "Community sentiment analysis",
+      "Professional and retail investor insights"
+    ],
+    "contact_info": {
+      "platform": "Available via RapidAPI marketplace",
+      "support": "RapidAPI support system"
+    },
+    "api_status": "Active via third-party",
+    "last_verified": "2025-08-02",
+    "notes": "No official Seeking Alpha API - available through third-party providers like RapidAPI",
+    "id": "seeking-alpha-api"
+  },
+  {
+    "name": "TipRanks API",
+    "category": "Analyst recommendations and price targets",
+    "description": "Access to analyst price targets, news sentiment data, and trending stocks with performance tracking of analysts and bloggers",
+    "technical_info": {
+      "base_url": "Via unofficial APIs and third-party access",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "varies",
+      "authentication_details": "Depends on access method - unofficial APIs available",
+      "endpoints": [
+        {
+          "path": "/getPriceTargets",
+          "full_url": "Varies by implementation",
+          "method": "GET",
+          "description": "Retrieve analyst price targets for specific stocks",
+          "documentation_link": "https://github.com/janlukasschroeder/tipranks-api-v2",
+          "parameters": [
+            "ticker"
+          ],
+          "response_format": "JSON with mean, median, highest, lowest price targets and number of estimates"
+        },
+        {
+          "path": "/getNewsSentimentData",
+          "full_url": "Varies by implementation",
+          "method": "GET",
+          "description": "News sentiment analysis and scoring",
+          "documentation_link": "https://github.com/janlukasschroeder/tipranks-api-v2",
+          "parameters": [
+            "ticker"
+          ],
+          "response_format": "JSON with bullish/bearish percentages, article counts, sector averages"
+        },
+        {
+          "path": "/getTrendingStocks",
+          "full_url": "Varies by implementation",
+          "method": "GET",
+          "description": "List of trending stocks with popularity metrics",
+          "documentation_link": "https://github.com/janlukasschroeder/tipranks-api-v2",
+          "parameters": [],
+          "response_format": "JSON array with ticker, popularity, sentiment, market cap, company name"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://github.com/janlukasschroeder/tipranks-api-v2",
+        "authentication": "Varies by implementation",
+        "endpoints_reference": "https://github.com/janlukasschroeder/tipranks-api-v2",
+        "code_examples": "Available on GitHub repositories",
+        "sdks_libraries": "npm package: tipranks-api-v2"
+      }
+    },
+    "pricing": {
+      "model": "third_party_access",
+      "pricing_tiers": [
+        {
+          "name": "Open Source",
+          "price": "Free",
+          "requests_included": "Unlimited (subject to fair use)",
+          "features": [
+            "Basic price targets",
+            "News sentiment",
+            "Trending stocks"
+          ]
+        },
+        {
+          "name": "Nasdaq Data Link",
+          "price": "Contact for pricing",
+          "requests_included": "Variable",
+          "features": [
+            "Official TipRanks data",
+            "API access",
+            "Commercial licensing"
+          ]
+        }
+      ],
+      "free_tier": "Available via open source packages",
+      "rate_limits": "Depends on implementation and fair use policies"
+    },
+    "data_coverage": {
+      "geographic_coverage": "Primarily US markets",
+      "asset_classes": [
+        "Equities"
+      ],
+      "data_history": "Price targets from last 3 months",
+      "update_frequency": "Regular updates",
+      "total_instruments": "Thousands of covered stocks"
+    },
+    "unique_features": [
+      "Analyst performance tracking",
+      "News sentiment scoring",
+      "Blogger performance metrics",
+      "Price target consensus",
+      "Trending stock identification"
+    ],
+    "contact_info": {
+      "website": "https://www.tipranks.com/",
+      "data_licensing": "https://data.nasdaq.com/publishers/TIPRANKS"
+    },
+    "api_status": "Unofficial APIs available",
+    "last_verified": "2025-08-02",
+    "notes": "No official public API - data available through unofficial implementations and Nasdaq Data Link partnership",
+    "id": "tipranks-api"
+  },
+  {
+    "name": "FinancialModelingPrep API",
+    "category": "Financial statements and market data",
+    "description": "Comprehensive financial data API offering real-time stock prices, financial statements, company information, and over 100 endpoints with continuous expansion of features",
+    "technical_info": {
+      "base_url": "https://financialmodelingprep.com/api",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "CSV"
+      ],
+      "auth_method": "api_key",
+      "authentication_details": "API key passed as URL parameter ?apikey=YOUR_API_KEY or &apikey=YOUR_API_KEY if other parameters exist",
+      "endpoints": [
+        {
+          "path": "/v3/quote/{symbol}",
+          "full_url": "https://financialmodelingprep.com/api/v3/quote/{symbol}",
+          "method": "GET",
+          "description": "Full quote with latest bid/ask prices, volume, and last trade price in real-time",
+          "documentation_link": "https://site.financialmodelingprep.com/developer/docs/stock-api",
+          "parameters": [
+            "symbol",
+            "apikey"
+          ],
+          "response_format": "JSON with comprehensive quote data including price, volume, change percentages"
+        },
+        {
+          "path": "/v3/income-statement/{symbol}",
+          "full_url": "https://financialmodelingprep.com/api/v3/income-statement/{symbol}",
+          "method": "GET",
+          "description": "Annual and quarterly income statements with detailed financial data",
+          "documentation_link": "https://site.financialmodelingprep.com/developer/docs",
+          "parameters": [
+            "symbol",
+            "period",
+            "limit",
+            "apikey"
+          ],
+          "response_format": "JSON array with income statement data for multiple periods"
+        },
+        {
+          "path": "/v3/historical-price-full/{symbol}",
+          "full_url": "https://financialmodelingprep.com/api/v3/historical-price-full/{symbol}",
+          "method": "GET",
+          "description": "Historical stock prices from 1 minute to daily intervals",
+          "documentation_link": "https://site.financialmodelingprep.com/developer/docs",
+          "parameters": [
+            "symbol",
+            "from",
+            "to",
+            "apikey"
+          ],
+          "response_format": "JSON with historical OHLCV data"
+        },
+        {
+          "path": "/v3/profile/{symbol}",
+          "full_url": "https://financialmodelingprep.com/api/v3/profile/{symbol}",
+          "method": "GET",
+          "description": "Company profile with core information and market capitalization",
+          "documentation_link": "https://site.financialmodelingprep.com/developer/docs",
+          "parameters": [
+            "symbol",
+            "apikey"
+          ],
+          "response_format": "JSON with company details, sector, industry, employees, description"
+        },
+        {
+          "path": "/v3/stock-screener",
+          "full_url": "https://financialmodelingprep.com/api/v3/stock-screener",
+          "method": "GET",
+          "description": "Stock screener to filter stocks by market cap, price, volume, beta, sector, country",
+          "documentation_link": "https://site.financialmodelingprep.com/developer/docs",
+          "parameters": [
+            "marketCapMoreThan",
+            "marketCapLowerThan",
+            "priceMoreThan",
+            "priceLowerThan",
+            "volumeMoreThan",
+            "sector",
+            "country",
+            "limit",
+            "apikey"
+          ],
+          "response_format": "JSON array with filtered stock results"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://site.financialmodelingprep.com/developer/docs",
+        "authentication": "API key authentication via URL parameters",
+        "endpoints_reference": "https://site.financialmodelingprep.com/developer/docs/stable",
+        "code_examples": "Available in documentation with multiple programming languages",
+        "sdks_libraries": "Community libraries available on GitHub"
+      }
+    },
+    "pricing": {
+      "model": "subscription_tiers",
+      "pricing_tiers": [
+        {
+          "name": "Free",
+          "price": "$0/month",
+          "requests_included": "250 requests/day with 500MB bandwidth",
+          "features": [
+            "Limited endpoints",
+            "Exploration and evaluation",
+            "Basic data access"
+          ]
+        },
+        {
+          "name": "Starter",
+          "price": "Contact for pricing",
+          "requests_included": "20GB bandwidth/month",
+          "features": [
+            "Fundamental financial market data",
+            "More endpoints",
+            "Higher limits"
+          ]
+        },
+        {
+          "name": "Premium",
+          "price": "Contact for pricing",
+          "requests_included": "50GB bandwidth/month",
+          "features": [
+            "Comprehensive fundamental and advanced data",
+            "All standard endpoints"
+          ]
+        },
+        {
+          "name": "Ultimate",
+          "price": "Contact for pricing",
+          "requests_included": "150GB bandwidth/month",
+          "features": [
+            "Complete access to all financial market data",
+            "All endpoints"
+          ]
+        },
+        {
+          "name": "Enterprise",
+          "price": "Custom pricing",
+          "requests_included": "1TB+ bandwidth/month",
+          "features": [
+            "Custom endpoints",
+            "Dedicated support",
+            "Data licensing"
+          ]
+        }
+      ],
+      "free_tier": "250 requests/day with 500MB bandwidth",
+      "rate_limits": "Varies by plan with trailing 30-day bandwidth limits"
+    },
+    "data_coverage": {
+      "geographic_coverage": "Global markets with focus on US",
+      "asset_classes": [
+        "Stocks",
+        "ETFs",
+        "Crypto",
+        "Forex",
+        "Commodities"
+      ],
+      "data_history": "20+ years of historical data",
+      "update_frequency": "Real-time and daily updates",
+      "total_instruments": "70,000+ symbols"
+    },
+    "unique_features": [
+      "Excel Add-on for data integration",
+      "WebSocket for real-time price data",
+      "Code-free API Playground",
+      "M&A RSS Feed",
+      "Stock financial scores",
+      "30% student discount"
+    ],
+    "contact_info": {
+      "website": "https://site.financialmodelingprep.com/",
+      "support": "Available through website contact form"
+    },
+    "api_status": "Active",
+    "last_verified": "2025-08-02",
+    "id": "financialmodelingprep-api"
+  },
+  {
+    "name": "Alpha Vantage API",
+    "category": "Stock market data and technical indicators",
+    "description": "Free JSON APIs for realtime and historical stock market data with over 50 technical indicators, economic data, and AI-powered news sentiment analysis",
+    "technical_info": {
+      "base_url": "https://www.alphavantage.co/query",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "CSV"
+      ],
+      "auth_method": "api_key",
+      "authentication_details": "API key passed as URL parameter &apikey=YOUR_API_KEY",
+      "endpoints": [
+        {
+          "path": "/query?function=TIME_SERIES_DAILY",
+          "full_url": "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY",
+          "method": "GET",
+          "description": "Daily time series with 20+ years of historical depth",
+          "documentation_link": "https://www.alphavantage.co/documentation/",
+          "parameters": [
+            "function",
+            "symbol",
+            "outputsize",
+            "datatype",
+            "apikey"
+          ],
+          "response_format": "JSON/CSV with daily OHLCV data"
+        },
+        {
+          "path": "/query?function=GLOBAL_QUOTE",
+          "full_url": "https://www.alphavantage.co/query?function=GLOBAL_QUOTE",
+          "method": "GET",
+          "description": "Latest price and volume information for a ticker",
+          "documentation_link": "https://www.alphavantage.co/documentation/",
+          "parameters": [
+            "function",
+            "symbol",
+            "apikey"
+          ],
+          "response_format": "JSON with current quote data"
+        },
+        {
+          "path": "/query?function=NEWS_SENTIMENT",
+          "full_url": "https://www.alphavantage.co/query?function=NEWS_SENTIMENT",
+          "method": "GET",
+          "description": "Real-time news and AI-powered sentiment analysis",
+          "documentation_link": "https://www.alphavantage.co/documentation/",
+          "parameters": [
+            "function",
+            "tickers",
+            "topics",
+            "time_from",
+            "time_to",
+            "sort",
+            "limit",
+            "apikey"
+          ],
+          "response_format": "JSON with news articles and sentiment scores"
+        },
+        {
+          "path": "/query?function=RSI",
+          "full_url": "https://www.alphavantage.co/query?function=RSI",
+          "method": "GET",
+          "description": "Relative Strength Index technical indicator",
+          "documentation_link": "https://www.alphavantage.co/documentation/",
+          "parameters": [
+            "function",
+            "symbol",
+            "interval",
+            "time_period",
+            "series_type",
+            "apikey"
+          ],
+          "response_format": "JSON with RSI values"
+        },
+        {
+          "path": "/query?function=TREASURY_YIELD",
+          "full_url": "https://www.alphavantage.co/query?function=TREASURY_YIELD",
+          "method": "GET",
+          "description": "US treasury yield rates and economic indicators",
+          "documentation_link": "https://www.alphavantage.co/documentation/",
+          "parameters": [
+            "function",
+            "interval",
+            "maturity",
+            "apikey"
+          ],
+          "response_format": "JSON with treasury yield data"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.alphavantage.co/documentation/",
+        "authentication": "Free API key with lifetime access",
+        "endpoints_reference": "https://www.alphavantage.co/documentation/",
+        "code_examples": "Available in documentation for multiple languages",
+        "sdks_libraries": "1000+ community libraries across 20+ languages"
+      }
+    },
+    "pricing": {
+      "model": "freemium",
+      "pricing_tiers": [
+        {
+          "name": "Free",
+          "price": "$0/month",
+          "requests_included": "25 requests/day, 5 requests/minute",
+          "features": [
+            "Most API endpoints",
+            "Limited rate",
+            "500 requests/day max"
+          ]
+        },
+        {
+          "name": "Premium",
+          "price": "Starting at $29.99/month",
+          "requests_included": "Higher limits based on plan",
+          "features": [
+            "All endpoints",
+            "Higher rate limits",
+            "Premium functions",
+            "Priority support"
+          ]
+        }
+      ],
+      "free_tier": "25 API requests/day with 5 requests/minute",
+      "rate_limits": "5 per minute and 500 per day on free tier"
+    },
+    "data_coverage": {
+      "geographic_coverage": "Global markets",
+      "asset_classes": [
+        "Stocks",
+        "ETFs",
+        "Crypto",
+        "Forex",
+        "Commodities"
+      ],
+      "data_history": "20+ years of historical data",
+      "update_frequency": "Real-time with 15-minute delay for US data on free tier",
+      "total_instruments": "Global equity coverage"
+    },
+    "unique_features": [
+      "50+ technical indicators",
+      "AI-powered news sentiment",
+      "Economic indicators data",
+      "Alpha Intelligence\u2122 features",
+      "Excel and Google Sheets add-ons",
+      "Extensive community support"
+    ],
+    "contact_info": {
+      "website": "https://www.alphavantage.co/",
+      "support": "https://www.alphavantage.co/support/"
+    },
+    "api_status": "Active",
+    "last_verified": "2025-08-02",
+    "id": "alpha-vantage-api"
+  },
+  {
+    "name": "IEX Cloud API",
+    "category": "Financial data platform for developers",
+    "description": "IEX Cloud was a comprehensive financial data platform that provided REST APIs for market data. The service was officially retired on August 31, 2024",
+    "technical_info": {
+      "base_url": "https://cloud.iexapis.com/stable",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "api_key",
+      "authentication_details": "API token passed as URL parameter ?token=YOUR_TOKEN",
+      "endpoints": [
+        {
+          "path": "/stock/{symbol}/quote",
+          "full_url": "https://cloud.iexapis.com/stable/stock/{symbol}/quote",
+          "method": "GET",
+          "description": "Real-time stock quote data",
+          "documentation_link": "https://iexcloud.io/docs/api/",
+          "parameters": [
+            "symbol",
+            "token"
+          ],
+          "response_format": "JSON with quote data"
+        },
+        {
+          "path": "/stock/{symbol}/chart/{range}",
+          "full_url": "https://cloud.iexapis.com/stable/stock/{symbol}/chart/{range}",
+          "method": "GET",
+          "description": "Historical price data for various time ranges",
+          "documentation_link": "https://iexcloud.io/docs/api/",
+          "parameters": [
+            "symbol",
+            "range",
+            "token"
+          ],
+          "response_format": "JSON array with historical data"
+        },
+        {
+          "path": "/stock/market/{index}/quote",
+          "full_url": "https://cloud.iexapis.com/stable/stock/market/{index}/quote",
+          "method": "GET",
+          "description": "Market index data",
+          "documentation_link": "https://iexcloud.io/docs/api/",
+          "parameters": [
+            "index",
+            "token"
+          ],
+          "response_format": "JSON with market data"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "Service discontinued",
+        "authentication": "Token-based authentication (legacy)",
+        "endpoints_reference": "https://iexcloud.io/docs/api/ (archived)",
+        "code_examples": "Legacy documentation",
+        "sdks_libraries": "Various community libraries (deprecated)"
+      }
+    },
+    "pricing": {
+      "model": "discontinued",
+      "pricing_tiers": [
+        {
+          "name": "Free (Historical)",
+          "price": "$0/month",
+          "requests_included": "500,000 messages/month",
+          "features": [
+            "Limited endpoints",
+            "Basic data access"
+          ]
+        },
+        {
+          "name": "Launch (Historical)",
+          "price": "$9/month",
+          "requests_included": "5 million messages/month",
+          "features": [
+            "Core features",
+            "More endpoints"
+          ]
+        },
+        {
+          "name": "Grow/Scale (Historical)",
+          "price": "Variable",
+          "requests_included": "Pay-as-you-go credits",
+          "features": [
+            "All features",
+            "Volume pricing"
+          ]
+        }
+      ],
+      "free_tier": "Service discontinued",
+      "rate_limits": "N/A - Service closed"
+    },
+    "data_coverage": {
+      "geographic_coverage": "Previously global with US focus",
+      "asset_classes": [
+        "Stocks",
+        "ETFs",
+        "Market indices"
+      ],
+      "data_history": "Multiple years (when active)",
+      "update_frequency": "Was real-time",
+      "total_instruments": "Comprehensive US market coverage (historical)"
+    },
+    "unique_features": [
+      "Developer-friendly design (historical)",
+      "Sandbox environment for development",
+      "Simple pricing model",
+      "Clean API design"
+    ],
+    "contact_info": {
+      "website": "Service discontinued",
+      "support": "Migrated to alternatives"
+    },
+    "api_status": "Discontinued (August 31, 2024)",
+    "last_verified": "2025-08-02",
+    "notes": "IEX Cloud shut down to allow parent company IEX to refocus on core exchange operations. Users have migrated to alternatives like Alpha Vantage and Polygon.io",
+    "id": "iex-cloud-api"
+  },
+  {
+    "name": "Polygon.io API",
+    "category": "Stock market data and financial APIs",
+    "description": "Comprehensive financial market data API providing real-time and historical data with ultra-low latency, unlimited usage, and transparent pricing across stocks, options, forex, and crypto",
+    "technical_info": {
+      "base_url": "https://api.polygon.io",
+      "protocol": "REST and WebSocket",
+      "data_formats": [
+        "JSON",
+        "CSV"
+      ],
+      "auth_method": "api_key",
+      "authentication_details": "API key passed as URL parameter ?apikey=YOUR_API_KEY",
+      "endpoints": [
+        {
+          "path": "/v2/aggs/ticker/{ticker}/range/{multiplier}/{timespan}/{from}/{to}",
+          "full_url": "https://api.polygon.io/v2/aggs/ticker/{ticker}/range/{multiplier}/{timespan}/{from}/{to}",
+          "method": "GET",
+          "description": "Stock aggregates (OHLC) data for specific time ranges",
+          "documentation_link": "https://polygon.io/docs/rest/quickstart",
+          "parameters": [
+            "ticker",
+            "multiplier",
+            "timespan",
+            "from",
+            "to",
+            "adjusted",
+            "sort",
+            "limit",
+            "apikey"
+          ],
+          "response_format": "JSON with aggregate bars data"
+        },
+        {
+          "path": "/v2/snapshot/locale/us/markets/stocks/tickers",
+          "full_url": "https://api.polygon.io/v2/snapshot/locale/us/markets/stocks/tickers",
+          "method": "GET",
+          "description": "Snapshot of all tickers or specific ticker groups",
+          "documentation_link": "https://polygon.io/docs",
+          "parameters": [
+            "tickers",
+            "apikey"
+          ],
+          "response_format": "JSON with market snapshot data"
+        },
+        {
+          "path": "/v1/open-close/{ticker}/{date}",
+          "full_url": "https://api.polygon.io/v1/open-close/{ticker}/{date}",
+          "method": "GET",
+          "description": "Daily open, close, high, and low for a stock",
+          "documentation_link": "https://polygon.io/docs",
+          "parameters": [
+            "ticker",
+            "date",
+            "adjusted",
+            "apikey"
+          ],
+          "response_format": "JSON with daily OHLC data"
+        },
+        {
+          "path": "/v2/reference/tickers",
+          "full_url": "https://api.polygon.io/v2/reference/tickers",
+          "method": "GET",
+          "description": "Reference data for all available tickers",
+          "documentation_link": "https://polygon.io/docs",
+          "parameters": [
+            "ticker",
+            "type",
+            "market",
+            "exchange",
+            "active",
+            "sort",
+            "order",
+            "limit",
+            "apikey"
+          ],
+          "response_format": "JSON with ticker reference data"
+        },
+        {
+          "path": "/v2/reference/dividends",
+          "full_url": "https://api.polygon.io/v2/reference/dividends",
+          "method": "GET",
+          "description": "Dividend data for stocks",
+          "documentation_link": "https://polygon.io/docs",
+          "parameters": [
+            "ticker",
+            "ex_dividend_date",
+            "record_date",
+            "declaration_date",
+            "pay_date",
+            "frequency",
+            "limit",
+            "apikey"
+          ],
+          "response_format": "JSON with dividend information"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://polygon.io/docs/rest/quickstart",
+        "authentication": "API key authentication",
+        "endpoints_reference": "https://polygon.io/docs",
+        "code_examples": "Available in documentation with tutorials",
+        "sdks_libraries": "https://github.com/polygon-io"
+      }
+    },
+    "pricing": {
+      "model": "subscription_tiers",
+      "pricing_tiers": [
+        {
+          "name": "Free",
+          "price": "$0/month",
+          "requests_included": "5 API calls/minute",
+          "features": [
+            "End of day data",
+            "Historical data",
+            "Basic access"
+          ]
+        },
+        {
+          "name": "Starter",
+          "price": "$29/month",
+          "requests_included": "Higher limits",
+          "features": [
+            "Real-time data",
+            "More API calls",
+            "WebSocket access"
+          ]
+        },
+        {
+          "name": "Developer",
+          "price": "$79/month",
+          "requests_included": "Professional limits",
+          "features": [
+            "All starter features",
+            "Advanced endpoints",
+            "Priority support"
+          ]
+        },
+        {
+          "name": "Advanced/Enterprise",
+          "price": "Custom pricing",
+          "requests_included": "Custom limits",
+          "features": [
+            "Full access",
+            "Custom solutions",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "free_tier": "5 API calls/minute with end-of-day and historical data",
+      "rate_limits": "Varies by plan from 5/minute to unlimited"
+    },
+    "data_coverage": {
+      "geographic_coverage": "Global with 50+ countries",
+      "asset_classes": [
+        "Stocks",
+        "Options",
+        "Forex",
+        "Crypto",
+        "Indices"
+      ],
+      "data_history": "10+ years of historical data",
+      "update_frequency": "Real-time with <20ms latency",
+      "total_instruments": "1 million+ public instruments"
+    },
+    "unique_features": [
+      "Ultra-low latency (<20ms)",
+      "WebSocket streaming",
+      "Flat Files for bulk downloads",
+      "S3-compatible interface",
+      "MCP server integration (2025)",
+      "Benzinga partnership for news data",
+      "Beautiful API documentation"
+    ],
+    "contact_info": {
+      "website": "https://polygon.io/",
+      "github": "https://github.com/polygon-io"
+    },
+    "api_status": "Active",
+    "last_verified": "2025-08-02",
+    "id": "polygonio-api"
+  },
+  {
+    "name": "Twelve Data API",
+    "category": "Real-time and historical financial data",
+    "description": "Global financial market data API covering 1 million+ instruments across 50+ countries with real-time streaming, 100+ technical indicators, and comprehensive historical data",
+    "technical_info": {
+      "base_url": "https://api.twelvedata.com",
+      "protocol": "REST and WebSocket",
+      "data_formats": [
+        "JSON",
+        "CSV"
+      ],
+      "auth_method": "api_key",
+      "authentication_details": "API key passed as URL parameter &apikey=YOUR_API_KEY",
+      "endpoints": [
+        {
+          "path": "/time_series",
+          "full_url": "https://api.twelvedata.com/time_series",
+          "method": "GET",
+          "description": "Time series data with OHLC prices ordered by time",
+          "documentation_link": "https://twelvedata.com/docs",
+          "parameters": [
+            "symbol",
+            "interval",
+            "outputsize",
+            "timezone",
+            "start_date",
+            "end_date",
+            "format",
+            "apikey"
+          ],
+          "response_format": "JSON/CSV with meta and time series data"
+        },
+        {
+          "path": "/price",
+          "full_url": "https://api.twelvedata.com/price",
+          "method": "GET",
+          "description": "Real-time price for stocks, forex, and crypto",
+          "documentation_link": "https://twelvedata.com/docs",
+          "parameters": [
+            "symbol",
+            "apikey"
+          ],
+          "response_format": "JSON with current price"
+        },
+        {
+          "path": "/quote",
+          "full_url": "https://api.twelvedata.com/quote",
+          "method": "GET",
+          "description": "Real-time quote data with full market information",
+          "documentation_link": "https://twelvedata.com/docs",
+          "parameters": [
+            "symbol",
+            "interval",
+            "apikey"
+          ],
+          "response_format": "JSON with comprehensive quote data"
+        },
+        {
+          "path": "/{indicator}",
+          "full_url": "https://api.twelvedata.com/{indicator}",
+          "method": "GET",
+          "description": "Technical indicators (100+ available)",
+          "documentation_link": "https://twelvedata.com/docs",
+          "parameters": [
+            "symbol",
+            "interval",
+            "indicator-specific-params",
+            "apikey"
+          ],
+          "response_format": "JSON with indicator values"
+        },
+        {
+          "path": "/income_statement",
+          "full_url": "https://api.twelvedata.com/income_statement",
+          "method": "GET",
+          "description": "Company income statement fundamental data",
+          "documentation_link": "https://twelvedata.com/docs",
+          "parameters": [
+            "symbol",
+            "period",
+            "apikey"
+          ],
+          "response_format": "JSON with financial statement data"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://twelvedata.com/docs",
+        "authentication": "API key via URL parameter",
+        "endpoints_reference": "https://twelvedata.com/docs",
+        "code_examples": "Available in documentation",
+        "sdks_libraries": "https://github.com/twelvedata/twelvedata-python"
+      }
+    },
+    "pricing": {
+      "model": "credit_based",
+      "pricing_tiers": [
+        {
+          "name": "Free",
+          "price": "$0/month",
+          "requests_included": "Limited credits",
+          "features": [
+            "Basic real-time and historical data",
+            "Limited API calls",
+            "Evaluation access"
+          ]
+        },
+        {
+          "name": "Starter",
+          "price": "$29/month",
+          "requests_included": "More API credits",
+          "features": [
+            "Extended data access",
+            "More symbols",
+            "Email support"
+          ]
+        },
+        {
+          "name": "Pro 610",
+          "price": "Higher tier",
+          "requests_included": "610 credits/minute",
+          "features": [
+            "WebSocket access",
+            "100+ technical indicators",
+            "Priority support"
+          ]
+        },
+        {
+          "name": "Custom",
+          "price": "Contact for pricing",
+          "requests_included": "Custom credit limits",
+          "features": [
+            "Unlimited flexibility",
+            "Custom solutions",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "free_tier": "Available with limited access for evaluation",
+      "rate_limits": "Credit-based system, resets each minute"
+    },
+    "data_coverage": {
+      "geographic_coverage": "50+ global countries",
+      "asset_classes": [
+        "Stocks",
+        "Forex",
+        "ETFs",
+        "Mutual Funds",
+        "Commodities",
+        "Crypto",
+        "Indices"
+      ],
+      "data_history": "10+ years of historical data",
+      "update_frequency": "Real-time with 170ms average latency via WebSocket",
+      "total_instruments": "1 million+ instruments, 100,000+ symbols"
+    },
+    "unique_features": [
+      "100+ technical indicators",
+      "Ultra-low WebSocket latency (170ms)",
+      "Batch requests up to 120 symbols",
+      "Pre/Post market data for US equities",
+      "99.95% uptime SLA",
+      "Credit-based flexible system",
+      "Commodity data including metals and agriculture"
+    ],
+    "contact_info": {
+      "website": "https://twelvedata.com/",
+      "support": "Available through website"
+    },
+    "api_status": "Active",
+    "last_verified": "2025-08-02",
+    "id": "twelve-data-api"
+  },
+  {
+    "api_name": "EOD Historical Data API",
+    "category": "market_data",
+    "description": "Comprehensive financial data API providing end-of-day, real-time, and fundamental data for 150,000+ tickers including stocks, ETFs, funds, and currencies worldwide",
+    "website": "https://eodhd.com/",
+    "documentation_url": "https://eodhd.com/financial-apis/",
+    "technical_info": {
+      "base_url": "https://eodhd.com/api/",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "CSV"
+      ],
+      "auth_method": "api_key",
+      "endpoints": [
+        {
+          "path": "/eod/{ticker}",
+          "full_url": "https://eodhd.com/api/eod/MCD.US",
+          "method": "GET",
+          "description": "End-of-day historical stock price data with date range filtering",
+          "documentation_link": "https://eodhd.com/financial-apis/api-for-historical-data-and-volumes",
+          "parameters": [
+            "api_token",
+            "from",
+            "to",
+            "period",
+            "order"
+          ],
+          "response_format": "JSON array with date, open, high, low, close, adjusted_close, volume"
+        },
+        {
+          "path": "/real-time/{ticker}",
+          "full_url": "https://eodhd.com/api/real-time/AAPL.US",
+          "method": "GET",
+          "description": "Live (delayed) stock prices with real-time data",
+          "documentation_link": "https://eodhd.com/financial-apis/live-delayed-stocks-api",
+          "parameters": [
+            "api_token",
+            "fmt",
+            "s"
+          ],
+          "response_format": "JSON with current price, change, volume, timestamp"
+        },
+        {
+          "path": "/fundamentals/{ticker}",
+          "full_url": "https://eodhistoricaldata.com/api/fundamentals/AAPL.US",
+          "method": "GET",
+          "description": "Fundamental data for stocks, ETFs, mutual funds, and indices",
+          "documentation_link": "https://eodhd.com/financial-apis/stock-etfs-fundamental-data-feeds",
+          "parameters": [
+            "api_token",
+            "filter"
+          ],
+          "response_format": "JSON with comprehensive fundamental data including financials, ratios, highlights"
+        },
+        {
+          "path": "/bulk-api-eod-splits-dividends",
+          "full_url": "https://eodhd.com/api/eod-bulk-last-day/US",
+          "method": "GET",
+          "description": "Bulk download of entire exchange data for a particular day",
+          "documentation_link": "https://eodhd.com/financial-apis/bulk-api-eod-splits-dividends",
+          "parameters": [
+            "api_token",
+            "date",
+            "symbols",
+            "filter"
+          ],
+          "response_format": "JSON array with all tickers and their EOD data"
+        },
+        {
+          "path": "/search/{query}",
+          "full_url": "https://eodhd.com/api/search/apple",
+          "method": "GET",
+          "description": "Search API to find stock symbols using company names or partial symbols",
+          "documentation_link": "https://eodhd.com/financial-apis/search-api-for-stocks-etfs-mutual-funds-and-indices",
+          "parameters": [
+            "api_token",
+            "limit",
+            "bonds_only",
+            "type"
+          ],
+          "response_format": "JSON array with matching symbols and company information"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://eodhd.com/financial-apis/quick-start-with-our-financial-data-apis",
+        "authentication": "https://eodhd.com/register",
+        "endpoints_reference": "https://eodhd.com/financial-apis/",
+        "code_examples": "https://github.com/EodHistoricalData/EODHistoricalDataAPI",
+        "sdks_libraries": "https://github.com/DannyBen/eod"
+      }
+    },
+    "data_coverage": {
+      "asset_classes": [
+        "stocks",
+        "etfs",
+        "mutual_funds",
+        "indices",
+        "forex",
+        "cryptocurrencies",
+        "commodities",
+        "bonds"
+      ],
+      "geographic_coverage": "global",
+      "exchanges": "150+ exchanges worldwide",
+      "total_symbols": "150,000+",
+      "historical_depth": "Varies by ticker - US stocks from inception (e.g., Ford from 1972)",
+      "update_frequency": "End-of-day, real-time via WebSockets (50ms delay)"
+    },
+    "pricing_model": {
+      "free_tier": {
+        "available": true,
+        "limitations": "20 API calls/day, 1 year historical depth for EOD data only, limited demo tickers",
+        "rate_limits": "20 requests per day"
+      },
+      "paid_plans": [
+        {
+          "name": "All World",
+          "starting_price": "$19.99/month",
+          "features": [
+            "Unlimited API calls",
+            "Full historical data",
+            "All exchanges"
+          ],
+          "rate_limits": "Minute and daily limits based on plan"
+        },
+        {
+          "name": "All World Extended",
+          "features": [
+            "Real-time WebSocket data",
+            "Intraday data",
+            "Options data"
+          ],
+          "rate_limits": "Higher limits than basic plan"
+        }
+      ],
+      "enterprise": true,
+      "pay_as_you_go": false
+    },
+    "authentication": {
+      "methods": [
+        "API Key"
+      ],
+      "oauth_supported": false,
+      "api_key_parameter": "api_token",
+      "example": "https://eodhd.com/api/eod/AAPL.US?api_token=YOUR_API_KEY"
+    },
+    "sdk_support": {
+      "official_sdks": [
+        "Python",
+        "R",
+        "Excel"
+      ],
+      "community_sdks": [
+        "Ruby",
+        "PHP",
+        "Java",
+        "C#"
+      ],
+      "code_examples": true,
+      "documentation_quality": "comprehensive"
+    },
+    "unique_features": [
+      "WebSocket support for real-time data with <50ms delay",
+      "Bulk API for downloading entire exchange data",
+      "Financial news API included",
+      "Options data for US stocks",
+      "Pre-market and post-market data (4am-8pm EST)",
+      "Splits and dividends data",
+      "Technical indicators API"
+    ],
+    "limitations": [
+      "Free tier limited to demo tickers only",
+      "Real-time WebSocket requires premium plans",
+      "Some endpoints require specific plan levels"
+    ],
+    "name": "EOD Historical Data API",
+    "id": "eod-historical-data-api"
+  },
+  {
+    "api_name": "Marketstack API",
+    "category": "market_data",
+    "description": "Real-time, intraday and historical stock market data API supporting 70+ exchanges, 170,000+ tickers from 50+ countries",
+    "website": "https://marketstack.com/",
+    "documentation_url": "https://marketstack.com/documentation",
+    "technical_info": {
+      "base_url": "https://api.marketstack.com/v1/",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "CSV"
+      ],
+      "auth_method": "api_key",
+      "endpoints": [
+        {
+          "path": "/eod",
+          "full_url": "https://api.marketstack.com/v1/eod",
+          "method": "GET",
+          "description": "End-of-day data for one or multiple stock tickers",
+          "documentation_link": "https://marketstack.com/documentation#eod_data",
+          "parameters": [
+            "access_key",
+            "symbols",
+            "date_from",
+            "date_to",
+            "limit",
+            "offset"
+          ],
+          "response_format": "JSON with pagination and EOD price data"
+        },
+        {
+          "path": "/intraday",
+          "full_url": "https://api.marketstack.com/v1/intraday",
+          "method": "GET",
+          "description": "Intraday data with intervals as short as one minute",
+          "documentation_link": "https://marketstack.com/documentation#intraday_data",
+          "parameters": [
+            "access_key",
+            "symbols",
+            "interval",
+            "date_from",
+            "date_to",
+            "limit"
+          ],
+          "response_format": "JSON with intraday price bars"
+        },
+        {
+          "path": "/tickers",
+          "full_url": "https://api.marketstack.com/v1/tickers",
+          "method": "GET",
+          "description": "Search and filter available stock tickers",
+          "documentation_link": "https://marketstack.com/documentation#tickers",
+          "parameters": [
+            "access_key",
+            "search",
+            "exchange",
+            "limit",
+            "offset"
+          ],
+          "response_format": "JSON array with ticker information"
+        },
+        {
+          "path": "/exchanges",
+          "full_url": "https://api.marketstack.com/v1/exchanges",
+          "method": "GET",
+          "description": "List all supported stock exchanges",
+          "documentation_link": "https://marketstack.com/documentation#exchanges",
+          "parameters": [
+            "access_key",
+            "search",
+            "limit",
+            "offset"
+          ],
+          "response_format": "JSON array with exchange details"
+        },
+        {
+          "path": "/currencies",
+          "full_url": "https://api.marketstack.com/v1/currencies",
+          "method": "GET",
+          "description": "List all supported currencies",
+          "documentation_link": "https://marketstack.com/documentation#currencies",
+          "parameters": [
+            "access_key",
+            "limit",
+            "offset"
+          ],
+          "response_format": "JSON array with currency information"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://marketstack.com/quickstart",
+        "authentication": "https://marketstack.com/documentation#authentication",
+        "endpoints_reference": "https://marketstack.com/documentation",
+        "code_examples": "https://marketstack.com/documentation#code_examples",
+        "sdks_libraries": "https://github.com/apilayer/marketstack"
+      }
+    },
+    "data_coverage": {
+      "asset_classes": [
+        "stocks",
+        "etfs",
+        "mutual_funds",
+        "indices"
+      ],
+      "geographic_coverage": "50+ countries",
+      "exchanges": "70+ stock exchanges",
+      "total_symbols": "170,000+",
+      "historical_depth": "10 years",
+      "update_frequency": "Real-time (1min intervals for Professional plan), EOD daily"
+    },
+    "pricing_model": {
+      "free_tier": {
+        "available": true,
+        "limitations": "100 requests/month, EOD data only, no HTTPS",
+        "rate_limits": "100 requests per month"
+      },
+      "paid_plans": [
+        {
+          "name": "Basic",
+          "starting_price": "$9.99/month ($7.99 yearly)",
+          "features": [
+            "10,000 requests/month",
+            "Intraday data",
+            "10-year history",
+            "HTTPS"
+          ],
+          "rate_limits": "10,000 requests per month"
+        },
+        {
+          "name": "Professional",
+          "features": [
+            "Real-time data (1min intervals)",
+            "Higher request limits",
+            "Priority support"
+          ],
+          "rate_limits": "Higher limits"
+        }
+      ],
+      "enterprise": true,
+      "pay_as_you_go": false
+    },
+    "authentication": {
+      "methods": [
+        "API Key"
+      ],
+      "oauth_supported": false,
+      "api_key_parameter": "access_key",
+      "example": "https://api.marketstack.com/v1/eod?access_key=YOUR_ACCESS_KEY&symbols=AAPL"
+    },
+    "sdk_support": {
+      "official_sdks": [
+        "PHP",
+        "Python",
+        "Node.js",
+        ".NET"
+      ],
+      "community_sdks": [
+        "Ruby",
+        "Go",
+        "Java"
+      ],
+      "code_examples": true,
+      "documentation_quality": "comprehensive"
+    },
+    "unique_features": [
+      "750+ market indices coverage",
+      "Lightweight JSON responses",
+      "Integration with EDGAR for SEC filings (V2)",
+      "CIK code information (V2)",
+      "256-bit HTTPS encryption",
+      "Powerful cloud infrastructure"
+    ],
+    "limitations": [
+      "V1 endpoints deprecated after June 30, 2025",
+      "Real-time data only for Professional plans",
+      "Intraday data limited to US stocks (IEX exchange)",
+      "Free tier has no HTTPS encryption"
+    ],
+    "name": "Marketstack API",
+    "id": "marketstack-api"
+  },
+  {
+    "api_name": "Finnhub API",
+    "category": "market_data",
+    "description": "Free APIs for real-time stock, forex, and cryptocurrency data, plus company fundamentals, economic data, and alternative data",
+    "website": "https://finnhub.io/",
+    "documentation_url": "https://finnhub.io/docs/api",
+    "technical_info": {
+      "base_url": "https://finnhub.io/api/v1/",
+      "protocol": "REST, WebSocket",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "api_key",
+      "endpoints": [
+        {
+          "path": "/quote",
+          "full_url": "https://finnhub.io/api/v1/quote",
+          "method": "GET",
+          "description": "Real-time stock prices for US stocks",
+          "documentation_link": "https://finnhub.io/docs/api/quote",
+          "parameters": [
+            "symbol",
+            "token"
+          ],
+          "response_format": "JSON with current price, change, percent change, high, low, open, previous close"
+        },
+        {
+          "path": "/stock/candle",
+          "full_url": "https://finnhub.io/api/v1/stock/candle",
+          "method": "GET",
+          "description": "Candlestick data for stocks",
+          "documentation_link": "https://finnhub.io/docs/api/stock-candles",
+          "parameters": [
+            "symbol",
+            "resolution",
+            "from",
+            "to",
+            "token"
+          ],
+          "response_format": "JSON with arrays of timestamps, open, high, low, close, volume"
+        },
+        {
+          "path": "/stock/profile2",
+          "full_url": "https://finnhub.io/api/v1/stock/profile2",
+          "method": "GET",
+          "description": "Company profile including industry, CEO, address",
+          "documentation_link": "https://finnhub.io/docs/api/company-profile2",
+          "parameters": [
+            "symbol",
+            "token"
+          ],
+          "response_format": "JSON with company details, market cap, share outstanding"
+        },
+        {
+          "path": "/indicator",
+          "full_url": "https://finnhub.io/api/v1/indicator",
+          "method": "GET",
+          "description": "Technical indicators (RSI, SMA, EMA, etc.)",
+          "documentation_link": "https://finnhub.io/docs/api/technical-indicator",
+          "parameters": [
+            "symbol",
+            "resolution",
+            "from",
+            "to",
+            "indicator",
+            "token"
+          ],
+          "response_format": "JSON with technical indicator values"
+        },
+        {
+          "path": "/news",
+          "full_url": "https://finnhub.io/api/v1/news",
+          "method": "GET",
+          "description": "Market news and company news",
+          "documentation_link": "https://finnhub.io/docs/api/market-news",
+          "parameters": [
+            "category",
+            "token"
+          ],
+          "response_format": "JSON array with news articles"
+        },
+        {
+          "path": "/websocket",
+          "full_url": "wss://ws.finnhub.io",
+          "method": "WebSocket",
+          "description": "Real-time trades via WebSocket",
+          "documentation_link": "https://finnhub.io/docs/api/websocket-trades",
+          "parameters": [
+            "token"
+          ],
+          "response_format": "JSON stream with real-time trade data"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://finnhub.io/docs/api/introduction",
+        "authentication": "https://finnhub.io/docs/api/authentication",
+        "endpoints_reference": "https://finnhub.io/docs/api",
+        "code_examples": "https://finnhub.io/docs/api/example",
+        "sdks_libraries": "https://github.com/Finnhub-Stock-API/finnhub-python"
+      }
+    },
+    "data_coverage": {
+      "asset_classes": [
+        "stocks",
+        "forex",
+        "cryptocurrencies",
+        "indices",
+        "etfs",
+        "mutual_funds"
+      ],
+      "geographic_coverage": "global",
+      "exchanges": "US exchanges, global forex brokers, 15+ crypto exchanges",
+      "total_symbols": "extensive coverage",
+      "historical_depth": "Varies by data type",
+      "update_frequency": "Real-time via WebSocket, delayed for free tier"
+    },
+    "pricing_model": {
+      "free_tier": {
+        "available": true,
+        "limitations": "60 API calls/minute, US stocks only for real-time WebSocket, limited endpoints",
+        "rate_limits": "60 requests per minute"
+      },
+      "paid_plans": [
+        {
+          "name": "Premium",
+          "features": [
+            "More API calls",
+            "Access to premium endpoints",
+            "International markets"
+          ],
+          "rate_limits": "Higher limits"
+        },
+        {
+          "name": "Enterprise",
+          "features": [
+            "Real-time international markets",
+            "All endpoints",
+            "Priority support"
+          ],
+          "rate_limits": "Custom limits"
+        }
+      ],
+      "enterprise": true,
+      "pay_as_you_go": false
+    },
+    "authentication": {
+      "methods": [
+        "API Key"
+      ],
+      "oauth_supported": false,
+      "api_key_parameter": "token",
+      "example": "https://finnhub.io/api/v1/quote?symbol=AAPL&token=YOUR_API_KEY"
+    },
+    "sdk_support": {
+      "official_sdks": [
+        "Python",
+        "Go",
+        "JavaScript"
+      ],
+      "community_sdks": [
+        "Java",
+        "Ruby",
+        "PHP",
+        "C#",
+        "R"
+      ],
+      "code_examples": true,
+      "documentation_quality": "excellent"
+    },
+    "unique_features": [
+      "WebSocket support for real-time trades",
+      "Alternative data (social sentiment, earnings calendar)",
+      "Economic indicators and country data",
+      "IPO calendar and filings",
+      "Institutional ownership data",
+      "Free tier includes substantial functionality",
+      "Global workforce providing 24/7 data coverage"
+    ],
+    "limitations": [
+      "Most premium functions require paid subscription",
+      "Free WebSocket limited to US stocks, forex, and crypto",
+      "International real-time data requires enterprise account",
+      "Rate limits on free tier (60 calls/minute)"
+    ],
+    "name": "Finnhub API",
+    "id": "finnhub-api"
+  },
+  {
+    "api_name": "Barchart OnDemand API",
+    "category": "market_data",
+    "description": "Event-based market data API providing real-time, delayed, and historical data for stocks, futures, forex, and options with extensive financial fundamentals",
+    "website": "https://www.barchart.com/ondemand/api",
+    "documentation_url": "https://www.barchart.com/ondemand/api",
+    "technical_info": {
+      "base_url": "https://marketdata.websol.barchart.com/",
+      "protocol": "REST, Socket.IO",
+      "data_formats": [
+        "JSON",
+        "XML"
+      ],
+      "auth_method": "api_key",
+      "endpoints": [
+        {
+          "path": "/getQuote.{format}",
+          "full_url": "https://marketdata.websol.barchart.com/getQuote.json",
+          "method": "GET",
+          "description": "Real-time, delayed or end-of-day price data by symbol",
+          "documentation_link": "https://www.barchart.com/ondemand/api/getQuote",
+          "parameters": [
+            "key",
+            "symbols",
+            "fields",
+            "only"
+          ],
+          "response_format": "JSON/XML with quote data"
+        },
+        {
+          "path": "/getHistory.{format}",
+          "full_url": "https://ondemand.websol.barchart.com/getHistory.json",
+          "method": "GET",
+          "description": "Historical time series data as tick, minute bars or end-of-day",
+          "documentation_link": "https://www.barchart.com/ondemand/api/getHistory",
+          "parameters": [
+            "apikey",
+            "symbol",
+            "type",
+            "startDate",
+            "endDate",
+            "maxRecords",
+            "interval"
+          ],
+          "response_format": "JSON/XML with historical price bars"
+        },
+        {
+          "path": "/getEquitiesByExchange.{format}",
+          "full_url": "https://marketdata.websol.barchart.com/getEquitiesByExchange.json",
+          "method": "GET",
+          "description": "All equities data by exchange in a single query",
+          "documentation_link": "https://www.barchart.com/ondemand/api/getEquitiesByExchange",
+          "parameters": [
+            "key",
+            "exchange",
+            "fields"
+          ],
+          "response_format": "JSON/XML with all equities on exchange"
+        },
+        {
+          "path": "/getFuturesOptions.{format}",
+          "full_url": "https://marketdata.websol.barchart.com/getFuturesOptions.json",
+          "method": "GET",
+          "description": "Intraday options data on futures contracts",
+          "documentation_link": "https://www.barchart.com/ondemand/api/getFuturesOptions",
+          "parameters": [
+            "key",
+            "root",
+            "expiration",
+            "fields"
+          ],
+          "response_format": "JSON/XML with futures options chain"
+        },
+        {
+          "path": "/getFinancialRatios.{format}",
+          "full_url": "https://marketdata.websol.barchart.com/getFinancialRatios.json",
+          "method": "GET",
+          "description": "Key financial ratios including EPS, ROE, P/E",
+          "documentation_link": "https://www.barchart.com/ondemand/api/getFinancialRatios",
+          "parameters": [
+            "key",
+            "symbols",
+            "fields"
+          ],
+          "response_format": "JSON/XML with financial ratios"
+        },
+        {
+          "path": "/getIncomeStatements.{format}",
+          "full_url": "https://marketdata.websol.barchart.com/getIncomeStatements.json",
+          "method": "GET",
+          "description": "Public company income statement data",
+          "documentation_link": "https://www.barchart.com/ondemand/api/getIncomeStatements",
+          "parameters": [
+            "key",
+            "symbols",
+            "frequency",
+            "count"
+          ],
+          "response_format": "JSON/XML with income statement data"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.barchart.com/ondemand/getting-started",
+        "authentication": "https://www.barchart.com/ondemand/api",
+        "endpoints_reference": "https://www.barchart.com/ondemand/api",
+        "code_examples": "https://github.com/yagop/barchart-market-data-api",
+        "sdks_libraries": "https://www.barchart.com/ondemand/client-libraries"
+      }
+    },
+    "data_coverage": {
+      "asset_classes": [
+        "stocks",
+        "futures",
+        "forex",
+        "options",
+        "indices",
+        "etfs",
+        "mutual_funds",
+        "cryptocurrencies",
+        "commodities"
+      ],
+      "geographic_coverage": "global exchanges",
+      "exchanges": "Major global exchanges",
+      "total_symbols": "extensive coverage",
+      "historical_depth": "Tick data, minute bars, and EOD data available",
+      "update_frequency": "Real-time, delayed, and end-of-day"
+    },
+    "pricing_model": {
+      "free_tier": {
+        "available": true,
+        "limitations": "Limited API calls, delayed data only",
+        "rate_limits": "varies by endpoint"
+      },
+      "paid_plans": [
+        {
+          "name": "Usage-based",
+          "starting_price": "Pay per use",
+          "features": [
+            "Flexible pricing",
+            "Scale as needed",
+            "Real-time data access"
+          ],
+          "rate_limits": "Based on package"
+        }
+      ],
+      "enterprise": true,
+      "pay_as_you_go": true
+    },
+    "authentication": {
+      "methods": [
+        "API Key"
+      ],
+      "oauth_supported": false,
+      "api_key_parameter": "key or apikey",
+      "example": "https://marketdata.websol.barchart.com/getQuote.json?key=YOUR_API_KEY&symbols=AAPL"
+    },
+    "sdk_support": {
+      "official_sdks": [
+        "Java",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "MATLAB"
+      ],
+      "community_sdks": [
+        "Node.js",
+        "Ruby"
+      ],
+      "code_examples": true,
+      "documentation_quality": "comprehensive"
+    },
+    "unique_features": [
+      "Event-based API with Socket.IO support",
+      "Custom getData API for tailored queries",
+      "Extensive futures and options data",
+      "Cash commodities data",
+      "Balance sheet and income statement data",
+      "News and market commentary",
+      "Technical analysis indicators",
+      "Bulk data downloads"
+    ],
+    "limitations": [
+      "Complex pricing structure",
+      "Some endpoints require specific subscription levels",
+      "Real-time data requires paid plans"
+    ],
+    "name": "Barchart OnDemand API",
+    "id": "barchart-ondemand-api"
+  },
+  {
+    "api_name": "Xignite API",
+    "category": "market_data",
+    "description": "Cloud-based financial market data APIs serving 12 billion requests daily, offering comprehensive coverage across multiple asset classes",
+    "website": "https://www.xignite.com/",
+    "documentation_url": "https://www.xignite.com/developers",
+    "technical_info": {
+      "base_url": "https://api.xignite.com/",
+      "protocol": "REST, SOAP",
+      "data_formats": [
+        "JSON",
+        "XML",
+        "CSV"
+      ],
+      "auth_method": "token",
+      "endpoints": [
+        {
+          "path": "/xGlobalQuotes/GetGlobalDelayedQuote",
+          "full_url": "https://api.xignite.com/xGlobalQuotes/GetGlobalDelayedQuote",
+          "method": "GET",
+          "description": "Delayed stock quotes for global equities",
+          "documentation_link": "https://www.xignite.com/product/global-stock-quote-data",
+          "parameters": [
+            "_token",
+            "Identifier",
+            "IdentifierType"
+          ],
+          "response_format": "JSON/XML with quote data"
+        },
+        {
+          "path": "/xGlobalHistorical/GetGlobalHistoricalQuotesRange",
+          "full_url": "https://api.xignite.com/xGlobalHistorical/GetGlobalHistoricalQuotesRange",
+          "method": "GET",
+          "description": "Historical quotes for global securities",
+          "documentation_link": "https://www.xignite.com/product/historical-stock-prices",
+          "parameters": [
+            "_token",
+            "Identifier",
+            "IdentifierType",
+            "FromDate",
+            "ToDate"
+          ],
+          "response_format": "JSON/XML with historical price data"
+        },
+        {
+          "path": "/xOptions/GetOptionChain",
+          "full_url": "https://api.xignite.com/xOptions/GetOptionChain",
+          "method": "GET",
+          "description": "Options chain data for North American and European options",
+          "documentation_link": "https://www.xignite.com/product/options-data",
+          "parameters": [
+            "_token",
+            "Identifier",
+            "IdentifierType",
+            "OptionExchange"
+          ],
+          "response_format": "JSON/XML with options chain"
+        },
+        {
+          "path": "/xFutures/GetDelayedFuture",
+          "full_url": "https://api.xignite.com/xFutures/GetDelayedFuture",
+          "method": "GET",
+          "description": "Delayed futures price quotes from global exchanges",
+          "documentation_link": "https://www.xignite.com/product/futures-data",
+          "parameters": [
+            "_token",
+            "Symbol",
+            "Exchange"
+          ],
+          "response_format": "JSON/XML with futures quote"
+        },
+        {
+          "path": "/xCurrencies/GetRealTimeRate",
+          "full_url": "https://api.xignite.com/xCurrencies/GetRealTimeRate",
+          "method": "GET",
+          "description": "Real-time currency exchange rates",
+          "documentation_link": "https://www.xignite.com/product/forex-data",
+          "parameters": [
+            "_token",
+            "From",
+            "To"
+          ],
+          "response_format": "JSON/XML with FX rate"
+        },
+        {
+          "path": "/xFundamentals/GetCompanyFundamentals",
+          "full_url": "https://api.xignite.com/xFundamentals/GetCompanyFundamentals",
+          "method": "GET",
+          "description": "Company fundamental data for 78,000+ companies from 118 countries",
+          "documentation_link": "https://www.xignite.com/product/company-fundamentals-data",
+          "parameters": [
+            "_token",
+            "Identifier",
+            "IdentifierType",
+            "UpdatedSince"
+          ],
+          "response_format": "JSON/XML with fundamental data"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.xignite.com/getting-started/",
+        "authentication": "https://www.xignite.com/developers",
+        "endpoints_reference": "https://www.xignite.com/products",
+        "code_examples": "https://www.xignite.com/developers",
+        "sdks_libraries": "https://www.xignite.com/support/solutions"
+      }
+    },
+    "data_coverage": {
+      "asset_classes": [
+        "equities",
+        "options",
+        "futures",
+        "forex",
+        "funds",
+        "fixed_income",
+        "cryptocurrencies"
+      ],
+      "geographic_coverage": "118 countries",
+      "exchanges": "250+ data sources including exchanges and vendors",
+      "total_symbols": "78,000+ companies",
+      "historical_depth": "Extensive historical data",
+      "update_frequency": "Real-time and delayed options"
+    },
+    "pricing_model": {
+      "free_tier": {
+        "available": false,
+        "limitations": "No free tier available",
+        "rate_limits": "N/A"
+      },
+      "paid_plans": [
+        {
+          "name": "Custom Pricing",
+          "starting_price": "Contact for quote",
+          "features": [
+            "Pay only for data needed",
+            "By asset class",
+            "By frequency",
+            "By region"
+          ],
+          "rate_limits": "Unlimited usage included"
+        }
+      ],
+      "enterprise": true,
+      "pay_as_you_go": false
+    },
+    "authentication": {
+      "methods": [
+        "Token"
+      ],
+      "oauth_supported": false,
+      "api_key_parameter": "_token",
+      "example": "https://api.xignite.com/xGlobalQuotes/GetGlobalDelayedQuote?_token=YOUR_TOKEN&Identifier=AAPL"
+    },
+    "sdk_support": {
+      "official_sdks": [
+        "Multiple languages supported"
+      ],
+      "community_sdks": [
+        "Various community implementations"
+      ],
+      "code_examples": true,
+      "documentation_quality": "comprehensive with customizable code samples"
+    },
+    "unique_features": [
+      "AWS Advanced Technology Partner with Financial Services Competency",
+      "12 billion API requests served daily",
+      "Unified cloud platform for all financial data needs",
+      "Customizable API responses - pick only needed fields",
+      "No complex packages - pay only for what you need",
+      "Partners with FactSet and Morningstar",
+      "Single platform for data consumption and management",
+      "SOAP and REST API support"
+    ],
+    "limitations": [
+      "No free tier available",
+      "Requires contact for pricing",
+      "Token-based auth may have security considerations"
+    ],
+    "name": "Xignite API",
+    "id": "xignite-api"
+  }
+]

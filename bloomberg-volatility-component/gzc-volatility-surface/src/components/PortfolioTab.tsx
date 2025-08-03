@@ -27,10 +27,53 @@ export function PortfolioTab() {
     entryPrice: undefined
   })
 
-  // Load portfolios
+  // Load portfolios and initialize real funds
   useEffect(() => {
     loadPortfolios()
+    initializeRealFunds()
   }, [portfolioType])
+
+  const initializeRealFunds = async () => {
+    if (portfolioType === 'active') {
+      const existingPortfolios = portfolioService.getAllPortfolios()
+      const fundNames = {
+        1: 'GZC Global Macro Fund Ltd',
+        6: 'GZC Global Currencies Fund Ltd'
+      }
+
+      // Check if real funds are already loaded (more strict check)
+      const hasFund1 = existingPortfolios.some(p => p.name === fundNames[1] && p.type === 'active')
+      const hasFund6 = existingPortfolios.some(p => p.name === fundNames[6] && p.type === 'active')
+
+      let needsRefresh = false
+
+      // Load missing funds
+      if (!hasFund1) {
+        try {
+          await portfolioService.loadPortfolioFromDatabase(1, fundNames[1])
+          console.log('✅ Loaded Fund 1 as active portfolio')
+          needsRefresh = true
+        } catch (error) {
+          console.warn('⚠️ Could not load Fund 1:', error)
+        }
+      }
+
+      if (!hasFund6) {
+        try {
+          await portfolioService.loadPortfolioFromDatabase(6, fundNames[6])
+          console.log('✅ Loaded Fund 6 as active portfolio')
+          needsRefresh = true
+        } catch (error) {
+          console.warn('⚠️ Could not load Fund 6:', error)
+        }
+      }
+
+      // Only refresh if we actually loaded something
+      if (needsRefresh) {
+        loadPortfolios()
+      }
+    }
+  }
 
   // Update valuation when portfolio changes
   useEffect(() => {
@@ -40,8 +83,16 @@ export function PortfolioTab() {
   }, [selectedPortfolioId])
 
   const loadPortfolios = () => {
+    // Clean up any duplicates first
+    portfolioService.removeDuplicatesByName()
+    
     const allPortfolios = portfolioService.getAllPortfolios()
     const filteredPortfolios = allPortfolios.filter(p => p.type === portfolioType)
+    
+    // DEBUG: Log what we're seeing
+    console.log(`🔍 DEBUG: Found ${allPortfolios.length} total portfolios, ${filteredPortfolios.length} ${portfolioType} portfolios`)
+    filteredPortfolios.forEach(p => console.log(`  - ${p.name} (ID: ${p.id.slice(-8)}, Type: ${p.type})`))
+    
     setPortfolios(filteredPortfolios)
     
     // Select first portfolio if none selected
@@ -131,52 +182,14 @@ export function PortfolioTab() {
     setSyncStatus('Checking database sync status...')
     
     try {
-      // Check sync status first
-      const checkResponse = await fetch('/api/trades/sync-check', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
+      const result = await portfolioService.syncDatabase()
       
-      if (!checkResponse.ok) {
-        throw new Error(`HTTP ${checkResponse.status}: ${checkResponse.statusText}`)
+      if (result.status === 'error') {
+        throw new Error(result.error)
       }
       
-      const syncData = await checkResponse.json()
-      
-      if (syncData.status === 'error') {
-        throw new Error(syncData.error)
-      }
-      
-      if (!syncData.sync_required) {
-        setSyncStatus(`✅ Database synchronized (${syncData.fx_trades.source} FX trades, ${syncData.fx_options.source} FX options)`)
-        setTimeout(() => setSyncStatus(null), 3000)
-        return
-      }
-      
-      // Perform sync
-      setSyncStatus(`Syncing ${syncData.fx_trades.missing + syncData.fx_options.missing} new trades...`)
-      
-      const syncResponse = await fetch('/api/trades/perform-sync', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-      
-      if (!syncResponse.ok) {
-        throw new Error(`HTTP ${syncResponse.status}: ${syncResponse.statusText}`)
-      }
-      
-      const syncResult = await syncResponse.json()
-      
-      if (syncResult.status === 'error') {
-        throw new Error(syncResult.error)
-      }
-      
-      setSyncStatus(`✅ Sync complete! Migrated ${syncResult.migrated_fx_trades} FX trades and ${syncResult.migrated_fx_options} FX options`)
-      setTimeout(() => setSyncStatus(null), 5000)
+      setSyncStatus(`✅ Database sync completed`)
+      setTimeout(() => setSyncStatus(null), 3000)
       
     } catch (error) {
       console.error('Database sync failed:', error)
@@ -186,6 +199,8 @@ export function PortfolioTab() {
       setIsSyncing(false)
     }
   }
+
+
 
   const formatNumber = (value: number | null | undefined): string => {
     if (value === null || value === undefined) return '-'
@@ -321,43 +336,40 @@ export function PortfolioTab() {
                     onMouseLeave={(e) => e.currentTarget.style.backgroundColor = selectedPortfolioId === portfolio.id ? currentTheme.background : 'transparent'}
                   >
                     <div style={{ fontWeight: '500' }}>{portfolio.name}</div>
-                    {portfolio.description && (
-                      <div style={{ fontSize: '10px', color: currentTheme.textSecondary, marginTop: '1px' }}>
-                        {portfolio.description}
-                      </div>
-                    )}
                   </button>
                 ))}
-                <div style={{ borderTop: `1px solid ${currentTheme.border}`, padding: '4px' }}>
-                  <button
-                    onClick={() => {
-                      handleCreatePortfolio()
-                      setIsDropdownOpen(false)
-                    }}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '4px',
-                      padding: '4px 6px',
-                      backgroundColor: 'transparent',
-                      border: 'none',
-                      color: currentTheme.primary,
-                      fontSize: '11px',
-                      fontWeight: '500',
-                      cursor: 'pointer',
-                      width: '100%'
-                    }}
-                  >
-                    <Plus size={12} />
-                    Create New Portfolio
-                  </button>
-                </div>
+                {portfolioType === 'virtual' && (
+                  <div style={{ borderTop: `1px solid ${currentTheme.border}`, padding: '4px' }}>
+                    <button
+                      onClick={() => {
+                        handleCreatePortfolio()
+                        setIsDropdownOpen(false)
+                      }}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '4px',
+                        padding: '4px 6px',
+                        backgroundColor: 'transparent',
+                        border: 'none',
+                        color: currentTheme.primary,
+                        fontSize: '11px',
+                        fontWeight: '500',
+                        cursor: 'pointer',
+                        width: '100%'
+                      }}
+                    >
+                      <Plus size={12} />
+                      Create New Portfolio
+                    </button>
+                  </div>
+                )}
               </div>
             )}
           </div>
 
           {/* Portfolio Actions */}
-          {selectedPortfolio && (
+          {selectedPortfolio && !selectedPortfolio.name.includes('GZC') && (
             <button
               onClick={handleDeletePortfolio}
               style={{
@@ -379,6 +391,31 @@ export function PortfolioTab() {
 
         {/* Right side - Data Mode */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <button
+            onClick={handleSyncDatabase}
+            disabled={isSyncing}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
+              padding: '4px 8px',
+              backgroundColor: currentTheme.info,
+              color: '#ffffff',
+              border: 'none',
+              borderRadius: '4px',
+              fontSize: '11px',
+              fontWeight: '500',
+              cursor: isSyncing ? 'not-allowed' : 'pointer',
+              opacity: isSyncing ? 0.7 : 1
+            }}
+          >
+            <Database size={11} style={{
+              animation: isSyncing ? 'spin 1s linear infinite' : 'none'
+            }} />
+            {isSyncing ? 'Syncing...' : 'Sync DB'}
+          </button>
+
+
           <div style={{
             display: 'flex',
             backgroundColor: currentTheme.background,
@@ -497,29 +534,6 @@ export function PortfolioTab() {
                 </div>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                <button
-                  onClick={handleSyncDatabase}
-                  disabled={isSyncing}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '4px',
-                    padding: '4px 8px',
-                    backgroundColor: currentTheme.info,
-                    color: '#ffffff',
-                    border: 'none',
-                    borderRadius: '4px',
-                    fontSize: '11px',
-                    fontWeight: '500',
-                    cursor: isSyncing ? 'not-allowed' : 'pointer',
-                    opacity: isSyncing ? 0.7 : 1
-                  }}
-                >
-                  <Database size={11} style={{
-                    animation: isSyncing ? 'spin 1s linear infinite' : 'none'
-                  }} />
-                  {isSyncing ? 'Syncing...' : 'Sync DB'}
-                </button>
                 <button
                   onClick={handleRefreshPrices}
                   disabled={isRefreshing}

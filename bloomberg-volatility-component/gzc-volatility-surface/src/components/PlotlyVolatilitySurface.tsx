@@ -13,6 +13,12 @@ export function PlotlyVolatilitySurface({ surfaceData, selectedPair }: PlotlyVol
   const { currentTheme } = useTheme()
 
   useEffect(() => {
+    if (!surfaceData || !Array.isArray(surfaceData)) {
+      console.warn('PlotlyVolatilitySurface: invalid surfaceData', surfaceData)
+      setPlotData(null)
+      return
+    }
+    
     console.log('PlotlyVolatilitySurface: surfaceData changed', { 
       dataLength: surfaceData.length, 
       selectedPair,
@@ -195,12 +201,12 @@ export function PlotlyVolatilitySurface({ surfaceData, selectedPair }: PlotlyVol
 
   // Debug logging
   console.log('PlotlyVolatilitySurface render:', {
-    surfaceDataLength: surfaceData.length,
+    surfaceDataLength: surfaceData?.length || 0,
     hasPlotData: !!plotData,
     selectedPair
   })
 
-  if (surfaceData.length === 0) {
+  if (!surfaceData || surfaceData.length === 0) {
     return <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: currentTheme.textSecondary }}>Loading volatility surface...</div>
   }
 

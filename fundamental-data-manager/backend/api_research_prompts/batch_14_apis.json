@@ -1,0 +1,127 @@
+[
+  {
+    "id": "tellus-labs",
+    "name": "Tellus Labs",
+    "provider": "Tellus"
+  },
+  {
+    "id": "noaa-weather-data",
+    "name": "NOAA Weather Data",
+    "provider": "NOAA"
+  },
+  {
+    "id": "openweather",
+    "name": "OpenWeather",
+    "provider": "OpenWeather"
+  },
+  {
+    "id": "climateengine",
+    "name": "ClimateEngine",
+    "provider": "ClimateEngine"
+  },
+  {
+    "id": "jupiter-intelligence",
+    "name": "Jupiter Intelligence",
+    "provider": "Jupiter"
+  },
+  {
+    "id": "four-twenty-seven",
+    "name": "Four Twenty Seven",
+    "provider": "Four"
+  },
+  {
+    "id": "carbon-delta",
+    "name": "Carbon Delta",
+    "provider": "Carbon"
+  },
+  {
+    "id": "truvalue-labs",
+    "name": "TruValue Labs",
+    "provider": "TruValue"
+  },
+  {
+    "id": "owl-analytics",
+    "name": "OWL Analytics",
+    "provider": "OWL"
+  },
+  {
+    "id": "iss-esg",
+    "name": "ISS ESG",
+    "provider": "ISS"
+  },
+  {
+    "id": "dealsignal",
+    "name": "DealSignal",
+    "provider": "DealSignal"
+  },
+  {
+    "id": "relsci",
+    "name": "RelSci",
+    "provider": "RelSci"
+  },
+  {
+    "id": "boardex",
+    "name": "BoardEx",
+    "provider": "BoardEx"
+  },
+  {
+    "id": "heap",
+    "name": "Heap",
+    "provider": "Heap"
+  },
+  {
+    "id": "amplitude",
+    "name": "Amplitude",
+    "provider": "Amplitude"
+  },
+  {
+    "id": "mixpanel",
+    "name": "Mixpanel",
+    "provider": "Mixpanel"
+  },
+  {
+    "id": "semrush",
+    "name": "SEMrush",
+    "provider": "SEMrush"
+  },
+  {
+    "id": "spyfu",
+    "name": "SpyFu",
+    "provider": "SpyFu"
+  },
+  {
+    "id": "pathmatics",
+    "name": "Pathmatics",
+    "provider": "Pathmatics"
+  },
+  {
+    "id": "lambdatest",
+    "name": "LambdaTest",
+    "provider": "LambdaTest"
+  },
+  {
+    "id": "airdna",
+    "name": "AirDNA",
+    "provider": "AirDNA"
+  },
+  {
+    "id": "alloydb",
+    "name": "AlloyDB",
+    "provider": "AlloyDB"
+  },
+  {
+    "id": "numerated",
+    "name": "Numerated",
+    "provider": "Numerated"
+  },
+  {
+    "id": "edison-research",
+    "name": "Edison Research",
+    "provider": "Edison"
+  },
+  {
+    "id": "prodege",
+    "name": "Prodege",
+    "provider": "Prodege"
+  }
+]

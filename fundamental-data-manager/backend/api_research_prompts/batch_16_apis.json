@@ -1,0 +1,127 @@
+[
+  {
+    "id": "sparktoro-api",
+    "name": "SparkToro API",
+    "provider": "SparkToro"
+  },
+  {
+    "id": "openai-api",
+    "name": "OpenAI API",
+    "provider": "OpenAI"
+  },
+  {
+    "id": "anthropic-claude-api",
+    "name": "Anthropic Claude API",
+    "provider": "Anthropic"
+  },
+  {
+    "id": "stability-ai-api",
+    "name": "Stability AI API",
+    "provider": "Stability"
+  },
+  {
+    "id": "midjourney-api",
+    "name": "Midjourney API",
+    "provider": "Midjourney"
+  },
+  {
+    "id": "huggingface-inference-api",
+    "name": "HuggingFace Inference API",
+    "provider": "HuggingFace"
+  },
+  {
+    "id": "cohere-api",
+    "name": "Cohere API",
+    "provider": "Cohere"
+  },
+  {
+    "id": "replicate-api",
+    "name": "Replicate API",
+    "provider": "Replicate"
+  },
+  {
+    "id": "runway-ml-api",
+    "name": "Runway ML API",
+    "provider": "Runway"
+  },
+  {
+    "id": "perplexity-api",
+    "name": "Perplexity API",
+    "provider": "Perplexity"
+  },
+  {
+    "id": "gemini-api-google",
+    "name": "Gemini API (Google)",
+    "provider": "Gemini"
+  },
+  {
+    "id": "llama-api-meta",
+    "name": "Llama API (Meta)",
+    "provider": "Llama"
+  },
+  {
+    "id": "ai21-studio-api",
+    "name": "AI21 Studio API",
+    "provider": "AI21"
+  },
+  {
+    "id": "langchain-api",
+    "name": "Langchain API",
+    "provider": "Langchain"
+  },
+  {
+    "id": "dall-e-api",
+    "name": "DALL-E API",
+    "provider": "DALL-E"
+  },
+  {
+    "id": "eleven-labs-api",
+    "name": "Eleven Labs API",
+    "provider": "Eleven"
+  },
+  {
+    "id": "assemblyai-api",
+    "name": "AssemblyAI API",
+    "provider": "AssemblyAI"
+  },
+  {
+    "id": "descript-api",
+    "name": "Descript API",
+    "provider": "Descript"
+  },
+  {
+    "id": "synthesia-api",
+    "name": "Synthesia API",
+    "provider": "Synthesia"
+  },
+  {
+    "id": "d-id-api",
+    "name": "D-ID API",
+    "provider": "D-ID"
+  },
+  {
+    "id": "deepgram-api",
+    "name": "Deepgram API",
+    "provider": "Deepgram"
+  },
+  {
+    "id": "whisper-api",
+    "name": "Whisper API",
+    "provider": "Whisper"
+  },
+  {
+    "id": "vercel-ai-sdk-api",
+    "name": "Vercel AI SDK API",
+    "provider": "Vercel"
+  },
+  {
+    "id": "clarifai-api",
+    "name": "Clarifai API",
+    "provider": "Clarifai"
+  },
+  {
+    "id": "roboflow-api",
+    "name": "Roboflow API",
+    "provider": "Roboflow"
+  }
+]

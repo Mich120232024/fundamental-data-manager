@@ -1,0 +1,57 @@
+{
+  "project": "GZC Volatility Surface",
+  "location": "gzc-volatility-surface",
+  "last_updated": "2025-01-29",
+  
+  "quick_summary": {
+    "total_currencies": 36,
+    "total_fx_pairs": 73,
+    "components_updated": [
+      "VolatilitySurfaceContainer",
+      "GZCOptionPricerTab",
+      "FXForwardCurvesTab",
+      "VolatilitySmileHistorical",
+      "VolatilityHistoricalTable",
+      "YieldCurvesTab"
+    ]
+  },
+  
+  "currencies": {
+    "g10": ["USD", "EUR", "GBP", "JPY", "CHF", "AUD", "CAD", "NOK", "SEK", "NZD"],
+    "emerging_markets": [
+      "BRL", "CNH", "CZK", "HUF", "ILS", "INR", "KRW", "MXN", "PLN", "RUB", 
+      "SGD", "THB", "TRY", "TWD", "ZAR", "AED", "SAR", "CLP", "COP", "IDR", 
+      "MYR", "PHP", "HKD", "DKK"
+    ],
+    "precious_metals": ["XAU", "XAG"]
+  },
+  
+  "major_fx_pairs": {
+    "g10_usd": ["EURUSD", "GBPUSD", "AUDUSD", "NZDUSD", "USDJPY", "USDCHF", "USDCAD", "USDSEK", "USDNOK"],
+    "em_usd_major": ["USDBRL", "USDMXN", "USDZAR", "USDTRY", "USDINR", "USDCNH", "USDKRW"],
+    "metals": ["XAUUSD", "XAGUSD"],
+    "eur_crosses": ["EURGBP", "EURJPY", "EURCHF", "EURAUD", "EURCAD"],
+    "gbp_crosses": ["GBPJPY", "GBPCHF", "GBPAUD"],
+    "jpy_crosses": ["AUDJPY", "CADJPY", "NZDJPY"]
+  },
+  
+  "bloomberg_ticker_conventions": {
+    "spot": "{PAIR} Curncy",
+    "volatility_atm": "{PAIR}V{TENOR} BGN Curncy",
+    "volatility_rr": "{PAIR}{DELTA}R{TENOR} BGN Curncy",
+    "volatility_bf": "{PAIR}{DELTA}B{TENOR} BGN Curncy",
+    "forward": "{PAIR}{TENOR} Curncy"
+  },
+  
+  "files_created": {
+    "constants": "src/constants/currencies.ts",
+    "documentation": "data/supported-currencies-and-pairs.json"
+  },
+  
+  "key_features": {
+    "collapsible_selector": "FX Forward Curves tab now has collapsible currency selector",
+    "quick_selection": "Added buttons for 'G10 Majors', 'Major EM', 'Clear All'",
+    "bloomberg_compliance": "All pairs follow Bloomberg naming conventions",
+    "centralized_constants": "All currency lists in one TypeScript file"
+  }
+}

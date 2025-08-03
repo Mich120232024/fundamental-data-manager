@@ -1,0 +1,127 @@
+[
+  {
+    "id": "crossref-api",
+    "name": "CrossRef API",
+    "provider": "CrossRef"
+  },
+  {
+    "id": "orcid-api",
+    "name": "ORCID API",
+    "provider": "ORCID"
+  },
+  {
+    "id": "web-of-science-api",
+    "name": "Web of Science API",
+    "provider": "Web"
+  },
+  {
+    "id": "scopus-api",
+    "name": "Scopus API",
+    "provider": "Scopus"
+  },
+  {
+    "id": "pubmed-api",
+    "name": "PubMed API",
+    "provider": "PubMed"
+  },
+  {
+    "id": "google-scholar-api",
+    "name": "Google Scholar API",
+    "provider": "Google"
+  },
+  {
+    "id": "core-api",
+    "name": "CORE API",
+    "provider": "CORE"
+  },
+  {
+    "id": "microsoft-academic-graph-api",
+    "name": "Microsoft Academic Graph API",
+    "provider": "Microsoft"
+  },
+  {
+    "id": "semantic-scholar-api",
+    "name": "Semantic Scholar API",
+    "provider": "Semantic"
+  },
+  {
+    "id": "dimensions-api",
+    "name": "Dimensions API",
+    "provider": "Dimensions"
+  },
+  {
+    "id": "europe-pmc-api",
+    "name": "Europe PMC API",
+    "provider": "Europe"
+  },
+  {
+    "id": "researchgate-api",
+    "name": "ResearchGate API",
+    "provider": "ResearchGate"
+  },
+  {
+    "id": "academiaedu-api",
+    "name": "Academia.edu API",
+    "provider": "Academia.edu"
+  },
+  {
+    "id": "arxiv-api",
+    "name": "arXiv API",
+    "provider": "arXiv"
+  },
+  {
+    "id": "osf-open-science-framework-api",
+    "name": "OSF (Open Science Framework) API",
+    "provider": "OSF"
+  },
+  {
+    "id": "zenodo-api",
+    "name": "Zenodo API",
+    "provider": "Zenodo"
+  },
+  {
+    "id": "figshare-api",
+    "name": "Figshare API",
+    "provider": "Figshare"
+  },
+  {
+    "id": "datacite-api",
+    "name": "DataCite API",
+    "provider": "DataCite"
+  },
+  {
+    "id": "openaire-api",
+    "name": "OpenAIRE API",
+    "provider": "OpenAIRE"
+  },
+  {
+    "id": "unpaywall-api",
+    "name": "Unpaywall API",
+    "provider": "Unpaywall"
+  },
+  {
+    "id": "doaj-directory-of-open-access-journals-api",
+    "name": "DOAJ (Directory of Open Access Journals) API",
+    "provider": "DOAJ"
+  },
+  {
+    "id": "lensorg-api",
+    "name": "Lens.org API",
+    "provider": "Lens.org"
+  },
+  {
+    "id": "opencitations-api",
+    "name": "OpenCitations API",
+    "provider": "OpenCitations"
+  },
+  {
+    "id": "nih-reporter-api",
+    "name": "NIH RePORTER API",
+    "provider": "NIH"
+  },
+  {
+    "id": "nsf-award-search-api",
+    "name": "NSF Award Search API",
+    "provider": "NSF"
+  }
+]

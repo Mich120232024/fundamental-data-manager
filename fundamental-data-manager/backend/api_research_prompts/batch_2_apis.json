@@ -1,0 +1,127 @@
+[
+  {
+    "id": "european-commission-cordis-api",
+    "name": "European Commission CORDIS API",
+    "provider": "European"
+  },
+  {
+    "id": "uk-research-and-innovation-ukri-gateway-api",
+    "name": "UK Research and Innovation (UKRI) Gateway API",
+    "provider": "UK"
+  },
+  {
+    "id": "australian-research-council-api",
+    "name": "Australian Research Council API",
+    "provider": "Australian"
+  },
+  {
+    "id": "canadian-tri-agency-grants-api",
+    "name": "Canadian Tri-Agency Grants API",
+    "provider": "Canadian"
+  },
+  {
+    "id": "researchgov-api",
+    "name": "Research.gov API",
+    "provider": "Research.gov"
+  },
+  {
+    "id": "era-commons-api",
+    "name": "eRA Commons API",
+    "provider": "eRA"
+  },
+  {
+    "id": "wellcome-trust-grants-api",
+    "name": "Wellcome Trust Grants API",
+    "provider": "Wellcome"
+  },
+  {
+    "id": "bill-melinda-gates-foundation-api",
+    "name": "Bill & Melinda Gates Foundation API",
+    "provider": "Bill"
+  },
+  {
+    "id": "research-fish-api",
+    "name": "Research Fish API",
+    "provider": "Research"
+  },
+  {
+    "id": "openalex-api",
+    "name": "OpenAlex API",
+    "provider": "OpenAlex"
+  },
+  {
+    "id": "altmetric-api",
+    "name": "Altmetric API",
+    "provider": "Altmetric"
+  },
+  {
+    "id": "plum-analytics-api",
+    "name": "Plum Analytics API",
+    "provider": "Plum"
+  },
+  {
+    "id": "impactstory-api",
+    "name": "ImpactStory API",
+    "provider": "ImpactStory"
+  },
+  {
+    "id": "publons-api",
+    "name": "Publons API",
+    "provider": "Publons"
+  },
+  {
+    "id": "paperbuzz-api",
+    "name": "Paperbuzz API",
+    "provider": "Paperbuzz"
+  },
+  {
+    "id": "citescore-api",
+    "name": "CiteScore API",
+    "provider": "CiteScore"
+  },
+  {
+    "id": "journal-citation-reports-api",
+    "name": "Journal Citation Reports API",
+    "provider": "Journal"
+  },
+  {
+    "id": "scimago-journal-rank-api",
+    "name": "SCImago Journal Rank API",
+    "provider": "SCImago"
+  },
+  {
+    "id": "openapc-api",
+    "name": "OpenAPC API",
+    "provider": "OpenAPC"
+  },
+  {
+    "id": "scival-api",
+    "name": "SciVal API",
+    "provider": "SciVal"
+  },
+  {
+    "id": "incites-api",
+    "name": "InCites API",
+    "provider": "InCites"
+  },
+  {
+    "id": "openedition-api",
+    "name": "OpenEdition API",
+    "provider": "OpenEdition"
+  },
+  {
+    "id": "jstor-api",
+    "name": "JSTOR API",
+    "provider": "JSTOR"
+  },
+  {
+    "id": "project-muse-api",
+    "name": "Project MUSE API",
+    "provider": "Project"
+  },
+  {
+    "id": "hathitrust-api",
+    "name": "HathiTrust API",
+    "provider": "HathiTrust"
+  }
+]

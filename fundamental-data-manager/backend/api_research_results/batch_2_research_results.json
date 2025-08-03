@@ -1,0 +1,214 @@
+[
+  {
+    "id": "openalex-api",
+    "name": "OpenAlex API",
+    "provider": "OurResearch",
+    "description": "Comprehensive open scholarly knowledge graph providing access to over 250 million research works, authors, institutions, and scholarly relationships. Serves as an open replacement for proprietary services like Scopus and Web of Science.",
+    "discovery_status": "documented",
+    "tags": ["scholarly", "research", "open-access", "publications", "citations", "academic"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free with optional premium service for higher limits",
+      "rate_limits": "100,000 requests per day, 10 requests per second"
+    },
+    "technical_info": {
+      "base_url": "https://api.openalex.org",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "none (optional email for polite pool)",
+      "endpoints": [
+        "/works - Research publications and papers",
+        "/authors - Author profiles and publications",
+        "/institutions - Academic institutions and affiliations", 
+        "/sources - Journals, conferences, and publication venues",
+        "/topics - Research topics and subject classifications",
+        "/publishers - Publishing organizations",
+        "/funders - Funding organizations and grants"
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Scholarly Publications", "Author Profiles", "Institution Data", "Citation Networks"],
+      "geographic_scope": "global",
+      "update_frequency": "continuous",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://docs.openalex.org/",
+      "sample_endpoints": ["/works", "/authors", "/institutions"],
+      "data_quality": "excellent",
+      "last_researched": "2025-07-28T19:35:00Z",
+      "researcher_notes": "Nonprofit open access initiative with comprehensive API documentation, supports filtering and pagination, data sourced from multiple scholarly databases",
+      "api_summary": "OpenAlex API provides comprehensive access to a fully open catalog of the global research system, including over 250 million research works, author profiles, institutional data, and citation relationships. Built by nonprofit OurResearch as an open alternative to proprietary scholarly databases, it offers robust search capabilities, filtering options, and relationship mapping essential for bibliometric analysis, research discovery, and academic data integration."
+    }
+  },
+  {
+    "id": "altmetric-api",
+    "name": "Altmetric API",
+    "provider": "Altmetric (Digital Science)",
+    "description": "Alternative research impact metrics API tracking social media mentions, news coverage, and online attention for scholarly publications. Provides comprehensive altmetrics data beyond traditional citation metrics.",
+    "discovery_status": "documented",
+    "tags": ["altmetrics", "research-impact", "social-media", "citations", "scholarly-metrics"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "free for academic research, paid for commercial use",
+      "rate_limits": "1 request per second (free), higher limits with API key"
+    },
+    "technical_info": {
+      "base_url": "http://api.altmetric.com/",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "api_key (for enhanced access)",
+      "endpoints": [
+        "/v1/doi/{doi} - Metrics for specific DOI",
+        "/v1/pmid/{pmid} - Metrics for PubMed ID",
+        "/v1/isbn/{isbn} - Metrics for book ISBN",
+        "/v1/citations/{timeframe} - Recent mentions by timeframe",
+        "/v1/id/{altmetric_id} - Metrics by Altmetric ID"
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Social Media Metrics", "News Coverage", "Alternative Impact Metrics", "Online Attention"],
+      "geographic_scope": "global",
+      "update_frequency": "real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "http://api.altmetric.com/docs/",
+      "sample_endpoints": ["/v1/doi", "/v1/citations", "/v1/pmid"],
+      "data_quality": "excellent",
+      "last_researched": "2025-07-28T19:35:00Z",
+      "researcher_notes": "Requires application for researcher data access program, comprehensive altmetrics tracking across social platforms and news outlets, 6-month research access terms",
+      "api_summary": "Altmetric API provides comprehensive alternative research impact metrics by tracking mentions of scholarly publications across social media, news outlets, blogs, and other online platforms. The API offers real-time altmetrics data that complements traditional citation metrics, enabling researchers to understand the broader societal impact and online attention their work receives beyond academic circles."
+    }
+  },
+  {
+    "id": "jstor-api",
+    "name": "JSTOR API",
+    "provider": "JSTOR (ITHAKA)",
+    "description": "Academic journal archive API providing access to millions of scholarly articles, books, and primary sources across humanities, social sciences, and sciences. Includes AI-powered research tools for enhanced discovery.",
+    "discovery_status": "documented",
+    "tags": ["academic-journals", "humanities", "social-sciences", "archive", "scholarly-articles"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "institutional subscription required",
+      "rate_limits": "varies by subscription level"
+    },
+    "technical_info": {
+      "base_url": "https://www.jstor.org/api/",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "institutional_authentication",
+      "endpoints": [
+        "/search - Full-text search across collections",
+        "/articles/{id} - Article metadata and content",
+        "/citations/{id} - Citation information",
+        "/collections - Available collections and journals",
+        "/subjects - Subject classifications"
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Academic Articles", "Book Chapters", "Primary Sources", "Historical Documents"],
+      "geographic_scope": "global",
+      "update_frequency": "regular updates with new content",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://support.jstor.org/",
+      "sample_endpoints": ["/search", "/articles", "/collections"],
+      "data_quality": "excellent",
+      "last_researched": "2025-07-28T19:35:00Z",
+      "researcher_notes": "Requires institutional subscription for API access, comprehensive archive with AI-powered research tools in beta, strong focus on humanities and social sciences",
+      "api_summary": "JSTOR API provides programmatic access to one of the world's most comprehensive digital archives of academic journals, books, and primary sources, spanning disciplines in humanities, social sciences, and sciences. The API enables institutional users to integrate JSTOR's extensive scholarly content into research platforms, with new AI-powered tools enhancing discovery and research capabilities for academic institutions worldwide."
+    }
+  },
+  {
+    "id": "european-commission-cordis-api",
+    "name": "European Commission CORDIS API",
+    "provider": "European Commission",
+    "description": "Comprehensive database of EU-funded research projects providing access to project information, participants, results, and publications from Framework Programmes and Horizon Europe initiatives.",
+    "discovery_status": "documented", 
+    "tags": ["eu-research", "funding", "projects", "horizon-europe", "research-collaboration"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free public service",
+      "rate_limits": "reasonable use policy"
+    },
+    "technical_info": {
+      "base_url": "https://cordis.europa.eu/api/",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "none",
+      "endpoints": [
+        "/projects - Research project information",
+        "/participants - Project participants and organizations",
+        "/results - Project outcomes and deliverables",
+        "/publications - Research publications from projects",
+        "/programmes - Funding programme information"
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Research Projects", "EU Funding", "Scientific Collaboration", "Research Results"],
+      "geographic_scope": "european union and associated countries",
+      "update_frequency": "regular updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://cordis.europa.eu/data",
+      "sample_endpoints": ["/projects", "/participants", "/results"],
+      "data_quality": "excellent",
+      "last_researched": "2025-07-28T19:35:00Z",
+      "researcher_notes": "Official EU research database with comprehensive project information, open access to all EU-funded research data, valuable for research collaboration analysis",
+      "api_summary": "CORDIS API provides comprehensive access to the European Commission's research and development information system, containing detailed information about EU-funded research projects, participants, outcomes, and publications. The API serves as a central hub for discovering European research initiatives, tracking collaborative networks, and analyzing the impact of EU research funding across all scientific disciplines."
+    }
+  },
+  {
+    "id": "uk-research-and-innovation-ukri-gateway-api",
+    "name": "UK Research and Innovation (UKRI) Gateway API",
+    "provider": "UK Research and Innovation",
+    "description": "UK's primary research funding organization API providing access to grants, awards, publications, and research outcomes funded by UK research councils and Innovate UK.",
+    "discovery_status": "documented",
+    "tags": ["uk-research", "research-funding", "grants", "innovation", "research-councils"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free with registration",
+      "rate_limits": "standard API rate limits"
+    },
+    "technical_info": {
+      "base_url": "https://gtr.ukri.org/api/",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "api_key",
+      "endpoints": [
+        "/projects - Funded research projects",
+        "/organisations - Research institutions and companies",
+        "/persons - Principal investigators and researchers",
+        "/publications - Research publications and outputs",
+        "/outcomes - Project outcomes and impacts"
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Research Grants", "Project Outcomes", "UK Research Funding", "Innovation Data"],
+      "geographic_scope": "united kingdom",
+      "update_frequency": "regular updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://gtr.ukri.org/resources/api.html",
+      "sample_endpoints": ["/projects", "/organisations", "/publications"],
+      "data_quality": "excellent",
+      "last_researched": "2025-07-28T19:35:00Z",
+      "researcher_notes": "Official UK research funding database with comprehensive project and outcome tracking, valuable for UK research landscape analysis",
+      "api_summary": "UKRI Gateway API provides comprehensive access to UK's research funding landscape, including detailed information about grants, projects, outcomes, and publications funded by UK Research and Innovation. The API enables analysis of UK research investments, tracking of research impact, and discovery of collaborative opportunities within the UK's research ecosystem."
+    }
+  }
+]

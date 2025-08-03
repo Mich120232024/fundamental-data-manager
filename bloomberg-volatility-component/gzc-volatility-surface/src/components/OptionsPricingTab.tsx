@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useTheme } from '../contexts/ThemeContext'
 import { garmanKohlhagen, calculateForward, type FXOptionResult } from '../utils/garmanKohlhagen'
+import { ALL_FX_PAIRS } from '../constants/currencies'
 
 interface OptionParameters {
   currencyPair: string
@@ -245,10 +246,48 @@ export function OptionsPricingTab() {
                 fontFamily: 'monospace'
               }}
             >
-              <option value="EURUSD">EUR/USD</option>
-              <option value="GBPUSD">GBP/USD</option>
-              <option value="USDJPY">USD/JPY</option>
-              <option value="USDCHF">USD/CHF</option>
+              <optgroup label="G10 USD Pairs">
+                <option value="EURUSD">EUR/USD</option>
+                <option value="GBPUSD">GBP/USD</option>
+                <option value="AUDUSD">AUD/USD</option>
+                <option value="NZDUSD">NZD/USD</option>
+                <option value="USDJPY">USD/JPY</option>
+                <option value="USDCHF">USD/CHF</option>
+                <option value="USDCAD">USD/CAD</option>
+                <option value="USDSEK">USD/SEK</option>
+                <option value="USDNOK">USD/NOK</option>
+              </optgroup>
+              <optgroup label="EM USD Pairs - Major">
+                <option value="USDBRL">USD/BRL</option>
+                <option value="USDMXN">USD/MXN</option>
+                <option value="USDZAR">USD/ZAR</option>
+                <option value="USDTRY">USD/TRY</option>
+                <option value="USDINR">USD/INR</option>
+                <option value="USDCNH">USD/CNH</option>
+                <option value="USDKRW">USD/KRW</option>
+                <option value="USDTWD">USD/TWD</option>
+                <option value="USDSGD">USD/SGD</option>
+              </optgroup>
+              <optgroup label="Precious Metals">
+                <option value="XAUUSD">XAU/USD (Gold)</option>
+                <option value="XAGUSD">XAG/USD (Silver)</option>
+              </optgroup>
+              <optgroup label="EUR Crosses">
+                <option value="EURGBP">EUR/GBP</option>
+                <option value="EURJPY">EUR/JPY</option>
+                <option value="EURCHF">EUR/CHF</option>
+                <option value="EURAUD">EUR/AUD</option>
+                <option value="EURCAD">EUR/CAD</option>
+                <option value="EURNZD">EUR/NZD</option>
+              </optgroup>
+              <optgroup label="Other Crosses">
+                <option value="GBPJPY">GBP/JPY</option>
+                <option value="GBPCHF">GBP/CHF</option>
+                <option value="GBPAUD">GBP/AUD</option>
+                <option value="AUDJPY">AUD/JPY</option>
+                <option value="CADJPY">CAD/JPY</option>
+                <option value="NZDJPY">NZD/JPY</option>
+              </optgroup>
             </select>
           </div>
           

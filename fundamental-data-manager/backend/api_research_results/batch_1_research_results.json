@@ -1,0 +1,211 @@
+[
+  {
+    "id": "crossref-api",
+    "name": "CrossRef API",
+    "provider": "CrossRef",
+    "description": "Comprehensive academic publication metadata API providing access to citation data, DOI information, and research metadata from 18,000+ publishers. Enables discovery of academic works, citation relationships, and scholarly communication data.",
+    "discovery_status": "documented",
+    "tags": ["academic", "publications", "doi", "citations", "metadata", "scholarly"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free with optional paid CrossRef Plus service",
+      "rate_limits": "50 requests per second (dynamic rate limiting)"
+    },
+    "technical_info": {
+      "base_url": "https://api.crossref.org",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "none (optional email for polite pool)",
+      "endpoints": [
+        "/works - Academic publication metadata",
+        "/funders - Funding organization information", 
+        "/members - CrossRef member organization data",
+        "/prefixes - DOI prefix information",
+        "/types - Publication type classifications",
+        "/journals - Journal metadata"
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Academic Publications", "Citation Data", "DOI Registry", "Journal Metadata"],
+      "geographic_scope": "global",
+      "update_frequency": "real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+      "sample_endpoints": ["/works", "/funders", "/members"],
+      "data_quality": "excellent",
+      "last_researched": "2025-07-28T19:25:00Z",
+      "researcher_notes": "Robust API with comprehensive documentation, supports filtering and pagination, backed by major academic publishers",
+      "api_summary": "CrossRef API provides comprehensive access to academic publication metadata from over 18,000 publishers worldwide, offering real-time citation data, DOI resolution, and scholarly communication insights. The API supports advanced filtering, sorting, and pagination capabilities, making it essential for bibliometric analysis, research discovery platforms, and academic data integration projects."
+    }
+  },
+  {
+    "id": "orcid-api", 
+    "name": "ORCID API",
+    "provider": "ORCID",
+    "description": "Researcher identification API providing access to unique researcher profiles, academic achievements, and professional activities. Connects research outputs to verified researcher identities through persistent digital identifiers.",
+    "discovery_status": "documented",
+    "tags": ["researchers", "identification", "academic", "profiles", "oauth", "scholarly"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free public API, paid member API with enhanced features",
+      "rate_limits": "managed through OAuth tokens"
+    },
+    "technical_info": {
+      "base_url": "https://api.orcid.org",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "oauth2",
+      "endpoints": [
+        "/v3.0/{orcid-id} - Complete ORCID record",
+        "/v3.0/{orcid-id}/personal-details - Personal information",
+        "/v3.0/{orcid-id}/activities - Research activities",
+        "/v3.0/{orcid-id}/works - Publications and works",
+        "/v3.0/search - Search ORCID registry"
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Researcher Profiles", "Academic Works", "Employment History", "Peer Review"],
+      "geographic_scope": "global",
+      "update_frequency": "real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://info.orcid.org/documentation/integration-and-api-faq/",
+      "sample_endpoints": ["/v3.0/{orcid-id}", "/v3.0/search", "/v3.0/{orcid-id}/works"],
+      "data_quality": "excellent",
+      "last_researched": "2025-07-28T19:25:00Z", 
+      "researcher_notes": "Requires OAuth2 authentication, well-documented API with multiple access levels, integrates with institutional systems",
+      "api_summary": "ORCID API enables access to verified researcher profiles and their academic achievements through persistent digital identifiers. The API provides comprehensive access to researcher biographical data, employment history, publications, peer review activities, and funding information, supporting institutional integrations and research analytics platforms through OAuth2 authentication."
+    }
+  },
+  {
+    "id": "pubmed-api",
+    "name": "PubMed API (NCBI E-utilities)",
+    "provider": "National Center for Biotechnology Information (NCBI)",
+    "description": "Comprehensive biomedical literature database API providing access to over 34 million citations, abstracts, and full-text articles. Essential resource for medical research, pharmaceutical development, and healthcare informatics.",
+    "discovery_status": "documented",
+    "tags": ["biomedical", "literature", "ncbi", "medical", "research", "citations"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free government resource",
+      "rate_limits": "3 requests/second without API key, 10 requests/second with API key"
+    },
+    "technical_info": {
+      "base_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+      "protocol": "REST",
+      "data_formats": ["XML"],
+      "auth_method": "api_key",
+      "endpoints": [
+        "einfo.fcgi - Database statistics and field information",
+        "esearch.fcgi - Text searches returning PMIDs",
+        "efetch.fcgi - Full record retrieval",
+        "esummary.fcgi - Document summaries",
+        "elink.fcgi - Related records and external links"
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Biomedical Literature", "Medical Citations", "Research Abstracts", "MeSH Terms"],
+      "geographic_scope": "global",
+      "update_frequency": "daily",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.ncbi.nlm.nih.gov/books/NBK25497/",
+      "sample_endpoints": ["esearch.fcgi", "efetch.fcgi", "esummary.fcgi"],
+      "data_quality": "excellent",
+      "last_researched": "2025-07-28T19:25:00Z",
+      "researcher_notes": "Government-funded resource with comprehensive biomedical coverage, requires API key for reasonable rate limits, excellent documentation",
+      "api_summary": "PubMed API (NCBI E-utilities) provides comprehensive access to the world's largest biomedical literature database, containing over 34 million citations from MEDLINE, life science journals, and online books. The API supports complex queries, field-specific searches, and related article discovery, making it indispensable for medical research, systematic reviews, pharmaceutical development, and healthcare informatics applications."
+    }
+  },
+  {
+    "id": "arxiv-api",
+    "name": "arXiv API", 
+    "provider": "Cornell University",
+    "description": "Open access preprint repository API providing access to cutting-edge research papers in physics, mathematics, computer science, and other scientific disciplines. Enables discovery of latest research before peer review publication.",
+    "discovery_status": "documented",
+    "tags": ["preprints", "research", "physics", "mathematics", "computer-science", "open-access"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free open access",
+      "rate_limits": "1 request every 3 seconds (recommended)"
+    },
+    "technical_info": {
+      "base_url": "http://export.arxiv.org/api/query",
+      "protocol": "REST",
+      "data_formats": ["Atom XML"],
+      "auth_method": "none",
+      "endpoints": [
+        "/query - Primary search and retrieval endpoint with search_query parameter",
+        "/query?id_list - Retrieve specific papers by arXiv ID",
+        "/query?search_query - Boolean search across papers"
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Preprint Papers", "Research Manuscripts", "Scientific Publications", "Academic Preprints"],
+      "geographic_scope": "global",
+      "update_frequency": "daily",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://info.arxiv.org/help/api/user-manual.html",
+      "sample_endpoints": ["/query", "/query?search_query", "/query?id_list"],
+      "data_quality": "excellent",
+      "last_researched": "2025-07-28T19:25:00Z",
+      "researcher_notes": "Simple API with comprehensive search capabilities, excellent for accessing cutting-edge research, no authentication required",
+      "api_summary": "arXiv API provides open access to over 2 million preprint manuscripts across physics, mathematics, computer science, biology, finance, and statistics. The API enables real-time discovery of cutting-edge research before traditional peer review publication, supporting advanced Boolean searches, field-specific queries, and comprehensive metadata access for academic research platforms and scientific monitoring systems."
+    }
+  },
+  {
+    "id": "zenodo-api",
+    "name": "Zenodo API",
+    "provider": "CERN",
+    "description": "Research data repository API enabling storage, sharing, and discovery of research outputs including datasets, software, publications, and multimedia. Provides DOI assignment and long-term preservation for scientific data.",
+    "discovery_status": "documented", 
+    "tags": ["research-data", "repository", "doi", "datasets", "software", "preservation"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free unlimited storage and bandwidth",
+      "rate_limits": "100 requests/minute (authenticated), 60 requests/minute (anonymous)"
+    },
+    "technical_info": {
+      "base_url": "https://zenodo.org/api/",
+      "protocol": "REST", 
+      "data_formats": ["JSON"],
+      "auth_method": "oauth2 with personal access tokens",
+      "endpoints": [
+        "/deposit/depositions - Create, manage, and publish research outputs",
+        "/records - Search and retrieve published records",
+        "/licenses - Available license information",
+        "/communities - Community collections",
+        "/funders - Funding organization data"
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Research Datasets", "Software", "Publications", "Multimedia Research Outputs"],
+      "geographic_scope": "global",
+      "update_frequency": "real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://developers.zenodo.org/",
+      "sample_endpoints": ["/records", "/deposit/depositions", "/communities"],
+      "data_quality": "excellent",
+      "last_researched": "2025-07-28T19:25:00Z",
+      "researcher_notes": "CERN-backed repository with excellent GitHub integration, supports large datasets up to 50GB, automatic DOI assignment",
+      "api_summary": "Zenodo API provides comprehensive access to a research data repository backed by CERN, offering unlimited free storage for datasets, software, publications, and other research outputs. The API supports DOI assignment, version control, metadata management, and GitHub integration, making it essential for research data management, preservation, and sharing in compliance with open science practices."
+    }
+  }
+]

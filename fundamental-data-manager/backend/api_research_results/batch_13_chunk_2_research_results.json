@@ -1,0 +1,297 @@
+[
+  {
+    "id": "nielsen",
+    "name": "Nielsen Consumer Data API",
+    "provider": "Nielsen",
+    "description": "Consumer behavior analytics and market measurement data through various API endpoints serving media measurement, retail analytics, and advertising intelligence to Fortune 500 companies globally.",
+    "discovery_status": "documented",
+    "tags": ["consumer analytics", "media measurement", "retail analytics", "advertising intelligence", "market research"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise subscription ($110,000-$380,000 annually)",
+      "rate_limits": "Enterprise-negotiated"
+    },
+    "technical_info": {
+      "base_url": "https://portal.developer.nielseniq.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "OAuth 2.0 + API Key",
+      "endpoints": [
+        {
+          "path": "/api/measurement/dcr",
+          "full_url": "https://portal.developer.nielseniq.com/api/measurement/dcr",
+          "method": "GET",
+          "description": "Digital Content Ratings measurement data",
+          "documentation_link": "https://portal.developer.nielseniq.com/products",
+          "parameters": ["appid", "sessionID", "payload"],
+          "response_format": "JSON with measurement data"
+        },
+        {
+          "path": "/api/retail/scanner-data",
+          "full_url": "https://portal.developer.nielseniq.com/api/retail/scanner-data",
+          "method": "GET",
+          "description": "Retail scanner data for consumer packaged goods analysis",
+          "documentation_link": "https://portal.developer.nielseniq.com/products",
+          "parameters": ["category", "geography", "timeframe"],
+          "response_format": "JSON with scanner data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Consumer behavior", "Media measurement", "Retail analytics", "Market share", "Demographics"],
+      "geographic_scope": "Global markets",
+      "update_frequency": "Real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://portal.developer.nielseniq.com/products",
+      "api_summary": "Nielsen serves enterprise clients through direct partnerships. Public API access limited, requires enterprise agreements. Multi-layered security with OAuth 2.0.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Enterprise partnerships required",
+      "api_reference": "Available with enterprise agreement",
+      "examples": "Provided with subscription",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "iri",
+    "name": "Circana (IRI) Consumer Insights API",
+    "provider": "Circana",
+    "description": "Comprehensive consumer behavior analytics, retail data, and market intelligence through Liquid Data platform serving CPG manufacturers and retailers globally (formerly IRI, merged with NPD Group).",
+    "discovery_status": "documented",
+    "tags": ["consumer behavior", "retail data", "market intelligence", "CPG analytics", "liquid data"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise subscription ($100,000+ annually estimated)",
+      "rate_limits": "Enterprise-managed"
+    },
+    "technical_info": {
+      "base_url": "https://www.circana.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "Enterprise OAuth 2.0",
+      "endpoints": [
+        {
+          "path": "/api/liquid-data/sales",
+          "full_url": "Enterprise endpoint",
+          "method": "GET",
+          "description": "Point-of-sale data across retail channels",
+          "documentation_link": "Limited public documentation",
+          "parameters": ["category", "geography", "timeframe"],
+          "response_format": "JSON with sales data"
+        },
+        {
+          "path": "/api/consumer-panel/insights",
+          "full_url": "Enterprise endpoint",
+          "method": "GET",
+          "description": "Consumer panel behavior and demographic insights",
+          "documentation_link": "Limited public documentation",
+          "parameters": ["panelType", "metrics"],
+          "response_format": "JSON with consumer insights"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Point-of-sale data", "Consumer panel", "Market share", "Demographic insights"],
+      "geographic_scope": "Global",
+      "update_frequency": "Batch processing - updates every 4 weeks",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Limited public documentation",
+      "api_summary": "Circana (IRI+NPD merger) serves enterprise clients through cloud partnerships. Liquid Data platform with 13 releases per year.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Enterprise partnerships",
+      "api_reference": "Available with subscription",
+      "examples": "Cloud integration examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "npd-group",
+    "name": "NPD Group (Circana) Market Research API",
+    "provider": "Circana",
+    "description": "Market research and analytics across multiple industries through Liquid Data platform, serving Fortune 100 companies with comprehensive consumer behavior insights (now part of Circana).",
+    "discovery_status": "documented",
+    "tags": ["market research", "industry analytics", "liquid data", "consumer behavior", "alwayson analytics"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise solutions (historical $28,000-$57,000 annually)",
+      "rate_limits": "Enterprise-managed"
+    },
+    "technical_info": {
+      "base_url": "https://www.circana.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "Enterprise SSO + OAuth 2.0",
+      "endpoints": [
+        {
+          "path": "/api/alwayson/analytics",
+          "full_url": "Enterprise endpoint",
+          "method": "GET",
+          "description": "Real-time analytics and immediate actionable insights",
+          "documentation_link": "Enterprise client documentation",
+          "parameters": ["vertical", "metrics"],
+          "response_format": "JSON with real-time insights"
+        },
+        {
+          "path": "/api/industry/gaming",
+          "full_url": "Enterprise endpoint",
+          "method": "GET",
+          "description": "Gaming industry specific market insights and trends",
+          "documentation_link": "Enterprise client documentation",
+          "parameters": ["platform", "category"],
+          "response_format": "JSON with gaming insights"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Market research", "Industry analytics", "Consumer behavior", "Gaming data", "Restaurant analytics"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time for AlwaysOn Analytics",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Enterprise client documentation",
+      "api_summary": "NPD Group merged with IRI to form Circana. Services delivered through Liquid Data platform with real-time analytics focus.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Enterprise onboarding",
+      "api_reference": "Available with subscription",
+      "examples": "React, JavaScript, Mobile SDKs",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "numerator",
+    "name": "Numerator Consumer Panel API",
+    "provider": "Numerator",
+    "description": "Consumer panel insights and omnichannel purchase behavior data through comprehensive platform serving Fortune 100 companies with real-time consumer analytics and market intelligence.",
+    "discovery_status": "documented",
+    "tags": ["consumer panel", "omnichannel data", "purchase behavior", "market intelligence", "real-time analytics"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise subscription",
+      "rate_limits": "Enterprise-managed"
+    },
+    "technical_info": {
+      "base_url": "https://www.numerator.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "Okta SSO + OAuth 2.0",
+      "endpoints": [
+        {
+          "path": "/api/numerator-link/purchase-data",
+          "full_url": "Enterprise endpoint",
+          "method": "GET",
+          "description": "Consumer purchase data capture from permissioned accounts",
+          "documentation_link": "Enterprise documentation",
+          "parameters": ["userId", "timeframe", "retailFilter"],
+          "response_format": "JSON with purchase data"
+        },
+        {
+          "path": "/api/insights/consumer-behavior",
+          "full_url": "Enterprise endpoint",
+          "method": "GET",
+          "description": "Consumer behavior analytics from 1M+ household panel",
+          "documentation_link": "Enterprise documentation",
+          "parameters": ["panelType", "demographics"],
+          "response_format": "JSON with behavior insights"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Purchase behavior", "Consumer demographics", "Market share", "Brand loyalty", "Channel preferences"],
+      "geographic_scope": "US markets primarily",
+      "update_frequency": "Daily updates with 72-hour standard",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Enterprise documentation",
+      "api_summary": "Numerator serves Fortune 100 companies with 1M+ household panel. Numerator Link available via Azure Marketplace for consumer data capture.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Enterprise partnerships",
+      "api_reference": "Available with subscription",
+      "examples": "Python, Java, React SDKs",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "edison-trends",
+    "name": "Edison Trends E-commerce Analytics API",
+    "provider": "Edison",
+    "description": "E-commerce analytics and consumer spending insights derived from email receipt analysis and consumer app data, delivering alternative data for investment and business intelligence.",
+    "discovery_status": "documented",
+    "tags": ["e-commerce analytics", "alternative data", "receipt analysis", "consumer spending", "investment intelligence"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise data subscription",
+      "rate_limits": "Enterprise-managed"
+    },
+    "technical_info": {
+      "base_url": "https://trends.edison.tech",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "OAuth 2.0 + Enterprise Access",
+      "endpoints": [
+        {
+          "path": "/api/trends/company-spend",
+          "full_url": "Enterprise endpoint",
+          "method": "GET",
+          "description": "Consumer spending trends for specific companies and brands",
+          "documentation_link": "Limited public documentation",
+          "parameters": ["company", "timeframe", "geography"],
+          "response_format": "JSON with spending trends"
+        },
+        {
+          "path": "/api/ecommerce/category-performance",
+          "full_url": "Enterprise endpoint",
+          "method": "GET",
+          "description": "E-commerce category performance and market trends",
+          "documentation_link": "Limited public documentation",
+          "parameters": ["category", "metrics"],
+          "response_format": "JSON with category performance"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Consumer spending", "E-commerce trends", "Receipt data", "Brand performance", "Market analytics"],
+      "geographic_scope": "US markets primarily",
+      "update_frequency": "Daily/weekly data updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Limited public documentation",
+      "api_summary": "Edison Trends focuses on alternative data for investment firms. Access primarily through data feeds and custom analytics rather than traditional APIs.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for access",
+      "api_reference": "Enterprise documentation",
+      "examples": "Data feed integration",
+      "changelog": null,
+      "status_page": null
+    }
+  }
+]

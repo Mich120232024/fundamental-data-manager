@@ -1,0 +1,297 @@
+[
+  {
+    "id": "moodys-analytics",
+    "name": "Moody's Analytics API",
+    "provider": "Moody's Analytics",
+    "description": "Comprehensive credit risk analytics and economic data platform providing credit ratings, economic forecasts, and financial analysis tools for banking, investment, and corporate use cases.",
+    "discovery_status": "documented",
+    "tags": ["credit risk", "economic analytics", "financial analysis", "credit ratings", "economic forecasts"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "License-based (contact sales)",
+      "rate_limits": "300 requests/minute, 1GB data/month"
+    },
+    "technical_info": {
+      "base_url": "https://api.economy.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "HMAC and OAuth 2.0",
+      "endpoints": [
+        {
+          "path": "/data/v1/series",
+          "full_url": "https://api.economy.com/data/v1/series",
+          "method": "GET",
+          "description": "Retrieve single economic time series data",
+          "documentation_link": "https://api.economy.com/data/v1/swagger/ui/index",
+          "parameters": ["series_id", "start_date", "end_date"],
+          "response_format": "JSON with time series data"
+        },
+        {
+          "path": "/eccl/forecasts",
+          "full_url": "https://api.economy.com/eccl/forecasts",
+          "method": "GET",
+          "description": "Consumer credit loss forecasts",
+          "documentation_link": "https://api.economy.com/data/v1/swagger/ui/index",
+          "parameters": ["scenario", "geography"],
+          "response_format": "JSON with forecast data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Economic data", "Credit risk models", "Municipal analysis", "Consumer credit", "Scenario analysis"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api.economy.com/data/v1/swagger/ui/index",
+      "api_summary": "Moody's Analytics provides economic data and credit risk modeling with 99.5% SLA. Trial access available with registration. SOC 2 and ISO 27001 compliant.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://www.economy.com/products/tools/api",
+      "api_reference": "https://api.economy.com/data/v1/swagger/ui/index",
+      "examples": "Python, R, C#, Java SDKs",
+      "changelog": null,
+      "status_page": "99.5% uptime SLA"
+    }
+  },
+  {
+    "id": "dv01",
+    "name": "dv01 API",
+    "provider": "dv01",
+    "description": "Structured finance analytics platform providing loan-level data management, reporting, and analytics for securitizations, private credit, and asset-backed securities with enterprise focus.",
+    "discovery_status": "documented",
+    "tags": ["structured finance", "loan analytics", "securitization", "private credit", "asset-backed securities"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise subscription",
+      "rate_limits": "Enterprise-grade limits"
+    },
+    "technical_info": {
+      "base_url": "https://www.dv01.co",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV", "Excel"],
+      "auth_method": "API key with role-based access",
+      "endpoints": [
+        {
+          "path": "/api/portfolios",
+          "full_url": "Enterprise endpoint",
+          "method": "GET",
+          "description": "Access portfolio surveillance and performance data",
+          "documentation_link": "https://dv01.freshdesk.com/support/solutions",
+          "parameters": ["portfolio_id", "date_range"],
+          "response_format": "JSON with portfolio data"
+        },
+        {
+          "path": "/api/cashflows",
+          "full_url": "Enterprise endpoint",
+          "method": "GET",
+          "description": "Multi-scenario cashflow projections",
+          "documentation_link": "https://dv01.freshdesk.com/support/solutions",
+          "parameters": ["scenarios", "assumptions"],
+          "response_format": "JSON with cashflow projections"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Loan-level data", "Portfolio surveillance", "Performance analytics", "Cashflow modeling", "Risk assessment"],
+      "geographic_scope": "North America",
+      "update_frequency": "Real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://dv01.freshdesk.com/support/solutions",
+      "api_summary": "dv01 provides structured finance analytics with 99.9% uptime SLA. Enterprise support with dedicated account management. SOC 2 Type II compliant.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Enterprise onboarding",
+      "api_reference": "Enterprise documentation",
+      "examples": "Python, R SDKs",
+      "changelog": null,
+      "status_page": "99.9% uptime SLA"
+    }
+  },
+  {
+    "id": "climate-engine",
+    "name": "Climate Engine API",
+    "provider": "Climate Engine",
+    "description": "Climate data platform providing satellite earth observations, weather data, and environmental analytics for climate monitoring, drought assessment, and agricultural applications with freemium model.",
+    "discovery_status": "documented",
+    "tags": ["climate data", "satellite observations", "environmental analytics", "drought monitoring", "agricultural applications"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Freemium (10 EECU hours/month free)",
+      "rate_limits": "100 requests/day, 1000 requests/month"
+    },
+    "technical_info": {
+      "base_url": "https://api.climateengine.org",
+      "protocol": "REST",
+      "data_formats": ["JSON", "GeoTIFF"],
+      "auth_method": "JWT Token",
+      "endpoints": [
+        {
+          "path": "/export/values",
+          "full_url": "https://api.climateengine.org/export/values",
+          "method": "GET/POST",
+          "description": "Export climate data maps to Google Cloud Storage",
+          "documentation_link": "https://docs.climateengine.org",
+          "parameters": ["dataset", "variable", "bbox", "start_date", "end_date"],
+          "response_format": "JSON with export status"
+        },
+        {
+          "path": "/timeseries/native",
+          "full_url": "https://api.climateengine.org/timeseries/native",
+          "method": "GET/POST",
+          "description": "Extract native time series data for points or regions",
+          "documentation_link": "https://docs.climateengine.org",
+          "parameters": ["dataset", "coordinates", "date_range"],
+          "response_format": "JSON with time series data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Satellite observations", "Weather data", "Drought monitoring", "Wildfire risk", "Agricultural analytics"],
+      "geographic_scope": "Global",
+      "update_frequency": "Regular updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://docs.climateengine.org",
+      "api_summary": "Climate Engine provides freemium climate data platform with Google Earth Engine integration. Rate limits can be removed by linking GEE credentials.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://docs.climateengine.org",
+      "api_reference": "https://docs.climateengine.org",
+      "examples": "Python, R, JavaScript SDKs",
+      "changelog": null,
+      "status_page": "99.0% uptime"
+    }
+  },
+  {
+    "id": "gro-intelligence",
+    "name": "Gro Intelligence API",
+    "provider": "Gro Intelligence (Acquired by Almanac)",
+    "description": "Agricultural analytics platform providing global crop data, yield forecasts, and climate impact analysis. Company ceased operations in 2024, IP acquired by Almanac.",
+    "discovery_status": "deprecated",
+    "tags": ["agricultural analytics", "crop forecasts", "food security", "deprecated service", "climate impact"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "Service discontinued",
+      "rate_limits": "Service no longer operational"
+    },
+    "technical_info": {
+      "base_url": "https://www.gro-intelligence.com",
+      "protocol": "REST (Historical)",
+      "data_formats": ["JSON", "CSV"],
+      "auth_method": "API Token (Historical)",
+      "endpoints": [
+        {
+          "path": "/api/data-series",
+          "full_url": "Service discontinued",
+          "method": "GET",
+          "description": "Retrieve agricultural data series (DEPRECATED)",
+          "documentation_link": "https://developers.gro-intelligence.com (Archived)",
+          "parameters": ["metric", "item", "region", "source"],
+          "response_format": "Service discontinued"
+        },
+        {
+          "path": "/api/yield-forecasts",
+          "full_url": "Service discontinued",
+          "method": "GET",
+          "description": "Access crop yield forecasting models (DEPRECATED)",
+          "documentation_link": "https://developers.gro-intelligence.com (Archived)",
+          "parameters": ["crop", "country", "forecast_date"],
+          "response_format": "Service discontinued"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Global crop yields", "Supply chain analytics", "Climate impact", "Food security", "Satellite monitoring"],
+      "geographic_scope": "Global (Historical)",
+      "update_frequency": "Service discontinued",
+      "historical_data": false
+    },
+    "research_notes": {
+      "documentation_url": "https://developers.gro-intelligence.com (Archived)",
+      "api_summary": "Gro Intelligence ceased operations in 2024. IP and assets acquired by Almanac. Historical pricing was enterprise subscription-based.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Service discontinued",
+      "api_reference": "Archived documentation",
+      "examples": "Historical Python, R SDKs",
+      "changelog": null,
+      "status_page": "Service discontinued"
+    }
+  },
+  {
+    "id": "awhere",
+    "name": "aWhere API",
+    "provider": "aWhere",
+    "description": "Agricultural intelligence platform providing field-level weather data, agronomic insights, and crop growth stage models for precision agriculture and farm management applications.",
+    "discovery_status": "documented",
+    "tags": ["agricultural intelligence", "weather analytics", "precision agriculture", "crop modeling", "farm management"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Subscription-based",
+      "rate_limits": "Varies by subscription"
+    },
+    "technical_info": {
+      "base_url": "https://developer.awhere.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "OAuth2 Client Credentials",
+      "endpoints": [
+        {
+          "path": "/weather/fields/{field-id}/observations",
+          "full_url": "https://api.awhere.com/weather/fields/{field-id}/observations",
+          "method": "GET",
+          "description": "Get observed weather data for a specific field",
+          "documentation_link": "https://developer.awhere.com/api/authentication",
+          "parameters": ["field_id", "start_date", "end_date"],
+          "response_format": "JSON with weather observations"
+        },
+        {
+          "path": "/agronomics/fields/{field-id}/norms",
+          "full_url": "https://api.awhere.com/agronomics/fields/{field-id}/norms",
+          "method": "GET",
+          "description": "Get agronomic norms including GDD, PET, and PPE",
+          "documentation_link": "https://developer.awhere.com/api/authentication",
+          "parameters": ["field_id", "start_date", "end_date"],
+          "response_format": "JSON with agronomic data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Field-level weather", "Agronomic modeling", "Crop growth stages", "Weather norms", "Forecasting"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time weather data",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://developer.awhere.com/api/authentication",
+      "api_summary": "aWhere provides agricultural intelligence with field-level weather data and agronomic modeling. 99.5% uptime SLA with SOC 2 compliance.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://developer.awhere.com/api/authentication",
+      "api_reference": "https://developer.awhere.com/api/authentication",
+      "examples": "Python, R SDKs",
+      "changelog": null,
+      "status_page": "99.5% uptime SLA"
+    }
+  }
+]

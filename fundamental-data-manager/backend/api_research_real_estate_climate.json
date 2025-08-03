@@ -1,0 +1,380 @@
+{
+  "api_research_results": {
+    "research_date": "2025-07-30",
+    "apis_researched": [
+      {
+        "api_name": "Reonomy",
+        "api_category": "Real Estate Intelligence",
+        "api_description": "Commercial real estate intelligence platform providing comprehensive property data across the United States",
+        "technical_info": {
+          "base_url": "https://api.reonomy.com",
+          "protocol": "REST",
+          "data_formats": ["JSON"],
+          "auth_method": "basic",
+          "endpoints": [
+            {
+              "path": "/v2/search/summaries",
+              "full_url": "https://api.reonomy.com/v2/search/summaries",
+              "method": "POST",
+              "description": "Search for properties by specifying search criteria (no credits used)",
+              "documentation_link": "https://api.reonomy.com/v2/docs/guides/getting-started/",
+              "parameters": ["search criteria object"],
+              "response_format": "JSON with property summaries"
+            },
+            {
+              "path": "/v2/resolve/property",
+              "full_url": "https://api.reonomy.com/v2/resolve/property",
+              "method": "POST",
+              "description": "Find properties by street address, geolocation, or place name (uses resolution credits)",
+              "documentation_link": "https://api.reonomy.com/v2/docs/guides/property-details/",
+              "parameters": ["address", "location", "place_name"],
+              "response_format": "JSON with Reonomy property ID"
+            },
+            {
+              "path": "/v2/search/property-shapes",
+              "full_url": "https://api.reonomy.com/v2/search/property-shapes",
+              "method": "POST",
+              "description": "Retrieve shape files for a given parcel ID",
+              "documentation_link": "https://api.reonomy.com/v2/docs/api/reference/",
+              "parameters": ["parcel_id"],
+              "response_format": "JSON with parcel geometry data"
+            },
+            {
+              "path": "/property/{property_id}",
+              "full_url": "https://api.reonomy.com/property/{property_id}",
+              "method": "GET",
+              "description": "Get basic property information using Reonomy property ID",
+              "documentation_link": "https://api.reonomy.com/v2/docs/guides/property-details/",
+              "parameters": ["property_id"],
+              "response_format": "JSON with property details"
+            },
+            {
+              "path": "/property/bulk",
+              "full_url": "https://api.reonomy.com/property/bulk",
+              "method": "POST",
+              "description": "Retrieve information for up to 250 properties in a single request",
+              "documentation_link": "https://api.reonomy.com/v2/docs/api/reference/",
+              "parameters": ["array of property_ids (max 250)"],
+              "response_format": "JSON array with property details"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://api.reonomy.com/v2/docs/guides/getting-started/",
+            "authentication": "https://api.reonomy.com/v2/docs/api/basics/",
+            "endpoints_reference": "https://api.reonomy.com/v2/docs/api/reference/",
+            "code_examples": "https://api.reonomy.com/v2/docs/guides/",
+            "sdks_libraries": "Not specified in available documentation"
+          }
+        },
+        "data_coverage": {
+          "geography": "United States",
+          "property_types": ["Commercial Real Estate"],
+          "data_points": [
+            "Basic property information",
+            "Mortgages and taxes",
+            "Ownership information (including contact details)",
+            "Financial information (revenue, NOI, expenses)",
+            "Building characteristics and square footage",
+            "Parcel geometry and metadata"
+          ]
+        },
+        "authentication_details": {
+          "method": "HTTP Basic Authentication",
+          "credentials_format": "Base64 encoded access_key:secret_key",
+          "header_format": "Authorization: Basic YOUR_ACCESS_TOKEN",
+          "acquisition_process": "Email sales@reonomy.com for enterprise access"
+        },
+        "rate_limits": {
+          "general": "5 requests per second for most endpoints",
+          "bulk_endpoint": "May have different limits"
+        },
+        "pricing_model": {
+          "structure": "Credit-based system",
+          "details": {
+            "property_detail_credit": "Access property data for specific property for full contract year",
+            "property_resolution_credit": "Used when translating address to property ID",
+            "free_operations": "POST /search/summaries doesn't use credits"
+          },
+          "availability": "Enterprise customers only",
+          "contact": "sales@reonomy.com"
+        },
+        "additional_features": {
+          "bulk_data_feeds": "Available for offline analytics and integration",
+          "pii_filtering": "filter_pii query parameter to exclude personally identifiable information"
+        }
+      },
+      {
+        "api_name": "Cherre",
+        "api_category": "Real Estate Data Platform",
+        "api_description": "Real estate data management and insights platform that connects disparate data sources into a single source of truth using GraphQL API",
+        "technical_info": {
+          "base_url": "Not publicly documented",
+          "protocol": "GraphQL",
+          "data_formats": ["JSON via GraphQL"],
+          "auth_method": "unknown",
+          "endpoints": [
+            {
+              "path": "/graphql",
+              "full_url": "Not publicly available",
+              "method": "POST",
+              "description": "Single GraphQL endpoint for all data queries across connected datasets",
+              "documentation_link": "Not publicly available",
+              "parameters": ["GraphQL query", "variables"],
+              "response_format": "JSON following GraphQL response specification"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "Contact Cherre directly",
+            "authentication": "Not publicly documented",
+            "endpoints_reference": "Not publicly documented",
+            "code_examples": "Not publicly available",
+            "sdks_libraries": "Not specified"
+          }
+        },
+        "data_coverage": {
+          "geography": "Not specified",
+          "property_types": ["Commercial Real Estate"],
+          "data_points": [
+            "Property characteristics",
+            "Recorder and deeds",
+            "Valuations",
+            "Tax and assessments",
+            "Liens and mortgages",
+            "Boundaries",
+            "Community and demographics",
+            "Points of Interest (POI)"
+          ]
+        },
+        "platform_features": {
+          "data_sources": [
+            "100+ third-party data providers",
+            "Public data feeds",
+            "Customer's private data integration"
+          ],
+          "capabilities": [
+            "Single query access to all connected datasets",
+            "Aggregate queries (sum, distinct, average)",
+            "Prevents over-fetching and under-fetching",
+            "Seamless table joins and relationship traversal"
+          ],
+          "data_volume": "3.3+ billion addresses",
+          "technology": "Machine learning algorithms for data connection and aggregation"
+        },
+        "integration_options": {
+          "data_egress": [
+            "Existing data warehouses",
+            "BI tools",
+            "Deal management systems",
+            "Valuation systems"
+          ],
+          "infrastructure": "BigQuery processing, Cloud SQL for PostgreSQL storage, GKE for API hosting"
+        },
+        "pricing_model": {
+          "structure": "Enterprise licensing with rate limiting",
+          "details": "Plans to introduce rate limiting for different client tiers",
+          "availability": "Enterprise customers (large CRE investors, lenders, underwriters)",
+          "contact": "Contact Cherre sales team"
+        },
+        "implementation_time": "Hours when pre-licensed to third-party data"
+      },
+      {
+        "api_name": "Measurabl",
+        "api_category": "ESG/Sustainability Platform",
+        "api_description": "World's leading ESG platform for real estate, providing comprehensive sustainability data management and reporting",
+        "technical_info": {
+          "base_url": "Not publicly documented",
+          "protocol": "REST (assumed)",
+          "data_formats": ["JSON (assumed)"],
+          "auth_method": "unknown",
+          "endpoints": [
+            {
+              "path": "Not publicly documented",
+              "full_url": "Not available",
+              "method": "Various",
+              "description": "API access mentioned but specific endpoints not documented publicly",
+              "documentation_link": "Contact Measurabl for developer documentation",
+              "parameters": "Not specified",
+              "response_format": "Not specified"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "Contact Measurabl directly",
+            "authentication": "Not publicly documented",
+            "endpoints_reference": "Not publicly available",
+            "code_examples": "Not publicly available",
+            "sdks_libraries": "Not specified"
+          }
+        },
+        "data_coverage": {
+          "geography": "93 countries",
+          "property_types": ["Commercial Real Estate"],
+          "data_points": [
+            "70+ ESG data points per asset",
+            "Green building certifications",
+            "Local ordinances",
+            "Climate risk data",
+            "Energy and carbon estimates",
+            "Meter-level electricity, water, fuel, district and waste data"
+          ]
+        },
+        "platform_features": {
+          "scale": "18 billion square feet valued at $3 trillion",
+          "adoption": "37% of world's top asset managers",
+          "capabilities": [
+            "Automated utility data collection from thousands of utilities",
+            "AI-enabled Connect tool for 4x faster data ingestion",
+            "ML-driven quality checks",
+            "Real-time asset-level energy and carbon estimates",
+            "Pre-built reporting templates (GRESB, SFDR, CDP)"
+          ]
+        },
+        "integration_features": {
+          "data_sharing": "Automated data-sharing with third-party platforms",
+          "api_access": "Customers can procure data via API",
+          "bundling": "Various datasets can be bundled based on specific goals"
+        },
+        "pricing_model": {
+          "structure": "Not publicly disclosed",
+          "availability": "B2B enterprise focus",
+          "contact": "Contact Measurabl sales team"
+        }
+      },
+      {
+        "api_name": "WeatherAlpha",
+        "api_category": "Weather Marketing Data",
+        "api_description": "Weather-based marketing and advertising platform that helps refine marketing campaigns using weather and health data",
+        "technical_info": {
+          "base_url": "Not publicly documented",
+          "protocol": "Unknown",
+          "data_formats": ["Not specified"],
+          "auth_method": "unknown",
+          "endpoints": [
+            {
+              "path": "Not documented",
+              "full_url": "Not available",
+              "method": "Not specified",
+              "description": "Limited API documentation available publicly",
+              "documentation_link": "www.weatheralpha.com",
+              "parameters": "Not specified",
+              "response_format": "Not specified"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "Contact WeatherAlpha directly",
+            "authentication": "Not publicly documented",
+            "endpoints_reference": "Not publicly available",
+            "code_examples": "Not publicly available",
+            "sdks_libraries": "Not specified"
+          }
+        },
+        "marketing_focus": {
+          "primary_use": "Weather-based marketing and advertising",
+          "features": [
+            "Category-specific weather conditions for call to action",
+            "Current conditions triggers (e.g., high humidity)",
+            "Multi-platform access"
+          ],
+          "platforms": [
+            "The Trade Desk",
+            "LiveRamp",
+            "Custom platform integration"
+          ]
+        },
+        "pricing_model": {
+          "structure": "Not publicly disclosed",
+          "availability": "B2B marketing focus",
+          "contact": "Contact WeatherAlpha directly"
+        },
+        "note": "WeatherAlpha appears to focus more on weather-based marketing services rather than traditional weather data API offerings"
+      },
+      {
+        "api_name": "ClimateAI",
+        "api_category": "Climate Analytics",
+        "api_description": "Climate risk data API providing high-resolution climate intelligence for business decision-making and risk assessment",
+        "technical_info": {
+          "base_url": "Not publicly documented",
+          "protocol": "REST (assumed)",
+          "data_formats": ["JSON (assumed)"],
+          "auth_method": "api_key",
+          "endpoints": [
+            {
+              "path": "Not publicly documented",
+              "full_url": "Not available",
+              "method": "Various",
+              "description": "Climate risk data and weather forecast endpoints",
+              "documentation_link": "https://learn-more.climate.ai/api",
+              "parameters": "Location-based parameters (assumed)",
+              "response_format": "JSON with climate/weather data"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://learn-more.climate.ai/api",
+            "authentication": "API Key authentication mentioned",
+            "endpoints_reference": "Contact ClimateAI for full documentation",
+            "code_examples": "Not publicly available",
+            "sdks_libraries": "Not specified"
+          }
+        },
+        "data_coverage": {
+          "forecast_range": "1 to 14 days",
+          "spatial_resolution": "1km",
+          "data_types": [
+            "Weather forecasts",
+            "Climate risk assessments",
+            "Strategic planning data"
+          ]
+        },
+        "platform_features": {
+          "name": "ClimateLens",
+          "capabilities": [
+            "AI and patented models for climate/weather analysis",
+            "Machine learning models that dynamically select forecasts",
+            "Template-based quick onboarding",
+            "Alerts and insights",
+            "Custom dashboards"
+          ],
+          "data_sources": "Multiple climate and weather data sources"
+        },
+        "use_cases": [
+          "R&D applications",
+          "Supply chain procurement decisions",
+          "Risk assessment",
+          "Strategic business planning",
+          "Food and agriculture value chain optimization"
+        ],
+        "authentication_details": {
+          "method": "API Key",
+          "description": "Effortless access to unlock climate data for analytical models"
+        },
+        "pricing_model": {
+          "structure": "Not publicly disclosed",
+          "availability": "Business/Enterprise focus",
+          "contact": "https://learn-more.climate.ai/api or sales team"
+        }
+      }
+    ],
+    "summary": {
+      "total_apis_researched": 5,
+      "categories": [
+        "Real Estate Intelligence",
+        "Real Estate Data Platform",
+        "ESG/Sustainability",
+        "Weather Marketing",
+        "Climate Analytics"
+      ],
+      "common_limitations": [
+        "Most APIs require enterprise contracts",
+        "Limited public documentation availability",
+        "Pricing typically not publicly disclosed",
+        "Authentication details often require direct contact"
+      ],
+      "recommendations": [
+        "Reonomy has the most detailed public API documentation for real estate data",
+        "Cherre offers comprehensive data integration but uses GraphQL instead of REST",
+        "Measurabl is ideal for ESG/sustainability reporting in real estate",
+        "WeatherAlpha focuses on marketing rather than pure weather data",
+        "ClimateAI provides business-focused climate risk analytics"
+      ]
+    }
+  }
+}

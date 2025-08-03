@@ -1,0 +1,533 @@
+[
+  {
+    "api_name": "Spire Maritime",
+    "category": "Maritime Intelligence",
+    "description": "Satellite-based vessel tracking providing global AIS data, vessel positions, port events, and maritime analytics through GraphQL and REST APIs",
+    "data_types": [
+      "vessel_tracking",
+      "ais_data",
+      "port_events",
+      "port_congestion",
+      "weather_data",
+      "vessel_characteristics",
+      "maritime_analytics"
+    ],
+    "coverage": {
+      "geographic": "global",
+      "temporal": "real-time and historical",
+      "update_frequency": "real-time satellite updates"
+    },
+    "technical_info": {
+      "base_url": "https://api.spire.com",
+      "protocol": "GraphQL and REST",
+      "data_formats": ["JSON", "GraphQL"],
+      "auth_method": "bearer_token",
+      "endpoints": [
+        {
+          "path": "/graphql",
+          "full_url": "https://api.spire.com/graphql",
+          "method": "POST",
+          "description": "Main GraphQL endpoint for vessel tracking, port events, and maritime data queries",
+          "documentation_link": "https://documentation.spire.com/maritime-2-0/",
+          "parameters": ["query", "variables"],
+          "response_format": "GraphQL JSON response with requested fields"
+        },
+        {
+          "path": "/messages",
+          "full_url": "https://api.spire.com/messages",
+          "method": "GET",
+          "description": "REST API for retrieving raw AIS messages (NMEA or decoded) with time-based filtering",
+          "documentation_link": "https://documentation.spire.com/messages-api/",
+          "parameters": ["received_after", "received_before", "fields", "limit"],
+          "response_format": "JSON array of AIS messages"
+        },
+        {
+          "path": "/vessels",
+          "full_url": "https://api.spire.com/vessels",
+          "method": "GET",
+          "description": "Legacy REST API for vessel information (discontinued, use GraphQL instead)",
+          "documentation_link": "https://documentation.spire.com/vessels-api/",
+          "parameters": ["mmsi", "imo", "name", "flag", "updated_since"],
+          "response_format": "JSON vessel data"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://spire.com/maritime/get-started/",
+        "authentication": "https://documentation.spire.com/maritime-2-0/making-calls/authentication/",
+        "endpoints_reference": "https://documentation.spire.com/maritime-2-0/",
+        "code_examples": "https://github.com/spireglobal/maritime",
+        "sdks_libraries": "https://documentation.spire.com/maritime-2-0/making-calls/"
+      }
+    },
+    "pricing_model": {
+      "tiers": [
+        {
+          "name": "Trial",
+          "description": "Free trial available for testing",
+          "access": "Limited API access"
+        },
+        {
+          "name": "Enterprise",
+          "description": "Custom pricing based on data needs",
+          "access": "Full API access with custom rate limits"
+        }
+      ],
+      "pricing_url": "https://spire.com/maritime/pricing/",
+      "free_tier_available": true
+    },
+    "rate_limits": {
+      "requests_per_second": "varies by plan",
+      "daily_quota": "custom based on subscription"
+    },
+    "use_cases": [
+      "fleet_management",
+      "port_operations",
+      "supply_chain_visibility",
+      "maritime_risk_assessment",
+      "vessel_performance_monitoring"
+    ],
+    "key_features": [
+      "satellite_ais_coverage",
+      "graphql_api",
+      "historical_vessel_tracks",
+      "port_congestion_metrics",
+      "weather_overlay_data"
+    ]
+  },
+  {
+    "api_name": "Windward",
+    "category": "Maritime Risk Intelligence",
+    "description": "AI-powered maritime risk and intelligence platform providing vessel behavior analytics, sanctions screening, and predictive insights",
+    "data_types": [
+      "vessel_risk_scores",
+      "sanctions_screening",
+      "behavioral_analytics",
+      "eta_predictions",
+      "compliance_alerts",
+      "dark_activity_detection"
+    ],
+    "coverage": {
+      "geographic": "global",
+      "temporal": "real-time and historical",
+      "update_frequency": "continuous AI analysis"
+    },
+    "technical_info": {
+      "base_url": "https://api.windward.ai",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "api_key",
+      "endpoints": [
+        {
+          "path": "/vessels/search",
+          "full_url": "https://api.windward.ai/vessels/search",
+          "method": "POST",
+          "description": "Search vessels by various criteria including name, IMO, MMSI with risk insights",
+          "documentation_link": "https://windward.ai/api-hub/windward-api-insights-lab/",
+          "parameters": ["vessel_name", "imo", "mmsi", "flag", "vessel_type"],
+          "response_format": "JSON with vessel details and risk scores"
+        },
+        {
+          "path": "/risk/assessment",
+          "full_url": "https://api.windward.ai/risk/assessment",
+          "method": "GET",
+          "description": "Get comprehensive risk assessment for specific vessels",
+          "documentation_link": "https://windward.ai/api-hub/",
+          "parameters": ["vessel_id", "assessment_type", "time_range"],
+          "response_format": "JSON risk assessment report"
+        },
+        {
+          "path": "/freight/visibility",
+          "full_url": "https://api.windward.ai/freight/visibility",
+          "method": "GET",
+          "description": "Ocean freight visibility with ETA predictions and delay risks",
+          "documentation_link": "https://windward.ai/api-hub/ocean-freight-visibility-api/",
+          "parameters": ["shipment_id", "container_id", "voyage_id"],
+          "response_format": "JSON with shipment status and predictions"
+        },
+        {
+          "path": "/compliance/screening",
+          "full_url": "https://api.windward.ai/compliance/screening",
+          "method": "POST",
+          "description": "Screen vessels against sanctions lists and compliance databases",
+          "documentation_link": "https://windward.ai/api-hub/",
+          "parameters": ["vessel_list", "screening_lists", "include_ownership"],
+          "response_format": "JSON compliance screening results"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://windward.ai/api-hub/windward-api-insights-lab/",
+        "authentication": "https://windward.ai/api-hub/",
+        "endpoints_reference": "https://app.swaggerhub.com/apis/Windward-Studios/windward-rest_ful_api/2.0",
+        "code_examples": "https://windward.ai/blog/drive-cost-savings-growth-with-apis/",
+        "sdks_libraries": "https://windward.ai/api-hub/"
+      }
+    },
+    "pricing_model": {
+      "tiers": [
+        {
+          "name": "API Insights Lab",
+          "description": "Entry-level API access for testing",
+          "access": "Limited queries and features"
+        },
+        {
+          "name": "Professional",
+          "description": "Full API access with standard limits",
+          "access": "Complete feature set"
+        },
+        {
+          "name": "Enterprise",
+          "description": "Custom solution with dedicated support",
+          "access": "Unlimited access with SLA"
+        }
+      ],
+      "pricing_url": "https://windward.ai/pricing/",
+      "free_tier_available": false
+    },
+    "rate_limits": {
+      "requests_per_minute": "varies by tier",
+      "concurrent_requests": "based on subscription"
+    },
+    "use_cases": [
+      "sanctions_compliance",
+      "maritime_domain_awareness",
+      "supply_chain_risk_management",
+      "freight_forwarding",
+      "insurance_underwriting"
+    ],
+    "key_features": [
+      "ai_behavioral_analytics",
+      "predictive_eta",
+      "dark_activity_detection",
+      "ownership_investigation",
+      "real_time_alerts"
+    ]
+  },
+  {
+    "api_name": "Panjiva",
+    "category": "Global Trade Intelligence",
+    "description": "Comprehensive global trade data platform providing import/export records, supply chain intelligence, and company relationships from S&P Global",
+    "data_types": [
+      "import_records",
+      "export_records",
+      "bill_of_lading",
+      "company_profiles",
+      "trade_relationships",
+      "shipment_trends",
+      "customs_data"
+    ],
+    "coverage": {
+      "geographic": "30+ countries including US, China, India, EU",
+      "temporal": "historical data back to 2007",
+      "update_frequency": "daily updates"
+    },
+    "technical_info": {
+      "base_url": "https://api.panjiva.com",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV"],
+      "auth_method": "api_key",
+      "endpoints": [
+        {
+          "path": "/v1/search/shipments",
+          "full_url": "https://api.panjiva.com/v1/search/shipments",
+          "method": "GET",
+          "description": "Search global shipment records by company, product, or trade lane",
+          "documentation_link": "https://panjiva.com/api-documentation",
+          "parameters": ["query", "date_from", "date_to", "country", "limit", "offset"],
+          "response_format": "JSON with shipment records and metadata"
+        },
+        {
+          "path": "/v1/company/{id}",
+          "full_url": "https://api.panjiva.com/v1/company/{id}",
+          "method": "GET",
+          "description": "Get detailed company profile including trade activity and relationships",
+          "documentation_link": "https://panjiva.com/api-documentation",
+          "parameters": ["id", "include_shipments", "include_relationships"],
+          "response_format": "JSON company profile with trade data"
+        },
+        {
+          "path": "/v1/trends",
+          "full_url": "https://api.panjiva.com/v1/trends",
+          "method": "POST",
+          "description": "Analyze trade trends for products, companies, or trade lanes",
+          "documentation_link": "https://panjiva.com/api-documentation",
+          "parameters": ["entity_type", "entity_id", "metric", "time_period", "granularity"],
+          "response_format": "JSON with time series trend data"
+        },
+        {
+          "path": "/v1/alerts",
+          "full_url": "https://api.panjiva.com/v1/alerts",
+          "method": "POST",
+          "description": "Set up monitoring alerts for companies or trade activities",
+          "documentation_link": "https://panjiva.com/api-documentation",
+          "parameters": ["alert_type", "entities", "conditions", "notification_method"],
+          "response_format": "JSON alert configuration response"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://panjiva.com/api-documentation/getting-started",
+        "authentication": "https://panjiva.com/api-documentation/authentication",
+        "endpoints_reference": "https://panjiva.com/api-documentation/endpoints",
+        "code_examples": "https://github.com/panjiva/api-examples",
+        "sdks_libraries": "https://panjiva.com/api-documentation/sdks"
+      }
+    },
+    "pricing_model": {
+      "tiers": [
+        {
+          "name": "Basic API",
+          "description": "Limited access to shipment search",
+          "access": "1,000 API calls/month"
+        },
+        {
+          "name": "Professional",
+          "description": "Full API access with standard limits",
+          "access": "10,000 API calls/month"
+        },
+        {
+          "name": "Enterprise",
+          "description": "Unlimited API access with bulk data options",
+          "access": "Unlimited calls, bulk downloads"
+        }
+      ],
+      "pricing_url": "https://www.marketplace.spglobal.com/en/datasets/panjiva-supply-chain-intelligence-(22)",
+      "free_tier_available": false
+    },
+    "rate_limits": {
+      "requests_per_second": "10",
+      "monthly_quota": "varies by plan"
+    },
+    "use_cases": [
+      "supplier_discovery",
+      "competitive_intelligence",
+      "supply_chain_mapping",
+      "trade_compliance",
+      "market_research"
+    ],
+    "key_features": [
+      "bill_of_lading_data",
+      "company_relationships",
+      "trade_trend_analysis",
+      "custom_alerts",
+      "bulk_data_access"
+    ]
+  },
+  {
+    "api_name": "Import Genius",
+    "category": "Trade Intelligence",
+    "description": "US-focused trade intelligence platform providing detailed import/export records, competitive analysis, and supplier discovery tools",
+    "data_types": [
+      "us_import_data",
+      "us_export_data",
+      "bill_of_lading",
+      "customs_records",
+      "company_profiles",
+      "product_details",
+      "port_statistics"
+    ],
+    "coverage": {
+      "geographic": "primarily US, expanding to 23+ countries",
+      "temporal": "US imports: 12 months rolling, US exports: 5 years",
+      "update_frequency": "daily updates"
+    },
+    "technical_info": {
+      "base_url": "https://api.importgenius.com",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV", "Excel"],
+      "auth_method": "api_key",
+      "endpoints": [
+        {
+          "path": "/api/v2/search",
+          "full_url": "https://api.importgenius.com/api/v2/search",
+          "method": "POST",
+          "description": "Search import/export records by company, product, HS code, or keywords",
+          "documentation_link": "https://docs.m31.importgenius.com/",
+          "parameters": ["search_term", "date_range", "country", "trade_type", "limit"],
+          "response_format": "JSON with shipment records"
+        },
+        {
+          "path": "/api/v2/company/{company_id}",
+          "full_url": "https://api.importgenius.com/api/v2/company/{company_id}",
+          "method": "GET",
+          "description": "Retrieve detailed company profile with trade history",
+          "documentation_link": "https://docs.m31.importgenius.com/",
+          "parameters": ["company_id", "include_shipments", "date_range"],
+          "response_format": "JSON company profile data"
+        },
+        {
+          "path": "/api/v2/monitor",
+          "full_url": "https://api.importgenius.com/api/v2/monitor",
+          "method": "POST",
+          "description": "Create monitoring alerts for companies or products",
+          "documentation_link": "https://docs.m31.importgenius.com/",
+          "parameters": ["monitor_type", "target", "frequency", "delivery_method"],
+          "response_format": "JSON monitor configuration"
+        },
+        {
+          "path": "/api/v2/analytics",
+          "full_url": "https://api.importgenius.com/api/v2/analytics",
+          "method": "GET",
+          "description": "Get trade analytics and trends for specific queries",
+          "documentation_link": "https://docs.m31.importgenius.com/",
+          "parameters": ["analysis_type", "entity", "time_period", "metrics"],
+          "response_format": "JSON analytics data"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.importgenius.com/getting-started",
+        "authentication": "https://docs.m31.importgenius.com/security",
+        "endpoints_reference": "https://docs.m31.importgenius.com/",
+        "code_examples": "https://www.importgenius.com/api-examples",
+        "sdks_libraries": "https://docs.m31.importgenius.com/"
+      }
+    },
+    "pricing_model": {
+      "tiers": [
+        {
+          "name": "Essential",
+          "description": "Basic access to US import data",
+          "access": "$149/month, last 12 months US imports"
+        },
+        {
+          "name": "Professional",
+          "description": "Enhanced features and data access",
+          "access": "$299/month, includes US exports"
+        },
+        {
+          "name": "Enterprise",
+          "description": "Full platform access with API",
+          "access": "Custom pricing, unlimited API access"
+        }
+      ],
+      "pricing_url": "https://www.importgenius.com/pricing",
+      "free_tier_available": true
+    },
+    "rate_limits": {
+      "requests_per_minute": "60",
+      "daily_quota": "varies by plan"
+    },
+    "use_cases": [
+      "supplier_verification",
+      "competitor_monitoring",
+      "new_customer_discovery",
+      "market_share_analysis",
+      "product_sourcing"
+    ],
+    "key_features": [
+      "us_customs_data",
+      "company_search",
+      "trade_alerts",
+      "competitor_tracking",
+      "mobile_app_access"
+    ]
+  },
+  {
+    "api_name": "Enigma Public",
+    "category": "Public Data Intelligence",
+    "description": "Comprehensive US business data platform providing enriched company profiles, financial health indicators, and public records intelligence via GraphQL API",
+    "data_types": [
+      "business_profiles",
+      "financial_indicators",
+      "regulatory_filings",
+      "business_licenses",
+      "government_contracts",
+      "business_relationships",
+      "industry_classifications"
+    ],
+    "coverage": {
+      "geographic": "United States (all 50 states)",
+      "temporal": "current data with historical records",
+      "update_frequency": "continuous updates from public sources"
+    },
+    "technical_info": {
+      "base_url": "https://api.enigma.com",
+      "protocol": "GraphQL and REST",
+      "data_formats": ["JSON", "GraphQL"],
+      "auth_method": "api_key",
+      "endpoints": [
+        {
+          "path": "/graphql",
+          "full_url": "https://api.enigma.com/graphql",
+          "method": "POST",
+          "description": "Main GraphQL endpoint for flexible data queries on US businesses",
+          "documentation_link": "https://developers.enigma.com/docs/api",
+          "parameters": ["query", "variables"],
+          "response_format": "GraphQL JSON response"
+        },
+        {
+          "path": "/v2/match",
+          "full_url": "https://api.enigma.com/v2/match",
+          "method": "POST",
+          "description": "Match and identify business profiles based on name, address, or other attributes",
+          "documentation_link": "https://developers.enigma.com/reference/api-welcome-1",
+          "parameters": ["business_name", "address", "ein", "phone", "website"],
+          "response_format": "JSON with matched business profiles and confidence scores"
+        },
+        {
+          "path": "/v2/businesses/{id}",
+          "full_url": "https://api.enigma.com/v2/businesses/{id}",
+          "method": "GET",
+          "description": "Retrieve detailed business attributes and enriched data for a specific Enigma ID",
+          "documentation_link": "https://developers.enigma.com/reference/api-welcome-1",
+          "parameters": ["id", "attributes", "include_relationships"],
+          "response_format": "JSON with comprehensive business data"
+        },
+        {
+          "path": "/v2/kyb",
+          "full_url": "https://api.enigma.com/v2/kyb",
+          "method": "POST",
+          "description": "Know Your Business endpoint for compliance and verification workflows",
+          "documentation_link": "https://developers.enigma.com/docs/api",
+          "parameters": ["business_name", "address", "verification_level"],
+          "response_format": "JSON with KYB verification results"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://developers.enigma.com/docs/welcome",
+        "authentication": "https://developers.enigma.com/docs/api",
+        "endpoints_reference": "https://developers.enigma.com/reference/api-welcome-1",
+        "code_examples": "https://developers.enigma.com/docs/api",
+        "sdks_libraries": "https://enigma.com/developers"
+      }
+    },
+    "pricing_model": {
+      "tiers": [
+        {
+          "name": "Developer",
+          "description": "Test and prototype with limited access",
+          "access": "Limited API calls for testing"
+        },
+        {
+          "name": "Growth",
+          "description": "Production access with standard limits",
+          "access": "Higher rate limits and full data access"
+        },
+        {
+          "name": "Enterprise",
+          "description": "Custom solutions with dedicated support",
+          "access": "Unlimited access with SLA"
+        }
+      ],
+      "pricing_url": "https://enigma.com/pricing",
+      "free_tier_available": true
+    },
+    "rate_limits": {
+      "match_endpoint": "50 requests/second",
+      "id_endpoint": "200 requests/second",
+      "latency": "Match: 609ms median, ID: 47ms median"
+    },
+    "use_cases": [
+      "business_verification",
+      "risk_assessment",
+      "lead_enrichment",
+      "compliance_screening",
+      "market_intelligence"
+    ],
+    "key_features": [
+      "business_matching_api",
+      "graphql_flexibility",
+      "public_records_aggregation",
+      "fast_enrichment_api",
+      "kyb_compliance"
+    ]
+  }
+]

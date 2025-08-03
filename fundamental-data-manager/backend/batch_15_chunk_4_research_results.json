@@ -1,0 +1,521 @@
+{
+  "api_research_batch_15_chunk_4": {
+    "research_date": "2025-08-02",
+    "researcher": "SOFTWARE_AGENT_001",
+    "total_apis_researched": 5,
+    "batch_info": {
+      "batch_number": 15,
+      "chunk_number": 4,
+      "apis_in_chunk": [16, 17, 18, 19, 20]
+    },
+    "apis": [
+      {
+        "id": 16,
+        "name": "Shanghai Stock Exchange API",
+        "provider": "Shanghai Stock Exchange (SSE)",
+        "official_website": "http://english.sse.com.cn/",
+        "category": "Financial Data",
+        "description": "Shanghai Stock Exchange provides market data access through authorized distributors and the Oriental Express (东方快车) project for high-speed market data feeds.",
+        "geographic_focus": "China",
+        "data_coverage": [
+          "Shanghai Stock Exchange equities",
+          "Stock indices (SSE Composite, SSE 50)",
+          "ETFs and funds",
+          "Real-time market data",
+          "Historical price data",
+          "Corporate actions",
+          "Trading statistics"
+        ],
+        "unique_features": [
+          "Oriental Express open-source API project for high-speed market access",
+          "FAST (FAST Application Switch Technology) market data protocol",
+          "15-second publication frequency for real-time data",
+          "C and Java API versions available",
+          "Direct access to SSE internal high-speed market data platforms"
+        ],
+        "technical_info": {
+          "base_url": "Not publicly available - requires authorization",
+          "protocol": "FAST Protocol / Custom API",
+          "data_formats": ["Binary", "Custom"],
+          "auth_method": "Authorization required from SSE",
+          "endpoints": [
+            {
+              "path": "/oriental-express",
+              "full_url": "Authorization required",
+              "method": "N/A",
+              "description": "High-speed market data feed access through Oriental Express project",
+              "documentation_link": "https://github.com/SSEDev/OrientalExpress",
+              "parameters": ["Authorization form required"],
+              "response_format": "Binary/Custom format"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://github.com/SSEDev/OrientalExpress",
+            "authentication": "Authorization form to zhengwu@sse.com.cn",
+            "endpoints_reference": "Contact SSE directly",
+            "code_examples": "GitHub repository with C and Java examples",
+            "sdks_libraries": "C API and Java API available"
+          }
+        },
+        "pricing": {
+          "model": "Authorization-based",
+          "free_tier": "Open source Oriental Express project available",
+          "paid_tiers": [
+            {
+              "name": "Commercial License",
+              "price": "Contact SSE for pricing",
+              "description": "Commercial use requires authorization from Shanghai Stock Exchange"
+            }
+          ],
+          "rate_limits": "Unknown - contact SSE",
+          "pricing_notes": "Real-time data requires licensing through China Investment Information Services Limited (CIIS)"
+        },
+        "data_quality": {
+          "reliability": "High - direct from exchange",
+          "update_frequency": "Real-time (15-second intervals)",
+          "historical_data": "Available through licensed providers",
+          "data_delay": "Real-time for licensed users"
+        },
+        "access_requirements": {
+          "registration": "Authorization form required",
+          "api_key": "Not applicable",
+          "authentication": "Contact-based authorization",
+          "restrictions": "Commercial use requires SSE authorization"
+        },
+        "support": {
+          "documentation_quality": "Limited - mostly in Chinese",
+          "community": "GitHub project community",
+          "official_support": "Email: zhengwu@sse.com.cn, yzhang@sse.com.cn"
+        },
+        "compliance": {
+          "data_licensing": "Licensed through CIIS for overseas distribution",
+          "regulatory": "Complies with Chinese financial regulations",
+          "redistribution": "Requires proper licensing for redistribution"
+        }
+      },
+      {
+        "id": 17,
+        "name": "Shenzhen Stock Exchange API",
+        "provider": "Shenzhen Stock Exchange (SZSE)",
+        "official_website": "http://www.szse.cn/English/",
+        "category": "Financial Data",
+        "description": "Shenzhen Stock Exchange data access primarily through third-party providers and financial data vendors, with no direct public API currently available.",
+        "geographic_focus": "China",
+        "data_coverage": [
+          "Shenzhen Stock Exchange equities",
+          "ChiNext board stocks",
+          "SME board stocks",
+          "Stock indices (SZSE Component, ChiNext Index)",
+          "ETFs and funds",
+          "Real-time and historical market data"
+        ],
+        "unique_features": [
+          "Focus on SME and growth companies",
+          "ChiNext board for innovative companies",
+          "SME board for small and medium enterprises",
+          "Integration with mainland China trading systems"
+        ],
+        "technical_info": {
+          "base_url": "No direct public API available",
+          "protocol": "Data available through third-party providers",
+          "data_formats": ["JSON", "CSV", "XML"],
+          "auth_method": "Third-party provider dependent",
+          "endpoints": [
+            {
+              "path": "N/A",
+              "full_url": "No direct API available",
+              "method": "N/A",
+              "description": "Data access through licensed information vendors",
+              "documentation_link": "Contact SZSE or licensed vendors",
+              "parameters": ["Vendor-specific"],
+              "response_format": "Vendor-dependent"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "Contact SZSE or licensed data vendors",
+            "authentication": "Through licensed vendors",
+            "endpoints_reference": "Vendor-specific documentation",
+            "code_examples": "Available through data vendors",
+            "sdks_libraries": "Vendor-dependent"
+          }
+        },
+        "pricing": {
+          "model": "Third-party vendor pricing",
+          "free_tier": "Limited free delayed data through some vendors",
+          "paid_tiers": [
+            {
+              "name": "Real-time Data",
+              "price": "Vendor-dependent",
+              "description": "Real-time market data through licensed providers"
+            },
+            {
+              "name": "Historical Data",
+              "price": "Vendor-dependent",
+              "description": "Historical market data packages"
+            }
+          ],
+          "rate_limits": "Vendor-dependent",
+          "pricing_notes": "Pricing varies by data vendor and usage requirements"
+        },
+        "data_quality": {
+          "reliability": "High - from official exchange data",
+          "update_frequency": "Real-time through licensed vendors",
+          "historical_data": "Extensive historical data available",
+          "data_delay": "Real-time to 20+ minutes depending on vendor"
+        },
+        "access_requirements": {
+          "registration": "Through licensed data vendors",
+          "api_key": "Vendor-specific",
+          "authentication": "Vendor authentication systems",
+          "restrictions": "Subject to vendor terms and Chinese regulations"
+        },
+        "support": {
+          "documentation_quality": "Vendor-dependent",
+          "community": "Limited direct community support",
+          "official_support": "Through SZSE or licensed vendors"
+        },
+        "compliance": {
+          "data_licensing": "Must use licensed data vendors",
+          "regulatory": "Complies with Chinese securities regulations",
+          "redistribution": "Requires proper licensing"
+        }
+      },
+      {
+        "id": 18,
+        "name": "Hong Kong Stock Exchange API (HKEX)",
+        "provider": "Hong Kong Exchanges and Clearing Limited (HKEX)",
+        "official_website": "https://www.hkex.com.hk/",
+        "category": "Financial Data",
+        "description": "HKEX provides market data through multiple channels including OMD (Orion Market Data) feeds, FINI API for IPO data, and various real-time and historical data services.",
+        "geographic_focus": "Hong Kong",
+        "data_coverage": [
+          "Hong Kong stocks and securities",
+          "Derivatives and futures",
+          "ETFs and structured products",
+          "Market indices (Hang Seng, HSCEI)",
+          "IPO and new issuance data",
+          "Real-time and historical market data",
+          "Issuer announcements and news"
+        ],
+        "unique_features": [
+          "FINI (Fast Interface for New Issuance) API for IPO data",
+          "OMD (Orion Market Data) real-time feeds",
+          "Multi-level data products (Standard, Premium, FullTick)",
+          "End-to-end encryption for sensitive data",
+          "JWT-based authentication system",
+          "Comprehensive derivatives market coverage"
+        ],
+        "technical_info": {
+          "base_url": "https://api.hkex.com.hk/ (FINI API)",
+          "protocol": "REST API / Real-time data feeds",
+          "data_formats": ["JSON", "XML", "Binary"],
+          "auth_method": "JWT tokens / Licensed access",
+          "endpoints": [
+            {
+              "path": "/fini/v1/ipo",
+              "full_url": "https://api.hkex.com.hk/fini/v1/ipo",
+              "method": "GET",
+              "description": "IPO reference data and new issuance information",
+              "documentation_link": "https://www.hkex.com.hk/-/media/HKEX-Market/Services/Next-Generation-Post-Trade-Programme/Fini/FINI-API-User-Guide.pdf",
+              "parameters": ["JWT token", "date range", "issue type"],
+              "response_format": "JSON with encrypted sensitive data"
+            },
+            {
+              "path": "/market-data/real-time",
+              "full_url": "Licensed access required",
+              "method": "WebSocket/TCP",
+              "description": "Real-time market data feeds (OMD-C, OMD-D)",
+              "documentation_link": "Contact HKEX for documentation",
+              "parameters": ["License key", "symbol list", "data level"],
+              "response_format": "Binary/Custom protocol"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.hkex.com.hk/Services/Market-Data-Services/",
+            "authentication": "JWT authentication for FINI API",
+            "endpoints_reference": "https://www.hkex.com.hk/-/media/HKEX-Market/Services/Next-Generation-Post-Trade-Programme/Fini/FINI-API-User-Guide.pdf",
+            "code_examples": "Available in API documentation",
+            "sdks_libraries": "Contact HKEX for SDK availability"
+          }
+        },
+        "pricing": {
+          "model": "Tiered licensing",
+          "free_tier": "Limited delayed data available",
+          "paid_tiers": [
+            {
+              "name": "OMD Securities Standard (SS)",
+              "price": "Contact HKEX for pricing",
+              "description": "Standard level real-time securities market data"
+            },
+            {
+              "name": "OMD Securities Premium (SP)",
+              "price": "Contact HKEX for pricing",
+              "description": "Premium level with additional market depth"
+            },
+            {
+              "name": "OMD Securities FullTick (SF)",
+              "price": "Contact HKEX for pricing",
+              "description": "Full tick-by-tick market data"
+            }
+          ],
+          "rate_limits": "License-dependent",
+          "pricing_notes": "Pricing varies by data type, usage, and redistribution rights"
+        },
+        "data_quality": {
+          "reliability": "Very high - direct from exchange",
+          "update_frequency": "Real-time",
+          "historical_data": "Extensive historical data available",
+          "data_delay": "Real-time for licensed users"
+        },
+        "access_requirements": {
+          "registration": "Required for FINI API and data licensing",
+          "api_key": "JWT tokens for FINI API",
+          "authentication": "Multi-factor authentication for production access",
+          "restrictions": "Subject to HKEX market data policies"
+        },
+        "support": {
+          "documentation_quality": "High - comprehensive API guides",
+          "community": "Professional user community",
+          "official_support": "HKEX customer support and technical assistance"
+        },
+        "compliance": {
+          "data_licensing": "Comprehensive licensing framework",
+          "regulatory": "Complies with Hong Kong securities regulations",
+          "redistribution": "Specific terms for data redistribution"
+        }
+      },
+      {
+        "id": 19,
+        "name": "Japan Exchange Group API (JPX)",
+        "provider": "Japan Exchange Group (JPX)",
+        "official_website": "https://www.jpx.co.jp/english/",
+        "category": "Financial Data",
+        "description": "JPX provides market data through multiple APIs including J-Quants API for retail investors, TDnet API for disclosure information, and Last Sales Information API for institutional users.",
+        "geographic_focus": "Japan",
+        "data_coverage": [
+          "Tokyo Stock Exchange (TSE) equities",
+          "Osaka Exchange derivatives",
+          "TOPIX and Nikkei indices",
+          "J-REITs and ETFs",
+          "Corporate disclosure information",
+          "Financial statements and fundamentals",
+          "Earnings announcements"
+        ],
+        "unique_features": [
+          "J-Quants API specifically designed for retail investors",
+          "TDnet API for real-time disclosure information",
+          "Comprehensive historical data going back decades",
+          "Integration with Japanese corporate disclosure system",
+          "Multi-language support (Japanese/English)",
+          "Educational focus for retail investor data literacy"
+        ],
+        "technical_info": {
+          "base_url": "https://jpx-jquants.com/api/ (J-Quants), https://api.jpx.co.jp/ (TDnet)",
+          "protocol": "REST API",
+          "data_formats": ["JSON", "CSV"],
+          "auth_method": "API key / JWT tokens",
+          "endpoints": [
+            {
+              "path": "/prices/daily_quotes",
+              "full_url": "https://jpx-jquants.com/api/v1/prices/daily_quotes",
+              "method": "GET",
+              "description": "Daily stock price data with historical splits and dividends",
+              "documentation_link": "https://jpx-jquants.com/",
+              "parameters": ["code", "from", "to", "date"],
+              "response_format": "JSON with standardized price data"
+            },
+            {
+              "path": "/fins/statements",
+              "full_url": "https://jpx-jquants.com/api/v1/fins/statements",
+              "method": "GET",
+              "description": "Financial statements and corporate fundamentals",
+              "documentation_link": "https://jpx-jquants.com/",
+              "parameters": ["code", "type_of_document", "date"],
+              "response_format": "JSON with financial statement data"
+            },
+            {
+              "path": "/tdnet/disclosures",
+              "full_url": "https://api.jpx.co.jp/v1/tdnet/disclosures",
+              "method": "GET",
+              "description": "Real-time corporate disclosure information",
+              "documentation_link": "Contact JPX for TDnet documentation",
+              "parameters": ["date", "category", "company_code"],
+              "response_format": "JSON with disclosure documents"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://jpx-jquants.com/",
+            "authentication": "API key registration through J-Quants portal",
+            "endpoints_reference": "https://jpx-jquants.com/api-docs/",
+            "code_examples": "Python and R examples available",
+            "sdks_libraries": "Python SDK available"
+          }
+        },
+        "pricing": {
+          "model": "Freemium with paid tiers",
+          "free_tier": "2-year historical data with 12-week delay",
+          "paid_tiers": [
+            {
+              "name": "Light Plan",
+              "price": "¥3,300/month",
+              "description": "Real-time daily data with extended historical coverage"
+            },
+            {
+              "name": "Standard Plan",
+              "price": "¥33,000/month",
+              "description": "Intraday data, real-time updates, and comprehensive datasets"
+            },
+            {
+              "name": "Premium Plan",
+              "price": "¥165,000/month",
+              "description": "Full real-time access, complete historical data, and all features"
+            }
+          ],
+          "rate_limits": "Plan-dependent (typically 1000-10000 requests/day)",
+          "pricing_notes": "Educational discounts available, institutional pricing on request"
+        },
+        "data_quality": {
+          "reliability": "Very high - official JPX data",
+          "update_frequency": "Real-time to daily depending on plan",
+          "historical_data": "Extensive historical data back to 1980s",
+          "data_delay": "Real-time to 12 weeks depending on plan"
+        },
+        "access_requirements": {
+          "registration": "Free account registration required",
+          "api_key": "API key provided after registration",
+          "authentication": "API key-based authentication",
+          "restrictions": "Usage subject to JPX terms of service"
+        },
+        "support": {
+          "documentation_quality": "Very high - comprehensive guides and examples",
+          "community": "Active user community and educational resources",
+          "official_support": "Email support and FAQ system"
+        },
+        "compliance": {
+          "data_licensing": "Clear licensing terms for different use cases",
+          "regulatory": "Complies with Japanese financial regulations",
+          "redistribution": "Specific terms for data redistribution by plan"
+        }
+      },
+      {
+        "id": 20,
+        "name": "Singapore Exchange API (SGX)",
+        "provider": "Singapore Exchange Limited (SGX)",
+        "official_website": "https://www.sgx.com/",
+        "category": "Financial Data",
+        "description": "SGX provides market data access through real-time price feeds, delayed price APIs, and connectivity solutions for Singapore securities and derivatives markets.",
+        "geographic_focus": "Singapore/Southeast Asia",
+        "data_coverage": [
+          "SGX securities and equities",
+          "Derivatives and futures",
+          "REITs and structured products",
+          "Market indices (STI, MSCI Singapore)",
+          "Real-time and delayed market data",
+          "Corporate actions and announcements",
+          "Post-trade data"
+        ],
+        "unique_features": [
+          "SGX Data Source API for delayed market data",
+          "Real-time price feeds with ultra-low latency",
+          "Comprehensive derivatives market coverage",
+          "QUEST trading engine integration",
+          "Multi-asset class coverage",
+          "Southeast Asian market focus"
+        ],
+        "technical_info": {
+          "base_url": "https://api.sgx.com/",
+          "protocol": "REST API / Real-time feeds",
+          "data_formats": ["JSON", "XML", "Binary"],
+          "auth_method": "API key / Licensed access",
+          "endpoints": [
+            {
+              "path": "/market-data/delayed",
+              "full_url": "https://api.sgx.com/v1/market-data/delayed",
+              "method": "GET",
+              "description": "Delayed market data for SGX securities and derivatives",
+              "documentation_link": "https://www.sgx.com/data-connectivity/sgx-delayed-price-feed",
+              "parameters": ["symbol", "market", "data_type"],
+              "response_format": "JSON with market data"
+            },
+            {
+              "path": "/securities/quotes",
+              "full_url": "https://api.sgx.com/v1/securities/quotes",
+              "method": "GET",
+              "description": "Current quotes for SGX-listed securities",
+              "documentation_link": "Contact SGX for documentation",
+              "parameters": ["symbols", "fields"],
+              "response_format": "JSON with quote data"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.sgx.com/data-connectivity/",
+            "authentication": "Contact SGX for API access credentials",
+            "endpoints_reference": "Available upon registration",
+            "code_examples": "Limited public examples available",
+            "sdks_libraries": "Contact SGX for SDK availability"
+          }
+        },
+        "pricing": {
+          "model": "Licensed access with usage-based pricing",
+          "free_tier": "Limited delayed data available",
+          "paid_tiers": [
+            {
+              "name": "Delayed Market Data",
+              "price": "Contact SGX for pricing",
+              "description": "15-20 minute delayed market data access"
+            },
+            {
+              "name": "Real-time Market Data",
+              "price": "Contact SGX for pricing",
+              "description": "Real-time price feeds with low latency"
+            },
+            {
+              "name": "Premium Data Services",
+              "price": "Contact SGX for pricing",
+              "description": "Full market depth, historical data, and analytics"
+            }
+          ],
+          "rate_limits": "License-dependent",
+          "pricing_notes": "Pricing based on data usage, user count, and redistribution rights"
+        },
+        "data_quality": {
+          "reliability": "Very high - direct from SGX trading engine",
+          "update_frequency": "Real-time",
+          "historical_data": "Comprehensive historical data available",
+          "data_delay": "Real-time to 20 minutes depending on license"
+        },
+        "access_requirements": {
+          "registration": "Required for API access",
+          "api_key": "Provided upon approval",
+          "authentication": "API key and additional authentication for real-time data",
+          "restrictions": "Subject to SGX market data policy and licensing terms"
+        },
+        "support": {
+          "documentation_quality": "Good - professional documentation for licensed users",
+          "community": "Professional user base",
+          "official_support": "SGX customer support and technical assistance"
+        },
+        "compliance": {
+          "data_licensing": "Comprehensive licensing framework",
+          "regulatory": "Complies with Singapore financial regulations",
+          "redistribution": "Specific terms for data redistribution and display"
+        }
+      }
+    ],
+    "research_notes": [
+      "Shanghai Stock Exchange primarily provides data access through the Oriental Express open-source project and licensed distributors rather than direct public APIs",
+      "Shenzhen Stock Exchange does not offer direct public API access, with data available through third-party licensed vendors",
+      "Hong Kong Stock Exchange offers the most comprehensive API ecosystem with FINI API for IPO data and extensive OMD feed products",
+      "Japan Exchange Group provides the most retail investor-friendly API through J-Quants, with clear pricing and educational focus",
+      "Singapore Exchange offers both delayed and real-time API access but requires licensing for most commercial use cases",
+      "All exchanges require proper licensing and compliance with local financial regulations for commercial data redistribution",
+      "Real-time data access typically requires significant licensing fees and regulatory compliance across all exchanges"
+    ],
+    "research_limitations": [
+      "Some API documentation is not publicly available and requires direct contact with exchanges",
+      "Pricing information is often quote-based and not publicly disclosed",
+      "Chinese exchanges have limited English documentation available",
+      "Access requirements can be complex and vary significantly between retail and institutional users"
+    ]
+  }
+}

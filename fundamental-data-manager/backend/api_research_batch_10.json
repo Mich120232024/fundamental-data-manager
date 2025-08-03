@@ -1,0 +1,714 @@
+[
+  {
+    "api_name": "SensorTower",
+    "provider": "SensorTower",
+    "category": "Mobile App Analytics",
+    "description": "Mobile app analytics and intelligence platform providing app store optimization, competitive intelligence, and market insights for iOS and Android apps",
+    "use_cases": [
+      "App store optimization (ASO)",
+      "Competitive app intelligence",
+      "Market share analysis",
+      "Download and revenue estimates",
+      "User acquisition insights",
+      "App performance tracking"
+    ],
+    "data_coverage": {
+      "geographic": "Global",
+      "temporal": "Historical and real-time",
+      "update_frequency": "Daily",
+      "data_types": [
+        "App downloads",
+        "Revenue estimates",
+        "User ratings",
+        "Keyword rankings",
+        "Market intelligence",
+        "Ad intelligence"
+      ]
+    },
+    "technical_info": {
+      "base_url": "https://api.sensortower.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "api_key",
+      "endpoints": [
+        {
+          "path": "/v1/apps/{app_id}/downloads",
+          "full_url": "https://api.sensortower.com/v1/apps/{app_id}/downloads",
+          "method": "GET",
+          "description": "Get app download estimates for a specific app",
+          "documentation_link": "https://sensortower.com/api/documentation",
+          "parameters": ["app_id", "country", "start_date", "end_date", "granularity"],
+          "response_format": "JSON with download metrics"
+        },
+        {
+          "path": "/v1/apps/{app_id}/revenue",
+          "full_url": "https://api.sensortower.com/v1/apps/{app_id}/revenue",
+          "method": "GET",
+          "description": "Get revenue estimates for a specific app",
+          "documentation_link": "https://sensortower.com/api/documentation",
+          "parameters": ["app_id", "country", "start_date", "end_date", "granularity"],
+          "response_format": "JSON with revenue data"
+        },
+        {
+          "path": "/v1/keywords/rankings",
+          "full_url": "https://api.sensortower.com/v1/keywords/rankings",
+          "method": "GET",
+          "description": "Get keyword rankings for apps",
+          "documentation_link": "https://sensortower.com/api/documentation",
+          "parameters": ["keywords", "country", "device", "limit"],
+          "response_format": "JSON with ranking data"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://sensortower.com/api/getting-started",
+        "authentication": "https://sensortower.com/api/authentication",
+        "endpoints_reference": "https://sensortower.com/api/endpoints",
+        "code_examples": "https://sensortower.com/api/examples",
+        "sdks_libraries": "https://sensortower.com/api/sdks"
+      }
+    },
+    "pricing_info": {
+      "model": "Subscription-based",
+      "tiers": [
+        {
+          "name": "Enterprise",
+          "price": "Custom pricing",
+          "features": [
+            "Full API access",
+            "Custom data feeds",
+            "Dedicated support",
+            "Historical data access"
+          ],
+          "limits": {
+            "api_calls": "Custom",
+            "data_retention": "Custom"
+          }
+        }
+      ],
+      "free_tier": false,
+      "trial_available": true
+    },
+    "authentication": {
+      "methods": ["API Key"],
+      "oauth_supported": false,
+      "api_key_location": "header",
+      "required_headers": {
+        "Authorization": "Bearer {API_KEY}"
+      }
+    },
+    "rate_limits": {
+      "requests_per_second": null,
+      "requests_per_day": null,
+      "concurrent_requests": null,
+      "notes": "Rate limits depend on subscription tier"
+    },
+    "availability": {
+      "status_page": "https://status.sensortower.com",
+      "sla": "99.9%",
+      "support_channels": ["Email", "Enterprise support portal"]
+    },
+    "compliance": {
+      "gdpr_compliant": true,
+      "soc2_certified": true,
+      "iso_certified": false
+    }
+  },
+  {
+    "api_name": "JetTrack / Aviation Edge",
+    "provider": "Aviation Edge",
+    "category": "Aviation Tracking",
+    "description": "Real-time flight tracking API providing global aviation data including live flight positions, schedules, airline routes, and airport information",
+    "use_cases": [
+      "Real-time flight tracking",
+      "Flight status monitoring",
+      "Aviation analytics",
+      "Airport operations",
+      "Travel applications",
+      "Logistics tracking"
+    ],
+    "data_coverage": {
+      "geographic": "Global",
+      "temporal": "Real-time and historical",
+      "update_frequency": "Every few minutes",
+      "data_types": [
+        "Live flight positions",
+        "Flight schedules",
+        "Airline routes",
+        "Airport data",
+        "Aircraft information",
+        "Weather data"
+      ]
+    },
+    "technical_info": {
+      "base_url": "https://aviation-edge.com/v2/public",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "api_key",
+      "endpoints": [
+        {
+          "path": "/flights",
+          "full_url": "https://aviation-edge.com/v2/public/flights?key=[API_KEY]",
+          "method": "GET",
+          "description": "Get all currently live flights or filter by various parameters",
+          "documentation_link": "https://aviation-edge.com/developers/",
+          "parameters": ["flightIata", "flightIcao", "depIata", "arrIata", "airlineIata", "status"],
+          "response_format": "JSON with flight position and status data"
+        },
+        {
+          "path": "/timetable",
+          "full_url": "https://aviation-edge.com/v2/public/timetable?key=[API_KEY]",
+          "method": "GET",
+          "description": "Access flight schedules and timetables",
+          "documentation_link": "https://aviation-edge.com/developers/",
+          "parameters": ["iataCode", "icaoCode", "type", "date"],
+          "response_format": "JSON with schedule information"
+        },
+        {
+          "path": "/routes",
+          "full_url": "https://aviation-edge.com/v2/public/routes?key=[API_KEY]",
+          "method": "GET",
+          "description": "Get airline route information",
+          "documentation_link": "https://aviation-edge.com/developers/",
+          "parameters": ["airlineIata", "airlineIcao", "depIata", "arrIata"],
+          "response_format": "JSON with route data"
+        },
+        {
+          "path": "/nearby",
+          "full_url": "https://aviation-edge.com/v2/public/nearby?key=[API_KEY]",
+          "method": "GET",
+          "description": "Find airports near a location",
+          "documentation_link": "https://aviation-edge.com/developers/",
+          "parameters": ["lat", "lng", "distance"],
+          "response_format": "JSON with nearby airports"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://aviation-edge.com/getting-started/",
+        "authentication": "https://aviation-edge.com/developers/#authentication",
+        "endpoints_reference": "https://aviation-edge.com/developers/",
+        "code_examples": "https://aviation-edge.com/code-examples/",
+        "sdks_libraries": "https://aviation-edge.com/sdks/"
+      }
+    },
+    "pricing_info": {
+      "model": "Subscription-based",
+      "tiers": [
+        {
+          "name": "Developer",
+          "price": "$7/month",
+          "features": [
+            "30,000 API calls/month",
+            "All API endpoints",
+            "24/7 Support"
+          ],
+          "limits": {
+            "api_calls": "30,000/month",
+            "data_retention": "Current data only"
+          }
+        },
+        {
+          "name": "Business",
+          "price": "$15/month",
+          "features": [
+            "100,000 API calls/month",
+            "All API endpoints",
+            "24/7 Support",
+            "SLA"
+          ],
+          "limits": {
+            "api_calls": "100,000/month",
+            "data_retention": "Current data only"
+          }
+        },
+        {
+          "name": "Business Gold",
+          "price": "$39/month",
+          "features": [
+            "500,000 API calls/month",
+            "All API endpoints",
+            "Development support",
+            "24/7 Support",
+            "SLA"
+          ],
+          "limits": {
+            "api_calls": "500,000/month",
+            "data_retention": "Current data only"
+          }
+        },
+        {
+          "name": "Unlimited",
+          "price": "Contact for pricing",
+          "features": [
+            "Unlimited API calls",
+            "All API endpoints",
+            "Development support",
+            "No usage restrictions"
+          ],
+          "limits": {
+            "api_calls": "Unlimited",
+            "data_retention": "Historical data available"
+          }
+        }
+      ],
+      "free_tier": true,
+      "trial_available": true
+    },
+    "authentication": {
+      "methods": ["API Key"],
+      "oauth_supported": false,
+      "api_key_location": "query",
+      "required_headers": {}
+    },
+    "rate_limits": {
+      "requests_per_second": null,
+      "requests_per_day": "Based on plan",
+      "concurrent_requests": null,
+      "notes": "Limits based on subscription tier"
+    },
+    "availability": {
+      "status_page": "https://aviation-edge.com/status",
+      "sla": "99.8%",
+      "support_channels": ["Email", "24/7 Support"]
+    },
+    "compliance": {
+      "gdpr_compliant": true,
+      "soc2_certified": false,
+      "iso_certified": false
+    }
+  },
+  {
+    "api_name": "FlightAware AeroAPI",
+    "provider": "FlightAware",
+    "category": "Aviation Tracking",
+    "description": "Enterprise-grade flight tracking API providing real-time and historical flight data, predictive ETAs, and comprehensive aviation intelligence",
+    "use_cases": [
+      "Real-time flight tracking",
+      "Historical flight analysis",
+      "Predictive flight ETAs",
+      "Airport operations",
+      "Aviation analytics",
+      "Fleet management"
+    ],
+    "data_coverage": {
+      "geographic": "Global",
+      "temporal": "Real-time and historical (since 2011)",
+      "update_frequency": "Real-time",
+      "data_types": [
+        "Flight positions",
+        "Flight plans",
+        "Predictive ETAs",
+        "Weather data",
+        "Airport information",
+        "Aircraft data"
+      ]
+    },
+    "technical_info": {
+      "base_url": "https://aeroapi.flightaware.com/aeroapi",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "api_key",
+      "endpoints": [
+        {
+          "path": "/flights/{ident}",
+          "full_url": "https://aeroapi.flightaware.com/aeroapi/flights/{ident}",
+          "method": "GET",
+          "description": "Get flight information by flight identifier",
+          "documentation_link": "https://www.flightaware.com/commercial/aeroapi/documentation",
+          "parameters": ["ident", "ident_type", "start", "end"],
+          "response_format": "JSON with comprehensive flight data"
+        },
+        {
+          "path": "/airports/{airport_code}/flights",
+          "full_url": "https://aeroapi.flightaware.com/aeroapi/airports/{airport_code}/flights",
+          "method": "GET",
+          "description": "Get flights for a specific airport",
+          "documentation_link": "https://www.flightaware.com/commercial/aeroapi/documentation",
+          "parameters": ["airport_code", "type", "start", "end", "max_pages"],
+          "response_format": "JSON with airport flight data"
+        },
+        {
+          "path": "/flights/search",
+          "full_url": "https://aeroapi.flightaware.com/aeroapi/flights/search",
+          "method": "GET",
+          "description": "Search for flights based on various criteria",
+          "documentation_link": "https://www.flightaware.com/commercial/aeroapi/documentation",
+          "parameters": ["query", "start", "end", "max_pages"],
+          "response_format": "JSON with search results"
+        },
+        {
+          "path": "/foresight/flights/{ident}/positions",
+          "full_url": "https://aeroapi.flightaware.com/aeroapi/foresight/flights/{ident}/positions",
+          "method": "GET",
+          "description": "Get flight positions with Foresight predictive data",
+          "documentation_link": "https://www.flightaware.com/commercial/aeroapi/documentation",
+          "parameters": ["ident", "start", "end"],
+          "response_format": "JSON with enhanced position data"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.flightaware.com/commercial/aeroapi/getting_started",
+        "authentication": "https://www.flightaware.com/commercial/aeroapi/authentication",
+        "endpoints_reference": "https://www.flightaware.com/commercial/aeroapi/documentation",
+        "code_examples": "https://www.flightaware.com/commercial/aeroapi/examples",
+        "sdks_libraries": "https://www.flightaware.com/commercial/aeroapi/resources"
+      }
+    },
+    "pricing_info": {
+      "model": "Query-based",
+      "tiers": [
+        {
+          "name": "Standard",
+          "price": "Starting at $0.002 per query",
+          "features": [
+            "Real-time flight tracking",
+            "Historical data (2 weeks)",
+            "Standard support"
+          ],
+          "limits": {
+            "api_calls": "Pay per query",
+            "data_retention": "2 weeks"
+          }
+        },
+        {
+          "name": "Premium",
+          "price": "Contact for pricing",
+          "features": [
+            "Real-time flight tracking",
+            "Historical data (since 2011)",
+            "Foresight predictive ETAs",
+            "Premium support"
+          ],
+          "limits": {
+            "api_calls": "Custom",
+            "data_retention": "Since 2011"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "price": "Contact for pricing",
+          "features": [
+            "All Premium features",
+            "Custom integrations",
+            "99.5% SLA",
+            "Dedicated support"
+          ],
+          "limits": {
+            "api_calls": "Unlimited",
+            "data_retention": "Full historical"
+          }
+        }
+      ],
+      "free_tier": false,
+      "trial_available": true
+    },
+    "authentication": {
+      "methods": ["API Key"],
+      "oauth_supported": false,
+      "api_key_location": "header",
+      "required_headers": {
+        "x-apikey": "{API_KEY}"
+      }
+    },
+    "rate_limits": {
+      "requests_per_second": "Based on plan",
+      "requests_per_day": "Based on plan",
+      "concurrent_requests": "Based on plan",
+      "notes": "Enterprise plans have higher limits"
+    },
+    "availability": {
+      "status_page": "https://flightaware.com/live/flight/status",
+      "sla": "99.5% (Enterprise)",
+      "support_channels": ["Email", "Phone", "Developer portal"]
+    },
+    "compliance": {
+      "gdpr_compliant": true,
+      "soc2_certified": true,
+      "iso_certified": true
+    }
+  },
+  {
+    "api_name": "AIS (Automatic Identification System) APIs",
+    "provider": "Multiple (VesselFinder, Datalastic, Spire, AISHub)",
+    "category": "Maritime Tracking",
+    "description": "Maritime vessel tracking APIs providing real-time and historical AIS data for global ship movements, port calls, and vessel information",
+    "use_cases": [
+      "Vessel tracking",
+      "Port operations",
+      "Maritime logistics",
+      "Compliance monitoring",
+      "Fleet management",
+      "Maritime security"
+    ],
+    "data_coverage": {
+      "geographic": "Global",
+      "temporal": "Real-time and historical",
+      "update_frequency": "Real-time (varies by provider)",
+      "data_types": [
+        "Vessel positions",
+        "Port calls",
+        "Vessel characteristics",
+        "Voyage data",
+        "ETA predictions",
+        "Historical tracks"
+      ]
+    },
+    "technical_info": {
+      "base_url": "Varies by provider",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML", "CSV"],
+      "auth_method": "api_key",
+      "endpoints": [
+        {
+          "path": "/vessels",
+          "full_url": "https://api.vesselfinder.com/vessels",
+          "method": "GET",
+          "description": "Get vessel data by IMO or MMSI",
+          "documentation_link": "https://api.vesselfinder.com/docs/vessels.html",
+          "parameters": ["imo", "mmsi", "userkey", "format", "extradata"],
+          "response_format": "JSON with AIS, voyage, and master data"
+        },
+        {
+          "path": "/ws.php",
+          "full_url": "https://data.aishub.net/ws.php",
+          "method": "GET",
+          "description": "AISHub data retrieval endpoint",
+          "documentation_link": "https://www.aishub.net/api",
+          "parameters": ["username", "format", "latmin", "latmax", "lonmin", "lonmax", "mmsi", "imo"],
+          "response_format": "XML/JSON/CSV with vessel positions"
+        },
+        {
+          "path": "/api/v1/vessels",
+          "full_url": "https://api.datalastic.com/api/v1/vessels",
+          "method": "GET",
+          "description": "Get vessel information and positions",
+          "documentation_link": "https://datalastic.com/api-docs",
+          "parameters": ["api_key", "imo", "mmsi", "area"],
+          "response_format": "JSON with vessel data"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "Varies by provider",
+        "authentication": "API key based authentication",
+        "endpoints_reference": "Provider-specific documentation",
+        "code_examples": "Available from most providers",
+        "sdks_libraries": "Some providers offer SDKs"
+      }
+    },
+    "pricing_info": {
+      "model": "Credit-based or Subscription",
+      "tiers": [
+        {
+          "name": "VesselFinder Credit Plan",
+          "price": "€150-565/month",
+          "features": [
+            "10,000-50,000 credits/month",
+            "Pay-per-use model",
+            "Multiple data sets"
+          ],
+          "limits": {
+            "api_calls": "Credit-based",
+            "data_retention": "Current data"
+          }
+        },
+        {
+          "name": "Datalastic Plans",
+          "price": "$29-299/month",
+          "features": [
+            "Real-time tracking",
+            "Historical data",
+            "Area monitoring"
+          ],
+          "limits": {
+            "api_calls": "1,000-100,000/month",
+            "data_retention": "Based on plan"
+          }
+        },
+        {
+          "name": "AISHub",
+          "price": "Free with contribution",
+          "features": [
+            "Access to global AIS network",
+            "XML/JSON/CSV formats",
+            "Real-time data"
+          ],
+          "limits": {
+            "api_calls": "1 per minute",
+            "data_retention": "Real-time only"
+          }
+        }
+      ],
+      "free_tier": true,
+      "trial_available": true
+    },
+    "authentication": {
+      "methods": ["API Key"],
+      "oauth_supported": false,
+      "api_key_location": "query or header",
+      "required_headers": {}
+    },
+    "rate_limits": {
+      "requests_per_second": "Varies by provider",
+      "requests_per_day": "Based on plan",
+      "concurrent_requests": "Provider-specific",
+      "notes": "AISHub: max 1 request per minute"
+    },
+    "availability": {
+      "status_page": "Provider-specific",
+      "sla": "99.8%+ typical",
+      "support_channels": ["Email", "Documentation"]
+    },
+    "compliance": {
+      "gdpr_compliant": true,
+      "soc2_certified": false,
+      "iso_certified": false
+    }
+  },
+  {
+    "api_name": "MarineTraffic API",
+    "provider": "MarineTraffic (Kpler)",
+    "category": "Maritime Intelligence",
+    "description": "Comprehensive maritime data platform providing real-time vessel tracking, predictive analytics, and maritime intelligence through the world's largest AIS network",
+    "use_cases": [
+      "Global vessel tracking",
+      "Port operations optimization",
+      "Supply chain visibility",
+      "Maritime compliance",
+      "Risk assessment",
+      "Trade intelligence"
+    ],
+    "data_coverage": {
+      "geographic": "Global",
+      "temporal": "Real-time and historical (since 2010)",
+      "update_frequency": "Real-time",
+      "data_types": [
+        "Vessel positions",
+        "Port calls",
+        "Predictive ETAs",
+        "Weather data",
+        "Maritime events",
+        "Vessel particulars"
+      ]
+    },
+    "technical_info": {
+      "base_url": "https://services.marinetraffic.com/api",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "api_key",
+      "endpoints": [
+        {
+          "path": "/exportvessel/v:version",
+          "full_url": "https://services.marinetraffic.com/api/exportvessel/v:version",
+          "method": "GET",
+          "description": "Get single vessel positions and information",
+          "documentation_link": "https://servicedocs.marinetraffic.com/",
+          "parameters": ["api_key", "imo", "mmsi", "timespan"],
+          "response_format": "JSON/XML with vessel data"
+        },
+        {
+          "path": "/exportvessels/v:version",
+          "full_url": "https://services.marinetraffic.com/api/exportvessels/v:version",
+          "method": "GET",
+          "description": "Get multiple vessel positions in an area",
+          "documentation_link": "https://servicedocs.marinetraffic.com/",
+          "parameters": ["api_key", "MINLAT", "MAXLAT", "MINLON", "MAXLON"],
+          "response_format": "JSON/XML with vessel positions"
+        },
+        {
+          "path": "/portcalls/v:version",
+          "full_url": "https://services.marinetraffic.com/api/portcalls/v:version",
+          "method": "GET",
+          "description": "Get port call information",
+          "documentation_link": "https://servicedocs.marinetraffic.com/",
+          "parameters": ["api_key", "portid", "imo", "mmsi", "fromdate", "todate"],
+          "response_format": "JSON/XML with port call events"
+        },
+        {
+          "path": "/expectedarrivals/v:version",
+          "full_url": "https://services.marinetraffic.com/api/expectedarrivals/v:version",
+          "method": "GET",
+          "description": "Get expected arrivals with predictive ETAs",
+          "documentation_link": "https://servicedocs.marinetraffic.com/",
+          "parameters": ["api_key", "portid", "fromdate", "todate"],
+          "response_format": "JSON/XML with predicted arrivals"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.marinetraffic.com/en/ais-api-services/documentation",
+        "authentication": "https://servicedocs.marinetraffic.com/",
+        "endpoints_reference": "https://servicedocs.marinetraffic.com/",
+        "code_examples": "https://www.marinetraffic.com/en/ais-api-services/examples",
+        "sdks_libraries": "https://www.marinetraffic.com/en/ais-api-services/sdks"
+      }
+    },
+    "pricing_info": {
+      "model": "Credit-based subscription",
+      "tiers": [
+        {
+          "name": "Professional",
+          "price": "Contact for pricing",
+          "features": [
+            "Real-time vessel tracking",
+            "Basic API access",
+            "Standard support"
+          ],
+          "limits": {
+            "api_calls": "Credit-based",
+            "data_retention": "90 days"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "price": "Contact for pricing",
+          "features": [
+            "Full API suite access",
+            "Predictive analytics",
+            "Historical data access",
+            "Premium support"
+          ],
+          "limits": {
+            "api_calls": "Higher credit allocation",
+            "data_retention": "Since 2010"
+          }
+        },
+        {
+          "name": "Custom",
+          "price": "Contact for pricing",
+          "features": [
+            "Tailored solutions",
+            "Unlimited API access",
+            "Dedicated infrastructure",
+            "24/7 support"
+          ],
+          "limits": {
+            "api_calls": "Unlimited",
+            "data_retention": "Full historical"
+          }
+        }
+      ],
+      "free_tier": false,
+      "trial_available": true
+    },
+    "authentication": {
+      "methods": ["API Key"],
+      "oauth_supported": false,
+      "api_key_location": "query",
+      "required_headers": {}
+    },
+    "rate_limits": {
+      "requests_per_second": "Based on plan",
+      "requests_per_day": "Credit-based",
+      "concurrent_requests": "Based on plan",
+      "notes": "Rate limits depend on service level"
+    },
+    "availability": {
+      "status_page": "https://status.marinetraffic.com",
+      "sla": "99.9%",
+      "support_channels": ["Email", "Phone", "Portal"]
+    },
+    "compliance": {
+      "gdpr_compliant": true,
+      "soc2_certified": true,
+      "iso_certified": true
+    }
+  }
+]

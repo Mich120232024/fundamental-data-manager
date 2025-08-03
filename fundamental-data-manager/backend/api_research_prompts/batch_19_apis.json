@@ -1,0 +1,127 @@
+[
+  {
+    "id": "replit-ghostwriter-api",
+    "name": "Replit Ghostwriter API",
+    "provider": "Replit"
+  },
+  {
+    "id": "claude-for-slack-api",
+    "name": "Claude for Slack API",
+    "provider": "Claude"
+  },
+  {
+    "id": "poe-api-quora",
+    "name": "Poe API (Quora)",
+    "provider": "Poe"
+  },
+  {
+    "id": "bard-api-google",
+    "name": "Bard API (Google)",
+    "provider": "Bard"
+  },
+  {
+    "id": "jasper-api",
+    "name": "Jasper API",
+    "provider": "Jasper"
+  },
+  {
+    "id": "writer-api",
+    "name": "Writer API",
+    "provider": "Writer"
+  },
+  {
+    "id": "claude-pro-api",
+    "name": "Claude Pro API",
+    "provider": "Claude"
+  },
+  {
+    "id": "spacy-api",
+    "name": "Spacy API",
+    "provider": "Spacy"
+  },
+  {
+    "id": "nltk-api",
+    "name": "NLTK API",
+    "provider": "NLTK"
+  },
+  {
+    "id": "hugging-face-transformers-api",
+    "name": "Hugging Face Transformers API",
+    "provider": "Hugging"
+  },
+  {
+    "id": "spacy-universe-api",
+    "name": "Spacy Universe API",
+    "provider": "Spacy"
+  },
+  {
+    "id": "prodigy-api",
+    "name": "Prodigy API",
+    "provider": "Prodigy"
+  },
+  {
+    "id": "gradio-api",
+    "name": "Gradio API",
+    "provider": "Gradio"
+  },
+  {
+    "id": "streamlit-api",
+    "name": "Streamlit API",
+    "provider": "Streamlit"
+  },
+  {
+    "id": "deepl-api",
+    "name": "DeepL API",
+    "provider": "DeepL"
+  },
+  {
+    "id": "gpt-4-api",
+    "name": "GPT-4 API",
+    "provider": "GPT-4"
+  },
+  {
+    "id": "gpt-4-vision-api",
+    "name": "GPT-4 Vision API",
+    "provider": "GPT-4"
+  },
+  {
+    "id": "github-codespaces-api",
+    "name": "GitHub Codespaces API",
+    "provider": "GitHub"
+  },
+  {
+    "id": "sourcegraph-cody-api",
+    "name": "Sourcegraph Cody API",
+    "provider": "Sourcegraph"
+  },
+  {
+    "id": "tabnine-api",
+    "name": "TabNine API",
+    "provider": "TabNine"
+  },
+  {
+    "id": "cursor-api",
+    "name": "Cursor API",
+    "provider": "Cursor"
+  },
+  {
+    "id": "amazon-bedrock-api",
+    "name": "Amazon Bedrock API",
+    "provider": "Amazon"
+  },
+  {
+    "id": "vertex-ai-api-google",
+    "name": "Vertex AI API (Google)",
+    "provider": "Vertex"
+  },
+  {
+    "id": "azure-openai-service-api",
+    "name": "Azure OpenAI Service API",
+    "provider": "Azure"
+  },
+  {
+    "id": "nvidia-ai-enterprise-api",
+    "name": "Nvidia AI Enterprise API",
+    "provider": "Nvidia"
+  }
+]

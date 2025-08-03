@@ -1,0 +1,79 @@
+
+Research these 25 APIs comprehensively using web search and official documentation:
+
+- SensorTower (SensorTower) - SensorTower service
+- JetTrack (JetTrack) - JetTrack service
+- FlightAware (FlightAware) - FlightAware service
+- AIS (Automatic Identification System) (AIS) - AIS (Automatic Identification System) service
+- MarineTraffic (MarineTraffic) - MarineTraffic service
+- Spire Maritime (Spire) - Spire Maritime service
+- Windward (Windward) - Windward service
+- Panjiva (Panjiva) - Panjiva service
+- Import Genius (Import) - Import Genius service
+- Enigma Public (Enigma) - Enigma Public service
+- Dun & Bradstreet D&B Optimizer (Dun) - Dun & Bradstreet D&B Optimizer service
+- RavenPack (RavenPack) - RavenPack service
+- Alexandria Technology (Alexandria) - Alexandria Technology service
+- Amenity Analytics (Amenity) - Amenity Analytics service
+- Social Market Analytics (Social) - Social Market Analytics service
+- StockTwits API (StockTwits) - StockTwits API service
+- iSentium (iSentium) - iSentium service
+- Dataminr (Dataminr) - Dataminr service
+- SESAMm (SESAMm) - SESAMm service
+- Accern (Accern) - Accern service
+- Thinknum Alternative Data (Thinknum) - Thinknum Alternative Data service
+- Eagle Alpha (Eagle) - Eagle Alpha service
+- Quandl Alternative Data (Quandl) - Quandl Alternative Data service
+- 7Park Data (7Park) - 7Park Data service
+- Alpha Hat (Alpha) - Alpha Hat service
+
+For EACH API, provide this JSON structure using REAL DATA from official sources:
+{
+  "id": "original_api_id",
+  "name": "Official API Name from documentation",
+  "provider": "Actual Organization/Company Name", 
+  "description": "2-3 sentence summary based on official documentation",
+  "discovery_status": "documented",
+  "tags": ["actual", "relevant", "tags"],
+  "access_info": {
+    "is_free": true/false/null,
+    "requires_api_key": true/false/null,
+    "requires_approval": false,
+    "pricing_model": "actual pricing model from docs",
+    "rate_limits": "specific limits from documentation or 'unknown'"
+  },
+  "technical_info": {
+    "base_url": "actual base URL from documentation",
+    "protocol": "REST/GraphQL/SOAP based on documentation",
+    "data_formats": ["formats supported by API"],
+    "auth_method": "actual authentication method",
+    "endpoints": [
+      "List real endpoint paths with descriptions from official docs"
+    ]
+  },
+  "content_summary": {
+    "data_categories": ["Actual data categories from documentation"],
+    "geographic_scope": "based on API documentation",
+    "update_frequency": "from official documentation",
+    "historical_data": true/false/null
+  },
+  "research_notes": {
+    "documentation_url": "actual URL to official API documentation",
+    "sample_endpoints": ["real endpoints from documentation"],
+    "data_quality": "assessment based on documentation quality",
+    "last_researched": "2025-07-28T19:41:42.178886Z",
+    "researcher_notes": "insights from researching official sources",
+    "api_summary": "comprehensive paragraph based on official documentation about capabilities, data, users, and value"
+  }
+}
+
+RESEARCH REQUIREMENTS:
+1. Find OFFICIAL documentation for each API - use web search
+2. Extract REAL endpoint paths from documentation
+3. Get ACTUAL pricing and authentication info
+4. Identify REAL data categories provided
+5. Write comprehensive summary based on official sources
+
+OUTPUT: Return a JSON array with all researched APIs using REAL data only.
+
+BATCH ID: 10

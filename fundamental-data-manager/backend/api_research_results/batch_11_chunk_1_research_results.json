@@ -1,0 +1,269 @@
+[
+  {
+    "id": "yewno",
+    "name": "Yewno Finance API",
+    "provider": "Yewno",
+    "description": "Knowledge discovery and analytics platform providing concept-driven search and document analysis for financial research using AI-powered semantic analysis.",
+    "discovery_status": "documented",
+    "tags": ["knowledge discovery", "concept search", "financial research", "semantic analysis", "document analysis"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Free trial available, contact for enterprise pricing",
+      "rate_limits": "JWT tokens with 24-hour expiration"
+    },
+    "technical_info": {
+      "base_url": "https://apis.yewno.com/public",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "JWT tokens",
+      "endpoints": [
+        {
+          "path": "/concept/search",
+          "full_url": "https://apis.yewno.com/public/concept/search",
+          "method": "GET",
+          "description": "Search for concepts with definitions and metadata",
+          "documentation_link": "https://github.com/yewno/public-API-docs",
+          "parameters": ["query", "limit", "offset"],
+          "response_format": "JSON with concept definitions and relationships"
+        },
+        {
+          "path": "/document/search",
+          "full_url": "https://apis.yewno.com/public/document/search",
+          "method": "GET",
+          "description": "Search for documents by concepts or topics",
+          "documentation_link": "https://github.com/yewno/public-API-docs",
+          "parameters": ["concepts", "topics", "date_range"],
+          "response_format": "JSON with document metadata and relevance scores"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Concept definitions", "Document analysis", "Semantic relationships", "Financial research"],
+      "geographic_scope": "Global",
+      "update_frequency": "Continuous updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://github.com/yewno/public-API-docs",
+      "api_summary": "Yewno provides AI-powered knowledge discovery through concept-driven search and document analysis, with public API documentation available on GitHub and registration required for access.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://auth.yewno.com/register",
+      "api_reference": "https://github.com/yewno/public-API-docs",
+      "examples": "https://github.com/yewno/public-API-docs",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "estimize",
+    "name": "Estimize Data API",
+    "provider": "Agora Inc. (Estimize)",
+    "description": "Crowdsourced earnings estimates platform providing EPS and revenue estimates from 120,000+ contributors, 70% more accurate than Wall Street estimates for 3000+ US listed companies.",
+    "discovery_status": "documented",
+    "tags": ["earnings estimates", "crowdsourced data", "financial forecasts", "Wall Street alternatives"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Free trial available, institutional licensing for full access",
+      "rate_limits": "Contact for rate limit details"
+    },
+    "technical_info": {
+      "base_url": "https://api.estimize.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/estimates",
+          "full_url": "https://api.estimize.com/estimates",
+          "method": "GET",
+          "description": "Get EPS and revenue estimates for companies",
+          "documentation_link": "Contact for documentation",
+          "parameters": ["ticker", "period", "estimate_type"],
+          "response_format": "JSON with consensus and individual estimates"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["EPS estimates", "Revenue estimates", "Economic indicators", "Crowd-sourced forecasts"],
+      "geographic_scope": "US listed companies and ADRs, 27 US and 55 international economic metrics",
+      "update_frequency": "Real-time updates from contributor base",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact for documentation",
+      "api_summary": "Estimize provides crowdsourced earnings estimates from 120,000+ contributors with 70% better accuracy than Wall Street estimates, covering 3000+ US companies with historical data back to January 2012.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for access",
+      "api_reference": "Limited public documentation",
+      "examples": "Contact for examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "sentifi",
+    "name": "Sentifi API (Discontinued)",
+    "provider": "Sentifi (Service Discontinued)",
+    "description": "Former social sentiment analysis platform for financial markets. Service has been discontinued or merged with other providers. Alternative providers include SentiCrypt, Utradea, and StockTwits.",
+    "discovery_status": "documented",
+    "tags": ["social sentiment", "discontinued", "financial markets", "alternative providers available"],
+    "access_info": {
+      "is_free": null,
+      "requires_api_key": null,
+      "requires_approval": null,
+      "pricing_model": "Service discontinued - see alternative providers",
+      "rate_limits": "Not available"
+    },
+    "technical_info": {
+      "base_url": "Service discontinued",
+      "protocol": "Not applicable",
+      "data_formats": ["Not applicable"],
+      "auth_method": "Not applicable",
+      "endpoints": []
+    },
+    "content_summary": {
+      "data_categories": ["Service discontinued"],
+      "geographic_scope": "Not applicable",
+      "update_frequency": "Not applicable",
+      "historical_data": null
+    },
+    "research_notes": {
+      "documentation_url": "Not available",
+      "api_summary": "Sentifi service has been discontinued. Alternative providers include SentiCrypt for crypto sentiment, Utradea for social sentiment API, and StockTwits Firestream for real-time social sentiment streams.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Service discontinued",
+      "api_reference": "Not available",
+      "examples": "Not available",
+      "changelog": "Not available",
+      "status_page": "Not available"
+    }
+  },
+  {
+    "id": "tickertags",
+    "name": "TagniFi API (formerly TickerTags)",
+    "provider": "TagniFi",
+    "description": "Financial data platform providing point-in-time financial statement data with as-reported transparency, industry-specific templates, and comprehensive market data.",
+    "discovery_status": "documented",
+    "tags": ["financial statements", "point-in-time data", "as-reported", "market data"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Contact required for pricing",
+      "rate_limits": "Contact for rate limit information"
+    },
+    "technical_info": {
+      "base_url": "https://api.tagnifi.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "HTTP Basic Auth",
+      "endpoints": [
+        {
+          "path": "/fundamentals",
+          "full_url": "https://api.tagnifi.com/fundamentals",
+          "method": "GET",
+          "description": "Financial statement data with point-in-time capabilities",
+          "documentation_link": "Contact for documentation",
+          "parameters": ["ticker", "period", "statement_type"],
+          "response_format": "JSON with financial statement data"
+        },
+        {
+          "path": "/markets",
+          "full_url": "https://api.tagnifi.com/markets",
+          "method": "GET",
+          "description": "End-of-day market prices and trading data",
+          "documentation_link": "Contact for documentation",
+          "parameters": ["ticker", "date_range"],
+          "response_format": "JSON with market price data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Financial statements", "Market prices", "Company profiles", "Point-in-time data"],
+      "geographic_scope": "Global markets with US focus",
+      "update_frequency": "Daily market data, quarterly financials",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact for documentation",
+      "api_summary": "TagniFi provides point-in-time financial statement data with as-reported transparency and industry-specific templates, featuring HTTP Basic Auth and comprehensive market data coverage.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for access",
+      "api_reference": "Contact for documentation",
+      "examples": "Contact for examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "sentieo",
+    "name": "Sentieo Research Platform API",
+    "provider": "Sentieo",
+    "description": "AI-powered research platform for institutional investors providing document search, earnings call analysis, and enterprise research workflows for 900+ global institutional clients.",
+    "discovery_status": "documented",
+    "tags": ["institutional research", "AI analysis", "earnings calls", "document search", "enterprise"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise-only, contact required",
+      "rate_limits": "Enterprise-specific limits"
+    },
+    "technical_info": {
+      "base_url": "Enterprise endpoints",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/research/search",
+          "full_url": "Enterprise endpoint/research/search",
+          "method": "GET",
+          "description": "AI-powered document search and analysis",
+          "documentation_link": "Enterprise documentation",
+          "parameters": ["query", "document_types", "date_range"],
+          "response_format": "JSON with document search results and analysis"
+        },
+        {
+          "path": "/earnings/analysis",
+          "full_url": "Enterprise endpoint/earnings/analysis",
+          "method": "GET",
+          "description": "Earnings call transcript analysis with Smart Summary",
+          "documentation_link": "Enterprise documentation",
+          "parameters": ["ticker", "period", "analysis_type"],
+          "response_format": "JSON with earnings call analysis and summaries"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Research documents", "Earnings call transcripts", "AI analysis", "Enterprise workflows"],
+      "geographic_scope": "Global institutional coverage",
+      "update_frequency": "Real-time document updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Enterprise documentation provided",
+      "api_summary": "Sentieo serves 900+ global institutional clients with AI-powered research platform featuring document search, earnings call analysis, and cloud integrations for investment analysts and portfolio managers.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for enterprise access",
+      "api_reference": "Enterprise documentation",
+      "examples": "Enterprise examples provided",
+      "changelog": null,
+      "status_page": null
+    }
+  }
+]

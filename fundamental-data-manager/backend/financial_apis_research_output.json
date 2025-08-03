@@ -1,0 +1,247 @@
+{
+  "financial_apis_research": {
+    "research_date": "2025-07-30",
+    "apis_researched": [
+      {
+        "provider": "InsiderScore (VerityData)",
+        "description": "Leading provider of insider trading analytics with coverage of 5,500+ companies",
+        "technical_info": {
+          "base_url": "https://www.infilings.com/api/api.php",
+          "protocol": "REST",
+          "data_formats": ["JSON", "API", "flat file formats"],
+          "auth_method": "api_key",
+          "endpoints": [
+            {
+              "path": "/api.php",
+              "full_url": "https://www.infilings.com/api/api.php",
+              "method": "POST",
+              "description": "Main API endpoint for querying VerityData's database of SEC filings and insider data",
+              "documentation_link": "https://www.infilings.com/api/",
+              "parameters": ["user_id", "authorization_token", "action", "arguments"],
+              "response_format": "JSON"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.infilings.com/api/",
+            "authentication": "Contact Customer Success Manager for token",
+            "endpoints_reference": "https://feeds-techdocs.insiderscore.com/api/api.html",
+            "code_examples": "Available at https://www.infilings.com/api/",
+            "sdks_libraries": "Not publicly documented"
+          }
+        },
+        "pricing": {
+          "model": "Custom pricing",
+          "details": "Contact Customer Success Manager for pricing",
+          "free_tier": false,
+          "contact": "Customer Success team"
+        },
+        "data_coverage": {
+          "companies": "5,500+",
+          "historical_data": "Most 10-Ks since 2013, IPOs since 2016",
+          "update_frequency": "Real-time",
+          "data_types": ["Insider trading", "Management changes", "Stock buybacks", "Institutional holdings"]
+        }
+      },
+      {
+        "provider": "2iQ Research",
+        "description": "Leading insider transaction data provider with global coverage of 60,000+ stocks",
+        "technical_info": {
+          "base_url": "Not publicly documented",
+          "protocol": "REST (assumed)",
+          "data_formats": ["API", "customizable feed", "terminal product"],
+          "auth_method": "unknown",
+          "endpoints": [
+            {
+              "path": "Not publicly documented",
+              "full_url": "Contact vendor for API details",
+              "method": "Not documented",
+              "description": "Access insider transaction data and quantitative model outputs",
+              "documentation_link": "Contact vendor at www.2iqresearch.com",
+              "parameters": ["Not publicly documented"],
+              "response_format": "Customizable based on client needs"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "Contact vendor",
+            "authentication": "Contact vendor",
+            "endpoints_reference": "Not publicly available",
+            "code_examples": "Not publicly available",
+            "sdks_libraries": "Not publicly documented"
+          }
+        },
+        "pricing": {
+          "model": "Custom pricing",
+          "details": "Not published - contact vendor for pricing",
+          "free_tier": false,
+          "contact": "www.2iqresearch.com"
+        },
+        "data_coverage": {
+          "companies": "60,000+ stocks globally",
+          "historical_data": "Extensive database history",
+          "update_frequency": "Industry-leading speed",
+          "data_types": ["Insider transactions", "Predictive scores", "Quantitative model outputs"]
+        }
+      },
+      {
+        "provider": "Wall Street Horizon",
+        "description": "Leading provider of market-moving corporate event data covering 11,000+ companies worldwide",
+        "technical_info": {
+          "base_url": "Multiple integration options",
+          "protocol": "REST/WebSocket",
+          "data_formats": ["JSON", "XML", "streaming feeds"],
+          "auth_method": "api_key",
+          "endpoints": [
+            {
+              "path": "reqWshMetaData",
+              "full_url": "Via Interactive Brokers TWS API",
+              "method": "Function call",
+              "description": "Request metadata describing calendar events",
+              "documentation_link": "https://interactivebrokers.github.io/tws-api/wshe_filters.html",
+              "parameters": ["fillWatchlist", "fillPortfolio", "fillCompetitors", "startDate", "endDate", "filter"],
+              "response_format": "JSON payload with event_types and filters arrays"
+            },
+            {
+              "path": "reqWshEventData",
+              "full_url": "Via Interactive Brokers TWS API",
+              "method": "Function call",
+              "description": "Request calendar events data",
+              "documentation_link": "https://interactivebrokers.github.io/tws-api/fundamentals.html",
+              "parameters": ["conId", "startDate", "endDate", "event filters"],
+              "response_format": "JSON with event data"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.wallstreethorizon.com/ibkr-wsh",
+            "authentication": "Via Interactive Brokers account management",
+            "endpoints_reference": "https://interactivebrokers.github.io/tws-api/wshe_filters.html",
+            "code_examples": "Available through Interactive Brokers TWS API docs",
+            "sdks_libraries": "Enchilada API platform for direct access"
+          }
+        },
+        "pricing": {
+          "model": "Subscription-based",
+          "details": "$149 USD per month for Institutional Users (via Interactive Brokers)",
+          "free_tier": false,
+          "contact": "ibkrapi@wallstreethorizon.com"
+        },
+        "data_coverage": {
+          "companies": "11,000+ companies worldwide",
+          "historical_data": "Comprehensive historical event data",
+          "update_frequency": "Real-time updates",
+          "data_types": ["Earnings calendars", "Dividend dates", "Stock splits", "M&A", "Investor conferences", "40+ event types"]
+        }
+      },
+      {
+        "provider": "AlphaSense",
+        "description": "AI-powered market intelligence platform trusted by 6,000+ enterprises including 85% of S&P 100",
+        "technical_info": {
+          "base_url": "https://api.alpha-sense.com",
+          "protocol": "GraphQL",
+          "data_formats": ["JSON"],
+          "auth_method": "jwt",
+          "endpoints": [
+            {
+              "path": "/auth",
+              "full_url": "https://api.alpha-sense.com/auth",
+              "method": "POST",
+              "description": "Authentication endpoint to obtain bearer token",
+              "documentation_link": "https://developer.alpha-sense.com/api/getting-started/",
+              "parameters": ["credentials"],
+              "response_format": "JSON with access token"
+            },
+            {
+              "path": "/gql",
+              "full_url": "https://api.alpha-sense.com/gql",
+              "method": "POST",
+              "description": "Main GraphQL endpoint for all queries and mutations",
+              "documentation_link": "https://developer.alpha-sense.com/api/getting-started/",
+              "parameters": ["GraphQL query", "bearer token in header"],
+              "response_format": "JSON based on GraphQL query"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://developer.alpha-sense.com/api/getting-started/",
+            "authentication": "https://developer.alpha-sense.com/enterprise/how-to/api-runbook",
+            "endpoints_reference": "https://developer.alpha-sense.com/",
+            "code_examples": "Available in developer portal with code snippets in multiple languages",
+            "sdks_libraries": "GraphQL library support for multiple languages"
+          }
+        },
+        "pricing": {
+          "model": "Annual subscription",
+          "details": "Flexible pricing for team sizes from enterprise to per-seat. Hidden add-ons for API, premium reports",
+          "free_tier": false,
+          "contact": "apisupport@alphasense.com for trial, alphasense-marketplace@alpha-sense.com for custom pricing"
+        },
+        "data_coverage": {
+          "companies": "Global coverage",
+          "historical_data": "500M+ documents",
+          "update_frequency": "Real-time",
+          "data_types": ["Company insights", "Market data", "Research documents", "AI-generated analyst-level insights"]
+        }
+      },
+      {
+        "provider": "TipRanks",
+        "description": "Comprehensive analyst ratings and price target data with proprietary star rating system",
+        "technical_info": {
+          "base_url": "Multiple access points",
+          "protocol": "REST",
+          "data_formats": ["JSON", "XML", "CSV", "Excel"],
+          "auth_method": "api_key",
+          "endpoints": [
+            {
+              "path": "Not publicly documented",
+              "full_url": "docs.tipranks.com (requires JavaScript)",
+              "method": "Various",
+              "description": "Access to analyst ratings, price targets, and sentiment data",
+              "documentation_link": "https://docs.tipranks.com/api-docs",
+              "parameters": ["stock symbol", "date range", "analyst filters"],
+              "response_format": "JSON with ratings and price target data"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://docs.tipranks.com/api-docs",
+            "authentication": "Available through official documentation",
+            "endpoints_reference": "https://docs.tipranks.com/api-docs",
+            "code_examples": "GitHub libraries available (tipranks-api-v2, Python module)",
+            "sdks_libraries": "Node.js and Python implementations on GitHub"
+          }
+        },
+        "pricing": {
+          "model": "Subscription-based",
+          "details": "Multiple API vendors offer price flexibility with package deals",
+          "free_tier": "Not specified",
+          "contact": "Through official website or partner vendors"
+        },
+        "data_coverage": {
+          "companies": "Comprehensive coverage",
+          "historical_data": "3-month rolling analyst estimates",
+          "update_frequency": "Daily updates",
+          "data_types": ["Analyst ratings", "Price targets", "Star ratings", "Success rates", "News sentiment", "Analyst scorecards"]
+        }
+      }
+    ],
+    "summary": {
+      "total_apis_researched": 5,
+      "common_features": [
+        "REST API architecture (except AlphaSense using GraphQL)",
+        "JSON as primary data format",
+        "Custom pricing models requiring direct contact",
+        "Real-time or daily data updates",
+        "Enterprise-focused solutions"
+      ],
+      "integration_notes": [
+        "InsiderScore integrated with VerityData platform",
+        "Wall Street Horizon accessible via Interactive Brokers TWS API",
+        "AlphaSense uses modern GraphQL architecture",
+        "TipRanks available through multiple third-party integrations",
+        "2iQ Research requires direct vendor contact for API access"
+      ],
+      "authentication_methods": {
+        "api_key": ["InsiderScore", "Wall Street Horizon", "TipRanks"],
+        "jwt": ["AlphaSense"],
+        "unknown": ["2iQ Research"]
+      }
+    }
+  }
+}

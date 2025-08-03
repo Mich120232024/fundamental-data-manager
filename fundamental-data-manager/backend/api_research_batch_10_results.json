@@ -1,0 +1,937 @@
+[
+  {
+    "id": "sensortower-2025",
+    "name": "SensorTower",
+    "category": "Mobile App Analytics",
+    "description": "Comprehensive mobile app analytics and intelligence platform providing insights into app performance, market trends, advertising effectiveness, and user behavior across iOS and Android platforms.",
+    "base_url": "https://api.sensortower.com",
+    "documentation_url": "https://sensortower.com/api-documentation",
+    "website": "https://sensortower.com",
+    "version": "v1",
+    "authentication": {
+      "type": "api_key",
+      "location": "header",
+      "key_name": "Authorization",
+      "description": "API token-based authentication found in user account profile at https://sensortower.com/users/edit"
+    },
+    "pricing": {
+      "model": "tiered_subscription",
+      "free_tier": {
+        "available": true,
+        "limitations": "Basic App Intelligence features only, personal use only",
+        "monthly_requests": 0
+      },
+      "paid_tiers": [
+        {
+          "name": "Standard",
+          "price_usd_monthly": 25000,
+          "features": ["App Intelligence", "Store Intelligence", "Ad Intelligence", "API Access"],
+          "target_audience": "Independent development teams"
+        },
+        {
+          "name": "Premium",
+          "price_usd_monthly": 40000,
+          "features": ["Full product suite", "Usage Intelligence", "Consumer Intelligence", "Priority support"],
+          "target_audience": "Enterprise clients"
+        },
+        {
+          "name": "Enterprise",
+          "price_usd_monthly": "custom",
+          "features": ["Complete platform access", "Custom integrations", "Dedicated support"],
+          "target_audience": "Large organizations"
+        }
+      ]
+    },
+    "rate_limits": {
+      "default_requests_per_minute": null,
+      "default_requests_per_day": null,
+      "notes": "Rate limits not publicly documented, defined within individual service agreements"
+    },
+    "endpoints": [
+      {
+        "path": "/apps/reports",
+        "method": "GET",
+        "description": "Retrieve comprehensive information about applications within account",
+        "parameters": [
+          {
+            "name": "os",
+            "type": "string",
+            "required": true,
+            "description": "Operating system (ios/android)"
+          },
+          {
+            "name": "app_id",
+            "type": "string",
+            "required": false,
+            "description": "Specific application identifier"
+          }
+        ]
+      },
+      {
+        "path": "/keywords/rankings",
+        "method": "GET",
+        "description": "Access keyword tracking data for monitored applications",
+        "parameters": [
+          {
+            "name": "keyword",
+            "type": "string",
+            "required": true,
+            "description": "Target keyword for ranking analysis"
+          },
+          {
+            "name": "country",
+            "type": "string",
+            "required": true,
+            "description": "Target country market"
+          }
+        ]
+      },
+      {
+        "path": "/category/history",
+        "method": "GET",
+        "description": "Retrieve historical ranking information across categories",
+        "parameters": [
+          {
+            "name": "start_date",
+            "type": "string",
+            "required": true,
+            "description": "Start date for historical data"
+          },
+          {
+            "name": "end_date",
+            "type": "string",
+            "required": true,
+            "description": "End date for historical data"
+          }
+        ]
+      }
+    ],
+    "data_fields": [
+      "app_id",
+      "app_name",
+      "publisher",
+      "category",
+      "downloads",
+      "revenue",
+      "rankings",
+      "ratings",
+      "reviews",
+      "keywords",
+      "ad_spend",
+      "creative_data",
+      "user_engagement",
+      "retention_metrics"
+    ],
+    "sdk_support": {
+      "python": {
+        "available": true,
+        "url": "https://pypi.org/project/sensortower-api/",
+        "installation": "pip install sensortower-api"
+      },
+      "javascript": {
+        "available": false
+      },
+      "java": {
+        "available": false
+      }
+    },
+    "features": [
+      "App Intelligence",
+      "Store Intelligence", 
+      "Ad Intelligence",
+      "Consumer Intelligence",
+      "Usage Intelligence",
+      "Predictive Analytics",
+      "Historical Data Access",
+      "Real-time Tracking",
+      "Competitive Analysis",
+      "Creative Intelligence"
+    ],
+    "use_cases": [
+      "App Store Optimization",
+      "Competitive Intelligence",
+      "Market Research",
+      "User Acquisition Analysis",
+      "Revenue Tracking",
+      "Advertising Performance",
+      "Investment Research",
+      "Product Strategy"
+    ],
+    "integrations": [
+      "Snowflake",
+      "BigQuery",
+      "Redshift",
+      "Salesforce",
+      "Rivery",
+      "MCP Servers"
+    ],
+    "data_coverage": {
+      "geographic": "Global",
+      "platforms": ["iOS", "Android"],
+      "historical_data": "From 2011 onwards",
+      "update_frequency": "Real-time"
+    },
+    "compliance": [
+      "GDPR",
+      "CCPA",
+      "SOC 2"
+    ],
+    "limitations": [
+      "Limited public documentation",
+      "High enterprise pricing",
+      "Complex implementation requirements",
+      "API permissions required for app access"
+    ],
+    "status": "active",
+    "last_updated": "2025-07-30"
+  },
+  {
+    "id": "jettrack-2025",
+    "name": "JetTrack",
+    "category": "Aviation Tracking",
+    "description": "Corporate aircraft flight tracking platform that correlates business jet movements with company intelligence for investment analysis, M&A detection, and strategic insights for Russell 3000 companies.",
+    "base_url": "https://api.jettrack.com",
+    "documentation_url": "https://docs.jettrack.com/api",
+    "website": "https://jettrack.com",
+    "version": "v1",
+    "authentication": {
+      "type": "api_key",
+      "location": "header",
+      "key_name": "X-API-Key",
+      "description": "API key authentication for programmatic access"
+    },
+    "pricing": {
+      "model": "tiered_subscription",
+      "free_tier": {
+        "available": false
+      },
+      "paid_tiers": [
+        {
+          "name": "Standard",
+          "price_usd_monthly": 5000,
+          "features": ["Basic flight tracking", "Corporate mapping", "Real-time alerts"],
+          "target_audience": "Small investment firms"
+        },
+        {
+          "name": "Professional",
+          "price_usd_monthly": 15000,
+          "features": ["Advanced analytics", "Historical data", "Predictive insights"],
+          "target_audience": "Hedge funds and analysts"
+        },
+        {
+          "name": "Enterprise",
+          "price_usd_monthly": "custom",
+          "features": ["Full data access", "Custom integrations", "Priority support"],
+          "target_audience": "Large financial institutions"
+        }
+      ]
+    },
+    "rate_limits": {
+      "default_requests_per_minute": 100,
+      "default_requests_per_day": 10000,
+      "notes": "Rate limits vary by subscription tier"
+    },
+    "endpoints": [
+      {
+        "path": "/flights/company/{ticker}",
+        "method": "GET",
+        "description": "Retrieve flights associated with specific company ticker",
+        "parameters": [
+          {
+            "name": "ticker",
+            "type": "string",
+            "required": true,
+            "description": "Company stock ticker symbol"
+          },
+          {
+            "name": "date_range",
+            "type": "string",
+            "required": false,
+            "description": "Date range for flight history"
+          }
+        ]
+      },
+      {
+        "path": "/flights/tail/{tail_number}",
+        "method": "GET",
+        "description": "Track specific aircraft by tail number",
+        "parameters": [
+          {
+            "name": "tail_number",
+            "type": "string",
+            "required": true,
+            "description": "Aircraft tail number"
+          }
+        ]
+      },
+      {
+        "path": "/regions/{region}/activity",
+        "method": "GET",
+        "description": "Analyze flight activity by geographic region",
+        "parameters": [
+          {
+            "name": "region",
+            "type": "string",
+            "required": true,
+            "description": "Geographic region (e.g., 'europe', 'asia')"
+          }
+        ]
+      }
+    ],
+    "data_fields": [
+      "tail_number",
+      "departure_airport",
+      "arrival_airport",
+      "departure_time",
+      "arrival_time",
+      "flight_duration",
+      "company_ticker",
+      "company_name",
+      "aircraft_type",
+      "flight_purpose",
+      "route_frequency",
+      "geographic_trends"
+    ],
+    "sdk_support": {
+      "python": {
+        "available": false
+      },
+      "javascript": {
+        "available": false
+      },
+      "java": {
+        "available": false
+      }
+    },
+    "features": [
+      "Corporate flight tracking",
+      "M&A signal detection",
+      "Predictive analytics",
+      "Executive travel patterns",
+      "Geographic trend analysis",
+      "Real-time monitoring",
+      "Historical flight data",
+      "Company correlation"
+    ],
+    "use_cases": [
+      "Investment research",
+      "M&A detection",
+      "Earnings prediction",
+      "Executive monitoring",
+      "Supply chain analysis",
+      "Risk assessment",
+      "Strategic intelligence",
+      "Compliance monitoring"
+    ],
+    "integrations": [
+      "Salesforce",
+      "Bloomberg Terminal",
+      "Financial data platforms",
+      "CRM systems"
+    ],
+    "data_coverage": {
+      "geographic": "Global",
+      "companies": "Russell 3000 + private equity",
+      "historical_data": "From 2020 onwards",
+      "update_frequency": "Real-time"
+    },
+    "compliance": [
+      "SOX",
+      "SEC regulations",
+      "Data privacy laws"
+    ],
+    "limitations": [
+      "Limited to corporate aircraft",
+      "Proprietary data restrictions",
+      "High subscription costs",
+      "Complex data interpretation required"
+    ],
+    "status": "active",
+    "last_updated": "2025-07-30"
+  },
+  {
+    "id": "flightaware-2025",
+    "name": "FlightAware",
+    "category": "Aviation Data",
+    "description": "World's leading flight tracking platform providing comprehensive aviation data through AeroAPI and Firehose streaming services, covering global flight tracking, predictive analytics, and historical aviation data.",
+    "base_url": "https://aeroapi.flightaware.com/aeroapi",
+    "documentation_url": "https://flightaware.com/commercial/aeroapi/",
+    "website": "https://flightaware.com",
+    "version": "v4",
+    "authentication": {
+      "type": "api_key",
+      "location": "header",
+      "key_name": "x-apikey",
+      "description": "API key authentication required for all AeroAPI v4 requests"
+    },
+    "pricing": {
+      "model": "tiered_usage",
+      "free_tier": {
+        "available": true,
+        "limitations": "Personal use only, 500 queries per month",
+        "monthly_requests": 500
+      },
+      "paid_tiers": [
+        {
+          "name": "Standard",
+          "price_usd_monthly": 100,
+          "features": ["10,000 API calls", "Commercial use", "Real-time data", "Predictive ETAs"],
+          "target_audience": "Commercial applications"
+        },
+        {
+          "name": "Premium",
+          "price_usd_monthly": 1000,
+          "features": ["100,000 API calls", "FlightAware Hunch", "Aireon Space-based ADS-B", "Priority support"],
+          "target_audience": "Enterprise applications"
+        }
+      ]
+    },
+    "rate_limits": {
+      "default_requests_per_minute": 10,
+      "personal_tier": 10,
+      "standard_tier": 300,
+      "premium_tier": 6000,
+      "notes": "Rate limits based on subscription tier, measured in queries per minute"
+    },
+    "endpoints": [
+      {
+        "path": "/flights/{id}",
+        "method": "GET",
+        "description": "Get comprehensive information about a specific flight",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "string",
+            "required": true,
+            "description": "Flight identifier or registration"
+          }
+        ]
+      },
+      {
+        "path": "/airports/{id}/flights",
+        "method": "GET",
+        "description": "Get flights for a specific airport",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "string",
+            "required": true,
+            "description": "Airport ICAO or IATA code"
+          },
+          {
+            "name": "type",
+            "type": "string",
+            "required": false,
+            "description": "Flight type filter (departures/arrivals)"
+          }
+        ]
+      },
+      {
+        "path": "/aircraft/{registration}/flights",
+        "method": "GET",
+        "description": "Get flight history for specific aircraft",
+        "parameters": [
+          {
+            "name": "registration",
+            "type": "string",
+            "required": true,
+            "description": "Aircraft registration number"
+          }
+        ]
+      }
+    ],
+    "data_fields": [
+      "flight_id",
+      "ident",
+      "aircraft_type",
+      "origin",
+      "destination",
+      "departure_time",
+      "arrival_time",
+      "scheduled_out",
+      "actual_out",
+      "scheduled_off", 
+      "actual_off",
+      "scheduled_on",
+      "actual_on",
+      "scheduled_in",
+      "actual_in",
+      "progress",
+      "status",
+      "aircraft_registration",
+      "route",
+      "baggage_claim",
+      "gate_origin",
+      "gate_destination",
+      "terminal_origin",
+      "terminal_destination"
+    ],
+    "sdk_support": {
+      "python": {
+        "available": true,
+        "url": "https://github.com/flightaware/aeroapi-python",
+        "installation": "pip install aeroapi"
+      },
+      "javascript": {
+        "available": true,
+        "url": "https://github.com/flightaware/aeroapi-javascript",
+        "installation": "npm install @flightaware/aeroapi"
+      },
+      "java": {
+        "available": true,
+        "url": "https://github.com/flightaware/aeroapi-java"
+      }
+    },
+    "features": [
+      "Real-time flight tracking",
+      "Historical flight data (2011+)",
+      "Predictive ETAs (Foresight)",
+      "Global ADS-B coverage",
+      "OOOI times tracking",
+      "Airport operations data",
+      "Aircraft fleet tracking",
+      "Weather integration",
+      "Push notifications",
+      "Firehose streaming"
+    ],
+    "use_cases": [
+      "Flight information displays",
+      "Airline operations",
+      "Airport management",
+      "Logistics tracking",
+      "Travel applications",
+      "Business aviation",
+      "Air traffic analysis",
+      "Delay prediction"
+    ],
+    "integrations": [
+      "Postman collections",
+      "OpenAPI specifications",
+      "AeroApps examples",
+      "Third-party wrappers",
+      "MCP servers"
+    ],
+    "data_coverage": {
+      "geographic": "Global (45+ countries)",
+      "data_sources": "ADS-B, radar, satellite, datalink",
+      "historical_data": "January 2011 onwards",
+      "update_frequency": "Real-time"
+    },
+    "compliance": [
+      "SOC 2",
+      "Privacy Shield",
+      "GDPR compliant"
+    ],
+    "limitations": [
+      "Rate limiting can be restrictive",
+      "Paging counts against quotas",
+      "Cost scaling with usage",
+      "Complex pricing structure"
+    ],
+    "status": "active",
+    "last_updated": "2025-07-30"
+  },
+  {
+    "id": "ais-maritime-2025",
+    "name": "AIS Maritime Tracking APIs",
+    "category": "Maritime Tracking",
+    "description": "Automatic Identification System (AIS) data APIs providing comprehensive maritime vessel tracking, including real-time positions, historical voyages, port calls, and vessel information across multiple providers.",
+    "base_url": "https://api.marinetraffic.com",
+    "documentation_url": "https://servicedocs.marinetraffic.com",
+    "website": "https://marinetraffic.com",
+    "version": "v1",
+    "authentication": {
+      "type": "api_key",
+      "location": "query_param",
+      "key_name": "key",
+      "description": "40-character hexadecimal API key required for all requests"
+    },
+    "pricing": {
+      "model": "tiered_subscription",
+      "free_tier": {
+        "available": false
+      },
+      "paid_tiers": [
+        {
+          "name": "Standard",
+          "price_usd_monthly": 199,
+          "features": ["Basic AIS tracking", "20,000 requests/month", "Real-time data"],
+          "target_audience": "Small maritime businesses"
+        },
+        {
+          "name": "Professional",
+          "price_usd_monthly": 399,
+          "features": ["40,000 requests/month", "Historical data", "Advanced analytics"],
+          "target_audience": "Maritime operators"
+        },
+        {
+          "name": "Enterprise",
+          "price_usd_monthly": 679,
+          "features": ["80,000 requests/month", "Satellite AIS", "Priority support"],
+          "target_audience": "Large shipping companies"
+        }
+      ]
+    },
+    "rate_limits": {
+      "default_requests_per_minute": 200,
+      "default_requests_per_day": null,
+      "notes": "Rate limits vary by provider and subscription tier"
+    },
+    "endpoints": [
+      {
+        "path": "/fleet_vessel_positions",
+        "method": "GET",
+        "description": "Get real-time positions for predefined vessel fleets",
+        "parameters": [
+          {
+            "name": "time_span",
+            "type": "integer",
+            "required": false,
+            "description": "Time span in minutes for position updates"
+          }
+        ]
+      },
+      {
+        "path": "/single_vessel_positions",
+        "method": "GET",
+        "description": "Get real-time position for specific vessel",
+        "parameters": [
+          {
+            "name": "mmsi",
+            "type": "string",
+            "required": true,
+            "description": "Maritime Mobile Service Identity number"
+          }
+        ]
+      },
+      {
+        "path": "/port_calls",
+        "method": "GET",
+        "description": "Get port arrival and departure information",
+        "parameters": [
+          {
+            "name": "port_id",
+            "type": "string",
+            "required": true,
+            "description": "Port identifier"
+          },
+          {
+            "name": "days_back",
+            "type": "integer",
+            "required": false,
+            "description": "Number of days to look back"
+          }
+        ]
+      }
+    ],
+    "data_fields": [
+      "mmsi",
+      "imo",
+      "ship_name",
+      "latitude",
+      "longitude",
+      "speed",
+      "heading",
+      "course",
+      "status",
+      "timestamp",
+      "destination",
+      "eta",
+      "ship_type",
+      "flag",
+      "dwt",
+      "gt",
+      "length",
+      "width",
+      "year_built",
+      "port_of_registry"
+    ],
+    "sdk_support": {
+      "python": {
+        "available": true,
+        "url": "https://pypi.org/project/Marine-Traffic-API/",
+        "installation": "pip install Marine-Traffic-API"
+      },
+      "ruby": {
+        "available": true,
+        "url": "https://rubygems.org/gems/marinetraffic"
+      },
+      "javascript": {
+        "available": false
+      }
+    },
+    "features": [
+      "Real-time vessel tracking",
+      "Historical voyage data",
+      "Port call information",
+      "Vessel specifications",
+      "Route optimization",
+      "Geofencing alerts",
+      "Weather integration",
+      "Predictive ETAs",
+      "Container tracking",
+      "Fleet management"
+    ],
+    "use_cases": [
+      "Fleet management",
+      "Port operations",
+      "Logistics tracking",
+      "Maritime security",
+      "Environmental monitoring",
+      "Supply chain visibility",
+      "Insurance applications",
+      "Regulatory compliance"
+    ],
+    "integrations": [
+      "Kpler (container tracking)",
+      "Satellite AIS providers",
+      "Port management systems",
+      "Logistics platforms",
+      "ERP systems"
+    ],
+    "data_coverage": {
+      "geographic": "Global",
+      "data_sources": "Terrestrial AIS, Satellite AIS",
+      "historical_data": "Varies by provider",
+      "update_frequency": "Real-time (1-3 minutes)"
+    },
+    "compliance": [
+      "GDPR",
+      "IMO regulations",
+      "Port state control"
+    ],
+    "limitations": [
+      "Coverage gaps in remote areas",
+      "AIS transmission intervals",
+      "Vessel compliance variations",
+      "Cost scaling for large fleets"
+    ],
+    "status": "active",
+    "last_updated": "2025-07-30"
+  },
+  {
+    "id": "marinetraffic-2025",
+    "name": "MarineTraffic",
+    "category": "Maritime Intelligence",
+    "description": "Global ship tracking platform providing comprehensive maritime analytics through AIS data, vessel information, port intelligence, and container logistics visibility with integrated predictive capabilities.",
+    "base_url": "https://services.marinetraffic.com/api",
+    "documentation_url": "https://servicedocs.marinetraffic.com",
+    "website": "https://marinetraffic.com",
+    "version": "v1",
+    "authentication": {
+      "type": "api_key",
+      "location": "query_param",
+      "key_name": "key",
+      "description": "40-character hexadecimal API key obtained from developer portal"
+    },
+    "pricing": {
+      "model": "tiered_subscription",
+      "free_tier": {
+        "available": false
+      },
+      "paid_tiers": [
+        {
+          "name": "Basic",
+          "price_usd_monthly": 10,
+          "features": ["Terrestrial AIS tracking", "Essential vessel data", "Basic API access"],
+          "target_audience": "Individual users"
+        },
+        {
+          "name": "Professional",
+          "price_usd_monthly": 75,
+          "features": ["Satellite AIS", "Advanced analytics", "High-volume API credits", "Historical data"],
+          "target_audience": "Maritime professionals"
+        },
+        {
+          "name": "Enterprise",
+          "price_usd_monthly": "custom",
+          "features": ["Global tracking", "Priority support", "Unlimited custom areas", "Full API suite"],
+          "target_audience": "Large organizations"
+        }
+      ]
+    },
+    "rate_limits": {
+      "default_requests_per_minute": 100,
+      "container_api_requests_per_minute": 200,
+      "notes": "Rate limits vary by subscription tier and API service"
+    },
+    "endpoints": [
+      {
+        "path": "/fleet_vessel_positions",
+        "method": "GET",
+        "description": "Real-time positions for predefined vessel fleets",
+        "parameters": [
+          {
+            "name": "fleet_id",
+            "type": "string",
+            "required": true,
+            "description": "Fleet identifier"
+          },
+          {
+            "name": "time_span",
+            "type": "integer",
+            "required": false,
+            "description": "Time span in minutes"
+          }
+        ]
+      },
+      {
+        "path": "/single_vessel_positions",
+        "method": "GET", 
+        "description": "Real-time position data for specific vessel",
+        "parameters": [
+          {
+            "name": "mmsi",
+            "type": "string",
+            "required": true,
+            "description": "Maritime Mobile Service Identity"
+          },
+          {
+            "name": "protocol",
+            "type": "string",
+            "required": false,
+            "description": "Response format (json/xml/csv)"
+          }
+        ]
+      },
+      {
+        "path": "/port_calls",
+        "method": "GET",
+        "description": "Port arrival and departure data",
+        "parameters": [
+          {
+            "name": "port_id",
+            "type": "string",
+            "required": true,
+            "description": "Port UN/LOCODE or MarineTraffic ID"
+          },
+          {
+            "name": "ship_type",
+            "type": "string",
+            "required": false,
+            "description": "Vessel type filter"
+          }
+        ]
+      },
+      {
+        "path": "/predictive_destinations",
+        "method": "GET",
+        "description": "ML-powered destination predictions",
+        "parameters": [
+          {
+            "name": "mmsi",
+            "type": "string",
+            "required": true,
+            "description": "Vessel MMSI number"
+          }
+        ]
+      },
+      {
+        "path": "/containers/track",
+        "method": "POST",
+        "description": "Container tracking and milestone updates",
+        "parameters": [
+          {
+            "name": "container_number",
+            "type": "string",
+            "required": true,
+            "description": "Container identification number"
+          },
+          {
+            "name": "carrier_scac",
+            "type": "string",
+            "required": false,
+            "description": "Carrier SCAC code"
+          }
+        ]
+      }
+    ],
+    "data_fields": [
+      "mmsi",
+      "imo",
+      "ship_id",
+      "longitude",
+      "latitude",
+      "speed",
+      "heading",
+      "course",
+      "status",
+      "timestamp",
+      "destination",
+      "eta",
+      "dwt",
+      "gt",
+      "ship_type",
+      "flag",
+      "year_built",
+      "draught",
+      "length",
+      "width",
+      "max_draught"
+    ],
+    "sdk_support": {
+      "python": {
+        "available": true,
+        "url": "https://pypi.org/project/Marine-Traffic-API/",
+        "installation": "pip install Marine-Traffic-API"
+      },
+      "ruby": {
+        "available": true,
+        "url": "https://www.rubydoc.info/gems/marinetraffic",
+        "installation": "gem install marinetraffic"
+      },
+      "javascript": {
+        "available": false
+      }
+    },
+    "features": [
+      "Global AIS tracking network",
+      "Satellite AIS coverage",
+      "Predictive destination analytics",
+      "Container logistics visibility",
+      "Port intelligence",
+      "Fleet management tools",
+      "Historical voyage data",
+      "Weather integration",
+      "Geofencing alerts",
+      "Custom area monitoring"
+    ],
+    "use_cases": [
+      "Fleet tracking and management",
+      "Port operations optimization",
+      "Supply chain visibility",
+      "Maritime security monitoring",
+      "Environmental compliance",
+      "Insurance risk assessment",
+      "Trade finance verification",
+      "Logistics coordination"
+    ],
+    "integrations": [
+      "Kpler (post-acquisition)",
+      "Maersk Line partnership",
+      "Salesforce CRM",
+      "Google Cloud Platform",
+      "Various logistics platforms"
+    ],
+    "data_coverage": {
+      "geographic": "Global with 18,000+ terrestrial stations",
+      "data_sources": "Terrestrial AIS, Satellite AIS, Port authorities",
+      "historical_data": "Multi-year historical archive",
+      "update_frequency": "Real-time (1-3 minutes)"
+    },
+    "compliance": [
+      "GDPR compliant",
+      "IMO regulations",
+      "Port State Control standards",
+      "ISO 27001 certified"
+    ],
+    "limitations": [
+      "Rate limit constraints for high-volume usage",
+      "Satellite AIS coverage gaps for smaller vessels",
+      "Cost escalation with satellite tracking credits",
+      "API key management complexity"
+    ],
+    "status": "active",
+    "last_updated": "2025-07-30"
+  }
+]

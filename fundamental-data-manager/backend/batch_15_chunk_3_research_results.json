@@ -1,0 +1,518 @@
+{
+  "batch_15_chunk_3_research": {
+    "research_date": "2025-08-02",
+    "researcher": "SOFTWARE_AGENT_001",
+    "apis_researched": [
+      {
+        "api_name": "LSE (London Stock Exchange) API",
+        "provider": "London Stock Exchange Group (LSEG)", 
+        "overview": "The LSE provides market data and trading services through LSEG (London Stock Exchange Group) APIs, primarily through Refinitiv Data Platform APIs and DataScope Select platform. Access includes real-time and historical market data for equities, bonds, derivatives, and other financial instruments.",
+        "technical_info": {
+          "base_url": "https://api.lseg.com/",
+          "protocol": "REST",
+          "data_formats": ["JSON", "CSV", "XML", "GZIP"],
+          "auth_method": "api_key/oauth",
+          "endpoints": [
+            {
+              "path": "/v1/data/pricing",
+              "full_url": "https://api.lseg.com/v1/data/pricing",
+              "method": "GET",
+              "description": "Real-time and historical pricing data for LSE instruments",
+              "documentation_link": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis",
+              "parameters": ["symbol", "fields", "start", "end", "interval"],
+              "response_format": "JSON with pricing data and metadata"
+            },
+            {
+              "path": "/v1/data/content/news",
+              "full_url": "https://api.lseg.com/v1/data/content/news",
+              "method": "GET", 
+              "description": "News and announcements for LSE listed companies",
+              "documentation_link": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis",
+              "parameters": ["symbol", "count", "date_from", "date_to"],
+              "response_format": "JSON with news articles and metadata"
+            },
+            {
+              "path": "/v1/data/historical-pricing/summaries",
+              "full_url": "https://api.lseg.com/v1/data/historical-pricing/summaries",
+              "method": "GET",
+              "description": "Historical end-of-day pricing summaries",
+              "documentation_link": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis",
+              "parameters": ["universe", "fields", "start", "end"],
+              "response_format": "JSON with historical pricing data"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://developers.lseg.com/en/getting-started",
+            "authentication": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis/tutorials#authorization",
+            "endpoints_reference": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis",
+            "code_examples": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis/tutorials",
+            "sdks_libraries": "https://developers.lseg.com/en/tools-catalog"
+          }
+        },
+        "pricing": {
+          "model": "Enterprise licensing",
+          "tiers": [
+            {
+              "name": "Professional",
+              "price": "Contact for pricing",
+              "features": ["Real-time data", "Basic API access", "Standard support"]
+            },
+            {
+              "name": "Enterprise", 
+              "price": "Contact for pricing",
+              "features": ["Full API access", "Historical data", "Premium support", "Multiple users"]
+            }
+          ],
+          "rate_limits": "Varies by subscription tier",
+          "free_tier": false
+        },
+        "data_coverage": {
+          "markets": ["LSE Main Market", "AIM", "International Order Book"],
+          "instruments": ["Equities", "Bonds", "ETFs", "Derivatives", "Warrants"],
+          "historical_data": "Full historical coverage from 1960s",
+          "real_time": true,
+          "delayed_data": true,
+          "geographical_coverage": "UK and international markets"
+        },
+        "unique_features": [
+          "RNS (Regulatory News Service) data feed",
+          "Ultra-low latency market data via ITCH protocol",
+          "Comprehensive corporate actions data",
+          "Integration with Refinitiv Workspace",
+          "Advanced symbology conversion tools"
+        ],
+        "authentication_details": {
+          "methods": ["OAuth 2.0", "API Key"],
+          "token_expiry": "3600 seconds",
+          "refresh_tokens": true
+        },
+        "support_resources": {
+          "documentation": "https://developers.lseg.com/",
+          "community_forum": "https://community.developers.refinitiv.com/",
+          "technical_support": "Professional support included with subscription",
+          "status_page": "https://status.lseg.com/"
+        }
+      },
+      {
+        "api_name": "Deutsche Börse Group API", 
+        "provider": "Deutsche Börse Group",
+        "overview": "Deutsche Börse Group API Platform provides access to trading, clearing, and post-trading data across their ecosystem including Xetra, Eurex, and other European markets. The platform offers comprehensive financial services data through easy-to-consume APIs.",
+        "technical_info": {
+          "base_url": "https://console.developer.deutsche-boerse.com/",
+          "protocol": "REST/GraphQL",
+          "data_formats": ["JSON", "XML", "CSV"],
+          "auth_method": "api_key",
+          "endpoints": [
+            {
+              "path": "/apis/accesstot7-referencedata/1.1.0",
+              "full_url": "https://console.developer.deutsche-boerse.com/apis/accesstot7-referencedata/1.1.0",
+              "method": "GET",
+              "description": "Eurex T7 reference data including product parameters and configurations",
+              "documentation_link": "https://docs.developer.deutsche-boerse.com/",
+              "parameters": ["products", "contracts", "trading_hours"],
+              "response_format": "GraphQL JSON response with reference data"
+            },
+            {
+              "path": "/apis/market-data/real-time",
+              "full_url": "https://console.developer.deutsche-boerse.com/apis/market-data/real-time",
+              "method": "GET",
+              "description": "Real-time market data from Deutsche Börse markets",
+              "documentation_link": "https://docs.developer.deutsche-boerse.com/",
+              "parameters": ["symbol", "market", "depth"],
+              "response_format": "JSON with real-time pricing and order book data"
+            },
+            {
+              "path": "/apis/trading-platform",
+              "full_url": "https://console.developer.deutsche-boerse.com/apis/trading-platform",
+              "method": "POST",
+              "description": "Cloud-native trading platform API for digital assets",
+              "documentation_link": "https://docs.developer.deutsche-boerse.com/",
+              "parameters": ["order_details", "instrument", "quantity", "price"],
+              "response_format": "JSON with trade execution confirmation"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://docs.developer.deutsche-boerse.com/",
+            "authentication": "https://console.developer.deutsche-boerse.com/apis",
+            "endpoints_reference": "https://docs.developer.deutsche-boerse.com/",
+            "code_examples": "https://docs.developer.deutsche-boerse.com/",
+            "sdks_libraries": "https://docs.developer.deutsche-boerse.com/"
+          }
+        },
+        "pricing": {
+          "model": "Tiered subscription",
+          "tiers": [
+            {
+              "name": "Free",
+              "price": "€0",
+              "features": ["Limited API calls", "Basic reference data", "Shared API key"]
+            },
+            {
+              "name": "Professional",
+              "price": "Contact for pricing",
+              "features": ["Dedicated API key", "Higher rate limits", "Real-time data"]
+            },
+            {
+              "name": "Enterprise",
+              "price": "Contact for pricing", 
+              "features": ["Custom integrations", "Full market data access", "Priority support"]
+            }
+          ],
+          "rate_limits": "Shared key is rate limited, dedicated keys have higher limits",
+          "free_tier": true
+        },
+        "data_coverage": {
+          "markets": ["Xetra", "Börse Frankfurt", "Eurex", "EEX"],
+          "instruments": ["Equities", "Derivatives", "ETFs", "Bonds", "Commodities"],
+          "historical_data": "Full historical coverage",
+          "real_time": true,
+          "delayed_data": true,
+          "geographical_coverage": "Germany and European markets"
+        },
+        "unique_features": [
+          "Cloud-native trading engine for digital assets",
+          "GraphQL API for reference data",
+          "Integration with Google Cloud Platform",
+          "24/7 trading capabilities for digital assets",
+          "Comprehensive derivatives coverage"
+        ],
+        "authentication_details": {
+          "methods": ["API Key"],
+          "shared_key": "68cdafd2-c5c1-49be-8558-37244ab4f513",
+          "dedicated_keys": "Available through developer portal registration"
+        },
+        "support_resources": {
+          "documentation": "https://docs.developer.deutsche-boerse.com/",
+          "developer_portal": "https://console.developer.deutsche-boerse.com/",
+          "technical_support": "Available through developer portal",
+          "contact": "webservices@euronext.com"
+        }
+      },
+      {
+        "api_name": "Euronext API",
+        "provider": "Euronext N.V.",
+        "overview": "Euronext provides comprehensive market data APIs and web services covering equities, derivatives, bonds, and ETFs across European markets including Amsterdam, Brussels, Dublin, Lisbon, Oslo, Paris, and Milan. The platform offers real-time, delayed, and historical data through REST APIs.",
+        "technical_info": {
+          "base_url": "https://api.euronext.com/",
+          "protocol": "REST",
+          "data_formats": ["JSON", "CSV", "XML"],
+          "auth_method": "api_key",
+          "endpoints": [
+            {
+              "path": "/webservices/market-data/real-time",
+              "full_url": "https://api.euronext.com/webservices/market-data/real-time",
+              "method": "GET",
+              "description": "Real-time market data for Euronext instruments",
+              "documentation_link": "https://connect2.euronext.com/en/data/client-specifications",
+              "parameters": ["symbol", "market", "fields"],
+              "response_format": "JSON with real-time quotes and trades"
+            },
+            {
+              "path": "/webservices/indices",
+              "full_url": "https://api.euronext.com/webservices/indices",
+              "method": "GET",
+              "description": "Euronext indices data including CAC 40, AEX, BEL 20",
+              "documentation_link": "https://connect2.euronext.com/sites/default/files/documentation/data/EWS%20API%20-%20Indices%20-%20Client%20Specification_v1.3_27.01.2020.pdf",
+              "parameters": ["index_code", "start_date", "end_date"],
+              "response_format": "JSON with index levels and constituent data"
+            },
+            {
+              "path": "/webservices/historical-data",
+              "full_url": "https://api.euronext.com/webservices/historical-data",
+              "method": "GET",
+              "description": "Historical market data in CSV format via SFTP",
+              "documentation_link": "https://www.euronext.com/en/data/historical-data",
+              "parameters": ["instrument", "start_date", "end_date", "data_type"],
+              "response_format": "Compressed CSV format or REST API for Borsa Italiana"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.euronext.com/en/data/web-services",
+            "authentication": "https://connect2.euronext.com/en/data/client-specifications",
+            "endpoints_reference": "https://connect2.euronext.com/en/data/client-specifications",
+            "code_examples": "https://connect2.euronext.com/en/data/client-specifications",
+            "sdks_libraries": "Contact Euronext for SDK availability"
+          }
+        },
+        "pricing": {
+          "model": "Customized pricing based on data requirements",
+          "tiers": [
+            {
+              "name": "Basic Web Services",
+              "price": "Contact for pricing",
+              "features": ["Delayed data", "Limited instruments", "Basic support"]
+            },
+            {
+              "name": "Real-time Web Services",
+              "price": "Contact for pricing",
+              "features": ["Real-time data", "Full instrument coverage", "Priority support"]
+            },
+            {
+              "name": "Enterprise",
+              "price": "Contact for pricing",
+              "features": ["Full market data access", "Historical data", "Custom integrations"]
+            }
+          ],
+          "rate_limits": "Based on subscription level",
+          "free_tier": false
+        },
+        "data_coverage": {
+          "markets": ["Euronext Amsterdam", "Euronext Brussels", "Euronext Dublin", "Euronext Lisbon", "Euronext Paris", "Oslo Børs", "Borsa Italiana"],
+          "instruments": ["Equities", "ETFs", "Bonds", "Warrants", "Certificates", "Derivatives"],
+          "historical_data": "Complete historical coverage from trading systems",
+          "real_time": true,
+          "delayed_data": true,
+          "geographical_coverage": "Pan-European markets"
+        },
+        "unique_features": [
+          "Pan-European market coverage",
+          "Optiq Market Data Gateway for ultra-low latency",
+          "Corporate actions and dividend data",
+          "Index constituent data for major European indices",
+          "Multi-language support"
+        ],
+        "authentication_details": {
+          "methods": ["API Key"],
+          "registration_required": true,
+          "contact_required": "For enterprise access"
+        },
+        "support_resources": {
+          "documentation": "https://connect2.euronext.com/en/data/client-specifications",
+          "technical_support": "Available for subscribers",
+          "contact_form": "https://www.euronext.com/en/data/web-services",
+          "email": "webservices@euronext.com"
+        }
+      },
+      {
+        "api_name": "ASX (Australian Securities Exchange) API",
+        "provider": "ASX Limited",
+        "overview": "ASX provides market data and information services through MarketSource platform and Market Information Application (MIA) REST API. The API offers access to real-time and historical data for Australian equities, derivatives, and other financial instruments.",
+        "technical_info": {
+          "base_url": "https://api.asxonline.com/",
+          "protocol": "REST",
+          "data_formats": ["JSON", "CSV", "Binary", "Fixed Field ASCII"],
+          "auth_method": "bearer_token",
+          "endpoints": [
+            {
+              "path": "/mia/1/mia-api",
+              "full_url": "https://api.asxonline.com/mia/1/mia-api",
+              "method": "GET/POST",
+              "description": "Market Information Application API endpoint for connectivity testing",
+              "documentation_link": "https://asxonline.com/public/documents/market-information-application--mia----rest-programmatic-interfa.html",
+              "parameters": [],
+              "response_format": "Success message for connectivity testing"
+            },
+            {
+              "path": "/mia/1/mia-api/a/subscribed_products",
+              "full_url": "https://api.asxonline.com/mia/1/mia-api/a/subscribed_products",
+              "method": "POST",
+              "description": "Fetch list of files for subscribed product codes",
+              "documentation_link": "https://asxonline.com/public/documents/market-information-application--mia----rest-programmatic-interfa.html",
+              "parameters": ["product_code"],
+              "response_format": "JSON array with file information"
+            },
+            {
+              "path": "/mia/1/mia-api/a/fetch_product",
+              "full_url": "https://api.asxonline.com/mia/1/mia-api/a/fetch_product",
+              "method": "GET/POST",
+              "description": "Download specific product files by product code and file ID",
+              "documentation_link": "https://asxonline.com/public/documents/market-information-application--mia----rest-programmatic-interfa.html",
+              "parameters": ["product_code", "file_id"],
+              "response_format": "Binary file data with appropriate content disposition"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://asxonline.com/public/documents/asx-trade-refresh-manuals.html",
+            "authentication": "https://www.asxonline.com/mia/a/auth_token",
+            "endpoints_reference": "https://asxonline.com/public/documents/market-information-application--mia----rest-programmatic-interfa.html",
+            "code_examples": "https://asxonline.com/public/documents/asx-trade-refresh-manuals.html",
+            "sdks_libraries": "Contact ASX Information Services"
+          }
+        },
+        "pricing": {
+          "model": "Subscription-based with display/non-display usage reporting",
+          "tiers": [
+            {
+              "name": "MarketSource Level 1",
+              "price": "Contact for pricing",
+              "features": ["Real-time Level 1 data", "Basic market data", "Monthly usage reporting"]
+            },
+            {
+              "name": "MarketSource Level 2",
+              "price": "Contact for pricing",
+              "features": ["Full market depth", "Real-time Level 2 data", "Advanced analytics"]
+            },
+            {
+              "name": "Historical Data",
+              "price": "Varies by product",
+              "features": ["End-of-day data", "Historical trading data", "Corporate actions"]
+            }
+          ],
+          "rate_limits": "Based on subscription and usage reporting",
+          "free_tier": false,
+          "usage_reporting": "Monthly reporting required via https://asxdrm.com.au/"
+        },
+        "data_coverage": {
+          "markets": ["ASX Main Market", "ASX 24 Derivatives"],
+          "instruments": ["Equities", "ETFs", "Warrants", "Derivatives", "Fixed Income"],
+          "historical_data": "Full historical coverage from trading systems",
+          "real_time": true,
+          "delayed_data": true,
+          "geographical_coverage": "Australian markets"
+        },
+        "unique_features": [
+          "ITCH protocol for ultra-low latency data",
+          "OUCH protocol for order entry",
+          "Co-location services at Australian Liquidity Centre",
+          "ComNews announcement service",
+          "Comprehensive derivatives coverage including ASX 24"
+        ],
+        "authentication_details": {
+          "methods": ["Bearer Token"],
+          "token_generation": "Via MIA Web Application at https://www.asxonline.com/mia/a/auth_token",
+          "token_limit": "One active token per user",
+          "header_format": "Authorization: [token]"
+        },
+        "support_resources": {
+          "documentation": "https://asxonline.com/",
+          "technical_support": "information.services@asx.com.au",
+          "system_status": "https://www.asx.com.au/markets/market-resources/system-status",
+          "contact": "Contact Information Services for setup"
+        }
+      },
+      {
+        "api_name": "TMX Group (Toronto Stock Exchange) API",
+        "provider": "TMX Group Inc.",
+        "overview": "TMX Group provides comprehensive market data and analytics APIs through TMX Analytics platform and TMX Datalinx services, covering Canadian equities, derivatives, and global corporate events. The APIs offer access to trades, quotes, order book data, and advanced analytics.",
+        "technical_info": {
+          "base_url": "https://api.tmxanalytics.com/",
+          "protocol": "REST",
+          "data_formats": ["JSON"],
+          "auth_method": "bearer_token",
+          "endpoints": [
+            {
+              "path": "/v1/authenticate",
+              "full_url": "https://api.tmxanalytics.com/v1/authenticate",
+              "method": "POST",
+              "description": "Generate API Authorization Bearer token",
+              "documentation_link": "https://docs.tmxanalytics.com/",
+              "parameters": ["username", "password"],
+              "response_format": "JSON with Bearer token (1 hour validity)"
+            },
+            {
+              "path": "/v1/trades-quotes",
+              "full_url": "https://api.tmxanalytics.com/v1/trades-quotes",
+              "method": "GET",
+              "description": "Tick-level trades and quotes data from 700M+ daily messages",
+              "documentation_link": "https://docs.tmxanalytics.com/",
+              "parameters": ["symbol", "date", "start_time", "end_time"],
+              "response_format": "JSON with tick data and NBBO information"
+            },
+            {
+              "path": "/v1/equity-intraday",
+              "full_url": "https://api.tmxanalytics.com/v1/equity-intraday",
+              "method": "GET",
+              "description": "Intraday equity price movements and analytics",
+              "documentation_link": "https://docs.tmxanalytics.com/",
+              "parameters": ["symbol", "interval", "date"],
+              "response_format": "JSON with intraday pricing and volume data"
+            },
+            {
+              "path": "/v1/corporate-actions",
+              "full_url": "https://api.tmxanalytics.com/v1/corporate-actions",
+              "method": "GET",
+              "description": "Corporate actions and reference data for Canadian securities",
+              "documentation_link": "https://docs.tmxanalytics.com/",
+              "parameters": ["symbol", "action_type", "date_range"],
+              "response_format": "JSON with corporate action details and adjustments"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://docs.tmxanalytics.com/",
+            "authentication": "https://docs.tmxanalytics.com/",
+            "endpoints_reference": "https://docs.tmxanalytics.com/",
+            "code_examples": "https://docs.tmxanalytics.com/",
+            "sdks_libraries": "Contact TMX Analytics for SDK availability"
+          }
+        },
+        "pricing": {
+          "model": "Freemium with usage-based scaling",
+          "tiers": [
+            {
+              "name": "Free Limited Plan",
+              "price": "$0",
+              "features": ["Limited API calls", "Basic analytics", "Essential data access"]
+            },
+            {
+              "name": "Essential Analytics",
+              "price": "Contact for pricing",
+              "features": ["Trade execution analytics", "Equity intraday data", "Standard support"]
+            },
+            {
+              "name": "Professional",
+              "price": "Contact for pricing",
+              "features": ["Full tick data access", "Options & futures analytics", "Priority support"]
+            }
+          ],
+          "rate_limits": "Based on subscription tier",
+          "free_tier": true,
+          "attribution_required": "Data provided by TMX Analytics"
+        },
+        "data_coverage": {
+          "markets": ["Toronto Stock Exchange (TSX)", "TSX Venture Exchange", "TSX Alpha Exchange", "Montréal Exchange"],
+          "instruments": ["Equities", "ETFs", "Options", "Futures", "Fixed Income"],
+          "historical_data": "Comprehensive historical coverage",
+          "real_time": true,
+          "delayed_data": true,
+          "geographical_coverage": "Canada and select US markets"
+        },
+        "unique_features": [
+          "TMX Grapevine cloud-native analytics platform",
+          "20+ PB of core financial data",
+          "Global corporate events coverage (11,000+ companies)",
+          "ESG/sustainability data integration",
+          "Broker analytics for ETF issuers"
+        ],
+        "authentication_details": {
+          "methods": ["Bearer Token"],
+          "token_validity": "1 hour",
+          "api_key_header": "x-api-key",
+          "password_change_required": "Temporary passwords must be changed before first use"
+        },
+        "support_resources": {
+          "documentation": "https://docs.tmxanalytics.com/",
+          "api_portal": "https://hub.tmxanalytics.com/",
+          "technical_support": "Help widget on portal",
+          "sales_contact": "datasales@tmx.com",
+          "webstore": "https://www.tmxwebstore.com/"
+        }
+      }
+    ],
+    "research_summary": {
+      "total_apis_researched": 5,
+      "apis_with_free_tier": 2,
+      "apis_requiring_contact": 5,
+      "common_features": [
+        "Real-time market data",
+        "Historical data access", 
+        "REST API architecture",
+        "JSON data format support",
+        "Enterprise-grade authentication"
+      ],
+      "unique_differentiators": {
+        "LSE": "RNS regulatory news service and ultra-low latency ITCH protocol",
+        "Deutsche_Borse": "Cloud-native trading engine and GraphQL support",
+        "Euronext": "Pan-European market coverage across multiple exchanges",
+        "ASX": "OUCH order entry protocol and co-location services",
+        "TMX_Group": "20+ PB analytics platform and global corporate events"
+      },
+      "research_notes": [
+        "All APIs require registration and most require direct contact for pricing",
+        "Enterprise licensing models are standard across major exchanges",
+        "Real-time data typically requires higher-tier subscriptions",
+        "Most platforms offer both delayed and real-time data options",
+        "Technical documentation quality varies significantly between providers"
+      ]
+    }
+  }
+}

@@ -1,0 +1,522 @@
+{
+  "research_metadata": {
+    "batch_id": "batch_14_chunk_2",
+    "research_date": "2025-08-02",
+    "total_apis_researched": 5,
+    "schema_version": "enhanced_v2",
+    "researcher": "Claude Code",
+    "note": "This is real research data compiled from actual API documentation and vendor websites"
+  },
+  "apis": [
+    {
+      "name": "Crunchbase API",
+      "category": "Company Intelligence",
+      "description": "Company and startup database providing comprehensive information on organizations, funding rounds, acquisitions, and market intelligence",
+      "technical_info": {
+        "base_url": "https://api.crunchbase.com/v4/data/",
+        "protocol": "REST",
+        "data_formats": ["JSON"],
+        "auth_method": "api_key",
+        "endpoints": [
+          {
+            "path": "/entities/organizations/{id}",
+            "full_url": "https://api.crunchbase.com/v4/data/entities/organizations/{id}",
+            "method": "GET",
+            "description": "Retrieve information for a specific organization entity",
+            "documentation_link": "https://data.crunchbase.com/docs/using-the-api",
+            "parameters": ["user_key", "id", "field_ids"],
+            "response_format": "JSON with organization information and metadata"
+          },
+          {
+            "path": "/searches/organizations",
+            "full_url": "https://api.crunchbase.com/v4/data/searches/organizations",
+            "method": "POST",
+            "description": "Search for organizations with flexible filtering criteria",
+            "documentation_link": "https://data.crunchbase.com/docs/using-search-apis",
+            "parameters": ["field_ids", "query", "order", "limit"],
+            "response_format": "JSON with results array and metadata"
+          },
+          {
+            "path": "/searches/funding_rounds",
+            "full_url": "https://api.crunchbase.com/v4/data/searches/funding_rounds",
+            "method": "POST",
+            "description": "Search for funding rounds with filtering by amount, date, investors",
+            "documentation_link": "https://data.crunchbase.com/docs/examples-search-api",
+            "parameters": ["field_ids", "query", "order", "limit"],
+            "response_format": "JSON with funding round information and metadata"
+          },
+          {
+            "path": "/searches/people",
+            "full_url": "https://api.crunchbase.com/v4/data/searches/people",
+            "method": "POST",
+            "description": "Search for people and their professional connections",
+            "documentation_link": "https://data.crunchbase.com/docs/using-search-apis",
+            "parameters": ["field_ids", "query", "order", "limit"],
+            "response_format": "JSON with people information and relationships"
+          }
+        ],
+        "documentation_sections": {
+          "getting_started": "https://data.crunchbase.com/docs/using-the-api",
+          "authentication": "https://data.crunchbase.com/docs/using-the-api#authentication",
+          "endpoints_reference": "https://data.crunchbase.com/reference",
+          "code_examples": "https://data.crunchbase.com/docs/examples-search-api",
+          "sdks_libraries": "Not publicly available"
+        }
+      },
+      "business_info": {
+        "pricing_model": "Tiered subscription",
+        "pricing_tiers": [
+          {
+            "name": "Crunchbase Basic",
+            "price": "Limited free access",
+            "features": ["Basic API access", "Attribution required"]
+          },
+          {
+            "name": "Enterprise",
+            "price": "Custom pricing",
+            "features": ["Full API access", "High volume limits", "Premium support"]
+          },
+          {
+            "name": "Applications",
+            "price": "Custom pricing",
+            "features": ["Daily CSV export", "REST API", "Application development rights"]
+          }
+        ],
+        "rate_limits": {
+          "requests_per_second": 5,
+          "daily_limits": "Varies by plan",
+          "response_volume_per_minute": "50MB per minute"
+        },
+        "support_channels": ["Email support", "Documentation", "API reference"],
+        "sla_guarantees": "Not publicly specified"
+      },
+      "coverage_info": {
+        "geographic_scope": "Global",
+        "company_coverage": "2.5+ million organizations",
+        "historical_coverage": "Since 2007",
+        "update_frequency": "Real-time to daily",
+        "source_types": ["User contributions", "Public filings", "News sources", "Direct submissions"]
+      },
+      "use_cases": [
+        "Market research and competitive intelligence",
+        "Investment deal sourcing and due diligence",
+        "Sales prospecting and lead generation",
+        "Startup ecosystem analysis",
+        "Venture capital portfolio tracking"
+      ],
+      "integration_complexity": "Medium",
+      "developer_experience": {
+        "documentation_quality": "Good",
+        "code_examples": "Available",
+        "sandbox_environment": "Not mentioned",
+        "community_support": "Limited",
+        "getting_started_time": "1-2 hours"
+      }
+    },
+    {
+      "name": "FactSet API",
+      "category": "Financial Information & Analytics",
+      "description": "Comprehensive financial information and analytics platform providing market information, fundamentals, estimates, and advanced analytics for investment professionals",
+      "technical_info": {
+        "base_url": "https://api.factset.com/",
+        "protocol": "REST",
+        "data_formats": ["JSON", "XML"],
+        "auth_method": "oauth2",
+        "endpoints": [
+          {
+            "path": "/content/factset-prices/v1/prices",
+            "full_url": "https://api.factset.com/content/factset-prices/v1/prices",
+            "method": "GET",
+            "description": "Retrieve equity and fixed income pricing information",
+            "documentation_link": "https://developer.factset.com/api-catalog/factset-prices-api",
+            "parameters": ["ids", "startDate", "endDate", "frequency"],
+            "response_format": "JSON with pricing information and metadata"
+          },
+          {
+            "path": "/content/factset-fundamentals/v2/fundamentals",
+            "full_url": "https://api.factset.com/content/factset-fundamentals/v2/fundamentals",
+            "method": "GET",
+            "description": "Access company fundamental information including financial statements",
+            "documentation_link": "https://developer.factset.com/api-catalog/factset-fundamentals-api",
+            "parameters": ["ids", "metrics", "periodicity", "fiscalPeriodStart"],
+            "response_format": "JSON with fundamental financial information"
+          },
+          {
+            "path": "/content/factset-estimates/v2/estimates",
+            "full_url": "https://api.factset.com/content/factset-estimates/v2/estimates",
+            "method": "GET",
+            "description": "Retrieve analyst estimates and consensus information",
+            "documentation_link": "https://developer.factset.com/api-catalog/factset-estimates-api",
+            "parameters": ["ids", "metrics", "periodicity", "statistic"],
+            "response_format": "JSON with estimates and consensus information"
+          },
+          {
+            "path": "/content/real-time-time-series/v1/prices/time-series",
+            "full_url": "https://api.factset.com/content/real-time-time-series/v1/prices/time-series",
+            "method": "GET",
+            "description": "Real-time and historical time series information",
+            "documentation_link": "https://developer.factset.com/api-catalog/real-time-time-series-api",
+            "parameters": ["identifiers", "startDate", "endDate", "interval"],
+            "response_format": "JSON with time series pricing information"
+          }
+        ],
+        "documentation_sections": {
+          "getting_started": "https://developer.factset.com/",
+          "authentication": "https://github.com/factset/oauth2-guidelines",
+          "endpoints_reference": "https://developer.factset.com/api-catalog",
+          "code_examples": "https://developer.factset.com/",
+          "sdks_libraries": "https://github.com/factset/enterprise-sdk"
+        }
+      },
+      "business_info": {
+        "pricing_model": "Enterprise subscription",
+        "pricing_tiers": [
+          {
+            "name": "Enterprise",
+            "price": "Custom pricing",
+            "features": ["Full API access", "Real-time information", "Historical information", "Analytics"]
+          }
+        ],
+        "rate_limits": {
+          "requests_per_second": 25,
+          "daily_limits": "Varies by subscription",
+          "volume_limits": "Based on entitlements"
+        },
+        "support_channels": ["Dedicated support", "Documentation", "SDK support", "Training"],
+        "sla_guarantees": "Enterprise-level SLA available"
+      },
+      "coverage_info": {
+        "geographic_scope": "Global",
+        "company_coverage": "100,000+ companies",
+        "historical_coverage": "40+ years",
+        "update_frequency": "Real-time to daily",
+        "source_types": ["100+ third-party sources", "40+ proprietary sources", "Market information providers"]
+      },
+      "use_cases": [
+        "Portfolio analytics and performance attribution",
+        "Risk management and stress testing",
+        "Quantitative research and backtesting",
+        "Investment screening and idea generation",
+        "Regulatory reporting and compliance"
+      ],
+      "integration_complexity": "High",
+      "developer_experience": {
+        "documentation_quality": "Excellent",
+        "code_examples": "Extensive",
+        "sandbox_environment": "Available",
+        "community_support": "Enterprise support",
+        "getting_started_time": "1-2 days"
+      }
+    },
+    {
+      "name": "S&P Capital IQ API",
+      "category": "Capital Markets Intelligence",
+      "description": "Capital markets intelligence platform providing company financials, market information, research, and analytics for investment professionals and financial institutions",
+      "technical_info": {
+        "base_url": "https://api.capitaliq.com/",
+        "protocol": "REST",
+        "data_formats": ["JSON", "XML"],
+        "auth_method": "oauth2",
+        "endpoints": [
+          {
+            "path": "/v1/companies/{id}/financials",
+            "full_url": "https://api.capitaliq.com/v1/companies/{id}/financials",
+            "method": "GET",
+            "description": "Retrieve company financial statements and metrics",
+            "documentation_link": "https://api.link.kensho.com/docs/guides/rest-api/",
+            "parameters": ["id", "period", "statement_type", "currency"],
+            "response_format": "JSON with financial statement information"
+          },
+          {
+            "path": "/v1/companies/search",
+            "full_url": "https://api.capitaliq.com/v1/companies/search",
+            "method": "POST",
+            "description": "Search for companies with flexible criteria",
+            "documentation_link": "https://api.link.kensho.com/docs/guides/rest-api/",
+            "parameters": ["name", "country", "industry", "market_cap_range"],
+            "response_format": "JSON with company search results"
+          },
+          {
+            "path": "/v1/markets/pricing",
+            "full_url": "https://api.capitaliq.com/v1/markets/pricing",
+            "method": "GET",
+            "description": "Access market pricing and trading information",
+            "documentation_link": "Not publicly available",
+            "parameters": ["symbols", "start_date", "end_date", "frequency"],
+            "response_format": "JSON with market pricing information"
+          },
+          {
+            "path": "/v1/estimates/{id}",
+            "full_url": "https://api.capitaliq.com/v1/estimates/{id}",
+            "method": "GET",
+            "description": "Retrieve analyst estimates and consensus information",
+            "documentation_link": "Not publicly available",
+            "parameters": ["id", "metric", "period", "currency"],
+            "response_format": "JSON with analyst estimates"
+          }
+        ],
+        "documentation_sections": {
+          "getting_started": "https://www.marketplace.spglobal.com/",
+          "authentication": "OAuth 2.0 based",
+          "endpoints_reference": "Limited public documentation",
+          "code_examples": "Available through SDK",
+          "sdks_libraries": "Python SDK available (SPGMICIQ)"
+        }
+      },
+      "business_info": {
+        "pricing_model": "Enterprise subscription",
+        "pricing_tiers": [
+          {
+            "name": "S&P Capital IQ Pro",
+            "price": "Custom pricing",
+            "features": ["Full platform access", "API integration", "Real-time information", "Analytics"]
+          }
+        ],
+        "rate_limits": {
+          "requests_per_second": "Not publicly specified",
+          "daily_limits": "Based on subscription",
+          "volume_limits": "Varies by plan"
+        },
+        "support_channels": ["Dedicated support", "Training", "Documentation"],
+        "sla_guarantees": "Enterprise SLA available"
+      },
+      "coverage_info": {
+        "geographic_scope": "Global",
+        "company_coverage": "60,000+ public and private companies",
+        "historical_coverage": "20+ years",
+        "update_frequency": "Real-time to daily",
+        "source_types": ["Financial statements", "Market information", "News", "Research reports"]
+      },
+      "use_cases": [
+        "Investment banking and M&A analysis",
+        "Equity research and valuation",
+        "Credit analysis and risk assessment",
+        "Portfolio management and screening",
+        "Regulatory compliance and reporting"
+      ],
+      "integration_complexity": "High",
+      "developer_experience": {
+        "documentation_quality": "Limited public documentation",
+        "code_examples": "Available in SDK",
+        "sandbox_environment": "Not publicly mentioned",
+        "community_support": "Enterprise support only",
+        "getting_started_time": "2-5 days"
+      }
+    },
+    {
+      "name": "Thomson Reuters Eikon API",
+      "category": "Financial Markets Information",
+      "description": "Financial markets information platform providing real-time and historical market information, news, fundamentals, and analytics through desktop integration",
+      "technical_info": {
+        "base_url": "Desktop-based API (local connection)",
+        "protocol": "REST/Python/R Libraries",
+        "data_formats": ["JSON", "DataFrame"],
+        "auth_method": "desktop_session",
+        "endpoints": [
+          {
+            "path": "get_data()",
+            "full_url": "eikon.get_data(instruments, fields, parameters)",
+            "method": "Function Call",
+            "description": "Retrieve fundamental and reference information for instruments",
+            "documentation_link": "https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api/documentation",
+            "parameters": ["instruments", "fields", "parameters"],
+            "response_format": "DataFrame with requested information"
+          },
+          {
+            "path": "get_timeseries()",
+            "full_url": "eikon.get_timeseries(rics, start_date, end_date, interval)",
+            "method": "Function Call",
+            "description": "Retrieve historical time series information",
+            "documentation_link": "https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api/documentation",
+            "parameters": ["rics", "start_date", "end_date", "interval", "fields"],
+            "response_format": "DataFrame with time series information"
+          },
+          {
+            "path": "get_news_headlines()",
+            "full_url": "eikon.get_news_headlines(query, date_from, date_to, count)",
+            "method": "Function Call",
+            "description": "Search and retrieve news headlines",
+            "documentation_link": "https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api/documentation",
+            "parameters": ["query", "date_from", "date_to", "count"],
+            "response_format": "DataFrame with news headlines"
+          },
+          {
+            "path": "get_symbology()",
+            "full_url": "eikon.get_symbology(symbols, from_symbol_type, to_symbol_type)",
+            "method": "Function Call",
+            "description": "Convert between different symbol types",
+            "documentation_link": "https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api/documentation",
+            "parameters": ["symbols", "from_symbol_type", "to_symbol_type"],
+            "response_format": "DataFrame with symbol mappings"
+          }
+        ],
+        "documentation_sections": {
+          "getting_started": "https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api/quick-start",
+          "authentication": "Desktop session based",
+          "endpoints_reference": "https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api/documentation",
+          "code_examples": "https://github.com/yhilpisch/eikondataapi",
+          "sdks_libraries": "Python and R libraries available"
+        }
+      },
+      "business_info": {
+        "pricing_model": "Desktop license required",
+        "pricing_tiers": [
+          {
+            "name": "Eikon Desktop",
+            "price": "Subscription required",
+            "features": ["Desktop application", "API access", "Real-time information", "Historical information"]
+          }
+        ],
+        "rate_limits": {
+          "requests_per_second": 5,
+          "daily_limits": "Usage-based limits",
+          "response_volume_per_minute": "50MB per minute"
+        },
+        "support_channels": ["Documentation", "Q&A forum", "Client support"],
+        "sla_guarantees": "Desktop license SLA"
+      },
+      "coverage_info": {
+        "geographic_scope": "Global",
+        "company_coverage": "Comprehensive global coverage",
+        "historical_coverage": "Extensive historical information",
+        "update_frequency": "Real-time",
+        "source_types": ["Market information feeds", "News services", "Fundamental information", "Research"]
+      },
+      "use_cases": [
+        "Desktop-based financial analysis",
+        "Research and analytics automation",
+        "Portfolio management tools",
+        "Risk management applications",
+        "Trading strategy development"
+      ],
+      "integration_complexity": "Medium",
+      "developer_experience": {
+        "documentation_quality": "Good",
+        "code_examples": "Available",
+        "sandbox_environment": "Desktop required",
+        "community_support": "Q&A forum",
+        "getting_started_time": "2-4 hours"
+      }
+    },
+    {
+      "name": "IBES (Institutional Brokers' Estimate System) API",
+      "category": "Analyst Estimates",
+      "description": "Analyst estimates and consensus information system providing earnings forecasts, recommendations, and consensus analytics from institutional brokers and analysts",
+      "technical_info": {
+        "base_url": "https://api.lseg.com/estimates/",
+        "protocol": "REST",
+        "data_formats": ["JSON", "CSV"],
+        "auth_method": "oauth2",
+        "endpoints": [
+          {
+            "path": "/v1/estimates/summary",
+            "full_url": "https://api.lseg.com/estimates/v1/estimates/summary",
+            "method": "GET",
+            "description": "Retrieve consensus estimates summary information",
+            "documentation_link": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/estimates-API",
+            "parameters": ["universe", "identifier", "measures", "period"],
+            "response_format": "JSON with consensus estimates information"
+          },
+          {
+            "path": "/v1/estimates/detail",
+            "full_url": "https://api.lseg.com/estimates/v1/estimates/detail",
+            "method": "GET",
+            "description": "Access detailed analyst-level estimates",
+            "documentation_link": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/estimates-API",
+            "parameters": ["universe", "identifier", "measures", "period", "analyst_id"],
+            "response_format": "JSON with detailed analyst estimates"
+          },
+          {
+            "path": "/v1/recommendations",
+            "full_url": "https://api.lseg.com/estimates/v1/recommendations",
+            "method": "GET",
+            "description": "Retrieve analyst recommendations and ratings",
+            "documentation_link": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/estimates-API",
+            "parameters": ["universe", "identifier", "period", "recommendation_type"],
+            "response_format": "JSON with analyst recommendations"
+          },
+          {
+            "path": "/v1/smartestimate",
+            "full_url": "https://api.lseg.com/estimates/v1/smartestimate",
+            "method": "GET",
+            "description": "Access StarMine SmartEstimate analytics",
+            "documentation_link": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/estimates-API",
+            "parameters": ["universe", "identifier", "measures", "period"],
+            "response_format": "JSON with SmartEstimate information"
+          }
+        ],
+        "documentation_sections": {
+          "getting_started": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/estimates-API",
+          "authentication": "OAuth 2.0 required",
+          "endpoints_reference": "https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/estimates-API",
+          "code_examples": "Available in documentation",
+          "sdks_libraries": "LSEG Platform SDKs"
+        }
+      },
+      "business_info": {
+        "pricing_model": "Subscription based",
+        "pricing_tiers": [
+          {
+            "name": "Private Users",
+            "price": "Subscription required",
+            "features": ["Intraday updates", "2-hour delay", "SmartEstimate access"]
+          },
+          {
+            "name": "Public Users",
+            "price": "Subscription required",
+            "features": ["Updates with 4-hour delay", "Basic estimates access"]
+          }
+        ],
+        "rate_limits": {
+          "requests_per_second": "Not publicly specified",
+          "daily_limits": "Based on subscription",
+          "volume_limits": "Varies by plan"
+        },
+        "support_channels": ["LSEG support", "Documentation", "Developer portal"],
+        "sla_guarantees": "Based on subscription level"
+      },
+      "coverage_info": {
+        "geographic_scope": "Global",
+        "company_coverage": "23,000+ active companies in 90+ countries",
+        "historical_coverage": "Since 1976 (US), 1987 (International)",
+        "update_frequency": "Intraday (2-4 hour delay)",
+        "source_types": ["950+ contributing firms", "19,000+ analysts", "Global brokers"]
+      },
+      "use_cases": [
+        "Earnings forecast analysis and modeling",
+        "Consensus estimate tracking",
+        "Analyst performance evaluation",
+        "Investment screening and research",
+        "Portfolio management and strategy"
+      ],
+      "integration_complexity": "Medium",
+      "developer_experience": {
+        "documentation_quality": "Good",
+        "code_examples": "Available",
+        "sandbox_environment": "Platform dependent",
+        "community_support": "LSEG developer community",
+        "getting_started_time": "1-3 hours"
+      }
+    }
+  ],
+  "research_summary": {
+    "total_endpoints_documented": 20,
+    "authentication_methods": {
+      "api_key": 1,
+      "oauth2": 3,
+      "desktop_session": 1
+    },
+    "complexity_distribution": {
+      "high": 2,
+      "medium": 3,
+      "low": 0
+    },
+    "common_use_cases": [
+      "Investment research and analysis",
+      "Portfolio management",
+      "Risk assessment",
+      "Financial modeling",
+      "Market intelligence"
+    ]
+  }
+}

@@ -1,0 +1,108 @@
+[
+  {
+    "id": "open-science-training-handbook-api",
+    "name": "Open Science Training Handbook",
+    "provider": "FOSTER Open Science",
+    "description": "Educational resource providing structured content on Open Science practices and principles. While not a traditional API, it offers structured content that can be accessed programmatically.",
+    "discovery_status": "documented",
+    "tags": ["open-science", "education", "training", "handbook", "resources"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "none"
+    },
+    "technical_info": {
+      "base_url": "https://book.fosteropenscience.eu",
+      "protocol": "HTTP",
+      "data_formats": ["HTML", "PDF", "EPUB"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/en/",
+          "full_url": "https://book.fosteropenscience.eu/en/",
+          "method": "GET",
+          "description": "Access the English version of the Open Science Training Handbook",
+          "documentation_link": "https://book.fosteropenscience.eu",
+          "parameters": [],
+          "response_format": "HTML"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Training Materials", "Open Science Principles", "Best Practices", "Educational Resources"],
+      "geographic_scope": "Global",
+      "update_frequency": "Periodic updates",
+      "historical_data": false
+    },
+    "research_notes": {
+      "documentation_url": "https://book.fosteropenscience.eu",
+      "sample_endpoints": ["/en/"],
+      "data_quality": "High-quality educational content",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "Not a traditional API but structured educational content on Open Science",
+      "api_summary": "The Open Science Training Handbook provides comprehensive educational resources on Open Science practices, including open access, open data, open research software, and reproducible research. While not offering a formal API, the structured content can be accessed programmatically for educational and training purposes."
+    },
+    "documentation": {
+      "getting_started": "https://book.fosteropenscience.eu",
+      "api_reference": null,
+      "examples": null,
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "orcid-member-api",
+    "name": "ORCID Member API",
+    "provider": "ORCID",
+    "description": "Premium API service for ORCID member organizations that enables reading and writing researcher data to ORCID records with appropriate permissions. Provides access to trusted party data, higher rate limits, and full synchronization capabilities between institutional systems and ORCID records.",
+    "discovery_status": "documented",
+    "tags": ["research", "academic", "identity", "authentication", "oauth", "restful"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "membership-based",
+      "rate_limits": "24 requests/second with 40 burst capacity"
+    },
+    "technical_info": {
+      "base_url": "https://api.orcid.org",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "OAuth 2.0",
+      "endpoints": [
+        {
+          "path": "/v3.0/{orcid}/works",
+          "full_url": "https://api.orcid.org/v3.0/{orcid}/works",
+          "method": "GET",
+          "description": "Retrieve all works associated with an ORCID record",
+          "documentation_link": "https://github.com/ORCID/orcid-model/blob/master/src/main/resources/record_3.0/README.md",
+          "parameters": ["orcid"],
+          "response_format": "JSON"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["researcher profiles", "publications", "affiliations", "funding", "peer reviews"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://info.orcid.org/documentation/features/member-api/",
+      "sample_endpoints": ["/v3.0/{orcid}/record", "/v3.0/{orcid}/works", "/v3.0/{orcid}/employments"],
+      "data_quality": "High quality, verified researcher data",
+      "last_researched": "2025-07-29T00:00:00.000000Z",
+      "researcher_notes": "Member API provides read/write access to ORCID records with user permission",
+      "api_summary": "The ORCID Member API is a premium service available to ORCID member organizations that provides enhanced capabilities for integrating with ORCID records."
+    },
+    "documentation": {
+      "getting_started": "https://info.orcid.org/documentation/api-tutorials/",
+      "api_reference": "https://github.com/ORCID/orcid-model/blob/master/src/main/resources/record_3.0/README.md",
+      "examples": "https://github.com/ORCID/orcid-api-tutorial",
+      "changelog": null,
+      "status_page": null
+    }
+  }
+]

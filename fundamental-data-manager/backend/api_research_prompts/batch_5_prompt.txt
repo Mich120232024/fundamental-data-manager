@@ -1,0 +1,79 @@
+
+Research these 25 APIs comprehensively using web search and official documentation:
+
+- DOAB (Directory of Open Access Books) API (DOAB) - DOAB (Directory of Open Access Books) API service
+- OAPEN API (OAPEN) - OAPEN API service
+- OpenEdition Books API (OpenEdition) - OpenEdition Books API service
+- OpenTextbooks API (OpenTextbooks) - OpenTextbooks API service
+- OER Commons API (OER) - OER Commons API service
+- MIT OpenCourseWare API (MIT) - MIT OpenCourseWare API service
+- OpenStax API (OpenStax) - OpenStax API service
+- Dataverse API (Dataverse) - Dataverse API service
+- Dryad API (Dryad) - Dryad API service
+- Mendeley Data API (Mendeley) - Mendeley Data API service
+- UK Data Service API (UK) - UK Data Service API service
+- ICPSR (Inter-university Consortium for Political and Social Research) API (ICPSR) - ICPSR (Inter-university Consortium for Political and Social Research) API service
+- GESIS Data Archive API (GESIS) - GESIS Data Archive API service
+- Harvard Dataverse API (Harvard) - Harvard Dataverse API service
+- re3data.org API (re3data.org) - re3data.org API service
+- Kaggle API (Kaggle) - Kaggle API service
+- IEEE DataPort API (IEEE) - IEEE DataPort API service
+- Registry of Research Data Repositories API (Registry) - Registry of Research Data Repositories API service
+- OpenAIRE Research Graph API (OpenAIRE) - OpenAIRE Research Graph API service
+- GenBank API (GenBank) - GenBank API service
+- European Nucleotide Archive API (European) - European Nucleotide Archive API service
+- DNA Data Bank of Japan API (DNA) - DNA Data Bank of Japan API service
+- UniProt API (UniProt) - UniProt API service
+- Protein Data Bank API (Protein) - Protein Data Bank API service
+- GEO (Gene Expression Omnibus) API (GEO) - GEO (Gene Expression Omnibus) API service
+
+For EACH API, provide this JSON structure using REAL DATA from official sources:
+{
+  "id": "original_api_id",
+  "name": "Official API Name from documentation",
+  "provider": "Actual Organization/Company Name", 
+  "description": "2-3 sentence summary based on official documentation",
+  "discovery_status": "documented",
+  "tags": ["actual", "relevant", "tags"],
+  "access_info": {
+    "is_free": true/false/null,
+    "requires_api_key": true/false/null,
+    "requires_approval": false,
+    "pricing_model": "actual pricing model from docs",
+    "rate_limits": "specific limits from documentation or 'unknown'"
+  },
+  "technical_info": {
+    "base_url": "actual base URL from documentation",
+    "protocol": "REST/GraphQL/SOAP based on documentation",
+    "data_formats": ["formats supported by API"],
+    "auth_method": "actual authentication method",
+    "endpoints": [
+      "List real endpoint paths with descriptions from official docs"
+    ]
+  },
+  "content_summary": {
+    "data_categories": ["Actual data categories from documentation"],
+    "geographic_scope": "based on API documentation",
+    "update_frequency": "from official documentation",
+    "historical_data": true/false/null
+  },
+  "research_notes": {
+    "documentation_url": "actual URL to official API documentation",
+    "sample_endpoints": ["real endpoints from documentation"],
+    "data_quality": "assessment based on documentation quality",
+    "last_researched": "2025-07-28T19:41:42.177612Z",
+    "researcher_notes": "insights from researching official sources",
+    "api_summary": "comprehensive paragraph based on official documentation about capabilities, data, users, and value"
+  }
+}
+
+RESEARCH REQUIREMENTS:
+1. Find OFFICIAL documentation for each API - use web search
+2. Extract REAL endpoint paths from documentation
+3. Get ACTUAL pricing and authentication info
+4. Identify REAL data categories provided
+5. Write comprehensive summary based on official sources
+
+OUTPUT: Return a JSON array with all researched APIs using REAL data only.
+
+BATCH ID: 5

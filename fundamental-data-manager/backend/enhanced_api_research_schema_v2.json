@@ -1,0 +1,39 @@
+{
+  "api_research_output_schema_v2": {
+    "description": "Enhanced schema version 2 with detailed endpoint documentation",
+    "technical_info": {
+      "base_url": "string - primary API endpoint URL",
+      "protocol": "string - REST/GraphQL/SOAP/WebSocket",
+      "data_formats": "array - supported formats (JSON, XML, CSV, etc.)",
+      "auth_method": "string - api_key/oauth/basic/jwt/none/unknown",
+      "endpoints": {
+        "type": "array of objects",
+        "structure": {
+          "path": "string - endpoint path relative to base URL",
+          "full_url": "string - complete endpoint URL",
+          "method": "string - HTTP method (GET, POST, etc.)",
+          "description": "string - what this endpoint provides",
+          "documentation_link": "string - direct link to this endpoint's documentation",
+          "parameters": "array - required and optional parameters",
+          "response_format": "string - expected response format"
+        }
+      },
+      "documentation_sections": {
+        "getting_started": "string - URL to getting started guide",
+        "authentication": "string - URL to authentication docs", 
+        "endpoints_reference": "string - URL to complete endpoints reference",
+        "code_examples": "string - URL to code examples",
+        "sdks_libraries": "string - URL to SDKs and client libraries"
+      }
+    },
+    "example_endpoint_object": {
+      "path": "/works",
+      "full_url": "https://api.crossref.org/works",
+      "method": "GET",
+      "description": "Search and retrieve academic publication metadata",
+      "documentation_link": "https://github.com/CrossRef/rest-api-doc#queries",
+      "parameters": ["query", "filter", "sort", "order", "rows", "offset"],
+      "response_format": "JSON with results array and metadata"
+    }
+  }
+}

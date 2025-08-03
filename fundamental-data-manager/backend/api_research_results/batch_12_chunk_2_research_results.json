@@ -1,0 +1,306 @@
+[
+  {
+    "id": "riskfactor",
+    "name": "RiskFactor (First Street/AlphaGeo Climate Risk API)",
+    "provider": "First Street Foundation / AlphaGeo",
+    "description": "Climate risk data and analytics for physical climate risks including heat stress, flooding, drought, hurricane, and wildfire risks with global coverage and financial impact modeling.",
+    "discovery_status": "documented",
+    "tags": ["climate risk", "physical risk", "flooding", "wildfire", "heat stress", "resilience"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise subscription required",
+      "rate_limits": "Default requests per minute"
+    },
+    "technical_info": {
+      "base_url": "https://app.alphageo.ai/api/public/v1/",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/scores",
+          "full_url": "https://app.alphageo.ai/api/public/v1/scores",
+          "method": "GET",
+          "description": "Retrieve physical climate risk and resilience-adjusted risk scores for any location globally",
+          "documentation_link": "https://docs.alphageo.ai/for-developers/alphageo-data-api/climate-risk-scores-api",
+          "parameters": ["longitude", "latitude", "address", "period", "scenario"],
+          "response_format": "JSON with overall risk scores, heat stress, flooding, drought, hurricane, wildfire metrics"
+        },
+        {
+          "path": "/risk_data",
+          "full_url": "https://app.alphageo.ai/api/public/v1/risk_data",
+          "method": "GET",
+          "description": "Retrieve detailed climate risk data under the Global Adaptation Layers data product",
+          "documentation_link": "https://docs.alphageo.ai/for-developers/alphageo-data-api/physical-risk-api",
+          "parameters": ["longitude", "latitude", "address", "period", "scenario"],
+          "response_format": "JSON with detailed physical climate risk data by hazard type"
+        },
+        {
+          "path": "/analytics",
+          "full_url": "https://app.alphageo.ai/api/public/v1/analytics",
+          "method": "GET",
+          "description": "Real estate cashflow modeling metrics translating climate risk into financial impact",
+          "documentation_link": "https://docs.alphageo.ai/for-developers/alphageo-data-api/financial-impact-api",
+          "parameters": ["longitude", "latitude", "address", "period", "scenario"],
+          "response_format": "JSON with insurance rates, utility costs, capex requirements, and discount rates"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Physical climate risk", "Resilience metrics", "Financial impact", "Real estate modeling"],
+      "geographic_scope": "Global coverage",
+      "update_frequency": "Updated March 2024 data version",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://docs.alphageo.ai/for-developers/alphageo-data-api",
+      "api_summary": "Provides climate risk scores for heat stress, flooding, drought, hurricane, and wildfire with 2025-2100 projections. Includes financial impact modeling for real estate cashflow analysis.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://docs.alphageo.ai/for-developers/alphageo-data-api",
+      "api_reference": "https://docs.alphageo.ai/for-developers/alphageo-data-api",
+      "examples": "Available with access",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "cfra-research",
+    "name": "CFRA Research API",
+    "provider": "CFRA",
+    "description": "Independent investment research and financial analysis with equity ratings, fundamental research, and market intelligence covering 1,500+ companies, 1,860+ ETFs, and 22,000+ mutual funds.",
+    "discovery_status": "documented",
+    "tags": ["equity research", "ETF analysis", "mutual funds", "financial ratings", "investment research"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise/Institutional licensing",
+      "rate_limits": "Custom based on subscription"
+    },
+    "technical_info": {
+      "base_url": "Not publicly documented",
+      "protocol": "REST (Research-as-a-Service)",
+      "data_formats": ["JSON", "XML", "PDF", "TXT", "RIXML v2.5"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/equity-research",
+          "full_url": "Contact CFRA for endpoint details",
+          "method": "GET",
+          "description": "Access fundamental equity research and ratings for 1,500+ companies",
+          "documentation_link": "https://www.cfraresearch.com/api-feeds/",
+          "parameters": ["company_identifier", "research_type", "date_range"],
+          "response_format": "JSON/XML with research ratings, analysis, and fundamental data"
+        },
+        {
+          "path": "/etf-research",
+          "full_url": "Contact CFRA for endpoint details",
+          "method": "GET",
+          "description": "ETF analysis and ratings for 1,860+ ETFs",
+          "documentation_link": "https://www.cfraresearch.com/api-feeds/",
+          "parameters": ["etf_identifier", "analysis_type"],
+          "response_format": "JSON/XML with ETF ratings and analysis"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Equity ratings", "ETF analysis", "Mutual fund research", "Sector analysis", "Forensic accounting"],
+      "geographic_scope": "Global markets focus",
+      "update_frequency": "Real-time updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.cfraresearch.com/api-feeds/",
+      "api_summary": "CFRA provides Research-as-a-Service (RaaS) with custom API integration for equity, ETF, and mutual fund research. Supports multiple formats including RIXML v2.5.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://www.cfraresearch.com/api-feeds/",
+      "api_reference": "Available post-subscription",
+      "examples": "Provided with API subscription",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "new-constructs",
+    "name": "New Constructs API",
+    "provider": "New Constructs",
+    "description": "AI-powered fundamental financial analysis with superior data quality, stock ratings, and investment research covering 5,000+ US stocks, 650+ ETFs, and 7,050+ mutual funds.",
+    "discovery_status": "documented",
+    "tags": ["fundamental analysis", "stock ratings", "AI-powered", "financial data", "investment research"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Subscription-based with API add-on",
+      "rate_limits": "10,000 requests per month"
+    },
+    "technical_info": {
+      "base_url": "https://client.newconstructs.com/nc/api/",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/overall-rating",
+          "full_url": "https://client.newconstructs.com/nc/api/overall-rating",
+          "method": "GET",
+          "description": "Access New Constructs overall stock ratings",
+          "documentation_link": "https://client.newconstructs.com/nc/documentation/api/",
+          "parameters": ["ticker", "time_period", "datapoint"],
+          "response_format": "JSON with overall rating and component scores"
+        },
+        {
+          "path": "/fundamentals-adjusted",
+          "full_url": "https://client.newconstructs.com/nc/api/fundamentals-adjusted",
+          "method": "GET",
+          "description": "Access New Constructs adjusted fundamental data",
+          "documentation_link": "https://client.newconstructs.com/nc/documentation/api/",
+          "parameters": ["ticker", "period", "adjustment_type"],
+          "response_format": "JSON with adjusted fundamental metrics"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Stock ratings", "Adjusted fundamentals", "Component ratings", "Sector analysis"],
+      "geographic_scope": "US markets",
+      "update_frequency": "Daily refresh",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://client.newconstructs.com/nc/documentation/api/",
+      "api_summary": "New Constructs provides AI-powered fundamental analysis with adjusted metrics. Historical data back to 1998, Python examples on GitHub.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://www.newconstructs.com/get-your-api-key/",
+      "api_reference": "https://client.newconstructs.com/nc/documentation/api/",
+      "examples": "https://github.com/newconstructs-code-samples/nc-api-examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "calcbench",
+    "name": "Calcbench API",
+    "provider": "Calcbench",
+    "description": "XBRL-based financial data extraction from SEC filings with comprehensive fundamental analysis capabilities, providing standardized metrics, as-reported data, and disclosure text search.",
+    "discovery_status": "documented",
+    "tags": ["XBRL data", "SEC filings", "fundamental data", "financial analysis", "disclosure search"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Subscription-based with API add-on",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://www.calcbench.com/api/",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV"],
+      "auth_method": "Basic authentication",
+      "endpoints": [
+        {
+          "path": "/standardized",
+          "full_url": "https://www.calcbench.com/api/standardized",
+          "method": "GET",
+          "description": "Access standardized financial metrics from XBRL filings",
+          "documentation_link": "https://www.calcbench.com/api",
+          "parameters": ["company_identifiers", "metrics", "period", "point_in_time"],
+          "response_format": "JSON with standardized financial data"
+        },
+        {
+          "path": "/disclosure-search",
+          "full_url": "https://www.calcbench.com/api/disclosure-search",
+          "method": "GET",
+          "description": "Search and download disclosure text from SEC filings",
+          "documentation_link": "https://www.calcbench.com/blog/post/108074832382/disclosure-text-api",
+          "parameters": ["company_identifiers", "search_text", "filing_type"],
+          "response_format": "JSON with disclosure text and metadata"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["XBRL standardized metrics", "As-reported data", "Disclosure text", "SEC filing metadata"],
+      "geographic_scope": "US public companies",
+      "update_frequency": "Minutes after SEC filing release",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.calcbench.com/api",
+      "api_summary": "Calcbench extracts XBRL data from SEC filings with standardized/as-reported metrics. Premium tier $6K/year, Python client available on GitHub.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://www.calcbench.com/api",
+      "api_reference": "https://www.calcbench.com/api",
+      "examples": "https://github.com/calcbench/python_api_client",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "sentieo-document-search",
+    "name": "Sentieo Document Search API",
+    "provider": "Sentieo",
+    "description": "AI-powered financial document search and analysis platform for investment research and corporate intelligence with millions of documents including SEC filings, broker research, and earnings transcripts.",
+    "discovery_status": "documented",
+    "tags": ["document search", "AI analysis", "SEC filings", "earnings transcripts", "investment research"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise subscription-based",
+      "rate_limits": "Custom based on subscription"
+    },
+    "technical_info": {
+      "base_url": "Contact Sentieo for API details",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/document-search",
+          "full_url": "Contact Sentieo for endpoint details",
+          "method": "GET",
+          "description": "Search across millions of financial documents using AI-powered search",
+          "documentation_link": "Platform-specific documentation",
+          "parameters": ["query", "document_type", "company", "date_range"],
+          "response_format": "JSON with search results and document metadata"
+        },
+        {
+          "path": "/document-analysis",
+          "full_url": "Contact Sentieo for endpoint details",
+          "method": "POST",
+          "description": "AI-powered sentiment and topic analysis of documents",
+          "documentation_link": "Platform-specific documentation",
+          "parameters": ["document_id", "analysis_type"],
+          "response_format": "JSON with sentiment scores and topic analysis"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["SEC filings", "Broker research", "Earnings transcripts", "Corporate documents", "News and analysis"],
+      "geographic_scope": "Global financial documents",
+      "update_frequency": "Real-time document ingestion",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact Sentieo for documentation",
+      "api_summary": "Sentieo provides AI-powered document search across SEC filings, broker research, and earnings transcripts. $500-$1,000/month per license for institutional access.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact Sentieo for documentation",
+      "api_reference": "Available with subscription",
+      "examples": "Provided with API access",
+      "changelog": null,
+      "status_page": null
+    }
+  }
+]

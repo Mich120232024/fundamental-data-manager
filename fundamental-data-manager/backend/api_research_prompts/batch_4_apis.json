@@ -1,0 +1,127 @@
+[
+  {
+    "id": "gates-open-research-api",
+    "name": "Gates Open Research API",
+    "provider": "Gates"
+  },
+  {
+    "id": "biorxiv-api",
+    "name": "BioRxiv API",
+    "provider": "BioRxiv"
+  },
+  {
+    "id": "medrxiv-api",
+    "name": "MedRxiv API",
+    "provider": "MedRxiv"
+  },
+  {
+    "id": "chemrxiv-api",
+    "name": "ChemRxiv API",
+    "provider": "ChemRxiv"
+  },
+  {
+    "id": "psyarxiv-api",
+    "name": "PsyArXiv API",
+    "provider": "PsyArXiv"
+  },
+  {
+    "id": "socarxiv-api",
+    "name": "SocArXiv API",
+    "provider": "SocArXiv"
+  },
+  {
+    "id": "eartharxiv-api",
+    "name": "EarthArXiv API",
+    "provider": "EarthArXiv"
+  },
+  {
+    "id": "lawarxiv-api",
+    "name": "LawArXiv API",
+    "provider": "LawArXiv"
+  },
+  {
+    "id": "engrxiv-api",
+    "name": "EngrXiv API",
+    "provider": "EngrXiv"
+  },
+  {
+    "id": "africarxiv-api",
+    "name": "AfricArXiv API",
+    "provider": "AfricArXiv"
+  },
+  {
+    "id": "arabixiv-api",
+    "name": "ArabiXiv API",
+    "provider": "ArabiXiv"
+  },
+  {
+    "id": "inaxiv-api",
+    "name": "INA'XiV API",
+    "provider": "INA'XiV"
+  },
+  {
+    "id": "scielo-preprints-api",
+    "name": "SciELO Preprints API",
+    "provider": "SciELO"
+  },
+  {
+    "id": "research-square-api",
+    "name": "Research Square API",
+    "provider": "Research"
+  },
+  {
+    "id": "authorea-api",
+    "name": "Authorea API",
+    "provider": "Authorea"
+  },
+  {
+    "id": "pubpeer-api",
+    "name": "PubPeer API",
+    "provider": "PubPeer"
+  },
+  {
+    "id": "f1000research-api",
+    "name": "F1000Research API",
+    "provider": "F1000Research"
+  },
+  {
+    "id": "peerj-api",
+    "name": "PeerJ API",
+    "provider": "PeerJ"
+  },
+  {
+    "id": "plos-api",
+    "name": "PLOS API",
+    "provider": "PLOS"
+  },
+  {
+    "id": "bmc-api",
+    "name": "BMC API",
+    "provider": "BMC"
+  },
+  {
+    "id": "hindawi-api",
+    "name": "Hindawi API",
+    "provider": "Hindawi"
+  },
+  {
+    "id": "mdpi-api",
+    "name": "MDPI API",
+    "provider": "MDPI"
+  },
+  {
+    "id": "frontiers-api",
+    "name": "Frontiers API",
+    "provider": "Frontiers"
+  },
+  {
+    "id": "elife-api",
+    "name": "eLife API",
+    "provider": "eLife"
+  },
+  {
+    "id": "scielo-api",
+    "name": "SciELO API",
+    "provider": "SciELO"
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "id": "arrayexpress-api",
+    "name": "ArrayExpress API",
+    "provider": "ArrayExpress"
+  },
+  {
+    "id": "embl-ebi-api",
+    "name": "EMBL-EBI API",
+    "provider": "EMBL-EBI"
+  },
+  {
+    "id": "ncbi-api",
+    "name": "NCBI API",
+    "provider": "NCBI"
+  },
+  {
+    "id": "biogrid-api",
+    "name": "BioGRID API",
+    "provider": "BioGRID"
+  },
+  {
+    "id": "pride-api",
+    "name": "PRIDE API",
+    "provider": "PRIDE"
+  },
+  {
+    "id": "metabolights-api",
+    "name": "MetaboLights API",
+    "provider": "MetaboLights"
+  },
+  {
+    "id": "global-biodiversity-information-facility-api",
+    "name": "Global Biodiversity Information Facility API",
+    "provider": "Global"
+  },
+  {
+    "id": "nasa-earth-data-api",
+    "name": "NASA Earth Data API",
+    "provider": "NASA"
+  },
+  {
+    "id": "pangaea-api",
+    "name": "PANGAEA API",
+    "provider": "PANGAEA"
+  },
+  {
+    "id": "icsu-world-data-system-api",
+    "name": "ICSU World Data System API",
+    "provider": "ICSU"
+  },
+  {
+    "id": "noaa-national-centers-for-environmental-information-api",
+    "name": "NOAA National Centers for Environmental Information API",
+    "provider": "NOAA"
+  },
+  {
+    "id": "nasa-open-api",
+    "name": "NASA Open API",
+    "provider": "NASA"
+  },
+  {
+    "id": "cern-open-data-portal-api",
+    "name": "CERN Open Data Portal API",
+    "provider": "CERN"
+  },
+  {
+    "id": "materials-project-api",
+    "name": "Materials Project API",
+    "provider": "Materials"
+  },
+  {
+    "id": "open-science-framework-api",
+    "name": "Open Science Framework API",
+    "provider": "Open"
+  },
+  {
+    "id": "protocolsio-api",
+    "name": "Protocols.io API",
+    "provider": "Protocols.io"
+  },
+  {
+    "id": "code-ocean-api",
+    "name": "Code Ocean API",
+    "provider": "Code"
+  },
+  {
+    "id": "github-api",
+    "name": "GitHub API",
+    "provider": "GitHub"
+  },
+  {
+    "id": "software-heritage-api",
+    "name": "Software Heritage API",
+    "provider": "Software"
+  },
+  {
+    "id": "journal-of-open-source-software-api",
+    "name": "Journal of Open Source Software API",
+    "provider": "Journal"
+  },
+  {
+    "id": "scicrunch-api",
+    "name": "SciCrunch API",
+    "provider": "SciCrunch"
+  },
+  {
+    "id": "research-resource-identifiers-api",
+    "name": "Research Resource Identifiers API",
+    "provider": "Research"
+  },
+  {
+    "id": "collaborative-knowledge-foundation-api",
+    "name": "Collaborative Knowledge Foundation API",
+    "provider": "Collaborative"
+  },
+  {
+    "id": "opensciencemooc-api",
+    "name": "OpenScienceMOOC API",
+    "provider": "OpenScienceMOOC"
+  },
+  {
+    "id": "the-carpentries-api",
+    "name": "The Carpentries API",
+    "provider": "The"
+  }
+]

@@ -1,0 +1,604 @@
+{
+  "batch_15_chunk_1_research_results": {
+    "research_metadata": {
+      "research_date": "2025-08-02",
+      "schema_version": "enhanced_api_research_schema_v2",
+      "research_agent": "SOFTWARE_AGENT_001",
+      "total_apis_researched": 5
+    },
+    "apis": [
+      {
+        "name": "CBOE (Chicago Board Options Exchange) All Access API",
+        "provider": "Cboe Global Markets",
+        "category": "Options Trading & Market Data",
+        "api_research_output_schema_v2": {
+          "technical_info": {
+            "base_url": "https://api.livevol.com/v1",
+            "protocol": "REST",
+            "data_formats": ["JSON"],
+            "auth_method": "API Key",
+            "endpoints": [
+              {
+                "path": "/allaccess/market/all-option-trades",
+                "full_url": "https://api.livevol.com/v1/allaccess/market/all-option-trades",
+                "method": "GET",
+                "description": "Retrieve all option trades data",
+                "documentation_link": "https://api.livevol.com/v1/docs/Help",
+                "parameters": ["symbol", "date", "limit"],
+                "response_format": "JSON with trade data and metadata"
+              },
+              {
+                "path": "/allaccess/market/underlying-quotes",
+                "full_url": "https://api.livevol.com/v1/allaccess/market/underlying-quotes",
+                "method": "GET",
+                "description": "Get current market prices for underlying securities",
+                "documentation_link": "https://api.livevol.com/v1/docs/Help",
+                "parameters": ["symbol", "fields"],
+                "response_format": "JSON with pricing and volume data"
+              },
+              {
+                "path": "/allaccess/market/option-and-underlying-quotes",
+                "full_url": "https://api.livevol.com/v1/allaccess/market/option-and-underlying-quotes",
+                "method": "GET",
+                "description": "Combined option and underlying quotes",
+                "documentation_link": "https://api.livevol.com/v1/docs/Help",
+                "parameters": ["symbol", "expiration", "strike"],
+                "response_format": "JSON with combined market data"
+              },
+              {
+                "path": "/allaccess/reference/expirations",
+                "full_url": "https://api.livevol.com/v1/allaccess/reference/expirations",
+                "method": "GET",
+                "description": "Get expiration dates for options contracts",
+                "documentation_link": "https://api.livevol.com/v1/docs/Help",
+                "parameters": ["symbol"],
+                "response_format": "JSON with expiration date arrays"
+              },
+              {
+                "path": "/allaccess/time-and-sales/option-trades",
+                "full_url": "https://api.livevol.com/v1/allaccess/time-and-sales/option-trades",
+                "method": "GET",
+                "description": "Time and sales data for option trades",
+                "documentation_link": "https://api.livevol.com/v1/docs/Help",
+                "parameters": ["symbol", "date", "time_range"],
+                "response_format": "JSON with timestamped trade data"
+              }
+            ],
+            "documentation_sections": {
+              "getting_started": "https://datashop.cboe.com/all-access-api",
+              "authentication": "https://api.livevol.com/v1/docs/Help",
+              "endpoints_reference": "https://api.livevol.com/v1/docs/Help",
+              "code_examples": "https://api.livevol.com/v1/docs/Help",
+              "sdks_libraries": "Not specified"
+            }
+          },
+          "pricing": {
+            "model": "Tiered subscription with point-based usage",
+            "tiers": [
+              {
+                "name": "Free Tier",
+                "price": "$0/month",
+                "duration": "14 days",
+                "features": ["Non-SIP data access", "Limited API calls"],
+                "limitations": ["No SIP subscription", "No overage allowed"]
+              },
+              {
+                "name": "Starter",
+                "price": "$1,499/month",
+                "overage_rate": "$0.01/point",
+                "features": ["Base API access", "Optional SIP subscription"]
+              },
+              {
+                "name": "Professional",
+                "price": "$1,999/month",
+                "overage_rate": "$0.005/point",
+                "features": ["Enhanced API access", "Lower overage rates"]
+              },
+              {
+                "name": "Enterprise",
+                "price": "$2,499/month",
+                "redistribution_price": "$3,699/month",
+                "overage_rate": "$0.004/point",
+                "features": ["Full API access", "Redistribution rights"]
+              },
+              {
+                "name": "Premium",
+                "price": "$4,599/month",
+                "redistribution_price": "$5,999/month",
+                "overage_rate": "$0.0025/point",
+                "features": ["Maximum API access", "Lowest overage rates"]
+              }
+            ],
+            "additional_fees": {
+              "OPRA": "Professional subscriber fees for live option prices",
+              "CTA_UTP": "Professional subscriber fees for live stock prices",
+              "CSMI": "Professional subscriber fees for indices prices"
+            }
+          },
+          "data_coverage": {
+            "asset_classes": ["Options", "Equities", "Indices"],
+            "markets": ["US Options Markets", "CBOE Options", "C2 Options", "BZX Options", "EDGX Options"],
+            "data_types": [
+              "Real-time options prices",
+              "Implied volatility",
+              "Greeks",
+              "Historical options data",
+              "Volume and open interest",
+              "Time and sales",
+              "Market statistics"
+            ],
+            "update_frequency": "Real-time",
+            "historical_data": "Available with subscription"
+          },
+          "unique_features": [
+            "All-access model with single subscription",
+            "Point-based usage system",
+            "Midpoint prices without SIP requirement",
+            "Implied calculations included",
+            "14-day free trial available",
+            "Comprehensive options analytics",
+            "Multiple delivery formats"
+          ]
+        }
+      },
+      {
+        "name": "ICE (Intercontinental Exchange) Data Services API",
+        "provider": "Intercontinental Exchange",
+        "category": "Fixed Income & Multi-Asset Data",
+        "api_research_output_schema_v2": {
+          "technical_info": {
+            "base_url": "Contact ICE for specific endpoints",
+            "protocol": "REST/API",
+            "data_formats": ["JSON", "XML", "CSV"],
+            "auth_method": "Custom authentication (contact-based)",
+            "endpoints": [
+              {
+                "path": "/data-api/fixed-income",
+                "full_url": "Contact ICE Data Services",
+                "method": "GET/POST",
+                "description": "Fixed income pricing and analytics",
+                "documentation_link": "https://developer.ice.com/",
+                "parameters": ["instrument_id", "date", "fields"],
+                "response_format": "JSON with pricing and analytics data"
+              },
+              {
+                "path": "/data-api/market-evaluations",
+                "full_url": "Contact ICE Data Services",
+                "method": "GET",
+                "description": "Market evaluations and reference data",
+                "documentation_link": "https://developer.ice.com/",
+                "parameters": ["asset_class", "date_range"],
+                "response_format": "JSON with evaluation data"
+              },
+              {
+                "path": "/data-api/best-execution",
+                "full_url": "Contact ICE Data Services",
+                "method": "POST",
+                "description": "Best execution analytics and TCA",
+                "documentation_link": "https://developer.ice.com/",
+                "parameters": ["trade_data", "benchmark"],
+                "response_format": "JSON with execution analytics"
+              }
+            ],
+            "documentation_sections": {
+              "getting_started": "https://developer.ice.com/",
+              "authentication": "Contact ICE for authentication details",
+              "endpoints_reference": "https://developer.ice.com/",
+              "code_examples": "Available upon request",
+              "sdks_libraries": "Custom integration support"
+            }
+          },
+          "pricing": {
+            "model": "Custom enterprise pricing",
+            "contact_required": true,
+            "pricing_factors": [
+              "Data usage volume",
+              "Number of instruments",
+              "Real-time vs delayed data",
+              "Redistribution rights",
+              "Custom analytics requirements"
+            ]
+          },
+          "data_coverage": {
+            "asset_classes": [
+              "Fixed Income",
+              "Corporate Bonds",
+              "Government Bonds",
+              "Municipal Bonds",
+              "Structured Products",
+              "Credit Default Swaps",
+              "Interest Rate Derivatives"
+            ],
+            "markets": ["Global Fixed Income Markets", "OTC Markets", "Exchange-traded bonds"],
+            "data_types": [
+              "Continuous Evaluated Pricing (CEP)",
+              "Market evaluations",
+              "Reference data",
+              "Liquidity scores",
+              "Best execution statistics",
+              "Transaction cost analysis",
+              "Credit analytics",
+              "Yield curves"
+            ],
+            "coverage_scope": "~2.5 million bonds globally",
+            "update_frequency": "Real-time and end-of-day",
+            "historical_data": "Extensive historical coverage"
+          },
+          "unique_features": [
+            "Continuous Evaluated Pricing (CEP) methodology",
+            "Single API for data and analytics",
+            "Customizable analytics engine",
+            "Best execution and TCA capabilities",
+            "Support for custom data sources",
+            "Global fixed income coverage",
+            "Direct connectivity to ICE markets",
+            "Structured finance analytics"
+          ]
+        }
+      },
+      {
+        "name": "CME Group Market Data API",
+        "provider": "CME Group",
+        "category": "Futures & Options Market Data",
+        "api_research_output_schema_v2": {
+          "technical_info": {
+            "base_url": "https://marketdata.cmegroup.com",
+            "protocol": "WebSocket/REST",
+            "data_formats": ["JSON"],
+            "auth_method": "OAuth 2.0",
+            "endpoints": [
+              {
+                "path": "/ws/realtime",
+                "full_url": "wss://marketdata.cmegroup.com/ws/realtime",
+                "method": "WebSocket",
+                "description": "Real-time futures and options market data stream",
+                "documentation_link": "https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/CME+Market+Data+Over+WebSocket+API",
+                "parameters": ["subscription", "symbols", "data_types"],
+                "response_format": "JSON streaming data with trades, quotes, and statistics"
+              },
+              {
+                "path": "/api/term-sofr",
+                "full_url": "https://marketdata.cmegroup.com/api/term-sofr",
+                "method": "GET",
+                "description": "CME Term SOFR Reference Rates",
+                "documentation_link": "https://www.cmegroup.com/market-data/market-data-api/cme-term-sofr-api.html",
+                "parameters": ["date", "tenor"],
+                "response_format": "JSON with SOFR rates and history"
+              },
+              {
+                "path": "/api/fedwatch",
+                "full_url": "https://marketdata.cmegroup.com/api/fedwatch",
+                "method": "GET",
+                "description": "Fed Funds rate probability data",
+                "documentation_link": "https://www.cmegroup.com/market-data/market-data-api/fedwatch-api.html",
+                "parameters": ["meeting_date"],
+                "response_format": "JSON with rate probabilities"
+              },
+              {
+                "path": "/api/reference-data",
+                "full_url": "https://marketdata.cmegroup.com/api/reference-data",
+                "method": "GET",
+                "description": "Product and instrument reference data",
+                "documentation_link": "https://www.cmegroup.com/trading/market-tech-and-data-services/cme-reference-data-api.html",
+                "parameters": ["product_type", "exchange"],
+                "response_format": "JSON with contract specifications and metadata"
+              },
+              {
+                "path": "/api/eur-usd-basis",
+                "full_url": "https://marketdata.cmegroup.com/api/eur-usd-basis",
+                "method": "GET",
+                "description": "EUR/USD Cross Currency Basis Index",
+                "documentation_link": "https://dataservices.cmegroup.com/pages/CME-Data-Via-API",
+                "parameters": ["date"],
+                "response_format": "JSON with basis point data"
+              }
+            ],
+            "documentation_sections": {
+              "getting_started": "https://www.cmegroup.com/market-data/market-data-api.html",
+              "authentication": "https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457085271/CME+Globex+Order+Entry+APIs+on+Google+Cloud",
+              "endpoints_reference": "https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/CME+Market+Data+Over+WebSocket+API",
+              "code_examples": "Available in client documentation",
+              "sdks_libraries": "Contact CME Group for SDK availability"
+            }
+          },
+          "pricing": {
+            "model": "Usage-based with multiple API products",
+            "websocket_api": {
+              "price": "$23/GB",
+              "billing": "Monthly",
+              "additional_fees": "ILA market data fees apply",
+              "note": "Gigabyte usage varies by product and data type"
+            },
+            "individual_apis": {
+              "term_sofr": "Self-service portal pricing",
+              "fedwatch": "Contact for pricing",
+              "reference_data": "Contact for pricing",
+              "eur_usd_basis": "Self-service portal pricing"
+            }
+          },
+          "data_coverage": {
+            "asset_classes": [
+              "Interest Rates",
+              "Equity Indices",
+              "Foreign Exchange",
+              "Energy",
+              "Agriculture",
+              "Precious Metals",
+              "Cryptocurrency"
+            ],
+            "markets": ["CME", "CBOT", "NYMEX", "COMEX", "CME Globex"],
+            "data_types": [
+              "Real-time trades",
+              "Top of book quotes",
+              "Daily statistics",
+              "Cleared volume",
+              "Open interest",
+              "Settlement prices",
+              "Reference data",
+              "Historical data"
+            ],
+            "update_frequency": "Real-time (500ms conflation for top-of-book)",
+            "historical_data": "Complete history available for most APIs"
+          },
+          "unique_features": [
+            "Cloud-hosted WebSocket API on Google Cloud",
+            "JSON-formatted data for easy integration",
+            "Product-specific subscriptions",
+            "Top-of-book message conflation",
+            "Direct from exchange data",
+            "Self-service API portal",
+            "OAuth 2.0 authentication",
+            "Scalable cloud infrastructure",
+            "Real-time and historical data",
+            "Multiple complementary APIs"
+          ]
+        }
+      },
+      {
+        "name": "LCH (London Clearing House) SwapClear API",
+        "provider": "London Stock Exchange Group (LSEG)",
+        "category": "OTC Derivatives Clearing",
+        "api_research_output_schema_v2": {
+          "technical_info": {
+            "base_url": "Contact LCH for technical specifications",
+            "protocol": "Multiple protocols (contact-based)",
+            "data_formats": ["XML", "JSON", "Proprietary formats"],
+            "auth_method": "Member authentication (contact-based)",
+            "endpoints": [
+              {
+                "path": "/clearlink/trade-submission",
+                "full_url": "Contact LCH for endpoint details",
+                "method": "POST",
+                "description": "Submit trades for clearing through ClearLink",
+                "documentation_link": "https://www.lseg.com/content/dam/post-trade/en_us/documents/lch/guides/lch-swapclear-quickstart-guide.pdf",
+                "parameters": ["trade_data", "member_id", "counterparty"],
+                "response_format": "XML/JSON with clearing confirmation"
+              },
+              {
+                "path": "/api/portfolio-data",
+                "full_url": "Contact LCH for endpoint details",
+                "method": "GET",
+                "description": "Retrieve portfolio positions and risk data",
+                "documentation_link": "Member documentation",
+                "parameters": ["member_id", "date", "currency"],
+                "response_format": "XML/JSON with position data"
+              },
+              {
+                "path": "/api/margin-data",
+                "full_url": "Contact LCH for endpoint details",
+                "method": "GET",
+                "description": "Access margin calculations and requirements",
+                "documentation_link": "Member documentation",
+                "parameters": ["member_id", "portfolio_id"],
+                "response_format": "XML/JSON with margin data"
+              }
+            ],
+            "documentation_sections": {
+              "getting_started": "https://www.lseg.com/content/dam/post-trade/en_us/documents/lch/guides/lch-swapclear-quickstart-guide.pdf",
+              "authentication": "Member onboarding documentation",
+              "endpoints_reference": "ClearLink technical documentation",
+              "code_examples": "Available to clearing members",
+              "sdks_libraries": "Contact LCH for integration support"
+            }
+          },
+          "pricing": {
+            "model": "Membership and transaction-based fees",
+            "membership_required": true,
+            "fee_structure": [
+              "Initial membership fees",
+              "Annual membership fees",
+              "Per-transaction clearing fees",
+              "Risk management fees",
+              "Technology connectivity fees"
+            ],
+            "contact_required": true,
+            "note": "Pricing varies by membership tier and transaction volume"
+          },
+          "data_coverage": {
+            "asset_classes": ["Interest Rate Swaps", "OTC Derivatives"],
+            "markets": ["Global OTC Interest Rate Swap Markets"],
+            "currencies": "21 currencies supported",
+            "data_types": [
+              "Trade submissions",
+              "Portfolio positions",
+              "Risk metrics",
+              "Margin calculations",
+              "Settlement data",
+              "Compression services",
+              "Default management data"
+            ],
+            "coverage_scope": "95% of vanilla IRS market",
+            "maturities": "1 month to 51 years",
+            "update_frequency": "Real-time",
+            "historical_data": "Available to members"
+          },
+          "unique_features": [
+            "World's largest IRS clearing service",
+            "24-hour/5.5-days-a-week service",
+            "Global coverage across 21 currencies",
+            "ClearLink proprietary connectivity platform",
+            "Direct and indirect connectivity options",
+            "46 execution venues connected",
+            "Portfolio compression services",
+            "Advanced risk management",
+            "100+ years of clearing experience",
+            "Regulatory compliance support",
+            "Multilateral netting",
+            "Capital efficiency optimization"
+          ]
+        }
+      },
+      {
+        "name": "OCC (Options Clearing Corporation) API",
+        "provider": "The Options Clearing Corporation",
+        "category": "Options Clearing & Market Data",
+        "api_research_output_schema_v2": {
+          "technical_info": {
+            "base_url": "Contact OCC for technical specifications",
+            "protocol": "Multiple protocols (primarily data feeds)",
+            "data_formats": ["Proprietary formats", "XML", "Flat files"],
+            "auth_method": "Member authentication",
+            "endpoints": [
+              {
+                "path": "/dds/position-data",
+                "full_url": "Contact OCC for endpoint details",
+                "method": "Data Feed",
+                "description": "Data Distribution Service for member position data",
+                "documentation_link": "OCC DDS documentation (member access)",
+                "parameters": ["member_id", "account", "date"],
+                "response_format": "Proprietary format with position and trade data"
+              },
+              {
+                "path": "/dds/market-data",
+                "full_url": "Contact OCC for endpoint details",
+                "method": "Data Feed",
+                "description": "Non-proprietary market data distribution",
+                "documentation_link": "OCC DDS documentation",
+                "parameters": ["data_type", "exchange"],
+                "response_format": "Structured data feeds"
+              },
+              {
+                "path": "/api/series-data",
+                "full_url": "https://www.theocc.com/Market-Data/Market-Data-Reports/Series-and-Trading-Data/",
+                "method": "File Download",
+                "description": "Series and trading data reports",
+                "documentation_link": "https://www.theocc.com/Market-Data/Market-Data-Reports/",
+                "parameters": ["report_type", "date"],
+                "response_format": "CSV/Excel files"
+              },
+              {
+                "path": "/api/volume-data",
+                "full_url": "https://www.theocc.com/Market-Data/Market-Data-Reports/Volume-and-Open-Interest/",
+                "method": "File Download",
+                "description": "Volume and open interest reports",
+                "documentation_link": "https://www.theocc.com/Market-Data/Market-Data-Reports/",
+                "parameters": ["date", "exchange"],
+                "response_format": "CSV/Excel files"
+              }
+            ],
+            "documentation_sections": {
+              "getting_started": "Contact OCC for member onboarding",
+              "authentication": "Member authentication procedures",
+              "endpoints_reference": "DDS technical documentation (member access)",
+              "code_examples": "Available to clearing members",
+              "sdks_libraries": "Contact OCC for integration support"
+            }
+          },
+          "pricing": {
+            "model": "Membership-based with data service fees",
+            "membership_required": true,
+            "services": [
+              {
+                "name": "Data Distribution Service (DDS)",
+                "type": "Member proprietary data",
+                "pricing": "Subscription-based"
+              },
+              {
+                "name": "Public Market Data Reports",
+                "type": "Free access",
+                "pricing": "No charge for basic reports"
+              },
+              {
+                "name": "Enhanced DDS Services",
+                "type": "Real-time and batch data",
+                "pricing": "Contact OCC for pricing"
+              }
+            ],
+            "contact_required": true
+          },
+          "data_coverage": {
+            "asset_classes": ["Listed Options", "Futures Options"],
+            "markets": [
+              "All US Options Exchanges",
+              "CBOE Options",
+              "NYSE Options",
+              "NASDAQ Options",
+              "Other participating exchanges"
+            ],
+            "data_types": [
+              "Volume statistics",
+              "Open interest data",
+              "Put/call ratios",
+              "Series information",
+              "New listings",
+              "Position data (members)",
+              "Trade confirmations (members)",
+              "Risk management data",
+              "Contract adjustments",
+              "Settlement data"
+            ],
+            "update_frequency": "Real-time for DDS, daily for public reports",
+            "historical_data": "Extensive historical data available"
+          },
+          "unique_features": [
+            "Central clearing for all US-listed options",
+            "Data Distribution Service (DDS) for members",
+            "ENCORE clearing system technology",
+            "Real-time and batch data delivery",
+            "Cloud infrastructure adoption",
+            "Comprehensive market data reports",
+            "Contract adjustment notifications",
+            "Risk management analytics",
+            "Settlement and delivery services",
+            "Regulatory reporting support",
+            "TIMS margin methodology",
+            "Cross-margining capabilities"
+          ]
+        }
+      }
+    ],
+    "research_summary": {
+      "common_patterns": [
+        "Most APIs require membership or enterprise-level subscriptions",
+        "Authentication typically involves OAuth 2.0 or proprietary member systems",
+        "JSON is the predominant data format for modern APIs",
+        "Real-time data feeds command premium pricing",
+        "APIs often integrate with existing trading and risk management systems",
+        "Cloud-hosted solutions are becoming standard",
+        "Tiered pricing models based on data usage and redistribution rights"
+      ],
+      "pricing_models": [
+        "Usage-based (per GB or per API call)",
+        "Subscription tiers with different feature sets",
+        "Membership-required with transaction fees",
+        "Enterprise/contact-based pricing",
+        "Free tiers for basic data access"
+      ],
+      "technical_trends": [
+        "WebSocket APIs for real-time streaming",
+        "RESTful APIs for historical and reference data",
+        "Cloud infrastructure (Google Cloud, AWS)",
+        "OAuth 2.0 authentication standard",
+        "JSON format predominance",
+        "Self-service developer portals emerging"
+      ],
+      "data_coverage_breadth": [
+        "CBOE: Options-focused with comprehensive analytics",
+        "ICE: Fixed income and multi-asset global coverage",
+        "CME: Futures and derivatives across all major asset classes",
+        "LCH: Specialized in OTC derivatives clearing",
+        "OCC: Central clearing for US options markets"
+      ]
+    }
+  }
+}

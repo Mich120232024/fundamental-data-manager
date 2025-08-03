@@ -1,0 +1,342 @@
+[
+  {
+    "id": "dun-bradstreet-db-optimizer",
+    "name": "Dun & Bradstreet D&B Direct+ API",
+    "provider": "Dun & Bradstreet",
+    "description": "Comprehensive business intelligence platform providing company data, risk assessments, and analytics for due diligence, credit decisions, and business development. Covers 430+ million companies globally with real-time data enrichment.",
+    "discovery_status": "documented",
+    "tags": ["business intelligence", "risk data", "company profiles", "due diligence", "credit assessment"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Subscription-based with usage tiers - contact sales for custom pricing",
+      "rate_limits": "Varies by subscription tier, typically 1000+ requests per day"
+    },
+    "technical_info": {
+      "base_url": "https://plus.dnb.com/v1",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "OAuth",
+      "endpoints": [
+        {
+          "path": "/token",
+          "full_url": "https://plus.dnb.com/v1/token",
+          "method": "POST",
+          "description": "Obtain OAuth bearer token for API authentication",
+          "documentation_link": "https://directplus.documentation.dnb.com/html/pages/Authentication.html",
+          "parameters": ["grant_type", "client_id", "client_secret"],
+          "response_format": "JSON with access_token and expires_in"
+        },
+        {
+          "path": "/data/duns/{duns}",
+          "full_url": "https://plus.dnb.com/v1/data/duns/{duns}",
+          "method": "GET",
+          "description": "Retrieve comprehensive company data by DUNS number",
+          "documentation_link": "https://directplus.documentation.dnb.com/html/pages/CompanyProfile.html",
+          "parameters": ["duns", "productId", "versionId", "tradeUp", "orderReason"],
+          "response_format": "JSON with detailed company profile and financial data"
+        },
+        {
+          "path": "/data/search/companySearch",
+          "full_url": "https://plus.dnb.com/v1/data/search/companySearch",
+          "method": "POST",
+          "description": "Search for companies using various criteria",
+          "documentation_link": "https://directplus.documentation.dnb.com/html/pages/CompanySearch.html",
+          "parameters": ["searchCriterion", "pageSize", "displayStartSequence"],
+          "response_format": "JSON with array of matching companies"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Company profiles", "Risk assessments", "Financial data", "Business relationships", "Industry classifications"],
+      "geographic_scope": "Global - 430+ million companies worldwide",
+      "update_frequency": "Real-time to daily updates depending on data type",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://directplus.documentation.dnb.com/",
+      "api_summary": "D&B Direct+ provides comprehensive business intelligence with company data, risk assessments, and analytics covering 430+ million companies globally. Features OAuth authentication, multiple data products, and real-time enrichment capabilities for due diligence and credit decisions.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://directplus.documentation.dnb.com/html/pages/GettingStarted.html",
+      "api_reference": "https://directplus.documentation.dnb.com/html/pages/APIReference.html",
+      "examples": "https://directplus.documentation.dnb.com/html/pages/CodeSamples.html",
+      "changelog": null,
+      "status_page": "https://status.dnb.com/"
+    }
+  },
+  {
+    "id": "ravenpack",
+    "name": "RavenPack Analytics API",
+    "provider": "RavenPack",
+    "description": "Advanced news analytics and sentiment analysis platform processing 40,000+ news sources in real-time. Provides structured analytics, sentiment scoring, and event detection for financial markets with 20+ years of historical data.",
+    "discovery_status": "documented",
+    "tags": ["financial news", "sentiment analysis", "market analytics", "real-time data", "algorithmic trading"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom pricing based on data volume - Enterprise licenses start at $50K+ annually",
+      "rate_limits": "JSON endpoint: 10,000 records for granular datasets, 500 entities for indicator datasets"
+    },
+    "technical_info": {
+      "base_url": "https://api.ravenpack.com/1.0",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/datasets",
+          "full_url": "https://api.ravenpack.com/1.0/datasets",
+          "method": "GET",
+          "description": "List available datasets and their configurations",
+          "documentation_link": "https://github.com/RavenPack/python-api#getting-data-from-the-datasets",
+          "parameters": ["start_date", "end_date", "dataset_id"],
+          "response_format": "JSON array of dataset objects with metadata"
+        },
+        {
+          "path": "/datasets/{dataset_id}/json",
+          "full_url": "https://api.ravenpack.com/1.0/datasets/{dataset_id}/json",
+          "method": "GET",
+          "description": "Real-time JSON endpoint for small data requests",
+          "documentation_link": "https://github.com/RavenPack/python-api#downloads-json",
+          "parameters": ["start_date", "end_date", "filter", "having"],
+          "response_format": "JSON with analytics records array"
+        },
+        {
+          "path": "/stream/{dataset_id}",
+          "full_url": "https://api.ravenpack.com/1.0/stream/{dataset_id}",
+          "method": "GET",
+          "description": "Real-time streaming analytics feed",
+          "documentation_link": "https://github.com/RavenPack/python-api#streaming-real-time-data",
+          "parameters": ["dataset_id", "buffer_size"],
+          "response_format": "Streaming JSON analytics records"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["News analytics", "Sentiment scores", "Event detection", "Entity recognition", "Market signals"],
+      "geographic_scope": "Global news coverage in 13 languages",
+      "update_frequency": "Real-time (sub-second) to 15-minute delays",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://github.com/RavenPack/python-api",
+      "api_summary": "RavenPack processes 40,000+ news sources in real-time providing structured analytics, sentiment scoring, and event detection for financial markets. Features 20+ years of historical data, streaming capabilities, and Python/R client libraries for algorithmic trading and risk management.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://github.com/RavenPack/python-api#installation",
+      "api_reference": "https://github.com/RavenPack/python-api#api-documentation",
+      "examples": "https://github.com/RavenPack/python-api#creating-a-new-dataset",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "alexandria-technology",
+    "name": "Alexandria Technology NLP API",
+    "provider": "Alexandria Technology",
+    "description": "AI-powered Natural Language Processing platform specializing in financial text analysis. Provides sentiment analysis, entity recognition, and thematic insights from earnings calls, news, and social media with proven alpha generation capabilities.",
+    "discovery_status": "documented",
+    "tags": ["NLP", "earnings calls", "financial text analysis", "sentiment analysis", "alternative data"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom pricing based on data requirements and usage volume",
+      "rate_limits": "Varies by subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.alexandriatechnology.com/v1",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/earnings-calls",
+          "full_url": "https://api.alexandriatechnology.com/v1/earnings-calls",
+          "method": "GET",
+          "description": "Access earnings call sentiment and thematic analysis",
+          "documentation_link": "https://www.alexandriatechnology.com/earnings-calls",
+          "parameters": ["ticker", "date_range", "sentiment_type", "themes"],
+          "response_format": "JSON with sentiment scores and thematic breakdowns"
+        },
+        {
+          "path": "/news-analytics",
+          "full_url": "https://api.alexandriatechnology.com/v1/news-analytics",
+          "method": "GET",
+          "description": "Company news sentiment analysis from premium publishers",
+          "documentation_link": "https://www.alexandriatechnology.com/products",
+          "parameters": ["ticker", "source", "date_range", "sentiment_threshold"],
+          "response_format": "JSON with news sentiment metrics and article metadata"
+        },
+        {
+          "path": "/esg-analytics",
+          "full_url": "https://api.alexandriatechnology.com/v1/esg-analytics",
+          "method": "GET",
+          "description": "ESG-focused sentiment analysis from news and reports",
+          "documentation_link": "https://www.alexandriatechnology.com/products",
+          "parameters": ["ticker", "esg_category", "date_range", "source_type"],
+          "response_format": "JSON with ESG sentiment scores by category"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Earnings call analysis", "News sentiment", "Social media sentiment", "ESG analysis", "Macro economic analysis"],
+      "geographic_scope": "Global coverage for all publicly traded companies",
+      "update_frequency": "Real-time to 1-hour delays depending on data source",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact Alexandria Technology for documentation",
+      "api_summary": "Alexandria Technology provides AI-powered NLP for financial text analysis with proven alpha generation capabilities. Specializes in earnings call sentiment, news analytics, and ESG analysis with real-time processing and global coverage.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact Alexandria Technology for documentation",
+      "api_reference": "Full API reference available to subscribers",
+      "examples": "Python and R code examples provided",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "amenity-analytics",
+    "name": "Amenity Analytics NLP API",
+    "provider": "Amenity Analytics (Symphony Analytics)",
+    "description": "Enterprise-grade NLP platform for financial text analysis with >90% accuracy. Extracts insights from earnings calls, SEC filings, news, and internal documents. Specializes in deception detection, ESG analysis, and custom financial event taxonomies.",
+    "discovery_status": "documented",
+    "tags": ["NLP", "deception detection", "ESG analysis", "financial text", "earnings calls"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom pricing - AWS Marketplace options available starting from enterprise tiers ($500K+ solutions)",
+      "rate_limits": "Varies by subscription and deployment type"
+    },
+    "technical_info": {
+      "base_url": "https://api.amenityanalytics.com/v1",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/fundamentals",
+          "full_url": "https://api.amenityanalytics.com/v1/fundamentals",
+          "method": "GET",
+          "description": "Fundamental analysis insights from financial documents",
+          "documentation_link": "https://www.amenityanalytics.com/products",
+          "parameters": ["ticker", "document_type", "date_range", "event_categories"],
+          "response_format": "JSON with fundamental event insights and sentiment"
+        },
+        {
+          "path": "/deception-analysis",
+          "full_url": "https://api.amenityanalytics.com/v1/deception-analysis",
+          "method": "POST",
+          "description": "Analyze earnings calls for deceptive language patterns",
+          "documentation_link": "https://www.amenityanalytics.com/products",
+          "parameters": ["transcript_text", "ticker", "call_date"],
+          "response_format": "JSON with deception scores and analysis"
+        },
+        {
+          "path": "/esg-sentiment",
+          "full_url": "https://api.amenityanalytics.com/v1/esg-sentiment",
+          "method": "GET",
+          "description": "ESG sentiment analysis with UN SDG framework",
+          "documentation_link": "https://www.amenityanalytics.com/products/esg",
+          "parameters": ["ticker", "esg_pillar", "date_range", "materiality_threshold"],
+          "response_format": "JSON with ESG sentiment scores and materiality assessments"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Earnings call analysis", "SEC filing analysis", "ESG sentiment", "Deception detection", "Financial events"],
+      "geographic_scope": "Global coverage with multi-language support",
+      "update_frequency": "Real-time to daily depending on data source and deployment",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact Amenity Analytics for documentation",
+      "api_summary": "Amenity Analytics provides enterprise-grade NLP with >90% accuracy for financial text analysis. Specializes in deception detection, ESG analysis, and custom financial event taxonomies with AWS Marketplace availability and SOC 2 compliance.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact Amenity Analytics for documentation",
+      "api_reference": "Complete API reference available to subscribers",
+      "examples": "Python and R integration examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "social-market-analytics",
+    "name": "Social Market Analytics API",
+    "provider": "Context Analytics (Social Market Analytics)",
+    "description": "Licensed Twitter partner providing social media sentiment analysis for financial markets. Aggregates professional investor sentiment from Twitter and social platforms with 9+ years of historical data and proven predictive capabilities.",
+    "discovery_status": "documented",
+    "tags": ["social sentiment", "Twitter data", "financial markets", "meme stocks", "retail sentiment"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom pricing based on data volume and real-time requirements",
+      "rate_limits": "Varies by subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.socialmarketanalytics.com/api",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/search",
+          "full_url": "https://api.socialmarketanalytics.com/api/search",
+          "method": "POST",
+          "description": "Search social sentiment data with filtering options",
+          "documentation_link": "https://api.socialmarketanalytics.com/",
+          "parameters": ["subject", "ontology", "items", "dates", "frequency", "filter", "sort"],
+          "response_format": "JSON/XML with sentiment scores and social metrics"
+        },
+        {
+          "path": "/realtime-sentiment",
+          "full_url": "https://api.socialmarketanalytics.com/api/realtime-sentiment",
+          "method": "GET",
+          "description": "Real-time streaming sentiment data",
+          "documentation_link": "https://api.socialmarketanalytics.com/",
+          "parameters": ["symbols", "stream_type", "buffer_size"],
+          "response_format": "Streaming JSON with real-time sentiment updates"
+        },
+        {
+          "path": "/sentiment-replay",
+          "full_url": "https://api.socialmarketanalytics.com/api/sentiment-replay",
+          "method": "GET",
+          "description": "Historical sentiment data replay",
+          "documentation_link": "https://api.socialmarketanalytics.com/",
+          "parameters": ["symbol", "start_date", "end_date", "granularity"],
+          "response_format": "JSON with historical sentiment time series"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Social sentiment", "Professional investor sentiment", "Retail sentiment", "Meme stock tracking", "Real-time alerts"],
+      "geographic_scope": "Global social media coverage with focus on English-language content",
+      "update_frequency": "Real-time streaming with sub-minute delays",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api.socialmarketanalytics.com/",
+      "api_summary": "Social Market Analytics is a licensed Twitter partner providing social media sentiment analysis for financial markets. Features 9+ years of historical data, real-time streaming, and specialized focus on professional investor sentiment with proven predictive capabilities.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://api.socialmarketanalytics.com/",
+      "api_reference": "https://api.socialmarketanalytics.com/",
+      "examples": "Request examples provided in documentation",
+      "changelog": null,
+      "status_page": null
+    }
+  }
+]

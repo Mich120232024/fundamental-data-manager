@@ -1,0 +1,79 @@
+
+Research these 25 APIs comprehensively using web search and official documentation:
+
+- European Commission CORDIS API (European) - European Commission CORDIS API service
+- UK Research and Innovation (UKRI) Gateway API (UK) - UK Research and Innovation (UKRI) Gateway API service
+- Australian Research Council API (Australian) - Australian Research Council API service
+- Canadian Tri-Agency Grants API (Canadian) - Canadian Tri-Agency Grants API service
+- Research.gov API (Research.gov) - Research.gov API service
+- eRA Commons API (eRA) - eRA Commons API service
+- Wellcome Trust Grants API (Wellcome) - Wellcome Trust Grants API service
+- Bill & Melinda Gates Foundation API (Bill) - Bill & Melinda Gates Foundation API service
+- Research Fish API (Research) - Research Fish API service
+- OpenAlex API (OpenAlex) - OpenAlex API service
+- Altmetric API (Altmetric) - Altmetric API service
+- Plum Analytics API (Plum) - Plum Analytics API service
+- ImpactStory API (ImpactStory) - ImpactStory API service
+- Publons API (Publons) - Publons API service
+- Paperbuzz API (Paperbuzz) - Paperbuzz API service
+- CiteScore API (CiteScore) - CiteScore API service
+- Journal Citation Reports API (Journal) - Journal Citation Reports API service
+- SCImago Journal Rank API (SCImago) - SCImago Journal Rank API service
+- OpenAPC API (OpenAPC) - OpenAPC API service
+- SciVal API (SciVal) - SciVal API service
+- InCites API (InCites) - InCites API service
+- OpenEdition API (OpenEdition) - OpenEdition API service
+- JSTOR API (JSTOR) - JSTOR API service
+- Project MUSE API (Project) - Project MUSE API service
+- HathiTrust API (HathiTrust) - HathiTrust API service
+
+For EACH API, provide this JSON structure using REAL DATA from official sources:
+{
+  "id": "original_api_id",
+  "name": "Official API Name from documentation",
+  "provider": "Actual Organization/Company Name", 
+  "description": "2-3 sentence summary based on official documentation",
+  "discovery_status": "documented",
+  "tags": ["actual", "relevant", "tags"],
+  "access_info": {
+    "is_free": true/false/null,
+    "requires_api_key": true/false/null,
+    "requires_approval": false,
+    "pricing_model": "actual pricing model from docs",
+    "rate_limits": "specific limits from documentation or 'unknown'"
+  },
+  "technical_info": {
+    "base_url": "actual base URL from documentation",
+    "protocol": "REST/GraphQL/SOAP based on documentation",
+    "data_formats": ["formats supported by API"],
+    "auth_method": "actual authentication method",
+    "endpoints": [
+      "List real endpoint paths with descriptions from official docs"
+    ]
+  },
+  "content_summary": {
+    "data_categories": ["Actual data categories from documentation"],
+    "geographic_scope": "based on API documentation",
+    "update_frequency": "from official documentation",
+    "historical_data": true/false/null
+  },
+  "research_notes": {
+    "documentation_url": "actual URL to official API documentation",
+    "sample_endpoints": ["real endpoints from documentation"],
+    "data_quality": "assessment based on documentation quality",
+    "last_researched": "2025-07-28T19:41:42.176945Z",
+    "researcher_notes": "insights from researching official sources",
+    "api_summary": "comprehensive paragraph based on official documentation about capabilities, data, users, and value"
+  }
+}
+
+RESEARCH REQUIREMENTS:
+1. Find OFFICIAL documentation for each API - use web search
+2. Extract REAL endpoint paths from documentation
+3. Get ACTUAL pricing and authentication info
+4. Identify REAL data categories provided
+5. Write comprehensive summary based on official sources
+
+OUTPUT: Return a JSON array with all researched APIs using REAL data only.
+
+BATCH ID: 2

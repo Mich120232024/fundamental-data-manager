@@ -1,0 +1,127 @@
+[
+  {
+    "id": "lexisnexis-patentsight",
+    "name": "LexisNexis PatentSight",
+    "provider": "LexisNexis"
+  },
+  {
+    "id": "ifi-claims-patent-services",
+    "name": "IFI CLAIMS Patent Services",
+    "provider": "IFI"
+  },
+  {
+    "id": "patsnap",
+    "name": "Patsnap",
+    "provider": "Patsnap"
+  },
+  {
+    "id": "premise",
+    "name": "Premise",
+    "provider": "Premise"
+  },
+  {
+    "id": "streetbees",
+    "name": "Streetbees",
+    "provider": "Streetbees"
+  },
+  {
+    "id": "nielsen",
+    "name": "Nielsen",
+    "provider": "Nielsen"
+  },
+  {
+    "id": "iri",
+    "name": "IRI",
+    "provider": "IRI"
+  },
+  {
+    "id": "npd-group",
+    "name": "NPD Group",
+    "provider": "NPD"
+  },
+  {
+    "id": "numerator",
+    "name": "Numerator",
+    "provider": "Numerator"
+  },
+  {
+    "id": "edison-trends",
+    "name": "Edison Trends",
+    "provider": "Edison"
+  },
+  {
+    "id": "rakuten-intelligence",
+    "name": "Rakuten Intelligence",
+    "provider": "Rakuten"
+  },
+  {
+    "id": "vertical-knowledge",
+    "name": "Vertical Knowledge",
+    "provider": "Vertical"
+  },
+  {
+    "id": "importio",
+    "name": "Import.io",
+    "provider": "Import.io"
+  },
+  {
+    "id": "gdelt-project",
+    "name": "GDELT Project",
+    "provider": "GDELT"
+  },
+  {
+    "id": "sentioai",
+    "name": "SentioAI",
+    "provider": "SentioAI"
+  },
+  {
+    "id": "airsage",
+    "name": "AirSage",
+    "provider": "AirSage"
+  },
+  {
+    "id": "inrix",
+    "name": "Inrix",
+    "provider": "Inrix"
+  },
+  {
+    "id": "transunion",
+    "name": "TransUnion",
+    "provider": "TransUnion"
+  },
+  {
+    "id": "equifax",
+    "name": "Equifax",
+    "provider": "Equifax"
+  },
+  {
+    "id": "lendingclub",
+    "name": "LendingClub",
+    "provider": "LendingClub"
+  },
+  {
+    "id": "moodys-analytics",
+    "name": "Moody's Analytics",
+    "provider": "Moody's"
+  },
+  {
+    "id": "dv01",
+    "name": "dv01",
+    "provider": "dv01"
+  },
+  {
+    "id": "climate-engine",
+    "name": "Climate Engine",
+    "provider": "Climate"
+  },
+  {
+    "id": "gro-intelligence",
+    "name": "Gro Intelligence",
+    "provider": "Gro"
+  },
+  {
+    "id": "awhere",
+    "name": "aWhere",
+    "provider": "aWhere"
+  }
+]

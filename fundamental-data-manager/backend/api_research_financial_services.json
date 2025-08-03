@@ -1,0 +1,315 @@
+{
+  "api_research_output": {
+    "research_timestamp": "2025-07-30",
+    "apis_researched": [
+      {
+        "api_name": "Greenwich Associates (Coalition Greenwich)",
+        "provider": "CRISIL Coalition Greenwich",
+        "category": "Financial Research",
+        "description": "Strategic benchmarking, analytics and insights for financial services industry. Custom research and services for investment management, corporate finance, and banking sectors.",
+        "technical_info": {
+          "base_url": "Not publicly available",
+          "protocol": "Unknown - Enterprise solution",
+          "data_formats": ["Custom reports", "Excel", "PDF"],
+          "auth_method": "unknown",
+          "api_availability": "No public API",
+          "endpoints": [],
+          "documentation_sections": {
+            "getting_started": "https://www.greenwich.com/contact",
+            "authentication": "Not publicly documented",
+            "endpoints_reference": "Not available",
+            "code_examples": "Not available",
+            "sdks_libraries": "Not available"
+          }
+        },
+        "data_coverage": {
+          "types": ["Investment management benchmarking", "Corporate finance analytics", "Banking performance metrics", "Market structure analysis"],
+          "geographic_coverage": "Global",
+          "update_frequency": "Varies by research product"
+        },
+        "pricing": {
+          "model": "Custom enterprise pricing",
+          "free_tier": false,
+          "paid_tiers": [
+            {
+              "name": "Enterprise Subscription",
+              "price": "Contact for pricing",
+              "features": ["Custom research", "Benchmarking information", "Strategic consulting"]
+            }
+          ]
+        },
+        "contact_info": {
+          "website": "https://www.greenwich.com",
+          "support": "Contact form on website",
+          "sales": "Direct sales engagement required"
+        },
+        "notes": "Greenwich Associates was acquired by CRISIL in 2020. They provide information through subscription services and custom research engagements rather than public APIs."
+      },
+      {
+        "api_name": "BattleFin Ensemble",
+        "provider": "BattleFin",
+        "category": "Alternative Data Marketplace",
+        "description": "Alternative information platform with 2,400+ datasets from 800+ providers. Includes sandbox, Jupyter notebook integration, and AI-powered discovery.",
+        "technical_info": {
+          "base_url": "API available through Ensemble platform",
+          "protocol": "REST (presumed)",
+          "data_formats": ["JSON", "CSV", "Various provider formats"],
+          "auth_method": "api_key (presumed)",
+          "api_availability": "Available at highest Ensemble tier",
+          "endpoints": [
+            {
+              "path": "/catalog",
+              "full_url": "Not publicly documented",
+              "method": "GET",
+              "description": "Access full catalog with rich attributes via API (FinFeed)",
+              "documentation_link": "Available after platform registration",
+              "parameters": ["Not publicly documented"],
+              "response_format": "JSON with catalog information"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.battlefin.com/ensemble/picker",
+            "authentication": "Available after registration",
+            "endpoints_reference": "Platform access required",
+            "code_examples": "Jupyter notebooks in Sandbox",
+            "sdks_libraries": "Python and R support in platform"
+          }
+        },
+        "data_coverage": {
+          "types": ["Alternative information", "Financial datasets", "Market information", "Consumer behavior", "Satellite information", "Web information"],
+          "geographic_coverage": "Global",
+          "update_frequency": "Varies by provider"
+        },
+        "pricing": {
+          "model": "Tiered subscription + costs",
+          "free_tier": true,
+          "paid_tiers": [
+            {
+              "name": "Free Trial",
+              "price": "$0",
+              "features": ["Limited catalog access", "Basic search"]
+            },
+            {
+              "name": "Enterprise",
+              "price": "Contact for pricing",
+              "features": ["Full API access", "Sandbox", "Jupyter notebooks", "AI-powered search"]
+            }
+          ]
+        },
+        "contact_info": {
+          "website": "https://www.battlefin.com",
+          "support": "Platform support",
+          "sales": "Contact through website"
+        },
+        "notes": "Also available on AWS Marketplace. Ensemble AI provides ChatGPT-like interface for discovery."
+      },
+      {
+        "api_name": "Neudata",
+        "provider": "Neudata Intelligence",
+        "category": "Alternative Data Marketplace",
+        "description": "Alternative information marketplace connecting buyers and sellers. Offers Scout (dataset catalog), Ranger (market information intelligence), and Navigator (management platform).",
+        "technical_info": {
+          "base_url": "Not publicly available",
+          "protocol": "REST (Navigator custom API)",
+          "data_formats": ["Various provider formats"],
+          "auth_method": "unknown",
+          "api_availability": "Through Navigator product only",
+          "endpoints": [],
+          "documentation_sections": {
+            "getting_started": "https://www.neudata.co/contact",
+            "authentication": "Not publicly documented",
+            "endpoints_reference": "Not available",
+            "code_examples": "Not available",
+            "sdks_libraries": "Not available"
+          }
+        },
+        "data_coverage": {
+          "types": ["Alternative information", "Market information", "Traditional information", "Various vendor datasets"],
+          "geographic_coverage": "Global",
+          "update_frequency": "Varies by provider"
+        },
+        "pricing": {
+          "model": "Product-based subscriptions",
+          "free_tier": true,
+          "paid_tiers": [
+            {
+              "name": "Basic Listing",
+              "price": "Free for providers",
+              "features": ["Dataset listing", "Visibility to buyers"]
+            },
+            {
+              "name": "Scout",
+              "price": "Contact for pricing",
+              "features": ["Dataset reports", "Search and compare"]
+            },
+            {
+              "name": "Navigator",
+              "price": "Enterprise pricing",
+              "features": ["Custom API integration", "Management", "Workflow automation"]
+            }
+          ]
+        },
+        "contact_info": {
+          "website": "https://www.neudata.co",
+          "support": "Contact form",
+          "sales": "Direct engagement required"
+        },
+        "notes": "Navigator offers custom API integration with various platforms but no public API documentation available."
+      },
+      {
+        "api_name": "BirdEye API",
+        "provider": "BirdEye",
+        "category": "Reputation Management",
+        "description": "All-in-one customer experience software for online reviews, social media, surveys, insights, and reputation management.",
+        "technical_info": {
+          "base_url": "https://api.birdeye.com",
+          "protocol": "REST",
+          "data_formats": ["JSON"],
+          "auth_method": "api_key",
+          "api_availability": "Available with account",
+          "endpoints": [
+            {
+              "path": "/checkin",
+              "full_url": "https://api.birdeye.com/checkin",
+              "method": "POST",
+              "description": "Send customer information for review requests",
+              "documentation_link": "https://developers.birdeye.com",
+              "parameters": ["businessId", "apiKey", "customer information"],
+              "response_format": "JSON with status"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://developers.birdeye.com",
+            "authentication": "https://support.birdeye.com/automating-text-and-email-campaigns/1205189",
+            "endpoints_reference": "https://developers.birdeye.com",
+            "code_examples": "Available in developer portal",
+            "sdks_libraries": "REST-based, language agnostic"
+          }
+        },
+        "data_coverage": {
+          "types": ["Customer reviews", "Social media mentions", "Survey responses", "Business insights", "Reputation metrics"],
+          "geographic_coverage": "50+ location directories",
+          "update_frequency": "Real-time"
+        },
+        "pricing": {
+          "model": "Subscription-based",
+          "free_tier": false,
+          "paid_tiers": [
+            {
+              "name": "Business",
+              "price": "Contact for pricing",
+              "features": ["API access", "Review automation", "Basic reporting"]
+            },
+            {
+              "name": "Enterprise",
+              "price": "Custom pricing",
+              "features": ["Full API access", "Advanced analytics", "Custom integrations"]
+            }
+          ]
+        },
+        "contact_info": {
+          "website": "https://birdeye.com",
+          "support": "https://support.birdeye.com",
+          "sales": "Contact through website"
+        },
+        "notes": "API key and Business ID obtained through Settings > Integrations > API in your BirdEye account."
+      },
+      {
+        "api_name": "Yelp Fusion API v3",
+        "provider": "Yelp",
+        "category": "Business Data",
+        "description": "Access to local business information across 32 countries including ratings, reviews, photos, hours, and location information.",
+        "technical_info": {
+          "base_url": "https://api.yelp.com/v3",
+          "protocol": "REST",
+          "data_formats": ["JSON"],
+          "auth_method": "api_key",
+          "api_availability": "Public with registration",
+          "endpoints": [
+            {
+              "path": "/businesses/search",
+              "full_url": "https://api.yelp.com/v3/businesses/search",
+              "method": "GET",
+              "description": "Search for businesses by keyword, location, category, etc. Returns up to 1000 results.",
+              "documentation_link": "https://docs.developer.yelp.com/docs/fusion-intro",
+              "parameters": ["term", "location", "latitude", "longitude", "radius", "categories", "limit", "offset"],
+              "response_format": "JSON with business array and metadata"
+            },
+            {
+              "path": "/businesses/{id}",
+              "full_url": "https://api.yelp.com/v3/businesses/{id}",
+              "method": "GET",
+              "description": "Get detailed business information including hours, photos, and attributes",
+              "documentation_link": "https://docs.developer.yelp.com/docs/fusion-intro",
+              "parameters": ["id"],
+              "response_format": "JSON with detailed business information"
+            },
+            {
+              "path": "/businesses/{id}/reviews",
+              "full_url": "https://api.yelp.com/v3/businesses/{id}/reviews",
+              "method": "GET",
+              "description": "Get up to 3 review excerpts for a business",
+              "documentation_link": "https://docs.developer.yelp.com/docs/fusion-intro",
+              "parameters": ["id"],
+              "response_format": "JSON with review excerpts"
+            },
+            {
+              "path": "/autocomplete",
+              "full_url": "https://api.yelp.com/v3/autocomplete",
+              "method": "GET",
+              "description": "Real-time autocomplete suggestions for businesses, search keywords, and categories",
+              "documentation_link": "https://docs.developer.yelp.com/docs/fusion-intro",
+              "parameters": ["text", "latitude", "longitude"],
+              "response_format": "JSON with suggestions"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.yelp.com/developers/documentation/v3/get_started",
+            "authentication": "https://docs.developer.yelp.com/docs/fusion-authentication",
+            "endpoints_reference": "https://docs.developer.yelp.com/docs/fusion-intro",
+            "code_examples": "https://github.com/Yelp/yelp-fusion",
+            "sdks_libraries": "https://github.com/Yelp/yelp-fusion"
+          }
+        },
+        "data_coverage": {
+          "types": ["Business information", "Reviews", "Ratings", "Photos", "Hours", "Categories", "Price levels"],
+          "geographic_coverage": "32 countries",
+          "update_frequency": "Real-time"
+        },
+        "pricing": {
+          "model": "Freemium with paid tiers",
+          "free_tier": true,
+          "paid_tiers": [
+            {
+              "name": "Free Trial",
+              "price": "$0",
+              "features": ["5,000 API calls", "30-day trial", "Basic endpoints"]
+            },
+            {
+              "name": "Plus",
+              "price": "Contact for pricing",
+              "features": ["Higher rate limits", "Up to 3 reviews per business", "Commercial use"]
+            },
+            {
+              "name": "Enterprise",
+              "price": "Custom pricing",
+              "features": ["Highest rate limits", "Up to 7 reviews per business", "Priority support"]
+            }
+          ]
+        },
+        "contact_info": {
+          "website": "https://www.yelp.com/developers",
+          "support": "https://docs.developer.yelp.com",
+          "sales": "https://business.yelp.com/data/products/fusion/"
+        },
+        "notes": "GraphQL API in beta. QPS rate limiting applies. Authorization header format: 'Bearer API_KEY'"
+      }
+    ],
+    "summary": {
+      "total_apis_researched": 5,
+      "apis_with_public_documentation": 2,
+      "apis_requiring_contact": 3,
+      "categories": ["Financial Research", "Alternative Data Marketplace", "Reputation Management", "Business Data"]
+    }
+  }
+}

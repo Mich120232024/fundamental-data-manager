@@ -1,0 +1,127 @@
+[
+  {
+    "id": "reonomy",
+    "name": "Reonomy",
+    "provider": "Reonomy"
+  },
+  {
+    "id": "cherre",
+    "name": "Cherre",
+    "provider": "Cherre"
+  },
+  {
+    "id": "measurabl",
+    "name": "Measurabl",
+    "provider": "Measurabl"
+  },
+  {
+    "id": "weatheralpha",
+    "name": "WeatherAlpha",
+    "provider": "WeatherAlpha"
+  },
+  {
+    "id": "climateai",
+    "name": "ClimateAI",
+    "provider": "ClimateAI"
+  },
+  {
+    "id": "riskfactor",
+    "name": "RiskFactor",
+    "provider": "RiskFactor"
+  },
+  {
+    "id": "cfra-research",
+    "name": "CFRA Research",
+    "provider": "CFRA"
+  },
+  {
+    "id": "new-constructs",
+    "name": "New Constructs",
+    "provider": "New"
+  },
+  {
+    "id": "calcbench",
+    "name": "Calcbench",
+    "provider": "Calcbench"
+  },
+  {
+    "id": "sentieo-document-search",
+    "name": "Sentieo Document Search",
+    "provider": "Sentieo"
+  },
+  {
+    "id": "insiderscore",
+    "name": "InsiderScore",
+    "provider": "InsiderScore"
+  },
+  {
+    "id": "2iq-research",
+    "name": "2iQ Research",
+    "provider": "2iQ"
+  },
+  {
+    "id": "wall-street-horizon",
+    "name": "Wall Street Horizon",
+    "provider": "Wall"
+  },
+  {
+    "id": "alphasense",
+    "name": "AlphaSense",
+    "provider": "AlphaSense"
+  },
+  {
+    "id": "tipranks",
+    "name": "TipRanks",
+    "provider": "TipRanks"
+  },
+  {
+    "id": "seeking-alpha-api",
+    "name": "Seeking Alpha API",
+    "provider": "Seeking"
+  },
+  {
+    "id": "glassdoor",
+    "name": "Glassdoor",
+    "provider": "Glassdoor"
+  },
+  {
+    "id": "indeed-hiring-lab",
+    "name": "Indeed Hiring Lab",
+    "provider": "Indeed"
+  },
+  {
+    "id": "linkup",
+    "name": "LinkUp",
+    "provider": "LinkUp"
+  },
+  {
+    "id": "revelio-labs",
+    "name": "Revelio Labs",
+    "provider": "Revelio"
+  },
+  {
+    "id": "greenwich-associates",
+    "name": "Greenwich Associates",
+    "provider": "Greenwich"
+  },
+  {
+    "id": "battlefin",
+    "name": "BattleFin",
+    "provider": "BattleFin"
+  },
+  {
+    "id": "neudata",
+    "name": "Neudata",
+    "provider": "Neudata"
+  },
+  {
+    "id": "birdeye",
+    "name": "BirdEye",
+    "provider": "BirdEye"
+  },
+  {
+    "id": "yelp-fusion",
+    "name": "Yelp Fusion",
+    "provider": "Yelp"
+  }
+]

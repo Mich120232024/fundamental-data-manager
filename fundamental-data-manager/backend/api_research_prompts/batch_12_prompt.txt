@@ -1,0 +1,79 @@
+
+Research these 25 APIs comprehensively using web search and official documentation:
+
+- Reonomy (Reonomy) - Reonomy service
+- Cherre (Cherre) - Cherre service
+- Measurabl (Measurabl) - Measurabl service
+- WeatherAlpha (WeatherAlpha) - WeatherAlpha service
+- ClimateAI (ClimateAI) - ClimateAI service
+- RiskFactor (RiskFactor) - RiskFactor service
+- CFRA Research (CFRA) - CFRA Research service
+- New Constructs (New) - New Constructs service
+- Calcbench (Calcbench) - Calcbench service
+- Sentieo Document Search (Sentieo) - Sentieo Document Search service
+- InsiderScore (InsiderScore) - InsiderScore service
+- 2iQ Research (2iQ) - 2iQ Research service
+- Wall Street Horizon (Wall) - Wall Street Horizon service
+- AlphaSense (AlphaSense) - AlphaSense service
+- TipRanks (TipRanks) - TipRanks service
+- Seeking Alpha API (Seeking) - Seeking Alpha API service
+- Glassdoor (Glassdoor) - Glassdoor service
+- Indeed Hiring Lab (Indeed) - Indeed Hiring Lab service
+- LinkUp (LinkUp) - LinkUp service
+- Revelio Labs (Revelio) - Revelio Labs service
+- Greenwich Associates (Greenwich) - Greenwich Associates service
+- BattleFin (BattleFin) - BattleFin service
+- Neudata (Neudata) - Neudata service
+- BirdEye (BirdEye) - BirdEye service
+- Yelp Fusion (Yelp) - Yelp Fusion service
+
+For EACH API, provide this JSON structure using REAL DATA from official sources:
+{
+  "id": "original_api_id",
+  "name": "Official API Name from documentation",
+  "provider": "Actual Organization/Company Name", 
+  "description": "2-3 sentence summary based on official documentation",
+  "discovery_status": "documented",
+  "tags": ["actual", "relevant", "tags"],
+  "access_info": {
+    "is_free": true/false/null,
+    "requires_api_key": true/false/null,
+    "requires_approval": false,
+    "pricing_model": "actual pricing model from docs",
+    "rate_limits": "specific limits from documentation or 'unknown'"
+  },
+  "technical_info": {
+    "base_url": "actual base URL from documentation",
+    "protocol": "REST/GraphQL/SOAP based on documentation",
+    "data_formats": ["formats supported by API"],
+    "auth_method": "actual authentication method",
+    "endpoints": [
+      "List real endpoint paths with descriptions from official docs"
+    ]
+  },
+  "content_summary": {
+    "data_categories": ["Actual data categories from documentation"],
+    "geographic_scope": "based on API documentation",
+    "update_frequency": "from official documentation",
+    "historical_data": true/false/null
+  },
+  "research_notes": {
+    "documentation_url": "actual URL to official API documentation",
+    "sample_endpoints": ["real endpoints from documentation"],
+    "data_quality": "assessment based on documentation quality",
+    "last_researched": "2025-07-28T19:41:42.179301Z",
+    "researcher_notes": "insights from researching official sources",
+    "api_summary": "comprehensive paragraph based on official documentation about capabilities, data, users, and value"
+  }
+}
+
+RESEARCH REQUIREMENTS:
+1. Find OFFICIAL documentation for each API - use web search
+2. Extract REAL endpoint paths from documentation
+3. Get ACTUAL pricing and authentication info
+4. Identify REAL data categories provided
+5. Write comprehensive summary based on official sources
+
+OUTPUT: Return a JSON array with all researched APIs using REAL data only.
+
+BATCH ID: 12

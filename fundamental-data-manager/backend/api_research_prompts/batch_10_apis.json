@@ -1,0 +1,127 @@
+[
+  {
+    "id": "sensortower",
+    "name": "SensorTower",
+    "provider": "SensorTower"
+  },
+  {
+    "id": "jettrack",
+    "name": "JetTrack",
+    "provider": "JetTrack"
+  },
+  {
+    "id": "flightaware",
+    "name": "FlightAware",
+    "provider": "FlightAware"
+  },
+  {
+    "id": "ais-automatic-identification-system",
+    "name": "AIS (Automatic Identification System)",
+    "provider": "AIS"
+  },
+  {
+    "id": "marinetraffic",
+    "name": "MarineTraffic",
+    "provider": "MarineTraffic"
+  },
+  {
+    "id": "spire-maritime",
+    "name": "Spire Maritime",
+    "provider": "Spire"
+  },
+  {
+    "id": "windward",
+    "name": "Windward",
+    "provider": "Windward"
+  },
+  {
+    "id": "panjiva",
+    "name": "Panjiva",
+    "provider": "Panjiva"
+  },
+  {
+    "id": "import-genius",
+    "name": "Import Genius",
+    "provider": "Import"
+  },
+  {
+    "id": "enigma-public",
+    "name": "Enigma Public",
+    "provider": "Enigma"
+  },
+  {
+    "id": "dun-bradstreet-db-optimizer",
+    "name": "Dun & Bradstreet D&B Optimizer",
+    "provider": "Dun"
+  },
+  {
+    "id": "ravenpack",
+    "name": "RavenPack",
+    "provider": "RavenPack"
+  },
+  {
+    "id": "alexandria-technology",
+    "name": "Alexandria Technology",
+    "provider": "Alexandria"
+  },
+  {
+    "id": "amenity-analytics",
+    "name": "Amenity Analytics",
+    "provider": "Amenity"
+  },
+  {
+    "id": "social-market-analytics",
+    "name": "Social Market Analytics",
+    "provider": "Social"
+  },
+  {
+    "id": "stocktwits-api",
+    "name": "StockTwits API",
+    "provider": "StockTwits"
+  },
+  {
+    "id": "isentium",
+    "name": "iSentium",
+    "provider": "iSentium"
+  },
+  {
+    "id": "dataminr",
+    "name": "Dataminr",
+    "provider": "Dataminr"
+  },
+  {
+    "id": "sesamm",
+    "name": "SESAMm",
+    "provider": "SESAMm"
+  },
+  {
+    "id": "accern",
+    "name": "Accern",
+    "provider": "Accern"
+  },
+  {
+    "id": "thinknum-alternative-data",
+    "name": "Thinknum Alternative Data",
+    "provider": "Thinknum"
+  },
+  {
+    "id": "eagle-alpha",
+    "name": "Eagle Alpha",
+    "provider": "Eagle"
+  },
+  {
+    "id": "quandl-alternative-data",
+    "name": "Quandl Alternative Data",
+    "provider": "Quandl"
+  },
+  {
+    "id": "7park-data",
+    "name": "7Park Data",
+    "provider": "7Park"
+  },
+  {
+    "id": "alpha-hat",
+    "name": "Alpha Hat",
+    "provider": "Alpha"
+  }
+]

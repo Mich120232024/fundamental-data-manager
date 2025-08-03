@@ -1,0 +1,127 @@
+[
+  {
+    "id": "scale-ai-api",
+    "name": "Scale AI API",
+    "provider": "Scale"
+  },
+  {
+    "id": "pinecone-api",
+    "name": "Pinecone API",
+    "provider": "Pinecone"
+  },
+  {
+    "id": "weaviate-api",
+    "name": "Weaviate API",
+    "provider": "Weaviate"
+  },
+  {
+    "id": "chroma-api",
+    "name": "Chroma API",
+    "provider": "Chroma"
+  },
+  {
+    "id": "milvus-api",
+    "name": "Milvus API",
+    "provider": "Milvus"
+  },
+  {
+    "id": "langsmith-api",
+    "name": "LangSmith API",
+    "provider": "LangSmith"
+  },
+  {
+    "id": "promptlayer-api",
+    "name": "PromptLayer API",
+    "provider": "PromptLayer"
+  },
+  {
+    "id": "weights-biases-api",
+    "name": "Weights & Biases API",
+    "provider": "Weights"
+  },
+  {
+    "id": "labelbox-api",
+    "name": "Labelbox API",
+    "provider": "Labelbox"
+  },
+  {
+    "id": "hugging-face-hub-api",
+    "name": "Hugging Face Hub API",
+    "provider": "Hugging"
+  },
+  {
+    "id": "opencv-api",
+    "name": "OpenCV API",
+    "provider": "OpenCV"
+  },
+  {
+    "id": "modular-ai-api",
+    "name": "Modular AI API",
+    "provider": "Modular"
+  },
+  {
+    "id": "databricks-api",
+    "name": "Databricks API",
+    "provider": "Databricks"
+  },
+  {
+    "id": "datarobot-api",
+    "name": "DataRobot API",
+    "provider": "DataRobot"
+  },
+  {
+    "id": "h2oai-api",
+    "name": "H2O.ai API",
+    "provider": "H2O.ai"
+  },
+  {
+    "id": "mongodb-atlas-vector-search-api",
+    "name": "MongoDB Atlas Vector Search API",
+    "provider": "MongoDB"
+  },
+  {
+    "id": "qdrant-api",
+    "name": "Qdrant API",
+    "provider": "Qdrant"
+  },
+  {
+    "id": "redis-vector-search-api",
+    "name": "Redis Vector Search API",
+    "provider": "Redis"
+  },
+  {
+    "id": "inflection-api",
+    "name": "Inflection API",
+    "provider": "Inflection"
+  },
+  {
+    "id": "characterai-api",
+    "name": "Character.AI API",
+    "provider": "Character.AI"
+  },
+  {
+    "id": "together-ai-api",
+    "name": "Together AI API",
+    "provider": "Together"
+  },
+  {
+    "id": "groq-api",
+    "name": "Groq API",
+    "provider": "Groq"
+  },
+  {
+    "id": "nvidia-nemo-api",
+    "name": "Nvidia NeMo API",
+    "provider": "Nvidia"
+  },
+  {
+    "id": "nvidia-picasso-api",
+    "name": "Nvidia Picasso API",
+    "provider": "Nvidia"
+  },
+  {
+    "id": "langfuse-api",
+    "name": "Langfuse API",
+    "provider": "Langfuse"
+  }
+]

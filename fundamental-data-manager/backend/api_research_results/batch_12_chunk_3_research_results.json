@@ -1,0 +1,297 @@
+[
+  {
+    "id": "insiderscore",
+    "name": "InsiderScore API",
+    "provider": "InsiderScore (Hazeltree)",
+    "description": "Comprehensive insider trading data and analytics providing actionable intelligence on corporate insider behavior with proprietary scoring methodology for investment decisions.",
+    "discovery_status": "documented",
+    "tags": ["insider trading", "investment intelligence", "regulatory filings", "trading signals", "corporate insiders"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise licensing",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "Contact InsiderScore for API endpoint",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV", "XML"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/transactions",
+          "full_url": "Contact for endpoint details",
+          "method": "GET",
+          "description": "Real-time insider transaction data with proprietary scoring",
+          "documentation_link": "Available with subscription",
+          "parameters": ["ticker", "date_range", "insider_type", "transaction_type"],
+          "response_format": "JSON with transaction details and InsiderScore ratings"
+        },
+        {
+          "path": "/analytics",
+          "full_url": "Contact for endpoint details",
+          "method": "GET",
+          "description": "Aggregate insider trading analytics and trends",
+          "documentation_link": "Available with subscription",
+          "parameters": ["company", "sector", "timeframe"],
+          "response_format": "JSON with analytics and trend data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Insider transactions", "Form 4 filings", "10b5-1 plans", "Proprietary scores", "Trading signals"],
+      "geographic_scope": "US public companies",
+      "update_frequency": "Real-time as filings are processed",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact InsiderScore directly",
+      "api_summary": "InsiderScore provides real-time insider trading data with proprietary scoring methodology. Part of Hazeltree, offers enterprise API access for institutional investors.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact sales",
+      "api_reference": "Enterprise documentation",
+      "examples": "Provided with access",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "2iq-research",
+    "name": "2iQ Research API",
+    "provider": "2iQ Research",
+    "description": "Event-driven equity research platform providing systematic analysis of corporate events, earnings, and market-moving developments with quantitative insights for institutional investors.",
+    "discovery_status": "documented",
+    "tags": ["event-driven research", "earnings analysis", "quantitative research", "equity events", "systematic trading"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Institutional subscription",
+      "rate_limits": "Enterprise-grade limits"
+    },
+    "technical_info": {
+      "base_url": "Contact 2iQ Research for API access",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/events",
+          "full_url": "Platform-specific endpoint",
+          "method": "GET",
+          "description": "Access systematic event analysis and predictions",
+          "documentation_link": "Available with subscription",
+          "parameters": ["event_type", "ticker", "date_range"],
+          "response_format": "JSON with event analysis and quantitative metrics"
+        },
+        {
+          "path": "/earnings",
+          "full_url": "Platform-specific endpoint",
+          "method": "GET",
+          "description": "Earnings event analysis with pre and post-event metrics",
+          "documentation_link": "Available with subscription",
+          "parameters": ["ticker", "quarter", "metrics"],
+          "response_format": "JSON with earnings analysis"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Corporate events", "Earnings analysis", "Event predictions", "Quantitative signals", "Market impact"],
+      "geographic_scope": "Global equities",
+      "update_frequency": "Real-time event processing",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://2iqresearch.com/",
+      "api_summary": "2iQ Research provides systematic event-driven research with quantitative analysis of corporate events. Institutional-grade API for systematic trading strategies.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for access",
+      "api_reference": "Institutional documentation",
+      "examples": "Available with platform",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "wall-street-horizon",
+    "name": "Wall Street Horizon API",
+    "provider": "Wall Street Horizon",
+    "description": "Corporate event data platform providing comprehensive calendar of earnings announcements, conference presentations, and other market-moving events for global equities.",
+    "discovery_status": "documented",
+    "tags": ["corporate events", "earnings calendar", "event data", "conference calls", "market events"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Subscription-based",
+      "rate_limits": "Based on package"
+    },
+    "technical_info": {
+      "base_url": "https://api.wallstreethorizon.com",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/earnings",
+          "full_url": "https://api.wallstreethorizon.com/v2/earnings",
+          "method": "GET",
+          "description": "Upcoming and historical earnings announcement dates",
+          "documentation_link": "Contact for API documentation",
+          "parameters": ["ticker", "start_date", "end_date", "confirmed_only"],
+          "response_format": "JSON with earnings calendar data"
+        },
+        {
+          "path": "/events",
+          "full_url": "https://api.wallstreethorizon.com/v2/events",
+          "method": "GET",
+          "description": "Comprehensive corporate event calendar",
+          "documentation_link": "Contact for API documentation",
+          "parameters": ["event_type", "ticker", "date_range"],
+          "response_format": "JSON with event details"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Earnings dates", "Conference calls", "Investor meetings", "Guidance updates", "Corporate actions"],
+      "geographic_scope": "Global public companies",
+      "update_frequency": "Real-time updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.wallstreethorizon.com/",
+      "api_summary": "Wall Street Horizon provides comprehensive corporate event data including earnings dates, conference calls, and investor meetings. RESTful API with JSON/CSV output.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact sales",
+      "api_reference": "Available with subscription",
+      "examples": "Provided with access",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "alphasense",
+    "name": "AlphaSense API",
+    "provider": "AlphaSense",
+    "description": "AI-powered market intelligence platform searching across millions of documents including broker research, company filings, earnings transcripts, and expert calls for institutional investors.",
+    "discovery_status": "documented",
+    "tags": ["market intelligence", "AI search", "broker research", "earnings transcripts", "expert networks"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise subscription",
+      "rate_limits": "Enterprise-grade"
+    },
+    "technical_info": {
+      "base_url": "https://api.alpha-sense.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "OAuth 2.0",
+      "endpoints": [
+        {
+          "path": "/search",
+          "full_url": "https://api.alpha-sense.com/v1/search",
+          "method": "POST",
+          "description": "AI-powered search across all document types",
+          "documentation_link": "Enterprise documentation",
+          "parameters": ["query", "filters", "date_range", "document_types"],
+          "response_format": "JSON with search results and snippets"
+        },
+        {
+          "path": "/documents/{id}",
+          "full_url": "https://api.alpha-sense.com/v1/documents/{id}",
+          "method": "GET",
+          "description": "Retrieve full document content and metadata",
+          "documentation_link": "Enterprise documentation",
+          "parameters": ["document_id", "sections"],
+          "response_format": "JSON with document content"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Broker research", "Company filings", "Earnings calls", "Expert transcripts", "News"],
+      "geographic_scope": "Global coverage",
+      "update_frequency": "Real-time ingestion",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.alpha-sense.com/",
+      "api_summary": "AlphaSense provides AI-powered search across broker research, filings, and transcripts. Enterprise API with OAuth 2.0 authentication for institutional clients.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Enterprise onboarding",
+      "api_reference": "Available with subscription",
+      "examples": "Provided during implementation",
+      "changelog": "Updated regularly",
+      "status_page": null
+    }
+  },
+  {
+    "id": "tipranks",
+    "name": "TipRanks API",
+    "provider": "TipRanks",
+    "description": "Financial accountability platform aggregating and ranking analyst recommendations, insider trading, hedge fund activity, and crowd wisdom with proprietary scoring algorithms.",
+    "discovery_status": "documented",
+    "tags": ["analyst ratings", "stock recommendations", "insider activity", "hedge funds", "crowd sentiment"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Subscription tiers",
+      "rate_limits": "Based on plan"
+    },
+    "technical_info": {
+      "base_url": "https://api.tipranks.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/api/stocks/getData",
+          "full_url": "https://api.tipranks.com/api/stocks/getData",
+          "method": "GET",
+          "description": "Comprehensive stock data including ratings and sentiment",
+          "documentation_link": "Available with API access",
+          "parameters": ["ticker", "include"],
+          "response_format": "JSON with ratings, price targets, and sentiment"
+        },
+        {
+          "path": "/api/analysts/{id}",
+          "full_url": "https://api.tipranks.com/api/analysts/{id}",
+          "method": "GET",
+          "description": "Analyst performance metrics and track record",
+          "documentation_link": "Available with API access",
+          "parameters": ["analyst_id"],
+          "response_format": "JSON with analyst statistics"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Analyst ratings", "Price targets", "Insider trading", "Hedge fund positions", "News sentiment"],
+      "geographic_scope": "US markets primarily",
+      "update_frequency": "Real-time updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.tipranks.com/api",
+      "api_summary": "TipRanks aggregates analyst ratings, insider trading, and hedge fund activity with proprietary scoring. API provides comprehensive stock sentiment and recommendation data.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for API access",
+      "api_reference": "Provided with subscription",
+      "examples": "Available in documentation",
+      "changelog": null,
+      "status_page": null
+    }
+  }
+]

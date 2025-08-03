@@ -1,0 +1,342 @@
+[
+  {
+    "id": "sensortower",
+    "name": "SensorTower API",
+    "provider": "SensorTower",
+    "description": "Enterprise-level mobile app intelligence platform providing app store optimization data, competitive intelligence, market insights, and user acquisition analytics across iOS, Android, and global app stores including China.",
+    "discovery_status": "documented",
+    "tags": ["mobile analytics", "app intelligence", "market data", "ASO", "competitive analysis"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom enterprise pricing starting at thousands per month",
+      "rate_limits": "Varies by subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.sensortower.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key in header",
+      "endpoints": [
+        {
+          "path": "/v1/ios/apps/{app_id}/download_estimates",
+          "full_url": "https://api.sensortower.com/v1/ios/apps/{app_id}/download_estimates",
+          "method": "GET",
+          "description": "Get download estimates for iOS apps by country and date range",
+          "documentation_link": "https://sensortower.com/api-documentation",
+          "parameters": ["app_id", "country", "start_date", "end_date", "granularity"],
+          "response_format": "JSON with download estimates"
+        },
+        {
+          "path": "/v1/android/apps/{app_id}/revenue_estimates",
+          "full_url": "https://api.sensortower.com/v1/android/apps/{app_id}/revenue_estimates",
+          "method": "GET",
+          "description": "Get revenue estimates for Android apps",
+          "documentation_link": "https://sensortower.com/api-documentation",
+          "parameters": ["app_id", "country", "start_date", "end_date"],
+          "response_format": "JSON with revenue data"
+        },
+        {
+          "path": "/v1/ios/keywords/rankings",
+          "full_url": "https://api.sensortower.com/v1/ios/keywords/rankings",
+          "method": "GET",
+          "description": "Get keyword rankings for iOS apps",
+          "documentation_link": "https://sensortower.com/api-documentation",
+          "parameters": ["keywords", "country", "device", "limit"],
+          "response_format": "JSON with ranking data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["App downloads", "Revenue estimates", "Keyword rankings", "User acquisition", "Market share", "Category rankings"],
+      "geographic_scope": "Global including China app stores",
+      "update_frequency": "Daily",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://sensortower.com/api-documentation",
+      "api_summary": "SensorTower provides enterprise-grade mobile app intelligence with comprehensive data on app performance, market trends, and competitive intelligence. The platform covers iOS App Store, Google Play, and major Chinese app stores with detailed analytics on downloads, revenue, keywords, and user acquisition.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://sensortower.com/api/getting-started",
+      "api_reference": "https://sensortower.com/api-documentation",
+      "examples": "https://sensortower.com/api/examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "jettrack",
+    "name": "Aviation Edge Flight Tracker API",
+    "provider": "Aviation Edge",
+    "description": "Real-time global flight tracking API providing live flight positions, schedules, routes, airline and airport data with coverage of over 10,000 aircraft simultaneously tracked worldwide.",
+    "discovery_status": "documented",
+    "tags": ["aviation", "flight tracking", "real-time", "aircraft data", "airline schedules"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Freemium - Free tier with 100 calls/month, paid plans from $7-$2000/month",
+      "rate_limits": "100-unlimited calls/month based on plan"
+    },
+    "technical_info": {
+      "base_url": "https://aviation-edge.com/v2/public",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key as query parameter",
+      "endpoints": [
+        {
+          "path": "/flights",
+          "full_url": "https://aviation-edge.com/v2/public/flights",
+          "method": "GET",
+          "description": "Get real-time flight tracking data for all flights or specific aircraft",
+          "documentation_link": "https://aviation-edge.com/developers/",
+          "parameters": ["key", "flightIata", "flightIcao", "depIata", "arrIata", "airlineIata", "limit"],
+          "response_format": "JSON array with flight positions and status"
+        },
+        {
+          "path": "/timetable",
+          "full_url": "https://aviation-edge.com/v2/public/timetable",
+          "method": "GET",
+          "description": "Access airline schedules and flight timetables",
+          "documentation_link": "https://aviation-edge.com/developers/",
+          "parameters": ["key", "iataCode", "type", "date"],
+          "response_format": "JSON with scheduled flights"
+        },
+        {
+          "path": "/routes",
+          "full_url": "https://aviation-edge.com/v2/public/routes",
+          "method": "GET",
+          "description": "Get airline route information between airports",
+          "documentation_link": "https://aviation-edge.com/developers/",
+          "parameters": ["key", "departureIata", "arrivalIata", "airlineIata"],
+          "response_format": "JSON with route details"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Live flight positions", "Flight schedules", "Airline routes", "Airport data", "Aircraft information", "Historical flight data"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time (every 30 seconds)",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://aviation-edge.com/developers/",
+      "api_summary": "Aviation Edge provides comprehensive aviation data APIs including real-time flight tracking, schedules, routes, and static aviation data. The platform tracks over 10,000 aircraft simultaneously with global coverage and offers both real-time and historical flight information.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://aviation-edge.com/getting-started",
+      "api_reference": "https://aviation-edge.com/developers/",
+      "examples": "https://aviation-edge.com/code-samples",
+      "changelog": null,
+      "status_page": "https://status.aviation-edge.com"
+    }
+  },
+  {
+    "id": "flightaware",
+    "name": "FlightAware AeroAPI",
+    "provider": "FlightAware",
+    "description": "Enterprise-grade flight tracking API offering real-time, historical, and predictive flight data with global coverage, machine learning-powered predictions, and comprehensive aviation intelligence.",
+    "discovery_status": "documented",
+    "tags": ["aviation", "flight tracking", "predictive analytics", "historical data", "enterprise API"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Query-based pricing starting at $0.002 per query with monthly minimums",
+      "rate_limits": "40 queries/minute standard, higher limits available"
+    },
+    "technical_info": {
+      "base_url": "https://aeroapi.flightaware.com/aeroapi",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key in x-apikey header",
+      "endpoints": [
+        {
+          "path": "/flights/{ident}",
+          "full_url": "https://aeroapi.flightaware.com/aeroapi/flights/{ident}",
+          "method": "GET",
+          "description": "Get flight information by flight identifier with real-time positions",
+          "documentation_link": "https://flightaware.com/aeroapi/portal/documentation",
+          "parameters": ["ident", "start", "end", "max_pages"],
+          "response_format": "JSON with detailed flight data"
+        },
+        {
+          "path": "/flights/search",
+          "full_url": "https://aeroapi.flightaware.com/aeroapi/flights/search",
+          "method": "GET",
+          "description": "Search flights using advanced query syntax",
+          "documentation_link": "https://flightaware.com/aeroapi/portal/documentation",
+          "parameters": ["query", "start", "end", "max_pages"],
+          "response_format": "JSON array of matching flights"
+        },
+        {
+          "path": "/airports/{airport_code}/flights",
+          "full_url": "https://aeroapi.flightaware.com/aeroapi/airports/{airport_code}/flights",
+          "method": "GET",
+          "description": "Get arrivals and departures for an airport",
+          "documentation_link": "https://flightaware.com/aeroapi/portal/documentation",
+          "parameters": ["airport_code", "type", "start", "end"],
+          "response_format": "JSON with airport flight activity"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Real-time positions", "Historical flights since 2011", "Predictive ETAs", "Weather impacts", "Airport delays", "Aircraft owner/operator data"],
+      "geographic_scope": "Global - 195+ countries",
+      "update_frequency": "Real-time with sub-minute updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://flightaware.com/aeroapi/portal/documentation",
+      "api_summary": "FlightAware AeroAPI is an enterprise-grade aviation data platform providing real-time flight tracking, historical data since 2011, and machine learning-powered predictive analytics through Foresight. The API offers comprehensive coverage with data from ADS-B, radar, datalink, and other sources.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://flightaware.com/aeroapi/portal/getting-started",
+      "api_reference": "https://flightaware.com/aeroapi/portal/documentation",
+      "examples": "https://flightaware.com/aeroapi/portal/resources",
+      "changelog": "https://flightaware.com/aeroapi/portal/changelog",
+      "status_page": "https://flightaware.com/live/flight/status"
+    }
+  },
+  {
+    "id": "ais-automatic-identification-system",
+    "name": "AIS (Automatic Identification System) APIs",
+    "provider": "Multiple Providers (MarineTraffic, VesselFinder, AISHub)",
+    "description": "Maritime vessel tracking APIs providing real-time and historical ship positions, port calls, vessel details, and voyage information through the global Automatic Identification System network.",
+    "discovery_status": "documented",
+    "tags": ["maritime", "vessel tracking", "shipping", "AIS data", "port operations"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Varies by provider - Free tiers available, enterprise pricing from $100-10000/month",
+      "rate_limits": "Provider-dependent, typically 10-1000 calls/minute"
+    },
+    "technical_info": {
+      "base_url": "https://services.marinetraffic.com/api (example)",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML", "CSV"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/exportvessel/v8",
+          "full_url": "https://services.marinetraffic.com/api/exportvessel/v8",
+          "method": "GET",
+          "description": "Get real-time vessel positions and voyage information",
+          "documentation_link": "https://www.marinetraffic.com/en/ais-api-services",
+          "parameters": ["apikey", "period", "msgtype", "protocol"],
+          "response_format": "JSON/XML/CSV with vessel data"
+        },
+        {
+          "path": "/portcalls/v4",
+          "full_url": "https://services.marinetraffic.com/api/portcalls/v4",
+          "method": "GET",
+          "description": "Retrieve vessel port call history and ETAs",
+          "documentation_link": "https://www.marinetraffic.com/en/ais-api-services",
+          "parameters": ["apikey", "imo", "fromdate", "todate"],
+          "response_format": "JSON with port call records"
+        },
+        {
+          "path": "/exportroutes/v2",
+          "full_url": "https://services.marinetraffic.com/api/exportroutes/v2",
+          "method": "GET",
+          "description": "Get vessel route history and predictions",
+          "documentation_link": "https://www.marinetraffic.com/en/ais-api-services",
+          "parameters": ["apikey", "mmsi", "fromdate", "todate"],
+          "response_format": "JSON with route waypoints"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Vessel positions", "Port calls", "Voyage data", "Vessel particulars", "Route history", "ETA predictions"],
+      "geographic_scope": "Global - all navigable waters",
+      "update_frequency": "Real-time (2-10 minute intervals)",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Various - MarineTraffic, VesselFinder, AISHub",
+      "api_summary": "AIS APIs provide access to the global maritime vessel tracking network. Multiple providers offer varying levels of coverage, features, and pricing. Common capabilities include real-time positions, historical tracks, port calls, and vessel details. Providers include MarineTraffic (largest), VesselFinder, AISHub (free tier), and specialized services.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Provider-specific",
+      "api_reference": "Provider-specific",
+      "examples": "Provider-specific",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "marinetraffic",
+    "name": "MarineTraffic API Services",
+    "provider": "MarineTraffic (Kpler)",
+    "description": "World's largest AIS network providing comprehensive maritime intelligence including real-time vessel tracking, predictive analytics, port congestion data, and fleet management through APIs covering 180,000+ vessels daily.",
+    "discovery_status": "documented",
+    "tags": ["maritime intelligence", "vessel tracking", "port analytics", "fleet management", "predictive ETA"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Credit-based subscriptions from $170/month to enterprise",
+      "rate_limits": "Based on subscription tier and credits"
+    },
+    "technical_info": {
+      "base_url": "https://services.marinetraffic.com/api",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML", "CSV"],
+      "auth_method": "API key as parameter",
+      "endpoints": [
+        {
+          "path": "/exportvessel/v8",
+          "full_url": "https://services.marinetraffic.com/api/exportvessel/v8",
+          "method": "GET",
+          "description": "Real-time vessel positions with 2-minute satellite updates",
+          "documentation_link": "https://www.marinetraffic.com/en/ais-api-services/documentation",
+          "parameters": ["apikey", "period", "msgtype", "protocol", "limit"],
+          "response_format": "JSON/XML/CSV with vessel positions"
+        },
+        {
+          "path": "/expectedarrivals/v4",
+          "full_url": "https://services.marinetraffic.com/api/expectedarrivals/v4",
+          "method": "GET",
+          "description": "Predictive vessel arrivals with ML-powered ETAs",
+          "documentation_link": "https://www.marinetraffic.com/en/ais-api-services/documentation",
+          "parameters": ["apikey", "portid", "fromdate", "todate", "shiptype"],
+          "response_format": "JSON with predicted arrivals"
+        },
+        {
+          "path": "/portcongestion/v2",
+          "full_url": "https://services.marinetraffic.com/api/portcongestion/v2",
+          "method": "GET",
+          "description": "Port congestion metrics and wait times",
+          "documentation_link": "https://www.marinetraffic.com/en/ais-api-services/documentation",
+          "parameters": ["apikey", "portid", "date"],
+          "response_format": "JSON with congestion analytics"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Real-time tracking", "Predictive ETAs", "Port operations", "Fleet analytics", "Historical voyages", "Weather routing"],
+      "geographic_scope": "Global - 180,000+ vessels, 10,000+ ports",
+      "update_frequency": "Real-time with 2-minute satellite updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.marinetraffic.com/en/ais-api-services/documentation",
+      "api_summary": "MarineTraffic operates the world's largest AIS vessel tracking network, now part of Kpler's maritime intelligence platform. The API services provide comprehensive vessel tracking, predictive analytics, port intelligence, and fleet management capabilities with coverage of 180,000+ vessels and integration with satellite AIS for global coverage.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://www.marinetraffic.com/en/ais-api-services/getting-started",
+      "api_reference": "https://www.marinetraffic.com/en/ais-api-services/documentation",
+      "examples": "https://www.marinetraffic.com/en/ais-api-services/examples",
+      "changelog": "https://www.marinetraffic.com/en/ais-api-services/changelog",
+      "status_page": "https://status.marinetraffic.com"
+    }
+  }
+]

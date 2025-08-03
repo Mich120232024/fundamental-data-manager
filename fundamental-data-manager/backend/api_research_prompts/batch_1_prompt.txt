@@ -1,0 +1,79 @@
+
+Research these 25 APIs comprehensively using web search and official documentation:
+
+- CrossRef API (CrossRef) - CrossRef API service
+- ORCID API (ORCID) - ORCID API service
+- Web of Science API (Web) - Web of Science API service
+- Scopus API (Scopus) - Scopus API service
+- PubMed API (PubMed) - PubMed API service
+- Google Scholar API (Google) - Google Scholar API service
+- CORE API (CORE) - CORE API service
+- Microsoft Academic Graph API (Microsoft) - Microsoft Academic Graph API service
+- Semantic Scholar API (Semantic) - Semantic Scholar API service
+- Dimensions API (Dimensions) - Dimensions API service
+- Europe PMC API (Europe) - Europe PMC API service
+- ResearchGate API (ResearchGate) - ResearchGate API service
+- Academia.edu API (Academia.edu) - Academia.edu API service
+- arXiv API (arXiv) - arXiv API service
+- OSF (Open Science Framework) API (OSF) - OSF (Open Science Framework) API service
+- Zenodo API (Zenodo) - Zenodo API service
+- Figshare API (Figshare) - Figshare API service
+- DataCite API (DataCite) - DataCite API service
+- OpenAIRE API (OpenAIRE) - OpenAIRE API service
+- Unpaywall API (Unpaywall) - Unpaywall API service
+- DOAJ (Directory of Open Access Journals) API (DOAJ) - DOAJ (Directory of Open Access Journals) API service
+- Lens.org API (Lens.org) - Lens.org API service
+- OpenCitations API (OpenCitations) - OpenCitations API service
+- NIH RePORTER API (NIH) - NIH RePORTER API service
+- NSF Award Search API (NSF) - NSF Award Search API service
+
+For EACH API, provide this JSON structure using REAL DATA from official sources:
+{
+  "id": "original_api_id",
+  "name": "Official API Name from documentation",
+  "provider": "Actual Organization/Company Name", 
+  "description": "2-3 sentence summary based on official documentation",
+  "discovery_status": "documented",
+  "tags": ["actual", "relevant", "tags"],
+  "access_info": {
+    "is_free": true/false/null,
+    "requires_api_key": true/false/null,
+    "requires_approval": false,
+    "pricing_model": "actual pricing model from docs",
+    "rate_limits": "specific limits from documentation or 'unknown'"
+  },
+  "technical_info": {
+    "base_url": "actual base URL from documentation",
+    "protocol": "REST/GraphQL/SOAP based on documentation",
+    "data_formats": ["formats supported by API"],
+    "auth_method": "actual authentication method",
+    "endpoints": [
+      "List real endpoint paths with descriptions from official docs"
+    ]
+  },
+  "content_summary": {
+    "data_categories": ["Actual data categories from documentation"],
+    "geographic_scope": "based on API documentation",
+    "update_frequency": "from official documentation",
+    "historical_data": true/false/null
+  },
+  "research_notes": {
+    "documentation_url": "actual URL to official API documentation",
+    "sample_endpoints": ["real endpoints from documentation"],
+    "data_quality": "assessment based on documentation quality",
+    "last_researched": "2025-07-28T19:41:42.176584Z",
+    "researcher_notes": "insights from researching official sources",
+    "api_summary": "comprehensive paragraph based on official documentation about capabilities, data, users, and value"
+  }
+}
+
+RESEARCH REQUIREMENTS:
+1. Find OFFICIAL documentation for each API - use web search
+2. Extract REAL endpoint paths from documentation
+3. Get ACTUAL pricing and authentication info
+4. Identify REAL data categories provided
+5. Write comprehensive summary based on official sources
+
+OUTPUT: Return a JSON array with all researched APIs using REAL data only.
+
+BATCH ID: 1

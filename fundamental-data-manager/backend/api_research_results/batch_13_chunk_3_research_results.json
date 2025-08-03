@@ -1,0 +1,297 @@
+[
+  {
+    "id": "rakuten-intelligence",
+    "name": "Rakuten Intelligence API",
+    "provider": "Rakuten Intelligence",
+    "description": "E-commerce market intelligence platform that extracts and analyzes consumer purchase behavior data from email receipts, providing real-time insights into digital commerce transactions and market trends.",
+    "discovery_status": "documented",
+    "tags": ["e-commerce intelligence", "receipt analysis", "consumer behavior", "market trends", "purchase data"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Consumption-based ($299/month standard)",
+      "rate_limits": "1 request per second per Application ID"
+    },
+    "technical_info": {
+      "base_url": "https://api.slice.com",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV"],
+      "auth_method": "OAuth 2.0 + DSA signature",
+      "endpoints": [
+        {
+          "path": "/api/v1/orders",
+          "full_url": "https://api.slice.com/api/v1/orders",
+          "method": "GET",
+          "description": "Access comprehensive order data including purchase dates, merchants, and pricing",
+          "documentation_link": "https://api.slice.com/docs",
+          "parameters": ["expand", "filter"],
+          "response_format": "JSON with order data"
+        },
+        {
+          "path": "/api/v1/merchants",
+          "full_url": "https://api.slice.com/api/v1/merchants",
+          "method": "GET",
+          "description": "Retrieve merchant profiles including business information and policies",
+          "documentation_link": "https://api.slice.com/docs",
+          "parameters": ["merchant_id"],
+          "response_format": "JSON with merchant data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Purchase data", "Merchant information", "Price tracking", "Consumer behavior", "E-commerce trends"],
+      "geographic_scope": "North America, Europe, Asia Pacific",
+      "update_frequency": "Real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api.slice.com/docs",
+      "api_summary": "Rakuten Intelligence provides e-commerce analytics through receipt analysis. Conservative rate limits require sophisticated client architecture. Affiliate program available.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://api.slice.com/docs",
+      "api_reference": "https://api.slice.com/docs",
+      "examples": "Available in documentation",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "vertical-knowledge",
+    "name": "Vertical Knowledge API",
+    "provider": "Vertical Knowledge (Babel Street)",
+    "description": "Robotic process automation platform for accessing publicly available data, specializing in alternative data intelligence and compliance-driven data collection (now part of Babel Street).",
+    "discovery_status": "documented",
+    "tags": ["robotic automation", "alternative data", "compliance data", "babel street", "data collection"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom enterprise pricing",
+      "rate_limits": "Variable based on subscription"
+    },
+    "technical_info": {
+      "base_url": "https://api.verticalknowledge.com",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV", "XML", "Parquet"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/v1/data/discovery",
+          "full_url": "https://api.verticalknowledge.com/v1/data/discovery",
+          "method": "GET",
+          "description": "Identify relevant information sources and assess data availability",
+          "documentation_link": "https://docs.babelstreet.com/vertical-knowledge",
+          "parameters": ["query", "sources", "date_range"],
+          "response_format": "JSON with discovery results"
+        },
+        {
+          "path": "/v1/analytics/process",
+          "full_url": "https://api.verticalknowledge.com/v1/analytics/process",
+          "method": "POST",
+          "description": "Apply advanced analytical techniques including entity recognition",
+          "documentation_link": "https://docs.babelstreet.com/vertical-knowledge",
+          "parameters": ["text_data", "analysis_types", "confidence_threshold"],
+          "response_format": "JSON with analytics results"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Alternative data", "Public records", "Compliance data", "Processed analytics", "Cross-source enrichment"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time processing",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://docs.babelstreet.com/vertical-knowledge",
+      "api_summary": "Vertical Knowledge (now Babel Street) specializes in robotic process automation for alternative data. Complex pricing, enterprise focus with compliance features.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact Babel Street",
+      "api_reference": "Enterprise documentation",
+      "examples": "Available with subscription",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "importio",
+    "name": "Import.io API",
+    "provider": "Import.io",
+    "description": "Enterprise-focused web data extraction platform providing structured data from websites through automated scraping, with specialized capabilities for JavaScript-heavy sites and anti-scraping measures.",
+    "discovery_status": "documented",
+    "tags": ["web scraping", "data extraction", "enterprise automation", "javascript support", "structured data"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Subscription-based ($299/month professional)",
+      "rate_limits": "Based on query allowances"
+    },
+    "technical_info": {
+      "base_url": "https://extraction.import.io",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV", "Excel", "XML"],
+      "auth_method": "API key (query parameter)",
+      "endpoints": [
+        {
+          "path": "/store/extractor/{extractor_id}/_query",
+          "full_url": "https://extraction.import.io/store/extractor/{extractor_id}/_query",
+          "method": "GET",
+          "description": "Execute live data extraction from specified URLs",
+          "documentation_link": "https://support.import.io/hc/en-us/sections/360000405491-API-Documentation",
+          "parameters": ["extractor_id", "url", "_apikey"],
+          "response_format": "JSON with extracted data"
+        },
+        {
+          "path": "/store/extractor/{extractor_id}/csv/latest",
+          "full_url": "https://extraction.import.io/store/extractor/{extractor_id}/csv/latest",
+          "method": "GET",
+          "description": "Download latest extraction results in CSV format",
+          "documentation_link": "https://support.import.io/hc/en-us/sections/360000405491-API-Documentation",
+          "parameters": ["extractor_id", "_apikey"],
+          "response_format": "CSV with extraction data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Web data", "Product catalogs", "Price monitoring", "Structured content", "E-commerce data"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time extraction",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://support.import.io/hc/en-us/sections/360000405491-API-Documentation",
+      "api_summary": "Import.io provides enterprise web scraping with JavaScript support and anti-scraping bypass. High pricing with query-based consumption limits.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://support.import.io/hc/en-us/sections/360000405491-API-Documentation",
+      "api_reference": "https://support.import.io/hc/en-us/sections/360000405491-API-Documentation",
+      "examples": "Available in documentation",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "gdelt-project",
+    "name": "GDELT Project API",
+    "provider": "GDELT",
+    "description": "Global Database of Events, Language, and Tone - comprehensive, real-time database monitoring news media in 100+ languages worldwide with completely free and open access.",
+    "discovery_status": "documented",
+    "tags": ["global events", "news monitoring", "sentiment analysis", "geopolitical data", "free access"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "Completely free",
+      "rate_limits": "Fair use policy"
+    },
+    "technical_info": {
+      "base_url": "https://api.gdeltproject.org",
+      "protocol": "REST",
+      "data_formats": ["JSON", "JSONP", "CSV", "GeoJSON", "KML", "XML"],
+      "auth_method": "None required",
+      "endpoints": [
+        {
+          "path": "/v2/doc/doc",
+          "full_url": "https://api.gdeltproject.org/v2/doc/doc",
+          "method": "GET",
+          "description": "Full-text search API across 65+ languages with 3-month rolling window",
+          "documentation_link": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+          "parameters": ["query", "mode", "startdatetime", "enddatetime", "maxrecords"],
+          "response_format": "JSON/CSV with search results"
+        },
+        {
+          "path": "/v2/geo/geo",
+          "full_url": "https://api.gdeltproject.org/v2/geo/geo",
+          "method": "GET",
+          "description": "Geographic API for mapping keyword mentions across global news",
+          "documentation_link": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+          "parameters": ["query", "mode", "format", "timespan"],
+          "response_format": "JSON/GeoJSON with geographic data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Global events", "News sentiment", "Geographic trends", "Language analysis", "Media monitoring"],
+      "geographic_scope": "Global - all countries",
+      "update_frequency": "15-minute updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+      "api_summary": "GDELT provides completely free global news monitoring with 65+ language support and 15-minute updates. No authentication required, fair use policy.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+      "api_reference": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+      "examples": "Available in documentation",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "sentioai",
+    "name": "SentioAI API",
+    "provider": "SentioAI",
+    "description": "Advanced sentiment analysis and blockchain analytics platform providing real-time emotional analysis, personality assessment, and comprehensive NLP capabilities with multi-language support.",
+    "discovery_status": "documented",
+    "tags": ["sentiment analysis", "NLP", "personality assessment", "emotion detection", "blockchain analytics"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Freemium ($0-$1,499/month)",
+      "rate_limits": "2k/min to custom limits based on tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.sentio.xyz",
+      "protocol": "REST",
+      "data_formats": ["JSON", "JSONP", "XML"],
+      "auth_method": "Bearer token",
+      "endpoints": [
+        {
+          "path": "/v1/sentiment/analyze",
+          "full_url": "https://api.sentio.xyz/v1/sentiment/analyze",
+          "method": "POST",
+          "description": "Comprehensive sentiment analysis with positive, negative, and neutral classification",
+          "documentation_link": "https://docs.sentio.xyz/api",
+          "parameters": ["text", "language", "detailed"],
+          "response_format": "JSON with sentiment scores"
+        },
+        {
+          "path": "/v1/personality/analyze",
+          "full_url": "https://api.sentio.xyz/v1/personality/analyze",
+          "method": "POST",
+          "description": "Big 5 personality traits analysis from text input",
+          "documentation_link": "https://docs.sentio.xyz/api",
+          "parameters": ["text", "model", "confidence_threshold"],
+          "response_format": "JSON with personality analysis"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Sentiment analysis", "Personality traits", "Emotion detection", "Toxicity scanning", "Language detection"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time processing",
+      "historical_data": false
+    },
+    "research_notes": {
+      "documentation_url": "https://docs.sentio.xyz/api",
+      "api_summary": "SentioAI offers tiered pricing from free to enterprise ($1,499/month). Multi-language support with personality assessment and emotion detection capabilities.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://docs.sentio.xyz/api",
+      "api_reference": "https://docs.sentio.xyz/api",
+      "examples": "Available in documentation",
+      "changelog": "Updated regularly",
+      "status_page": null
+    }
+  }
+]

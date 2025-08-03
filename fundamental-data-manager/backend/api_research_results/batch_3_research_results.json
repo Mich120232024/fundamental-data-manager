@@ -1,0 +1,1441 @@
+[
+  {
+    "id": "europeana-api",
+    "name": "Europeana APIs",
+    "provider": "Europeana Foundation",
+    "description": "Provides access to metadata from thousands of cultural heritage institutions across Europe. The APIs enable search and retrieval of cultural heritage items from Europeana's collections.",
+    "discovery_status": "documented",
+    "tags": ["cultural heritage", "metadata", "search", "IIIF", "European collections"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "standard rate limiting applies"
+    },
+    "technical_info": {
+      "base_url": "https://api.europeana.eu",
+      "protocol": "REST",
+      "data_formats": ["JSON", "JSON-LD"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/record/v2/search.json",
+          "full_url": "https://api.europeana.eu/record/v2/search.json",
+          "method": "GET",
+          "description": "Search for metadata records and media in Europeana collections",
+          "documentation_link": "https://europeana.atlassian.net/wiki/spaces/EF/pages/2385313793/Europeana+APIs+Documentation",
+          "parameters": ["query", "qf", "rows", "start", "profile"],
+          "response_format": "JSON with metadata records"
+        },
+        {
+          "path": "/record/v2/{recordId}.json",
+          "full_url": "https://api.europeana.eu/record/v2/{recordId}.json",
+          "method": "GET", 
+          "description": "Retrieve individual record metadata",
+          "documentation_link": "https://europeana.atlassian.net/wiki/spaces/EF/pages/2385313793/Europeana+APIs+Documentation",
+          "parameters": ["recordId", "wskey"],
+          "response_format": "JSON with detailed record metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://apis.europeana.eu/en",
+        "authentication": "https://pro.europeana.eu/page/get-api",
+        "endpoints_reference": "https://europeana.atlassian.net/wiki/spaces/EF/pages/2385313793/Europeana+APIs+Documentation",
+        "code_examples": "https://pro.europeana.eu/page/api-rest-console",
+        "sdks_libraries": "https://github.com/europeana/api2"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Cultural heritage objects", "Museum artifacts", "Historical documents", "Art images", "Manuscripts"],
+      "geographic_scope": "Europe",
+      "update_frequency": "Continuously updated",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://apis.europeana.eu/en",
+      "sample_endpoints": ["/record/v2/search.json", "/record/v2/{recordId}.json", "/thumbnail/v2/{recordId}.json"],
+      "data_quality": "High - comprehensive documentation with API console",
+      "last_researched": "2025-07-29T10:15:00Z",
+      "researcher_notes": "Multiple APIs available including Search, Record, IIIF, Entity, Thumbnail, and Recommendation APIs. Requires free API key registration.",
+      "api_summary": "Europeana APIs provide comprehensive access to Europe's digital cultural heritage, supporting millions of items from thousands of institutions. The platform offers multiple specialized APIs for searching, retrieving records, accessing IIIF resources, and getting recommendations, making it invaluable for researchers, developers, and cultural organizations working with European heritage data."
+    }
+  },
+  {
+    "id": "digital-public-library-of-america-api",
+    "name": "Digital Public Library of America API",
+    "provider": "Digital Public Library of America",
+    "description": "Provides programmatic access to over 15 million objects from libraries, museums, and archives across America. Enables search and retrieval of diverse cultural and historical materials.",
+    "discovery_status": "documented",
+    "tags": ["digital library", "cultural heritage", "metadata", "American collections", "open access"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "reasonable use expected"
+    },
+    "technical_info": {
+      "base_url": "https://api.dp.la/v2",
+      "protocol": "REST",
+      "data_formats": ["JSON-LD"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/items",
+          "full_url": "https://api.dp.la/v2/items",
+          "method": "GET",
+          "description": "Search and retrieve individual items from DPLA collections",
+          "documentation_link": "https://pro.dp.la/developers/api-codex",
+          "parameters": ["q", "sourceResource.title", "sourceResource.creator", "api_key"],
+          "response_format": "JSON-LD with item metadata"
+        },
+        {
+          "path": "/collections",
+          "full_url": "https://api.dp.la/v2/collections",
+          "method": "GET",
+          "description": "Access logical groupings of items",
+          "documentation_link": "https://pro.dp.la/developers/api-codex",
+          "parameters": ["q", "title", "description", "api_key"],
+          "response_format": "JSON-LD with collection metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://pro.dp.la/developers/api-basics",
+        "authentication": "https://pro.dp.la/developers/api-basics",
+        "endpoints_reference": "https://pro.dp.la/developers/requests",
+        "code_examples": "https://pro.dp.la/developers/sample-code-libraries",
+        "sdks_libraries": "https://pro.dp.la/developers/sample-code-libraries"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Books", "Photographs", "Maps", "Manuscripts", "Sound recordings", "Videos"],
+      "geographic_scope": "United States",
+      "update_frequency": "Regular updates from contributing institutions",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://pro.dp.la/developers",
+      "sample_endpoints": ["/items", "/collections", "/items/{id}"],
+      "data_quality": "Excellent - comprehensive documentation with API codex",
+      "last_researched": "2025-07-29T10:20:00Z",
+      "researcher_notes": "Well-documented API with libraries for Python, Java, PHP, R, and Ruby. Bulk download options available.",
+      "api_summary": "The DPLA API offers comprehensive access to America's digital cultural heritage, aggregating content from thousands of libraries, museums, and archives. It provides structured JSON-LD data for over 15 million items, making it an essential resource for researchers, educators, and developers working with American cultural materials and historical collections."
+    }
+  },
+  {
+    "id": "internet-archive-api",
+    "name": "Internet Archive APIs",
+    "provider": "Internet Archive",
+    "description": "Comprehensive APIs for accessing archived web pages, books, movies, music, and other digital content. Includes Wayback Machine API for historical web data.",
+    "discovery_status": "documented",
+    "tags": ["web archive", "digital preservation", "books", "media", "wayback machine"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free with rate limits",
+      "rate_limits": "respected but not strictly enforced"
+    },
+    "technical_info": {
+      "base_url": "https://archive.org",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "optional authentication for uploads",
+      "endpoints": [
+        {
+          "path": "/advancedsearch.php",
+          "full_url": "https://archive.org/advancedsearch.php",
+          "method": "GET",
+          "description": "Advanced search interface for Internet Archive items",
+          "documentation_link": "https://archive.org/developers/",
+          "parameters": ["q", "fl", "sort", "rows", "page", "output"],
+          "response_format": "JSON with search results and metadata"
+        },
+        {
+          "path": "/wayback/available",
+          "full_url": "http://archive.org/wayback/available",
+          "method": "GET",
+          "description": "Check if URL is archived and get closest timestamp",
+          "documentation_link": "https://archive.org/help/wayback_api.php",
+          "parameters": ["url", "timestamp"],
+          "response_format": "JSON with archived snapshot information"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://archive.org/developers/",
+        "authentication": "https://archive.org/account/s3.php",
+        "endpoints_reference": "https://archive.org/developers/index-apis.html",
+        "code_examples": "https://archive.org/developers/internetarchive/api.html",
+        "sdks_libraries": "https://archive.org/services/docs/api/internetarchive/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Web pages", "Books", "Movies", "Music", "Software", "TV shows", "Images"],
+      "geographic_scope": "Global",
+      "update_frequency": "Continuous web crawling and user uploads",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://archive.org/developers/",
+      "sample_endpoints": ["/advancedsearch.php", "/wayback/available", "/metadata/{identifier}"],
+      "data_quality": "Good - multiple APIs with varying documentation levels",
+      "last_researched": "2025-07-29T10:25:00Z",
+      "researcher_notes": "Multiple APIs including search, wayback, metadata, and upload. Python library available for easier integration.",
+      "api_summary": "Internet Archive APIs provide access to one of the world's largest digital libraries, containing billions of web pages, millions of books, movies, music recordings, and software programs. The APIs support both historical research through the Wayback Machine and access to contemporary digital collections, making it invaluable for digital preservation, academic research, and content discovery."
+    }
+  },
+  {
+    "id": "google-books-api",
+    "name": "Google Books API",
+    "provider": "Google",
+    "description": "Programmatic access to Google Books content including search, metadata retrieval, and preview functionality. Enables developers to integrate book discovery into applications.",
+    "discovery_status": "documented",
+    "tags": ["books", "search", "metadata", "previews", "google"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free with quota limits",
+      "rate_limits": "1000 requests per day (default)"
+    },
+    "technical_info": {
+      "base_url": "https://www.googleapis.com/books/v1",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key or OAuth 2.0",
+      "endpoints": [
+        {
+          "path": "/volumes",
+          "full_url": "https://www.googleapis.com/books/v1/volumes",
+          "method": "GET",
+          "description": "Search for books and retrieve volume information",
+          "documentation_link": "https://developers.google.com/books/docs/v1/using",
+          "parameters": ["q", "startIndex", "maxResults", "printType", "projection"],
+          "response_format": "JSON with book metadata and availability"
+        },
+        {
+          "path": "/volumes/{volumeId}",
+          "full_url": "https://www.googleapis.com/books/v1/volumes/{volumeId}",
+          "method": "GET",
+          "description": "Retrieve specific volume information by ID",
+          "documentation_link": "https://developers.google.com/books/docs/v1/reference/volumes/get",
+          "parameters": ["volumeId", "projection"],
+          "response_format": "JSON with detailed volume metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://developers.google.com/books/docs/v1/getting_started",
+        "authentication": "https://developers.google.com/books/docs/v1/using#auth",
+        "endpoints_reference": "https://developers.google.com/books/docs/v1/reference/",
+        "code_examples": "https://developers.google.com/books/docs/viewer/examples",
+        "sdks_libraries": "https://developers.google.com/books/docs/v1/libraries"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Books", "Magazines", "Academic papers", "Preview content"],
+      "geographic_scope": "Global",
+      "update_frequency": "Regular updates from publishers and scanning",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://developers.google.com/books",
+      "sample_endpoints": ["/volumes", "/volumes/{volumeId}", "/mylibrary/bookshelves"],
+      "data_quality": "Excellent - comprehensive Google developer documentation",
+      "last_researched": "2025-07-29T10:30:00Z",
+      "researcher_notes": "Part of Google's suite of APIs, well-maintained with OAuth support for personal libraries.",
+      "api_summary": "Google Books API provides access to the world's largest collection of digitized books, offering comprehensive metadata, search capabilities, and preview functionality. It enables developers to build applications that can search millions of books, access detailed bibliographic information, and integrate with users' personal libraries, making it essential for educational, research, and commercial book-related applications."
+    }
+  },
+  {
+    "id": "open-library-api",
+    "name": "Open Library API",
+    "provider": "Internet Archive / Open Library",
+    "description": "Open, editable library catalog providing access to millions of books. Offers RESTful APIs for searching, retrieving book data, and checking availability.",
+    "discovery_status": "documented",
+    "tags": ["books", "open data", "library catalog", "ISBN", "bibliographic"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "rate limiting for high volume usage"
+    },
+    "technical_info": {
+      "base_url": "https://openlibrary.org",
+      "protocol": "REST",
+      "data_formats": ["JSON", "YAML", "RDF/XML"],
+      "auth_method": "none for read access",
+      "endpoints": [
+        {
+          "path": "/search.json",
+          "full_url": "https://openlibrary.org/search.json",
+          "method": "GET",
+          "description": "Search for books across the Open Library catalog",
+          "documentation_link": "https://openlibrary.org/dev/docs/api/search",
+          "parameters": ["q", "title", "author", "sort", "limit"],
+          "response_format": "JSON with search results and book metadata"
+        },
+        {
+          "path": "/api/books",
+          "full_url": "https://openlibrary.org/api/books",
+          "method": "GET",
+          "description": "Retrieve book information using ISBNs, OCLCs, or other identifiers",
+          "documentation_link": "https://openlibrary.org/dev/docs/api/books",
+          "parameters": ["bibkeys", "format", "callback", "jscmd"],
+          "response_format": "JSON with book metadata and availability"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://openlibrary.org/developers/api",
+        "authentication": "https://openlibrary.org/developers/api",
+        "endpoints_reference": "https://openlibrary.org/dev/docs/restful_api",
+        "code_examples": "https://docs.openlibrary.org/2_Developers/",
+        "sdks_libraries": "https://github.com/internetarchive/openlibrary-client"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Books", "Authors", "Works", "Editions", "Subjects"],
+      "geographic_scope": "Global",
+      "update_frequency": "Community-driven continuous updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://openlibrary.org/developers/api",
+      "sample_endpoints": ["/search.json", "/api/books", "/works/{work_id}.json"],
+      "data_quality": "Good - community-maintained with comprehensive coverage",
+      "last_researched": "2025-07-29T10:35:00Z",
+      "researcher_notes": "Open source project with Python client library. Supports multiple identifier systems.",
+      "api_summary": "Open Library API provides free access to a comprehensive, community-maintained catalog of millions of books and authors. It offers flexible search capabilities, detailed bibliographic data, and reading availability information, making it an essential resource for developers building library applications, researchers studying book collections, and educators creating reading-focused tools."
+    }
+  },
+  {
+    "id": "oclc-worldcat-api",
+    "name": "WorldCat Search API (Deprecated)",
+    "provider": "OCLC",
+    "description": "OCLC's WorldCat Search API v1.0 was deprecated as of December 31, 2024. OCLC now offers WorldCat Metadata API and other services for library catalog access.",
+    "discovery_status": "documented",
+    "tags": ["library catalog", "bibliographic", "metadata", "deprecated", "OCLC"],
+    "access_info": {
+      "is_free": null,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "subscription-based for current APIs",
+      "rate_limits": "varies by service"
+    },
+    "technical_info": {
+      "base_url": "https://www.worldcat.org/webservices",
+      "protocol": "REST",
+      "data_formats": ["XML", "JSON"],
+      "auth_method": "API key and OAuth",
+      "endpoints": [
+        {
+          "path": "/catalog/search/worldcat/opensearch",
+          "full_url": "https://www.worldcat.org/webservices/catalog/search/worldcat/opensearch",
+          "method": "GET",
+          "description": "Search WorldCat catalog (deprecated)",
+          "documentation_link": "https://www.oclc.org/developer/api/oclc-apis/worldcat-search-api.en.html",
+          "parameters": ["q", "wskey", "format", "start"],
+          "response_format": "XML/JSON with bibliographic records"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.oclc.org/developer/",
+        "authentication": "https://www.oclc.org/developer/develop/authentication.en.html",
+        "endpoints_reference": "https://platform.worldcat.org/api-explorer/apis/wcapi",
+        "code_examples": "https://www.oclc.org/developer/develop/web-services.en.html",
+        "sdks_libraries": "https://www.oclc.org/developer/develop/web-services.en.html"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Books", "Journals", "DVDs", "Digital items", "Archival materials"],
+      "geographic_scope": "Global library collections",
+      "update_frequency": "Real-time updates from member libraries",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.oclc.org/developer/",
+      "sample_endpoints": ["/catalog/search/worldcat/opensearch", "/content/{oclcNumber}"],
+      "data_quality": "High quality but transitioning to new APIs",
+      "last_researched": "2025-07-29T10:40:00Z",
+      "researcher_notes": "WorldCat Search API v1.0 ended support December 2024. Current APIs include WorldCat Metadata API and Knowledge Base API.",
+      "api_summary": "OCLC's WorldCat APIs provide access to the world's largest library catalog, containing bibliographic records from thousands of libraries globally. While the original Search API has been deprecated, newer APIs like the WorldCat Metadata API continue to offer comprehensive access to library holdings, bibliographic data, and collection management capabilities for OCLC member institutions."
+    }
+  },
+  {
+    "id": "library-of-congress-api",
+    "name": "Library of Congress APIs",
+    "provider": "Library of Congress",
+    "description": "Comprehensive APIs providing access to the Library of Congress collections including Congress.gov data, digital collections, and bibliographic records.",
+    "discovery_status": "documented",
+    "tags": ["congressional data", "digital collections", "government documents", "IIIF", "bibliographic"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "5,000 requests per hour for Congress.gov API"
+    },
+    "technical_info": {
+      "base_url": "https://api.congress.gov/v3",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML", "YAML"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/bill",
+          "full_url": "https://api.congress.gov/v3/bill",
+          "method": "GET",
+          "description": "Access congressional bills and legislation",
+          "documentation_link": "https://api.congress.gov/",
+          "parameters": ["congress", "billType", "format", "limit"],
+          "response_format": "JSON/XML with legislative data"
+        },
+        {
+          "path": "/search",
+          "full_url": "https://www.loc.gov/search",
+          "method": "GET",
+          "description": "Search LOC collections with fo=json parameter",
+          "documentation_link": "https://www.loc.gov/apis/json-and-yaml/",
+          "parameters": ["q", "fo", "at", "c"],
+          "response_format": "JSON with collection items and metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.loc.gov/apis/",
+        "authentication": "https://api.congress.gov/",
+        "endpoints_reference": "https://api.congress.gov/",
+        "code_examples": "https://github.com/LibraryOfCongress/data-exploration",
+        "sdks_libraries": "https://github.com/LibraryOfCongress/api.congress.gov"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Congressional records", "Historical documents", "Maps", "Photographs", "Manuscripts", "Audio recordings"],
+      "geographic_scope": "United States with global collections",
+      "update_frequency": "Real-time for congressional data, regular for collections",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.loc.gov/apis/",
+      "sample_endpoints": ["/bill", "/member", "/search?fo=json"],
+      "data_quality": "Excellent - government-maintained with comprehensive documentation",
+      "last_researched": "2025-07-29T10:45:00Z",
+      "researcher_notes": "Multiple APIs including Congress.gov v3 and LOC.gov JSON API. Rich GitHub resources available.",
+      "api_summary": "Library of Congress APIs provide unparalleled access to American legislative data and one of the world's largest library collections. The Congress.gov API offers real-time access to federal legislation, while the LOC.gov API provides structured access to millions of historical documents, photographs, maps, and cultural artifacts, making it essential for political research, digital humanities, and American studies."
+    }
+  },
+  {
+    "id": "british-library-api",
+    "name": "British Library APIs",
+    "provider": "The British Library",
+    "description": "APIs for accessing British Library document supply services and digital collections. Includes BLDSS API for document ordering and catalog integration.",
+    "discovery_status": "documented",
+    "tags": ["document supply", "library catalog", "BLDSS", "interlibrary loan", "British collections"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "subscription for BLDSS services",
+      "rate_limits": "varies by service"
+    },
+    "technical_info": {
+      "base_url": "https://api.bldss.bl.uk",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "API key with customer credentials",
+      "endpoints": [
+        {
+          "path": "/availability",
+          "full_url": "https://api.bldss.bl.uk/availability",
+          "method": "GET",
+          "description": "Check document availability and pricing",
+          "documentation_link": "https://apitest.bldss.bl.uk/docs/guide/single.html",
+          "parameters": ["title", "author", "isbn", "issn"],
+          "response_format": "JSON with availability and pricing information"
+        },
+        {
+          "path": "/order",
+          "full_url": "https://api.bldss.bl.uk/order",
+          "method": "POST",
+          "description": "Place document supply orders",
+          "documentation_link": "https://apitest.bldss.bl.uk/docs/guide/single.html",
+          "parameters": ["customerCode", "artPassword", "orderDetails"],
+          "response_format": "JSON with order confirmation"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.bl.uk/on-demand/api-integration",
+        "authentication": "https://api.bldss.bl.uk/applications/",
+        "endpoints_reference": "https://apitest.bldss.bl.uk/docs/guide/single.html",
+        "code_examples": "https://github.com/britishlibrary",
+        "sdks_libraries": "https://github.com/britishlibrary"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Academic journals", "Books", "Conference proceedings", "Reports", "Theses"],
+      "geographic_scope": "Global document supply with UK focus",
+      "update_frequency": "Real-time for availability and orders",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.bl.uk/on-demand/api-integration",
+      "sample_endpoints": ["/availability", "/order", "/tracking"],
+      "data_quality": "Professional service-oriented API",
+      "last_researched": "2025-07-29T10:50:00Z",
+      "researcher_notes": "Focused on document supply services rather than open access to collections. Requires business account.",
+      "api_summary": "British Library APIs primarily serve document supply and interlibrary loan services through the BLDSS platform. They enable institutions to integrate British Library's comprehensive document delivery services directly into their library management systems, providing real-time availability checking, pricing, ordering, and tracking capabilities for academic and research materials."
+    }
+  },
+  {
+    "id": "deutsche-digitale-bibliothek-api",
+    "name": "Deutsche Digitale Bibliothek REST API",
+    "provider": "Deutsche Digitale Bibliothek",
+    "description": "German Digital Library API providing access to digitized cultural heritage and research materials from German institutions. Uses OpenAPI 3.0 specification.",
+    "discovery_status": "documented",
+    "tags": ["German collections", "cultural heritage", "digital library", "metadata", "CC0"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "reasonable use expected"
+    },
+    "technical_info": {
+      "base_url": "https://api.deutsche-digitale-bibliothek.de",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/search",
+          "full_url": "https://api.deutsche-digitale-bibliothek.de/search",
+          "method": "GET",
+          "description": "Search across DDB collections",
+          "documentation_link": "https://api.deutsche-digitale-bibliothek.de/OpenAPI",
+          "parameters": ["query", "rows", "offset", "facet"],
+          "response_format": "JSON with search results and metadata"
+        },
+        {
+          "path": "/items/{itemId}",
+          "full_url": "https://api.deutsche-digitale-bibliothek.de/items/{itemId}",
+          "method": "GET",
+          "description": "Retrieve individual item metadata",
+          "documentation_link": "https://api.deutsche-digitale-bibliothek.de/OpenAPI",
+          "parameters": ["itemId"],
+          "response_format": "JSON with detailed item metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "http://api.deutsche-digitale-bibliothek.de/doku",
+        "authentication": "http://api.deutsche-digitale-bibliothek.de/doku",
+        "endpoints_reference": "https://api.deutsche-digitale-bibliothek.de/OpenAPI",
+        "code_examples": "https://labs.deutsche-digitale-bibliothek.de/app/ddbapi/",
+        "sdks_libraries": "https://github.com/Deutsche-Digitale-Bibliothek"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Books", "Manuscripts", "Photographs", "Art objects", "Audio recordings", "Videos"],
+      "geographic_scope": "Germany",
+      "update_frequency": "Regular updates from contributing institutions",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "http://api.deutsche-digitale-bibliothek.de/doku",
+      "sample_endpoints": ["/search", "/items/{itemId}", "/institutions"],
+      "data_quality": "Good - uses OpenAPI 3.0 specification",
+      "last_researched": "2025-07-29T10:55:00Z",
+      "researcher_notes": "All metadata provided under CC0 license. Comprehensive documentation available in German and English.",
+      "api_summary": "Deutsche Digitale Bibliothek API provides access to Germany's national digital library, aggregating cultural heritage materials from hundreds of German institutions. The API offers comprehensive search capabilities and detailed metadata access under CC0 licensing, making it valuable for researchers studying German culture, history, and digital humanities projects focused on German-speaking regions."
+    }
+  },
+  {
+    "id": "gallica-api",
+    "name": "Gallica APIs",
+    "provider": "Bibliothèque nationale de France (BnF)",
+    "description": "Multiple APIs providing access to Gallica's digital collections including document metadata, search functionality, and IIIF image services.",
+    "discovery_status": "documented",
+    "tags": ["French collections", "IIIF", "SRU", "BnF", "cultural heritage"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "reasonable use expected"
+    },
+    "technical_info": {
+      "base_url": "https://gallica.bnf.fr",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML", "OAI-PMH"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/SRU",
+          "full_url": "https://gallica.bnf.fr/SRU",
+          "method": "GET",
+          "description": "Search using SRU protocol with CQL queries",
+          "documentation_link": "https://api.bnf.fr/fr/api-gallica-de-recherche",
+          "parameters": ["version", "operation", "query", "startRecord", "maximumRecords"],
+          "response_format": "XML with search results"
+        },
+        {
+          "path": "/services/OAIRecord",
+          "full_url": "https://gallica.bnf.fr/services/OAIRecord",
+          "method": "GET",
+          "description": "Retrieve bibliographic and technical information by ARK identifier",
+          "documentation_link": "https://api.bnf.fr/fr/api-document-de-gallica",
+          "parameters": ["ark"],
+          "response_format": "OAI-PMH XML record"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://api.bnf.fr/",
+        "authentication": "https://api.bnf.fr/",
+        "endpoints_reference": "https://api.bnf.fr/fr/api-gallica-de-recherche",
+        "code_examples": "http://gallicastudio.bnf.fr/boîte-à-outils/découvrez-les-apis-de-gallica-avec-le-site-bnf-api-et-jeux-de-données",
+        "sdks_libraries": "https://github.com/bnfhack"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Books", "Periodicals", "Manuscripts", "Maps", "Images", "Sound recordings"],
+      "geographic_scope": "France with international collections",
+      "update_frequency": "Regular digitization updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api.bnf.fr/",
+      "sample_endpoints": ["/SRU", "/services/OAIRecord", "/iiif/ark:/{arkId}/manifest.json"],
+      "data_quality": "Excellent - multiple APIs with comprehensive documentation",
+      "last_researched": "2025-07-29T11:00:00Z",
+      "researcher_notes": "Multiple APIs available including SRU search, document retrieval, and IIIF image access. Python and R wrappers available.",
+      "api_summary": "Gallica APIs provide comprehensive access to the digital collections of France's national library, offering millions of documents spanning centuries of French cultural heritage. The APIs support advanced search via SRU protocol, detailed metadata retrieval, and IIIF-compliant image access, making them essential for research in French studies, European history, and digital humanities projects."
+    }
+  },
+  {
+    "id": "digital-science-dimensions-api",
+    "name": "Dimensions Analytics API",
+    "provider": "Digital Science",
+    "description": "Subscription-based API providing access to comprehensive research data including publications, citations, grants, and patents for advanced analytics and visualization.",
+    "discovery_status": "documented",
+    "tags": ["research analytics", "citations", "grants", "patents", "subscription"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "subscription-based",
+      "rate_limits": "varies by subscription level"
+    },
+    "technical_info": {
+      "base_url": "https://app.dimensions.ai/api",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API token",
+      "endpoints": [
+        {
+          "path": "/dsl.json",
+          "full_url": "https://app.dimensions.ai/api/dsl.json",
+          "method": "POST",
+          "description": "Execute Dimensions Search Language (DSL) queries",
+          "documentation_link": "https://www.dimensions.ai/resources/api-documentation/",
+          "parameters": ["query", "limit", "skip"],
+          "response_format": "JSON with research data and metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.dimensions.ai/resources/api-documentation/",
+        "authentication": "https://digital-science.github.io/dimcli/modules.html#authentication",
+        "endpoints_reference": "https://www.dimensions.ai/resources/api-documentation/",
+        "code_examples": "https://api-lab.dimensions.ai/",
+        "sdks_libraries": "https://digital-science.github.io/dimcli/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Publications", "Citations", "Grants", "Patents", "Clinical trials", "Policy documents"],
+      "geographic_scope": "Global",
+      "update_frequency": "Regular updates with new research data",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.dimensions.ai/resources/api-documentation/",
+      "sample_endpoints": ["/dsl.json"],
+      "data_quality": "High - professional research analytics platform",
+      "last_researched": "2025-07-29T11:05:00Z",
+      "researcher_notes": "Subscription-only service with DSL query language. Python client (DimCli) and Jupyter notebooks available.",
+      "api_summary": "Dimensions Analytics API provides sophisticated access to one of the world's largest linked research databases, enabling complex analytical queries across publications, citations, grants, and patents. Designed for institutional research assessment and competitive intelligence, it offers advanced search capabilities through DSL and comprehensive data linking, making it invaluable for research administrators, bibliometric analysts, and funding organizations."
+    }
+  },
+  {
+    "id": "datacite-events-api",
+    "name": "DataCite Events API",
+    "provider": "DataCite",
+    "description": "Query API for DataCite Event Data service, providing access to scholarly events including citations, usage statistics, and data relationships.",
+    "discovery_status": "documented",
+    "tags": ["events", "citations", "usage statistics", "DOI", "research metrics"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "25 events per page, up to 10,000 total results"
+    },
+    "technical_info": {
+      "base_url": "https://api.datacite.org",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/events",
+          "full_url": "https://api.datacite.org/events",
+          "method": "GET",
+          "description": "Retrieve list of events filtered by various parameters",
+          "documentation_link": "https://support.datacite.org/reference/get_events",
+          "parameters": ["doi", "prefix", "subj_id", "obj_id", "relation_type_id", "year_month"],
+          "response_format": "JSON with event data and metadata"
+        },
+        {
+          "path": "/events/{id}",
+          "full_url": "https://api.datacite.org/events/{id}",
+          "method": "GET",
+          "description": "Retrieve specific event by ID",
+          "documentation_link": "https://support.datacite.org/reference/get_events-id",
+          "parameters": ["id"],
+          "response_format": "JSON with individual event details"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://support.datacite.org/docs/eventdata-guide",
+        "authentication": "https://support.datacite.org/docs/api",
+        "endpoints_reference": "https://support.datacite.org/reference/get_events",
+        "code_examples": "https://support.datacite.org/docs/api",
+        "sdks_libraries": "https://docs.ropensci.org/rdatacite/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Citations", "Usage events", "Views", "Downloads", "Relationships between works"],
+      "geographic_scope": "Global",
+      "update_frequency": "Regular updates from various sources",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://support.datacite.org/docs/eventdata-guide",
+      "sample_endpoints": ["/events", "/events/{id}"],
+      "data_quality": "Good - well-documented REST API",
+      "last_researched": "2025-07-29T11:10:00Z",
+      "researcher_notes": "Provides linking and usage events for research outputs. Pagination supported with sortable results.",
+      "api_summary": "DataCite Events API provides access to a comprehensive collection of scholarly events including citations, usage metrics, and relationships between research outputs. It enables researchers and institutions to track how their data and publications are being used and cited, offering valuable insights into research impact and scholarly communication patterns across the global research ecosystem."
+    }
+  },
+  {
+    "id": "scilit-api",
+    "name": "Scilit (No Public API)",
+    "provider": "MDPI AG",
+    "description": "Scilit is a comprehensive database for scientific publications that aggregates content from Crossref and PubMed, but does not currently offer a public API.",
+    "discovery_status": "no_api_found",
+    "tags": ["scientific literature", "aggregator", "no public api", "crossref", "pubmed"],
+    "access_info": {
+      "is_free": null,
+      "requires_api_key": null,
+      "requires_approval": null,
+      "pricing_model": "unknown",
+      "rate_limits": "unknown"
+    },
+    "technical_info": {
+      "base_url": null,
+      "protocol": null,
+      "data_formats": [],
+      "auth_method": null,
+      "endpoints": [],
+      "documentation_sections": {
+        "getting_started": null,
+        "authentication": null,
+        "endpoints_reference": null,
+        "code_examples": null,
+        "sdks_libraries": null
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Scientific publications", "Journal articles", "Open access content"],
+      "geographic_scope": "Global",
+      "update_frequency": "Daily updates from Crossref and PubMed",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.scilit.net/",
+      "sample_endpoints": [],
+      "data_quality": "Platform exists but no public API documented",
+      "last_researched": "2025-07-29T11:15:00Z",
+      "researcher_notes": "Scilit aggregates data from Crossref and PubMed APIs but doesn't provide its own public API. Users should access source APIs directly.",
+      "api_summary": "Scilit is a comprehensive scientific literature database maintained by MDPI that aggregates content from major scholarly sources like Crossref and PubMed. While it provides a valuable search interface for scientific publications, it does not currently offer a public API for programmatic access. Researchers seeking API access to similar data should consider using the underlying source APIs (Crossref API, PubMed API) that Scilit itself uses for data aggregation."
+    }
+  },
+  {
+    "id": "base-bielefeld-academic-search-engine-api",
+    "name": "BASE (Bielefeld Academic Search Engine) API",
+    "provider": "Bielefeld University Library",
+    "description": "Search interface for academic repositories and open access content. Provides access to over 300 million documents from more than 10,000 content providers.",
+    "discovery_status": "documented",
+    "tags": ["academic search", "open access", "repositories", "OAI-PMH", "scholarly content"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": true,
+      "pricing_model": "free for non-commercial use",
+      "rate_limits": "rate limiting enforced"
+    },
+    "technical_info": {
+      "base_url": "https://api.base-search.net",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "IP whitelisting",
+      "endpoints": [
+        {
+          "path": "/cgi-bin/BaseHttpSearchInterface.fcgi",
+          "full_url": "https://api.base-search.net/cgi-bin/BaseHttpSearchInterface.fcgi",
+          "method": "GET",
+          "description": "Search BASE index using HTTP GET requests",
+          "documentation_link": "https://api.base-search.net/",
+          "parameters": ["func", "query", "format", "hits", "offset"],
+          "response_format": "XML/JSON with search results and metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://api.base-search.net/",
+        "authentication": "https://api.base-search.net/",
+        "endpoints_reference": "https://api.base-search.net/",
+        "code_examples": "https://api.base-search.net/",
+        "sdks_libraries": "https://cran.r-project.org/web/packages/rbace/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Academic papers", "Theses", "Books", "Conference proceedings", "Reports"],
+      "geographic_scope": "Global",
+      "update_frequency": "Regular harvesting from OAI-PMH repositories",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api.base-search.net/",
+      "sample_endpoints": ["/cgi-bin/BaseHttpSearchInterface.fcgi"],
+      "data_quality": "Good - requires IP whitelisting for access",
+      "last_researched": "2025-07-29T11:20:00Z",
+      "researcher_notes": "Requires IP whitelisting before use. Built on Lucene/SOLR with Dublin Core metadata structure.",
+      "api_summary": "BASE API provides access to one of the world's largest academic search engines, aggregating content from thousands of open access repositories globally. The API enables programmatic searching across hundreds of millions of scholarly documents, making it valuable for research discovery, bibliometric analysis, and building academic search applications that require comprehensive coverage of open access literature."
+    }
+  },
+  {
+    "id": "openaire-graph-api",
+    "name": "OpenAIRE Graph API",
+    "provider": "OpenAIRE",
+    "description": "Provides access to the OpenAIRE Research Graph, a comprehensive dataset of scholarly resources including publications, datasets, software, projects, and organizations.",
+    "discovery_status": "documented",
+    "tags": ["research graph", "open science", "publications", "datasets", "european research"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "reasonable use expected"
+    },
+    "technical_info": {
+      "base_url": "https://api.openaire.eu",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/graph/researchProducts",
+          "full_url": "https://api.openaire.eu/graph/researchProducts",
+          "method": "GET",
+          "description": "Search and retrieve research products (publications, datasets, software)",
+          "documentation_link": "https://graph.openaire.eu/docs/apis/graph-api/",
+          "parameters": ["search", "format", "size", "from"],
+          "response_format": "JSON with research product metadata"
+        },
+        {
+          "path": "/graph/projects",
+          "full_url": "https://api.openaire.eu/graph/projects",
+          "method": "GET",
+          "description": "Access project information and funding data",
+          "documentation_link": "https://graph.openaire.eu/docs/apis/graph-api/",
+          "parameters": ["search", "format", "size", "from"],
+          "response_format": "JSON with project and funding metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://graph.openaire.eu/docs/apis/home/",
+        "authentication": "https://graph.openaire.eu/docs/apis/graph-api/",
+        "endpoints_reference": "https://graph.openaire.eu/docs/apis/graph-api/",
+        "code_examples": "https://graph.openaire.eu/docs/apis/graph-api/",
+        "sdks_libraries": "https://graph.openaire.eu/docs/apis/graph-api/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Publications", "Research data", "Software", "Projects", "Organizations", "Funding information"],
+      "geographic_scope": "Global with European focus",
+      "update_frequency": "Regular synchronization with data sources",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://graph.openaire.eu/docs/",
+      "sample_endpoints": ["/graph/researchProducts", "/graph/projects", "/graph/organizations"],
+      "data_quality": "High - new Graph API with improved JSON outputs",
+      "last_researched": "2025-07-29T11:25:00Z",
+      "researcher_notes": "New Graph API released with cursor-based pagination and improved data structure. Legacy Search API available until August 2025.",
+      "api_summary": "OpenAIRE Graph API provides access to one of the world's largest open scholarly communication graphs, connecting millions of research outputs with projects, organizations, and funding information. The API enables comprehensive research impact analysis and discovery across European and global research ecosystems, making it essential for research assessment, policy analysis, and scholarly communication studies."
+    }
+  },
+  {
+    "id": "scholexplorer-api",
+    "name": "ScholeXplorer API",
+    "provider": "OpenAIRE",
+    "description": "Provides access to scholarly links between publications and datasets using the Scholix metadata format. Part of the broader OpenAIRE infrastructure.",
+    "discovery_status": "documented",
+    "tags": ["scholarly links", "datasets", "publications", "Scholix", "research connections"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "10,000 paged results per query"
+    },
+    "technical_info": {
+      "base_url": "https://api.scholexplorer.openaire.eu",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/v3/linksFromPid",
+          "full_url": "https://api.scholexplorer.openaire.eu/v3/linksFromPid",
+          "method": "GET",
+          "description": "Find links from a given persistent identifier",
+          "documentation_link": "https://graph.openaire.eu/docs/apis/scholexplorer/",
+          "parameters": ["pid", "typology", "provider", "size"],
+          "response_format": "JSON with Scholix link records"
+        },
+        {
+          "path": "/v3/linksToPid",
+          "full_url": "https://api.scholexplorer.openaire.eu/v3/linksToPid",
+          "method": "GET",
+          "description": "Find links to a given persistent identifier",
+          "documentation_link": "https://graph.openaire.eu/docs/apis/scholexplorer/",
+          "parameters": ["pid", "typology", "provider", "size"],
+          "response_format": "JSON with Scholix link records"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.openaire.eu/scholexplorer-guide",
+        "authentication": "https://graph.openaire.eu/docs/apis/scholexplorer/",
+        "endpoints_reference": "https://graph.openaire.eu/docs/apis/scholexplorer/api",
+        "code_examples": "https://graph.openaire.eu/docs/apis/scholexplorer/",
+        "sdks_libraries": "https://github.com/openaire"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Publication-dataset links", "Dataset-dataset links", "Citation relationships", "Research connections"],
+      "geographic_scope": "Global",
+      "update_frequency": "Regular updates from data providers",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://scholexplorer.openaire.eu/documentation",
+      "sample_endpoints": ["/v3/linksFromPid", "/v3/linksToPid", "/v3/links"],
+      "data_quality": "Good - follows Scholix framework standards",
+      "last_researched": "2025-07-29T11:30:00Z",
+      "researcher_notes": "Provides 40M dataset and 24M publication relationships. Metadata available under CC-BY license.",
+      "api_summary": "ScholeXplorer API provides specialized access to scholarly links between research publications and datasets, enabling discovery of research connections that are often invisible in traditional bibliographic databases. Using the Scholix metadata framework, it offers insights into data-literature relationships, making it valuable for understanding research impact, data reuse patterns, and the interconnected nature of modern scholarly communication."
+    }
+  },
+  {
+    "id": "sciteai-api",
+    "name": "Scite.ai API",
+    "provider": "scite",
+    "description": "API for accessing citation context analysis, providing information on whether citations support, contradict, or mention research claims using deep learning.",
+    "discovery_status": "documented",
+    "tags": ["citation analysis", "deep learning", "research verification", "citation context"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "contact for pricing",
+      "rate_limits": "varies by subscription"
+    },
+    "technical_info": {
+      "base_url": "https://api.scite.ai",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/tallies",
+          "full_url": "https://api.scite.ai/tallies",
+          "method": "GET",
+          "description": "Get citation tallies showing supporting, contradicting, and mentioning citations",
+          "documentation_link": "https://api.scite.ai/docs",
+          "parameters": ["doi", "pmid"],
+          "response_format": "JSON with citation statistics"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://api.scite.ai/docs",
+        "authentication": "https://scite.ai/apiterms",
+        "endpoints_reference": "https://api.scite.ai/docs",
+        "code_examples": "https://github.com/hcss-utils/scite",
+        "sdks_libraries": "https://github.com/masonrhayes/sciteR"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Citation classifications", "Research verification data", "Journal citation metrics"],
+      "geographic_scope": "Global",
+      "update_frequency": "Regular updates with new publications",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api.scite.ai/docs",
+      "sample_endpoints": ["/tallies", "/references"],
+      "data_quality": "Specialized service for citation context analysis",
+      "last_researched": "2025-07-29T11:35:00Z",
+      "researcher_notes": "Requires approval from customersupport@researchsolutions.com. Third-party implementations available in Python and R.",
+      "api_summary": "Scite.ai API provides advanced citation analysis by classifying how research papers cite other works, determining whether citations support, contradict, or merely mention the cited research. Using deep learning to analyze citation context, it offers unique insights into research reliability and scientific discourse, making it valuable for researchers, institutions, and publishers seeking to understand the true impact and verification status of scientific claims."
+    }
+  },
+  {
+    "id": "orcid-public-api",
+    "name": "ORCID Public API",
+    "provider": "ORCID",
+    "description": "Public API for accessing researcher profiles and connecting scholarly activities. Enables search of public ORCID registry data and integration with research systems.",
+    "discovery_status": "documented",
+    "tags": ["researcher identifiers", "profiles", "scholarly identity", "academic careers"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "standard rate limiting"
+    },
+    "technical_info": {
+      "base_url": "https://pub.orcid.org/v3.0",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "OAuth 2.0 or public credentials",
+      "endpoints": [
+        {
+          "path": "/search",
+          "full_url": "https://pub.orcid.org/v3.0/search",
+          "method": "GET",
+          "description": "Search public ORCID records",
+          "documentation_link": "https://info.orcid.org/documentation/",
+          "parameters": ["q", "start", "rows"],
+          "response_format": "JSON/XML with researcher profiles"
+        },
+        {
+          "path": "/{orcid-id}",
+          "full_url": "https://pub.orcid.org/v3.0/{orcid-id}",
+          "method": "GET",
+          "description": "Retrieve public information from specific ORCID record",
+          "documentation_link": "https://info.orcid.org/documentation/",
+          "parameters": ["orcid-id"],
+          "response_format": "JSON/XML with detailed profile information"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://info.orcid.org/documentation/",
+        "authentication": "https://orcid.github.io/orcid-api-tutorial/",
+        "endpoints_reference": "https://info.orcid.org/documentation/",
+        "code_examples": "https://orcid.github.io/orcid-api-tutorial/",
+        "sdks_libraries": "https://postman.orcid.org/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Researcher profiles", "Publications", "Employment history", "Education", "Peer review activities"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time updates by researchers",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://info.orcid.org/documentation/",
+      "sample_endpoints": ["/search", "/{orcid-id}", "/{orcid-id}/works"],
+      "data_quality": "High - official researcher identity registry",
+      "last_researched": "2025-07-29T11:40:00Z",
+      "researcher_notes": "Public API free for anyone. Member API available for institutions. Sandbox environment available for testing.",
+      "api_summary": "ORCID Public API provides free access to the world's largest registry of researcher identifiers and profile information. It enables discovery of researchers, their affiliations, and publicly shared scholarly activities, making it essential for institutional repositories, manuscript submission systems, funding applications, and any research infrastructure that needs to accurately identify and connect researchers with their work."
+    }
+  },
+  {
+    "id": "ror-research-organization-registry-api",
+    "name": "ROR (Research Organization Registry) API",
+    "provider": "ROR Community",
+    "description": "Open API providing access to ROR's registry of research organizations worldwide. Offers comprehensive organizational metadata and hierarchical relationships.",
+    "discovery_status": "documented",
+    "tags": ["research organizations", "institutional identifiers", "open data", "affiliations"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "reasonable use expected"
+    },
+    "technical_info": {
+      "base_url": "https://api.ror.org/v2",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/organizations",
+          "full_url": "https://api.ror.org/v2/organizations",
+          "method": "GET",
+          "description": "Search and filter organizations in ROR registry",
+          "documentation_link": "https://ror.readme.io/docs/basics",
+          "parameters": ["query", "filter", "page", "page-size"],
+          "response_format": "JSON with organization metadata"
+        },
+        {
+          "path": "/organizations/{ror-id}",
+          "full_url": "https://api.ror.org/v2/organizations/{ror-id}",
+          "method": "GET",
+          "description": "Retrieve specific organization by ROR ID",
+          "documentation_link": "https://ror.readme.io/docs/basics",
+          "parameters": ["ror-id"],
+          "response_format": "JSON with detailed organization information"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://ror.readme.io/docs/basics",
+        "authentication": "https://ror.readme.io/docs/basics",
+        "endpoints_reference": "https://ror.readme.io/docs/basics",
+        "code_examples": "https://github.com/ror-community/ror-api",
+        "sdks_libraries": "https://github.com/ror-community/ror-api"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Universities", "Research institutes", "Government agencies", "Medical centers", "Museums"],
+      "geographic_scope": "Global",
+      "update_frequency": "Rolling updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://ror.readme.io/",
+      "sample_endpoints": ["/organizations", "/organizations/{ror-id}"],
+      "data_quality": "High - community-curated registry with version 2 schema",
+      "last_researched": "2025-07-29T11:45:00Z",
+      "researcher_notes": "CC0 licensed data with over 116,000 organizations. Data dumps available at Zenodo.",
+      "api_summary": "ROR API provides free access to the world's most comprehensive registry of research organizations, containing detailed metadata for over 116,000 institutions globally. It enables precise identification and disambiguation of research affiliations, making it essential for manuscript submission systems, funding databases, institutional repositories, and research assessment tools that need to accurately track organizational relationships in the research ecosystem."
+    }
+  },
+  {
+    "id": "crossref-funder-registry-api",
+    "name": "Crossref Funder Registry API",
+    "provider": "Crossref",
+    "description": "Open API providing access to the Crossref Funder Registry (formerly FundRef). Note: Transitioning to ROR for organizational identifiers.",
+    "discovery_status": "documented",
+    "tags": ["funders", "funding", "deprecated", "transitioning to ROR"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "standard Crossref API limits"
+    },
+    "technical_info": {
+      "base_url": "https://api.crossref.org",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/funders",
+          "full_url": "https://api.crossref.org/funders",
+          "method": "GET",
+          "description": "List all funders in the registry",
+          "documentation_link": "https://www.crossref.org/documentation/funder-registry/funder-data-via-the-api/",
+          "parameters": ["query", "rows", "offset"],
+          "response_format": "JSON with funder information"
+        },
+        {
+          "path": "/funders/{funder-id}/works",
+          "full_url": "https://api.crossref.org/funders/{funder-id}/works",
+          "method": "GET",
+          "description": "Find works associated with specific funder",
+          "documentation_link": "https://www.crossref.org/documentation/funder-registry/funder-data-via-the-api/",
+          "parameters": ["funder-id", "rows", "offset"],
+          "response_format": "JSON with funded research outputs"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://www.crossref.org/documentation/funder-registry/",
+        "authentication": "https://www.crossref.org/documentation/funder-registry/funder-data-via-the-api/",
+        "endpoints_reference": "https://www.crossref.org/documentation/funder-registry/funder-data-via-the-api/",
+        "code_examples": "https://www.crossref.org/documentation/funder-registry/funder-data-via-the-api/",
+        "sdks_libraries": "https://github.com/CrossRef/"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Funding organizations", "Grant information", "Research funding data"],
+      "geographic_scope": "Global",
+      "update_frequency": "Transitioning to ROR",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.crossref.org/documentation/funder-registry/",
+      "sample_endpoints": ["/funders", "/funders/{funder-id}/works", "/works?filter=award.number:{grant-number}"],
+      "data_quality": "Good but transitioning to ROR",
+      "last_researched": "2025-07-29T11:50:00Z",
+      "researcher_notes": "Open Funder Registry announced transition to ROR in September 2023. ROR ID is now preferred method for funder identification.",
+      "api_summary": "Crossref Funder Registry API provides access to funding organization data and their associated research outputs, but is in transition to ROR (Research Organization Registry). While still functional, users are encouraged to transition to ROR IDs for future-proof funder identification. The API enables tracking of research funding patterns and institutional relationships, supporting research assessment and funding impact analysis."
+    }
+  },
+  {
+    "id": "grid-global-research-identifier-database-api",
+    "name": "GRID (Global Research Identifier Database) - Deprecated",
+    "provider": "Digital Science (Deprecated)",
+    "description": "GRID was retired from public use in Q4 2021. Digital Science transferred stewardship to ROR (Research Organization Registry) as the successor.",
+    "discovery_status": "deprecated",
+    "tags": ["deprecated", "research organizations", "replaced by ROR"],
+    "access_info": {
+      "is_free": null,
+      "requires_api_key": null,
+      "requires_approval": null,
+      "pricing_model": "deprecated - use ROR instead",
+      "rate_limits": "deprecated"
+    },
+    "technical_info": {
+      "base_url": null,
+      "protocol": null,
+      "data_formats": [],
+      "auth_method": null,
+      "endpoints": [],
+      "documentation_sections": {
+        "getting_started": null,
+        "authentication": null,
+        "endpoints_reference": null,
+        "code_examples": null,
+        "sdks_libraries": null
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Research organizations (deprecated)"],
+      "geographic_scope": "Global (deprecated)",
+      "update_frequency": "No longer updated",
+      "historical_data": false
+    },
+    "research_notes": {
+      "documentation_url": "https://www.grid.ac/",
+      "sample_endpoints": [],
+      "data_quality": "Deprecated - migrated to ROR",
+      "last_researched": "2025-07-29T11:55:00Z",
+      "researcher_notes": "GRID was retired in Q4 2021. Users should migrate to ROR for organizational identifiers. Historical data may be accessible through Dimensions API.",
+      "api_summary": "GRID (Global Research Identifier Database) was a comprehensive database of research organizations that was deprecated in favor of ROR (Research Organization Registry) in 2021. Digital Science transferred stewardship to the community-driven ROR initiative to ensure continued maintenance and development. Users previously relying on GRID should migrate to ROR, which provides enhanced coverage and community governance for research organization identification."
+    }
+  },
+  {
+    "id": "sherpa-romeo-api",
+    "name": "Sherpa Romeo API v2",
+    "provider": "Sherpa Services / Jisc",
+    "description": "API providing access to publisher copyright and self-archiving policies. Part of the consolidated Sherpa Services platform.",
+    "discovery_status": "documented",
+    "tags": ["publisher policies", "open access", "copyright", "self-archiving"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "reasonable use expected"
+    },
+    "technical_info": {
+      "base_url": "https://v2.sherpa.ac.uk/cgi",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/retrieve",
+          "full_url": "https://v2.sherpa.ac.uk/cgi/retrieve",
+          "method": "GET",
+          "description": "Retrieve publisher policy and journal information",
+          "documentation_link": "https://v2.sherpa.ac.uk/api/",
+          "parameters": ["item-type", "format", "api-key"],
+          "response_format": "JSON with policy metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://v2.sherpa.ac.uk/api/",
+        "authentication": "https://v2.sherpa.ac.uk/api/",
+        "endpoints_reference": "https://v2.sherpa.ac.uk/api/object-retrieval.html",
+        "code_examples": "https://v2.sherpa.ac.uk/api/",
+        "sdks_libraries": "https://v2.sherpa.ac.uk/api/metadata-schema.html"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Publisher policies", "Journal policies", "Copyright information", "Self-archiving permissions"],
+      "geographic_scope": "Global",
+      "update_frequency": "Regular updates to policy information",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://v2.sherpa.ac.uk/romeo/api.html",
+      "sample_endpoints": ["/retrieve"],
+      "data_quality": "Good - consolidated platform with JSON output",
+      "last_researched": "2025-07-29T12:00:00Z",
+      "researcher_notes": "Version 2 API now returns JSON instead of XML. Consolidated with other Sherpa services into unified platform.",
+      "api_summary": "Sherpa Romeo API v2 provides comprehensive access to publisher copyright and self-archiving policies, enabling researchers and institutions to understand open access requirements and permissions. As part of the consolidated Sherpa Services platform, it offers structured policy data in JSON format, making it essential for institutional repositories, research management systems, and compliance tools that need to track and enforce open access mandates."
+    }
+  },
+  {
+    "id": "sherpa-juliet-api",
+    "name": "Sherpa Juliet API",
+    "provider": "Sherpa Services / Jisc",
+    "description": "API providing access to research funder open access policies. Integrated into the consolidated Sherpa Services platform as 'open policy finder'.",
+    "discovery_status": "documented",
+    "tags": ["funder policies", "open access mandates", "research policy", "compliance"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "reasonable use expected"
+    },
+    "technical_info": {
+      "base_url": "https://v2.sherpa.ac.uk/cgi",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/retrieve",
+          "full_url": "https://v2.sherpa.ac.uk/cgi/retrieve",
+          "method": "GET",
+          "description": "Retrieve funder policy information through consolidated API",
+          "documentation_link": "https://v2.sherpa.ac.uk/juliet/api.html",
+          "parameters": ["item-type", "format", "api-key"],
+          "response_format": "JSON with policy metadata"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://v2.sherpa.ac.uk/api/",
+        "authentication": "https://v2.sherpa.ac.uk/api/",
+        "endpoints_reference": "https://v2.sherpa.ac.uk/api/object-retrieval.html",
+        "code_examples": "https://v2.sherpa.ac.uk/api/",
+        "sdks_libraries": "https://v2.sherpa.ac.uk/api/metadata-schema.html"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Funder policies", "Open access mandates", "Compliance requirements", "Policy guidance"],
+      "geographic_scope": "Global",
+      "update_frequency": "Regular policy updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://v2.sherpa.ac.uk/juliet/api.html",
+      "sample_endpoints": ["/retrieve"],
+      "data_quality": "Good - consolidated into unified Sherpa platform",
+      "last_researched": "2025-07-29T12:05:00Z",
+      "researcher_notes": "Consolidated with Romeo, Fact, and OpenDOAR into 'open policy finder' platform. Requires account creation for API access.",
+      "api_summary": "Sherpa Juliet API provides access to research funder open access policies and mandates through the consolidated Sherpa Services platform. It enables institutions and researchers to understand compliance requirements across different funding organizations, making it essential for research offices, institutional repositories, and grant management systems that need to ensure adherence to funder open access policies."
+    }
+  },
+  {
+    "id": "open-research-europe-api",
+    "name": "Open Research Europe (No Public API)",
+    "provider": "European Commission / F1000 Research",
+    "description": "Open Research Europe is a publishing platform for Horizon 2020 and Horizon Europe beneficiaries but does not currently offer a public API.",
+    "discovery_status": "no_api_found",
+    "tags": ["publishing platform", "European research", "no public api", "F1000"],
+    "access_info": {
+      "is_free": null,
+      "requires_api_key": null,
+      "requires_approval": null,
+      "pricing_model": "unknown",
+      "rate_limits": "unknown"
+    },
+    "technical_info": {
+      "base_url": null,
+      "protocol": null,
+      "data_formats": [],
+      "auth_method": null,
+      "endpoints": [],
+      "documentation_sections": {
+        "getting_started": null,
+        "authentication": null,
+        "endpoints_reference": null,
+        "code_examples": null,
+        "sdks_libraries": null
+      }
+    },
+    "content_summary": {
+      "data_categories": ["EU-funded research articles", "Peer review reports", "Open access publications"],
+      "geographic_scope": "European Union",
+      "update_frequency": "Continuous publication",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://open-research-europe.ec.europa.eu/",
+      "sample_endpoints": [],
+      "data_quality": "Platform exists but no public API documented",
+      "last_researched": "2025-07-29T12:10:00Z",
+      "researcher_notes": "Built on F1000 Research platform. May inherit F1000's API capabilities but no specific documentation found for Open Research Europe API.",
+      "api_summary": "Open Research Europe is a specialized publishing platform for European Commission-funded research that provides immediate open access publication and transparent peer review. While it operates on the F1000 Research infrastructure and may have underlying API capabilities, no public API documentation was found specifically for accessing Open Research Europe content programmatically. Researchers needing API access to EU research outputs should consider OpenAIRE APIs or contact the platform directly."
+    }
+  },
+  {
+    "id": "wellcome-open-research-api",
+    "name": "Wellcome Open Research API",
+    "provider": "Wellcome Trust / F1000 Research",
+    "description": "API for accessing Wellcome-funded research publications. Built on F1000 Research platform with Solr-based search capabilities.",
+    "discovery_status": "documented",
+    "tags": ["Wellcome research", "F1000 platform", "biomedical research", "open access"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": false,
+      "requires_approval": false,
+      "pricing_model": "free",
+      "rate_limits": "100 requests per 60 seconds, 100 results per request"
+    },
+    "technical_info": {
+      "base_url": "https://wellcomeopenresearch.org",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "none",
+      "endpoints": [
+        {
+          "path": "/extapi/search",
+          "full_url": "https://wellcomeopenresearch.org/extapi/search",
+          "method": "GET",
+          "description": "Search Wellcome Open Research articles using Solr queries",
+          "documentation_link": "https://wellcomeopenresearch.org/developers",
+          "parameters": ["q", "wt", "rows", "start"],
+          "response_format": "XML/JSON with article metadata"
+        },
+        {
+          "path": "/published-xml-urls",
+          "full_url": "https://wellcomeopenresearch.org/published-xml-urls",
+          "method": "GET",
+          "description": "Download links to XML of entire corpus",
+          "documentation_link": "https://wellcomeopenresearch.org/developers",
+          "parameters": [],
+          "response_format": "XML URLs for all published articles"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://wellcomeopenresearch.org/developers",
+        "authentication": "https://wellcomeopenresearch.org/developers",
+        "endpoints_reference": "https://wellcomeopenresearch.org/developers",
+        "code_examples": "https://wellcomeopenresearch.org/developers",
+        "sdks_libraries": "https://wellcomeopenresearch.org/developers"
+      }
+    },
+    "content_summary": {
+      "data_categories": ["Biomedical research", "Health research", "Research articles", "Data notes", "Software tools"],
+      "geographic_scope": "Global Wellcome-funded research",
+      "update_frequency": "Continuous publication",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://wellcomeopenresearch.org/developers",
+      "sample_endpoints": ["/extapi/search", "/published-xml-urls"],
+      "data_quality": "Good - built on established F1000 Research platform",
+      "last_researched": "2025-07-29T12:15:00Z",
+      "researcher_notes": "Uses same API structure as F1000 Research with Solr-based search. No API key required for read access.",
+      "api_summary": "Wellcome Open Research API provides programmatic access to biomedical and health research publications funded by the Wellcome Trust. Built on the F1000 Research platform, it offers Solr-based search capabilities and full-text access to research articles, making it valuable for researchers studying Wellcome-funded research outputs, biomedical literature analysis, and health research impact assessment."
+    }
+  }
+]

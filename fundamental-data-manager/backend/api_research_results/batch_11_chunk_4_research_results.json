@@ -1,0 +1,297 @@
+[
+  {
+    "id": "sp-global-market-intelligence",
+    "name": "S&P Global Market Intelligence API",
+    "provider": "S&P Global",
+    "description": "Comprehensive financial and ESG data platform providing fundamental data, as-reported indicators, and ESG metrics with enterprise-only access and custom pricing based on data requirements.",
+    "discovery_status": "documented",
+    "tags": ["financial data", "ESG metrics", "fundamental analysis", "market intelligence", "enterprise"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise-only with custom pricing based on data volume and requirements",
+      "rate_limits": "Custom per client agreement"
+    },
+    "technical_info": {
+      "base_url": "Enterprise endpoints provided upon subscription",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML", "CSV"],
+      "auth_method": "API key with enterprise authentication",
+      "endpoints": [
+        {
+          "path": "/fundamentals",
+          "full_url": "Enterprise endpoint/fundamentals",
+          "method": "GET",
+          "description": "Comprehensive fundamental data and as-reported indicators",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": ["ticker", "data_type", "period", "currency"],
+          "response_format": "JSON with fundamental financial data"
+        },
+        {
+          "path": "/esg/metrics",
+          "full_url": "Enterprise endpoint/esg/metrics",
+          "method": "GET",
+          "description": "ESG metrics and sustainability indicators",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": ["ticker", "esg_category", "date_range"],
+          "response_format": "JSON with ESG scores and metrics"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Fundamental data", "As-reported indicators", "ESG metrics", "Market intelligence"],
+      "geographic_scope": "Global coverage with comprehensive market data",
+      "update_frequency": "Real-time and daily updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Enterprise documentation provided upon subscription",
+      "api_summary": "S&P Global Market Intelligence provides comprehensive financial and ESG data platform with enterprise-only access, covering fundamental data, as-reported indicators, and ESG metrics with custom pricing.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact enterprise sales",
+      "api_reference": "Enterprise documentation provided",
+      "examples": "Enterprise examples provided",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "esg-book",
+    "name": "ESG Book API",
+    "provider": "ESG Book",
+    "description": "Automated ESG data collection and sustainability reporting platform with strong focus on emissions estimation covering 45,000+ companies and consent-based data access for financial institutions.",
+    "discovery_status": "documented",
+    "tags": ["ESG data", "emissions estimation", "sustainability reporting", "automated collection", "consent-based"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Contact for pricing - financial institution focus",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.esgbook.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/companies/{id}/esg",
+          "full_url": "https://api.esgbook.com/companies/{id}/esg",
+          "method": "GET",
+          "description": "Comprehensive ESG data for specific companies",
+          "documentation_link": "Contact for documentation",
+          "parameters": ["id", "metrics", "date_range"],
+          "response_format": "JSON with ESG metrics and sustainability data"
+        },
+        {
+          "path": "/emissions/estimation",
+          "full_url": "https://api.esgbook.com/emissions/estimation",
+          "method": "GET",
+          "description": "Automated emissions estimation for companies",
+          "documentation_link": "Contact for documentation",
+          "parameters": ["company_id", "scope", "period"],
+          "response_format": "JSON with emissions estimates and methodology"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["ESG metrics", "Emissions estimation", "Sustainability reporting", "Automated data collection"],
+      "geographic_scope": "45,000+ companies globally",
+      "update_frequency": "Automated data collection with regular updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact for documentation",
+      "api_summary": "ESG Book specializes in automated ESG data collection and sustainability reporting with emissions estimation for 45,000+ companies, featuring consent-based data access designed for financial institutions.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for access",
+      "api_reference": "Contact for documentation",
+      "examples": "Contact for examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "msci-esg",
+    "name": "MSCI ESG API",
+    "provider": "MSCI",
+    "description": "Industry-leading ESG ratings platform with AAA to CCC scale covering 17,000+ issuers and 999,000+ securities, backed by 25+ years of ESG expertise and methodology.",
+    "discovery_status": "documented",
+    "tags": ["ESG ratings", "industry leading", "comprehensive coverage", "established methodology", "securities"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise licensing with custom pricing",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.msci.com",
+      "protocol": "REST",
+      "data_formats": ["JSON", "XML"],
+      "auth_method": "API key with enterprise authentication",
+      "endpoints": [
+        {
+          "path": "/esg/ratings",
+          "full_url": "https://api.msci.com/esg/ratings",
+          "method": "GET",
+          "description": "ESG ratings on AAA to CCC scale for issuers and securities",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": ["issuer", "security", "rating_type", "date_range"],
+          "response_format": "JSON with ESG ratings and methodology details"
+        },
+        {
+          "path": "/esg/research",
+          "full_url": "https://api.msci.com/esg/research",
+          "method": "GET",
+          "description": "Detailed ESG research and analysis reports",
+          "documentation_link": "Enterprise documentation provided",
+          "parameters": ["issuer", "research_type", "date_range"],
+          "response_format": "JSON with ESG research and analysis"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["ESG ratings", "ESG research", "Methodology details", "Securities analysis"],
+      "geographic_scope": "17,000+ issuers and 999,000+ securities globally",
+      "update_frequency": "Regular updates with established methodology",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Enterprise documentation provided",
+      "api_summary": "MSCI provides industry-leading ESG ratings with AAA to CCC scale covering 17,000+ issuers and 999,000+ securities, backed by 25+ years of ESG expertise and comprehensive methodology.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact enterprise sales",
+      "api_reference": "Enterprise documentation provided",
+      "examples": "Enterprise examples provided",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "sustainalytics",
+    "name": "Sustainalytics ESG Assessment Platform (EAP) API",
+    "provider": "Sustainalytics (Morningstar)",
+    "description": "Comprehensive ESG risk ratings and research platform with two-phase authentication system, owned by Morningstar with extensive documentation available on GitHub.",
+    "discovery_status": "documented",
+    "tags": ["ESG risk ratings", "comprehensive research", "Morningstar owned", "GitHub documentation", "two-phase auth"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Contact for pricing - enterprise focus",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.sustainalytics.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "Two-phase authentication system",
+      "endpoints": [
+        {
+          "path": "/esg/risk-ratings",
+          "full_url": "https://api.sustainalytics.com/esg/risk-ratings",
+          "method": "GET",
+          "description": "ESG risk ratings and assessment data",
+          "documentation_link": "GitHub documentation available",
+          "parameters": ["company_id", "risk_category", "date_range"],
+          "response_format": "JSON with ESG risk ratings and detailed assessments"
+        },
+        {
+          "path": "/esg/research",
+          "full_url": "https://api.sustainalytics.com/esg/research",
+          "method": "GET",
+          "description": "Comprehensive ESG research and analysis",
+          "documentation_link": "GitHub documentation available",
+          "parameters": ["company_id", "research_type", "date_range"],
+          "response_format": "JSON with detailed ESG research reports"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["ESG risk ratings", "ESG research", "Risk assessments", "Sustainability analysis"],
+      "geographic_scope": "Global coverage with comprehensive company database",
+      "update_frequency": "Regular updates with detailed assessments",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "GitHub documentation available",
+      "api_summary": "Sustainalytics, owned by Morningstar, provides comprehensive ESG risk ratings and research with two-phase authentication system and extensive documentation available on GitHub for enterprise clients.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "GitHub documentation available",
+      "api_reference": "Comprehensive public docs on GitHub",
+      "examples": "GitHub repository with examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "reprisk",
+    "name": "RepRisk API",
+    "provider": "RepRisk",
+    "description": "AI-powered reputational risk intelligence platform combining AI with expert human analysis, focusing on due diligence and compliance use cases for enterprise clients.",
+    "discovery_status": "documented",
+    "tags": ["reputational risk", "AI powered", "human analysis", "due diligence", "compliance"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise pricing - contact required",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.reprisk.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/risk/assessment",
+          "full_url": "https://api.reprisk.com/risk/assessment",
+          "method": "GET",
+          "description": "AI-powered reputational risk assessments with human expert analysis",
+          "documentation_link": "Client-only documentation",
+          "parameters": ["company_id", "risk_category", "date_range"],
+          "response_format": "JSON with risk scores and detailed analysis"
+        },
+        {
+          "path": "/compliance/screening",
+          "full_url": "https://api.reprisk.com/compliance/screening",
+          "method": "GET",
+          "description": "Compliance screening and due diligence analysis",
+          "documentation_link": "Client-only documentation",
+          "parameters": ["entity", "screening_type", "date_range"],
+          "response_format": "JSON with compliance screening results"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Reputational risk", "Compliance screening", "Due diligence", "Risk assessments"],
+      "geographic_scope": "Global coverage with AI and human analysis",
+      "update_frequency": "Continuous AI monitoring with human validation",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Client-only access",
+      "api_summary": "RepRisk provides AI-powered reputational risk intelligence combining automated AI analysis with expert human validation, focusing on due diligence and compliance use cases with restricted client-only documentation access.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for client access",
+      "api_reference": "Client-only documentation",
+      "examples": "Client-only examples",
+      "changelog": null,
+      "status_page": null
+    }
+  }
+]

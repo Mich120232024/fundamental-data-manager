@@ -1,0 +1,342 @@
+[
+  {
+    "id": "stocktwits-api",
+    "name": "StockTwits API",
+    "provider": "StockTwits",
+    "description": "Social platform for financial discussions and sentiment from retail investors. Provides access to real-time social sentiment, user streams, watchlists, and trending symbols discussions. Currently not accepting new API registrations.",
+    "discovery_status": "documented",
+    "tags": ["social financial data", "retail sentiment", "social trading", "market buzz", "trending symbols"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Not publicly available - contact for pricing. Previously had free tier but suspended",
+      "rate_limits": "Previously 200/hour for authenticated requests"
+    },
+    "technical_info": {
+      "base_url": "https://api.stocktwits.com/api/2",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "OAuth",
+      "endpoints": [
+        {
+          "path": "/streams/user/{user_name}",
+          "full_url": "https://api.stocktwits.com/api/2/streams/user/{user_name}",
+          "method": "GET",
+          "description": "Get user stream messages",
+          "documentation_link": "https://api.stocktwits.com/developers/docs",
+          "parameters": ["user_name", "since", "max", "limit", "callback"],
+          "response_format": "JSON with messages array"
+        },
+        {
+          "path": "/streams/symbol/{symbol}",
+          "full_url": "https://api.stocktwits.com/api/2/streams/symbol/{symbol}",
+          "method": "GET",
+          "description": "Get symbol stream messages",
+          "documentation_link": "https://api.stocktwits.com/developers/docs",
+          "parameters": ["symbol", "since", "max", "limit", "callback", "filter"],
+          "response_format": "JSON with messages and cursor data"
+        },
+        {
+          "path": "/streams/trending",
+          "full_url": "https://api.stocktwits.com/api/2/streams/trending",
+          "method": "GET",
+          "description": "Get trending symbols and discussions",
+          "documentation_link": "https://api.stocktwits.com/developers/docs",
+          "parameters": ["limit", "callback"],
+          "response_format": "JSON with trending symbols array"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Social sentiment", "User streams", "Trending symbols", "Market discussions", "Retail investor sentiment"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api.stocktwits.com/developers/docs",
+      "api_summary": "StockTwits provides social communications platform for financial markets but has suspended new API registrations as of 2024 while reviewing their API offerings. The platform remains popular for retail investor sentiment but API access is currently limited.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://api.stocktwits.com/developers",
+      "api_reference": "https://api.stocktwits.com/developers/docs",
+      "examples": "https://github.com/simov/stocktwits",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "isentium",
+    "name": "iSentium Social Sentiment API",
+    "provider": "iSentium",
+    "description": "AI-powered social sentiment analysis for financial markets using patented NLP technology. Provides Daily Directional Indicators covering ~90% of U.S. stock market liquidity, supporting over 8,500 U.S. stocks, indices, and ETFs.",
+    "discovery_status": "documented",
+    "tags": ["social sentiment", "NLP", "algorithmic trading", "hedge funds", "directional indicators"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom enterprise pricing based on data volume and requirements",
+      "rate_limits": "Custom per client agreement"
+    },
+    "technical_info": {
+      "base_url": "Custom endpoint per client",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV", "FIX"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/sentiment/daily",
+          "full_url": "https://api.isentium.com/v1/sentiment/daily",
+          "method": "GET",
+          "description": "Daily Directional Indicators for supported securities",
+          "documentation_link": "Contact for documentation",
+          "parameters": ["symbol", "date", "format"],
+          "response_format": "JSON with sentiment scores and directional indicators"
+        },
+        {
+          "path": "/sentiment/realtime",
+          "full_url": "https://api.isentium.com/v1/sentiment/realtime",
+          "method": "GET",
+          "description": "Real-time sentiment feed for securities",
+          "documentation_link": "Contact for documentation",
+          "parameters": ["symbols", "callback_url"],
+          "response_format": "Streaming JSON with real-time sentiment updates"
+        },
+        {
+          "path": "/analytics/buzz",
+          "full_url": "https://api.isentium.com/v1/analytics/buzz",
+          "method": "GET",
+          "description": "Social media buzz volume metrics",
+          "documentation_link": "Contact for documentation",
+          "parameters": ["symbol", "timeframe", "source"],
+          "response_format": "JSON with buzz volume and change metrics"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Daily Directional Indicators", "Real-time sentiment", "Social buzz metrics", "Algorithmic signals"],
+      "geographic_scope": "United States",
+      "update_frequency": "Real-time updates, daily aggregates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact for documentation",
+      "api_summary": "iSentium provides enterprise-only social sentiment analysis with patented NLP technology. Covers 90% of U.S. stock market liquidity and is vetted by JP Morgan and NASDAQ. Requires direct business relationship and custom pricing negotiations.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Available to enterprise clients only",
+      "api_reference": "Contact sales for full documentation",
+      "examples": "Provided with enterprise subscription",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "dataminr",
+    "name": "Dataminr Event Detection API",
+    "provider": "Dataminr",
+    "description": "AI-powered real-time event and risk detection platform analyzing public data sources. Processes billions of public data inputs per day from nearly 1 million distinct sources including text, images, video, and sound in 150+ languages.",
+    "discovery_status": "documented",
+    "tags": ["event detection", "risk monitoring", "real-time alerts", "crisis management", "news breaking"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom enterprise pricing based on use case and volume",
+      "rate_limits": "Custom per client agreement"
+    },
+    "technical_info": {
+      "base_url": "https://gateway.dataminr.com/api",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/alerts",
+          "full_url": "https://gateway.dataminr.com/api/v1/alerts",
+          "method": "GET",
+          "description": "Retrieve real-time alerts based on configured parameters",
+          "documentation_link": "https://www.dataminr.com/legal/api/",
+          "parameters": ["type", "location", "keywords", "since", "limit"],
+          "response_format": "JSON with alert objects containing event details"
+        },
+        {
+          "path": "/alerts/stream",
+          "full_url": "https://gateway.dataminr.com/api/v1/alerts/stream",
+          "method": "GET",
+          "description": "Real-time streaming alerts endpoint",
+          "documentation_link": "https://www.dataminr.com/legal/api/",
+          "parameters": ["filters", "format"],
+          "response_format": "Streaming JSON with real-time alert data"
+        },
+        {
+          "path": "/events/{event_id}",
+          "full_url": "https://gateway.dataminr.com/api/v1/events/{event_id}",
+          "method": "GET",
+          "description": "Get detailed information about a specific event",
+          "documentation_link": "https://www.dataminr.com/legal/api/",
+          "parameters": ["event_id", "include_related"],
+          "response_format": "JSON with comprehensive event details and related information"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Real-time event alerts", "Risk detection", "Crisis monitoring", "Breaking news", "Public data analysis"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time with sub-second latency",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.dataminr.com/legal/api/",
+      "api_summary": "Dataminr is a premium enterprise platform used by major corporations, government agencies, and newsrooms. Known for speed in detecting events before traditional news sources. Requires enterprise licensing agreements with dedicated support.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact Dataminr for access",
+      "api_reference": "Available to licensed clients",
+      "examples": "Provided with enterprise license",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "sesamm",
+    "name": "SESAMm TextReveal API",
+    "provider": "SESAMm",
+    "description": "AI-powered ESG and sentiment analysis from textual data using cutting-edge NLP. Covers public and private companies assessing ESG risks in over 100 languages from 20 billion historical articles with 90 ESG risk categories aligned with UN standards.",
+    "discovery_status": "documented",
+    "tags": ["ESG analysis", "sentiment analysis", "SDG monitoring", "alternative data", "textual analysis"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom enterprise pricing based on coverage and data volume requirements",
+      "rate_limits": "Custom per client agreement"
+    },
+    "technical_info": {
+      "base_url": "https://api.sesamm.com",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV", "XML"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/esg/alerts",
+          "full_url": "https://api.sesamm.com/v1/esg/alerts",
+          "method": "GET",
+          "description": "ESG controversy alerts and monitoring",
+          "documentation_link": "Contact SESAMm for API documentation",
+          "parameters": ["company_id", "risk_category", "date_range", "severity"],
+          "response_format": "JSON with ESG alerts and source articles"
+        },
+        {
+          "path": "/companies/{company_id}/esg",
+          "full_url": "https://api.sesamm.com/v1/companies/{company_id}/esg",
+          "method": "GET",
+          "description": "Comprehensive ESG profile for specific company",
+          "documentation_link": "Contact SESAMm for API documentation",
+          "parameters": ["company_id", "time_period", "categories", "include_sources"],
+          "response_format": "JSON with ESG scores, risk categories, and source transparency"
+        },
+        {
+          "path": "/sdg/monitoring",
+          "full_url": "https://api.sesamm.com/v1/sdg/monitoring",
+          "method": "GET",
+          "description": "UN Sustainable Development Goals positive impact tracking",
+          "documentation_link": "Contact SESAMm for API documentation",
+          "parameters": ["company_id", "sdg_goals", "date_range"],
+          "response_format": "JSON with SDG impact scores and supporting evidence"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["ESG risk assessment", "SDG impact tracking", "Controversy monitoring", "Sentiment analysis"],
+      "geographic_scope": "Global - 5+ million companies covered",
+      "update_frequency": "Daily updates with real-time alerts",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact SESAMm for documentation",
+      "api_summary": "SESAMm specializes in ESG and alternative data analytics with transparent ESG analysis and source traceability. Focuses on private equity, asset management, and enterprise use cases with UN Global Compact alignment.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://www.sesamm.com/contact",
+      "api_reference": "Contact for full API documentation",
+      "examples": "Provided with enterprise subscription",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "accern",
+    "name": "Accern Financial Analytics API",
+    "provider": "Accern",
+    "description": "No-code generative NLP platform for financial news analytics and sentiment analysis. AI-powered financial news analytics, sentiment analysis, and event detection using adaptive NLP technology used by major financial institutions.",
+    "discovery_status": "documented",
+    "tags": ["AI analytics", "financial news", "sentiment analysis", "event detection", "no-code NLP"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Multiple tiers based on data volume and features - trial available with limited requests",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://feed.accern.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/v3/alphas",
+          "full_url": "https://feed.accern.com/v3/alphas",
+          "method": "GET",
+          "description": "Access AI-generated alpha signals and financial insights",
+          "documentation_link": "https://docs.accern.com/",
+          "parameters": ["token", "limit", "since", "symbols", "event_groups"],
+          "response_format": "JSON with alpha signals, sentiment scores, and entity information"
+        },
+        {
+          "path": "/v3/news",
+          "full_url": "https://feed.accern.com/v3/news",
+          "method": "GET",
+          "description": "Structured financial news with AI-extracted entities and events",
+          "documentation_link": "https://docs.accern.com/",
+          "parameters": ["token", "symbols", "since", "limit", "event_types"],
+          "response_format": "JSON with news articles, extracted entities, and event classifications"
+        },
+        {
+          "path": "/v3/sentiment",
+          "full_url": "https://feed.accern.com/v3/sentiment",
+          "method": "GET",
+          "description": "Real-time sentiment analysis for financial entities",
+          "documentation_link": "https://docs.accern.com/",
+          "parameters": ["token", "symbols", "timeframe", "aggregation"],
+          "response_format": "JSON with sentiment scores and impact assessments"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Alpha signals", "Financial news", "Sentiment analysis", "Event detection", "Entity relationships"],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://docs.accern.com/",
+      "api_summary": "Accern offers accessible financial NLP with no-code platform making it easier for developers to implement sophisticated financial analytics. Strong backing from major investors with proven use cases at large financial institutions. Good balance between enterprise features and developer accessibility.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://docs.accern.com/",
+      "api_reference": "https://docs.accern.com/",
+      "examples": "https://docs.accern.com/",
+      "changelog": null,
+      "status_page": null
+    }
+  }
+]

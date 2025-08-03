@@ -1,0 +1,79 @@
+
+Research these 25 APIs comprehensively using web search and official documentation:
+
+- Scale AI API (Scale) - Scale AI API service
+- Pinecone API (Pinecone) - Pinecone API service
+- Weaviate API (Weaviate) - Weaviate API service
+- Chroma API (Chroma) - Chroma API service
+- Milvus API (Milvus) - Milvus API service
+- LangSmith API (LangSmith) - LangSmith API service
+- PromptLayer API (PromptLayer) - PromptLayer API service
+- Weights & Biases API (Weights) - Weights & Biases API service
+- Labelbox API (Labelbox) - Labelbox API service
+- Hugging Face Hub API (Hugging) - Hugging Face Hub API service
+- OpenCV API (OpenCV) - OpenCV API service
+- Modular AI API (Modular) - Modular AI API service
+- Databricks API (Databricks) - Databricks API service
+- DataRobot API (DataRobot) - DataRobot API service
+- H2O.ai API (H2O.ai) - H2O.ai API service
+- MongoDB Atlas Vector Search API (MongoDB) - MongoDB Atlas Vector Search API service
+- Qdrant API (Qdrant) - Qdrant API service
+- Redis Vector Search API (Redis) - Redis Vector Search API service
+- Inflection API (Inflection) - Inflection API service
+- Character.AI API (Character.AI) - Character.AI API service
+- Together AI API (Together) - Together AI API service
+- Groq API (Groq) - Groq API service
+- Nvidia NeMo API (Nvidia) - Nvidia NeMo API service
+- Nvidia Picasso API (Nvidia) - Nvidia Picasso API service
+- Langfuse API (Langfuse) - Langfuse API service
+
+For EACH API, provide this JSON structure using REAL DATA from official sources:
+{
+  "id": "original_api_id",
+  "name": "Official API Name from documentation",
+  "provider": "Actual Organization/Company Name", 
+  "description": "2-3 sentence summary based on official documentation",
+  "discovery_status": "documented",
+  "tags": ["actual", "relevant", "tags"],
+  "access_info": {
+    "is_free": true/false/null,
+    "requires_api_key": true/false/null,
+    "requires_approval": false,
+    "pricing_model": "actual pricing model from docs",
+    "rate_limits": "specific limits from documentation or 'unknown'"
+  },
+  "technical_info": {
+    "base_url": "actual base URL from documentation",
+    "protocol": "REST/GraphQL/SOAP based on documentation",
+    "data_formats": ["formats supported by API"],
+    "auth_method": "actual authentication method",
+    "endpoints": [
+      "List real endpoint paths with descriptions from official docs"
+    ]
+  },
+  "content_summary": {
+    "data_categories": ["Actual data categories from documentation"],
+    "geographic_scope": "based on API documentation",
+    "update_frequency": "from official documentation",
+    "historical_data": true/false/null
+  },
+  "research_notes": {
+    "documentation_url": "actual URL to official API documentation",
+    "sample_endpoints": ["real endpoints from documentation"],
+    "data_quality": "assessment based on documentation quality",
+    "last_researched": "2025-07-28T19:41:42.180319Z",
+    "researcher_notes": "insights from researching official sources",
+    "api_summary": "comprehensive paragraph based on official documentation about capabilities, data, users, and value"
+  }
+}
+
+RESEARCH REQUIREMENTS:
+1. Find OFFICIAL documentation for each API - use web search
+2. Extract REAL endpoint paths from documentation
+3. Get ACTUAL pricing and authentication info
+4. Identify REAL data categories provided
+5. Write comprehensive summary based on official sources
+
+OUTPUT: Return a JSON array with all researched APIs using REAL data only.
+
+BATCH ID: 17

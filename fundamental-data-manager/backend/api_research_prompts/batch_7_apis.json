@@ -1,0 +1,127 @@
+[
+  {
+    "id": "open-science-training-handbook-api",
+    "name": "Open Science Training Handbook API",
+    "provider": "Open"
+  },
+  {
+    "id": "foster-open-science-api",
+    "name": "FOSTER Open Science API",
+    "provider": "FOSTER"
+  },
+  {
+    "id": "openup-hub-api",
+    "name": "OpenUP Hub API",
+    "provider": "OpenUP"
+  },
+  {
+    "id": "orcid-member-api",
+    "name": "ORCID Member API",
+    "provider": "ORCID"
+  },
+  {
+    "id": "sciencepaper-xml-api",
+    "name": "Sciencepaper XML API",
+    "provider": "Sciencepaper"
+  },
+  {
+    "id": "scigraph-api",
+    "name": "SciGraph API",
+    "provider": "SciGraph"
+  },
+  {
+    "id": "wikidata-api",
+    "name": "WikiData API",
+    "provider": "WikiData"
+  },
+  {
+    "id": "uspto-patent-examination-data-api",
+    "name": "USPTO Patent Examination Data API",
+    "provider": "USPTO"
+  },
+  {
+    "id": "european-patent-office-api",
+    "name": "European Patent Office API",
+    "provider": "European"
+  },
+  {
+    "id": "wipo-patentscope-api",
+    "name": "WIPO PATENTSCOPE API",
+    "provider": "WIPO"
+  },
+  {
+    "id": "google-academic-api",
+    "name": "Google Academic API",
+    "provider": "Google"
+  },
+  {
+    "id": "publons-peer-review-api",
+    "name": "Publons Peer Review API",
+    "provider": "Publons"
+  },
+  {
+    "id": "orcid-peer-review-api",
+    "name": "ORCID Peer Review API",
+    "provider": "ORCID"
+  },
+  {
+    "id": "open-peer-review-module-api",
+    "name": "Open Peer Review Module API",
+    "provider": "Open"
+  },
+  {
+    "id": "hypothesis-api",
+    "name": "Hypothesis API",
+    "provider": "Hypothesis"
+  },
+  {
+    "id": "crossref-event-data-api",
+    "name": "Crossref Event Data API",
+    "provider": "Crossref"
+  },
+  {
+    "id": "center-for-open-science-api",
+    "name": "Center for Open Science API",
+    "provider": "Center"
+  },
+  {
+    "id": "creative-commons-api",
+    "name": "Creative Commons API",
+    "provider": "Creative"
+  },
+  {
+    "id": "datacommons-api",
+    "name": "DataCommons API",
+    "provider": "DataCommons"
+  },
+  {
+    "id": "openstreetmap-academic-api",
+    "name": "OpenStreetMap Academic API",
+    "provider": "OpenStreetMap"
+  },
+  {
+    "id": "open-knowledge-maps-api",
+    "name": "Open Knowledge Maps API",
+    "provider": "Open"
+  },
+  {
+    "id": "open-citation-corpus-api",
+    "name": "Open Citation Corpus API",
+    "provider": "Open"
+  },
+  {
+    "id": "initiative-for-open-citations-api",
+    "name": "Initiative for Open Citations API",
+    "provider": "Initiative"
+  },
+  {
+    "id": "share-api",
+    "name": "SHARE API",
+    "provider": "SHARE"
+  },
+  {
+    "id": "core-recommender-api",
+    "name": "CORE Recommender API",
+    "provider": "CORE"
+  }
+]

@@ -1,0 +1,401 @@
+[
+  {
+    "id": "lexisnexis-patentsight",
+    "name": "LexisNexis PatentSight",
+    "provider": "LexisNexis Intellectual Property Solutions",
+    "description": "Patent analytics platform using Patent Asset Index™ methodology to evaluate patent portfolios with scoring system for analyzing patent data in conjunction with various datasets",
+    "category": "Patent Analytics",
+    "website": "https://www.patentsight.com",
+    "documentation_url": "https://support.lexisnexisip.com/hc/en-us/categories/5760318513939-PatentSight",
+    "base_url": "Contact vendor for API endpoint",
+    "authentication": {
+      "type": "custom",
+      "details": "Web Access Manager (WAM) with single LexisNexis login across IP products. SAML SSO available upon request"
+    },
+    "pricing_model": "custom",
+    "pricing_tiers": [
+      {
+        "name": "Enterprise",
+        "price": "Contact sales",
+        "rate_limits": "Custom based on agreement",
+        "features": ["Weekly patent data updates", "Patent-level or company-level aggregated data", "API/FTP delivery options", "Optional AI Technology Classification module", "TechDiscovery module for AI-powered search"]
+      }
+    ],
+    "data_format": ["JSON", "CSV", "Custom formats available"],
+    "update_frequency": "Weekly",
+    "coverage": {
+      "geographical": "Global patent data",
+      "temporal": "Historical and current patent data",
+      "data_types": ["Patent portfolios", "Patent Asset Index scores", "Company-level aggregations", "AI technology classifications"]
+    },
+    "use_cases": ["Patent portfolio evaluation", "Competitive intelligence", "Technology landscape analysis", "IP strategy planning"],
+    "support": {
+      "email": "support@lexisnexisip.com",
+      "documentation": "Available through support portal",
+      "sla": "Contact vendor"
+    },
+    "compliance": ["Enterprise data security standards"],
+    "endpoints": [
+      {
+        "path": "/api/patents",
+        "method": "GET",
+        "description": "Retrieve patent data (specific endpoint details available upon subscription)",
+        "parameters": [
+          {
+            "name": "format",
+            "type": "string",
+            "required": false,
+            "description": "Data format (json, csv, custom)"
+          },
+          {
+            "name": "aggregation",
+            "type": "string",
+            "required": false,
+            "description": "Level of aggregation (patent, company)"
+          }
+        ]
+      }
+    ],
+    "sdks": [],
+    "sandbox_available": false,
+    "webhook_support": false,
+    "last_updated": "2025-01-30"
+  },
+  {
+    "id": "ifi-claims",
+    "name": "IFI CLAIMS Patent Services",
+    "provider": "IFI CLAIMS (Digital Science)",
+    "description": "Leading patent data platform providing curated global patent database with 100+ million records from 90+ countries through CLAIMS Direct platform",
+    "category": "Patent Data Services",
+    "website": "https://www.ificlaims.com",
+    "documentation_url": "https://docs.ificlaims.com",
+    "base_url": "https://cdws21.ificlaims.com",
+    "authentication": {
+      "type": "header",
+      "details": "Header-based authentication using x-user and x-password headers"
+    },
+    "pricing_model": "tiered",
+    "pricing_tiers": [
+      {
+        "name": "Standard",
+        "price": "Contact sales",
+        "rate_limits": "Based on subscription",
+        "features": ["Basic patent search", "Standard data access"]
+      },
+      {
+        "name": "Premium Plus",
+        "price": "Contact sales",
+        "rate_limits": "Based on subscription",
+        "features": ["All Standard features", "Names service access", "Ticker symbol lookup", "Corporate hierarchy data", "Advanced analytics"]
+      }
+    ],
+    "data_format": ["JSON", "XML"],
+    "update_frequency": "Continuous updates",
+    "coverage": {
+      "geographical": "90+ countries",
+      "temporal": "Historical and current patent data",
+      "data_types": ["Patent records", "Corporate names", "Ticker symbols", "Corporate hierarchies", "Subsidiary relationships"]
+    },
+    "use_cases": ["Patent search and analysis", "Corporate IP portfolio tracking", "Prior art searches", "Technology landscape analysis"],
+    "support": {
+      "email": "support@ificlaims.com",
+      "documentation": "Comprehensive documentation at docs.ificlaims.com",
+      "sla": "Based on subscription level"
+    },
+    "compliance": ["Enterprise data standards"],
+    "endpoints": [
+      {
+        "path": "/names/ticker",
+        "method": "GET",
+        "description": "Returns the name associated with a valid ticker symbol (Premium Plus only)",
+        "parameters": [
+          {
+            "name": "q",
+            "type": "string",
+            "required": true,
+            "description": "Ticker symbol to look up"
+          }
+        ]
+      },
+      {
+        "path": "/names/ultimate",
+        "method": "GET",
+        "description": "Returns the ultimate corporate parent for a given subsidiary (Premium Plus only)",
+        "parameters": [
+          {
+            "name": "q",
+            "type": "string",
+            "required": true,
+            "description": "Subsidiary name"
+          }
+        ]
+      },
+      {
+        "path": "/names/subsidiaries",
+        "method": "GET",
+        "description": "Returns a list of subsidiaries for a given ultimate owner (Premium Plus only)",
+        "parameters": [
+          {
+            "name": "q",
+            "type": "string",
+            "required": true,
+            "description": "Ultimate owner name"
+          }
+        ]
+      }
+    ],
+    "sdks": [],
+    "sandbox_available": false,
+    "webhook_support": false,
+    "last_updated": "2025-01-30"
+  },
+  {
+    "id": "patsnap",
+    "name": "Patsnap",
+    "provider": "Patsnap",
+    "description": "AI-powered IP and R&D intelligence platform offering global intellectual property data, drug data, antigen-antibody data, and corporate IP data with patent and pharmaceutical LLMs",
+    "category": "Patent and R&D Intelligence",
+    "website": "https://www.patsnap.com",
+    "documentation_url": "https://open.patsnap.com",
+    "base_url": "Contact vendor for API endpoint",
+    "authentication": {
+      "type": "custom",
+      "details": "Contact vendor for authentication details"
+    },
+    "pricing_model": "open_source",
+    "pricing_tiers": [
+      {
+        "name": "Enterprise",
+        "price": "Contact sales",
+        "rate_limits": "Custom based on agreement",
+        "features": ["Global IP data access", "Patent LLM API", "Pharmaceutical LLM API", "Technology intelligence", "Financial services integration", "On-premise deployment option"]
+      }
+    ],
+    "data_format": ["JSON", "Custom formats"],
+    "update_frequency": "Real-time updates",
+    "coverage": {
+      "geographical": "Global",
+      "temporal": "Historical and current data",
+      "data_types": ["Patent data", "Drug data", "Antigen-antibody data", "Corporate IP data", "Technology landscapes", "Market research data"]
+    },
+    "use_cases": ["Technology intelligence", "Pharmaceutical R&D", "Financial services", "IP strategy", "Competitive analysis", "Innovation tracking"],
+    "support": {
+      "email": "Contact through website",
+      "documentation": "Available through Open Platform",
+      "sla": "Based on subscription"
+    },
+    "compliance": ["Enterprise standards"],
+    "endpoints": [
+      {
+        "path": "/api/patents",
+        "method": "GET",
+        "description": "Access patent data (specific endpoints available upon subscription)",
+        "parameters": [
+          {
+            "name": "query",
+            "type": "string",
+            "required": true,
+            "description": "Search query"
+          }
+        ]
+      },
+      {
+        "path": "/api/llm/patent",
+        "method": "POST",
+        "description": "Access Patent LLM for AI-powered patent analysis",
+        "parameters": [
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": true,
+            "description": "Analysis prompt"
+          }
+        ]
+      },
+      {
+        "path": "/api/llm/pharmaceutical",
+        "method": "POST",
+        "description": "Access Pharmaceutical LLM for drug research",
+        "parameters": [
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": true,
+            "description": "Research prompt"
+          }
+        ]
+      }
+    ],
+    "sdks": [],
+    "sandbox_available": false,
+    "webhook_support": false,
+    "last_updated": "2025-01-30"
+  },
+  {
+    "id": "premise-data",
+    "name": "Premise",
+    "provider": "Premise Data",
+    "description": "Crowdsourced field data collection platform leveraging network of 1M+ contributors globally for real-time ground truth data through mobile app with task-based incentivized data capture",
+    "category": "Crowdsourced Field Data",
+    "website": "https://premise.com",
+    "documentation_url": "Contact vendor for documentation",
+    "base_url": "Contact vendor for API endpoint",
+    "authentication": {
+      "type": "custom",
+      "details": "Contact vendor for authentication details"
+    },
+    "pricing_model": "project_based",
+    "pricing_tiers": [
+      {
+        "name": "Standard",
+        "price": "Starting at €2,800/year",
+        "rate_limits": "Based on project count",
+        "features": ["Up to 20 projects", "API access", "Data export formats", "Quality control", "Fraud detection"]
+      },
+      {
+        "name": "Enterprise",
+        "price": "Contact sales",
+        "rate_limits": "Custom",
+        "features": ["Unlimited projects", "Custom integrations", "Advanced analytics", "Dedicated support"]
+      }
+    ],
+    "data_format": ["JSON", "CSV", "Custom formats"],
+    "update_frequency": "Real-time as tasks are completed",
+    "coverage": {
+      "geographical": "Global with 1M+ contributors",
+      "temporal": "Real-time data collection",
+      "data_types": ["Market prices", "Infrastructure conditions", "Health data", "Humanitarian assessments", "Consumer behavior", "Environmental observations"]
+    },
+    "use_cases": ["Market research", "Development monitoring", "Humanitarian assessment", "Supply chain verification", "Price monitoring", "Infrastructure assessment"],
+    "support": {
+      "email": "Contact through website",
+      "documentation": "Available upon subscription",
+      "sla": "Based on project agreement"
+    },
+    "compliance": ["Data privacy standards", "Quality control protocols"],
+    "endpoints": [
+      {
+        "path": "/api/projects",
+        "method": "GET",
+        "description": "List projects (specific endpoints available upon subscription)",
+        "parameters": [
+          {
+            "name": "status",
+            "type": "string",
+            "required": false,
+            "description": "Project status filter"
+          }
+        ]
+      },
+      {
+        "path": "/api/tasks",
+        "method": "POST",
+        "description": "Create data collection tasks",
+        "parameters": [
+          {
+            "name": "project_id",
+            "type": "string",
+            "required": true,
+            "description": "Project identifier"
+          },
+          {
+            "name": "task_type",
+            "type": "string",
+            "required": true,
+            "description": "Type of data collection task"
+          }
+        ]
+      },
+      {
+        "path": "/api/data/export",
+        "method": "GET",
+        "description": "Export collected data",
+        "parameters": [
+          {
+            "name": "project_id",
+            "type": "string",
+            "required": true,
+            "description": "Project identifier"
+          },
+          {
+            "name": "format",
+            "type": "string",
+            "required": false,
+            "description": "Export format (json, csv)"
+          }
+        ]
+      }
+    ],
+    "sdks": [],
+    "sandbox_available": false,
+    "webhook_support": true,
+    "last_updated": "2025-01-30"
+  },
+  {
+    "id": "streetbees",
+    "name": "Streetbees",
+    "provider": "Streetbees",
+    "description": "Consumer insights platform using SBX (Insights Co-Pilot) powered by GPT for streamlined market research through global community or direct customer base surveys",
+    "category": "Consumer Insights",
+    "website": "https://www.streetbees.com",
+    "documentation_url": "Not publicly available",
+    "base_url": "Not publicly available",
+    "authentication": {
+      "type": "managed_service",
+      "details": "Platform access through web interface, API access may be available for Enterprise customers"
+    },
+    "pricing_model": "subscription",
+    "pricing_tiers": [
+      {
+        "name": "SBX PAYG",
+        "price": "Pay as you go",
+        "rate_limits": "Based on usage",
+        "features": ["Basic insights", "24-48 hour turnaround", "Standard markets"]
+      },
+      {
+        "name": "SBX Platform",
+        "price": "Contact sales",
+        "rate_limits": "Based on subscription",
+        "features": ["Advanced features", "Multiple projects", "Priority support"]
+      },
+      {
+        "name": "SBX Business",
+        "price": "Contact sales",
+        "rate_limits": "Based on subscription",
+        "features": ["Business features", "Team collaboration", "Enhanced analytics"]
+      },
+      {
+        "name": "SBX Enterprise",
+        "price": "Contact sales",
+        "rate_limits": "Custom",
+        "features": ["API access potential", "Custom integrations", "White label options", "Advanced functionality"]
+      }
+    ],
+    "data_format": ["Platform-specific formats", "Export options available"],
+    "update_frequency": "24-48 hours for insights delivery",
+    "coverage": {
+      "geographical": "70 markets globally",
+      "temporal": "Real-time consumer insights",
+      "data_types": ["Consumer behavior", "Market research", "Brand perception", "Product feedback", "Customer insights"]
+    },
+    "use_cases": ["Market research", "Consumer behavior analysis", "Brand tracking", "Product development", "Customer experience research"],
+    "support": {
+      "email": "Contact through website",
+      "documentation": "Resources available at hub.streetbees.com",
+      "sla": "Based on subscription level"
+    },
+    "compliance": ["Data privacy regulations", "Market research standards"],
+    "endpoints": [
+      {
+        "path": "API access not publicly documented",
+        "method": "N/A",
+        "description": "Enterprise customers should contact sales for API availability and documentation",
+        "parameters": []
+      }
+    ],
+    "sdks": [],
+    "sandbox_available": false,
+    "webhook_support": false,
+    "last_updated": "2025-01-30"
+  }
+]

@@ -1,0 +1,427 @@
+{
+  "research_report": {
+    "generated_date": "2025-07-30",
+    "apis_researched": [
+      {
+        "name": "RiskFactor (First Street/AlphaGeo Climate Risk API)",
+        "description": "Climate risk data and analytics for physical climate risks including heat stress, flooding, drought, hurricane, and wildfire risks",
+        "technical_info": {
+          "base_url": "https://app.alphageo.ai/api/public/v1/",
+          "protocol": "REST",
+          "data_formats": ["JSON"],
+          "auth_method": "api_key",
+          "endpoints": [
+            {
+              "path": "/scores",
+              "full_url": "https://app.alphageo.ai/api/public/v1/scores",
+              "method": "GET",
+              "description": "Retrieve physical climate risk and resilience-adjusted risk scores for any location globally",
+              "documentation_link": "https://docs.alphageo.ai/for-developers/alphageo-data-api/climate-risk-scores-api",
+              "parameters": ["longitude", "latitude", "address", "period", "scenario"],
+              "response_format": "JSON with overall risk scores, heat stress, flooding, drought, hurricane, wildfire metrics"
+            },
+            {
+              "path": "/risk_data",
+              "full_url": "https://app.alphageo.ai/api/public/v1/risk_data",
+              "method": "GET",
+              "description": "Retrieve detailed climate risk data under the Global Adaptation Layers data product",
+              "documentation_link": "https://docs.alphageo.ai/for-developers/alphageo-data-api/physical-risk-api",
+              "parameters": ["longitude", "latitude", "address", "period", "scenario"],
+              "response_format": "JSON with detailed physical climate risk data by hazard type"
+            },
+            {
+              "path": "/resilience_data",
+              "full_url": "https://app.alphageo.ai/api/public/v1/resilience_data",
+              "method": "GET",
+              "description": "Retrieve detailed resilience data for climate risk mitigation assessment",
+              "documentation_link": "https://docs.alphageo.ai/for-developers/alphageo-data-api/resilience-adjusted-risk-api",
+              "parameters": ["longitude", "latitude", "address", "period", "scenario"],
+              "response_format": "JSON with resilience metrics for heat, flooding, hurricane, drought, wildfire, and societal factors"
+            },
+            {
+              "path": "/analytics",
+              "full_url": "https://app.alphageo.ai/api/public/v1/analytics",
+              "method": "GET",
+              "description": "Real estate cashflow modeling metrics translating climate risk into financial impact",
+              "documentation_link": "https://docs.alphageo.ai/for-developers/alphageo-data-api/financial-impact-api",
+              "parameters": ["longitude", "latitude", "address", "period", "scenario"],
+              "response_format": "JSON with insurance rates, utility costs, capex requirements, and discount rates"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://docs.alphageo.ai/for-developers/alphageo-data-api",
+            "authentication": "https://docs.alphageo.ai/for-developers/alphageo-data-api",
+            "endpoints_reference": "https://docs.alphageo.ai/for-developers/alphageo-data-api",
+            "code_examples": "https://docs.alphageo.ai/for-developers/alphageo-data-api",
+            "sdks_libraries": "Not available"
+          }
+        },
+        "pricing": {
+          "model": "Enterprise subscription required",
+          "tiers": [
+            {
+              "name": "Enterprise",
+              "description": "Access token required, contact for pricing",
+              "cost": "Contact sales",
+              "features": ["Global location coverage", "Historical data back to 2025-2100", "Multiple climate scenarios", "Rate limiting applies"]
+            }
+          ],
+          "rate_limits": "Default requests per minute (specific limits not disclosed)",
+          "free_tier": "None",
+          "contact": "Contact via platform for enterprise pricing"
+        },
+        "data_coverage": {
+          "geographic": "Global coverage",
+          "temporal": "2025, 2035, 2050, 2100 projections",
+          "update_frequency": "Updated March 2024 data version",
+          "data_types": ["Physical climate risk scores", "Resilience metrics", "Financial impact analytics", "Real estate cashflow modeling"]
+        }
+      },
+      {
+        "name": "CFRA Research API",
+        "description": "Independent investment research and financial analysis with equity ratings, fundamental research, and market intelligence",
+        "technical_info": {
+          "base_url": "Not publicly documented",
+          "protocol": "REST (Research-as-a-Service)",
+          "data_formats": ["JSON", "XML", "PDF", "TXT", "RIXML v2.5"],
+          "auth_method": "api_key",
+          "endpoints": [
+            {
+              "path": "/equity-research",
+              "full_url": "Contact CFRA for endpoint details",
+              "method": "GET",
+              "description": "Access fundamental equity research and ratings for 1,500+ companies",
+              "documentation_link": "https://www.cfraresearch.com/api-feeds/",
+              "parameters": ["company_identifier", "research_type", "date_range"],
+              "response_format": "JSON/XML with research ratings, analysis, and fundamental data"
+            },
+            {
+              "path": "/etf-research",
+              "full_url": "Contact CFRA for endpoint details",
+              "method": "GET",
+              "description": "ETF analysis and ratings for 1,860+ ETFs",
+              "documentation_link": "https://www.cfraresearch.com/api-feeds/",
+              "parameters": ["etf_identifier", "analysis_type"],
+              "response_format": "JSON/XML with ETF ratings and analysis"
+            },
+            {
+              "path": "/mutual-fund-research",
+              "full_url": "Contact CFRA for endpoint details",
+              "method": "GET",
+              "description": "Mutual fund research covering 22,000+ funds",
+              "documentation_link": "https://www.cfraresearch.com/api-feeds/",
+              "parameters": ["fund_identifier", "research_depth"],
+              "response_format": "JSON/XML with fund analysis and ratings"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.cfraresearch.com/api-feeds/",
+            "authentication": "Contact CFRA directly",
+            "endpoints_reference": "Available post-subscription",
+            "code_examples": "Provided with API subscription",
+            "sdks_libraries": "Not publicly available"
+          }
+        },
+        "pricing": {
+          "model": "Enterprise/Institutional licensing",
+          "tiers": [
+            {
+              "name": "Research-as-a-Service (RaaS)",
+              "description": "API access with custom integration support",
+              "cost": "Contact for enterprise pricing",
+              "features": ["Custom API integration", "Real-time research updates", "Multi-format data delivery", "Single sign-on capabilities"]
+            },
+            {
+              "name": "MarketScope Advisor",
+              "description": "Web-based platform with potential API access",
+              "cost": "Contact for pricing",
+              "features": ["Fundamental equity research", "ETF and mutual fund analysis", "Real-time access to insights"]
+            }
+          ],
+          "rate_limits": "Custom based on subscription",
+          "free_tier": "2-week trial available",
+          "contact": "Contact CFRA directly for API pricing"
+        },
+        "data_coverage": {
+          "geographic": "Global markets focus",
+          "temporal": "Real-time and historical data",
+          "update_frequency": "Real-time updates",
+          "data_types": ["Equity ratings and research", "ETF analysis", "Mutual fund research", "Sector and industry analysis", "Forensic accounting research"]
+        }
+      },
+      {
+        "name": "New Constructs API",
+        "description": "AI-powered fundamental financial analysis with superior data quality, stock ratings, and investment research",
+        "technical_info": {
+          "base_url": "https://client.newconstructs.com/nc/api/",
+          "protocol": "REST",
+          "data_formats": ["JSON"],
+          "auth_method": "api_key",
+          "endpoints": [
+            {
+              "path": "/overall-rating",
+              "full_url": "https://client.newconstructs.com/nc/api/overall-rating",
+              "method": "GET",
+              "description": "Access New Constructs overall stock ratings",
+              "documentation_link": "https://client.newconstructs.com/nc/documentation/api/",
+              "parameters": ["ticker", "time_period", "datapoint"],
+              "response_format": "JSON with overall rating and component scores"
+            },
+            {
+              "path": "/component-ratings",
+              "full_url": "https://client.newconstructs.com/nc/api/component-ratings",
+              "method": "GET",
+              "description": "Access component ratings that make up overall scores",
+              "documentation_link": "https://client.newconstructs.com/nc/documentation/api/",
+              "parameters": ["ticker", "component_type", "period"],
+              "response_format": "JSON with detailed component rating breakdowns"
+            },
+            {
+              "path": "/fundamentals-reported",
+              "full_url": "https://client.newconstructs.com/nc/api/fundamentals-reported",
+              "method": "GET",
+              "description": "Access reported fundamental data as filed",
+              "documentation_link": "https://client.newconstructs.com/nc/documentation/api/",
+              "parameters": ["ticker", "period", "metric"],
+              "response_format": "JSON with reported financial metrics"
+            },
+            {
+              "path": "/fundamentals-adjusted",
+              "full_url": "https://client.newconstructs.com/nc/api/fundamentals-adjusted",
+              "method": "GET",
+              "description": "Access New Constructs adjusted fundamental data",
+              "documentation_link": "https://client.newconstructs.com/nc/documentation/api/",
+              "parameters": ["ticker", "period", "adjustment_type"],
+              "response_format": "JSON with adjusted fundamental metrics"
+            },
+            {
+              "path": "/sector-ratings",
+              "full_url": "https://client.newconstructs.com/nc/api/sector-ratings",
+              "method": "GET",
+              "description": "Sector and industry ratings based on aggregated stock models",
+              "documentation_link": "https://client.newconstructs.com/nc/documentation/api/",
+              "parameters": ["sector", "industry", "rating_type"],
+              "response_format": "JSON with sector/industry aggregated ratings"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.newconstructs.com/get-your-api-key/",
+            "authentication": "https://client.newconstructs.com/nc/documentation/api/installation.htm",
+            "endpoints_reference": "https://client.newconstructs.com/nc/documentation/api/",
+            "code_examples": "https://github.com/newconstructs-code-samples/nc-api-examples",
+            "sdks_libraries": "Python examples available on GitHub"
+          }
+        },
+        "pricing": {
+          "model": "Subscription-based with API add-on",
+          "tiers": [
+            {
+              "name": "Gold/Platinum/Pro",
+              "description": "Limited API access for portfolio securities only",
+              "cost": "Contact for pricing",
+              "features": ["Portfolio-based access", "10,000 API requests/month", "Reference datasets", "Component and overall ratings"]
+            },
+            {
+              "name": "Unlimited",
+              "description": "Full API access to all securities",
+              "cost": "Contact for pricing",
+              "features": ["Full security universe access", "10,000 API requests/month", "All endpoints available", "No portfolio restrictions"]
+            },
+            {
+              "name": "Institutional",
+              "description": "Enterprise-level API access",
+              "cost": "Contact for institutional pricing",
+              "features": ["Full API access", "Higher request limits", "Custom integration support", "Priority support"]
+            }
+          ],
+          "rate_limits": "10,000 requests per month (resets monthly)",
+          "free_tier": "None (requires paid membership)",
+          "contact": "support@newconstructs.com"
+        },
+        "data_coverage": {
+          "geographic": "US markets",
+          "temporal": "Historical data back to 1998",
+          "update_frequency": "Daily refresh",
+          "data_types": ["5,000+ US stocks", "650+ ETFs", "7,050+ mutual funds", "Superior fundamental data", "AI-powered stock ratings"]
+        }
+      },
+      {
+        "name": "Calcbench API",
+        "description": "XBRL-based financial data extraction from SEC filings with comprehensive fundamental analysis capabilities",
+        "technical_info": {
+          "base_url": "https://www.calcbench.com/api/",
+          "protocol": "REST",
+          "data_formats": ["JSON", "CSV"],
+          "auth_method": "basic",
+          "endpoints": [
+            {
+              "path": "/standardized",
+              "full_url": "https://www.calcbench.com/api/standardized",
+              "method": "GET",
+              "description": "Access standardized financial metrics from XBRL filings",
+              "documentation_link": "https://www.calcbench.com/api",
+              "parameters": ["company_identifiers", "metrics", "period", "point_in_time"],
+              "response_format": "JSON with standardized financial data"
+            },
+            {
+              "path": "/as-reported",
+              "full_url": "https://www.calcbench.com/api/as-reported",
+              "method": "GET",
+              "description": "Access as-reported financial data exactly as filed",
+              "documentation_link": "https://www.calcbench.com/api",
+              "parameters": ["company_identifiers", "xbrl_tag", "period"],
+              "response_format": "JSON with as-reported XBRL data"
+            },
+            {
+              "path": "/disclosure-search",
+              "full_url": "https://www.calcbench.com/api/disclosure-search",
+              "method": "GET",
+              "description": "Search and download disclosure text from SEC filings",
+              "documentation_link": "https://www.calcbench.com/blog/post/108074832382/disclosure-text-api",
+              "parameters": ["company_identifiers", "search_text", "filing_type"],
+              "response_format": "JSON with disclosure text and metadata"
+            },
+            {
+              "path": "/companies",
+              "full_url": "https://www.calcbench.com/api/companies",
+              "method": "GET",
+              "description": "Get list of companies and their identifiers",
+              "documentation_link": "https://www.calcbench.com/api",
+              "parameters": ["index", "industry"],
+              "response_format": "JSON with company listing and metadata"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.calcbench.com/api",
+            "authentication": "https://www.calcbench.com/api",
+            "endpoints_reference": "https://www.calcbench.com/api",
+            "code_examples": "https://github.com/calcbench/python_api_client",
+            "sdks_libraries": "Python client library available"
+          }
+        },
+        "pricing": {
+          "model": "Subscription-based with API add-on",
+          "tiers": [
+            {
+              "name": "Basic",
+              "description": "Free tier with limited access",
+              "cost": "Free",
+              "features": ["Basic access to platform", "No API access"]
+            },
+            {
+              "name": "Premium",
+              "description": "Enhanced access with optional API",
+              "cost": "$6,000/year or $600/month per user",
+              "features": ["Full platform access", "API access available as add-on", "Advanced analytics"]
+            },
+            {
+              "name": "Professional",
+              "description": "Full professional access",
+              "cost": "$12,000/year per user",
+              "features": ["Complete platform access", "API access included", "Premium support"]
+            },
+            {
+              "name": "Academic",
+              "description": "Educational institution pricing",
+              "cost": "$6,000-$12,000/year (institution-wide)",
+              "features": ["Institution-wide access", "API access +$6,000", "Educational support"]
+            }
+          ],
+          "rate_limits": "Based on subscription tier",
+          "free_tier": "2-week Premium trial",
+          "contact": "us@calcbench.com"
+        },
+        "data_coverage": {
+          "geographic": "US public companies",
+          "temporal": "Historical XBRL data since SEC mandated filing",
+          "update_frequency": "Minutes after SEC filing release",
+          "data_types": ["XBRL standardized metrics", "As-reported financial data", "Disclosure text", "SEC filing metadata"]
+        }
+      },
+      {
+        "name": "Sentieo Document Search API",
+        "description": "AI-powered financial document search and analysis platform for investment research and corporate intelligence",
+        "technical_info": {
+          "base_url": "Contact Sentieo for API details",
+          "protocol": "REST (inferred from platform integrations)",
+          "data_formats": ["JSON"],
+          "auth_method": "api_key",
+          "endpoints": [
+            {
+              "path": "/document-search",
+              "full_url": "Contact Sentieo for endpoint details",
+              "method": "GET",
+              "description": "Search across millions of financial documents using AI-powered search",
+              "documentation_link": "Platform-specific documentation",
+              "parameters": ["query", "document_type", "company", "date_range"],
+              "response_format": "JSON with search results and document metadata"
+            },
+            {
+              "path": "/document-analysis",
+              "full_url": "Contact Sentieo for endpoint details",
+              "method": "POST",
+              "description": "AI-powered sentiment and topic analysis of documents",
+              "documentation_link": "Platform-specific documentation",
+              "parameters": ["document_id", "analysis_type"],
+              "response_format": "JSON with sentiment scores and topic analysis"
+            },
+            {
+              "path": "/platform-integrations",
+              "full_url": "Contact Sentieo for endpoint details",
+              "method": "GET",
+              "description": "Access integrated content from Box, Dropbox, and other sources",
+              "documentation_link": "Platform integration documentation",
+              "parameters": ["source", "content_type"],
+              "response_format": "JSON with integrated content results"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "Contact Sentieo for documentation",
+            "authentication": "Platform-specific authentication",
+            "endpoints_reference": "Available with subscription",
+            "code_examples": "Provided with API access",
+            "sdks_libraries": "Platform integrations available"
+          }
+        },
+        "pricing": {
+          "model": "Enterprise subscription-based",
+          "tiers": [
+            {
+              "name": "Institutional",
+              "description": "Enterprise research platform with API access",
+              "cost": "$500-$1,000 per month per license",
+              "features": ["AI-powered document search", "Sentiment analysis", "Platform integrations", "Custom deployment"]
+            },
+            {
+              "name": "Enterprise",
+              "description": "Large-scale deployment with full API access",
+              "cost": "Contact for enterprise pricing",
+              "features": ["Full platform API access", "Custom integrations", "Dedicated support", "Advanced analytics"]
+            }
+          ],
+          "rate_limits": "Custom based on subscription",
+          "free_tier": "Demo/trial available",
+          "contact": "Contact Sentieo directly for pricing"
+        },
+        "data_coverage": {
+          "geographic": "Global financial documents",
+          "temporal": "Comprehensive historical coverage",
+          "update_frequency": "Real-time document ingestion",
+          "data_types": ["SEC filings", "Broker research", "Earnings transcripts", "Corporate documents", "News and analysis", "Internal client documents"]
+        }
+      }
+    ],
+    "summary": {
+      "total_apis_researched": 5,
+      "authentication_methods": ["api_key", "basic", "enterprise_auth"],
+      "common_pricing_models": ["Enterprise/Institutional", "Subscription-based", "Contact for pricing"],
+      "typical_price_ranges": {
+        "low_end": "$500-600/month per user",
+        "mid_range": "$6,000-12,000/year per user", 
+        "high_end": "Enterprise pricing (contact required)"
+      },
+      "data_format_support": ["JSON", "XML", "CSV", "PDF", "RIXML"],
+      "api_access_notes": "Most APIs require paid subscriptions with enterprise-level pricing. Free tiers are limited or trial-only."
+    }
+  }
+}

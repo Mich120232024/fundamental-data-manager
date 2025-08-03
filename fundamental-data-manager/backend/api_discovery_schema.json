@@ -1,0 +1,53 @@
+{
+  "api_discovery_schema_v1": {
+    "description": "Clean schema for API discovery system - focused on user research needs",
+    "fields": {
+      "id": "string - unique identifier",
+      "name": "string - API display name",
+      "provider": "string - organization/company providing API",
+      "description": "string - what data/service this API provides",
+      
+      "discovery_status": {
+        "type": "enum",
+        "values": ["not_started", "researching", "documented", "tested", "production_ready"],
+        "description": "Where we are in the research process"
+      },
+      
+      "access_info": {
+        "is_free": "boolean - true if no cost",
+        "requires_api_key": "boolean - true if authentication needed",
+        "requires_approval": "boolean - true if manual approval process",
+        "pricing_model": "string - free/freemium/paid/enterprise/unknown",
+        "rate_limits": "string - calls per minute/hour/day if known"
+      },
+      
+      "technical_info": {
+        "base_url": "string - API base URL if known",
+        "protocol": "string - REST/GraphQL/SOAP/WebSocket",
+        "data_formats": "array - JSON/XML/CSV supported formats",
+        "auth_method": "string - api_key/oauth/basic/bearer/none"
+      },
+      
+      "content_summary": {
+        "data_categories": "array - economic/financial/government/research etc",
+        "geographic_scope": "string - global/US/EU/regional",
+        "update_frequency": "string - real-time/daily/weekly/monthly/unknown",
+        "historical_data": "boolean - true if historical data available"
+      },
+      
+      "research_notes": {
+        "documentation_url": "string - link to official docs",
+        "sample_endpoints": "array - list of key endpoints discovered",
+        "data_quality": "string - high/medium/low/unknown",
+        "last_researched": "ISO date - when we last checked this API",
+        "researcher_notes": "string - free text findings"
+      },
+      
+      "system_metadata": {
+        "created_at": "ISO date",
+        "updated_at": "ISO date", 
+        "version": "integer - schema version"
+      }
+    }
+  }
+}

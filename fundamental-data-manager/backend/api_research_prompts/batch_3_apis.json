@@ -1,0 +1,127 @@
+[
+  {
+    "id": "europeana-api",
+    "name": "Europeana API",
+    "provider": "Europeana"
+  },
+  {
+    "id": "digital-public-library-of-america-api",
+    "name": "Digital Public Library of America API",
+    "provider": "Digital"
+  },
+  {
+    "id": "internet-archive-api",
+    "name": "Internet Archive API",
+    "provider": "Internet"
+  },
+  {
+    "id": "google-books-api",
+    "name": "Google Books API",
+    "provider": "Google"
+  },
+  {
+    "id": "open-library-api",
+    "name": "Open Library API",
+    "provider": "Open"
+  },
+  {
+    "id": "oclc-worldcat-api",
+    "name": "OCLC WorldCat API",
+    "provider": "OCLC"
+  },
+  {
+    "id": "library-of-congress-api",
+    "name": "Library of Congress API",
+    "provider": "Library"
+  },
+  {
+    "id": "british-library-api",
+    "name": "British Library API",
+    "provider": "British"
+  },
+  {
+    "id": "deutsche-digitale-bibliothek-api",
+    "name": "Deutsche Digitale Bibliothek API",
+    "provider": "Deutsche"
+  },
+  {
+    "id": "gallica-api",
+    "name": "Gallica API",
+    "provider": "Gallica"
+  },
+  {
+    "id": "digital-science-dimensions-api",
+    "name": "Digital Science Dimensions API",
+    "provider": "Digital"
+  },
+  {
+    "id": "datacite-events-api",
+    "name": "DataCite Events API",
+    "provider": "DataCite"
+  },
+  {
+    "id": "scilit-api",
+    "name": "Scilit API",
+    "provider": "Scilit"
+  },
+  {
+    "id": "base-bielefeld-academic-search-engine-api",
+    "name": "BASE (Bielefeld Academic Search Engine) API",
+    "provider": "BASE"
+  },
+  {
+    "id": "openaire-graph-api",
+    "name": "OpenAIRE Graph API",
+    "provider": "OpenAIRE"
+  },
+  {
+    "id": "scholexplorer-api",
+    "name": "Scholexplorer API",
+    "provider": "Scholexplorer"
+  },
+  {
+    "id": "sciteai-api",
+    "name": "Scite.ai API",
+    "provider": "Scite.ai"
+  },
+  {
+    "id": "orcid-public-api",
+    "name": "ORCID Public API",
+    "provider": "ORCID"
+  },
+  {
+    "id": "ror-research-organization-registry-api",
+    "name": "ROR (Research Organization Registry) API",
+    "provider": "ROR"
+  },
+  {
+    "id": "crossref-funder-registry-api",
+    "name": "Crossref Funder Registry API",
+    "provider": "Crossref"
+  },
+  {
+    "id": "grid-global-research-identifier-database-api",
+    "name": "GRID (Global Research Identifier Database) API",
+    "provider": "GRID"
+  },
+  {
+    "id": "sherpa-romeo-api",
+    "name": "Sherpa Romeo API",
+    "provider": "Sherpa"
+  },
+  {
+    "id": "sherpa-juliet-api",
+    "name": "Sherpa Juliet API",
+    "provider": "Sherpa"
+  },
+  {
+    "id": "open-research-europe-api",
+    "name": "Open Research Europe API",
+    "provider": "Open"
+  },
+  {
+    "id": "wellcome-open-research-api",
+    "name": "Wellcome Open Research API",
+    "provider": "Wellcome"
+  }
+]

@@ -1,0 +1,79 @@
+
+Research these 25 APIs comprehensively using web search and official documentation:
+
+- Europeana API (Europeana) - Europeana API service
+- Digital Public Library of America API (Digital) - Digital Public Library of America API service
+- Internet Archive API (Internet) - Internet Archive API service
+- Google Books API (Google) - Google Books API service
+- Open Library API (Open) - Open Library API service
+- OCLC WorldCat API (OCLC) - OCLC WorldCat API service
+- Library of Congress API (Library) - Library of Congress API service
+- British Library API (British) - British Library API service
+- Deutsche Digitale Bibliothek API (Deutsche) - Deutsche Digitale Bibliothek API service
+- Gallica API (Gallica) - Gallica API service
+- Digital Science Dimensions API (Digital) - Digital Science Dimensions API service
+- DataCite Events API (DataCite) - DataCite Events API service
+- Scilit API (Scilit) - Scilit API service
+- BASE (Bielefeld Academic Search Engine) API (BASE) - BASE (Bielefeld Academic Search Engine) API service
+- OpenAIRE Graph API (OpenAIRE) - OpenAIRE Graph API service
+- Scholexplorer API (Scholexplorer) - Scholexplorer API service
+- Scite.ai API (Scite.ai) - Scite.ai API service
+- ORCID Public API (ORCID) - ORCID Public API service
+- ROR (Research Organization Registry) API (ROR) - ROR (Research Organization Registry) API service
+- Crossref Funder Registry API (Crossref) - Crossref Funder Registry API service
+- GRID (Global Research Identifier Database) API (GRID) - GRID (Global Research Identifier Database) API service
+- Sherpa Romeo API (Sherpa) - Sherpa Romeo API service
+- Sherpa Juliet API (Sherpa) - Sherpa Juliet API service
+- Open Research Europe API (Open) - Open Research Europe API service
+- Wellcome Open Research API (Wellcome) - Wellcome Open Research API service
+
+For EACH API, provide this JSON structure using REAL DATA from official sources:
+{
+  "id": "original_api_id",
+  "name": "Official API Name from documentation",
+  "provider": "Actual Organization/Company Name", 
+  "description": "2-3 sentence summary based on official documentation",
+  "discovery_status": "documented",
+  "tags": ["actual", "relevant", "tags"],
+  "access_info": {
+    "is_free": true/false/null,
+    "requires_api_key": true/false/null,
+    "requires_approval": false,
+    "pricing_model": "actual pricing model from docs",
+    "rate_limits": "specific limits from documentation or 'unknown'"
+  },
+  "technical_info": {
+    "base_url": "actual base URL from documentation",
+    "protocol": "REST/GraphQL/SOAP based on documentation",
+    "data_formats": ["formats supported by API"],
+    "auth_method": "actual authentication method",
+    "endpoints": [
+      "List real endpoint paths with descriptions from official docs"
+    ]
+  },
+  "content_summary": {
+    "data_categories": ["Actual data categories from documentation"],
+    "geographic_scope": "based on API documentation",
+    "update_frequency": "from official documentation",
+    "historical_data": true/false/null
+  },
+  "research_notes": {
+    "documentation_url": "actual URL to official API documentation",
+    "sample_endpoints": ["real endpoints from documentation"],
+    "data_quality": "assessment based on documentation quality",
+    "last_researched": "2025-07-28T19:41:42.177176Z",
+    "researcher_notes": "insights from researching official sources",
+    "api_summary": "comprehensive paragraph based on official documentation about capabilities, data, users, and value"
+  }
+}
+
+RESEARCH REQUIREMENTS:
+1. Find OFFICIAL documentation for each API - use web search
+2. Extract REAL endpoint paths from documentation
+3. Get ACTUAL pricing and authentication info
+4. Identify REAL data categories provided
+5. Write comprehensive summary based on official sources
+
+OUTPUT: Return a JSON array with all researched APIs using REAL data only.
+
+BATCH ID: 3

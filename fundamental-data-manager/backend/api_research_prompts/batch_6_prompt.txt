@@ -1,0 +1,79 @@
+
+Research these 25 APIs comprehensively using web search and official documentation:
+
+- ArrayExpress API (ArrayExpress) - ArrayExpress API service
+- EMBL-EBI API (EMBL-EBI) - EMBL-EBI API service
+- NCBI API (NCBI) - NCBI API service
+- BioGRID API (BioGRID) - BioGRID API service
+- PRIDE API (PRIDE) - PRIDE API service
+- MetaboLights API (MetaboLights) - MetaboLights API service
+- Global Biodiversity Information Facility API (Global) - Global Biodiversity Information Facility API service
+- NASA Earth Data API (NASA) - NASA Earth Data API service
+- PANGAEA API (PANGAEA) - PANGAEA API service
+- ICSU World Data System API (ICSU) - ICSU World Data System API service
+- NOAA National Centers for Environmental Information API (NOAA) - NOAA National Centers for Environmental Information API service
+- NASA Open API (NASA) - NASA Open API service
+- CERN Open Data Portal API (CERN) - CERN Open Data Portal API service
+- Materials Project API (Materials) - Materials Project API service
+- Open Science Framework API (Open) - Open Science Framework API service
+- Protocols.io API (Protocols.io) - Protocols.io API service
+- Code Ocean API (Code) - Code Ocean API service
+- GitHub API (GitHub) - GitHub API service
+- Software Heritage API (Software) - Software Heritage API service
+- Journal of Open Source Software API (Journal) - Journal of Open Source Software API service
+- SciCrunch API (SciCrunch) - SciCrunch API service
+- Research Resource Identifiers API (Research) - Research Resource Identifiers API service
+- Collaborative Knowledge Foundation API (Collaborative) - Collaborative Knowledge Foundation API service
+- OpenScienceMOOC API (OpenScienceMOOC) - OpenScienceMOOC API service
+- The Carpentries API (The) - The Carpentries API service
+
+For EACH API, provide this JSON structure using REAL DATA from official sources:
+{
+  "id": "original_api_id",
+  "name": "Official API Name from documentation",
+  "provider": "Actual Organization/Company Name", 
+  "description": "2-3 sentence summary based on official documentation",
+  "discovery_status": "documented",
+  "tags": ["actual", "relevant", "tags"],
+  "access_info": {
+    "is_free": true/false/null,
+    "requires_api_key": true/false/null,
+    "requires_approval": false,
+    "pricing_model": "actual pricing model from docs",
+    "rate_limits": "specific limits from documentation or 'unknown'"
+  },
+  "technical_info": {
+    "base_url": "actual base URL from documentation",
+    "protocol": "REST/GraphQL/SOAP based on documentation",
+    "data_formats": ["formats supported by API"],
+    "auth_method": "actual authentication method",
+    "endpoints": [
+      "List real endpoint paths with descriptions from official docs"
+    ]
+  },
+  "content_summary": {
+    "data_categories": ["Actual data categories from documentation"],
+    "geographic_scope": "based on API documentation",
+    "update_frequency": "from official documentation",
+    "historical_data": true/false/null
+  },
+  "research_notes": {
+    "documentation_url": "actual URL to official API documentation",
+    "sample_endpoints": ["real endpoints from documentation"],
+    "data_quality": "assessment based on documentation quality",
+    "last_researched": "2025-07-28T19:41:42.177812Z",
+    "researcher_notes": "insights from researching official sources",
+    "api_summary": "comprehensive paragraph based on official documentation about capabilities, data, users, and value"
+  }
+}
+
+RESEARCH REQUIREMENTS:
+1. Find OFFICIAL documentation for each API - use web search
+2. Extract REAL endpoint paths from documentation
+3. Get ACTUAL pricing and authentication info
+4. Identify REAL data categories provided
+5. Write comprehensive summary based on official sources
+
+OUTPUT: Return a JSON array with all researched APIs using REAL data only.
+
+BATCH ID: 6

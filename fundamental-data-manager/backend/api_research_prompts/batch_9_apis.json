@@ -1,0 +1,127 @@
+[
+  {
+    "id": "unacast",
+    "name": "Unacast",
+    "provider": "Unacast"
+  },
+  {
+    "id": "near",
+    "name": "Near",
+    "provider": "Near"
+  },
+  {
+    "id": "foursquare-places",
+    "name": "Foursquare Places",
+    "provider": "Foursquare"
+  },
+  {
+    "id": "x-mode-mobile-location",
+    "name": "X-Mode (Mobile Location)",
+    "provider": "X-Mode"
+  },
+  {
+    "id": "cuebiq",
+    "name": "Cuebiq",
+    "provider": "Cuebiq"
+  },
+  {
+    "id": "streetlight-data",
+    "name": "Streetlight Data",
+    "provider": "Streetlight"
+  },
+  {
+    "id": "facteus-formerly-encore-capital",
+    "name": "Facteus (Formerly Encore Capital)",
+    "provider": "Facteus"
+  },
+  {
+    "id": "second-measure",
+    "name": "Second Measure",
+    "provider": "Second"
+  },
+  {
+    "id": "yodlee",
+    "name": "Yodlee",
+    "provider": "Yodlee"
+  },
+  {
+    "id": "earnest-research",
+    "name": "Earnest Research",
+    "provider": "Earnest"
+  },
+  {
+    "id": "cardify",
+    "name": "Cardify",
+    "provider": "Cardify"
+  },
+  {
+    "id": "commerce-signals",
+    "name": "Commerce Signals",
+    "provider": "Commerce"
+  },
+  {
+    "id": "affinity-solutions",
+    "name": "Affinity Solutions",
+    "provider": "Affinity"
+  },
+  {
+    "id": "mastercard-spendingpulse",
+    "name": "Mastercard SpendingPulse",
+    "provider": "Mastercard"
+  },
+  {
+    "id": "visa-business-and-economic-insights",
+    "name": "Visa Business and Economic Insights",
+    "provider": "Visa"
+  },
+  {
+    "id": "pitchbook",
+    "name": "PitchBook",
+    "provider": "PitchBook"
+  },
+  {
+    "id": "cb-insights",
+    "name": "CB Insights",
+    "provider": "CB"
+  },
+  {
+    "id": "crunchbase",
+    "name": "Crunchbase",
+    "provider": "Crunchbase"
+  },
+  {
+    "id": "preqin",
+    "name": "Preqin",
+    "provider": "Preqin"
+  },
+  {
+    "id": "dealroom",
+    "name": "DealRoom",
+    "provider": "DealRoom"
+  },
+  {
+    "id": "thasos",
+    "name": "Thasos",
+    "provider": "Thasos"
+  },
+  {
+    "id": "app-annie",
+    "name": "App Annie",
+    "provider": "App"
+  },
+  {
+    "id": "sensor-tower",
+    "name": "Sensor Tower",
+    "provider": "Sensor"
+  },
+  {
+    "id": "apptopia",
+    "name": "Apptopia",
+    "provider": "Apptopia"
+  },
+  {
+    "id": "similarweb",
+    "name": "SimilarWeb",
+    "provider": "SimilarWeb"
+  }
+]

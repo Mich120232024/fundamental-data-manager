@@ -1,0 +1,279 @@
+[
+  {
+    "id": "lexisnexis-patentsight",
+    "name": "LexisNexis PatentSight",
+    "provider": "LexisNexis",
+    "description": "Patent analytics platform using proprietary Patent Asset Index™ methodology for IP valuation, competitive intelligence, and innovation metrics with comprehensive global patent coverage.",
+    "discovery_status": "documented",
+    "tags": ["patent analytics", "IP intelligence", "innovation metrics", "competitive analysis", "technology mapping"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom enterprise pricing",
+      "rate_limits": "Weekly data updates"
+    },
+    "technical_info": {
+      "base_url": "Contact LexisNexis for API details",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV", "Excel", "XML"],
+      "auth_method": "SAML SSO + Web Access Manager",
+      "endpoints": [
+        {
+          "path": "/patents/analytics",
+          "full_url": "Enterprise endpoint provided",
+          "method": "GET",
+          "description": "Patent Asset Index and competitive intelligence analytics",
+          "documentation_link": "Enterprise documentation",
+          "parameters": ["company", "technology_area", "time_period"],
+          "response_format": "JSON with patent analytics and scoring"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Patent analytics", "IP valuation", "Technology mapping", "Competitive intelligence"],
+      "geographic_scope": "Global patent coverage",
+      "update_frequency": "Weekly data updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact LexisNexis for documentation",
+      "api_summary": "PatentSight uses proprietary Patent Asset Index™ methodology with flexible data delivery via API or FTP. Optional AI modules available.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact enterprise sales",
+      "api_reference": "Enterprise documentation",
+      "examples": "Provided with subscription",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "ifi-claims-patent-services",
+    "name": "IFI CLAIMS Patent Services",
+    "provider": "IFI",
+    "description": "Most comprehensive patent database with 100M+ records from 90+ countries, providing structured patent data through well-documented REST API with clear pricing tiers.",
+    "discovery_status": "documented",
+    "tags": ["patent database", "intellectual property", "patent search", "corporate hierarchy", "global patents"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Tiered subscription (Standard vs Premium Plus)",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.ificlaims.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "Header-based (x-user, x-password)",
+      "endpoints": [
+        {
+          "path": "/corporate-tree",
+          "full_url": "https://api.ificlaims.com/corporate-tree",
+          "method": "GET",
+          "description": "Corporate hierarchy and ticker symbol lookup",
+          "documentation_link": "https://docs.ificlaims.com",
+          "parameters": ["company_name", "ticker"],
+          "response_format": "JSON with corporate structure data"
+        },
+        {
+          "path": "/patent-search",
+          "full_url": "https://api.ificlaims.com/patent-search",
+          "method": "GET",
+          "description": "Search across 100M+ patent records",
+          "documentation_link": "https://docs.ificlaims.com",
+          "parameters": ["query", "country", "date_range"],
+          "response_format": "JSON with patent records"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Patent records", "Corporate hierarchy", "Inventor data", "Classification systems"],
+      "geographic_scope": "90+ countries",
+      "update_frequency": "Regular updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://docs.ificlaims.com",
+      "api_summary": "IFI CLAIMS provides the most comprehensive patent database with well-documented REST API. Clear pricing tiers and specific endpoint documentation available.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://docs.ificlaims.com",
+      "api_reference": "https://docs.ificlaims.com",
+      "examples": "Available in documentation",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "patsnap",
+    "name": "Patsnap",
+    "provider": "Patsnap",
+    "description": "AI-powered platform with patent and pharmaceutical LLMs accessible via API, providing global coverage of patent, drug, and antigen-antibody data with open source pricing model.",
+    "discovery_status": "documented",
+    "tags": ["AI patents", "pharmaceutical data", "R&D intelligence", "open platform", "LLM integration"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Open source with enterprise features",
+      "rate_limits": "Based on plan"
+    },
+    "technical_info": {
+      "base_url": "https://open.patsnap.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/api/patents/search",
+          "full_url": "https://open.patsnap.com/api/patents/search",
+          "method": "GET",
+          "description": "AI-powered patent search with LLM integration",
+          "documentation_link": "https://open.patsnap.com",
+          "parameters": ["query", "ai_analysis", "technology_area"],
+          "response_format": "JSON with AI-enhanced patent data"
+        },
+        {
+          "path": "/api/drugs/research",
+          "full_url": "https://open.patsnap.com/api/drugs/research",
+          "method": "GET",
+          "description": "Pharmaceutical research and drug development data",
+          "documentation_link": "https://open.patsnap.com",
+          "parameters": ["drug_name", "indication", "development_stage"],
+          "response_format": "JSON with pharmaceutical data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Patent data", "Pharmaceutical research", "Drug development", "Antigen-antibody data"],
+      "geographic_scope": "Global coverage",
+      "update_frequency": "Real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://open.patsnap.com",
+      "api_summary": "Patsnap provides AI-powered platform with patent and pharmaceutical LLMs. Open Platform available with API integration and on-premise deployment options.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://open.patsnap.com",
+      "api_reference": "https://open.patsnap.com",
+      "examples": "Available on platform",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "premise",
+    "name": "Premise",
+    "provider": "Premise",
+    "description": "Crowdsourced field data collection with 1M+ global contributors providing real-time data through mobile app with quality control, project-based pricing, and API endpoints for data management.",
+    "discovery_status": "documented",
+    "tags": ["crowdsourced data", "field data", "mobile collection", "global contributors", "quality control"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Project-based starting at €2,800/year for 20 projects",
+      "rate_limits": "Based on subscription"
+    },
+    "technical_info": {
+      "base_url": "https://api.premise.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/projects/create",
+          "full_url": "https://api.premise.com/projects/create",
+          "method": "POST",
+          "description": "Create new data collection projects",
+          "documentation_link": "Contact Premise for documentation",
+          "parameters": ["project_config", "geographic_scope", "timeline"],
+          "response_format": "JSON with project ID and status"
+        },
+        {
+          "path": "/data/export",
+          "full_url": "https://api.premise.com/data/export",
+          "method": "GET",
+          "description": "Export collected data with quality control metrics",
+          "documentation_link": "Contact Premise for documentation",
+          "parameters": ["project_id", "format", "filters"],
+          "response_format": "JSON with collected data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Field observations", "Survey responses", "Photo documentation", "GPS coordinates"],
+      "geographic_scope": "Global via 1M+ contributors",
+      "update_frequency": "Real-time via mobile app",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact Premise directly",
+      "api_summary": "Premise provides crowdsourced field data collection with real-time mobile app. Webhook support for notifications and quality control systems.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for access",
+      "api_reference": "Enterprise documentation",
+      "examples": "Provided with access",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "streetbees",
+    "name": "Streetbees",
+    "provider": "Streetbees",
+    "description": "Consumer insights platform with GPT-powered SBX (Insights Co-Pilot) offering multiple subscription tiers, 70 global markets coverage, and 24-48 hour insights delivery with limited public API.",
+    "discovery_status": "documented",
+    "tags": ["consumer insights", "GPT-powered", "global markets", "insights co-pilot", "managed service"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Multiple tiers from PAYG to Enterprise",
+      "rate_limits": "Enterprise managed"
+    },
+    "technical_info": {
+      "base_url": "Limited public API",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key (enterprise only)",
+      "endpoints": [
+        {
+          "path": "/insights/retrieve",
+          "full_url": "Enterprise endpoint",
+          "method": "GET",
+          "description": "Access consumer insights data (enterprise only)",
+          "documentation_link": "Limited documentation",
+          "parameters": ["market", "category", "timeframe"],
+          "response_format": "JSON with consumer insights"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Consumer behavior", "Market insights", "Brand sentiment", "Purchase patterns"],
+      "geographic_scope": "70 global markets",
+      "update_frequency": "24-48 hour delivery",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Limited public documentation",
+      "api_summary": "Streetbees focuses on managed service with GPT-powered insights. Limited public API - primarily enterprise customers may have API access.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact for access",
+      "api_reference": "Not publicly available",
+      "examples": "Enterprise only",
+      "changelog": null,
+      "status_page": null
+    }
+  }
+]

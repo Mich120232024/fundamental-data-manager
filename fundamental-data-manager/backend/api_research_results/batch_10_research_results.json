@@ -1,0 +1,2371 @@
+[
+  {
+    "id": "sensortower",
+    "name": "SensorTower API",
+    "provider": "SensorTower",
+    "description": "Enterprise-level mobile app intelligence platform providing app store optimization data, competitive intelligence, market insights, and user acquisition analytics across iOS, Android, and global app stores including China.",
+    "discovery_status": "documented",
+    "tags": [
+      "mobile analytics",
+      "app intelligence",
+      "market data",
+      "ASO",
+      "competitive analysis"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom enterprise pricing starting at thousands per month",
+      "rate_limits": "Varies by subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.sensortower.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "API key in header",
+      "endpoints": [
+        {
+          "path": "/v1/ios/apps/{app_id}/download_estimates",
+          "full_url": "https://api.sensortower.com/v1/ios/apps/{app_id}/download_estimates",
+          "method": "GET",
+          "description": "Get download estimates for iOS apps by country and date range",
+          "documentation_link": "https://sensortower.com/api-documentation",
+          "parameters": [
+            "app_id",
+            "country",
+            "start_date",
+            "end_date",
+            "granularity"
+          ],
+          "response_format": "JSON with download estimates"
+        },
+        {
+          "path": "/v1/android/apps/{app_id}/revenue_estimates",
+          "full_url": "https://api.sensortower.com/v1/android/apps/{app_id}/revenue_estimates",
+          "method": "GET",
+          "description": "Get revenue estimates for Android apps",
+          "documentation_link": "https://sensortower.com/api-documentation",
+          "parameters": [
+            "app_id",
+            "country",
+            "start_date",
+            "end_date"
+          ],
+          "response_format": "JSON with revenue data"
+        },
+        {
+          "path": "/v1/ios/keywords/rankings",
+          "full_url": "https://api.sensortower.com/v1/ios/keywords/rankings",
+          "method": "GET",
+          "description": "Get keyword rankings for iOS apps",
+          "documentation_link": "https://sensortower.com/api-documentation",
+          "parameters": [
+            "keywords",
+            "country",
+            "device",
+            "limit"
+          ],
+          "response_format": "JSON with ranking data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "App downloads",
+        "Revenue estimates",
+        "Keyword rankings",
+        "User acquisition",
+        "Market share",
+        "Category rankings"
+      ],
+      "geographic_scope": "Global including China app stores",
+      "update_frequency": "Daily",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://sensortower.com/api-documentation",
+      "api_summary": "SensorTower provides enterprise-grade mobile app intelligence with comprehensive data on app performance, market trends, and competitive intelligence. The platform covers iOS App Store, Google Play, and major Chinese app stores with detailed analytics on downloads, revenue, keywords, and user acquisition.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://sensortower.com/api/getting-started",
+      "api_reference": "https://sensortower.com/api-documentation",
+      "examples": "https://sensortower.com/api/examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "jettrack",
+    "name": "Aviation Edge Flight Tracker API",
+    "provider": "Aviation Edge",
+    "description": "Real-time global flight tracking API providing live flight positions, schedules, routes, airline and airport data with coverage of over 10,000 aircraft simultaneously tracked worldwide.",
+    "discovery_status": "documented",
+    "tags": [
+      "aviation",
+      "flight tracking",
+      "real-time",
+      "aircraft data",
+      "airline schedules"
+    ],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Freemium - Free tier with 100 calls/month, paid plans from $7-$2000/month",
+      "rate_limits": "100-unlimited calls/month based on plan"
+    },
+    "technical_info": {
+      "base_url": "https://aviation-edge.com/v2/public",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "API key as query parameter",
+      "endpoints": [
+        {
+          "path": "/flights",
+          "full_url": "https://aviation-edge.com/v2/public/flights",
+          "method": "GET",
+          "description": "Get real-time flight tracking data for all flights or specific aircraft",
+          "documentation_link": "https://aviation-edge.com/developers/",
+          "parameters": [
+            "key",
+            "flightIata",
+            "flightIcao",
+            "depIata",
+            "arrIata",
+            "airlineIata",
+            "limit"
+          ],
+          "response_format": "JSON array with flight positions and status"
+        },
+        {
+          "path": "/timetable",
+          "full_url": "https://aviation-edge.com/v2/public/timetable",
+          "method": "GET",
+          "description": "Access airline schedules and flight timetables",
+          "documentation_link": "https://aviation-edge.com/developers/",
+          "parameters": [
+            "key",
+            "iataCode",
+            "type",
+            "date"
+          ],
+          "response_format": "JSON with scheduled flights"
+        },
+        {
+          "path": "/routes",
+          "full_url": "https://aviation-edge.com/v2/public/routes",
+          "method": "GET",
+          "description": "Get airline route information between airports",
+          "documentation_link": "https://aviation-edge.com/developers/",
+          "parameters": [
+            "key",
+            "departureIata",
+            "arrivalIata",
+            "airlineIata"
+          ],
+          "response_format": "JSON with route details"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Live flight positions",
+        "Flight schedules",
+        "Airline routes",
+        "Airport data",
+        "Aircraft information",
+        "Historical flight data"
+      ],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time (every 30 seconds)",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://aviation-edge.com/developers/",
+      "api_summary": "Aviation Edge provides comprehensive aviation data APIs including real-time flight tracking, schedules, routes, and static aviation data. The platform tracks over 10,000 aircraft simultaneously with global coverage and offers both real-time and historical flight information.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://aviation-edge.com/getting-started",
+      "api_reference": "https://aviation-edge.com/developers/",
+      "examples": "https://aviation-edge.com/code-samples",
+      "changelog": null,
+      "status_page": "https://status.aviation-edge.com"
+    }
+  },
+  {
+    "id": "flightaware",
+    "name": "FlightAware AeroAPI",
+    "provider": "FlightAware",
+    "description": "Enterprise-grade flight tracking API offering real-time, historical, and predictive flight data with global coverage, machine learning-powered predictions, and comprehensive aviation intelligence.",
+    "discovery_status": "documented",
+    "tags": [
+      "aviation",
+      "flight tracking",
+      "predictive analytics",
+      "historical data",
+      "enterprise API"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Query-based pricing starting at $0.002 per query with monthly minimums",
+      "rate_limits": "40 queries/minute standard, higher limits available"
+    },
+    "technical_info": {
+      "base_url": "https://aeroapi.flightaware.com/aeroapi",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "API key in x-apikey header",
+      "endpoints": [
+        {
+          "path": "/flights/{ident}",
+          "full_url": "https://aeroapi.flightaware.com/aeroapi/flights/{ident}",
+          "method": "GET",
+          "description": "Get flight information by flight identifier with real-time positions",
+          "documentation_link": "https://flightaware.com/aeroapi/portal/documentation",
+          "parameters": [
+            "ident",
+            "start",
+            "end",
+            "max_pages"
+          ],
+          "response_format": "JSON with detailed flight data"
+        },
+        {
+          "path": "/flights/search",
+          "full_url": "https://aeroapi.flightaware.com/aeroapi/flights/search",
+          "method": "GET",
+          "description": "Search flights using advanced query syntax",
+          "documentation_link": "https://flightaware.com/aeroapi/portal/documentation",
+          "parameters": [
+            "query",
+            "start",
+            "end",
+            "max_pages"
+          ],
+          "response_format": "JSON array of matching flights"
+        },
+        {
+          "path": "/airports/{airport_code}/flights",
+          "full_url": "https://aeroapi.flightaware.com/aeroapi/airports/{airport_code}/flights",
+          "method": "GET",
+          "description": "Get arrivals and departures for an airport",
+          "documentation_link": "https://flightaware.com/aeroapi/portal/documentation",
+          "parameters": [
+            "airport_code",
+            "type",
+            "start",
+            "end"
+          ],
+          "response_format": "JSON with airport flight activity"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Real-time positions",
+        "Historical flights since 2011",
+        "Predictive ETAs",
+        "Weather impacts",
+        "Airport delays",
+        "Aircraft owner/operator data"
+      ],
+      "geographic_scope": "Global - 195+ countries",
+      "update_frequency": "Real-time with sub-minute updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://flightaware.com/aeroapi/portal/documentation",
+      "api_summary": "FlightAware AeroAPI is an enterprise-grade aviation data platform providing real-time flight tracking, historical data since 2011, and machine learning-powered predictive analytics through Foresight. The API offers comprehensive coverage with data from ADS-B, radar, datalink, and other sources.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://flightaware.com/aeroapi/portal/getting-started",
+      "api_reference": "https://flightaware.com/aeroapi/portal/documentation",
+      "examples": "https://flightaware.com/aeroapi/portal/resources",
+      "changelog": "https://flightaware.com/aeroapi/portal/changelog",
+      "status_page": "https://flightaware.com/live/flight/status"
+    }
+  },
+  {
+    "id": "ais-automatic-identification-system",
+    "name": "AIS (Automatic Identification System) APIs",
+    "provider": "Multiple Providers (MarineTraffic, VesselFinder, AISHub)",
+    "description": "Maritime vessel tracking APIs providing real-time and historical ship positions, port calls, vessel details, and voyage information through the global Automatic Identification System network.",
+    "discovery_status": "documented",
+    "tags": [
+      "maritime",
+      "vessel tracking",
+      "shipping",
+      "AIS data",
+      "port operations"
+    ],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Varies by provider - Free tiers available, enterprise pricing from $100-10000/month",
+      "rate_limits": "Provider-dependent, typically 10-1000 calls/minute"
+    },
+    "technical_info": {
+      "base_url": "https://services.marinetraffic.com/api (example)",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "XML",
+        "CSV"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/exportvessel/v8",
+          "full_url": "https://services.marinetraffic.com/api/exportvessel/v8",
+          "method": "GET",
+          "description": "Get real-time vessel positions and voyage information",
+          "documentation_link": "https://www.marinetraffic.com/en/ais-api-services",
+          "parameters": [
+            "apikey",
+            "period",
+            "msgtype",
+            "protocol"
+          ],
+          "response_format": "JSON/XML/CSV with vessel data"
+        },
+        {
+          "path": "/portcalls/v4",
+          "full_url": "https://services.marinetraffic.com/api/portcalls/v4",
+          "method": "GET",
+          "description": "Retrieve vessel port call history and ETAs",
+          "documentation_link": "https://www.marinetraffic.com/en/ais-api-services",
+          "parameters": [
+            "apikey",
+            "imo",
+            "fromdate",
+            "todate"
+          ],
+          "response_format": "JSON with port call records"
+        },
+        {
+          "path": "/exportroutes/v2",
+          "full_url": "https://services.marinetraffic.com/api/exportroutes/v2",
+          "method": "GET",
+          "description": "Get vessel route history and predictions",
+          "documentation_link": "https://www.marinetraffic.com/en/ais-api-services",
+          "parameters": [
+            "apikey",
+            "mmsi",
+            "fromdate",
+            "todate"
+          ],
+          "response_format": "JSON with route waypoints"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Vessel positions",
+        "Port calls",
+        "Voyage data",
+        "Vessel particulars",
+        "Route history",
+        "ETA predictions"
+      ],
+      "geographic_scope": "Global - all navigable waters",
+      "update_frequency": "Real-time (2-10 minute intervals)",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Various - MarineTraffic, VesselFinder, AISHub",
+      "api_summary": "AIS APIs provide access to the global maritime vessel tracking network. Multiple providers offer varying levels of coverage, features, and pricing. Common capabilities include real-time positions, historical tracks, port calls, and vessel details. Providers include MarineTraffic (largest), VesselFinder, AISHub (free tier), and specialized services.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Provider-specific",
+      "api_reference": "Provider-specific",
+      "examples": "Provider-specific",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "marinetraffic",
+    "name": "MarineTraffic API Services",
+    "provider": "MarineTraffic (Kpler)",
+    "description": "World's largest AIS network providing comprehensive maritime intelligence including real-time vessel tracking, predictive analytics, port congestion data, and fleet management through APIs covering 180,000+ vessels daily.",
+    "discovery_status": "documented",
+    "tags": [
+      "maritime intelligence",
+      "vessel tracking",
+      "port analytics",
+      "fleet management",
+      "predictive ETA"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Credit-based subscriptions from $170/month to enterprise",
+      "rate_limits": "Based on subscription tier and credits"
+    },
+    "technical_info": {
+      "base_url": "https://services.marinetraffic.com/api",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "XML",
+        "CSV"
+      ],
+      "auth_method": "API key as parameter",
+      "endpoints": [
+        {
+          "path": "/exportvessel/v8",
+          "full_url": "https://services.marinetraffic.com/api/exportvessel/v8",
+          "method": "GET",
+          "description": "Real-time vessel positions with 2-minute satellite updates",
+          "documentation_link": "https://www.marinetraffic.com/en/ais-api-services/documentation",
+          "parameters": [
+            "apikey",
+            "period",
+            "msgtype",
+            "protocol",
+            "limit"
+          ],
+          "response_format": "JSON/XML/CSV with vessel positions"
+        },
+        {
+          "path": "/expectedarrivals/v4",
+          "full_url": "https://services.marinetraffic.com/api/expectedarrivals/v4",
+          "method": "GET",
+          "description": "Predictive vessel arrivals with ML-powered ETAs",
+          "documentation_link": "https://www.marinetraffic.com/en/ais-api-services/documentation",
+          "parameters": [
+            "apikey",
+            "portid",
+            "fromdate",
+            "todate",
+            "shiptype"
+          ],
+          "response_format": "JSON with predicted arrivals"
+        },
+        {
+          "path": "/portcongestion/v2",
+          "full_url": "https://services.marinetraffic.com/api/portcongestion/v2",
+          "method": "GET",
+          "description": "Port congestion metrics and wait times",
+          "documentation_link": "https://www.marinetraffic.com/en/ais-api-services/documentation",
+          "parameters": [
+            "apikey",
+            "portid",
+            "date"
+          ],
+          "response_format": "JSON with congestion analytics"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Real-time tracking",
+        "Predictive ETAs",
+        "Port operations",
+        "Fleet analytics",
+        "Historical voyages",
+        "Weather routing"
+      ],
+      "geographic_scope": "Global - 180,000+ vessels, 10,000+ ports",
+      "update_frequency": "Real-time with 2-minute satellite updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.marinetraffic.com/en/ais-api-services/documentation",
+      "api_summary": "MarineTraffic operates the world's largest AIS vessel tracking network, now part of Kpler's maritime intelligence platform. The API services provide comprehensive vessel tracking, predictive analytics, port intelligence, and fleet management capabilities with coverage of 180,000+ vessels and integration with satellite AIS for global coverage.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://www.marinetraffic.com/en/ais-api-services/getting-started",
+      "api_reference": "https://www.marinetraffic.com/en/ais-api-services/documentation",
+      "examples": "https://www.marinetraffic.com/en/ais-api-services/examples",
+      "changelog": "https://www.marinetraffic.com/en/ais-api-services/changelog",
+      "status_page": "https://status.marinetraffic.com"
+    }
+  },
+  {
+    "id": "spire-maritime",
+    "name": "Spire Maritime API",
+    "provider": "Spire Global",
+    "description": "Satellite-based vessel tracking providing global AIS data, vessel positions, port events, and maritime analytics through GraphQL and REST APIs with real-time satellite coverage.",
+    "discovery_status": "documented",
+    "tags": [
+      "maritime intelligence",
+      "vessel tracking",
+      "AIS data",
+      "satellite",
+      "port events"
+    ],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Free trial available, custom enterprise pricing based on data needs",
+      "rate_limits": "Varies by plan, custom based on subscription"
+    },
+    "technical_info": {
+      "base_url": "https://api.spire.com",
+      "protocol": "GraphQL and REST",
+      "data_formats": [
+        "JSON",
+        "GraphQL"
+      ],
+      "auth_method": "Bearer token",
+      "endpoints": [
+        {
+          "path": "/graphql",
+          "full_url": "https://api.spire.com/graphql",
+          "method": "POST",
+          "description": "Main GraphQL endpoint for vessel tracking, port events, and maritime data queries",
+          "documentation_link": "https://documentation.spire.com/maritime-2-0/",
+          "parameters": [
+            "query",
+            "variables"
+          ],
+          "response_format": "GraphQL JSON response with requested fields"
+        },
+        {
+          "path": "/messages",
+          "full_url": "https://api.spire.com/messages",
+          "method": "GET",
+          "description": "REST API for retrieving raw AIS messages (NMEA or decoded) with time-based filtering",
+          "documentation_link": "https://documentation.spire.com/messages-api/",
+          "parameters": [
+            "received_after",
+            "received_before",
+            "fields",
+            "limit"
+          ],
+          "response_format": "JSON array of AIS messages"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Vessel tracking",
+        "AIS data",
+        "Port events",
+        "Port congestion",
+        "Weather data",
+        "Vessel characteristics"
+      ],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time satellite updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://documentation.spire.com/maritime-2-0/",
+      "api_summary": "Spire Maritime provides satellite-based vessel tracking with global AIS data coverage, port events, and maritime analytics through GraphQL and REST APIs. The platform offers real-time satellite updates and comprehensive maritime intelligence.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://spire.com/maritime/get-started/",
+      "api_reference": "https://documentation.spire.com/maritime-2-0/",
+      "examples": "https://github.com/spireglobal/maritime",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "windward",
+    "name": "Windward Maritime Intelligence API",
+    "provider": "Windward",
+    "description": "AI-powered maritime risk and intelligence platform providing vessel behavior analytics, sanctions screening, and predictive insights for maritime domain awareness.",
+    "discovery_status": "documented",
+    "tags": [
+      "maritime risk",
+      "AI analytics",
+      "sanctions screening",
+      "ETA predictions",
+      "compliance"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Tiered pricing from API Insights Lab to Enterprise with custom solutions",
+      "rate_limits": "Varies by tier, concurrent requests based on subscription"
+    },
+    "technical_info": {
+      "base_url": "https://api.windward.ai",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/vessels/search",
+          "full_url": "https://api.windward.ai/vessels/search",
+          "method": "POST",
+          "description": "Search vessels by various criteria including name, IMO, MMSI with risk insights",
+          "documentation_link": "https://windward.ai/api-hub/windward-api-insights-lab/",
+          "parameters": [
+            "vessel_name",
+            "imo",
+            "mmsi",
+            "flag",
+            "vessel_type"
+          ],
+          "response_format": "JSON with vessel details and risk scores"
+        },
+        {
+          "path": "/risk/assessment",
+          "full_url": "https://api.windward.ai/risk/assessment",
+          "method": "GET",
+          "description": "Get comprehensive risk assessment for specific vessels",
+          "documentation_link": "https://windward.ai/api-hub/",
+          "parameters": [
+            "vessel_id",
+            "assessment_type",
+            "time_range"
+          ],
+          "response_format": "JSON risk assessment report"
+        },
+        {
+          "path": "/freight/visibility",
+          "full_url": "https://api.windward.ai/freight/visibility",
+          "method": "GET",
+          "description": "Ocean freight visibility with ETA predictions and delay risks",
+          "documentation_link": "https://windward.ai/api-hub/ocean-freight-visibility-api/",
+          "parameters": [
+            "shipment_id",
+            "container_id",
+            "voyage_id"
+          ],
+          "response_format": "JSON with shipment status and predictions"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Vessel risk scores",
+        "Sanctions screening",
+        "Behavioral analytics",
+        "ETA predictions",
+        "Compliance alerts"
+      ],
+      "geographic_scope": "Global",
+      "update_frequency": "Continuous AI analysis",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://windward.ai/api-hub/",
+      "api_summary": "Windward provides AI-powered maritime risk intelligence with vessel behavior analytics, sanctions screening, and predictive insights. The platform offers dark activity detection, ownership investigation, and real-time compliance alerts for maritime domain awareness.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://windward.ai/api-hub/windward-api-insights-lab/",
+      "api_reference": "https://app.swaggerhub.com/apis/Windward-Studios/windward-rest_ful_api/2.0",
+      "examples": "https://windward.ai/blog/drive-cost-savings-growth-with-apis/",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "panjiva",
+    "name": "Panjiva Global Trade API",
+    "provider": "S&P Global Market Intelligence",
+    "description": "Comprehensive global trade data platform providing import/export records, supply chain intelligence, and company relationships from 30+ countries with data back to 2007.",
+    "discovery_status": "documented",
+    "tags": [
+      "global trade",
+      "import/export",
+      "supply chain",
+      "customs data",
+      "trade intelligence"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Tiered from Basic (1,000 calls/month) to Enterprise (unlimited)",
+      "rate_limits": "10 requests/second, monthly quota varies by plan"
+    },
+    "technical_info": {
+      "base_url": "https://api.panjiva.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "CSV"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/v1/search/shipments",
+          "full_url": "https://api.panjiva.com/v1/search/shipments",
+          "method": "GET",
+          "description": "Search global shipment records by company, product, or trade lane",
+          "documentation_link": "https://panjiva.com/api-documentation",
+          "parameters": [
+            "query",
+            "date_from",
+            "date_to",
+            "country",
+            "limit",
+            "offset"
+          ],
+          "response_format": "JSON with shipment records and metadata"
+        },
+        {
+          "path": "/v1/company/{id}",
+          "full_url": "https://api.panjiva.com/v1/company/{id}",
+          "method": "GET",
+          "description": "Get detailed company profile including trade activity and relationships",
+          "documentation_link": "https://panjiva.com/api-documentation",
+          "parameters": [
+            "id",
+            "include_shipments",
+            "include_relationships"
+          ],
+          "response_format": "JSON company profile with trade data"
+        },
+        {
+          "path": "/v1/trends",
+          "full_url": "https://api.panjiva.com/v1/trends",
+          "method": "POST",
+          "description": "Analyze trade trends for products, companies, or trade lanes",
+          "documentation_link": "https://panjiva.com/api-documentation",
+          "parameters": [
+            "entity_type",
+            "entity_id",
+            "metric",
+            "time_period",
+            "granularity"
+          ],
+          "response_format": "JSON with time series trend data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Import records",
+        "Export records",
+        "Bill of lading",
+        "Company profiles",
+        "Trade relationships",
+        "Shipment trends"
+      ],
+      "geographic_scope": "30+ countries including US, China, India, EU",
+      "update_frequency": "Daily updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://panjiva.com/api-documentation",
+      "api_summary": "Panjiva, part of S&P Global, provides comprehensive global trade data covering 30+ countries with historical data back to 2007. The platform offers import/export records, supply chain intelligence, and company relationships through REST APIs with JSON and CSV formats.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://panjiva.com/api-documentation/getting-started",
+      "api_reference": "https://panjiva.com/api-documentation/endpoints",
+      "examples": "https://github.com/panjiva/api-examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "import-genius",
+    "name": "Import Genius Trade Intelligence API",
+    "provider": "Import Genius",
+    "description": "US-focused trade intelligence platform providing detailed import/export records, competitive analysis, and supplier discovery tools with mobile app access.",
+    "discovery_status": "documented",
+    "tags": [
+      "US trade",
+      "import/export",
+      "customs data",
+      "supplier discovery",
+      "competitive intelligence"
+    ],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Essential $149/month, Professional $299/month, Enterprise custom pricing",
+      "rate_limits": "60 requests/minute, daily quota varies by plan"
+    },
+    "technical_info": {
+      "base_url": "https://api.importgenius.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "CSV",
+        "Excel"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/api/v2/search",
+          "full_url": "https://api.importgenius.com/api/v2/search",
+          "method": "POST",
+          "description": "Search import/export records by company, product, HS code, or keywords",
+          "documentation_link": "https://docs.m31.importgenius.com/",
+          "parameters": [
+            "search_term",
+            "date_range",
+            "country",
+            "trade_type",
+            "limit"
+          ],
+          "response_format": "JSON with shipment records"
+        },
+        {
+          "path": "/api/v2/company/{company_id}",
+          "full_url": "https://api.importgenius.com/api/v2/company/{company_id}",
+          "method": "GET",
+          "description": "Retrieve detailed company profile with trade history",
+          "documentation_link": "https://docs.m31.importgenius.com/",
+          "parameters": [
+            "company_id",
+            "include_shipments",
+            "date_range"
+          ],
+          "response_format": "JSON company profile data"
+        },
+        {
+          "path": "/api/v2/monitor",
+          "full_url": "https://api.importgenius.com/api/v2/monitor",
+          "method": "POST",
+          "description": "Create monitoring alerts for companies or products",
+          "documentation_link": "https://docs.m31.importgenius.com/",
+          "parameters": [
+            "monitor_type",
+            "target",
+            "frequency",
+            "delivery_method"
+          ],
+          "response_format": "JSON monitor configuration"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "US import data",
+        "US export data",
+        "Bill of lading",
+        "Customs records",
+        "Company profiles",
+        "Product details"
+      ],
+      "geographic_scope": "Primarily US, expanding to 23+ countries",
+      "update_frequency": "Daily updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://docs.m31.importgenius.com/",
+      "api_summary": "Import Genius specializes in US trade intelligence with detailed import/export records, competitive analysis, and supplier discovery. The platform offers 12 months of rolling US import data and 5 years of export data with mobile app access.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://www.importgenius.com/getting-started",
+      "api_reference": "https://docs.m31.importgenius.com/",
+      "examples": "https://www.importgenius.com/api-examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "enigma-public",
+    "name": "Enigma Public Data API",
+    "provider": "Enigma Technologies",
+    "description": "Comprehensive US business data platform providing enriched company profiles, financial health indicators, and public records intelligence via GraphQL and REST APIs.",
+    "discovery_status": "documented",
+    "tags": [
+      "business data",
+      "public records",
+      "company intelligence",
+      "GraphQL",
+      "KYB compliance"
+    ],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Developer (limited), Growth (production), Enterprise (unlimited)",
+      "rate_limits": "Match: 50 req/sec, ID: 200 req/sec, latency: Match 609ms, ID 47ms"
+    },
+    "technical_info": {
+      "base_url": "https://api.enigma.com",
+      "protocol": "GraphQL and REST",
+      "data_formats": [
+        "JSON",
+        "GraphQL"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/graphql",
+          "full_url": "https://api.enigma.com/graphql",
+          "method": "POST",
+          "description": "Main GraphQL endpoint for flexible data queries on US businesses",
+          "documentation_link": "https://developers.enigma.com/docs/api",
+          "parameters": [
+            "query",
+            "variables"
+          ],
+          "response_format": "GraphQL JSON response"
+        },
+        {
+          "path": "/v2/match",
+          "full_url": "https://api.enigma.com/v2/match",
+          "method": "POST",
+          "description": "Match and identify business profiles based on name, address, or other attributes",
+          "documentation_link": "https://developers.enigma.com/reference/api-welcome-1",
+          "parameters": [
+            "business_name",
+            "address",
+            "ein",
+            "phone",
+            "website"
+          ],
+          "response_format": "JSON with matched business profiles and confidence scores"
+        },
+        {
+          "path": "/v2/businesses/{id}",
+          "full_url": "https://api.enigma.com/v2/businesses/{id}",
+          "method": "GET",
+          "description": "Retrieve detailed business attributes and enriched data for a specific Enigma ID",
+          "documentation_link": "https://developers.enigma.com/reference/api-welcome-1",
+          "parameters": [
+            "id",
+            "attributes",
+            "include_relationships"
+          ],
+          "response_format": "JSON with comprehensive business data"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Business profiles",
+        "Financial indicators",
+        "Regulatory filings",
+        "Business licenses",
+        "Government contracts",
+        "Business relationships"
+      ],
+      "geographic_scope": "United States (all 50 states)",
+      "update_frequency": "Continuous updates from public sources",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://developers.enigma.com/docs/api",
+      "api_summary": "Enigma Public provides comprehensive US business data through GraphQL and REST APIs, offering enriched company profiles, financial health indicators, and public records intelligence with high-performance endpoints and KYB compliance capabilities.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://developers.enigma.com/docs/welcome",
+      "api_reference": "https://developers.enigma.com/reference/api-welcome-1",
+      "examples": "https://developers.enigma.com/docs/api",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "dun-bradstreet-db-optimizer",
+    "name": "Dun & Bradstreet D&B Direct+ API",
+    "provider": "Dun & Bradstreet",
+    "description": "Comprehensive business intelligence platform providing company data, risk assessments, and analytics for due diligence, credit decisions, and business development. Covers 430+ million companies globally with real-time data enrichment.",
+    "discovery_status": "documented",
+    "tags": [
+      "business intelligence",
+      "risk data",
+      "company profiles",
+      "due diligence",
+      "credit assessment"
+    ],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Subscription-based with usage tiers - contact sales for custom pricing",
+      "rate_limits": "Varies by subscription tier, typically 1000+ requests per day"
+    },
+    "technical_info": {
+      "base_url": "https://plus.dnb.com/v1",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "XML"
+      ],
+      "auth_method": "OAuth",
+      "endpoints": [
+        {
+          "path": "/token",
+          "full_url": "https://plus.dnb.com/v1/token",
+          "method": "POST",
+          "description": "Obtain OAuth bearer token for API authentication",
+          "documentation_link": "https://directplus.documentation.dnb.com/html/pages/Authentication.html",
+          "parameters": [
+            "grant_type",
+            "client_id",
+            "client_secret"
+          ],
+          "response_format": "JSON with access_token and expires_in"
+        },
+        {
+          "path": "/data/duns/{duns}",
+          "full_url": "https://plus.dnb.com/v1/data/duns/{duns}",
+          "method": "GET",
+          "description": "Retrieve comprehensive company data by DUNS number",
+          "documentation_link": "https://directplus.documentation.dnb.com/html/pages/CompanyProfile.html",
+          "parameters": [
+            "duns",
+            "productId",
+            "versionId",
+            "tradeUp",
+            "orderReason"
+          ],
+          "response_format": "JSON with detailed company profile and financial data"
+        },
+        {
+          "path": "/data/search/companySearch",
+          "full_url": "https://plus.dnb.com/v1/data/search/companySearch",
+          "method": "POST",
+          "description": "Search for companies using various criteria",
+          "documentation_link": "https://directplus.documentation.dnb.com/html/pages/CompanySearch.html",
+          "parameters": [
+            "searchCriterion",
+            "pageSize",
+            "displayStartSequence"
+          ],
+          "response_format": "JSON with array of matching companies"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Company profiles",
+        "Risk assessments",
+        "Financial data",
+        "Business relationships",
+        "Industry classifications"
+      ],
+      "geographic_scope": "Global - 430+ million companies worldwide",
+      "update_frequency": "Real-time to daily updates depending on data type",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://directplus.documentation.dnb.com/",
+      "api_summary": "D&B Direct+ provides comprehensive business intelligence with company data, risk assessments, and analytics covering 430+ million companies globally. Features OAuth authentication, multiple data products, and real-time enrichment capabilities for due diligence and credit decisions.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://directplus.documentation.dnb.com/html/pages/GettingStarted.html",
+      "api_reference": "https://directplus.documentation.dnb.com/html/pages/APIReference.html",
+      "examples": "https://directplus.documentation.dnb.com/html/pages/CodeSamples.html",
+      "changelog": null,
+      "status_page": "https://status.dnb.com/"
+    }
+  },
+  {
+    "id": "ravenpack",
+    "name": "RavenPack Analytics API",
+    "provider": "RavenPack",
+    "description": "Advanced news analytics and sentiment analysis platform processing 40,000+ news sources in real-time. Provides structured analytics, sentiment scoring, and event detection for financial markets with 20+ years of historical data.",
+    "discovery_status": "documented",
+    "tags": [
+      "financial news",
+      "sentiment analysis",
+      "market analytics",
+      "real-time data",
+      "algorithmic trading"
+    ],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom pricing based on data volume - Enterprise licenses start at $50K+ annually",
+      "rate_limits": "JSON endpoint: 10,000 records for granular datasets, 500 entities for indicator datasets"
+    },
+    "technical_info": {
+      "base_url": "https://api.ravenpack.com/1.0",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "CSV"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/datasets",
+          "full_url": "https://api.ravenpack.com/1.0/datasets",
+          "method": "GET",
+          "description": "List available datasets and their configurations",
+          "documentation_link": "https://github.com/RavenPack/python-api#getting-data-from-the-datasets",
+          "parameters": [
+            "start_date",
+            "end_date",
+            "dataset_id"
+          ],
+          "response_format": "JSON array of dataset objects with metadata"
+        },
+        {
+          "path": "/datasets/{dataset_id}/json",
+          "full_url": "https://api.ravenpack.com/1.0/datasets/{dataset_id}/json",
+          "method": "GET",
+          "description": "Real-time JSON endpoint for small data requests",
+          "documentation_link": "https://github.com/RavenPack/python-api#downloads-json",
+          "parameters": [
+            "start_date",
+            "end_date",
+            "filter",
+            "having"
+          ],
+          "response_format": "JSON with analytics records array"
+        },
+        {
+          "path": "/stream/{dataset_id}",
+          "full_url": "https://api.ravenpack.com/1.0/stream/{dataset_id}",
+          "method": "GET",
+          "description": "Real-time streaming analytics feed",
+          "documentation_link": "https://github.com/RavenPack/python-api#streaming-real-time-data",
+          "parameters": [
+            "dataset_id",
+            "buffer_size"
+          ],
+          "response_format": "Streaming JSON analytics records"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "News analytics",
+        "Sentiment scores",
+        "Event detection",
+        "Entity recognition",
+        "Market signals"
+      ],
+      "geographic_scope": "Global news coverage in 13 languages",
+      "update_frequency": "Real-time (sub-second) to 15-minute delays",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://github.com/RavenPack/python-api",
+      "api_summary": "RavenPack processes 40,000+ news sources in real-time providing structured analytics, sentiment scoring, and event detection for financial markets. Features 20+ years of historical data, streaming capabilities, and Python/R client libraries for algorithmic trading and risk management.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://github.com/RavenPack/python-api#installation",
+      "api_reference": "https://github.com/RavenPack/python-api#api-documentation",
+      "examples": "https://github.com/RavenPack/python-api#creating-a-new-dataset",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "alexandria-technology",
+    "name": "Alexandria Technology NLP API",
+    "provider": "Alexandria Technology",
+    "description": "AI-powered Natural Language Processing platform specializing in financial text analysis. Provides sentiment analysis, entity recognition, and thematic insights from earnings calls, news, and social media with proven alpha generation capabilities.",
+    "discovery_status": "documented",
+    "tags": [
+      "NLP",
+      "earnings calls",
+      "financial text analysis",
+      "sentiment analysis",
+      "alternative data"
+    ],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom pricing based on data requirements and usage volume",
+      "rate_limits": "Varies by subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.alexandriatechnology.com/v1",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/earnings-calls",
+          "full_url": "https://api.alexandriatechnology.com/v1/earnings-calls",
+          "method": "GET",
+          "description": "Access earnings call sentiment and thematic analysis",
+          "documentation_link": "https://www.alexandriatechnology.com/earnings-calls",
+          "parameters": [
+            "ticker",
+            "date_range",
+            "sentiment_type",
+            "themes"
+          ],
+          "response_format": "JSON with sentiment scores and thematic breakdowns"
+        },
+        {
+          "path": "/news-analytics",
+          "full_url": "https://api.alexandriatechnology.com/v1/news-analytics",
+          "method": "GET",
+          "description": "Company news sentiment analysis from premium publishers",
+          "documentation_link": "https://www.alexandriatechnology.com/products",
+          "parameters": [
+            "ticker",
+            "source",
+            "date_range",
+            "sentiment_threshold"
+          ],
+          "response_format": "JSON with news sentiment metrics and article metadata"
+        },
+        {
+          "path": "/esg-analytics",
+          "full_url": "https://api.alexandriatechnology.com/v1/esg-analytics",
+          "method": "GET",
+          "description": "ESG-focused sentiment analysis from news and reports",
+          "documentation_link": "https://www.alexandriatechnology.com/products",
+          "parameters": [
+            "ticker",
+            "esg_category",
+            "date_range",
+            "source_type"
+          ],
+          "response_format": "JSON with ESG sentiment scores by category"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Earnings call analysis",
+        "News sentiment",
+        "Social media sentiment",
+        "ESG analysis",
+        "Macro economic analysis"
+      ],
+      "geographic_scope": "Global coverage for all publicly traded companies",
+      "update_frequency": "Real-time to 1-hour delays depending on data source",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact Alexandria Technology for documentation",
+      "api_summary": "Alexandria Technology provides AI-powered NLP for financial text analysis with proven alpha generation capabilities. Specializes in earnings call sentiment, news analytics, and ESG analysis with real-time processing and global coverage.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact Alexandria Technology for documentation",
+      "api_reference": "Full API reference available to subscribers",
+      "examples": "Python and R code examples provided",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "amenity-analytics",
+    "name": "Amenity Analytics NLP API",
+    "provider": "Amenity Analytics (Symphony Analytics)",
+    "description": "Enterprise-grade NLP platform for financial text analysis with >90% accuracy. Extracts insights from earnings calls, SEC filings, news, and internal documents. Specializes in deception detection, ESG analysis, and custom financial event taxonomies.",
+    "discovery_status": "documented",
+    "tags": [
+      "NLP",
+      "deception detection",
+      "ESG analysis",
+      "financial text",
+      "earnings calls"
+    ],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom pricing - AWS Marketplace options available starting from enterprise tiers ($500K+ solutions)",
+      "rate_limits": "Varies by subscription and deployment type"
+    },
+    "technical_info": {
+      "base_url": "https://api.amenityanalytics.com/v1",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "CSV"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/fundamentals",
+          "full_url": "https://api.amenityanalytics.com/v1/fundamentals",
+          "method": "GET",
+          "description": "Fundamental analysis insights from financial documents",
+          "documentation_link": "https://www.amenityanalytics.com/products",
+          "parameters": [
+            "ticker",
+            "document_type",
+            "date_range",
+            "event_categories"
+          ],
+          "response_format": "JSON with fundamental event insights and sentiment"
+        },
+        {
+          "path": "/deception-analysis",
+          "full_url": "https://api.amenityanalytics.com/v1/deception-analysis",
+          "method": "POST",
+          "description": "Analyze earnings calls for deceptive language patterns",
+          "documentation_link": "https://www.amenityanalytics.com/products",
+          "parameters": [
+            "transcript_text",
+            "ticker",
+            "call_date"
+          ],
+          "response_format": "JSON with deception scores and analysis"
+        },
+        {
+          "path": "/esg-sentiment",
+          "full_url": "https://api.amenityanalytics.com/v1/esg-sentiment",
+          "method": "GET",
+          "description": "ESG sentiment analysis with UN SDG framework",
+          "documentation_link": "https://www.amenityanalytics.com/products/esg",
+          "parameters": [
+            "ticker",
+            "esg_pillar",
+            "date_range",
+            "materiality_threshold"
+          ],
+          "response_format": "JSON with ESG sentiment scores and materiality assessments"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Earnings call analysis",
+        "SEC filing analysis",
+        "ESG sentiment",
+        "Deception detection",
+        "Financial events"
+      ],
+      "geographic_scope": "Global coverage with multi-language support",
+      "update_frequency": "Real-time to daily depending on data source and deployment",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact Amenity Analytics for documentation",
+      "api_summary": "Amenity Analytics provides enterprise-grade NLP with >90% accuracy for financial text analysis. Specializes in deception detection, ESG analysis, and custom financial event taxonomies with AWS Marketplace availability and SOC 2 compliance.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact Amenity Analytics for documentation",
+      "api_reference": "Complete API reference available to subscribers",
+      "examples": "Python and R integration examples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "social-market-analytics",
+    "name": "Social Market Analytics API",
+    "provider": "Context Analytics (Social Market Analytics)",
+    "description": "Licensed Twitter partner providing social media sentiment analysis for financial markets. Aggregates professional investor sentiment from Twitter and social platforms with 9+ years of historical data and proven predictive capabilities.",
+    "discovery_status": "documented",
+    "tags": [
+      "social sentiment",
+      "Twitter data",
+      "financial markets",
+      "meme stocks",
+      "retail sentiment"
+    ],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom pricing based on data volume and real-time requirements",
+      "rate_limits": "Varies by subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://api.socialmarketanalytics.com/api",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "XML"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/search",
+          "full_url": "https://api.socialmarketanalytics.com/api/search",
+          "method": "POST",
+          "description": "Search social sentiment data with filtering options",
+          "documentation_link": "https://api.socialmarketanalytics.com/",
+          "parameters": [
+            "subject",
+            "ontology",
+            "items",
+            "dates",
+            "frequency",
+            "filter",
+            "sort"
+          ],
+          "response_format": "JSON/XML with sentiment scores and social metrics"
+        },
+        {
+          "path": "/realtime-sentiment",
+          "full_url": "https://api.socialmarketanalytics.com/api/realtime-sentiment",
+          "method": "GET",
+          "description": "Real-time streaming sentiment data",
+          "documentation_link": "https://api.socialmarketanalytics.com/",
+          "parameters": [
+            "symbols",
+            "stream_type",
+            "buffer_size"
+          ],
+          "response_format": "Streaming JSON with real-time sentiment updates"
+        },
+        {
+          "path": "/sentiment-replay",
+          "full_url": "https://api.socialmarketanalytics.com/api/sentiment-replay",
+          "method": "GET",
+          "description": "Historical sentiment data replay",
+          "documentation_link": "https://api.socialmarketanalytics.com/",
+          "parameters": [
+            "symbol",
+            "start_date",
+            "end_date",
+            "granularity"
+          ],
+          "response_format": "JSON with historical sentiment time series"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Social sentiment",
+        "Professional investor sentiment",
+        "Retail sentiment",
+        "Meme stock tracking",
+        "Real-time alerts"
+      ],
+      "geographic_scope": "Global social media coverage with focus on English-language content",
+      "update_frequency": "Real-time streaming with sub-minute delays",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api.socialmarketanalytics.com/",
+      "api_summary": "Social Market Analytics is a licensed Twitter partner providing social media sentiment analysis for financial markets. Features 9+ years of historical data, real-time streaming, and specialized focus on professional investor sentiment with proven predictive capabilities.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://api.socialmarketanalytics.com/",
+      "api_reference": "https://api.socialmarketanalytics.com/",
+      "examples": "Request examples provided in documentation",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "stocktwits-api",
+    "name": "StockTwits API",
+    "provider": "StockTwits",
+    "description": "Social platform for financial discussions and sentiment from retail investors. Provides access to real-time social sentiment, user streams, watchlists, and trending symbols discussions. Currently not accepting new API registrations.",
+    "discovery_status": "documented",
+    "tags": [
+      "social financial data",
+      "retail sentiment",
+      "social trading",
+      "market buzz",
+      "trending symbols"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Not publicly available - contact for pricing. Previously had free tier but suspended",
+      "rate_limits": "Previously 200/hour for authenticated requests"
+    },
+    "technical_info": {
+      "base_url": "https://api.stocktwits.com/api/2",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "OAuth",
+      "endpoints": [
+        {
+          "path": "/streams/user/{user_name}",
+          "full_url": "https://api.stocktwits.com/api/2/streams/user/{user_name}",
+          "method": "GET",
+          "description": "Get user stream messages",
+          "documentation_link": "https://api.stocktwits.com/developers/docs",
+          "parameters": [
+            "user_name",
+            "since",
+            "max",
+            "limit",
+            "callback"
+          ],
+          "response_format": "JSON with messages array"
+        },
+        {
+          "path": "/streams/symbol/{symbol}",
+          "full_url": "https://api.stocktwits.com/api/2/streams/symbol/{symbol}",
+          "method": "GET",
+          "description": "Get symbol stream messages",
+          "documentation_link": "https://api.stocktwits.com/developers/docs",
+          "parameters": [
+            "symbol",
+            "since",
+            "max",
+            "limit",
+            "callback",
+            "filter"
+          ],
+          "response_format": "JSON with messages and cursor data"
+        },
+        {
+          "path": "/streams/trending",
+          "full_url": "https://api.stocktwits.com/api/2/streams/trending",
+          "method": "GET",
+          "description": "Get trending symbols and discussions",
+          "documentation_link": "https://api.stocktwits.com/developers/docs",
+          "parameters": [
+            "limit",
+            "callback"
+          ],
+          "response_format": "JSON with trending symbols array"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Social sentiment",
+        "User streams",
+        "Trending symbols",
+        "Market discussions",
+        "Retail investor sentiment"
+      ],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://api.stocktwits.com/developers/docs",
+      "api_summary": "StockTwits provides social communications platform for financial markets but has suspended new API registrations as of 2024 while reviewing their API offerings. The platform remains popular for retail investor sentiment but API access is currently limited.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://api.stocktwits.com/developers",
+      "api_reference": "https://api.stocktwits.com/developers/docs",
+      "examples": "https://github.com/simov/stocktwits",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "isentium",
+    "name": "iSentium Social Sentiment API",
+    "provider": "iSentium",
+    "description": "AI-powered social sentiment analysis for financial markets using patented NLP technology. Provides Daily Directional Indicators covering ~90% of U.S. stock market liquidity, supporting over 8,500 U.S. stocks, indices, and ETFs.",
+    "discovery_status": "documented",
+    "tags": [
+      "social sentiment",
+      "NLP",
+      "algorithmic trading",
+      "hedge funds",
+      "directional indicators"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom enterprise pricing based on data volume and requirements",
+      "rate_limits": "Custom per client agreement"
+    },
+    "technical_info": {
+      "base_url": "Custom endpoint per client",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "CSV",
+        "FIX"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/sentiment/daily",
+          "full_url": "https://api.isentium.com/v1/sentiment/daily",
+          "method": "GET",
+          "description": "Daily Directional Indicators for supported securities",
+          "documentation_link": "Contact for documentation",
+          "parameters": [
+            "symbol",
+            "date",
+            "format"
+          ],
+          "response_format": "JSON with sentiment scores and directional indicators"
+        },
+        {
+          "path": "/sentiment/realtime",
+          "full_url": "https://api.isentium.com/v1/sentiment/realtime",
+          "method": "GET",
+          "description": "Real-time sentiment feed for securities",
+          "documentation_link": "Contact for documentation",
+          "parameters": [
+            "symbols",
+            "callback_url"
+          ],
+          "response_format": "Streaming JSON with real-time sentiment updates"
+        },
+        {
+          "path": "/analytics/buzz",
+          "full_url": "https://api.isentium.com/v1/analytics/buzz",
+          "method": "GET",
+          "description": "Social media buzz volume metrics",
+          "documentation_link": "Contact for documentation",
+          "parameters": [
+            "symbol",
+            "timeframe",
+            "source"
+          ],
+          "response_format": "JSON with buzz volume and change metrics"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Daily Directional Indicators",
+        "Real-time sentiment",
+        "Social buzz metrics",
+        "Algorithmic signals"
+      ],
+      "geographic_scope": "United States",
+      "update_frequency": "Real-time updates, daily aggregates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact for documentation",
+      "api_summary": "iSentium provides enterprise-only social sentiment analysis with patented NLP technology. Covers 90% of U.S. stock market liquidity and is vetted by JP Morgan and NASDAQ. Requires direct business relationship and custom pricing negotiations.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Available to enterprise clients only",
+      "api_reference": "Contact sales for full documentation",
+      "examples": "Provided with enterprise subscription",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "dataminr",
+    "name": "Dataminr Event Detection API",
+    "provider": "Dataminr",
+    "description": "AI-powered real-time event and risk detection platform analyzing public data sources. Processes billions of public data inputs per day from nearly 1 million distinct sources including text, images, video, and sound in 150+ languages.",
+    "discovery_status": "documented",
+    "tags": [
+      "event detection",
+      "risk monitoring",
+      "real-time alerts",
+      "crisis management",
+      "news breaking"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom enterprise pricing based on use case and volume",
+      "rate_limits": "Custom per client agreement"
+    },
+    "technical_info": {
+      "base_url": "https://gateway.dataminr.com/api",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/alerts",
+          "full_url": "https://gateway.dataminr.com/api/v1/alerts",
+          "method": "GET",
+          "description": "Retrieve real-time alerts based on configured parameters",
+          "documentation_link": "https://www.dataminr.com/legal/api/",
+          "parameters": [
+            "type",
+            "location",
+            "keywords",
+            "since",
+            "limit"
+          ],
+          "response_format": "JSON with alert objects containing event details"
+        },
+        {
+          "path": "/alerts/stream",
+          "full_url": "https://gateway.dataminr.com/api/v1/alerts/stream",
+          "method": "GET",
+          "description": "Real-time streaming alerts endpoint",
+          "documentation_link": "https://www.dataminr.com/legal/api/",
+          "parameters": [
+            "filters",
+            "format"
+          ],
+          "response_format": "Streaming JSON with real-time alert data"
+        },
+        {
+          "path": "/events/{event_id}",
+          "full_url": "https://gateway.dataminr.com/api/v1/events/{event_id}",
+          "method": "GET",
+          "description": "Get detailed information about a specific event",
+          "documentation_link": "https://www.dataminr.com/legal/api/",
+          "parameters": [
+            "event_id",
+            "include_related"
+          ],
+          "response_format": "JSON with comprehensive event details and related information"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Real-time event alerts",
+        "Risk detection",
+        "Crisis monitoring",
+        "Breaking news",
+        "Public data analysis"
+      ],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time with sub-second latency",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.dataminr.com/legal/api/",
+      "api_summary": "Dataminr is a premium enterprise platform used by major corporations, government agencies, and newsrooms. Known for speed in detecting events before traditional news sources. Requires enterprise licensing agreements with dedicated support.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact Dataminr for access",
+      "api_reference": "Available to licensed clients",
+      "examples": "Provided with enterprise license",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "sesamm",
+    "name": "SESAMm TextReveal API",
+    "provider": "SESAMm",
+    "description": "AI-powered ESG and sentiment analysis from textual data using cutting-edge NLP. Covers public and private companies assessing ESG risks in over 100 languages from 20 billion historical articles with 90 ESG risk categories aligned with UN standards.",
+    "discovery_status": "documented",
+    "tags": [
+      "ESG analysis",
+      "sentiment analysis",
+      "SDG monitoring",
+      "alternative data",
+      "textual analysis"
+    ],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Custom enterprise pricing based on coverage and data volume requirements",
+      "rate_limits": "Custom per client agreement"
+    },
+    "technical_info": {
+      "base_url": "https://api.sesamm.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "CSV",
+        "XML"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/esg/alerts",
+          "full_url": "https://api.sesamm.com/v1/esg/alerts",
+          "method": "GET",
+          "description": "ESG controversy alerts and monitoring",
+          "documentation_link": "Contact SESAMm for API documentation",
+          "parameters": [
+            "company_id",
+            "risk_category",
+            "date_range",
+            "severity"
+          ],
+          "response_format": "JSON with ESG alerts and source articles"
+        },
+        {
+          "path": "/companies/{company_id}/esg",
+          "full_url": "https://api.sesamm.com/v1/companies/{company_id}/esg",
+          "method": "GET",
+          "description": "Comprehensive ESG profile for specific company",
+          "documentation_link": "Contact SESAMm for API documentation",
+          "parameters": [
+            "company_id",
+            "time_period",
+            "categories",
+            "include_sources"
+          ],
+          "response_format": "JSON with ESG scores, risk categories, and source transparency"
+        },
+        {
+          "path": "/sdg/monitoring",
+          "full_url": "https://api.sesamm.com/v1/sdg/monitoring",
+          "method": "GET",
+          "description": "UN Sustainable Development Goals positive impact tracking",
+          "documentation_link": "Contact SESAMm for API documentation",
+          "parameters": [
+            "company_id",
+            "sdg_goals",
+            "date_range"
+          ],
+          "response_format": "JSON with SDG impact scores and supporting evidence"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "ESG risk assessment",
+        "SDG impact tracking",
+        "Controversy monitoring",
+        "Sentiment analysis"
+      ],
+      "geographic_scope": "Global - 5+ million companies covered",
+      "update_frequency": "Daily updates with real-time alerts",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact SESAMm for documentation",
+      "api_summary": "SESAMm specializes in ESG and alternative data analytics with transparent ESG analysis and source traceability. Focuses on private equity, asset management, and enterprise use cases with UN Global Compact alignment.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://www.sesamm.com/contact",
+      "api_reference": "Contact for full API documentation",
+      "examples": "Provided with enterprise subscription",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "accern",
+    "name": "Accern Financial Analytics API",
+    "provider": "Accern",
+    "description": "No-code generative NLP platform for financial news analytics and sentiment analysis. AI-powered financial news analytics, sentiment analysis, and event detection using adaptive NLP technology used by major financial institutions.",
+    "discovery_status": "documented",
+    "tags": [
+      "AI analytics",
+      "financial news",
+      "sentiment analysis",
+      "event detection",
+      "no-code NLP"
+    ],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Multiple tiers based on data volume and features - trial available with limited requests",
+      "rate_limits": "Based on subscription tier"
+    },
+    "technical_info": {
+      "base_url": "https://feed.accern.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/v3/alphas",
+          "full_url": "https://feed.accern.com/v3/alphas",
+          "method": "GET",
+          "description": "Access AI-generated alpha signals and financial insights",
+          "documentation_link": "https://docs.accern.com/",
+          "parameters": [
+            "token",
+            "limit",
+            "since",
+            "symbols",
+            "event_groups"
+          ],
+          "response_format": "JSON with alpha signals, sentiment scores, and entity information"
+        },
+        {
+          "path": "/v3/news",
+          "full_url": "https://feed.accern.com/v3/news",
+          "method": "GET",
+          "description": "Structured financial news with AI-extracted entities and events",
+          "documentation_link": "https://docs.accern.com/",
+          "parameters": [
+            "token",
+            "symbols",
+            "since",
+            "limit",
+            "event_types"
+          ],
+          "response_format": "JSON with news articles, extracted entities, and event classifications"
+        },
+        {
+          "path": "/v3/sentiment",
+          "full_url": "https://feed.accern.com/v3/sentiment",
+          "method": "GET",
+          "description": "Real-time sentiment analysis for financial entities",
+          "documentation_link": "https://docs.accern.com/",
+          "parameters": [
+            "token",
+            "symbols",
+            "timeframe",
+            "aggregation"
+          ],
+          "response_format": "JSON with sentiment scores and impact assessments"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Alpha signals",
+        "Financial news",
+        "Sentiment analysis",
+        "Event detection",
+        "Entity relationships"
+      ],
+      "geographic_scope": "Global",
+      "update_frequency": "Real-time updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://docs.accern.com/",
+      "api_summary": "Accern offers accessible financial NLP with no-code platform making it easier for developers to implement sophisticated financial analytics. Strong backing from major investors with proven use cases at large financial institutions. Good balance between enterprise features and developer accessibility.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://docs.accern.com/",
+      "api_reference": "https://docs.accern.com/",
+      "examples": "https://docs.accern.com/",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "thinknum-alternative-data",
+    "name": "Thinknum Alternative Data API",
+    "provider": "Thinknum",
+    "description": "Web scraping intelligence platform providing alternative data insights through comprehensive tracking of company metrics, consumer behavior, and market trends via automated data collection from public web sources.",
+    "discovery_status": "documented",
+    "tags": [
+      "alternative data",
+      "web scraping",
+      "company metrics",
+      "consumer behavior",
+      "market intelligence"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise-only with custom pricing - contact sales for access",
+      "rate_limits": "Custom per client agreement"
+    },
+    "technical_info": {
+      "base_url": "https://api.thinknum.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "CSV"
+      ],
+      "auth_method": "Token-based authentication with client_id/client_secret",
+      "endpoints": [
+        {
+          "path": "/auth/token",
+          "full_url": "https://api.thinknum.com/auth/token",
+          "method": "POST",
+          "description": "Obtain authentication token using client credentials",
+          "documentation_link": "Contact Thinknum for API documentation",
+          "parameters": [
+            "client_id",
+            "client_secret",
+            "grant_type"
+          ],
+          "response_format": "JSON with access token and expiration"
+        },
+        {
+          "path": "/datasets",
+          "full_url": "https://api.thinknum.com/datasets",
+          "method": "GET",
+          "description": "List available datasets and their metadata",
+          "documentation_link": "Contact Thinknum for API documentation",
+          "parameters": [
+            "category",
+            "limit",
+            "offset"
+          ],
+          "response_format": "JSON array of available datasets"
+        },
+        {
+          "path": "/data/{dataset_id}",
+          "full_url": "https://api.thinknum.com/data/{dataset_id}",
+          "method": "GET",
+          "description": "Retrieve data for specific dataset with filtering options",
+          "documentation_link": "Contact Thinknum for API documentation",
+          "parameters": [
+            "dataset_id",
+            "ticker",
+            "date_range",
+            "format"
+          ],
+          "response_format": "JSON/CSV with requested dataset information"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Company metrics",
+        "Consumer behavior",
+        "Web scraping data",
+        "Market trends",
+        "Alternative indicators"
+      ],
+      "geographic_scope": "Global with focus on publicly traded companies",
+      "update_frequency": "Daily updates with real-time web scraping",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact for enterprise documentation",
+      "api_summary": "Thinknum provides alternative data through web scraping intelligence with comprehensive tracking of company metrics and consumer behavior. Features well-documented REST API with authentication, dataset management, and flexible data retrieval options.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact account manager for access",
+      "api_reference": "Enterprise documentation provided upon subscription",
+      "examples": "Provided with enterprise access",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "eagle-alpha",
+    "name": "Eagle Alpha Data Marketplace",
+    "provider": "Eagle Alpha",
+    "description": "Alternative data marketplace platform providing access to 1,850+ dataset profiles from various vendors. Functions as data discovery and vendor connection service rather than direct API provider.",
+    "discovery_status": "documented",
+    "tags": [
+      "data marketplace",
+      "alternative data",
+      "data discovery",
+      "vendor aggregation",
+      "dataset profiles"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": false,
+      "requires_approval": true,
+      "pricing_model": "Marketplace model - pricing varies by individual data vendor",
+      "rate_limits": "Varies by individual vendor APIs"
+    },
+    "technical_info": {
+      "base_url": "https://www.eaglealpha.com",
+      "protocol": "Platform-based access",
+      "data_formats": [
+        "Varies by vendor"
+      ],
+      "auth_method": "Platform registration and vendor-specific authentication",
+      "endpoints": [
+        {
+          "path": "/marketplace",
+          "full_url": "https://www.eaglealpha.com/marketplace",
+          "method": "GET",
+          "description": "Browse available datasets and vendor profiles",
+          "documentation_link": "https://www.eaglealpha.com/marketplace",
+          "parameters": [
+            "category",
+            "vendor",
+            "region",
+            "data_type"
+          ],
+          "response_format": "Web platform interface with dataset listings"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Dataset discovery",
+        "Vendor profiles",
+        "Alternative data categories",
+        "Market intelligence"
+      ],
+      "geographic_scope": "Global dataset coverage through various vendors",
+      "update_frequency": "Platform updated continuously with new vendor additions",
+      "historical_data": "Varies by individual vendor"
+    },
+    "research_notes": {
+      "documentation_url": "https://www.eaglealpha.com/",
+      "api_summary": "Eagle Alpha operates as a marketplace aggregator connecting clients with alternative data vendors rather than providing direct APIs. The platform helps discover and evaluate alternative data sources from 1,850+ dataset profiles.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://www.eaglealpha.com/",
+      "api_reference": "Vendor-specific documentation",
+      "examples": "Platform-based data samples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "quandl-alternative-data",
+    "name": "Nasdaq Data Link API (formerly Quandl)",
+    "provider": "Nasdaq",
+    "description": "Comprehensive financial and economic data platform providing access to millions of datasets through REST API and streaming services. Offers both free public datasets and premium alternative data sources.",
+    "discovery_status": "documented",
+    "tags": [
+      "financial data",
+      "economic data",
+      "time series",
+      "market data",
+      "alternative data"
+    ],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Freemium - free datasets available, premium subscriptions for alternative data",
+      "rate_limits": "50 calls/day (anonymous), 300 calls per 10 seconds (premium)"
+    },
+    "technical_info": {
+      "base_url": "https://data.nasdaq.com/api/v3",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "CSV",
+        "XML"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/datasets/{database_code}/{dataset_code}",
+          "full_url": "https://data.nasdaq.com/api/v3/datasets/{database_code}/{dataset_code}",
+          "method": "GET",
+          "description": "Retrieve specific dataset with time series data",
+          "documentation_link": "https://docs.data.nasdaq.com/docs/in-depth-usage",
+          "parameters": [
+            "database_code",
+            "dataset_code",
+            "start_date",
+            "end_date",
+            "collapse",
+            "transform"
+          ],
+          "response_format": "JSON/CSV with time series data and metadata"
+        },
+        {
+          "path": "/datasets",
+          "full_url": "https://data.nasdaq.com/api/v3/datasets",
+          "method": "GET",
+          "description": "Search and browse available datasets",
+          "documentation_link": "https://docs.data.nasdaq.com/docs/in-depth-usage",
+          "parameters": [
+            "query",
+            "database_code",
+            "page",
+            "per_page"
+          ],
+          "response_format": "JSON with dataset search results"
+        },
+        {
+          "path": "/databases",
+          "full_url": "https://data.nasdaq.com/api/v3/databases",
+          "method": "GET",
+          "description": "List available databases and their metadata",
+          "documentation_link": "https://docs.data.nasdaq.com/docs/in-depth-usage",
+          "parameters": [
+            "page",
+            "per_page"
+          ],
+          "response_format": "JSON with database listings and descriptions"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Financial time series",
+        "Economic indicators",
+        "Market data",
+        "Alternative datasets",
+        "Company fundamentals"
+      ],
+      "geographic_scope": "Global coverage with extensive US focus",
+      "update_frequency": "Varies by dataset - real-time to quarterly updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://docs.data.nasdaq.com/",
+      "api_summary": "Nasdaq Data Link (formerly Quandl) provides comprehensive access to millions of financial and economic datasets through well-documented REST API. Offers freemium model with both free public data and premium alternative data sources.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://docs.data.nasdaq.com/docs/getting-started",
+      "api_reference": "https://docs.data.nasdaq.com/docs/in-depth-usage",
+      "examples": "https://docs.data.nasdaq.com/docs/python-time-series",
+      "changelog": "https://docs.data.nasdaq.com/changelog",
+      "status_page": "https://status.data.nasdaq.com/"
+    }
+  },
+  {
+    "id": "7park-data",
+    "name": "7Park Data Consumer Analytics API",
+    "provider": "7Park Data",
+    "description": "Consumer behavior analytics platform providing transaction data, app engagement metrics, and web activity insights for investment research and business intelligence. Enterprise-only access with custom APIs.",
+    "discovery_status": "documented",
+    "tags": [
+      "consumer analytics",
+      "transaction data",
+      "app engagement",
+      "web activity",
+      "investment research"
+    ],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise-only with custom pricing based on data requirements",
+      "rate_limits": "Custom per client agreement"
+    },
+    "technical_info": {
+      "base_url": "Custom enterprise endpoints",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "CSV"
+      ],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/web-activity",
+          "full_url": "Custom client endpoint/web-activity",
+          "method": "GET",
+          "description": "Web activity and traffic analytics for companies and sectors",
+          "documentation_link": "Enterprise documentation provided upon subscription",
+          "parameters": [
+            "company",
+            "sector",
+            "date_range",
+            "metrics"
+          ],
+          "response_format": "JSON with web activity metrics and trends"
+        },
+        {
+          "path": "/transactions",
+          "full_url": "Custom client endpoint/transactions",
+          "method": "GET",
+          "description": "Consumer transaction data and spending patterns",
+          "documentation_link": "Enterprise documentation provided upon subscription",
+          "parameters": [
+            "merchant",
+            "category",
+            "geography",
+            "time_period"
+          ],
+          "response_format": "JSON with transaction volumes and consumer behavior"
+        },
+        {
+          "path": "/app-engagement",
+          "full_url": "Custom client endpoint/app-engagement",
+          "method": "GET",
+          "description": "Mobile app usage and engagement analytics",
+          "documentation_link": "Enterprise documentation provided upon subscription",
+          "parameters": [
+            "app_id",
+            "platform",
+            "metrics",
+            "date_range"
+          ],
+          "response_format": "JSON with app usage statistics and engagement metrics"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Consumer transactions",
+        "Web activity",
+        "App engagement",
+        "Spending patterns",
+        "Digital behavior"
+      ],
+      "geographic_scope": "United States with selective international coverage",
+      "update_frequency": "Daily updates with some real-time components",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact for enterprise documentation",
+      "api_summary": "7Park Data specializes in consumer behavior analytics with enterprise-only access. Provides transaction data, app engagement metrics, and web activity insights for investment research. API documentation endpoints were inaccessible during research.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact enterprise sales",
+      "api_reference": "Enterprise documentation provided upon subscription",
+      "examples": "Custom examples provided with access",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "alpha-hat",
+    "name": "Alpha Hat Investment Research API (Discontinued)",
+    "provider": "Alpha Hat (Acquired by Earnest Research)",
+    "description": "Former investment research automation platform that accelerated analysis workflows. Acquired by Earnest Research in January 2020 and technology integrated into parent company's platform.",
+    "discovery_status": "documented",
+    "tags": [
+      "investment research",
+      "research automation",
+      "discontinued",
+      "acquired",
+      "workflow automation"
+    ],
+    "access_info": {
+      "is_free": null,
+      "requires_api_key": null,
+      "requires_approval": null,
+      "pricing_model": "Service discontinued - technology integrated into Earnest Research",
+      "rate_limits": "No longer available"
+    },
+    "technical_info": {
+      "base_url": "Service discontinued",
+      "protocol": "REST (historical)",
+      "data_formats": [
+        "JSON (historical)"
+      ],
+      "auth_method": "API key (historical)",
+      "endpoints": [
+        {
+          "path": "/research/automation",
+          "full_url": "Historical endpoint - no longer available",
+          "method": "GET",
+          "description": "Historical endpoint for investment research automation",
+          "documentation_link": "No longer available",
+          "parameters": [
+            "Historical parameters no longer accessible"
+          ],
+          "response_format": "Service discontinued"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": [
+        "Investment research (historical)",
+        "Research automation (historical)",
+        "Workflow optimization (historical)"
+      ],
+      "geographic_scope": "Historical service scope no longer available",
+      "update_frequency": "Service discontinued",
+      "historical_data": null
+    },
+    "research_notes": {
+      "documentation_url": "No longer available",
+      "api_summary": "Alpha Hat was acquired by Earnest Research in January 2020. The investment research automation technology has been integrated into Earnest Research's platform and is no longer available as a standalone API service.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Service discontinued - contact Earnest Research",
+      "api_reference": "No longer available",
+      "examples": "No longer available",
+      "changelog": "No longer available",
+      "status_page": "No longer available"
+    }
+  }
+]

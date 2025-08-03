@@ -1,0 +1,666 @@
+[
+  {
+    "name": "Zacks Investment Research API",
+    "category": "Equity research and investment data",
+    "description": "Provides comprehensive financial data and proprietary stock rankings including earnings estimates, analyst ratings, and the famous Zacks Rank system",
+    "technical_info": {
+      "base_url": "https://api.zacks.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "api_key",
+      "authentication_details": "API key passed in request headers as 'X-Zacks-Client-Id'",
+      "endpoints": [
+        {
+          "path": "/v1/stock/quote",
+          "full_url": "https://api.zacks.com/v1/stock/quote",
+          "method": "GET",
+          "description": "Real-time and historical stock quotes",
+          "documentation_link": "Available through Zacks developer portal",
+          "parameters": [
+            "ticker",
+            "date",
+            "format"
+          ],
+          "response_format": "JSON with pricing data and market information"
+        },
+        {
+          "path": "/v1/earnings/estimates",
+          "full_url": "https://api.zacks.com/v1/earnings/estimates",
+          "method": "GET",
+          "description": "Consensus earnings estimates and revisions",
+          "documentation_link": "Available through Zacks developer portal",
+          "parameters": [
+            "ticker",
+            "period",
+            "estimate_type"
+          ],
+          "response_format": "JSON with earnings estimates and analyst data"
+        },
+        {
+          "path": "/v1/zacks/rank",
+          "full_url": "https://api.zacks.com/v1/zacks/rank",
+          "method": "GET",
+          "description": "Proprietary Zacks Rank scoring for stocks",
+          "documentation_link": "Available through Zacks developer portal",
+          "parameters": [
+            "ticker",
+            "rank_date"
+          ],
+          "response_format": "JSON with Zacks Rank score and supporting data"
+        },
+        {
+          "path": "/v1/fundamentals",
+          "full_url": "https://api.zacks.com/v1/fundamentals",
+          "method": "GET",
+          "description": "Company fundamental data and financial metrics",
+          "documentation_link": "Available through Zacks developer portal",
+          "parameters": [
+            "ticker",
+            "period",
+            "statement_type"
+          ],
+          "response_format": "JSON with financial statement data"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "Contact Zacks for developer portal access",
+        "authentication": "API key authentication via headers",
+        "endpoints_reference": "Available through Zacks developer documentation",
+        "code_examples": "Available via Quandl partnership",
+        "sdks_libraries": "Available through Quandl.com integration"
+      }
+    },
+    "pricing": {
+      "model": "subscription_tiers",
+      "pricing_tiers": [
+        {
+          "name": "Starter",
+          "price": "$100/month",
+          "requests_included": "10,000 daily requests",
+          "features": [
+            "Basic stock data",
+            "Earnings estimates",
+            "Zacks Rank"
+          ]
+        },
+        {
+          "name": "Professional",
+          "price": "Contact for pricing",
+          "requests_included": "Higher limits available",
+          "features": [
+            "All starter features",
+            "Historical data",
+            "Advanced analytics"
+          ]
+        }
+      ],
+      "free_tier": "Free testing available through Quandl",
+      "rate_limits": "10,000 requests per day on starter plan"
+    },
+    "data_coverage": {
+      "geographic_coverage": "US and Canadian markets",
+      "asset_classes": [
+        "Equities"
+      ],
+      "data_history": "30+ years of historical data",
+      "update_frequency": "Daily updates",
+      "total_instruments": "16,000+ active and inactive securities"
+    },
+    "unique_features": [
+      "Zacks Rank proprietary scoring system",
+      "Earnings estimate revisions tracking",
+      "Insider trading analysis",
+      "Industry classifications"
+    ],
+    "contact_info": {
+      "email": "adiraimondo@zacks.com",
+      "phone": "800-767-3771 ext. 9214",
+      "support": "DD@zacks.com"
+    },
+    "api_status": "Active",
+    "last_verified": "2025-08-02",
+    "id": "zacks-investment-research-api"
+  },
+  {
+    "name": "Morningstar Direct API",
+    "category": "Investment research and portfolio analytics",
+    "description": "Comprehensive investment research and portfolio analytics APIs with access to Morningstar's data and research across 300,000+ investments",
+    "technical_info": {
+      "base_url": "https://api.morningstar.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON",
+        "XML"
+      ],
+      "auth_method": "api_key",
+      "authentication_details": "API key authentication with enterprise licensing",
+      "endpoints": [
+        {
+          "path": "/v1/portfolio/analysis",
+          "full_url": "https://api.morningstar.com/v1/portfolio/analysis",
+          "method": "POST",
+          "description": "Portfolio X-Ray and performance analysis",
+          "documentation_link": "https://developer.morningstar.com/direct-web-services/documentation/direct-web-services/portfolio-analysis-americas/overview",
+          "parameters": [
+            "portfolio_data",
+            "benchmark",
+            "analysis_type"
+          ],
+          "response_format": "JSON with detailed portfolio metrics and allocations"
+        },
+        {
+          "path": "/v1/investment/details",
+          "full_url": "https://api.morningstar.com/v1/investment/details",
+          "method": "GET",
+          "description": "Detailed investment information and ratings",
+          "documentation_link": "https://developer.morningstar.com/direct-web-services/documentation/direct-web-services/investment-details/overview",
+          "parameters": [
+            "identifier",
+            "data_points",
+            "currency"
+          ],
+          "response_format": "JSON with investment details, ratings, and performance"
+        },
+        {
+          "path": "/v1/intelligence/engine",
+          "full_url": "https://api.morningstar.com/v1/intelligence/engine",
+          "method": "POST",
+          "description": "AI-powered investment insights and natural language processing",
+          "documentation_link": "https://developer.morningstar.com/direct-web-services/documentation/direct-web-services/intelligence-engine/overview",
+          "parameters": [
+            "query",
+            "context",
+            "content_types"
+          ],
+          "response_format": "JSON with AI-generated insights and analysis"
+        },
+        {
+          "path": "/v1/reports",
+          "full_url": "https://api.morningstar.com/v1/reports",
+          "method": "GET",
+          "description": "Access to Morningstar analyst reports and research",
+          "documentation_link": "https://developer.morningstar.com/direct-web-services/documentation/direct-web-services/reports-americas/overview",
+          "parameters": [
+            "identifier",
+            "report_type",
+            "format"
+          ],
+          "response_format": "JSON or PDF format reports"
+        },
+        {
+          "path": "/v1/cost/calculator",
+          "full_url": "https://api.morningstar.com/v1/cost/calculator",
+          "method": "POST",
+          "description": "Investment cost analysis and fee calculation",
+          "documentation_link": "https://developer.morningstar.com/direct-web-services/documentation/direct-web-services/cost-calculator/overview",
+          "parameters": [
+            "investment_amount",
+            "time_horizon",
+            "fees"
+          ],
+          "response_format": "JSON with cost projections and impact analysis"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://developer.morningstar.com/apis/getting-started/morningstar-apis",
+        "authentication": "Enterprise licensing and API key setup",
+        "endpoints_reference": "https://developer.morningstar.com/direct-web-services/documentation/direct-web-services/about",
+        "code_examples": "Available in developer portal",
+        "sdks_libraries": "Python SDK available via PyPI (morningstar-data)"
+      }
+    },
+    "pricing": {
+      "model": "enterprise_licensing",
+      "pricing_tiers": [
+        {
+          "name": "Contact Sales",
+          "price": "Custom pricing",
+          "requests_included": "Variable based on agreement",
+          "features": [
+            "Full API access",
+            "Premium support",
+            "Custom integrations"
+          ]
+        }
+      ],
+      "free_tier": "Not available - enterprise only",
+      "rate_limits": "Custom limits based on agreement"
+    },
+    "data_coverage": {
+      "geographic_coverage": "Global (Americas, APAC, EMEA)",
+      "asset_classes": [
+        "Funds",
+        "ETFs",
+        "Stocks",
+        "Fixed Income",
+        "Indexes"
+      ],
+      "data_history": "Extensive historical coverage",
+      "update_frequency": "Real-time and daily updates",
+      "total_instruments": "300,000+ investments"
+    },
+    "unique_features": [
+      "Portfolio X-Ray analysis",
+      "AI-powered Intelligence Engine",
+      "Morningstar Star Ratings",
+      "Portfolio Optimizer",
+      "Risk profiling tools"
+    ],
+    "contact_info": {
+      "website": "https://www.morningstar.com/products/direct-web-services/contact",
+      "support": "Enterprise support included"
+    },
+    "api_status": "Active",
+    "last_verified": "2025-08-02",
+    "id": "morningstar-direct-api"
+  },
+  {
+    "name": "Benzinga API",
+    "category": "Financial news and market data",
+    "description": "Comprehensive financial news, market data, and company information APIs with real-time updates and extensive coverage",
+    "technical_info": {
+      "base_url": "https://api.benzinga.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "api_key",
+      "authentication_details": "API key via URL query parameter 'token'",
+      "endpoints": [
+        {
+          "path": "/api/v2/news",
+          "full_url": "https://api.benzinga.com/api/v2/news",
+          "method": "GET",
+          "description": "Financial news articles and market moving stories",
+          "documentation_link": "https://docs.benzinga.com/benzinga/newsfeed-v2.html",
+          "parameters": [
+            "pageSize",
+            "page",
+            "displayOutput",
+            "date",
+            "dateFrom",
+            "dateTo",
+            "lastId",
+            "updatedSince",
+            "publishedSince",
+            "company_tickers",
+            "channel"
+          ],
+          "response_format": "JSON with news articles, metadata, and relevance scores"
+        },
+        {
+          "path": "/api/v2.1/calendar/earnings",
+          "full_url": "https://api.benzinga.com/api/v2.1/calendar/earnings",
+          "method": "GET",
+          "description": "Earnings calendar and earnings-related events",
+          "documentation_link": "https://docs.benzinga.com/benzinga/calendar-v2.html",
+          "parameters": [
+            "page",
+            "pagesize",
+            "parameters[date]",
+            "parameters[date_from]",
+            "parameters[date_to]",
+            "parameters[tickers]",
+            "parameters[importance]",
+            "parameters[updated]"
+          ],
+          "response_format": "JSON with earnings events and company details"
+        },
+        {
+          "path": "/api/v1/signal/option_activity",
+          "full_url": "https://api.benzinga.com/api/v1/signal/option_activity",
+          "method": "GET",
+          "description": "Unusual options activity and signals",
+          "documentation_link": "Available in Benzinga developer docs",
+          "parameters": [
+            "page",
+            "pagesize",
+            "parameters[date]",
+            "parameters[date_from]",
+            "parameters[date_to]",
+            "parameters[tickers]"
+          ],
+          "response_format": "JSON with options activity data and analysis"
+        },
+        {
+          "path": "/api/v1/quoteDelayed",
+          "full_url": "https://api.benzinga.com/api/v1/quoteDelayed",
+          "method": "GET",
+          "description": "Delayed stock quotes and market data",
+          "documentation_link": "Available in Benzinga developer docs",
+          "parameters": [
+            "symbols"
+          ],
+          "response_format": "JSON with delayed quote data"
+        },
+        {
+          "path": "/api/v2.1/calendar/dividends",
+          "full_url": "https://api.benzinga.com/api/v2.1/calendar/dividends",
+          "method": "GET",
+          "description": "Dividend calendar and dividend-related events",
+          "documentation_link": "https://docs.benzinga.com/benzinga/calendar-v2.html",
+          "parameters": [
+            "page",
+            "pagesize",
+            "parameters[date]",
+            "parameters[date_from]",
+            "parameters[date_to]",
+            "parameters[tickers]",
+            "parameters[updated]"
+          ],
+          "response_format": "JSON with dividend events and payment details"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://docs.benzinga.com/home",
+        "authentication": "API key via URL parameter",
+        "endpoints_reference": "https://docs.benzinga.com/home",
+        "code_examples": "https://github.com/benzinga",
+        "sdks_libraries": "https://github.com/Benzinga/benzinga-python-client"
+      }
+    },
+    "pricing": {
+      "model": "subscription_tiers",
+      "pricing_tiers": [
+        {
+          "name": "Basic",
+          "price": "Contact for pricing",
+          "requests_included": "Variable",
+          "features": [
+            "News API",
+            "Basic calendar data"
+          ]
+        },
+        {
+          "name": "Pro",
+          "price": "Contact for pricing",
+          "requests_included": "Higher limits",
+          "features": [
+            "All basic features",
+            "Real-time data",
+            "Options signals"
+          ]
+        }
+      ],
+      "free_tier": "Free tier available on AWS Marketplace",
+      "rate_limits": "Varies by subscription level"
+    },
+    "data_coverage": {
+      "geographic_coverage": "Primarily US markets",
+      "asset_classes": [
+        "Equities",
+        "Options",
+        "ETFs"
+      ],
+      "data_history": "Historical news and calendar data available",
+      "update_frequency": "Real-time updates",
+      "total_instruments": "All US publicly traded securities"
+    },
+    "unique_features": [
+      "Real-time financial news",
+      "Unusual options activity detection",
+      "Earnings and events calendar",
+      "News sentiment analysis",
+      "Delta parameters for real-time ingestion"
+    ],
+    "contact_info": {
+      "email": "partners@benzinga.com",
+      "licensing": "licensing@benzinga.com",
+      "phone": "+1-877-440-ZING (9464)"
+    },
+    "api_status": "Active",
+    "last_verified": "2025-08-02",
+    "id": "benzinga-api"
+  },
+  {
+    "name": "Seeking Alpha API",
+    "category": "Investment research and analysis platform",
+    "description": "Access to Seeking Alpha's crowd-sourced investment research, analysis, news, and market data through third-party API providers",
+    "technical_info": {
+      "base_url": "Via RapidAPI - https://seeking-alpha.p.rapidapi.com",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "api_key",
+      "authentication_details": "RapidAPI key in X-RapidAPI-Key header",
+      "endpoints": [
+        {
+          "path": "/news/v2/list-trending",
+          "full_url": "https://seeking-alpha.p.rapidapi.com/news/v2/list-trending",
+          "method": "GET",
+          "description": "Get trending news articles and market stories",
+          "documentation_link": "https://rapidapi.com/apidojo/api/seeking-alpha",
+          "parameters": [
+            "size",
+            "until"
+          ],
+          "response_format": "JSON with trending news articles and metadata"
+        },
+        {
+          "path": "/symbols/get-chart",
+          "full_url": "https://seeking-alpha.p.rapidapi.com/symbols/get-chart",
+          "method": "GET",
+          "description": "Stock price charts and historical data",
+          "documentation_link": "https://rapidapi.com/apidojo/api/seeking-alpha",
+          "parameters": [
+            "symbol",
+            "period",
+            "size"
+          ],
+          "response_format": "JSON with chart data and price points"
+        },
+        {
+          "path": "/symbols/get-profile",
+          "full_url": "https://seeking-alpha.p.rapidapi.com/symbols/get-profile",
+          "method": "GET",
+          "description": "Company profile and basic information",
+          "documentation_link": "https://rapidapi.com/apidojo/api/seeking-alpha",
+          "parameters": [
+            "symbols"
+          ],
+          "response_format": "JSON with company profile data"
+        },
+        {
+          "path": "/market/get-movers",
+          "full_url": "https://seeking-alpha.p.rapidapi.com/market/get-movers",
+          "method": "GET",
+          "description": "Market movers and trending stocks",
+          "documentation_link": "https://rapidapi.com/apidojo/api/seeking-alpha",
+          "parameters": [
+            "id",
+            "template"
+          ],
+          "response_format": "JSON with market mover data"
+        },
+        {
+          "path": "/analysis/v2/list",
+          "full_url": "https://seeking-alpha.p.rapidapi.com/analysis/v2/list",
+          "method": "GET",
+          "description": "Investment analysis and research articles",
+          "documentation_link": "https://rapidapi.com/apidojo/api/seeking-alpha",
+          "parameters": [
+            "id",
+            "size",
+            "until",
+            "category"
+          ],
+          "response_format": "JSON with analysis articles and author information"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://rapidapi.com/apidojo/api/seeking-alpha",
+        "authentication": "RapidAPI key authentication",
+        "endpoints_reference": "https://rapidapi.com/apidojo/api/seeking-alpha",
+        "code_examples": "Available on RapidAPI",
+        "sdks_libraries": "Third-party Python packages available on GitHub"
+      }
+    },
+    "pricing": {
+      "model": "rapidapi_marketplace",
+      "pricing_tiers": [
+        {
+          "name": "Basic",
+          "price": "Free",
+          "requests_included": "100 requests/month",
+          "features": [
+            "Basic endpoints",
+            "Limited rate"
+          ]
+        },
+        {
+          "name": "Pro",
+          "price": "$10/month",
+          "requests_included": "10,000 requests/month",
+          "features": [
+            "All endpoints",
+            "Higher rate limits"
+          ]
+        },
+        {
+          "name": "Ultra",
+          "price": "$50/month",
+          "requests_included": "100,000 requests/month",
+          "features": [
+            "All features",
+            "Priority support"
+          ]
+        }
+      ],
+      "free_tier": "100 requests/month",
+      "rate_limits": "Varies by plan: 100-100,000 requests/month"
+    },
+    "data_coverage": {
+      "geographic_coverage": "Global markets with US focus",
+      "asset_classes": [
+        "Equities",
+        "ETFs",
+        "REITs"
+      ],
+      "data_history": "Historical articles and analysis available",
+      "update_frequency": "Real-time article publishing",
+      "total_instruments": "Thousands of securities covered"
+    },
+    "unique_features": [
+      "Crowd-sourced investment research",
+      "Author performance tracking",
+      "Community sentiment analysis",
+      "Professional and retail investor insights"
+    ],
+    "contact_info": {
+      "platform": "Available via RapidAPI marketplace",
+      "support": "RapidAPI support system"
+    },
+    "api_status": "Active via third-party",
+    "last_verified": "2025-08-02",
+    "notes": "No official Seeking Alpha API - available through third-party providers like RapidAPI",
+    "id": "seeking-alpha-api"
+  },
+  {
+    "name": "TipRanks API",
+    "category": "Analyst recommendations and price targets",
+    "description": "Access to analyst price targets, news sentiment data, and trending stocks with performance tracking of analysts and bloggers",
+    "technical_info": {
+      "base_url": "Via unofficial APIs and third-party access",
+      "protocol": "REST",
+      "data_formats": [
+        "JSON"
+      ],
+      "auth_method": "varies",
+      "authentication_details": "Depends on access method - unofficial APIs available",
+      "endpoints": [
+        {
+          "path": "/getPriceTargets",
+          "full_url": "Varies by implementation",
+          "method": "GET",
+          "description": "Retrieve analyst price targets for specific stocks",
+          "documentation_link": "https://github.com/janlukasschroeder/tipranks-api-v2",
+          "parameters": [
+            "ticker"
+          ],
+          "response_format": "JSON with mean, median, highest, lowest price targets and number of estimates"
+        },
+        {
+          "path": "/getNewsSentimentData",
+          "full_url": "Varies by implementation",
+          "method": "GET",
+          "description": "News sentiment analysis and scoring",
+          "documentation_link": "https://github.com/janlukasschroeder/tipranks-api-v2",
+          "parameters": [
+            "ticker"
+          ],
+          "response_format": "JSON with bullish/bearish percentages, article counts, sector averages"
+        },
+        {
+          "path": "/getTrendingStocks",
+          "full_url": "Varies by implementation",
+          "method": "GET",
+          "description": "List of trending stocks with popularity metrics",
+          "documentation_link": "https://github.com/janlukasschroeder/tipranks-api-v2",
+          "parameters": [],
+          "response_format": "JSON array with ticker, popularity, sentiment, market cap, company name"
+        }
+      ],
+      "documentation_sections": {
+        "getting_started": "https://github.com/janlukasschroeder/tipranks-api-v2",
+        "authentication": "Varies by implementation",
+        "endpoints_reference": "https://github.com/janlukasschroeder/tipranks-api-v2",
+        "code_examples": "Available on GitHub repositories",
+        "sdks_libraries": "npm package: tipranks-api-v2"
+      }
+    },
+    "pricing": {
+      "model": "third_party_access",
+      "pricing_tiers": [
+        {
+          "name": "Open Source",
+          "price": "Free",
+          "requests_included": "Unlimited (subject to fair use)",
+          "features": [
+            "Basic price targets",
+            "News sentiment",
+            "Trending stocks"
+          ]
+        },
+        {
+          "name": "Nasdaq Data Link",
+          "price": "Contact for pricing",
+          "requests_included": "Variable",
+          "features": [
+            "Official TipRanks data",
+            "API access",
+            "Commercial licensing"
+          ]
+        }
+      ],
+      "free_tier": "Available via open source packages",
+      "rate_limits": "Depends on implementation and fair use policies"
+    },
+    "data_coverage": {
+      "geographic_coverage": "Primarily US markets",
+      "asset_classes": [
+        "Equities"
+      ],
+      "data_history": "Price targets from last 3 months",
+      "update_frequency": "Regular updates",
+      "total_instruments": "Thousands of covered stocks"
+    },
+    "unique_features": [
+      "Analyst performance tracking",
+      "News sentiment scoring",
+      "Blogger performance metrics",
+      "Price target consensus",
+      "Trending stock identification"
+    ],
+    "contact_info": {
+      "website": "https://www.tipranks.com/",
+      "data_licensing": "https://data.nasdaq.com/publishers/TIPRANKS"
+    },
+    "api_status": "Unofficial APIs available",
+    "last_verified": "2025-08-02",
+    "notes": "No official public API - data available through unofficial implementations and Nasdaq Data Link partnership",
+    "id": "tipranks-api"
+  }
+]

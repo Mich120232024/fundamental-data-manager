@@ -1,0 +1,297 @@
+{
+  "api_research_comprehensive_results": {
+    "research_date": "2025-07-30",
+    "total_apis_researched": 5,
+    "apis": [
+      {
+        "name": "Google Trends API",
+        "provider": "Google (Official Alpha) / Third-party Providers",
+        "description": "Access Google search trends data for market research, SEO analysis, and trend monitoring",
+        "status": "Official API in Alpha; Multiple third-party alternatives available",
+        "technical_info": {
+          "base_url": "https://developers.google.com/search/apis/trends (Official Alpha)",
+          "protocol": "REST",
+          "data_formats": ["JSON", "CSV"],
+          "auth_method": "api_key",
+          "endpoints": [
+            {
+              "path": "/trends/search",
+              "full_url": "TBD - Alpha application required",
+              "method": "GET",
+              "description": "Search trends data with daily, weekly, monthly, yearly intervals",
+              "documentation_link": "https://developers.google.com/search/apis/trends",
+              "parameters": ["query", "geo", "time", "category", "property"],
+              "response_format": "JSON with trend data and metadata"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://developers.google.com/search/blog/2025/07/trends-api",
+            "authentication": "Alpha application required",
+            "endpoints_reference": "Not publicly available yet",
+            "code_examples": "Not available yet",
+            "sdks_libraries": "Not available yet"
+          }
+        },
+        "pricing": {
+          "official": "Not disclosed - Alpha testing phase",
+          "third_party_alternatives": [
+            {
+              "provider": "SerpApi",
+              "pricing_tiers": [
+                {"plan": "Free", "monthly_cost": 0, "requests": 250},
+                {"plan": "Developer", "monthly_cost": 75, "requests": 5000},
+                {"plan": "Production", "monthly_cost": 150, "requests": 15000},
+                {"plan": "Big Data", "monthly_cost": 275, "requests": 30000}
+              ]
+            },
+            {
+              "provider": "HasData",
+              "pricing_tiers": [
+                {"plan": "Free", "monthly_cost": 0, "requests": 200},
+                {"plan": "Startup", "monthly_cost": 49, "requests": 40000},
+                {"plan": "Business", "monthly_cost": 99, "requests": 200000},
+                {"plan": "Enterprise", "monthly_cost": 249, "requests": 600000}
+              ]
+            }
+          ]
+        },
+        "rate_limits": "Not specified for official API; varies by third-party provider",
+        "data_coverage": "5 years of search trend data, global coverage, multiple comparison terms supported",
+        "use_cases": ["Market research", "SEO analysis", "Consumer behavior tracking", "Investment research"]
+      },
+      {
+        "name": "Advan Research API",
+        "provider": "Advan Research Corporation",
+        "description": "Location intelligence and consumer behavior data from cellphone location data and transaction data",
+        "status": "Active - Contact for access",
+        "technical_info": {
+          "base_url": "Contact provider for API access",
+          "protocol": "REST (presumed)",
+          "data_formats": ["JSON", "CSV", "Excel"],
+          "auth_method": "unknown",
+          "endpoints": [
+            {
+              "path": "/foot-traffic",
+              "full_url": "Contact provider",
+              "method": "GET",
+              "description": "Foot traffic analytics for specific locations",
+              "documentation_link": "https://docs.deweydata.io/docs/advan-research",
+              "parameters": ["location", "date_range", "ticker"],
+              "response_format": "JSON with traffic metrics"
+            },
+            {
+              "path": "/demographics",
+              "full_url": "Contact provider",
+              "method": "GET",
+              "description": "Demographics data for specific areas",
+              "documentation_link": "Contact provider",
+              "parameters": ["geo", "metrics"],
+              "response_format": "JSON with demographic data"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://advanresearch.com/signup/",
+            "authentication": "Contact provider",
+            "endpoints_reference": "Contact provider",
+            "code_examples": "https://docs.deweydata.io/docs/advan-research",
+            "sdks_libraries": "Not publicly available"
+          }
+        },
+        "pricing": {
+          "model": "Custom enterprise pricing",
+          "details": "Contact for quote - pricing varies by data type and volume",
+          "signup_required": true
+        },
+        "rate_limits": "Unknown - custom per client",
+        "data_coverage": "300 billion monthly location data points, 500 million monthly transactions, 7000+ companies, 300 sectors, historical data since 2016",
+        "use_cases": ["Hedge fund research", "Real estate investment", "Retail analytics", "Commercial real estate", "Consumer behavior tracking"]
+      },
+      {
+        "name": "YipitData API",
+        "provider": "YipitData",
+        "description": "Alternative data for financial markets including receipt data, card data, web data, and earnings data",
+        "status": "Active - Contact for access",
+        "technical_info": {
+          "base_url": "https://portal.yipitdata.com/products",
+          "protocol": "REST (presumed)",
+          "data_formats": ["JSON", "CSV", "Excel"],
+          "auth_method": "unknown",
+          "endpoints": [
+            {
+              "path": "/receipt-data",
+              "full_url": "Contact provider",
+              "method": "GET",
+              "description": "Item and category level retail data from receipt analysis",
+              "documentation_link": "Contact provider",
+              "parameters": ["company", "category", "date_range"],
+              "response_format": "JSON with transaction data"
+            },
+            {
+              "path": "/card-data",
+              "full_url": "Contact provider",
+              "method": "GET",
+              "description": "Credit and debit card transaction insights",
+              "documentation_link": "Contact provider",
+              "parameters": ["merchant", "geography", "timeframe"],
+              "response_format": "JSON with spending data"
+            },
+            {
+              "path": "/earnings-data",
+              "full_url": "Contact provider",
+              "method": "GET",
+              "description": "Public earnings data calibrated to company reports",
+              "documentation_link": "Contact provider",
+              "parameters": ["ticker", "quarter", "metric"],
+              "response_format": "JSON with earnings metrics"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.yipitdata.com/",
+            "authentication": "Contact provider",
+            "endpoints_reference": "Contact provider",
+            "code_examples": "Contact provider",
+            "sdks_libraries": "Not publicly available"
+          }
+        },
+        "pricing": {
+          "model": "Custom enterprise pricing",
+          "details": "Contact for quote - pricing varies by dataset and coverage",
+          "signup_required": true
+        },
+        "rate_limits": "Unknown - custom per client",
+        "data_coverage": "2000+ companies, 40+ datasets, 500+ customers, 2M e-receipt panelists, 20K brands covered",
+        "use_cases": ["Investment research", "Consumer behavior analysis", "Earnings prediction", "Market trend analysis", "Retail performance tracking"]
+      },
+      {
+        "name": "Exante Data API",
+        "provider": "Exante Data",
+        "description": "Alternative data and analytics for global macroeconomic and financial markets research",
+        "status": "Active - Documentation available",
+        "technical_info": {
+          "base_url": "https://apidocs.exantedata.com/",
+          "protocol": "REST",
+          "data_formats": ["JSON", "CSV"],
+          "auth_method": "api_key",
+          "endpoints": [
+            {
+              "path": "/data/series",
+              "full_url": "https://apidocs.exantedata.com/data/series",
+              "method": "GET",
+              "description": "Access time series data for various economic indicators",
+              "documentation_link": "https://apidocs.exantedata.com/",
+              "parameters": ["series_id", "start_date", "end_date", "frequency"],
+              "response_format": "JSON with time series data"
+            },
+            {
+              "path": "/data/indicators",
+              "full_url": "https://apidocs.exantedata.com/data/indicators",
+              "method": "GET",
+              "description": "List available economic indicators",
+              "documentation_link": "https://apidocs.exantedata.com/",
+              "parameters": ["category", "country"],
+              "response_format": "JSON with indicator metadata"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://homepage.exantedata.com/our-solution/",
+            "authentication": "Contact provider",
+            "endpoints_reference": "https://apidocs.exantedata.com/",
+            "code_examples": "https://github.com/exantedata/api_example_scripts/",
+            "sdks_libraries": "Contact provider"
+          }
+        },
+        "pricing": {
+          "model": "Subscription-based",
+          "details": "Contact for custom pricing based on data requirements",
+          "signup_required": true
+        },
+        "rate_limits": "Unknown - contact provider",
+        "data_coverage": "Global macroeconomic data, sovereign risk analysis, financial market indicators, alternative data analytics",
+        "use_cases": ["Macro research", "Sovereign risk analysis", "Investment strategy", "Economic forecasting", "Policy analysis"]
+      },
+      {
+        "name": "CoreLogic API",
+        "provider": "CoreLogic (now Cotality)",
+        "description": "Comprehensive real estate data and property intelligence APIs",
+        "status": "Active - Multiple API products available",
+        "technical_info": {
+          "base_url": "https://developer.corelogic.com/ or https://developer.corelogic.asia/",
+          "protocol": "REST",
+          "data_formats": ["JSON", "XML", "CSV"],
+          "auth_method": "api_key",
+          "endpoints": [
+            {
+              "path": "/property/search",
+              "full_url": "https://api.corelogic.com/property/search",
+              "method": "GET",
+              "description": "Search property records by various criteria",
+              "documentation_link": "https://developer.corelogic.com/",
+              "parameters": ["address", "parcel_id", "property_type", "date_range"],
+              "response_format": "JSON with property details"
+            },
+            {
+              "path": "/property/valuation",
+              "full_url": "https://api.corelogic.com/property/valuation",
+              "method": "GET",
+              "description": "Get property valuation estimates",
+              "documentation_link": "https://developer.corelogic.com/",
+              "parameters": ["property_id", "valuation_type"],
+              "response_format": "JSON with valuation data"
+            },
+            {
+              "path": "/market/analytics",
+              "full_url": "https://api.corelogic.com/market/analytics",
+              "method": "GET",
+              "description": "Market analytics and trends data",
+              "documentation_link": "https://developer.corelogic.com/",
+              "parameters": ["market_area", "time_period", "metrics"],
+              "response_format": "JSON with market data"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://developer.corelogic.com/",
+            "authentication": "https://developer.corelogic.com/",
+            "endpoints_reference": "https://developer.corelogic.com/",
+            "code_examples": "https://documenter.getpostman.com/view/7051651/S1EJWfxt",
+            "sdks_libraries": "Contact provider"
+          }
+        },
+        "pricing": {
+          "model": "Subscription-based with custom pricing",
+          "details": "Median price around $12,000 per year based on market data",
+          "pricing_varies_by": ["Data coverage", "API call volume", "Premium features"],
+          "signup_required": true
+        },
+        "rate_limits": "Varies by subscription tier and endpoint",
+        "data_coverage": "5.5 billion US property records spanning 50 years, 99.9% market coverage, 1 million new Australian property data points monthly",
+        "use_cases": ["Real estate investment", "Property valuation", "Market analysis", "Risk assessment", "Insurance underwriting"]
+      }
+    ],
+    "summary": {
+      "apis_with_public_access": 1,
+      "apis_requiring_contact": 4,
+      "average_enterprise_pricing": "Custom/Contact required for 4 out of 5 APIs",
+      "most_accessible": "Google Trends API (via third-party providers)",
+      "most_comprehensive_data": "CoreLogic API (5.5B property records)",
+      "best_for_financial_research": "YipitData and Exante Data",
+      "best_for_location_intelligence": "Advan Research"
+    },
+    "recommendations": {
+      "immediate_implementation": [
+        "Google Trends API via SerpApi or HasData for trend analysis",
+        "Consider free tiers for initial testing and proof of concept"
+      ],
+      "enterprise_evaluation": [
+        "Contact Advan Research for location-based consumer insights",
+        "Evaluate YipitData for alternative financial data",
+        "Consider CoreLogic for real estate market analysis",
+        "Assess Exante Data for macroeconomic research"
+      ],
+      "cost_optimization": [
+        "Start with free tiers where available",
+        "Negotiate volume discounts for multiple API subscriptions",
+        "Consider data marketplace alternatives (Databricks, Snowflake) for some providers"
+      ]
+    }
+  }
+}

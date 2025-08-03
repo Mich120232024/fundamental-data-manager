@@ -1,11 +1,786 @@
-2025-07-26 06:06:43,046 - __main__ - INFO - Loaded 3001 tickers from repository
-INFO:     Started server process [36501]
+2025-08-03 07:29:19,927 - __main__ - INFO - Loaded 3001 tickers from repository
+INFO:     Started server process [16554]
 INFO:     Waiting for application startup.
-2025-07-26 06:06:43,114 - __main__ - INFO - Bloomberg Gateway starting up...
-2025-07-26 06:06:43,114 - __main__ - INFO - Cache enabled: False
-2025-07-26 06:06:43,114 - __main__ - INFO - Bloomberg API: http://20.172.249.92:8080
+2025-08-03 07:29:19,980 - __main__ - INFO - Bloomberg Gateway starting up...
+2025-08-03 07:29:19,980 - __main__ - INFO - Cache enabled: False
+2025-08-03 07:29:19,980 - __main__ - INFO - Bloomberg API: http://20.172.249.92:8080
 INFO:     Application startup complete.
-ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:49348 - "POST /api/curves/JPY HTTP/1.1" 200 OK
+2025-08-03 07:29:35,616 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49351 - "POST /api/curves/CAD HTTP/1.1" 200 OK
+2025-08-03 07:29:37,422 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49355 - "POST /api/curves/AUD HTTP/1.1" 200 OK
+2025-08-03 07:29:39,261 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49358 - "POST /api/curves/NZD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49361 - "POST /api/curves/SEK HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49364 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49414 - "POST /api/curves/JPY HTTP/1.1" 200 OK
+2025-08-03 07:30:56,902 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:30:56,903 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:30:56,903 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:30:56,903 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:30:56,903 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:30:56,903 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:30:56,903 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:49500 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:30:58,939 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49506 - "POST /api/curves/EUR HTTP/1.1" 200 OK
+2025-08-03 07:31:00,845 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49509 - "POST /api/curves/GBP HTTP/1.1" 200 OK
+2025-08-03 07:31:02,748 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49512 - "POST /api/curves/JPY HTTP/1.1" 200 OK
+2025-08-03 07:31:04,272 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49515 - "POST /api/curves/CHF HTTP/1.1" 200 OK
+2025-08-03 07:31:06,192 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49518 - "POST /api/curves/CAD HTTP/1.1" 200 OK
+2025-08-03 07:31:08,024 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49522 - "POST /api/curves/AUD HTTP/1.1" 200 OK
+2025-08-03 07:31:09,955 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49525 - "POST /api/curves/NZD HTTP/1.1" 200 OK
+2025-08-03 07:31:11,960 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49528 - "POST /api/curves/SEK HTTP/1.1" 200 OK
+2025-08-03 07:31:14,068 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49531 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:31:25,337 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:31:25,339 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:31:25,339 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:31:25,339 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:31:25,339 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:31:25,339 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:31:25,339 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:49573 - "POST /api/curves/USD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49573 - "OPTIONS /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:31:27,236 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49573 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:31:32,533 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:31:32,535 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:31:32,535 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:31:32,535 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:31:32,535 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:31:32,535 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:31:32,535 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:49573 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:31:34,339 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49573 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49573 - "OPTIONS /api/curves/SEK HTTP/1.1" 200 OK
+2025-08-03 07:31:36,326 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49573 - "POST /api/curves/SEK HTTP/1.1" 200 OK
+2025-08-03 07:33:01,463 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:33:01,464 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:33:01,464 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:33:01,464 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:33:01,464 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:33:01,464 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:33:01,464 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:49711 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:33:03,388 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49711 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:33:05,407 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49711 - "POST /api/curves/SEK HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49711 - "OPTIONS /api/curves/CAD HTTP/1.1" 200 OK
+2025-08-03 07:33:07,434 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49711 - "POST /api/curves/CAD HTTP/1.1" 200 OK
+2025-08-03 07:34:21,492 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:34:21,493 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:34:21,493 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:34:21,493 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:34:21,493 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:34:21,493 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:34:21,493 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:49887 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:34:22,683 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:34:22,683 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:34:22,684 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:34:22,684 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:34:22,684 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:34:22,684 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:34:22,684 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:49891 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:34:23,917 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49887 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:34:25,145 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49891 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:34:26,375 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49887 - "POST /api/curves/SEK HTTP/1.1" 200 OK
+2025-08-03 07:34:26,889 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49891 - "POST /api/curves/SEK HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49887 - "OPTIONS /api/curves/JPY HTTP/1.1" 200 OK
+2025-08-03 07:34:28,897 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49891 - "POST /api/curves/JPY HTTP/1.1" 200 OK
+2025-08-03 07:35:19,834 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:35:19,836 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:35:19,836 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:35:19,836 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:35:19,837 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:35:19,837 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:35:19,837 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:50021 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:35:22,780 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:35:22,781 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50021 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:35:22,783 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:35:22,783 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:35:22,783 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:35:22,783 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:35:22,783 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:35:22,783 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:50050 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:35:24,602 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50021 - "POST /api/curves/SEK HTTP/1.1" 200 OK
+2025-08-03 07:35:25,984 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:35:25,986 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:35:25,986 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:35:25,986 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:35:25,986 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:35:25,986 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:35:25,986 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:50054 - "POST /api/curves/USD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50021 - "OPTIONS /api/curves/CHF HTTP/1.1" 200 OK
+2025-08-03 07:35:27,166 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50050 - "POST /api/curves/JPY HTTP/1.1" 200 OK
+2025-08-03 07:35:28,351 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50054 - "POST /api/curves/CHF HTTP/1.1" 200 OK
+2025-08-03 07:35:28,581 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50021 - "POST /api/curves/CHF HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50142 - "OPTIONS /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:36:22,869 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:36:22,871 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:36:22,871 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:36:22,871 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:36:22,871 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:36:22,871 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:36:22,871 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:50142 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:36:23,359 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:36:23,360 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:36:23,361 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:36:23,361 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:36:23,361 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:36:23,361 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:36:23,361 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:50145 - "POST /api/curves/USD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50142 - "OPTIONS /api/curves/EUR HTTP/1.1" 200 OK
+2025-08-03 07:36:25,123 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50145 - "POST /api/curves/EUR HTTP/1.1" 200 OK
+2025-08-03 07:36:50,515 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:36:50,516 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:36:50,516 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:36:50,517 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:36:50,517 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:36:50,517 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:36:50,517 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:50224 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:36:52,288 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50224 - "POST /api/curves/EUR HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50224 - "OPTIONS /api/curves/NZD HTTP/1.1" 200 OK
+2025-08-03 07:36:54,241 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50224 - "POST /api/curves/NZD HTTP/1.1" 200 OK
+2025-08-03 07:37:00,103 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:37:00,106 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:37:00,106 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:37:00,106 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:37:00,106 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:37:00,106 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:37:00,106 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:50259 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:38:04,349 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:38:04,350 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:38:04,350 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:38:04,350 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:38:04,350 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:38:04,350 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:38:04,350 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:50361 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:39:32,943 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:39:32,943 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:39:32,943 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:39:32,943 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:39:32,943 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:39:32,943 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:39:32,943 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:50505 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:39:34,159 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:39:34,159 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:39:34,159 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:39:34,159 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:39:34,159 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:39:34,159 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:39:34,160 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:50503 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:39:35,381 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50505 - "POST /api/curves/EUR HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50505 - "OPTIONS /api/curves/AUD HTTP/1.1" 200 OK
+2025-08-03 07:39:36,640 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50503 - "POST /api/curves/EUR HTTP/1.1" 200 OK
+2025-08-03 07:39:37,324 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50505 - "POST /api/curves/AUD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50503 - "OPTIONS /api/bloomberg/reference HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50505 - "OPTIONS /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:39:40,999 - __main__ - ERROR - Bloomberg reference proxy error: Server disconnected without sending a response.
+INFO:     127.0.0.1:50503 - "POST /api/bloomberg/reference HTTP/1.1" 503 Service Unavailable
+2025-08-03 07:39:41,467 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50505 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:39:42,046 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50503 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:39:42,567 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50505 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:39:46,365 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:39:46,366 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:39:46,366 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:39:46,366 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:39:46,366 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:39:46,366 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:39:46,366 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:50503 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:39:46,827 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:39:46,828 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:39:46,828 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:39:46,828 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:39:46,828 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:39:46,828 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:39:46,828 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:50505 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:40:16,859 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50584 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:40:17,271 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50585 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:40:17,672 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50584 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:40:18,048 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50585 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:40:18,436 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50584 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:40:18,844 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50585 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:40:23,305 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:40:23,305 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:40:23,305 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:40:23,305 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:40:23,305 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:40:23,305 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:40:23,305 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:50584 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:40:23,807 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:40:23,808 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:40:23,808 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:40:23,808 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:40:23,808 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:40:23,808 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:40:23,808 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:50585 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:40:51,465 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:40:51,858 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50638 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50639 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:40:52,387 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:40:52,839 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50639 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50638 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:40:53,390 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:40:53,794 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50638 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50639 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:40:57,881 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:40:58,403 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:40:58,403 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:40:58,403 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:40:58,403 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:40:58,403 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:40:58,403 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:50639 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:40:58,404 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:40:58,404 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:40:58,404 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:40:58,404 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:40:58,404 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:40:58,404 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:40:58,404 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:50638 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:42:14,237 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50865 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:42:14,614 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50864 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:42:14,953 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50865 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:42:15,338 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50864 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:42:18,198 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:42:18,199 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:42:18,200 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:42:18,201 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50865 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50869 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50868 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50864 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:42:18,796 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50868 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:42:19,286 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50864 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:42:19,724 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:42:19,724 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:42:19,724 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:42:19,724 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:42:19,725 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:42:19,725 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:42:19,725 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:50893 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:42:20,124 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:42:20,125 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:42:20,125 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:42:20,125 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:42:20,125 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:42:20,125 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:42:20,125 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:50892 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:44:01,184 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:44:01,185 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:44:01,185 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:44:01,185 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:44:01,186 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:44:01,186 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:44:01,186 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:51136 - "POST /api/curves/USD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51136 - "OPTIONS /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:44:03,002 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51136 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:44:07,913 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:44:07,915 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:44:07,915 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:44:07,916 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:44:07,916 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:44:07,916 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:44:07,916 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:51136 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:44:09,976 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51136 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:44:11,964 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51136 - "POST /api/curves/NZD HTTP/1.1" 200 OK
+2025-08-03 07:44:26,396 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:44:26,399 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:44:26,399 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:44:26,399 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:44:26,399 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:44:26,399 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:44:26,399 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:51149 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:44:27,632 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:44:27,633 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:44:27,634 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:44:27,634 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:44:27,635 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:44:27,635 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:44:27,635 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:44:27,635 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:51147 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:44:27,636 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:44:27,636 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:44:27,637 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:44:27,637 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:44:27,637 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:44:27,637 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:51151 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:44:30,107 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:44:30,108 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:44:30,108 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:44:30,110 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:44:30,110 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:44:30,110 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:44:30,110 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:44:30,110 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:44:30,110 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:51152 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:44:30,112 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:44:30,112 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:44:30,112 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:44:30,112 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:44:30,112 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:44:30,112 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:51157 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:44:30,113 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:44:30,113 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:44:30,113 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:44:30,113 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:44:30,113 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:44:30,113 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:51156 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:44:30,114 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:44:30,115 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:44:30,115 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:44:30,115 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:44:30,115 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:44:30,115 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:44:30,115 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:51149 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:44:35,058 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51147 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:44:35,061 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51151 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:44:38,093 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51149 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:44:39,548 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:44:39,550 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:44:39,550 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51152 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51157 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51151 - "POST /api/curves/NZD HTTP/1.1" 200 OK
+2025-08-03 07:44:43,289 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:44:43,290 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:44:43,291 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51147 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51156 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51149 - "POST /api/curves/NZD HTTP/1.1" 200 OK
+2025-08-03 07:44:46,954 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:44:46,956 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51151 - "POST /api/curves/NZD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51157 - "POST /api/curves/NZD HTTP/1.1" 200 OK
+2025-08-03 07:44:46,961 - __main__ - ERROR - Bloomberg reference proxy error: 
+2025-08-03 07:44:46,961 - __main__ - ERROR - Rate curves error: 
+INFO:     127.0.0.1:51152 - "POST /api/curves/NZD HTTP/1.1" 200 OK
+2025-08-03 07:44:50,694 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51147 - "POST /api/curves/AUD HTTP/1.1" 200 OK
+2025-08-03 07:44:51,930 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:44:51,931 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51156 - "POST /api/curves/AUD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51149 - "POST /api/curves/NZD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51149 - "OPTIONS /api/curves/CAD HTTP/1.1" 200 OK
+2025-08-03 07:44:54,406 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:44:54,407 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51147 - "POST /api/curves/AUD HTTP/1.1" 200 OK
+2025-08-03 07:44:54,410 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:44:54,411 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51151 - "POST /api/curves/AUD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51157 - "POST /api/curves/NZD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51152 - "POST /api/curves/AUD HTTP/1.1" 200 OK
+2025-08-03 07:44:59,308 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51156 - "POST /api/curves/AUD HTTP/1.1" 200 OK
+2025-08-03 07:44:59,312 - __main__ - ERROR - Bloomberg reference proxy error: 
+2025-08-03 07:44:59,312 - __main__ - ERROR - Rate curves error: 
+INFO:     127.0.0.1:51149 - "POST /api/curves/CAD HTTP/1.1" 200 OK
+2025-08-03 07:45:00,534 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51147 - "POST /api/curves/CAD HTTP/1.1" 200 OK
+2025-08-03 07:45:01,741 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:45:01,742 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51157 - "POST /api/curves/AUD HTTP/1.1" 200 OK
+2025-08-03 07:45:02,975 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:45:02,976 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:45:02,977 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51152 - "POST /api/curves/CAD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51151 - "POST /api/curves/CAD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51149 - "POST /api/curves/CHF HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51156 - "POST /api/curves/CAD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51156 - "OPTIONS /api/curves/JPY HTTP/1.1" 200 OK
+2025-08-03 07:45:06,658 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51147 - "POST /api/curves/CAD HTTP/1.1" 200 OK
+2025-08-03 07:45:09,095 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51157 - "POST /api/curves/CHF HTTP/1.1" 200 OK
+2025-08-03 07:45:10,332 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51151 - "POST /api/curves/JPY HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51157 - "OPTIONS /api/curves/GBP HTTP/1.1" 200 OK
+2025-08-03 07:45:11,569 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:45:11,571 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:45:11,571 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51152 - "POST /api/curves/CHF HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51149 - "POST /api/curves/CHF HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51156 - "POST /api/curves/CHF HTTP/1.1" 200 OK
+2025-08-03 07:45:14,027 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:45:14,028 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51147 - "POST /api/curves/JPY HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51151 - "POST /api/curves/GBP HTTP/1.1" 200 OK
+2025-08-03 07:45:14,688 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51157 - "POST /api/curves/JPY HTTP/1.1" 200 OK
+2025-08-03 07:45:15,927 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51152 - "POST /api/curves/JPY HTTP/1.1" 200 OK
+2025-08-03 07:45:17,254 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51149 - "POST /api/curves/GBP HTTP/1.1" 200 OK
+2025-08-03 07:45:18,531 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51156 - "POST /api/curves/GBP HTTP/1.1" 200 OK
+2025-08-03 07:45:19,896 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51147 - "POST /api/curves/EUR HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51152 - "OPTIONS /api/curves/SEK HTTP/1.1" 200 OK
+2025-08-03 07:45:21,131 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51151 - "POST /api/curves/EUR HTTP/1.1" 200 OK
+2025-08-03 07:45:21,742 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51149 - "POST /api/curves/SEK HTTP/1.1" 200 OK
+2025-08-03 07:46:31,345 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51275 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:46:32,720 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:46:32,720 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:46:32,720 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51280 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51273 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51279 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:46:36,382 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:46:36,383 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:46:36,384 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51304 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51302 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51275 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:46:40,001 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:46:40,003 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51280 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51273 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:46:42,468 - __main__ - ERROR - Bloomberg reference proxy error: Server disconnected without sending a response.
+2025-08-03 07:46:42,468 - __main__ - ERROR - Rate curves error: 
+INFO:     127.0.0.1:51304 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:46:43,686 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:46:43,687 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51302 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51279 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:46:46,194 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:46:46,195 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51275 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:46:46,197 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51273 - "POST /api/curves/NZD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51280 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:46:49,878 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51302 - "POST /api/curves/NZD HTTP/1.1" 200 OK
+2025-08-03 07:46:49,883 - __main__ - ERROR - Bloomberg reference proxy error: 
+2025-08-03 07:46:49,883 - __main__ - ERROR - Rate curves error: 
+INFO:     127.0.0.1:51279 - "POST /api/curves/NZD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51279 - "OPTIONS /api/curves/EUR HTTP/1.1" 200 OK
+2025-08-03 07:46:51,117 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51304 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+2025-08-03 07:46:51,120 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51273 - "POST /api/curves/NOK HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51279 - "OPTIONS /api/curves/EUR HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51304 - "OPTIONS /api/curves/EUR HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51273 - "OPTIONS /api/curves/EUR HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51279 - "OPTIONS /api/curves/EUR HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51304 - "OPTIONS /api/curves/EUR HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51273 - "OPTIONS /api/curves/EUR HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51304 - "OPTIONS /api/curves/EUR HTTP/1.1" 200 OK
+2025-08-03 07:46:53,550 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51275 - "POST /api/curves/NZD HTTP/1.1" 200 OK
+2025-08-03 07:46:56,013 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51375 - "OPTIONS /api/curves/USD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51376 - "OPTIONS /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:46:58,513 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:46:58,514 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:46:58,517 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:46:58,517 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:46:59,046 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51371 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:46:59,505 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:47:01,047 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:47:01,048 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:47:01,048 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51370 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:47:01,053 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:47:01,053 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:47:01,053 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:47:01,053 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:47:01,053 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:47:01,053 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:51375 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:47:01,054 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:47:01,054 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:47:01,054 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:47:01,054 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:47:01,054 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:47:01,055 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:51376 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:47:01,299 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51371 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:47:01,705 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51370 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:47:02,152 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:47:02,153 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:47:02,153 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:47:02,153 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:47:02,153 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:47:02,153 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:47:02,153 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:51385 - "POST /api/curves/USD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51371 - "OPTIONS /api/curves/CHF HTTP/1.1" 200 OK
+2025-08-03 07:47:03,382 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:47:03,383 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51376 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51375 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:47:03,798 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51370 - "POST /api/curves/CHF HTTP/1.1" 200 OK
+2025-08-03 07:47:47,881 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:47:47,881 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:47:47,881 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:47:47,881 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:47:47,881 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:47:47,881 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:47:47,881 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:51448 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:47:49,105 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:47:49,105 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:47:49,105 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:47:49,105 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:47:49,105 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:47:49,105 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:47:49,105 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:51446 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:47:49,652 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51448 - "POST /api/curves/CAD HTTP/1.1" 200 OK
+2025-08-03 07:50:02,500 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:50:02,500 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:50:02,500 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:50:02,500 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:50:02,500 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:50:02,500 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:50:02,500 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:51678 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:50:04,948 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51678 - "POST /api/curves/CAD HTTP/1.1" 200 OK
+2025-08-03 07:50:06,657 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51678 - "POST /api/curves/CHF HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51942 - "OPTIONS /api/bloomberg/reference HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51943 - "OPTIONS /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:52:21,261 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51942 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:52:21,693 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51943 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:52:22,111 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51942 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:52:22,493 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51943 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:52:22,845 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51942 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:52:23,237 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51943 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:52:27,775 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:52:27,776 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:52:27,776 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:52:27,776 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:52:27,776 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:52:27,777 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:52:27,777 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:51943 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:52:28,246 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:52:28,248 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:52:28,248 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:52:28,248 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:52:28,248 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:52:28,248 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:52:28,248 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:51942 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:53:05,520 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:53:05,521 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:53:05,521 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:53:05,521 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:53:05,521 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:53:05,521 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:53:05,521 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:51982 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:53:07,466 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:51982 - "POST /api/curves/EUR HTTP/1.1" 200 OK
+2025-08-03 07:53:38,698 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:53:38,699 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:53:38,699 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:53:38,699 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:53:38,699 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:53:38,699 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:53:38,699 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:52056 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:53:40,547 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52056 - "POST /api/curves/EUR HTTP/1.1" 200 OK
+2025-08-03 07:53:42,432 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:53:42,845 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52069 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:53:45,433 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:53:45,434 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52070 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52069 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:53:46,073 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:53:46,075 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:53:46,075 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:53:46,075 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:53:46,075 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:53:46,075 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:53:46,075 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:52077 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:53:46,530 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:53:47,009 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52070 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:53:47,013 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:53:47,013 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:53:47,013 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:53:47,013 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:53:47,013 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:53:47,013 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:52076 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:53:47,309 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52069 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:53:47,704 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52077 - "POST /api/bloomberg/reference HTTP/1.1" 200 OK
+2025-08-03 07:54:04,782 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:54:04,783 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:54:04,783 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:54:04,783 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:54:04,783 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:54:04,783 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:54:04,783 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:52117 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:54:09,906 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:54:09,907 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:54:09,907 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:54:09,907 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:54:09,907 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:54:09,907 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:54:09,907 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:52139 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:54:11,790 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52139 - "POST /api/curves/EUR HTTP/1.1" 200 OK
+2025-08-03 07:54:17,825 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:54:17,826 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:54:17,826 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:54:17,826 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:54:17,826 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:54:17,826 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:54:17,826 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:52139 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:54:19,630 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52139 - "POST /api/curves/EUR HTTP/1.1" 200 OK
+2025-08-03 07:54:21,518 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52139 - "POST /api/curves/GBP HTTP/1.1" 200 OK
+2025-08-03 07:54:28,218 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:54:28,220 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:54:28,220 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:54:28,220 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:54:28,220 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:54:28,220 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:54:28,220 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:52139 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:54:30,108 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52139 - "POST /api/curves/EUR HTTP/1.1" 200 OK
+2025-08-03 07:54:31,968 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52139 - "POST /api/curves/GBP HTTP/1.1" 200 OK
+2025-08-03 07:54:33,807 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52139 - "POST /api/curves/JPY HTTP/1.1" 200 OK
+2025-08-03 07:54:39,924 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:54:39,929 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:54:39,929 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:54:39,929 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:54:39,929 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:54:39,929 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:54:39,929 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:52139 - "POST /api/curves/USD HTTP/1.1" 200 OK
+2025-08-03 07:54:41,743 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52139 - "POST /api/curves/EUR HTTP/1.1" 200 OK
+2025-08-03 07:54:43,588 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52139 - "POST /api/curves/GBP HTTP/1.1" 200 OK
+2025-08-03 07:54:45,441 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52139 - "POST /api/curves/JPY HTTP/1.1" 200 OK
+2025-08-03 07:54:47,257 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52139 - "POST /api/curves/CHF HTTP/1.1" 200 OK
+2025-08-03 07:54:59,244 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+2025-08-03 07:54:59,244 - __main__ - INFO - Processing short ticker: USSOA Curncy, tenor_numeric=30.0000
+2025-08-03 07:54:59,244 - __main__ - INFO - Set tenor_days=30.0000 for USSOA Curncy
+2025-08-03 07:54:59,244 - __main__ - INFO - Processing short ticker: USSOB Curncy, tenor_numeric=60.0000
+2025-08-03 07:54:59,244 - __main__ - INFO - Set tenor_days=60.0000 for USSOB Curncy
+2025-08-03 07:54:59,244 - __main__ - INFO - Processing short ticker: USSOC Curncy, tenor_numeric=90.0000
+2025-08-03 07:54:59,244 - __main__ - INFO - Set tenor_days=90.0000 for USSOC Curncy
+INFO:     127.0.0.1:52298 - "POST /api/curves/USD HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for connections to close. (CTRL+C to force quit)
+2025-08-03 07:55:01,062 - httpx - INFO - HTTP Request: POST http://20.172.249.92:8080/api/bloomberg/reference "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52298 - "POST /api/curves/EUR HTTP/1.1" 200 OK
 INFO:     Waiting for application shutdown.
-2025-07-26 06:06:43,116 - __main__ - INFO - Bloomberg Gateway shutting down...
+2025-08-03 07:55:01,088 - __main__ - INFO - Bloomberg Gateway shutting down...
 INFO:     Application shutdown complete.
+INFO:     Finished server process [16554]

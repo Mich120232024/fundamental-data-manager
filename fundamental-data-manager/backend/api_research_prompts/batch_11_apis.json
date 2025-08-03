@@ -1,0 +1,127 @@
+[
+  {
+    "id": "yewno",
+    "name": "Yewno",
+    "provider": "Yewno"
+  },
+  {
+    "id": "estimize",
+    "name": "Estimize",
+    "provider": "Estimize"
+  },
+  {
+    "id": "sentifi",
+    "name": "Sentifi",
+    "provider": "Sentifi"
+  },
+  {
+    "id": "tickertags",
+    "name": "TickerTags",
+    "provider": "TickerTags"
+  },
+  {
+    "id": "sentieo",
+    "name": "Sentieo",
+    "provider": "Sentieo"
+  },
+  {
+    "id": "mkt-mediastats",
+    "name": "MKT MediaStats",
+    "provider": "MKT"
+  },
+  {
+    "id": "brain-company",
+    "name": "Brain Company",
+    "provider": "Brain"
+  },
+  {
+    "id": "prattle",
+    "name": "Prattle",
+    "provider": "Prattle"
+  },
+  {
+    "id": "geoquant",
+    "name": "Geoquant",
+    "provider": "Geoquant"
+  },
+  {
+    "id": "predictit-api",
+    "name": "PredictIt API",
+    "provider": "PredictIt"
+  },
+  {
+    "id": "google-trends-api",
+    "name": "Google Trends API",
+    "provider": "Google"
+  },
+  {
+    "id": "advan-research",
+    "name": "Advan Research",
+    "provider": "Advan"
+  },
+  {
+    "id": "yipitdata",
+    "name": "YipitData",
+    "provider": "YipitData"
+  },
+  {
+    "id": "exante-data",
+    "name": "Exante Data",
+    "provider": "Exante"
+  },
+  {
+    "id": "corelogic",
+    "name": "Corelogic",
+    "provider": "Corelogic"
+  },
+  {
+    "id": "sp-global-market-intelligence",
+    "name": "S&P Global Market Intelligence",
+    "provider": "S&P"
+  },
+  {
+    "id": "esg-book",
+    "name": "ESG Book",
+    "provider": "ESG"
+  },
+  {
+    "id": "msci-esg",
+    "name": "MSCI ESG",
+    "provider": "MSCI"
+  },
+  {
+    "id": "sustainalytics",
+    "name": "Sustainalytics",
+    "provider": "Sustainalytics"
+  },
+  {
+    "id": "reprisk",
+    "name": "RepRisk",
+    "provider": "RepRisk"
+  },
+  {
+    "id": "housecanary",
+    "name": "HouseCanary",
+    "provider": "HouseCanary"
+  },
+  {
+    "id": "zillow",
+    "name": "Zillow",
+    "provider": "Zillow"
+  },
+  {
+    "id": "redfin",
+    "name": "Redfin",
+    "provider": "Redfin"
+  },
+  {
+    "id": "attom-data-solutions",
+    "name": "ATTOM Data Solutions",
+    "provider": "ATTOM"
+  },
+  {
+    "id": "costar",
+    "name": "CoStar",
+    "provider": "CoStar"
+  }
+]

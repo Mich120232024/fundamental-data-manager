@@ -10,8 +10,16 @@ React + TypeScript application that displays real-time FX options volatility sur
 
 ### Bloomberg API
 - **URL**: http://20.172.249.92:8080
+- **Type**: FastAPI application with full Swagger docs at `/docs`
 - **Auth**: Use `Authorization: Bearer test` header
-- **Correct API file**: `main_checkpoint_working_2025_07_16.py`
+- **Server**: `C:\BloombergAPI\main.py` on bloomberg-vm-02
+
+### Available Endpoints (Updated 2025-07-30)
+- **POST /api/bloomberg/reference** - Get reference data for securities
+- **POST /api/bloomberg/historical** - Get historical time series data  
+- **GET /api/fx/rates/live** - Get live FX rates
+- **POST /api/bloomberg/ticker-discovery** - ✅ OPERATIONAL - Search for tickers by type/currency
+- **POST /api/bloomberg/validate-tickers** - ✅ OPERATIONAL - Batch ticker validation with live prices
 
 ### Critical Patterns
 
@@ -40,13 +48,25 @@ React + TypeScript application that displays real-time FX options volatility sur
 2. **Historical data requires YYYYMMDD format** - No hyphens
 3. **Some tenors have no data** - This is normal, filter them out
 
-### Testing Commands
+### API Commands
 
 ```bash
 # Check if API is running
 curl http://20.172.249.92:8080/health
 
-# Test a ticker
+# Discover OIS tickers (OPERATIONAL)
+curl -X POST "http://20.172.249.92:8080/api/bloomberg/ticker-discovery" \
+  -H "Authorization: Bearer test" \
+  -H "Content-Type: application/json" \
+  -d '{"search_type": "ois", "currency": "USD", "max_results": 10}'
+
+# Validate tickers with live prices (OPERATIONAL)
+curl -X POST "http://20.172.249.92:8080/api/bloomberg/validate-tickers" \
+  -H "Authorization: Bearer test" \
+  -H "Content-Type: application/json" \
+  -d '["USOSFR1 Curncy", "USOSFR2 Curncy", "USOSFR5 Curncy"]'
+
+# Reference data lookup
 curl -X POST http://20.172.249.92:8080/api/bloomberg/reference \
   -H "Authorization: Bearer test" \
   -H "Content-Type: application/json" \
@@ -72,7 +92,7 @@ curl -X POST http://20.172.249.92:8080/api/bloomberg/reference \
 4. **Filter empty data rows for clean display**
 5. **Remember ON tenor has special formatting**
 
-## Recent Context (Updated 2025-07-26)
+## Recent Context (Updated 2025-01-30)
 
 ### Major Architecture Changes
 - **Removed ALL fallback data systems** - Application now shows real Bloomberg data only
@@ -112,4 +132,41 @@ npm run dev
 
 # Check real data flow
 curl http://localhost:8000/health
+
+# Test ticker discovery (2025-01-30)
+curl -X POST "http://localhost:8000/api/bloomberg/ticker-discovery" \
+  -H "Authorization: Bearer test" \
+  -H "Content-Type: application/json" \
+  -d '{"search_type": "ois", "currency": "GBP"}'
+```
+
+## Ticker Discovery Integration (Added 2025-01-30)
+
+### New Capabilities
+Successfully deployed ticker discovery endpoints to Bloomberg VM for systematic OIS curve expansion:
+
+### Discovery Patterns Supported
+- **OIS**: USD (SOFR), EUR (ESTR), GBP (SONIA), JPY (TONA), CHF (SARON), etc.
+- **IRS**: Interest Rate Swaps for major currencies
+- **FX Vol**: Volatility surface tickers (ATM, RR, BF)
+- **Govt Bonds**: Government bond yield curves
+
+### Integration with Database
+- **PostgreSQL**: gzc_platform.bloomberg_tickers (373 tickers, 25 currencies)
+- **OIS Coverage**: USD (6 tickers), JPY (7 tickers), ready for G10 expansion
+- **Dynamic Updates**: Discovery → Validation → Database population
+
+### Usage Examples
+```bash
+# Discover GBP OIS tickers
+curl -X POST "http://20.172.249.92:8080/api/bloomberg/ticker-discovery" \
+  -H "Authorization: Bearer test" \
+  -H "Content-Type: application/json" \
+  -d '{"search_type": "ois", "currency": "GBP", "max_results": 50}'
+
+# Validate discovered tickers
+curl -X POST "http://20.172.249.92:8080/api/bloomberg/validate-tickers" \
+  -H "Authorization: Bearer test" \
+  -H "Content-Type: application/json" \
+  -d '["SONIOA BGN Curncy", "SONIOB BGN Curncy", "SONIOC BGN Curncy"]'
 ```

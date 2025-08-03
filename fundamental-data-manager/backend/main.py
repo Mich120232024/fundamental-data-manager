@@ -36,7 +36,7 @@ app = FastAPI(
 # CORS configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3850"],  # React dev server port
+    allow_origins=["http://localhost:3850", "http://localhost:3851"],  # React dev server ports
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -139,6 +139,37 @@ async def get_container_data(container_name: str):
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to fetch from {container_name}: {str(e)}")
+
+@app.get("/api/discovery")
+async def get_api_discovery():
+    """Get all APIs from the clean discovery schema"""
+    try:
+        database = cosmos_client.get_database_client("data-collection-db")
+        container = database.get_container_client("api_discovery")
+        
+        items = list(container.query_items(
+            query="SELECT * FROM c",
+            enable_cross_partition_query=True
+        ))
+        
+        return items
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to fetch API discovery data: {str(e)}")
+
+@app.get("/api/discovery/{api_id}")
+async def get_api_details(api_id: str):
+    """Get detailed information for a specific API"""
+    try:
+        database = cosmos_client.get_database_client("data-collection-db")
+        container = database.get_container_client("api_discovery")
+        
+        try:
+            item = container.read_item(item=api_id, partition_key=api_id)
+            return item
+        except Exception:
+            raise HTTPException(status_code=404, detail=f"API with id '{api_id}' not found")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to fetch API details: {str(e)}")
 
 @app.get("/api/stats")
 async def get_catalog_stats():

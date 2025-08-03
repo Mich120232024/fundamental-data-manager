@@ -1,0 +1,306 @@
+[
+  {
+    "id": "thinknum-alternative-data",
+    "name": "Thinknum Alternative Data API",
+    "provider": "Thinknum",
+    "description": "Web scraping intelligence platform providing alternative data insights through comprehensive tracking of company metrics, consumer behavior, and market trends via automated data collection from public web sources.",
+    "discovery_status": "documented",
+    "tags": ["alternative data", "web scraping", "company metrics", "consumer behavior", "market intelligence"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise-only with custom pricing - contact sales for access",
+      "rate_limits": "Custom per client agreement"
+    },
+    "technical_info": {
+      "base_url": "https://api.thinknum.com",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV"],
+      "auth_method": "Token-based authentication with client_id/client_secret",
+      "endpoints": [
+        {
+          "path": "/auth/token",
+          "full_url": "https://api.thinknum.com/auth/token",
+          "method": "POST",
+          "description": "Obtain authentication token using client credentials",
+          "documentation_link": "Contact Thinknum for API documentation",
+          "parameters": ["client_id", "client_secret", "grant_type"],
+          "response_format": "JSON with access token and expiration"
+        },
+        {
+          "path": "/datasets",
+          "full_url": "https://api.thinknum.com/datasets",
+          "method": "GET",
+          "description": "List available datasets and their metadata",
+          "documentation_link": "Contact Thinknum for API documentation",
+          "parameters": ["category", "limit", "offset"],
+          "response_format": "JSON array of available datasets"
+        },
+        {
+          "path": "/data/{dataset_id}",
+          "full_url": "https://api.thinknum.com/data/{dataset_id}",
+          "method": "GET",
+          "description": "Retrieve data for specific dataset with filtering options",
+          "documentation_link": "Contact Thinknum for API documentation",
+          "parameters": ["dataset_id", "ticker", "date_range", "format"],
+          "response_format": "JSON/CSV with requested dataset information"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Company metrics", "Consumer behavior", "Web scraping data", "Market trends", "Alternative indicators"],
+      "geographic_scope": "Global with focus on publicly traded companies",
+      "update_frequency": "Daily updates with real-time web scraping",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact for enterprise documentation",
+      "api_summary": "Thinknum provides alternative data through web scraping intelligence with comprehensive tracking of company metrics and consumer behavior. Features well-documented REST API with authentication, dataset management, and flexible data retrieval options.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact account manager for access",
+      "api_reference": "Enterprise documentation provided upon subscription",
+      "examples": "Provided with enterprise access",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "eagle-alpha",
+    "name": "Eagle Alpha Data Marketplace",
+    "provider": "Eagle Alpha",
+    "description": "Alternative data marketplace platform providing access to 1,850+ dataset profiles from various vendors. Functions as data discovery and vendor connection service rather than direct API provider.",
+    "discovery_status": "documented",
+    "tags": ["data marketplace", "alternative data", "data discovery", "vendor aggregation", "dataset profiles"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": false,
+      "requires_approval": true,
+      "pricing_model": "Marketplace model - pricing varies by individual data vendor",
+      "rate_limits": "Varies by individual vendor APIs"
+    },
+    "technical_info": {
+      "base_url": "https://www.eaglealpha.com",
+      "protocol": "Platform-based access",
+      "data_formats": ["Varies by vendor"],
+      "auth_method": "Platform registration and vendor-specific authentication",
+      "endpoints": [
+        {
+          "path": "/marketplace",
+          "full_url": "https://www.eaglealpha.com/marketplace",
+          "method": "GET",
+          "description": "Browse available datasets and vendor profiles",
+          "documentation_link": "https://www.eaglealpha.com/marketplace",
+          "parameters": ["category", "vendor", "region", "data_type"],
+          "response_format": "Web platform interface with dataset listings"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Dataset discovery", "Vendor profiles", "Alternative data categories", "Market intelligence"],
+      "geographic_scope": "Global dataset coverage through various vendors",
+      "update_frequency": "Platform updated continuously with new vendor additions",
+      "historical_data": "Varies by individual vendor"
+    },
+    "research_notes": {
+      "documentation_url": "https://www.eaglealpha.com/",
+      "api_summary": "Eagle Alpha operates as a marketplace aggregator connecting clients with alternative data vendors rather than providing direct APIs. The platform helps discover and evaluate alternative data sources from 1,850+ dataset profiles.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://www.eaglealpha.com/",
+      "api_reference": "Vendor-specific documentation",
+      "examples": "Platform-based data samples",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "quandl-alternative-data",
+    "name": "Nasdaq Data Link API (formerly Quandl)",
+    "provider": "Nasdaq",
+    "description": "Comprehensive financial and economic data platform providing access to millions of datasets through REST API and streaming services. Offers both free public datasets and premium alternative data sources.",
+    "discovery_status": "documented",
+    "tags": ["financial data", "economic data", "time series", "market data", "alternative data"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Freemium - free datasets available, premium subscriptions for alternative data",
+      "rate_limits": "50 calls/day (anonymous), 300 calls per 10 seconds (premium)"
+    },
+    "technical_info": {
+      "base_url": "https://data.nasdaq.com/api/v3",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV", "XML"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/datasets/{database_code}/{dataset_code}",
+          "full_url": "https://data.nasdaq.com/api/v3/datasets/{database_code}/{dataset_code}",
+          "method": "GET",
+          "description": "Retrieve specific dataset with time series data",
+          "documentation_link": "https://docs.data.nasdaq.com/docs/in-depth-usage",
+          "parameters": ["database_code", "dataset_code", "start_date", "end_date", "collapse", "transform"],
+          "response_format": "JSON/CSV with time series data and metadata"
+        },
+        {
+          "path": "/datasets",
+          "full_url": "https://data.nasdaq.com/api/v3/datasets",
+          "method": "GET",
+          "description": "Search and browse available datasets",
+          "documentation_link": "https://docs.data.nasdaq.com/docs/in-depth-usage",
+          "parameters": ["query", "database_code", "page", "per_page"],
+          "response_format": "JSON with dataset search results"
+        },
+        {
+          "path": "/databases",
+          "full_url": "https://data.nasdaq.com/api/v3/databases",
+          "method": "GET",
+          "description": "List available databases and their metadata",
+          "documentation_link": "https://docs.data.nasdaq.com/docs/in-depth-usage",
+          "parameters": ["page", "per_page"],
+          "response_format": "JSON with database listings and descriptions"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Financial time series", "Economic indicators", "Market data", "Alternative datasets", "Company fundamentals"],
+      "geographic_scope": "Global coverage with extensive US focus",
+      "update_frequency": "Varies by dataset - real-time to quarterly updates",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://docs.data.nasdaq.com/",
+      "api_summary": "Nasdaq Data Link (formerly Quandl) provides comprehensive access to millions of financial and economic datasets through well-documented REST API. Offers freemium model with both free public data and premium alternative data sources.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://docs.data.nasdaq.com/docs/getting-started",
+      "api_reference": "https://docs.data.nasdaq.com/docs/in-depth-usage",
+      "examples": "https://docs.data.nasdaq.com/docs/python-time-series",
+      "changelog": "https://docs.data.nasdaq.com/changelog",
+      "status_page": "https://status.data.nasdaq.com/"
+    }
+  },
+  {
+    "id": "7park-data",
+    "name": "7Park Data Consumer Analytics API",
+    "provider": "7Park Data",
+    "description": "Consumer behavior analytics platform providing transaction data, app engagement metrics, and web activity insights for investment research and business intelligence. Enterprise-only access with custom APIs.",
+    "discovery_status": "documented",
+    "tags": ["consumer analytics", "transaction data", "app engagement", "web activity", "investment research"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Enterprise-only with custom pricing based on data requirements",
+      "rate_limits": "Custom per client agreement"
+    },
+    "technical_info": {
+      "base_url": "Custom enterprise endpoints",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/web-activity",
+          "full_url": "Custom client endpoint/web-activity",
+          "method": "GET",
+          "description": "Web activity and traffic analytics for companies and sectors",
+          "documentation_link": "Enterprise documentation provided upon subscription",
+          "parameters": ["company", "sector", "date_range", "metrics"],
+          "response_format": "JSON with web activity metrics and trends"
+        },
+        {
+          "path": "/transactions",
+          "full_url": "Custom client endpoint/transactions",
+          "method": "GET",
+          "description": "Consumer transaction data and spending patterns",
+          "documentation_link": "Enterprise documentation provided upon subscription",
+          "parameters": ["merchant", "category", "geography", "time_period"],
+          "response_format": "JSON with transaction volumes and consumer behavior"
+        },
+        {
+          "path": "/app-engagement",
+          "full_url": "Custom client endpoint/app-engagement",
+          "method": "GET",
+          "description": "Mobile app usage and engagement analytics",
+          "documentation_link": "Enterprise documentation provided upon subscription",
+          "parameters": ["app_id", "platform", "metrics", "date_range"],
+          "response_format": "JSON with app usage statistics and engagement metrics"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Consumer transactions", "Web activity", "App engagement", "Spending patterns", "Digital behavior"],
+      "geographic_scope": "United States with selective international coverage",
+      "update_frequency": "Daily updates with some real-time components",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "Contact for enterprise documentation",
+      "api_summary": "7Park Data specializes in consumer behavior analytics with enterprise-only access. Provides transaction data, app engagement metrics, and web activity insights for investment research. API documentation endpoints were inaccessible during research.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Contact enterprise sales",
+      "api_reference": "Enterprise documentation provided upon subscription",
+      "examples": "Custom examples provided with access",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "alpha-hat",
+    "name": "Alpha Hat Investment Research API (Discontinued)",
+    "provider": "Alpha Hat (Acquired by Earnest Research)",
+    "description": "Former investment research automation platform that accelerated analysis workflows. Acquired by Earnest Research in January 2020 and technology integrated into parent company's platform.",
+    "discovery_status": "documented",
+    "tags": ["investment research", "research automation", "discontinued", "acquired", "workflow automation"],
+    "access_info": {
+      "is_free": null,
+      "requires_api_key": null,
+      "requires_approval": null,
+      "pricing_model": "Service discontinued - technology integrated into Earnest Research",
+      "rate_limits": "No longer available"
+    },
+    "technical_info": {
+      "base_url": "Service discontinued",
+      "protocol": "REST (historical)",
+      "data_formats": ["JSON (historical)"],
+      "auth_method": "API key (historical)",
+      "endpoints": [
+        {
+          "path": "/research/automation",
+          "full_url": "Historical endpoint - no longer available",
+          "method": "GET",
+          "description": "Historical endpoint for investment research automation",
+          "documentation_link": "No longer available",
+          "parameters": ["Historical parameters no longer accessible"],
+          "response_format": "Service discontinued"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Investment research (historical)", "Research automation (historical)", "Workflow optimization (historical)"],
+      "geographic_scope": "Historical service scope no longer available",
+      "update_frequency": "Service discontinued",
+      "historical_data": null
+    },
+    "research_notes": {
+      "documentation_url": "No longer available",
+      "api_summary": "Alpha Hat was acquired by Earnest Research in January 2020. The investment research automation technology has been integrated into Earnest Research's platform and is no longer available as a standalone API service.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "Service discontinued - contact Earnest Research",
+      "api_reference": "No longer available",
+      "examples": "No longer available",
+      "changelog": "No longer available",
+      "status_page": "No longer available"
+    }
+  }
+]

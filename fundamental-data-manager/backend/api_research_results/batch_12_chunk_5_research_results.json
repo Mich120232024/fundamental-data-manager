@@ -1,0 +1,241 @@
+[
+  {
+    "id": "greenwich-associates",
+    "name": "Greenwich Associates (Coalition Greenwich)",
+    "provider": "CRISIL Coalition Greenwich",
+    "description": "Strategic benchmarking, analytics and insights for financial services industry providing custom research for investment management, corporate finance, and banking sectors.",
+    "discovery_status": "documented",
+    "tags": ["financial research", "benchmarking", "investment management", "banking analytics", "market structure"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": false,
+      "requires_approval": true,
+      "pricing_model": "Custom enterprise pricing",
+      "rate_limits": "Not applicable - no public API"
+    },
+    "technical_info": {
+      "base_url": "Not publicly available",
+      "protocol": "Unknown - Enterprise solution",
+      "data_formats": ["Custom reports", "Excel", "PDF"],
+      "auth_method": "Not applicable",
+      "endpoints": []
+    },
+    "content_summary": {
+      "data_categories": ["Investment management benchmarking", "Corporate finance analytics", "Banking performance", "Market structure analysis"],
+      "geographic_scope": "Global",
+      "update_frequency": "Varies by research product",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.greenwich.com",
+      "api_summary": "Greenwich Associates (acquired by CRISIL in 2020) provides information through subscription services and custom research engagements. No public API available.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://www.greenwich.com/contact",
+      "api_reference": "Not available",
+      "examples": "Not available",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "battlefin-ensemble",
+    "name": "BattleFin Ensemble",
+    "provider": "BattleFin",
+    "description": "Alternative data marketplace with 2,400+ datasets from 800+ providers including sandbox, Jupyter notebook integration, and AI-powered discovery capabilities.",
+    "discovery_status": "documented",
+    "tags": ["alternative data", "data marketplace", "financial datasets", "AI discovery", "market data"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Tiered subscription + data costs",
+      "rate_limits": "Custom based on subscription"
+    },
+    "technical_info": {
+      "base_url": "API available through Ensemble platform",
+      "protocol": "REST",
+      "data_formats": ["JSON", "CSV", "Various provider formats"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/catalog",
+          "full_url": "Not publicly documented",
+          "method": "GET",
+          "description": "Access full catalog with rich attributes via API (FinFeed)",
+          "documentation_link": "Available after platform registration",
+          "parameters": ["Not publicly documented"],
+          "response_format": "JSON with catalog information"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Alternative data", "Financial datasets", "Consumer behavior", "Satellite data", "Web data"],
+      "geographic_scope": "Global",
+      "update_frequency": "Varies by provider",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.battlefin.com/ensemble/picker",
+      "api_summary": "BattleFin Ensemble marketplace with 2,400+ datasets. API access at highest tier, also on AWS Marketplace. Ensemble AI provides ChatGPT-like interface.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://www.battlefin.com/ensemble/picker",
+      "api_reference": "Platform access required",
+      "examples": "Jupyter notebooks in Sandbox",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "neudata",
+    "name": "Neudata",
+    "provider": "Neudata Intelligence",
+    "description": "Alternative data marketplace connecting buyers and sellers with Scout (dataset catalog), Ranger (market intelligence), and Navigator (data management platform).",
+    "discovery_status": "documented",
+    "tags": ["alternative data", "data marketplace", "market intelligence", "data management", "vendor datasets"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": true,
+      "pricing_model": "Product-based subscriptions",
+      "rate_limits": "Enterprise specific"
+    },
+    "technical_info": {
+      "base_url": "Not publicly available",
+      "protocol": "REST (Navigator custom API)",
+      "data_formats": ["Various provider formats"],
+      "auth_method": "Unknown",
+      "endpoints": []
+    },
+    "content_summary": {
+      "data_categories": ["Alternative data", "Market data", "Traditional data", "Vendor datasets"],
+      "geographic_scope": "Global",
+      "update_frequency": "Varies by provider",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://www.neudata.co",
+      "api_summary": "Neudata offers marketplace products but Navigator provides custom API integration. No public API documentation available.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://www.neudata.co/contact",
+      "api_reference": "Not available",
+      "examples": "Not available",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "birdeye",
+    "name": "BirdEye API",
+    "provider": "BirdEye",
+    "description": "All-in-one customer experience software for online reviews, social media, surveys, insights, and reputation management across 50+ location directories.",
+    "discovery_status": "documented",
+    "tags": ["reputation management", "customer reviews", "social media", "survey data", "business insights"],
+    "access_info": {
+      "is_free": false,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Subscription-based",
+      "rate_limits": "Based on plan"
+    },
+    "technical_info": {
+      "base_url": "https://api.birdeye.com",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "API key",
+      "endpoints": [
+        {
+          "path": "/checkin",
+          "full_url": "https://api.birdeye.com/checkin",
+          "method": "POST",
+          "description": "Send customer information for review requests",
+          "documentation_link": "https://developers.birdeye.com",
+          "parameters": ["businessId", "apiKey", "customer information"],
+          "response_format": "JSON with status"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Customer reviews", "Social media mentions", "Survey responses", "Business insights", "Reputation metrics"],
+      "geographic_scope": "50+ location directories",
+      "update_frequency": "Real-time",
+      "historical_data": true
+    },
+    "research_notes": {
+      "documentation_url": "https://developers.birdeye.com",
+      "api_summary": "BirdEye provides reputation management API for review automation and insights. API key obtained through Settings > Integrations > API.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://developers.birdeye.com",
+      "api_reference": "https://developers.birdeye.com",
+      "examples": "Available in developer portal",
+      "changelog": null,
+      "status_page": null
+    }
+  },
+  {
+    "id": "yelp-fusion",
+    "name": "Yelp Fusion API v3",
+    "provider": "Yelp",
+    "description": "Access to local business information across 32 countries including ratings, reviews, photos, hours, and location data with up to 1000 search results per query.",
+    "discovery_status": "documented",
+    "tags": ["business data", "local search", "reviews", "ratings", "location intelligence"],
+    "access_info": {
+      "is_free": true,
+      "requires_api_key": true,
+      "requires_approval": false,
+      "pricing_model": "Freemium with paid tiers",
+      "rate_limits": "QPS rate limiting applies"
+    },
+    "technical_info": {
+      "base_url": "https://api.yelp.com/v3",
+      "protocol": "REST",
+      "data_formats": ["JSON"],
+      "auth_method": "Bearer token",
+      "endpoints": [
+        {
+          "path": "/businesses/search",
+          "full_url": "https://api.yelp.com/v3/businesses/search",
+          "method": "GET",
+          "description": "Search for businesses by keyword, location, category, etc. Returns up to 1000 results.",
+          "documentation_link": "https://docs.developer.yelp.com/docs/fusion-intro",
+          "parameters": ["term", "location", "latitude", "longitude", "radius", "categories", "limit", "offset"],
+          "response_format": "JSON with business array and metadata"
+        },
+        {
+          "path": "/businesses/{id}/reviews",
+          "full_url": "https://api.yelp.com/v3/businesses/{id}/reviews",
+          "method": "GET",
+          "description": "Get up to 3 review excerpts for a business",
+          "documentation_link": "https://docs.developer.yelp.com/docs/fusion-intro",
+          "parameters": ["id"],
+          "response_format": "JSON with review excerpts"
+        }
+      ]
+    },
+    "content_summary": {
+      "data_categories": ["Business information", "Reviews", "Ratings", "Photos", "Hours", "Categories", "Price levels"],
+      "geographic_scope": "32 countries",
+      "update_frequency": "Real-time",
+      "historical_data": false
+    },
+    "research_notes": {
+      "documentation_url": "https://docs.developer.yelp.com/docs/fusion-intro",
+      "api_summary": "Yelp Fusion API v3 provides local business data across 32 countries. Free trial with 5,000 calls, GraphQL API in beta. Bearer token auth required.",
+      "last_researched": "2025-07-30T00:00:00.000000Z"
+    },
+    "documentation": {
+      "getting_started": "https://www.yelp.com/developers/documentation/v3/get_started",
+      "api_reference": "https://docs.developer.yelp.com/docs/fusion-intro",
+      "examples": "https://github.com/Yelp/yelp-fusion",
+      "changelog": null,
+      "status_page": null
+    }
+  }
+]

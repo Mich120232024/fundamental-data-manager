@@ -1,0 +1,433 @@
+{
+  "api_research_results": {
+    "research_date": "2025-07-30",
+    "apis": [
+      {
+        "name": "Seeking Alpha API",
+        "category": "Financial News",
+        "technical_info": {
+          "base_url": "https://rapidapi.com/apidojo/api/seeking-alpha",
+          "protocol": "REST",
+          "data_formats": ["JSON"],
+          "auth_method": "api_key",
+          "official_api": false,
+          "access_note": "No official public API. Access through third-party providers on RapidAPI",
+          "endpoints": [
+            {
+              "path": "/news/get-details",
+              "full_url": "https://seeking-alpha.p.rapidapi.com/news/get-details",
+              "method": "GET",
+              "description": "Get detailed news article information",
+              "documentation_link": "https://rapidapi.com/apidojo/api/seeking-alpha",
+              "parameters": ["id"],
+              "response_format": "JSON with article details"
+            },
+            {
+              "path": "/market/get-movers",
+              "full_url": "https://seeking-alpha.p.rapidapi.com/market/get-movers",
+              "method": "GET",
+              "description": "Get market moving stocks and indices",
+              "documentation_link": "https://rapidapi.com/apidojo/api/seeking-alpha",
+              "parameters": ["category"],
+              "response_format": "JSON with market movers data"
+            },
+            {
+              "path": "/symbols/get-chart",
+              "full_url": "https://seeking-alpha.p.rapidapi.com/symbols/get-chart",
+              "method": "GET",
+              "description": "Get price charts for symbols",
+              "documentation_link": "https://rapidapi.com/apidojo/api/seeking-alpha",
+              "parameters": ["symbol", "period"],
+              "response_format": "JSON with chart data"
+            },
+            {
+              "path": "/analysis/list",
+              "full_url": "https://seeking-alpha.p.rapidapi.com/analysis/list",
+              "method": "GET",
+              "description": "Get analysis articles from investors and experts",
+              "documentation_link": "https://rapidapi.com/apidojo/api/seeking-alpha",
+              "parameters": ["id", "size", "number"],
+              "response_format": "JSON with analysis articles"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://rapidapi.com/blog/seeking-alpha-api-with-python-php-ruby-javascript-examples/",
+            "authentication": "https://rapidapi.com/apidojo/api/seeking-alpha",
+            "endpoints_reference": "https://rapidapi.com/apidojo/api/seeking-alpha",
+            "code_examples": "https://rapidapi.com/blog/seeking-alpha-api-with-python-php-ruby-javascript-examples/",
+            "sdks_libraries": "Available through RapidAPI SDKs"
+          }
+        },
+        "pricing": {
+          "model": "freemium",
+          "tiers": [
+            {
+              "name": "Basic",
+              "price": "Free",
+              "limits": "Limited requests per month"
+            },
+            {
+              "name": "Pro",
+              "price": "Varies by provider on RapidAPI",
+              "limits": "Higher request limits"
+            }
+          ],
+          "trial_available": true,
+          "contact_for_pricing": false
+        },
+        "features": [
+          "Financial news and market analysis",
+          "Stock price charts and quotes",
+          "Market movers and trending articles",
+          "Investor and expert analyses",
+          "Company data and equity information"
+        ],
+        "limitations": [
+          "No official API from Seeking Alpha",
+          "Access only through third-party providers",
+          "Rate limits depend on RapidAPI provider",
+          "Data freshness depends on provider"
+        ]
+      },
+      {
+        "name": "Glassdoor API",
+        "category": "Employment Data",
+        "technical_info": {
+          "base_url": "http://api.glassdoor.com/api/api.htm",
+          "protocol": "REST",
+          "data_formats": ["JSON", "XML"],
+          "auth_method": "api_key",
+          "official_api": true,
+          "access_note": "Public API access closed in 2021. Now limited to employers and approved partners",
+          "endpoints": [
+            {
+              "path": "/api/api.htm",
+              "full_url": "http://api.glassdoor.com/api/api.htm",
+              "method": "GET",
+              "description": "Main API endpoint for various actions",
+              "documentation_link": "https://www.glassdoor.com/developer/index.htm",
+              "parameters": ["action", "v", "format", "t.p", "t.k", "userip", "useragent"],
+              "response_format": "JSON or XML with status and response data"
+            },
+            {
+              "path": "/jobsApiActions",
+              "full_url": "https://www.glassdoor.com/developer/jobsApiActions.htm",
+              "method": "GET",
+              "description": "Search and retrieve job postings",
+              "documentation_link": "https://www.glassdoor.com/developer/jobsApiActions.htm",
+              "parameters": ["employer", "job_title", "location", "radius"],
+              "response_format": "JSON with job listings"
+            },
+            {
+              "path": "/companiesApiActions",
+              "full_url": "https://www.glassdoor.com/developer/companiesApiActions.htm",
+              "method": "GET",
+              "description": "Search companies by various criteria",
+              "documentation_link": "https://www.glassdoor.com/developer/companiesApiActions.htm",
+              "parameters": ["q", "l", "pn", "ps"],
+              "response_format": "JSON with company data"
+            },
+            {
+              "path": "/salariesApiActions",
+              "full_url": "https://www.glassdoor.com/developer/salariesApiActions.htm",
+              "method": "GET",
+              "description": "Get salary information by job and location",
+              "documentation_link": "https://www.glassdoor.com/developer/salariesApiActions.htm",
+              "parameters": ["job_title", "location"],
+              "response_format": "JSON with salary data"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.glassdoor.com/developer/index.htm",
+            "authentication": "https://www.glassdoor.com/developer/register_input.htm",
+            "endpoints_reference": "https://www.glassdoor.com/developer/index.htm",
+            "code_examples": "Available in JavaScript, PHP, and Java SDKs",
+            "sdks_libraries": "JavaScript, PHP, and Java SDKs available"
+          }
+        },
+        "pricing": {
+          "model": "contact_sales",
+          "tiers": [
+            {
+              "name": "Partner Access",
+              "price": "Contact for pricing",
+              "limits": "Custom based on partnership"
+            }
+          ],
+          "trial_available": false,
+          "contact_for_pricing": true
+        },
+        "features": [
+          "Company search and data",
+          "Job postings search",
+          "Salary information",
+          "Employee reviews (limited access)",
+          "Interview questions data"
+        ],
+        "limitations": [
+          "Public API access closed since 2021",
+          "Now restricted to employers and approved partners",
+          "Must contact Glassdoor for access",
+          "Attribution required when displaying data"
+        ]
+      },
+      {
+        "name": "Indeed Hiring Lab Data Portal",
+        "category": "Job Market Research",
+        "technical_info": {
+          "base_url": "https://www.hiringlab.org/data-portal/",
+          "protocol": "REST",
+          "data_formats": ["CSV", "JSON"],
+          "auth_method": "none",
+          "official_api": false,
+          "access_note": "Public data portal with downloadable datasets. No traditional API, but data available for download",
+          "endpoints": [
+            {
+              "path": "/job-postings-tracker",
+              "full_url": "https://github.com/hiring-lab/job_postings_tracker",
+              "method": "GET",
+              "description": "Job Postings Index data since February 1, 2020",
+              "documentation_link": "https://github.com/hiring-lab/job_postings_tracker",
+              "parameters": ["country", "state", "metro", "date_range"],
+              "response_format": "CSV or JSON download"
+            },
+            {
+              "path": "/wage-tracker",
+              "full_url": "https://www.hiringlab.org/data-portal/",
+              "method": "GET",
+              "description": "Indeed Wage Tracker data showing wage growth trends",
+              "documentation_link": "https://www.hiringlab.org/data-portal/",
+              "parameters": ["sector", "date_range"],
+              "response_format": "CSV or JSON download"
+            },
+            {
+              "path": "/hybrid-remote-tracker",
+              "full_url": "https://www.hiringlab.org/data-portal/",
+              "method": "GET",
+              "description": "Hybrid/Remote work prevalence tracking",
+              "documentation_link": "https://www.hiringlab.org/data-portal/",
+              "parameters": ["category", "date_range"],
+              "response_format": "CSV or JSON download"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://www.hiringlab.org/2024/04/16/new-data-portal/",
+            "authentication": "Not required - public data",
+            "endpoints_reference": "https://www.hiringlab.org/data-portal/",
+            "code_examples": "https://github.com/hiring-lab/job_postings_tracker",
+            "sdks_libraries": "Not applicable - direct data downloads"
+          }
+        },
+        "pricing": {
+          "model": "free",
+          "tiers": [
+            {
+              "name": "Public Access",
+              "price": "Free",
+              "limits": "All data freely available with attribution"
+            }
+          ],
+          "trial_available": false,
+          "contact_for_pricing": false
+        },
+        "features": [
+          "Job Postings Index by geography",
+          "Wage growth tracking",
+          "Remote work prevalence data",
+          "Historical data since 2020",
+          "Regular weekly/monthly updates",
+          "Data available at national, state, county, and metro levels"
+        ],
+        "limitations": [
+          "Not a traditional API - data portal only",
+          "Creative Commons Attribution 4.0 required",
+          "Data not indicative of Indeed's revenue",
+          "Updates on fixed schedule only"
+        ]
+      },
+      {
+        "name": "LinkUp Job Market Data API",
+        "category": "Job Data",
+        "technical_info": {
+          "base_url": "Contact LinkUp for API endpoint",
+          "protocol": "REST",
+          "data_formats": ["JSON"],
+          "auth_method": "api_key",
+          "official_api": true,
+          "access_note": "Direct API access to 3.5+ million active jobs from 30,000 company websites",
+          "endpoints": [
+            {
+              "path": "/jobs/search",
+              "full_url": "API endpoint provided upon registration",
+              "method": "GET",
+              "description": "Search active job listings from employer websites",
+              "documentation_link": "https://github.com/LinkUp/Job-Market-Data",
+              "parameters": ["query", "location", "company", "title", "date_range"],
+              "response_format": "JSON with job records"
+            },
+            {
+              "path": "/companies",
+              "full_url": "API endpoint provided upon registration",
+              "method": "GET",
+              "description": "Get company reference data and statistics",
+              "documentation_link": "https://github.com/LinkUp/Job-Market-Data",
+              "parameters": ["ticker", "name", "industry"],
+              "response_format": "JSON with company data"
+            },
+            {
+              "path": "/analytics",
+              "full_url": "API endpoint provided upon registration",
+              "method": "GET",
+              "description": "Access job market analytics and trends",
+              "documentation_link": "https://github.com/LinkUp/Job-Market-Data",
+              "parameters": ["metric", "geography", "timeframe"],
+              "response_format": "JSON with analytics data"
+            },
+            {
+              "path": "/raw-data",
+              "full_url": "API endpoint provided upon registration",
+              "method": "GET",
+              "description": "Access LinkUp Raw dataset dating back to 2007",
+              "documentation_link": "https://github.com/LinkUp/Job-Market-Data",
+              "parameters": ["date", "format", "filters"],
+              "response_format": "JSON with full job postings"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://github.com/LinkUp/Job-Market-Data",
+            "authentication": "Contact LinkUp for API credentials",
+            "endpoints_reference": "Available in GitHub repository",
+            "code_examples": "https://github.com/LinkUp/Job-Market-Data",
+            "sdks_libraries": "Check GitHub for available libraries"
+          }
+        },
+        "pricing": {
+          "model": "custom",
+          "tiers": [
+            {
+              "name": "Custom",
+              "price": "Flexible based on use case and scope",
+              "limits": "Dependent on contract terms"
+            }
+          ],
+          "trial_available": true,
+          "contact_for_pricing": true
+        },
+        "features": [
+          "3.5+ million active jobs",
+          "Data from 30,000 company websites",
+          "Historical data since 2007",
+          "Daily updates",
+          "Full job descriptions and metadata",
+          "Occupation and sector codes",
+          "Company tickers and identifiers",
+          "Web portal access via Exabel"
+        ],
+        "limitations": [
+          "Pricing requires direct contact",
+          "API endpoint not publicly documented",
+          "Must request access through LinkUp"
+        ]
+      },
+      {
+        "name": "Revelio Labs API",
+        "category": "Workforce Analytics",
+        "technical_info": {
+          "base_url": "Contact Revelio Labs for API endpoint",
+          "protocol": "REST",
+          "data_formats": ["JSON"],
+          "auth_method": "api_key",
+          "official_api": true,
+          "access_note": "Instant API requests available. Libraries for common languages provided",
+          "endpoints": [
+            {
+              "path": "/companies",
+              "full_url": "API endpoint provided upon registration",
+              "method": "GET",
+              "description": "Access workforce data for 4.5M+ companies",
+              "documentation_link": "https://help-center.atlasbeta.so/getatlas-mfy0xy9fki/articles/106361-using-the-revelio-labs-api",
+              "parameters": ["company_id", "ticker", "name"],
+              "response_format": "JSON with company workforce data"
+            },
+            {
+              "path": "/profiles",
+              "full_url": "API endpoint provided upon registration",
+              "method": "GET",
+              "description": "Search 1.1B+ professional profiles",
+              "documentation_link": "https://help-center.atlasbeta.so/getatlas-mfy0xy9fki/articles/106361-using-the-revelio-labs-api",
+              "parameters": ["skills", "location", "company", "role"],
+              "response_format": "JSON with profile data"
+            },
+            {
+              "path": "/skills",
+              "full_url": "API endpoint provided upon registration",
+              "method": "GET",
+              "description": "Analyze 3.4K+ skills and activities trends",
+              "documentation_link": "https://help-center.atlasbeta.so/getatlas-mfy0xy9fki/articles/106361-using-the-revelio-labs-api",
+              "parameters": ["skill_name", "industry", "geography"],
+              "response_format": "JSON with skills analytics"
+            },
+            {
+              "path": "/cosmos",
+              "full_url": "API endpoint provided upon registration",
+              "method": "GET",
+              "description": "Access COSMOS dataset with 2B+ job postings",
+              "documentation_link": "https://www.data-dictionary.reveliolabs.com/",
+              "parameters": ["query", "date_range", "company", "location"],
+              "response_format": "JSON with job posting data"
+            }
+          ],
+          "documentation_sections": {
+            "getting_started": "https://help-center.atlasbeta.so/getatlas-mfy0xy9fki/articles/106361-using-the-revelio-labs-api",
+            "authentication": "Contact Revelio Labs for API access",
+            "endpoints_reference": "https://www.data-dictionary.reveliolabs.com/",
+            "code_examples": "Available for common languages",
+            "sdks_libraries": "Libraries available for common programming languages"
+          }
+        },
+        "pricing": {
+          "model": "custom",
+          "tiers": [
+            {
+              "name": "Enterprise",
+              "price": "Contact for pricing",
+              "limits": "Based on data needs and usage"
+            }
+          ],
+          "trial_available": true,
+          "contact_for_pricing": true
+        },
+        "features": [
+          "4.5M+ companies coverage",
+          "1.1B+ professional profiles",
+          "5.2K+ cities and states data",
+          "3.4K+ skills tracking",
+          "COSMOS: 2B+ job postings from 5.25M companies",
+          "Compensation analytics (via Salary Board acquisition)",
+          "Workforce composition and trends",
+          "Available via API, dashboard, data feed, and reports"
+        ],
+        "limitations": [
+          "Full API documentation requires registration",
+          "Pricing not publicly available",
+          "Enterprise-focused solution"
+        ]
+      }
+    ],
+    "summary": {
+      "financial_news_apis": {
+        "seeking_alpha": "No official API. Access through RapidAPI third-party providers only"
+      },
+      "employment_data_apis": {
+        "glassdoor": "Public API closed in 2021. Now restricted to employers and partners",
+        "indeed_hiring_lab": "Free public data portal with downloadable datasets. No traditional API",
+        "linkup": "Full API with 3.5M+ jobs. Requires contact for access and pricing",
+        "revelio_labs": "Enterprise workforce analytics API with 1.1B+ profiles. Custom pricing"
+      },
+      "recommendations": {
+        "for_financial_news": "Consider alternative APIs like Alpha Vantage, Financial Modeling Prep, or IEX Cloud which offer official APIs",
+        "for_employment_data": "Indeed Hiring Lab offers free public data. LinkUp and Revelio Labs provide comprehensive APIs but require enterprise agreements"
+      }
+    }
+  }
+}
