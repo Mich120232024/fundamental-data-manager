@@ -13,6 +13,7 @@ React + TypeScript application that displays real-time FX options volatility sur
 - **Type**: FastAPI application with full Swagger docs at `/docs`
 - **Auth**: Use `Authorization: Bearer test` header
 - **Server**: `C:\BloombergAPI\main.py` on bloomberg-vm-02
+- **IMPORTANT**: Always use local gateway at localhost:8000 (bloomberg-gateway-enhanced.py)
 
 ### Available Endpoints (Updated 2025-07-30)
 - **POST /api/bloomberg/reference** - Get reference data for securities
@@ -20,6 +21,32 @@ React + TypeScript application that displays real-time FX options volatility sur
 - **GET /api/fx/rates/live** - Get live FX rates
 - **POST /api/bloomberg/ticker-discovery** - ✅ OPERATIONAL - Search for tickers by type/currency
 - **POST /api/bloomberg/validate-tickers** - ✅ OPERATIONAL - Batch ticker validation with live prices
+
+### CRITICAL: Generic Endpoint Pattern (Updated 2025-08-04)
+**ALWAYS use generic Bloomberg endpoints through the local gateway** - Do not create custom endpoints on the Bloomberg VM for specific features. Instead:
+
+1. **Frontend** → **Local Gateway** (localhost:8000) → **Generic Bloomberg API**
+2. Use `/api/bloomberg/reference` for all data fetching (spot, forwards, volatility, etc.)
+3. Process data in the frontend component rather than expecting backend calculations
+4. The local gateway (`bloomberg-gateway-enhanced.py`) proxies requests to the Bloomberg VM
+
+Example pattern for FX Forwards:
+```javascript
+// DON'T create custom endpoints like /api/fx-forwards/curves
+// DO use generic reference endpoint:
+const securities = [
+  `${pair} Curncy`,  // Spot
+  `${pair}1W Curncy`, `${pair}1M Curncy`, // etc. - Forward points
+]
+
+const response = await fetch(`${apiUrl}/api/bloomberg/reference`, {
+  method: 'POST',
+  body: JSON.stringify({
+    securities: securities,
+    fields: ['PX_LAST', 'PX_BID', 'PX_ASK']
+  })
+})
+```
 
 ### Critical Patterns
 
@@ -91,6 +118,12 @@ curl -X POST http://20.172.249.92:8080/api/bloomberg/reference \
 3. **Use regex for ticker parsing, never substring matching**
 4. **Filter empty data rows for clean display**
 5. **Remember ON tenor has special formatting**
+
+### Database Architecture (Updated 2025-08-04)
+- **Single table design**: All Bloomberg tickers now in `bloomberg_tickers` table
+- **Categories**: fx_spot, fx_forward, fx_vol_atm, fx_vol_rr, fx_vol_bf, ois_curve, etc.
+- **FX Forwards**: Support for tenors up to 5Y (added 4Y/5Y tickers for 41 currency pairs)
+- **Ticker format**: `{PAIR}{TENOR} Curncy` for forwards (e.g., EURUSD5Y Curncy)
 
 ## Recent Context (Updated 2025-01-30)
 
@@ -170,3 +203,17 @@ curl -X POST "http://20.172.249.92:8080/api/bloomberg/validate-tickers" \
   -H "Content-Type: application/json" \
   -d '["SONIOA BGN Curncy", "SONIOB BGN Curncy", "SONIOC BGN Curncy"]'
 ```
+
+## FX Forward Curves Implementation (Added 2025-08-04)
+
+### Key Implementation Details
+- **Component**: `FXForwardCurvesTab.tsx` uses generic Bloomberg reference endpoint
+- **Tickers**: Bloomberg provides forward points (not outright rates)
+- **Calculation**: Outright rate = Spot + (Forward Points / Pip Factor)
+  - USD/JPY and XXX/JPY pairs: Pip factor = 100
+  - All other pairs: Pip factor = 10,000
+- **Data Processing**: All calculations done in frontend component
+- **Supported Tenors**: 1W, 2W, 1M, 2M, 3M, 6M, 9M, 12M, 15M, 18M, 21M, 2Y, 3Y, 4Y, 5Y
+
+### Example Implementation
+See `FXForwardCurvesTab_updated.tsx` for the correct pattern using generic endpoints.

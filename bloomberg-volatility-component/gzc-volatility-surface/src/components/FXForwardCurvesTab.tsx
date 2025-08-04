@@ -135,7 +135,7 @@ export function FXForwardCurvesTab() {
         body: JSON.stringify({
           currency_pairs: Array.from(selectedPairs),
           display_mode: "outright", // Always request outright rates - the actual forward FX rates
-          max_tenor: "3Y"
+          max_tenor: "5Y"
         })
       })
       
